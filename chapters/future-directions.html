@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; Future Directions – Conversation, Not Delegation: Mastering Human-AI Development</title>
+<title>17&nbsp; Future Directions – Converse Python, Partner AI: The Python Edition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../acknowledgments.html" rel="next">
-<link href="../chapters/15-teaching-learning.html" rel="prev">
+<link href="../chapters/teaching-learning.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -39,10 +39,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f2dd3d79ed53af71ab0ccfce3a24affd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,7 +79,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -84,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/14-scaling-complexity.html">Advanced Topics</a></li><li class="breadcrumb-item"><a href="../chapters/16-future-directions.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/scaling-complexity.html">Advanced Topics</a></li><li class="breadcrumb-item"><a href="../chapters/future-directions.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -99,26 +265,27 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Conversation, Not Delegation: Mastering Human-AI Development</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/michaelborck-books/conversation-not-delegation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+      <a href="../">Converse Python, Partner AI: The Python Edition</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -135,6 +302,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -146,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-philosophy.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/philosophy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conversation, Not Delegation</span></span></a>
   </div>
 </li>
@@ -163,19 +336,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-ai-revolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ai-revolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The AI Revolution in Programming</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principles of Intentional Prompting</span></span></a>
   </div>
 </li>
@@ -192,37 +365,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-six-step-methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/six-step-methodology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Six-Step Programming Methodology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-restate-and-identify.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/restate-and-identify.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Restate and Identify (Steps 1-2)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-work-by-hand.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/work-by-hand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-pseudocode.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/pseudocode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-convert-to-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/convert-to-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-test-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/test-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span></a>
   </div>
 </li>
@@ -239,25 +412,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-debugging-with-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/debugging-with-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-refactoring-strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/refactoring-strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-case-studies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/case-studies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
   </div>
 </li>
@@ -274,19 +447,19 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/14-scaling-complexity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/scaling-complexity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-teaching-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/teaching-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/16-future-directions.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/future-directions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></span></a>
   </div>
 </li>
@@ -296,6 +469,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -383,12 +562,13 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">17.9</span> Conclusion</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/16-future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/14-scaling-complexity.html">Advanced Topics</a></li><li class="breadcrumb-item"><a href="../chapters/16-future-directions.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></a></li></ol></nav>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/scaling-complexity.html">Advanced Topics</a></li><li class="breadcrumb-item"><a href="../chapters/future-directions.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></h1>
 </div>
@@ -430,7 +610,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Project-wide understanding</strong> beyond individual files</li>
 <li><strong>Development history awareness</strong> including past decisions and their rationale</li>
-<li><strong>Developer preference modeling</strong> that adapts to individual coding styles</li>
+<li><strong>Developer preference modelling</strong> that adapts to individual coding styles</li>
 <li><strong>Team convention adherence</strong> that ensures consistency across contributors</li>
 </ul>
 <p>For intentional prompting, this means prompting strategies will need to focus more on high-level goals and constraints, while the AI handles more of the implementation details.</p>
@@ -445,7 +625,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Self-directed exploration</strong> of solution spaces</li>
 <li><strong>Automated testing and verification</strong> of generated code</li>
 <li><strong>Self-debugging and refinement</strong> of initial solutions</li>
-<li><strong>Proactive suggestion</strong> of improvements and optimizations</li>
+<li><strong>Proactive suggestion</strong> of improvements and optimisations</li>
 </ul>
 <p>This increased autonomy will shift intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.</p>
 </section>
@@ -498,7 +678,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 data-number="17.2.1.2" class="anchored" data-anchor-id="quality-oriented-development"><span class="header-section-number">17.2.1.2</span> Quality-Oriented Development</h4>
 <ul>
 <li><strong>Focus on correctness criteria</strong> rather than implementation</li>
-<li><strong>Property-based specifications</strong> that define behavior boundaries</li>
+<li><strong>Property-based specifications</strong> that define behaviour boundaries</li>
 <li><strong>Automated verification against properties</strong> rather than manual testing</li>
 <li><strong>Formal methods</strong> becoming more accessible through AI interpretation</li>
 </ul>
@@ -523,7 +703,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><strong>Continuous AI collaboration</strong> throughout the development workflow</li>
 <li><strong>Predictive development</strong> that anticipates next steps</li>
-<li><strong>Automated refactoring and optimization</strong> based on semantic understanding</li>
+<li><strong>Automated refactoring and optimisation</strong> based on semantic understanding</li>
 <li><strong>Intelligent knowledge integration</strong> from documentation and community resources</li>
 </ul>
 <p>These environments will require new skills in guiding AI assistance effectively throughout the development lifecycle.</p>
@@ -542,7 +722,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Problem formulation</strong> - Precisely specifying what needs to be solved</li>
 <li><strong>Solution evaluation</strong> - Critically assessing generated solutions</li>
 <li><strong>Adaptation and integration</strong> - Combining AI-generated components effectively</li>
-<li><strong>Domain modeling</strong> - Translating real-world complexity into computational terms</li>
+<li><strong>Domain modelling</strong> - Translating real-world complexity into computational terms</li>
 </ol>
 <p>Intentional prompting principles provide a foundation for developing these skills, with increasing emphasis on architecture and evaluation.</p>
 </section>
@@ -560,11 +740,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="organizational-adaptation" class="level3" data-number="17.3.2">
 <h3 data-number="17.3.2" class="anchored" data-anchor-id="organizational-adaptation"><span class="header-section-number">17.3.2</span> Organizational Adaptation</h3>
-<p>Organizations will need to adapt their development processes:</p>
+<p>organisations will need to adapt their development processes:</p>
 <section id="evolving-team-structures" class="level4" data-number="17.3.2.1">
 <h4 data-number="17.3.2.1" class="anchored" data-anchor-id="evolving-team-structures"><span class="header-section-number">17.3.2.1</span> Evolving Team Structures</h4>
 <ul>
-<li><strong>AI specialists</strong> who optimize AI collaboration across teams</li>
+<li><strong>AI specialists</strong> who optimise AI collaboration across teams</li>
 <li><strong>Prompt engineers</strong> who develop effective prompting strategies</li>
 <li><strong>Integration architects</strong> who ensure cohesive solutions</li>
 <li><strong>Quality assurance evolution</strong> toward specification verification</li>
@@ -729,7 +909,7 @@ ul.task-list li input[type="checkbox"] {
 <li>AI capabilities will continue to evolve, with increased contextual understanding, multimodal interactions, and autonomy</li>
 <li>Programming paradigms are shifting from code writing to code curation and verification</li>
 <li>Developer skills are evolving toward architecture, specification, and solution evaluation</li>
-<li>Organizations need to adapt team structures and workflows for effective AI collaboration</li>
+<li>organisations need to adapt team structures and workflows for effective AI collaboration</li>
 <li>Maintaining the human element requires focus on our unique capabilities and ethical considerations</li>
 <li>Intentional prompting principles provide a foundation for navigating these changes effectively</li>
 </ul>
@@ -752,18 +932,18 @@ ul.task-list li input[type="checkbox"] {
 <section id="in-knowledge-work" class="level4" data-number="17.8.1.2">
 <h4 data-number="17.8.1.2" class="anchored" data-anchor-id="in-knowledge-work"><span class="header-section-number">17.8.1.2</span> In Knowledge Work</h4>
 <ul>
-<li><strong>Research</strong>: Employing AI to analyze data and literature while humans guide inquiry and interpret significance</li>
+<li><strong>Research</strong>: Employing AI to analyse data and literature while humans guide inquiry and interpret significance</li>
 <li><strong>Law</strong>: Using AI for precedent research and document preparation while humans handle judgment and argumentation</li>
 <li><strong>Medicine</strong>: Applying AI for analysis and pattern recognition while physicians maintain diagnostic responsibility</li>
-<li><strong>Education</strong>: Utilizing AI to customize learning materials while educators focus on motivation and conceptual guidance</li>
+<li><strong>Education</strong>: utilising AI to customise learning materials while educators focus on motivation and conceptual guidance</li>
 </ul>
 </section>
 <section id="in-business-and-management" class="level4" data-number="17.8.1.3">
 <h4 data-number="17.8.1.3" class="anchored" data-anchor-id="in-business-and-management"><span class="header-section-number">17.8.1.3</span> In Business and Management</h4>
 <ul>
-<li><strong>Strategic Planning</strong>: Using AI to analyze trends and options while humans make value-based decisions</li>
+<li><strong>Strategic Planning</strong>: Using AI to analyse trends and options while humans make value-based decisions</li>
 <li><strong>Project Management</strong>: Employing AI for scheduling and resource allocation while humans handle stakeholder relationships</li>
-<li><strong>Marketing</strong>: Utilizing AI for data analysis and content generation while humans direct brand voice and strategy</li>
+<li><strong>Marketing</strong>: utilising AI for data analysis and content generation while humans direct brand voice and strategy</li>
 <li><strong>Customer Service</strong>: Using AI for routine interactions while humans handle complex or sensitive situations</li>
 </ul>
 </section>
@@ -788,7 +968,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Enhanced contextual awareness</strong> of projects, goals, and constraints</li>
 <li><strong>Increased autonomy</strong> for well-defined tasks</li>
 </ul>
-<p>However, the need for intentional human direction will remain essential. The most successful individuals and organizations will be those who develop effective practices for intentional collaboration with increasingly capable AI systems while maintaining human purpose, creativity, and ethical judgment.</p>
+<p>However, the need for intentional human direction will remain essential. The most successful individuals and organisations will be those who develop effective practices for intentional collaboration with increasingly capable AI systems while maintaining human purpose, creativity, and ethical judgment.</p>
 </section>
 </section>
 <section id="conclusion" class="level2" data-number="17.9">
@@ -796,9 +976,9 @@ ul.task-list li input[type="checkbox"] {
 <p>As we conclude this exploration of intentional prompting, it’s clear that the fundamental relationship between human developers and AI assistants will continue to evolve. What won’t change is the need for a thoughtful, structured approach to leveraging AI capabilities while maintaining human understanding and control.</p>
 <p>The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavor.</p>
 <p>Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those skeptical of AI’s impact on learning and skill development, intentional prompting’s focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.</p>
-<p>The power of intentional prompting comes from recognizing that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn’t fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximizes benefits while minimizing risks.</p>
+<p>The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn’t fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximizes benefits while minimising risks.</p>
 <p>As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.</p>
-<p>The six-step methodology provides a framework not just for individual programmers but for organizations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organizations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.</p>
+<p>The six-step methodology provides a framework not just for individual programmers but for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.</p>
 <p>While we’ve focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you’re preparing not just for current AI tools, but for the next generation of human-AI partnership in programming and beyond.</p>
 
 
@@ -807,6 +987,19 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1207,7 +1400,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/15-teaching-learning.html" class="pagination-link" aria-label="Teaching and Learning">
+      <a href="../chapters/teaching-learning.html" class="pagination-link" aria-label="Teaching and Learning">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span>
       </a>          
   </div>
@@ -1222,4 +1415,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/16-future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

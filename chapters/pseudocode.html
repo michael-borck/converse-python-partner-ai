@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8&nbsp; Pseudocode (Step 4) – Conversation, Not Delegation: Mastering Human-AI Development</title>
+<title>8&nbsp; Pseudocode (Step 4) – Converse Python, Partner AI: The Python Edition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/08-convert-to-code.html" rel="next">
-<link href="../chapters/06-work-by-hand.html" rel="prev">
+<link href="../chapters/convert-to-code.html" rel="next">
+<link href="../chapters/work-by-hand.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,10 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f2dd3d79ed53af71ab0ccfce3a24affd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +114,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/07-pseudocode.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/pseudocode.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,26 +300,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Conversation, Not Delegation: Mastering Human-AI Development</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/michaelborck-books/conversation-not-delegation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+      <a href="../">Converse Python, Partner AI: The Python Edition</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -170,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-philosophy.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/philosophy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conversation, Not Delegation</span></span></a>
   </div>
 </li>
@@ -198,19 +371,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-ai-revolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ai-revolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The AI Revolution in Programming</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principles of Intentional Prompting</span></span></a>
   </div>
 </li>
@@ -227,37 +400,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-six-step-methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/six-step-methodology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Six-Step Programming Methodology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-restate-and-identify.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/restate-and-identify.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Restate and Identify (Steps 1-2)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-work-by-hand.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/work-by-hand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-pseudocode.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/pseudocode.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-convert-to-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/convert-to-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-test-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/test-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span></a>
   </div>
 </li>
@@ -274,25 +447,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-debugging-with-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/debugging-with-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-refactoring-strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/refactoring-strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-case-studies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/case-studies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
   </div>
 </li>
@@ -309,19 +482,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/14-scaling-complexity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/scaling-complexity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-teaching-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/teaching-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/16-future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></span></a>
   </div>
 </li>
@@ -331,6 +504,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -387,7 +566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#why-pseudocode-works-well-with-llms" id="toc-why-pseudocode-works-well-with-llms" class="nav-link" data-scroll-target="#why-pseudocode-works-well-with-llms"><span class="header-section-number">8.2.1</span> Why Pseudocode Works Well with LLMs</a></li>
   <li><a href="#pseudocode-as-disambiguation-tool" id="toc-pseudocode-as-disambiguation-tool" class="nav-link" data-scroll-target="#pseudocode-as-disambiguation-tool"><span class="header-section-number">8.2.2</span> Pseudocode as Disambiguation Tool</a></li>
-  <li><a href="#sudolang-pseudocode-optimized-for-llms" id="toc-sudolang-pseudocode-optimized-for-llms" class="nav-link" data-scroll-target="#sudolang-pseudocode-optimized-for-llms"><span class="header-section-number">8.2.3</span> SudoLang: Pseudocode Optimized for LLMs</a></li>
+  <li><a href="#sudolang-pseudocode-optimised-for-llms" id="toc-sudolang-pseudocode-optimised-for-llms" class="nav-link" data-scroll-target="#sudolang-pseudocode-optimised-for-llms"><span class="header-section-number">8.2.3</span> SudoLang: Pseudocode optimised for LLMs</a></li>
   <li><a href="#llms-as-pseudocode-interpreters" id="toc-llms-as-pseudocode-interpreters" class="nav-link" data-scroll-target="#llms-as-pseudocode-interpreters"><span class="header-section-number">8.2.4</span> LLMs as Pseudocode Interpreters</a></li>
   <li><a href="#pseudocode-vs.-comments" id="toc-pseudocode-vs.-comments" class="nav-link" data-scroll-target="#pseudocode-vs.-comments"><span class="header-section-number">8.2.5</span> Pseudocode vs.&nbsp;Comments</a></li>
   </ul></li>
@@ -412,12 +591,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.6</span> Key Takeaways</a></li>
   <li><a href="#moving-forward" id="toc-moving-forward" class="nav-link" data-scroll-target="#moving-forward"><span class="header-section-number">8.7</span> Moving Forward</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/07-pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/07-pseudocode.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></a></li></ol></nav>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/pseudocode.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></h1>
 </div>
@@ -444,7 +624,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Effective pseudocode strikes a balance between abstraction and detail:</p>
 <ul>
 <li><strong>Clear and readable</strong> - understandable by both humans and AI</li>
-<li><strong>Structured</strong> - uses indentation and organization to show control flow</li>
+<li><strong>Structured</strong> - uses indentation and organisation to show control flow</li>
 <li><strong>Language-agnostic</strong> - avoids specific programming language syntax</li>
 <li><strong>Focused on logic</strong> - emphasizes algorithmic thinking over implementation details</li>
 <li><strong>Complete</strong> - addresses all requirements and edge cases</li>
@@ -517,9 +697,9 @@ WRITE data TO file</code></pre>
 </ul>
 <p>As Dijkstra noted decades ago, “The virtue of formal texts is that their manipulations, in order to be legitimate, need to satisfy only a few simple rules; they are… an amazingly effective tool for ruling out all sorts of nonsense that, when we use our native tongues, are almost impossible to avoid.” While pseudocode isn’t fully formal, it moves us considerably in that direction.</p>
 </section>
-<section id="sudolang-pseudocode-optimized-for-llms" class="level3" data-number="8.2.3">
-<h3 data-number="8.2.3" class="anchored" data-anchor-id="sudolang-pseudocode-optimized-for-llms"><span class="header-section-number">8.2.3</span> SudoLang: Pseudocode Optimized for LLMs</h3>
-<p>SudoLang represents an evolution of pseudocode specifically designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimized for human-AI collaboration.</p>
+<section id="sudolang-pseudocode-optimised-for-llms" class="level3" data-number="8.2.3">
+<h3 data-number="8.2.3" class="anchored" data-anchor-id="sudolang-pseudocode-optimised-for-llms"><span class="header-section-number">8.2.3</span> SudoLang: Pseudocode optimised for LLMs</h3>
+<p>SudoLang represents an evolution of pseudocode specifically designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimised for human-AI collaboration.</p>
 <p>Key features of SudoLang include:</p>
 <ul>
 <li><strong>Simplified syntax</strong> that both humans and AI can easily understand</li>
@@ -602,20 +782,20 @@ WRITE data TO file</code></pre>
 <pre><code>This pseudocode looks good. Two questions:
 
 1. Should we check for even-length palindromes between the last character and out of bounds?
-2. Is there any way to optimize this further, perhaps by avoiding redundant checks?</code></pre>
+2. Is there any way to optimise this further, perhaps by avoiding redundant checks?</code></pre>
 <p><strong>AI response:</strong> &gt; Great questions! Let me address both: &gt; &gt; 1. Regarding even-length palindromes at the end of the string: &gt;<br>
 &gt; In the current pseudocode, we check for even-length palindromes between positions i and i+1 for i ranging from 0 to length-1. When i is length-1 (the last character), we’d check between the last character and one past the end of the string, which would immediately fail the boundary check in expandAroundCenter(). &gt;<br>
-&gt; This isn’t harmful, but we could optimize by changing the loop for even-length palindromes to stop at length-2: &gt;<br>
+&gt; This isn’t harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2: &gt;<br>
 &gt; <code>&gt;    // Odd length palindromes &gt;    FOR i = 0 TO length of string - 1 &gt;        expandAroundCenter(i, i) &gt;    END FOR &gt;     &gt;    // Even length palindromes &gt;    FOR i = 0 TO length of string - 2 &gt;        expandAroundCenter(i, i + 1) &gt;    END FOR &gt;</code> &gt;<br>
 &gt; Or keep the single loop but add a condition: &gt;<br>
-&gt; <code>&gt;    FOR i = 0 TO length of string - 1 &gt;        // Odd length &gt;        expandAroundCenter(i, i) &gt;         &gt;        // Even length (only if not at last character) &gt;        IF i &lt; length of string - 1 THEN &gt;            expandAroundCenter(i, i + 1) &gt;        END IF &gt;    END FOR &gt;</code> &gt; &gt; 2. Regarding further optimization: &gt;<br>
-&gt; Yes, there are a few potential optimizations: &gt;<br>
+&gt; <code>&gt;    FOR i = 0 TO length of string - 1 &gt;        // Odd length &gt;        expandAroundCenter(i, i) &gt;         &gt;        // Even length (only if not at last character) &gt;        IF i &lt; length of string - 1 THEN &gt;            expandAroundCenter(i, i + 1) &gt;        END IF &gt;    END FOR &gt;</code> &gt; &gt; 2. Regarding further optimisation: &gt;<br>
+&gt; Yes, there are a few potential optimisations: &gt;<br>
 &gt; a) Early termination: If we find a palindrome of length N, then we only need to check centers that could potentially produce longer palindromes. If we’re at position i and there are fewer than N/2 characters on either side, we can skip that center. &gt;<br>
 &gt; b) Avoid redundant expansions: If we know a substring isn’t a palindrome, any larger substring containing it also isn’t a palindrome. &gt;<br>
 &gt; c) For very long strings, Manacher’s algorithm gives a linear-time solution instead of quadratic, but it’s significantly more complex. &gt;<br>
-&gt; Here’s an optimization for the early termination case: &gt;<br>
+&gt; Here’s an optimisation for the early termination case: &gt;<br>
 &gt; <code>&gt;    FOR i = 0 TO length of string - 1 &gt;        // Only check centers with enough characters on both sides to beat maxLength &gt;        remainingChars = MIN(i, length of string - i - 1) &gt;        IF remainingChars * 2 + 1 &gt; maxLength THEN &gt;            // Odd length &gt;            expandAroundCenter(i, i) &gt;        END IF &gt;         &gt;        IF i &lt; length of string - 1 AND MIN(i, length of string - i - 2) * 2 + 2 &gt; maxLength THEN &gt;            // Even length &gt;            expandAroundCenter(i, i + 1) &gt;        END IF &gt;    END FOR &gt;</code> &gt;<br>
-&gt; However, these optimizations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.</p>
+&gt; However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.</p>
 </section>
 <section id="comparing-alternative-approaches" class="level3" data-number="8.3.3">
 <h3 data-number="8.3.3" class="anchored" data-anchor-id="comparing-alternative-approaches"><span class="header-section-number">8.3.3</span> Comparing Alternative Approaches</h3>
@@ -626,7 +806,7 @@ WRITE data TO file</code></pre>
 &gt; Instead of expanding from centers, we can use a bottom-up DP approach: &gt;<br>
 &gt; <code>&gt;    FUNCTION findLongestPalindrome_DP(string) &gt;        SET n = length of string &gt;         &gt;        // Create n x n table where dp[i][j] = true if substring from i to j is palindrome &gt;        CREATE boolean table dp[n][n] &gt;         &gt;        // All substrings of length 1 are palindromes &gt;        FOR i = 0 TO n-1 &gt;            dp[i][i] = true &gt;        END FOR &gt;         &gt;        SET start = 0 &gt;        SET maxLength = 1 &gt;         &gt;        // Check substrings of length 2 &gt;        FOR i = 0 TO n-2 &gt;            IF string[i] = string[i+1] THEN &gt;                dp[i][i+1] = true &gt;                start = i &gt;                maxLength = 2 &gt;            END IF &gt;        END FOR &gt;         &gt;        // Check substrings of length 3 or more &gt;        FOR length = 3 TO n &gt;            FOR i = 0 TO n-length &gt;                j = i + length - 1 &gt;                 &gt;                IF string[i] = string[j] AND dp[i+1][j-1] = true THEN &gt;                    dp[i][j] = true &gt;                     &gt;                    IF length &gt; maxLength THEN &gt;                        start = i &gt;                        maxLength = length &gt;                    END IF &gt;                END IF &gt;            END FOR &gt;        END FOR &gt;         &gt;        RETURN substring of string from start to start + maxLength - 1 &gt;    END FUNCTION &gt;</code> &gt;<br>
 &gt; This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory. &gt; &gt; 2. <strong>Manacher’s Algorithm</strong> &gt;<br>
-&gt; This is an optimized approach that runs in O(n) time: &gt;<br>
+&gt; This is an optimised approach that runs in O(n) time: &gt;<br>
 &gt; <code>&gt;    FUNCTION manachers_algorithm(string) &gt;        // Transform string to handle even-length palindromes &gt;        // For example, "babad" becomes "^#b#a#b#a#d#$" &gt;        SET transformed = preprocessString(string) &gt;         &gt;        SET n = length of transformed &gt;        CREATE array p[n] // p[i] = radius of palindrome centered at i &gt;         &gt;        SET center = 0 &gt;        SET right_boundary = 0 &gt;         &gt;        FOR i = 1 TO n-2 &gt;            // Mirror of current position &gt;            SET mirror = 2 * center - i &gt;             &gt;            // If within right boundary, use mirror value &gt;            IF i &lt; right_boundary THEN &gt;                p[i] = MIN(right_boundary - i, p[mirror]) &gt;            ELSE &gt;                p[i] = 0 &gt;            END IF &gt;             &gt;            // Expand palindrome centered at i &gt;            WHILE transformed[i + 1 + p[i]] = transformed[i - 1 - p[i]] &gt;                INCREMENT p[i] &gt;            END WHILE &gt;             &gt;            // Update center if this palindrome extends beyond right boundary &gt;            IF i + p[i] &gt; right_boundary THEN &gt;                center = i &gt;                right_boundary = i + p[i] &gt;            END IF &gt;        END FOR &gt;         &gt;        // Find the maximum element in p &gt;        SET max_len = 0 &gt;        SET center_index = 0 &gt;         &gt;        FOR i = 1 TO n-2 &gt;            IF p[i] &gt; max_len THEN &gt;                max_len = p[i] &gt;                center_index = i &gt;            END IF &gt;        END FOR &gt;         &gt;        // Extract the longest palindromic substring from original string &gt;        SET start = (center_index - max_len) / 2 &gt;        RETURN substring of string from start to start + max_len &gt;    END FUNCTION &gt;</code> &gt;<br>
 &gt; This algorithm is significantly more complex but offers linear time complexity. &gt; &gt; 3. <strong>Suffix Tree Approach</strong> &gt;<br>
 &gt; Building a generalized suffix tree for the string and its reverse, then finding the longest common substring. &gt;<br>
@@ -805,6 +985,19 @@ END FOR</code></pre>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1205,12 +1398,12 @@ END FOR</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/06-work-by-hand.html" class="pagination-link" aria-label="Work by Hand (Step 3)">
+      <a href="../chapters/work-by-hand.html" class="pagination-link" aria-label="Work by Hand (Step 3)">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/08-convert-to-code.html" class="pagination-link" aria-label="Convert to Code (Step 5)">
+      <a href="../chapters/convert-to-code.html" class="pagination-link" aria-label="Convert to Code (Step 5)">
         <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1220,4 +1413,4 @@ END FOR</code></pre>
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/07-pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

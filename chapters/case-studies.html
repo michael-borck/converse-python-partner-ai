@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Case Studies – Conversation, Not Delegation: Mastering Human-AI Development</title>
+<title>14&nbsp; Case Studies – Converse Python, Partner AI: The Python Edition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/14-scaling-complexity.html" rel="next">
-<link href="../chapters/12-refactoring-strategies.html" rel="prev">
+<link href="../chapters/scaling-complexity.html" rel="next">
+<link href="../chapters/refactoring-strategies.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,10 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f2dd3d79ed53af71ab0ccfce3a24affd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +114,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/13-case-studies.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/case-studies.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,26 +300,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Conversation, Not Delegation: Mastering Human-AI Development</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/michaelborck-books/conversation-not-delegation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+      <a href="../">Converse Python, Partner AI: The Python Edition</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -170,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-philosophy.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/philosophy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conversation, Not Delegation</span></span></a>
   </div>
 </li>
@@ -198,19 +371,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-ai-revolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ai-revolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The AI Revolution in Programming</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principles of Intentional Prompting</span></span></a>
   </div>
 </li>
@@ -227,37 +400,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-six-step-methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/six-step-methodology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Six-Step Programming Methodology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-restate-and-identify.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/restate-and-identify.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Restate and Identify (Steps 1-2)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-work-by-hand.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/work-by-hand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-pseudocode.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/pseudocode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-convert-to-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/convert-to-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-test-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/test-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span></a>
   </div>
 </li>
@@ -274,25 +447,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-debugging-with-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/debugging-with-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-refactoring-strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/refactoring-strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-case-studies.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/case-studies.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
   </div>
 </li>
@@ -309,19 +482,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/14-scaling-complexity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/scaling-complexity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-teaching-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/teaching-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/16-future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></span></a>
   </div>
 </li>
@@ -331,6 +504,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -393,12 +572,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">14.3</span> Key Takeaways</a></li>
   <li><a href="#moving-forward" id="toc-moving-forward" class="nav-link" data-scroll-target="#moving-forward"><span class="header-section-number">14.4</span> Moving Forward</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/13-case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/13-case-studies.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></a></li></ol></nav>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/case-studies.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></h1>
 </div>
@@ -428,7 +608,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="14.1" class="anchored" data-anchor-id="case-study-1-building-a-data-analysis-pipeline"><span class="header-section-number">14.1</span> Case Study 1: Building a Data Analysis Pipeline</h2>
 <section id="the-problem" class="level3" data-number="14.1.1">
 <h3 data-number="14.1.1" class="anchored" data-anchor-id="the-problem"><span class="header-section-number">14.1.1</span> The Problem</h3>
-<p>A research team needs to analyze a large dataset of customer transactions to identify purchasing patterns. They have a CSV file with millions of records containing transaction data including:</p>
+<p>A research team needs to analyse a large dataset of customer transactions to identify purchasing patterns. They have a CSV file with millions of records containing transaction data including:</p>
 <ul>
 <li>Transaction ID</li>
 <li>Customer ID</li>
@@ -438,7 +618,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Payment method</li>
 <li>Store location</li>
 </ul>
-<p>The team needs to: 1. Clean and preprocess the data 2. Identify the most frequently purchased product combinations 3. Analyze how purchasing patterns change over time 4. Visualize the results</p>
+<p>The team needs to: 1. Clean and preprocess the data 2. Identify the most frequently purchased product combinations 3. analyse how purchasing patterns change over time 4. Visualize the results</p>
 </section>
 <section id="the-intentional-prompting-approach" class="level3" data-number="14.1.2">
 <h3 data-number="14.1.2" class="anchored" data-anchor-id="the-intentional-prompting-approach"><span class="header-section-number">14.1.2</span> The Intentional Prompting Approach</h3>
@@ -452,11 +632,11 @@ We have a large CSV file (millions of rows) with transaction data including tran
 We need to:
 1. Clean the data (handle missing values, standardize formats)
 2. Find frequently purchased product combinations
-3. Analyze how purchasing patterns change over time
+3. analyse how purchasing patterns change over time
 4. Create visualizations of the results
 
 Is this understanding correct, and are there any important aspects I've missed?</code></pre>
-<p><strong>AI response:</strong> &gt; Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important: &gt; &gt; 1. <strong>Data volume handling</strong>: With millions of rows, you’ll need efficient processing techniques that can handle large datasets. This might involve streaming processing, chunking the data, or using distributed computing frameworks. &gt; &gt; 2. <strong>Performance considerations</strong>: Some operations like finding product combinations might be computationally expensive. You might need optimization strategies. &gt; &gt; 3. <strong>Data privacy</strong>: Transaction data may contain sensitive information. You might need to anonymize or handle the data according to relevant privacy regulations. &gt; &gt; 4. <strong>Output format</strong>: It’s worth considering what format the final results should be in (static reports, interactive dashboards, raw data for further analysis, etc.). &gt; &gt; 5. <strong>Repeatability</strong>: Will this be a one-time analysis or something that needs to be run regularly? If it’s the latter, the pipeline should be designed for automation and reproducibility. &gt; &gt; 6. <strong>Data quality assessment</strong>: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results. &gt; &gt; With these considerations in mind, your restatement effectively captures the core of the problem.</p>
+<p><strong>AI response:</strong> &gt; Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important: &gt; &gt; 1. <strong>Data volume handling</strong>: With millions of rows, you’ll need efficient processing techniques that can handle large datasets. This might involve streaming processing, chunking the data, or using distributed computing frameworks. &gt; &gt; 2. <strong>Performance considerations</strong>: Some operations like finding product combinations might be computationally expensive. You might need optimisation strategies. &gt; &gt; 3. <strong>Data privacy</strong>: Transaction data may contain sensitive information. You might need to anonymize or handle the data according to relevant privacy regulations. &gt; &gt; 4. <strong>Output format</strong>: It’s worth considering what format the final results should be in (static reports, interactive dashboards, raw data for further analysis, etc.). &gt; &gt; 5. <strong>Repeatability</strong>: Will this be a one-time analysis or something that needs to be run regularly? If it’s the latter, the pipeline should be designed for automation and reproducibility. &gt; &gt; 6. <strong>Data quality assessment</strong>: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results. &gt; &gt; With these considerations in mind, your restatement effectively captures the core of the problem.</p>
 </section>
 <section id="step-2-identify-input-and-output" class="level4" data-number="14.1.2.2">
 <h4 data-number="14.1.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output"><span class="header-section-number">14.1.2.2</span> Step 2: Identify Input and Output</h4>
@@ -514,7 +694,7 @@ From this manual process, I can see that we need to:
 4. Sort by frequency to find the most common combinations
 
 This approach works for pairs, but for larger combinations, we might need association rule mining algorithms like Apriori. Does this manual approach seem correct, and are there any important considerations I'm missing?</code></pre>
-<p><strong>AI response:</strong> &gt; Your manual approach for finding product combinations is sound! You’ve correctly identified the key steps for analyzing product pairs. Here are some important considerations and extensions: &gt; &gt; <strong>Validations and extensions:</strong> &gt; &gt; 1. <strong>Multiple levels of combinations</strong>: As you noted, beyond pairs, you might want to find triplets or larger combinations. Apriori or FP-Growth algorithms would indeed be appropriate for this. &gt; &gt; 2. <strong>Association metrics</strong>: Beyond just frequency count, consider calculating: &gt; - Support (frequency of the combination relative to total transactions) &gt; - Confidence (likelihood of Y when X is purchased) &gt; - Lift (how much more likely Y is purchased when X is purchased, compared to normal) &gt; &gt; 3. <strong>Performance for large datasets</strong>: The naive approach of generating all combinations can be computationally expensive for transactions with many items. For the full dataset: &gt; - Consider using optimized libraries like MLxtend or efficient implementations of Apriori &gt; - You might need to set a minimum support threshold to filter out rare combinations early &gt; &gt; 4. <strong>Handling duplicates</strong>: If a customer buys multiple items in the same category in one transaction (e.g., two electronics items), your current approach correctly treats “electronics” as appearing once in that transaction. &gt; &gt; 5. <strong>Time-based analysis</strong>: You might want to see if popular combinations change over time (seasonal patterns, etc.) &gt; &gt; Your manual process demonstrates a good understanding of the approach. For implementation at scale, you’ll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.</p>
+<p><strong>AI response:</strong> &gt; Your manual approach for finding product combinations is sound! You’ve correctly identified the key steps for analysing product pairs. Here are some important considerations and extensions: &gt; &gt; <strong>Validations and extensions:</strong> &gt; &gt; 1. <strong>Multiple levels of combinations</strong>: As you noted, beyond pairs, you might want to find triplets or larger combinations. Apriori or FP-Growth algorithms would indeed be appropriate for this. &gt; &gt; 2. <strong>Association metrics</strong>: Beyond just frequency count, consider calculating: &gt; - Support (frequency of the combination relative to total transactions) &gt; - Confidence (likelihood of Y when X is purchased) &gt; - Lift (how much more likely Y is purchased when X is purchased, compared to normal) &gt; &gt; 3. <strong>Performance for large datasets</strong>: The naive approach of generating all combinations can be computationally expensive for transactions with many items. For the full dataset: &gt; - Consider using optimised libraries like MLxtend or efficient implementations of Apriori &gt; - You might need to set a minimum support threshold to filter out rare combinations early &gt; &gt; 4. <strong>Handling duplicates</strong>: If a customer buys multiple items in the same category in one transaction (e.g., two electronics items), your current approach correctly treats “electronics” as appearing once in that transaction. &gt; &gt; 5. <strong>Time-based analysis</strong>: You might want to see if popular combinations change over time (seasonal patterns, etc.) &gt; &gt; Your manual process demonstrates a good understanding of the approach. For implementation at scale, you’ll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.</p>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="14.1.2.4">
 <h4 data-number="14.1.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">14.1.2.4</span> Step 4: Write Pseudocode</h4>
@@ -577,7 +757,7 @@ RETURN bar_chart, line_chart, heatmap</code></pre>
 product_combinations = find_product_combinations(cleaned_data)
 SAVE_CSV(TOP_N(product_combinations, 20), output_dir + "/top_combinations.csv")
 
-# Analyze time patterns
+# analyse time patterns
 monthly_trends, hourly_patterns = analyze_time_patterns(cleaned_data)
 SAVE_CSV(monthly_trends, output_dir + "/monthly_trends.csv")
 
@@ -589,7 +769,7 @@ SAVE_PNG(line_chart, output_dir + "/monthly_trends.png")
 SAVE_PNG(heatmap, output_dir + "/hourly_patterns.png")</code></pre>
 <pre><code>
 Does this pseudocode cover all the necessary steps for our data analysis pipeline? Are there any inefficiencies or improvements you would suggest?</code></pre>
-<p><strong>AI response:</strong> &gt; Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations: &gt; &gt; <strong>Efficiency improvements:</strong> &gt; &gt; 1. <strong>Chunked processing</strong>: For millions of rows, you might want to process the data in chunks to avoid memory issues: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     initialize empty dataframe for cleaned_data &gt;     FOR each chunk IN READ_CSV_IN_CHUNKS(input_file, chunk_size=100000): &gt;         # Apply cleaning operations to chunk &gt;         cleaned_chunk = CLEAN_CHUNK(chunk) &gt;         APPEND(cleaned_data, cleaned_chunk) &gt;     RETURN cleaned_data &gt;</code> &gt; &gt; 2. <strong>Optimized product combination generation</strong>: The current approach might be inefficient for transactions with many products: &gt; <code>&gt; # Add a maximum combination size parameter &gt; FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size=2): &gt;     # Use an efficient algorithm like Apriori instead of manual combination generation &gt;     frequent_itemsets = APRIORI_ALGORITHM( &gt;         data.product_categories,  &gt;         min_support=min_support, &gt;         max_length=max_combination_size &gt;     ) &gt;     RETURN frequent_itemsets &gt;</code> &gt; &gt; <strong>Additional considerations:</strong> &gt; &gt; 1. <strong>Data validation</strong>: Add checks for data quality: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     # ...existing code... &gt;      &gt;     # Add data validation &gt;     LOG_STATS(COUNT_MISSING_VALUES(data)) &gt;     LOG_STATS(COUNT_UNIQUE_VALUES(data.product_categories)) &gt;     VALIDATE_NUMERIC_RANGE(data.amount, min=0) &gt;      &gt;     # ...rest of function... &gt;</code> &gt; &gt; 2. <strong>Error handling</strong>: Add error handling for robust processing: &gt; <code>&gt; FUNCTION main(input_file, output_dir): &gt;     TRY: &gt;         # ...existing code... &gt;     CATCH FileNotFoundError: &gt;         LOG_ERROR("Input file not found") &gt;     CATCH MemoryError: &gt;         LOG_ERROR("Insufficient memory, try reducing chunk size") &gt;     FINALLY: &gt;         CLEAN_UP_TEMP_FILES() &gt;</code> &gt; &gt; 3. <strong>Parallelization</strong>: For large datasets, consider parallel processing: &gt; <code>&gt; FUNCTION find_product_combinations(data, min_support=0.001): &gt;     # Split data into partitions &gt;     partitions = SPLIT_DATA(data, num_partitions=NUM_CORES) &gt;      &gt;     # Process partitions in parallel &gt;     partial_results = PARALLEL_MAP(PROCESS_PARTITION, partitions) &gt;      &gt;     # Combine results &gt;     combined_results = COMBINE_PARTIAL_RESULTS(partial_results) &gt;     RETURN combined_results &gt;</code> &gt; &gt; 4. <strong>Progress tracking</strong>: For long-running operations, add progress tracking: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     total_chunks = ESTIMATE_TOTAL_CHUNKS(input_file, chunk_size) &gt;     FOR i, chunk IN ENUMERATE(READ_CSV_IN_CHUNKS(input_file)): &gt;         LOG_PROGRESS(f"Processing chunk {i}/{total_chunks}") &gt;         # ...process chunk... &gt;</code> &gt; &gt; These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</p>
+<p><strong>AI response:</strong> &gt; Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations: &gt; &gt; <strong>Efficiency improvements:</strong> &gt; &gt; 1. <strong>Chunked processing</strong>: For millions of rows, you might want to process the data in chunks to avoid memory issues: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     initialize empty dataframe for cleaned_data &gt;     FOR each chunk IN READ_CSV_IN_CHUNKS(input_file, chunk_size=100000): &gt;         # Apply cleaning operations to chunk &gt;         cleaned_chunk = CLEAN_CHUNK(chunk) &gt;         APPEND(cleaned_data, cleaned_chunk) &gt;     RETURN cleaned_data &gt;</code> &gt; &gt; 2. <strong>optimised product combination generation</strong>: The current approach might be inefficient for transactions with many products: &gt; <code>&gt; # Add a maximum combination size parameter &gt; FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size=2): &gt;     # Use an efficient algorithm like Apriori instead of manual combination generation &gt;     frequent_itemsets = APRIORI_ALGORITHM( &gt;         data.product_categories,  &gt;         min_support=min_support, &gt;         max_length=max_combination_size &gt;     ) &gt;     RETURN frequent_itemsets &gt;</code> &gt; &gt; <strong>Additional considerations:</strong> &gt; &gt; 1. <strong>Data validation</strong>: Add checks for data quality: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     # ...existing code... &gt;      &gt;     # Add data validation &gt;     LOG_STATS(COUNT_MISSING_VALUES(data)) &gt;     LOG_STATS(COUNT_UNIQUE_VALUES(data.product_categories)) &gt;     VALIDATE_NUMERIC_RANGE(data.amount, min=0) &gt;      &gt;     # ...rest of function... &gt;</code> &gt; &gt; 2. <strong>Error handling</strong>: Add error handling for robust processing: &gt; <code>&gt; FUNCTION main(input_file, output_dir): &gt;     TRY: &gt;         # ...existing code... &gt;     CATCH FileNotFoundError: &gt;         LOG_ERROR("Input file not found") &gt;     CATCH MemoryError: &gt;         LOG_ERROR("Insufficient memory, try reducing chunk size") &gt;     FINALLY: &gt;         CLEAN_UP_TEMP_FILES() &gt;</code> &gt; &gt; 3. <strong>Parallelization</strong>: For large datasets, consider parallel processing: &gt; <code>&gt; FUNCTION find_product_combinations(data, min_support=0.001): &gt;     # Split data into partitions &gt;     partitions = SPLIT_DATA(data, num_partitions=NUM_CORES) &gt;      &gt;     # Process partitions in parallel &gt;     partial_results = PARALLEL_MAP(PROCESS_PARTITION, partitions) &gt;      &gt;     # Combine results &gt;     combined_results = COMBINE_PARTIAL_RESULTS(partial_results) &gt;     RETURN combined_results &gt;</code> &gt; &gt; 4. <strong>Progress tracking</strong>: For long-running operations, add progress tracking: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     total_chunks = ESTIMATE_TOTAL_CHUNKS(input_file, chunk_size) &gt;     FOR i, chunk IN ENUMERATE(READ_CSV_IN_CHUNKS(input_file)): &gt;         LOG_PROGRESS(f"Processing chunk {i}/{total_chunks}") &gt;         # ...process chunk... &gt;</code> &gt; &gt; These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</p>
 </section>
 <section id="step-5-convert-to-code" class="level4" data-number="14.1.2.5">
 <h4 data-number="14.1.2.5" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">14.1.2.5</span> Step 5: Convert to Code</h4>
@@ -681,10 +861,10 @@ def clean_data(file_path, chunk_size=100000):
     cleaned_data = pd.concat(chunks, ignore_index=True)
     
     return cleaned_data</code></pre>
-<p>Is this implementation correct and efficient? Are there any issues or optimizations I should consider?</p>
+<p>Is this implementation correct and efficient? Are there any issues or optimisations I should consider?</p>
 <pre><code>
 **AI response:**
-&gt; Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimizations:
+&gt; Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimisations:
 &gt; 
 &gt; **Strengths:**
 &gt; 
@@ -695,7 +875,7 @@ def clean_data(file_path, chunk_size=100000):
 &gt; 
 &gt; **Potential improvements:**
 &gt; 
-&gt; 1. **Memory optimization for very large datasets:**
+&gt; 1. **Memory optimisation for very large datasets:**
 &gt; 
 &gt; ```python
 &gt; def find_product_combinations(data, min_support=0.001, max_len=3):
@@ -734,7 +914,7 @@ def clean_data(file_path, chunk_size=100000):
 &gt;         raise
 &gt; ```
 &gt; 
-&gt; 3. **Performance optimization for Apriori on sparse data:**
+&gt; 3. **Performance optimisation for Apriori on sparse data:**
 &gt; 
 &gt; ```python
 &gt; # If your dataset has many distinct products but each transaction has few,
@@ -883,7 +1063,7 @@ For this step, we would test our implementation with real data, starting with a 
 &gt; 1. **Memory Consumption**
 &gt;    - **Issue**: The TransactionEncoder creates a one-hot encoded matrix which can be extremely memory-intensive for datasets with millions of transactions and many unique products.
 &gt;    - **Solution**: 
-&gt;      - Process in batches based on time periods (e.g., analyze one month at a time)
+&gt;      - Process in batches based on time periods (e.g., analyse one month at a time)
 &gt;      - Use sampling techniques for initial analysis
 &gt;      - Implement a more memory-efficient version of Apriori or consider alternatives like FP-Growth
 &gt;      - Use sparse matrix representations where possible
@@ -911,7 +1091,7 @@ For this step, we would test our implementation with real data, starting with a 
 &gt;      - Create data quality dashboards to monitor issues
 &gt; 
 &gt; 5. **Time-Based Changes**
-&gt;    - **Issue**: Product associations may change over time, and analyzing everything together might obscure patterns.
+&gt;    - **Issue**: Product associations may change over time, and analysing everything together might obscure patterns.
 &gt;    - **Solution**:
 &gt;      - Implement time-window analysis
 &gt;      - Compare associations across different time periods
@@ -943,14 +1123,14 @@ For this step, we would test our implementation with real data, starting with a 
 &gt;     for size in sample_sizes:
 &gt;         if size &gt; stats['total_rows']: 
 &gt;             continue
-&gt;         print(f"Analyzing sample of {size} transactions...")
+&gt;         print(f"analysing sample of {size} transactions...")
 &gt;         sample = get_stratified_sample(file_path, size)
 &gt;         # Run analysis on progressively larger samples
 &gt;         results = find_product_combinations(sample)
 &gt;         save_results(results, f"{output_dir}/sample_{size}_results.csv")
 &gt;     
-&gt;     # 4. Full analysis with optimized parameters
-&gt;     print("Running full analysis with optimized parameters...")
+&gt;     # 4. Full analysis with optimised parameters
+&gt;     print("Running full analysis with optimised parameters...")
 &gt;     # Use parameters learned from sample analysis
 &gt;     full_results = process_in_time_windows(file_path)
 &gt;     
@@ -967,7 +1147,7 @@ This case study demonstrates several key intentional prompting principles:
 2. **Detailed input/output specification** clarified the exact needs of the pipeline
 3. **Manual exploration** of a small data sample provided crucial insights into the required algorithms
 4. **Pseudocode development** allowed for structural planning before implementation
-5. **Implementation with AI assistance** incorporated best practices and optimizations
+5. **Implementation with AI assistance** incorporated best practices and optimisations
 6. **Testing with synthetic data** verified the approach before scaling to the full dataset
 
 The intentional prompting methodology led to a solution that was:
@@ -982,7 +1162,7 @@ The intentional prompting methodology led to a solution that was:
 
 A developer needs to build a weather dashboard application in Python. The application should:
 
-1. Utilize a weather data module to retrieve current and forecast information
+1. utilise a weather data module to retrieve current and forecast information
 2. Process and display weather data in a user-friendly interface
 3. Allow users to search for different locations
 4. Provide visualizations of weather trends
@@ -1317,7 +1497,7 @@ Are there other information sources or outputs we should consider to effectively
 </ul></li>
 <li><strong>AI assistance enhances human capability</strong>
 <ul>
-<li>AI helps identify potential issues and optimizations</li>
+<li>AI helps identify potential issues and optimisations</li>
 <li>The human developer maintains control over the approach and design decisions</li>
 </ul></li>
 <li><strong>Testing is essential</strong>
@@ -1342,6 +1522,19 @@ Are there other information sources or outputs we should consider to effectively
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1742,12 +1935,12 @@ Are there other information sources or outputs we should consider to effectively
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/12-refactoring-strategies.html" class="pagination-link" aria-label="Refactoring Strategies">
+      <a href="../chapters/refactoring-strategies.html" class="pagination-link" aria-label="Refactoring Strategies">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/14-scaling-complexity.html" class="pagination-link" aria-label="Scaling to Complex Projects">
+      <a href="../chapters/scaling-complexity.html" class="pagination-link" aria-label="Scaling to Complex Projects">
         <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1757,4 +1950,4 @@ Are there other information sources or outputs we should consider to effectively
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/13-case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

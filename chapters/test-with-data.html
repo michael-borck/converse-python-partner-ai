@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; Test with Data (Step 6) – Conversation, Not Delegation: Mastering Human-AI Development</title>
+<title>10&nbsp; Test with Data (Step 6) – Converse Python, Partner AI: The Python Edition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/10-intentional-prompting-patterns.html" rel="next">
-<link href="../chapters/08-convert-to-code.html" rel="prev">
+<link href="../chapters/intentional-prompting-patterns.html" rel="next">
+<link href="../chapters/convert-to-code.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,10 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f2dd3d79ed53af71ab0ccfce3a24affd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +114,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/09-test-with-data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/test-with-data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,26 +300,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Conversation, Not Delegation: Mastering Human-AI Development</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/michaelborck-books/conversation-not-delegation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+      <a href="../">Converse Python, Partner AI: The Python Edition</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -170,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-philosophy.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/philosophy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conversation, Not Delegation</span></span></a>
   </div>
 </li>
@@ -198,19 +371,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-ai-revolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ai-revolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The AI Revolution in Programming</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principles of Intentional Prompting</span></span></a>
   </div>
 </li>
@@ -227,37 +400,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-six-step-methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/six-step-methodology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Six-Step Programming Methodology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-restate-and-identify.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/restate-and-identify.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Restate and Identify (Steps 1-2)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-work-by-hand.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/work-by-hand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-pseudocode.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/pseudocode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-convert-to-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/convert-to-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-test-with-data.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/test-with-data.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span></a>
   </div>
 </li>
@@ -274,25 +447,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-debugging-with-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/debugging-with-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-refactoring-strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/refactoring-strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-case-studies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/case-studies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
   </div>
 </li>
@@ -309,19 +482,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/14-scaling-complexity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/scaling-complexity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-teaching-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/teaching-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/16-future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></span></a>
   </div>
 </li>
@@ -331,6 +504,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -403,12 +582,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">10.5</span> Key Takeaways</a></li>
   <li><a href="#moving-forward" id="toc-moving-forward" class="nav-link" data-scroll-target="#moving-forward"><span class="header-section-number">10.6</span> Moving Forward</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/09-test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/04-six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/09-test-with-data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></a></li></ol></nav>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/six-step-methodology.html">Methodology</a></li><li class="breadcrumb-item"><a href="../chapters/test-with-data.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></h1>
 </div>
@@ -437,7 +617,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Validates correctness</strong> - Ensures the solution produces the expected results</li>
 <li><strong>Reveals edge case issues</strong> - Identifies problems with unusual inputs</li>
 <li><strong>Provides confidence</strong> - Gives you assurance that the solution is robust</li>
-<li><strong>Documents behavior</strong> - Shows how the code responds to different inputs</li>
+<li><strong>Documents behaviour</strong> - Shows how the code responds to different inputs</li>
 <li><strong>Prevents regressions</strong> - Helps maintain correctness as code evolves</li>
 </ol>
 <p>Even with AI assistance in implementation, testing remains primarily a human responsibility. The most effective developers use a structured approach to testing rather than ad hoc verification.</p>
@@ -462,7 +642,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="stress-tests" class="level4" data-number="10.1.2.3">
 <h4 data-number="10.1.2.3" class="anchored" data-anchor-id="stress-tests"><span class="header-section-number">10.1.2.3</span> Stress Tests</h4>
-<p>These evaluate behavior with large or complex inputs:</p>
+<p>These evaluate behaviour with large or complex inputs:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stress test</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>long_input <span class="op">=</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">+</span> <span class="st">"b"</span> <span class="op">+</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">1000</span>  <span class="co"># Long palindrome</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">len</span>(longest_palindromic_substring(long_input)) <span class="op">==</span> <span class="dv">2001</span></span>
@@ -542,7 +722,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>AI assistants can help identify edge cases you might not have considered:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>I've implemented a function to find the longest palindromic substring in a string. What edge cases should I test to ensure it works correctly in all scenarios?</code></pre>
-<p><strong>AI response:</strong> &gt; Here’s a comprehensive list of edge cases you should test for your longest palindromic substring function: &gt; &gt; ### Basic Edge Cases &gt; &gt; 1. <strong>Empty string</strong> - Should return empty string &gt; 2. <strong>Single character</strong> - Should return that character &gt; 3. <strong>Two identical characters</strong> - Should return both characters &gt; 4. <strong>Two different characters</strong> - Should return the first character &gt; &gt; ### Palindrome Pattern Edge Cases &gt; &gt; 5. <strong>No palindromes longer than 1 character</strong> - “abc” should return “a” (or “b” or “c”) &gt; 6. <strong>Odd-length palindromes only</strong> - “aba” should return “aba” &gt; 7. <strong>Even-length palindromes only</strong> - “abba” should return “abba” &gt; 8. <strong>Mix of odd and even palindromes</strong> - “abbac” should return “abba” &gt; 9. <strong>Palindrome at the beginning</strong> - “abbax” should return “abba” &gt; 10. <strong>Palindrome at the end</strong> - “xabba” should return “abba” &gt; 11. <strong>Palindrome in the middle</strong> - “xabbay” should return “abba” &gt; 12. <strong>Entire string is a palindrome</strong> - “racecar” should return “racecar” &gt; &gt; ### Multiple Palindromes Edge Cases &gt; &gt; 13. <strong>Multiple palindromes of different lengths</strong> - “aaaabcbaaaaa” should return “aaaaa” &gt; 14. <strong>Multiple palindromes of same maximum length</strong> - “aabaa” and “baab” in “aabaabaab” (should return either) &gt; 15. <strong>Overlapping palindromes</strong> - “aaaa” has multiple overlapping palindromes &gt; &gt; ### Character Edge Cases &gt; &gt; 16. <strong>Case sensitivity</strong> - “Madam” is not a palindrome if case-sensitive &gt; 17. <strong>Special characters</strong> - “a#a” should return “a#a” &gt; 18. <strong>Numbers and mixed content</strong> - “12321” or “a123a” &gt; 19. <strong>Unicode characters</strong> - Test with non-ASCII characters like “租赁” &gt; &gt; ### Performance Edge Cases &gt; &gt; 20. <strong>Very long strings</strong> - Test with strings of thousands of characters &gt; 21. <strong>Long palindrome within long string</strong> - e.g., 1000 ‘a’s + ’b’ + 1000 ’a’s &gt; 22. <strong>Repeated characters</strong> - “aaaaaaaaaa” (helps test for optimization issues) &gt; &gt; A well-tested function should handle all these cases correctly and efficiently.</p>
+<p><strong>AI response:</strong> &gt; Here’s a comprehensive list of edge cases you should test for your longest palindromic substring function: &gt; &gt; ### Basic Edge Cases &gt; &gt; 1. <strong>Empty string</strong> - Should return empty string &gt; 2. <strong>Single character</strong> - Should return that character &gt; 3. <strong>Two identical characters</strong> - Should return both characters &gt; 4. <strong>Two different characters</strong> - Should return the first character &gt; &gt; ### Palindrome Pattern Edge Cases &gt; &gt; 5. <strong>No palindromes longer than 1 character</strong> - “abc” should return “a” (or “b” or “c”) &gt; 6. <strong>Odd-length palindromes only</strong> - “aba” should return “aba” &gt; 7. <strong>Even-length palindromes only</strong> - “abba” should return “abba” &gt; 8. <strong>Mix of odd and even palindromes</strong> - “abbac” should return “abba” &gt; 9. <strong>Palindrome at the beginning</strong> - “abbax” should return “abba” &gt; 10. <strong>Palindrome at the end</strong> - “xabba” should return “abba” &gt; 11. <strong>Palindrome in the middle</strong> - “xabbay” should return “abba” &gt; 12. <strong>Entire string is a palindrome</strong> - “racecar” should return “racecar” &gt; &gt; ### Multiple Palindromes Edge Cases &gt; &gt; 13. <strong>Multiple palindromes of different lengths</strong> - “aaaabcbaaaaa” should return “aaaaa” &gt; 14. <strong>Multiple palindromes of same maximum length</strong> - “aabaa” and “baab” in “aabaabaab” (should return either) &gt; 15. <strong>Overlapping palindromes</strong> - “aaaa” has multiple overlapping palindromes &gt; &gt; ### Character Edge Cases &gt; &gt; 16. <strong>Case sensitivity</strong> - “Madam” is not a palindrome if case-sensitive &gt; 17. <strong>Special characters</strong> - “a#a” should return “a#a” &gt; 18. <strong>Numbers and mixed content</strong> - “12321” or “a123a” &gt; 19. <strong>Unicode characters</strong> - Test with non-ASCII characters like “租赁” &gt; &gt; ### Performance Edge Cases &gt; &gt; 20. <strong>Very long strings</strong> - Test with strings of thousands of characters &gt; 21. <strong>Long palindrome within long string</strong> - e.g., 1000 ‘a’s + ’b’ + 1000 ’a’s &gt; 22. <strong>Repeated characters</strong> - “aaaaaaaaaa” (helps test for optimisation issues) &gt; &gt; A well-tested function should handle all these cases correctly and efficiently.</p>
 </section>
 </section>
 <section id="ai-assisted-test-generation" class="level2" data-number="10.3">
@@ -568,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Test failures provide valuable learning opportunities that can improve both your current solution and your general understanding.</p>
 <section id="debugging-with-ai-assistance" class="level3" data-number="10.4.1">
 <h3 data-number="10.4.1" class="anchored" data-anchor-id="debugging-with-ai-assistance"><span class="header-section-number">10.4.1</span> Debugging with AI Assistance</h3>
-<p>When tests fail, AI can help analyze the failure:</p>
+<p>When tests fail, AI can help analyse the failure:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>My test case for "aacabdkacaa" is failing. The expected output is "aca" but my function returns "aa". Here's my implementation:
 
@@ -769,7 +949,7 @@ AssertionError: 999 != 1001
 </section>
 <section id="fixing-issues-based-on-test-results" class="level3" data-number="10.4.3">
 <h3 data-number="10.4.3" class="anchored" data-anchor-id="fixing-issues-based-on-test-results"><span class="header-section-number">10.4.3</span> Fixing Issues Based on Test Results</h3>
-<p>Analyzing the failures and updating our implementation:</p>
+<p>analysing the failures and updating our implementation:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in a given string.</span></span>
@@ -846,6 +1026,19 @@ OK</code></pre>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1246,12 +1439,12 @@ OK</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/08-convert-to-code.html" class="pagination-link" aria-label="Convert to Code (Step 5)">
+      <a href="../chapters/convert-to-code.html" class="pagination-link" aria-label="Convert to Code (Step 5)">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/10-intentional-prompting-patterns.html" class="pagination-link" aria-label="Intentional Prompting Patterns">
+      <a href="../chapters/intentional-prompting-patterns.html" class="pagination-link" aria-label="Intentional Prompting Patterns">
         <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1261,4 +1454,4 @@ OK</code></pre>
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/09-test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>11&nbsp; Intentional Prompting Patterns – Conversation, Not Delegation: Mastering Human-AI Development</title>
+<title>11&nbsp; Intentional Prompting Patterns – Converse Python, Partner AI: The Python Edition</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../chapters/11-debugging-with-ai.html" rel="next">
-<link href="../chapters/09-test-with-data.html" rel="prev">
+<link href="../chapters/debugging-with-ai.html" rel="next">
+<link href="../chapters/test-with-data.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -74,10 +74,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-7ac2f9da8c2617a4fdd15004b4601015.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-597958c53c93a607afca12fd375c57ed.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f2dd3d79ed53af71ab0ccfce3a24affd.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-ea07c801963e0f738b5ea27386c64fa2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +114,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -119,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -134,26 +300,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Conversation, Not Delegation: Mastering Human-AI Development</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/michaelborck-books/conversation-not-delegation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+      <a href="../">Converse Python, Partner AI: The Python Edition</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
     <div class="dropdown">
       <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.pdf">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
               <i class="bi bi-file-pdf pe-1"></i>
             Download PDF
             </a>
           </li>
           <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Conversation,-Not-Delegation--Mastering-Human-AI-Development.epub">
+            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
               <i class="bi bi-journal pe-1"></i>
             Download ePub
             </a>
           </li>
       </ul>
     </div>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
       </div>
@@ -170,6 +337,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,7 +354,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/00-philosophy.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/philosophy.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Conversation, Not Delegation</span></span></a>
   </div>
 </li>
@@ -198,19 +371,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/01-introduction.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/introduction.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/02-ai-revolution.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/ai-revolution.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">The AI Revolution in Programming</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/03-intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/intentional-prompting-principles.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Principles of Intentional Prompting</span></span></a>
   </div>
 </li>
@@ -227,37 +400,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/04-six-step-methodology.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/six-step-methodology.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">The Six-Step Programming Methodology</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/05-restate-and-identify.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/restate-and-identify.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Restate and Identify (Steps 1-2)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/06-work-by-hand.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/work-by-hand.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Work by Hand (Step 3)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/07-pseudocode.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/pseudocode.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Pseudocode (Step 4)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/08-convert-to-code.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/convert-to-code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Convert to Code (Step 5)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/09-test-with-data.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/test-with-data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span></a>
   </div>
 </li>
@@ -274,25 +447,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/10-intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link active">
+  <a href="../chapters/intentional-prompting-patterns.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/11-debugging-with-ai.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/debugging-with-ai.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/12-refactoring-strategies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/refactoring-strategies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Refactoring Strategies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/13-case-studies.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/case-studies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Case Studies</span></span></a>
   </div>
 </li>
@@ -309,19 +482,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/14-scaling-complexity.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/scaling-complexity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Scaling to Complex Projects</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/15-teaching-learning.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/teaching-learning.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Teaching and Learning</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/16-future-directions.html" class="sidebar-item-text sidebar-link">
+  <a href="../chapters/future-directions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Future Directions</span></span></a>
   </div>
 </li>
@@ -331,6 +504,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="sidebar-item-container"> 
   <a href="../acknowledgments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../about-author.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">About the Author</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -425,12 +604,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">11.9</span> Key Takeaways</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/10-intentional-prompting-patterns.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-patterns.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/10-intentional-prompting-patterns.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></a></li></ol></nav>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html">Patterns &amp; Practices</a></li><li class="breadcrumb-item"><a href="../chapters/intentional-prompting-patterns.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Intentional Prompting Patterns</span></h1>
 </div>
@@ -451,7 +631,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="the-art-of-guiding-ai" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="the-art-of-guiding-ai"><span class="header-section-number">11.1</span> The Art of Guiding AI</h2>
-<p>Effective collaboration with AI assistants requires more than just asking for solutions—it demands a thoughtful approach to crafting prompts that guide the AI toward helpful, educational responses. This chapter explores key patterns for intentional prompting that maximize the learning and development value of AI interactions.</p>
+<p>Effective collaboration with AI assistants requires more than just asking for solutions—it demands a thoughtful approach to crafting prompts that guide the AI toward helpful, educational responses. This chapter explores key patterns for intentional prompting that maximise the learning and development value of AI interactions.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/intentional-prompting-patterns.png" class="img-fluid figure-img"></p>
@@ -465,7 +645,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="from-prompt-engineering-to-intentional-prompting" class="level3" data-number="11.2.1">
 <h3 data-number="11.2.1" class="anchored" data-anchor-id="from-prompt-engineering-to-intentional-prompting"><span class="header-section-number">11.2.1</span> From Prompt Engineering to Intentional Prompting</h3>
 <p>It’s important to understand the relationship between prompt engineering and intentional prompting:</p>
-<p><strong>Prompt engineering</strong> is primarily concerned with getting optimal outputs from AI systems. It focuses on crafting the right words, examples, and instructions to elicit high-quality responses from language models. Prompt engineers develop expertise in understanding model behaviors, leveraging context windows effectively, and using specialized techniques to guide AI outputs.</p>
+<p><strong>Prompt engineering</strong> is primarily concerned with getting optimal outputs from AI systems. It focuses on crafting the right words, examples, and instructions to elicit high-quality responses from language models. Prompt engineers develop expertise in understanding model behaviours, leveraging context windows effectively, and using specialized techniques to guide AI outputs.</p>
 <p><strong>Intentional prompting</strong> incorporates prompt engineering techniques but embeds them within a comprehensive methodology for approaching programming tasks. While prompt engineering asks “How can I get the best output from this AI?”, intentional prompting asks “How can I use this AI as part of a thoughtful development process that maintains my understanding and control?”</p>
 <p>The distinction becomes clearer when considering how each approach would handle a complex programming task:</p>
 <table class="caption-top table">
@@ -484,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td><strong>Initial Task Analysis</strong></td>
-<td>Optimize prompt for detailed requirements</td>
+<td>optimise prompt for detailed requirements</td>
 <td>Follow Steps 1-2: Restate problem and identify inputs/outputs</td>
 </tr>
 <tr class="even">
@@ -558,7 +738,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h4 data-number="11.2.2.4" class="anchored" data-anchor-id="role-based-prompting"><span class="header-section-number">11.2.2.4</span> Role-Based Prompting</h4>
 <p>Role-based prompting assigns a specific professional or character role to the AI, which helps frame its responses within a particular domain of expertise or perspective.</p>
 <p><strong>Example:</strong></p>
-<pre><code>As an experienced software architect, analyze this function and suggest improvements for scalability and performance.</code></pre>
+<pre><code>As an experienced software architect, analyse this function and suggest improvements for scalability and performance.</code></pre>
 <p>This technique helps orient the AI toward specific terminology, frameworks, and priorities relevant to the assigned role.</p>
 </section>
 </section>
@@ -569,7 +749,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.1" class="anchored" data-anchor-id="foundation-prompts"><span class="header-section-number">11.3.1</span> Foundation Prompts</h3>
 <p>Foundation prompts establish the baseline requirements for a programming task. Instead of just asking for a solution, these prompts set the stage for a productive dialogue.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"I need to write a Python program that analyzes student grades and calculates statistics."
+<pre><code>"I need to write a Python program that analyses student grades and calculates statistics."
 
 "Can you help me design a function that validates user input according to these requirements..."
 
@@ -700,11 +880,11 @@ Now I need to implement a function that checks if a user's token is valid and re
 <h3 data-number="11.5.3" class="anchored" data-anchor-id="template-guided-prompting"><span class="header-section-number">11.5.3</span> Template-Guided Prompting</h3>
 <p>Template-guided prompting provides a structural framework that the AI should follow in its response. This ensures consistency and completeness.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Analyze this function using the following template:
+<pre><code>analyse this function using the following template:
 1. Time complexity: 
 2. Space complexity:
 3. Edge cases not handled:
-4. Potential optimizations:
+4. Potential optimisations:
 5. Clean code suggestions:</code></pre>
 <p>This strategy helps ensure the AI covers all necessary aspects of a problem rather than focusing only on the most obvious elements.</p>
 </section>
@@ -732,7 +912,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <td>Framework for maintaining human agency</td>
 </tr>
 <tr class="even">
-<td>Methods for optimizing AI responses</td>
+<td>Methods for optimising AI responses</td>
 <td>Structure for educational development</td>
 </tr>
 <tr class="odd">
@@ -800,7 +980,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <li><strong>Human-led workflows</strong>: The human sets goals, defines parameters, and makes the final decisions</li>
 <li><strong>Critical evaluation</strong>: Thoughtfully evaluating AI suggestions based on expertise and context</li>
 <li><strong>Iterative collaboration</strong>: Engaging in a refinement process where AI suggestions improve through feedback</li>
-<li><strong>Domain-appropriate trust</strong>: Recognizing where AI excels versus where human judgment is essential</li>
+<li><strong>Domain-appropriate trust</strong>: recognising where AI excels versus where human judgment is essential</li>
 <li><strong>Skill complementarity</strong>: Using AI for appropriate tasks while keeping human focus on creative and strategic aspects</li>
 </ol>
 <p>By applying these principles across any methodology or domain, intentional prompting creates a collaborative relationship that leverages both human and AI strengths while overcoming their respective limitations.</p>
@@ -834,7 +1014,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 </section>
 <section id="analysis-of-the-initial-code" class="level3" data-number="11.8.3">
 <h3 data-number="11.8.3" class="anchored" data-anchor-id="analysis-of-the-initial-code"><span class="header-section-number">11.8.3</span> Analysis of the Initial Code</h3>
-<p>The developer analyzes the initial code and identifies several issues:</p>
+<p>The developer analyses the initial code and identifies several issues:</p>
 <ol type="1">
 <li>No error handling - will crash if the API is down or returns an error</li>
 <li>No input validation for the location parameter</li>
@@ -978,6 +1158,19 @@ Also, can you make it handle the forecast_days parameter to allow getting foreca
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1378,12 +1571,12 @@ Also, can you make it handle the forecast_days parameter to allow getting foreca
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../chapters/09-test-with-data.html" class="pagination-link" aria-label="Test with Data (Step 6)">
+      <a href="../chapters/test-with-data.html" class="pagination-link" aria-label="Test with Data (Step 6)">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test with Data (Step 6)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../chapters/11-debugging-with-ai.html" class="pagination-link" aria-label="Debugging with AI">
+      <a href="../chapters/debugging-with-ai.html" class="pagination-link" aria-label="Debugging with AI">
         <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Debugging with AI</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -1393,4 +1586,4 @@ Also, can you make it handle the forecast_days parameter to allow getting foreca
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/edit/main/chapters/10-intentional-prompting-patterns.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michaelborck-books/conversation-not-delegation/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-patterns.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
