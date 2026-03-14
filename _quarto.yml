@@ -4,6 +4,7 @@ project:
 
 book:
   title: "Converse Python, Partner AI: The Python Edition"
+  favicon: favicon.svg
   author: "Michael Borck"
   date: "last-modified"
   license: "CC BY 4.0 (content), MIT (code examples)"
@@ -83,7 +84,6 @@ format:
     cover-image: images/cover.png
 
 website:
-  favicon: favicon.svg
   repo-url: https://github.com/michael-borck/converse-python-partner-ai
   repo-actions: [edit, issue]
   open-graph: true
