@@ -39,3 +39,4 @@ node_modules/
 _notes/
 **/*.quarto_ipynb
 llm.txt
+rag-documents/
