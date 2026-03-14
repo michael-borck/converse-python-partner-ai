@@ -82,7 +82,7 @@ format:
     cover-image: images/cover.png
 
 website:
-  favicon: assets/favicon.png
+  favicon: favicon.svg
   repo-url: https://github.com/michael-borck/converse-python-partner-ai
   repo-actions: [edit, issue]
   open-graph: true
