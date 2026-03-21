@@ -10,7 +10,7 @@ This glossary provides definitions for key terms used throughout "Intentional Pr
 
 **Few-Shot Prompting**: Providing an AI with examples of the desired input-output behaviour before presenting the actual task, helping guide the model's response format and approach.
 
-**Foundation Model**: Large AI models trained on vast datasets that serve as the basis for more specialized applications, including coding assistants.
+**Foundation Model**: Large AI models trained on vast datasets that serve as the basis for more specialised applications, including coding assistants.
 
 **Large Language Model (LLM)**: AI systems trained on massive text datasets that can generate human-like text and code based on prompts.
 

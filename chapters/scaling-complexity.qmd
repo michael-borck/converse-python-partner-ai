@@ -123,7 +123,7 @@ What would be a sensible way to divide these into microservices? What are the ke
 > 
 > - **Review/Rating Service**: For product reviews and ratings, which crosses concerns between products and users.
 > 
-> - **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialized search technology.
+> - **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialised search technology.
 > 
 > This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
 
@@ -150,7 +150,7 @@ A key challenge when using AI with large codebases is providing sufficient conte
 
 1. **Hierarchical exploration** - Start with high-level architecture and progressively drill down
 2. **Component-focused prompting** - Focus inquiries on specific components rather than the entire system
-3. **Interface-first approach** - Prioritize understanding component interfaces over implementation details
+3. **Interface-first approach** - Prioritise understanding component interfaces over implementation details
 4. **Strategic code sampling** - Select representative portions of the codebase for AI analysis
 
 **Example prompt for hierarchical exploration:**
@@ -718,13 +718,13 @@ Intentional prompting in team settings requires effective knowledge sharing patt
 ```
 Our development team of 12 engineers is working on a complex system with multiple components. We're finding that knowledge is becoming siloed, with each developer understanding only their area deeply.
 
-What collaboration patterns or team practices would help us maintain a shared understanding of the system while allowing for individual specialization?
+What collaboration patterns or team practices would help us maintain a shared understanding of the system while allowing for individual specialisation?
 ```
 
 **AI response:**
 > # Team Knowledge Sharing Patterns for Complex Systems
 > 
-> To balance specialized expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
+> To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
 > 
 > ## Regular Knowledge Exchange Practices
 > 
@@ -755,7 +755,7 @@ What collaboration patterns or team practices would help us maintain a shared un
 > ## Documentation Practices
 > 
 > ### 5. Living Architecture Diagram
-> - **Approach**: Maintain an always-current system architecture visualization
+> - **Approach**: Maintain an always-current system architecture visualisation
 > - **Ownership**: Rotating responsibility for updates
 > - **Reviews**: Monthly team reviews to ensure accuracy
 > - **Accessibility**: Prominently displayed in team spaces (physical and virtual)
@@ -817,7 +817,7 @@ What collaboration patterns or team practices would help us maintain a shared un
 > 3. **Add or adjust practices** based on team feedback
 > 4. **Create explicit time allocations** for knowledge sharing activities
 > 
-> These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialization where needed.
+> These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
 
 ### Documentation as Code
 

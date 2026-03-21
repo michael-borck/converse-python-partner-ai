@@ -1,6 +1,6 @@
 # Common Pitfalls and Solutions
 
-When working with AI coding assistants, certain patterns of challenges tend to emerge. This appendix catalogs common pitfalls in the intentional prompting process and provides practical strategies for avoiding or addressing them.
+When working with AI coding assistants, certain patterns of challenges tend to emerge. This appendix catalogues common pitfalls in the intentional prompting process and provides practical strategies for avoiding or addressing them.
 
 ## Over-Reliance on AI
 
@@ -153,7 +153,7 @@ When working with AI coding assistants, certain patterns of challenges tend to e
 
 - Periodically step back to assess the entire system
 - Schedule "architectural reviews" to identify drift from intended design
-- Use visualization tools to understand system evolution
+- Use visualisation tools to understand system evolution
 - Consider how individual changes affect system properties (performance, security, maintainability)
 
 ## Ethical and Legal Concerns
@@ -161,7 +161,7 @@ When working with AI coding assistants, certain patterns of challenges tend to e
 ### Symptoms
 
 - Uncertainty about code ownership and attribution
-- Potential license violations from AI-suggested code
+- Potential licence violations from AI-suggested code
 - Reuse of code with unclear provenance
 - Privacy or security implications in generated solutions
 
@@ -301,7 +301,7 @@ Can you help me with the schema design and backend implementation first?
 ### Root Causes
 
 - Misconception that intentional prompting is just about creating better prompts
-- Prioritizing short-term efficiency over long-term understanding
+- Prioritising short-term efficiency over long-term understanding
 - Not fully grasping the educational purpose of the intentional prompting methodology
 - Confusing the means (good prompts) with the end (developer understanding and growth)
 

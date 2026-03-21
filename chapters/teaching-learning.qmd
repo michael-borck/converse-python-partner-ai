@@ -24,7 +24,7 @@ Educators now have additional responsibilities:
 
 1. **Teaching effective prompting** alongside programming concepts
 2. **modelling critical evaluation** of AI-generated solutions
-3. **Emphasizing conceptual understanding** over implementation details
+3. **Emphasising conceptual understanding** over implementation details
 4. **Preparing students** for a future where AI collaboration is the norm
 5. **Creating assessment methods** that work in an AI-assisted environment
 
@@ -62,7 +62,7 @@ Instead, design assignments that incorporate AI collaboration explicitly:
 
 ### Prompting-Focused Assignments
 
-These assignments emphasize the skill of effective prompting:
+These assignments emphasise the skill of effective prompting:
 
 **Example assignment:**
 ```
@@ -158,7 +158,7 @@ issues with error handling, security, and readability.
 
 Requirements:
 1. Evaluate the provided code, identifying all potential issues
-2. Create a prioritized list of improvements needed
+2. Create a prioritised list of improvements needed
 3. Implement the improvements
 4. Document your reasoning for each change
 5. Reflect on what the AI should have done differently
@@ -166,7 +166,7 @@ Requirements:
 
 ### Comparative Analysis Assignments
 
-These assignments emphasize exploring multiple approaches:
+These assignments emphasise exploring multiple approaches:
 
 **Example assignment:**
 ```
@@ -277,7 +277,7 @@ Foster an environment that supports learning with AI:
 1. **Explicitly acknowledge** AI use as expected and valuable
 2. **Establish clear guidelines** for appropriate AI collaboration
 3. **Share success stories** of effective AI use
-4. **Normalize discussions** about AI limitations and frustrations
+4. **Normalise discussions** about AI limitations and frustrations
 5. **recognise prompting expertise** as a valuable skill
 
 ## Case Studies in Educational Settings

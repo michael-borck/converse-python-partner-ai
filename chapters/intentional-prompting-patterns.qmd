@@ -14,7 +14,7 @@ Prompt engineering has emerged as a critical field in AI interaction, focusing o
 
 It's important to understand the relationship between prompt engineering and intentional prompting:
 
-**Prompt engineering** is primarily concerned with getting optimal outputs from AI systems. It focuses on crafting the right words, examples, and instructions to elicit high-quality responses from language models. Prompt engineers develop expertise in understanding model behaviours, leveraging context windows effectively, and using specialized techniques to guide AI outputs.
+**Prompt engineering** is primarily concerned with getting optimal outputs from AI systems. It focuses on crafting the right words, examples, and instructions to elicit high-quality responses from language models. Prompt engineers develop expertise in understanding model behaviours, leveraging context windows effectively, and using specialised techniques to guide AI outputs.
 
 **Intentional prompting** incorporates prompt engineering techniques but embeds them within a comprehensive methodology for approaching programming tasks. While prompt engineering asks "How can I get the best output from this AI?", intentional prompting asks "How can I use this AI as part of a thoughtful development process that maintains my understanding and control?"
 
@@ -42,7 +42,7 @@ Zero-shot prompting instructs an AI to perform a task without providing examples
 Write a function that validates email addresses using regular expressions.
 ```
 
-Zero-shot prompting works well for common tasks where the AI has extensive training data, but may struggle with specialized or complex tasks.
+Zero-shot prompting works well for common tasks where the AI has extensive training data, but may struggle with specialised or complex tasks.
 
 #### Few-Shot Prompting
 
@@ -283,7 +283,7 @@ Prompt engineering provides the tactical tools for effective AI interaction, whi
 | Domain-specific prompting strategies | Process that builds understanding |
 | Input formatting best practices | Context for when/how to apply techniques |
 
-This relationship means that becoming skilled at intentional prompting requires developing competence in prompt engineering techniques, but applies those techniques within a thoughtful methodology that prioritizes human understanding and agency.
+This relationship means that becoming skilled at intentional prompting requires developing competence in prompt engineering techniques, but applies those techniques within a thoughtful methodology that prioritises human understanding and agency.
 
 The intentional prompting patterns we've explored can be integrated into various workflows and methodologies. While they align particularly well with the six-step programming methodology discussed in this book, their application extends far beyond this specific framework.
 

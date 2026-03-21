@@ -22,7 +22,7 @@ The team needs to:
 1. Clean and preprocess the data
 2. Identify the most frequently purchased product combinations
 3. analyse how purchasing patterns change over time
-4. Visualize the results
+4. Visualise the results
 
 ### The Intentional Prompting Approach
 
@@ -80,7 +80,7 @@ OUTPUTS:
 1. Cleaned dataset (CSV or Parquet)
 2. Top 20 most frequently purchased product combinations (CSV)
 3. Monthly purchasing trends by product category (CSV)
-4. Visualizations:
+4. Visualisations:
    * Bar chart of top product combinations
    * Line chart showing purchasing trends over time
    * Heatmap of purchase patterns by day of week and hour
@@ -112,7 +112,7 @@ Do these specifications adequately cover what's needed for the pipeline?
 > 
 > 4. **Output file specifications**: For the CSV outputs, specify whether headers should be included and what the column structure should be.
 > 
-> 5. **Visualization formats**: Specify the file formats for visualizations (PNG, PDF, interactive HTML, etc.)
+> 5. **Visualisation formats**: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.)
 > 
 > Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.
 
@@ -778,7 +778,7 @@ A developer needs to build a weather dashboard application in Python. The applic
 1. utilise a weather data module to retrieve current and forecast information
 2. Process and display weather data in a user-friendly interface
 3. Allow users to search for different locations
-4. Provide visualizations of weather trends
+4. Provide visualisations of weather trends
 
 ### The Intentional Prompting Approach
 

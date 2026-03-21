@@ -15,9 +15,9 @@ Future AI assistants will likely incorporate:
 - **Visual programming interfaces** that blend graphical and text-based interaction
 - **Voice-based coding** where spoken instructions translate to code
 - **Diagram-to-code conversion** where architecture diagrams become implementation scaffolding
-- **Code-to-visualization generation** where code is automatically visualized for better understanding
+- **Code-to-visualisation generation** where code is automatically visualised for better understanding
 
-These multimodal capabilities will require adaptations to intentional prompting practices, with greater emphasis on clear specification and visualization of intent.
+These multimodal capabilities will require adaptations to intentional prompting practices, with greater emphasis on clear specification and visualisation of intent.
 
 #### Contextual Awareness
 
@@ -49,7 +49,7 @@ It is worth stating plainly: better models make the practices in this book more 
 
 Future development environments may feature:
 
-- **Multiple specialized AIs** with different expertise areas
+- **Multiple specialised AIs** with different expertise areas
 - **AI-to-AI collaboration** where different models handle different aspects of development
 - **Continuous AI presence** during the entire development process
 - **Persistent learning** from team interactions and feedback
@@ -70,13 +70,13 @@ As AI development agents become more sophisticated, research has identified crit
 
 **Implementation**
 - *AI Role*: Auto-complete functions with context awareness
-- *Human Role*: Ensure compliance with security protocols and organizational standards
+- *Human Role*: Ensure compliance with security protocols and organisational standards
 
 **Deployment**
 - *AI Role*: Auto-scale and configure infrastructure
 - *Human Role*: Final approval for production releases
 
-Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalization, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.
+Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.
 
 Effective human oversight includes:
 
@@ -100,7 +100,7 @@ The fundamental activity of programming is shifting from writing code to curatin
 - **Human review and refinement** of generated code
 - **Iterative specification improvement** based on implementation feedback
 
-Intentional prompting in this paradigm emphasizes clear articulation of requirements and constraints, with less focus on implementation syntax.
+Intentional prompting in this paradigm emphasises clear articulation of requirements and constraints, with less focus on implementation syntax.
 
 #### Quality-Oriented Development
 
@@ -159,7 +159,7 @@ To remain effective as AI capabilities evolve:
 4. **Build cross-disciplinary knowledge** - Combine programming with domain expertise
 5. **Cultivate creative problem-solving** - Develop skills that complement rather than compete with AI
 
-### Organizational Adaptation
+### Organisational Adaptation
 
 organisations will need to adapt their development processes:
 
@@ -177,7 +177,7 @@ organisations will need to adapt their development processes:
 - **Balanced human-AI responsibility** with clear accountability
 - **Knowledge management** becoming increasingly critical
 
-Intentional prompting principles can guide these organizational transformations, ensuring that human expertise remains central despite increasing automation.
+Intentional prompting principles can guide these organisational transformations, ensuring that human expertise remains central despite increasing automation.
 
 ## Maintaining the Human Element
 
@@ -222,7 +222,7 @@ To ensure programming remains a fulfilling human activity:
 1. **Focus on high-impact decisions** where human judgment adds value
 2. **Cultivate creativity in problem-solving** approaches
 3. **Engage with ethical dimensions** of technical decisions
-4. **Prioritize human-centered design** considerations
+4. **Prioritise human-centred design** considerations
 5. **Develop cross-disciplinary expertise** combining programming with domain knowledge
 
 ## Vision for Intentional Prompting's Evolution
@@ -256,7 +256,7 @@ Intentional prompting will likely evolve toward:
 
 1. Architecture and system design as primary human activities
 2. Specification languages replacing traditional programming languages
-3. Orchestration of multiple specialized AI collaborators
+3. Orchestration of multiple specialised AI collaborators
 4. Quality assurance through formal specification rather than testing
 
 ### Long-Term Vision (7+ Years)
@@ -319,7 +319,7 @@ While this book has focused primarily on applying intentional prompting principl
 
 ### Universal Principles of AI Collaboration
 
-The fundamental principles of intentional prompting that we've explored—maintaining human agency, focusing on understanding, and prioritizing process over output—apply universally to any human-AI collaboration:
+The fundamental principles of intentional prompting that we've explored—maintaining human agency, focusing on understanding, and prioritising process over output—apply universally to any human-AI collaboration:
 
 #### In Creative Fields
 
@@ -357,7 +357,7 @@ The five core principles of intentional AI collaboration transcend specific meth
 As AI capabilities continue to evolve, these principles will only become more important. Future systems may offer:
 
 - **More seamless multimodal interaction** across text, voice, images, and other media
-- **Greater domain-specific expertise** in specialized fields
+- **Greater domain-specific expertise** in specialised fields
 - **Enhanced contextual awareness** of projects, goals, and constraints
 - **Increased autonomy** for well-defined tasks
 
@@ -367,11 +367,11 @@ However, the need for intentional human direction will remain essential. The mos
 
 As we conclude this exploration of intentional prompting, it's clear that the fundamental relationship between human developers and AI assistants will continue to evolve. What won't change is the need for a thoughtful, structured approach to leveraging AI capabilities while maintaining human understanding and control.
 
-The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavor.
+The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavour.
 
-Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those skeptical of AI's impact on learning and skill development, intentional prompting's focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.
+Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI's impact on learning and skill development, intentional prompting's focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.
 
-The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximizes benefits while minimising risks.
+The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximises benefits while minimising risks.
 
 As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.
 

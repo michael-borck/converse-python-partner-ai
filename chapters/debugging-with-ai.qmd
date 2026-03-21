@@ -687,7 +687,7 @@ And I'm still seeing some incorrect sorts in the output. Could there be an issue
 > 
 > 5. **Data transformation**: Is the data being transformed between the sorting and when you observe the results?
 > 
-> 6. **Visualization/display issue**: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
+> 6. **Visualisation/display issue**: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
 > 
 > Can you share:
 > 1. A specific example of a dataset that's being incorrectly sorted in your application

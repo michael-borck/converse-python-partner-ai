@@ -11,7 +11,7 @@ Effective pseudocode strikes a balance between abstraction and detail:
 - **Clear and readable** - understandable by both humans and AI
 - **Structured** - uses indentation and organisation to show control flow
 - **Language-agnostic** - avoids specific programming language syntax
-- **Focused on logic** - emphasizes algorithmic thinking over implementation details
+- **Focused on logic** - emphasises algorithmic thinking over implementation details
 - **Complete** - addresses all requirements and edge cases
 - **Concise** - eliminates unnecessary details
 
@@ -19,7 +19,7 @@ The goal is to create a plan concrete enough to guide implementation but abstrac
 
 ### Common Pseudocode Conventions
 
-While pseudocode isn't standardized, these conventions enhance clarity:
+While pseudocode isn't standardised, these conventions enhance clarity:
 
 #### Control Structures
 
@@ -76,7 +76,7 @@ Several factors make pseudocode especially effective for LLM interactions:
 
 2. **Reduced ambiguity** - Pseudocode provides more structure than natural language while remaining flexible, striking an ideal balance that reduces misinterpretations.
 
-3. **Focus on logic** - By emphasizing algorithmic thinking over syntax, pseudocode aligns with LLMs' strengths in reasoning about procedures rather than producing perfect syntax.
+3. **Focus on logic** - By emphasising algorithmic thinking over syntax, pseudocode aligns with LLMs' strengths in reasoning about procedures rather than producing perfect syntax.
 
 4. **Activation of procedural knowledge** - Research shows that LLMs have absorbed procedural knowledge from their training data. Pseudocode effectively activates this latent knowledge by providing clear procedural frameworks.
 
@@ -396,7 +396,7 @@ Are there fundamentally different approaches to finding the longest palindromic 
 > 
 > 3. **Suffix Tree Approach**
 >    
->    Building a generalized suffix tree for the string and its reverse, then finding the longest common substring.
+>    Building a generalised suffix tree for the string and its reverse, then finding the longest common substring.
 >    
 >    This is even more complex to implement but can be useful when solving multiple related string problems.
 > 

@@ -212,7 +212,7 @@ I'm planning to refactor our API request handling code. What quantitative metric
 
 AI might suggest:
 
-- **Performance metrics**: Response time, throughput, resource utilization
+- **Performance metrics**: Response time, throughput, resource utilisation
 - **Code metrics**: Cyclomatic complexity, lines of code, method length
 - **Testing metrics**: Test coverage, test execution time
 - **Maintenance metrics**: Time to implement new features, bug fix duration
@@ -324,7 +324,7 @@ This discount calculation function has become difficult to understand and mainta
 > I'll refactor this function to simplify the nested conditionals using a few strategies:
 >
 > 1. Use early returns for special cases
-> 2. Extract specialized functions for different customer types
+> 2. Extract specialised functions for different customer types
 > 3. Use lookup tables for rules-based logic
 > 4. Implement a more declarative approach
 >

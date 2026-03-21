@@ -40,9 +40,9 @@ Tracing an algorithm involves simulating its execution with concrete inputs, tra
 
 This process mirrors what a debugger does but happens in your mind or on paper, building a deeper understanding of the algorithm's behaviour.
 
-### Visualization Techniques
+### Visualisation Techniques
 
-Different problems benefit from different visualization approaches:
+Different problems benefit from different visualisation approaches:
 
 #### Tabular Traces
 
@@ -280,7 +280,7 @@ These insights will guide our pseudocode development in the next step.
 
 - Working problems by hand builds a deep understanding that can't be replicated by simply using AI to generate solutions
 - Manual tracing helps identify edge cases and test assumptions
-- Different visualization techniques (tables, diagrams, flow traces) suit different types of problems
+- Different visualisation techniques (tables, diagrams, flow traces) suit different types of problems
 - AI can complement manual work by verifying solutions and suggesting edge cases
 - The insights gained from manual examples inform all subsequent steps of the methodology
 

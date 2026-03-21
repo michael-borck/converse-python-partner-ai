@@ -23,11 +23,11 @@ The permissive approach involves accepting AI outputs with minimal human oversig
 - Overreliance may lead to degraded human capabilities over time
 - Lack of contextual understanding in complex situations
 
-This approach aligns closely with the "vibe coding" philosophy discussed in the previous chapter, prioritizing speed and output over process and understanding.
+This approach aligns closely with the "vibe coding" philosophy discussed in the previous chapter, prioritising speed and output over process and understanding.
 
 ### Dismissive Approach: "Reject AI Outright"
 
-At the opposite end of the spectrum is the dismissive approach, characterized by skepticism or outright rejection of AI tools. This stance prioritizes traditional methods and maintains full human control.
+At the opposite end of the spectrum is the dismissive approach, characterised by scepticism or outright rejection of AI tools. This stance prioritises traditional methods and maintains full human control.
 
 **Advantages:**
 - Maintaining full human control and autonomy
@@ -73,7 +73,7 @@ To illustrate the differences in these approaches, the following table compares 
 | **Code Review** | Thorough review with critical evaluation | Minimal review, focus on functionality over quality |
 | **Debugging Approach** | Systematic investigation based on understanding | Trial-and-error, asking AI to fix issues |
 | **Learning Outcome** | Progressive skill development and deeper understanding | Potentially limited technical growth, focus on prompt crafting |
-| **Code Quality** | optimised for readability, maintainability, efficiency | Prioritizes working functionality over optimality |
+| **Code Quality** | optimised for readability, maintainability, efficiency | Prioritises working functionality over optimality |
 | **Ideal Use Cases** | Complex systems, educational contexts, enterprise software | Rapid prototyping, MVPs, personal projects, non-critical applications |
 | **Knowledge Transfer** | Facilitates team understanding and knowledge sharing | May create knowledge silos where only original developer understands prompting approach |
 | **Maintenance** | Designed for long-term maintenance and evolution | May present challenges for future maintenance or extension |
@@ -117,7 +117,7 @@ def validate_email(email):
     return bool(re.match(pattern, email))
 ```
 
-The permissive approach emphasizes speed but may involve several iterations of trial and error without deepening understanding of the problem or solution.
+The permissive approach emphasises speed but may involve several iterations of trial and error without deepening understanding of the problem or solution.
 
 #### Collaborative Approach (Intentional Prompting)
 
@@ -194,7 +194,7 @@ There are two fundamental ways to interact with AI coding assistants:
 
 **Directive Approach:** Guiding the AI through a structured process, maintaining control over architecture and design decisions, and critically evaluating its outputs.
 
-Intentional prompting emphasizes the directive approach, where you:
+Intentional prompting emphasises the directive approach, where you:
 
 - Break down problems before presenting them to AI
 - Provide clear constraints and requirements
@@ -256,7 +256,7 @@ The sweet spot tasks can often be delegated with a quick review. Everything else
 
 ## Process Over Output
 
-Intentional prompting emphasizes the development process rather than just the final code. This focus on process leads to better long-term outcomes in both code quality and developer growth.
+Intentional prompting emphasises the development process rather than just the final code. This focus on process leads to better long-term outcomes in both code quality and developer growth.
 
 ### Why Process Matters
 

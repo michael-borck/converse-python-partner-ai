@@ -33,7 +33,7 @@ It's important to distinguish intentional prompting from the related but distinc
 
 1. **Methodology vs. Technique**: Intentional prompting provides a complete methodology (the six-step approach) rather than just techniques for crafting prompts.
 
-2. **Process vs. Output**: While prompt engineering prioritizes getting optimal outputs, intentional prompting emphasizes the development process itself as the primary value.
+2. **Process vs. Output**: While prompt engineering prioritises getting optimal outputs, intentional prompting emphasises the development process itself as the primary value.
 
 3. **Human Agency**: Intentional prompting explicitly maintains the human as the director and decision-maker throughout the development process, not just the prompt creator.
 
@@ -41,7 +41,7 @@ It's important to distinguish intentional prompting from the related but distinc
 
 5. **Structured Framework**: Intentional prompting embeds prompt techniques within a systematic framework for approaching programming problems, rather than treating prompting as an isolated activity.
 
-In essence, intentional prompting integrates prompt engineering techniques within a broader methodology that maintains human agency and prioritizes understanding and learning throughout the development process. This distinction becomes especially important as AI capabilities advance toward autonomous coding agents, where maintaining human oversight and understanding becomes increasingly critical.
+In essence, intentional prompting integrates prompt engineering techniques within a broader methodology that maintains human agency and prioritises understanding and learning throughout the development process. This distinction becomes especially important as AI capabilities advance toward autonomous coding agents, where maintaining human oversight and understanding becomes increasingly critical.
 
 For a comprehensive comparison of intentional prompting with other approaches to AI-assisted programming—including prompt engineering, pseudocode for LLMs, agentic programming, and vibe coding—see the comparative framework in Appendix C: AI Tool Comparison.
 
@@ -73,7 +73,7 @@ Research reveals that even the most sophisticated AI agents face fundamental lim
 
 5. **Creative Direction**: Human value judgments about elegance, maintainability, and design philosophy are subjective but crucial for creating coherent, high-quality systems.
 
-6. **Integration Knowledge**: Humans better understand how code fits into larger systems, organizational constraints, and unstated requirements.
+6. **Integration Knowledge**: Humans better understand how code fits into larger systems, organisational constraints, and unstated requirements.
 
 7. **Skill Development**: The learning benefits of intentional programming disappear if fully automated, undermining the educational value essential for long-term developer growth.
 

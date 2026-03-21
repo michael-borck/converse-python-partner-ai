@@ -112,10 +112,10 @@ As AI coding tools have advanced, distinct philosophical approaches to their use
 
 "Vibe coding" (or "vibe programming") represents a paradigm shift where developers largely defer to AI for code generation. Introduced by Andrej Karpathy, a co-founder of OpenAI and former AI leader at Tesla, in early 2025, this approach encourages developers to "fully give in to the vibes, embrace exponentials, and forget that the code even exists."
 
-The vibe coding philosophy centers around:
+The vibe coding philosophy centres around:
 
 1. **Natural Language Prompting**: Developers describe desired functionality in plain language rather than focusing on implementation details.
-2. **Minimal Code Review**: Code is often accepted with limited scrutiny, prioritizing speed and output over deep understanding.
+2. **Minimal Code Review**: Code is often accepted with limited scrutiny, prioritising speed and output over deep understanding.
 3. **Rapid Iteration**: Developers quickly implement AI suggestions, test for functionality, and refine through further prompts rather than manual coding.
 4. **Reduced Technical Focus**: As Karpathy described it, "It's not really coding - I just see things, say things, run things, and copy-paste things, and it mostly works."
 
@@ -127,14 +127,14 @@ While vibe coding offers unprecedented speed and accessibility, it presents chal
 
 Intentional prompting, which we'll explore throughout this book, takes a different approach. Rather than deferring to AI, it views AI as a powerful assistant within a human-directed process. 
 
-This approach emphasizes:
+This approach emphasises:
 
 1. **Structured Problem-Solving**: Following a deliberate methodology that starts with understanding the problem
 2. **Selective AI Integration**: Leveraging AI at specific points in the development process while maintaining human agency
 3. **Critical Evaluation**: Carefully reviewing AI-generated code for correctness, efficiency, and security
 4. **Learning-Focused Collaboration**: Using AI to enhance understanding rather than bypass it
 
-Intentional prompting recognises AI's value but prioritizes the developer's control and comprehension of the final solution.
+Intentional prompting recognises AI's value but prioritises the developer's control and comprehension of the final solution.
 
 ### Collaborative Integration: Finding the Middle Ground
 
@@ -150,11 +150,11 @@ The collaborative integration approach has gained traction in many professional 
 
 As AI coding assistants continue to evolve, we can expect:
 
-- Greater specialization in domain-specific tools
+- Greater specialisation in domain-specific tools
 - Better integration with development workflows
 - Improved reasoning about complex systems
 - Enhanced ability to understand, refactor, and maintain legacy code
-- More personalized assistance based on your coding style and preferences
+- More personalised assistance based on your coding style and preferences
 
 These advancements will not eliminate the need for skilled developers, but will continue to transform how we approach programming tasks and what skills are most valuable.
 
