@@ -217,14 +217,15 @@ A critical distinction in intentional prompting is the difference between unders
 
 When developers copy AI-generated code without understanding it, they create "black boxes" in their codebase - components they can't effectively debug, maintain, or explain. Over time, this leads to brittle systems and stunted professional growth.
 
-### Signs of Understanding
+### The VET Check
 
-You understand code when you can:
-- Explain how it works to someone else
-- Modify it confidently to handle new requirements
-- Identify potential edge cases it might not handle
-- recognise its performance characteristics and limitations
-- Connect it to broader programming concepts and patterns
+A useful shorthand for this comes from *Conversation, Not Delegation*: the **VET framework**. Before accepting any AI-generated code, ask three questions:
+
+- **Verify:** Does this code actually do what it claims? Run it, test it, check the output against known inputs.
+- **Explain:** Can I explain how this works to a colleague? If I cannot walk through the logic, I do not understand it yet.
+- **Test:** Does it hold up under pressure? Change a variable, try an edge case, feed it unexpected input.
+
+You understand code when you can explain how it works, modify it confidently to handle new requirements, identify potential edge cases it might not handle, recognise its performance characteristics, and connect it to broader programming concepts. If any of those feel uncertain, you are not done yet.
 
 ### Strategies for Building Understanding
 
@@ -233,6 +234,25 @@ You understand code when you can:
 - **Trace through execution** with specific examples
 - **Modify the code** to handle different scenarios
 - **Compare different implementations** of the same functionality
+
+## Good at the Average, Bad at the Precise
+
+There is a useful way to predict when AI will serve you well and when it will let you down. Think along two axes: **average versus precise**, and **small versus large**.
+
+AI excels at producing convincing averages. Ask it to write a utility function and you get something that reads like competent code, because the model has absorbed millions of similar functions and can synthesise a plausible representative. But ask for something precise, a specific algorithm optimised for your exact constraints, a function that must handle a particular edge case in your domain, and the same mechanism becomes a liability. The model predicts what plausible code would look like, which is how you end up with functions that pass simple tests but fail on the cases that matter.
+
+The second axis is scale. AI handles small, bounded tasks well. A single function, a focused prompt with clear constraints, plays to the model's strengths. But as tasks grow larger, with more interdependent components, conflicting requirements, and emergent complexity, the output starts to look coherent on the surface while falling apart in the details. The model will produce something that looks like a system architecture, but the dependencies will not hold and the design decisions will be inconsistent.
+
+These axes interact. Being good at the average means the model will confidently produce plausible-looking large systems that fail on precise details. The convincing average scales badly with complexity.
+
+Before using AI on any programming task, ask two questions: **How precise does this need to be?** and **How big is this?**
+
+| | Small | Large |
+|---|---|---|
+| **Average** | **Sweet spot.** Utility functions, boilerplate, starter code. Trust with light review. | **Plausible but brittle.** Looks like a working system, falls apart under testing. |
+| **Precise** | **Workable with verification.** Specific algorithms, edge case handling. Test thoroughly. | **Danger zone.** Confident architecture that is wrong in subtle ways. Stay in the loop at every step. |
+
+The sweet spot tasks can often be delegated with a quick review. Everything else requires conversation, iteration, and your judgement as the developer who understands the actual requirements. This framework is explored in depth in *Conversation, Not Delegation* (Borck, 2025).
 
 ## Process Over Output
 
@@ -376,6 +396,18 @@ The six-step methodology leverages this characteristic by providing a framework 
 - Activates the model's latent understanding of systematic problem-solving
 - Provides clear procedural guidance that aligns with effective human workflows
 - Creates a shared procedural language between human and AI
+
+### Data Privacy: Real Risks vs Perceived Risks
+
+A common concern among developers and organisations is that code or proprietary logic pasted into AI tools might be extracted by other users. This fear is largely unfounded and worth understanding clearly.
+
+When you paste code into an AI tool, it is processed and a response is generated. Your code is not stored as a retrievable file inside the model. If your data is used for training at all (enterprise tiers typically exclude it), it becomes a vanishingly small statistical signal distributed across billions of parameters. Reconstructing your specific code from those parameters is not a realistic attack. Jailbreaking an LLM means manipulating its behaviour, not accessing a database of other users' sessions.
+
+You will also encounter convergent development mistaken for theft. "I was building a feature using Copilot, and then a competitor released something very similar." Thousands of developers are solving the same problems with the same tools, reading the same documentation, responding to the same market needs. Independent arrival at similar solutions is how software development normally works.
+
+The risks that are real and worth managing: pasting API keys, credentials, or access tokens into any external tool is an immediate security exposure. Pasting personally identifiable data or data subject to regulation is a genuine compliance issue. And accepting AI-generated code without testing or understanding it is a professional liability, though that is a verification problem, not a data leakage problem.
+
+The "non-zero risk means do not use it" stance deserves scrutiny. Every development tool involves trade-offs. Git repositories can be compromised. Dependencies can be supply-chain attacked. We manage these risks through practice and policy, not prohibition. Developers and organisations that refuse to engage with AI because of overestimated data risks face a different set of consequences: slower development, skills that stagnate, and a widening gap with peers who learned to use the tools thoughtfully.
 
 ### Finding the Right Balance
 

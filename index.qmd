@@ -10,6 +10,9 @@ Programming with AI isn't just about getting code written faster—it's about th
 - Solve complex problems more effectively
 
 Let's begin this journey together, exploring how human intellect and artificial intelligence can combine to create a programming partnership greater than the sum of its parts.
+
+If you are feeling uncertain about AI coding tools, you are not alone. Many developers experience a quiet anxiety: that everyone else has figured this out already, that they are falling behind, that their skills are becoming obsolete. That feeling is nearly universal and rarely admitted. You are not behind. The technology is genuinely new, and the developers who appear to have it all figured out are mostly just a few weeks ahead. This book meets you wherever you are.
+
 ## Why This Book?
 
 The rapid integration of AI into software development workflows has fundamentally changed how we write code. Yet most programming education still focuses either on traditional coding techniques or on prompt engineering for AI tools, with little guidance on how to effectively combine human expertise with AI capabilities.
@@ -37,6 +40,10 @@ The book is divided into four parts:
 4. **Advanced Topics**: Scaling to complex projects and future directions
 
 Each chapter includes practical examples, exercises, and reflections to help you apply these concepts in your own work.
+
+## The Companion Book
+
+This book applies the methodology developed in *Conversation, Not Delegation: How to Think With AI, Not Just Use It* (Borck, 2025) to software development. That companion book covers the full framework in depth: the Conversation Loop, the VET framework for evaluating AI output, the average-versus-precise decision grid, and the principle of AI Last. If you want the underlying rationale for why the approaches in this book work, or you want to share a discipline-neutral version with non-developer colleagues, start there. Available at [https://michael-borck.github.io/conversation-not-delegation](https://michael-borck.github.io/conversation-not-delegation).
 
 ## Related Resources
 

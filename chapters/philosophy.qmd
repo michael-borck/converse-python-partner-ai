@@ -157,6 +157,18 @@ business planning, creative writing, research, education, and beyond.
 The principles transfer - only the examples change.
 :::
 
+## The Two-Chat Workflow
+
+One practical way to build this discipline into your development workflow is to separate thinking from building entirely. Instead of doing everything in one session, run two.
+
+**Chat 1: Understand the problem.** Open a session with no intention of writing code. Use it to explore the requirements, challenge your assumptions, and clarify what you are actually trying to build. What are the edge cases? What are the real constraints? What approaches have you not considered? Let the conversation wander. This session is messy by design. Its purpose is to sharpen your thinking until you know what you actually need.
+
+**Chat 2: Write the code.** Start a fresh session and arrive with a clear specification: what the function should do, what inputs it takes, what edge cases it must handle, and what design decisions you have already made. The code will be dramatically better because the input is better.
+
+The critical step is the gap between the two chats. You do not dump everything from the first session into the second. You review what emerged, keep what matters, discard what does not, and write a focused brief that reflects your decisions. That act of curation is where your engineering judgement lives.
+
+This maps directly to the average-versus-precise framework. A project that starts in the danger zone (large, precise) gets decomposed during the thinking chat into components that each sit in different quadrants. The architecture discussion belongs in Chat 1. The individual functions can be written in Chat 2 with appropriate trust for their position on the grid.
+
 ## What is Ahead
 
 This book will teach you to have productive conversations with AI:
