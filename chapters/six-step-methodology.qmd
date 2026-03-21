@@ -42,7 +42,7 @@ While the six steps appear sequential, the methodology contains several importan
 
 4. **Understanding to Doing**: The methodology follows a natural progression from abstract understanding to concrete implementation.
 
-This methodology isn't revolutionary on its own—it draws from established problem-solving approaches and computational thinking practices like Waterfall, Agile, and Test-Driven Development. What makes it valuable in the age of AI is how it provides a framework for intentional prompting and collaboration with AI assistants while maintaining human understanding and control.
+This methodology isn't revolutionary on its own. It draws from established problem-solving approaches and computational thinking practices like Waterfall, Agile, and Test-Driven Development. What makes it valuable in the age of AI is how it provides a framework for intentional prompting and collaboration with AI assistants while maintaining human understanding and control.
 
 ### Adapting to Your Preferred Methodology
 
@@ -65,7 +65,7 @@ When adapting these concepts to your situation, consider:
 3. **Create explicit steps** for critical evaluation of AI outputs
 4. **Define integration points** where AI-generated components connect with human-directed architecture
 
-The core value proposition—maintaining human understanding while leveraging AI capabilities—remains valid regardless of which specific methodology you prefer. What's most important is having a structured approach to human-AI collaboration rather than following these exact six steps verbatim.
+The core value proposition (maintaining human understanding while leveraging AI capabilities) remains valid regardless of which specific methodology you prefer. What's most important is having a structured approach to human-AI collaboration rather than following these exact six steps verbatim.
 
 Use this methodology as inspiration to develop your own intentional prompting workflow that aligns with your team's practices, domain requirements, and development philosophy while preserving the principles of human direction and understanding.
 
@@ -85,7 +85,7 @@ AI can accelerate many steps in the process, allowing for:
 
 ### The Temptation to Skip Steps
 
-With powerful AI tools, there's a temptation to skip directly to implementation (Step 5). This is the core challenge that intentional prompting addresses—maintaining a disciplined approach even when AI makes shortcuts possible.
+With powerful AI tools, there's a temptation to skip directly to implementation (Step 5). This is the core challenge that intentional prompting addresses: maintaining a disciplined approach even when AI makes shortcuts possible.
 
 ### New Capabilities and Responsibilities
 

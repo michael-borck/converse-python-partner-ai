@@ -2,7 +2,7 @@
 
 ## The Core Distinction
 
-When you interact with AI, you make a choice—often unconsciously—about the nature of that interaction.
+When you interact with AI, you make a choice, often unconsciously, about the nature of that interaction.
 
 **Delegation** is handing off a task: "Write me a marketing plan." "Create a Python function that does X." You ask, AI delivers, you accept. It's transactional. The AI does the thinking; you consume the output.
 
@@ -24,11 +24,11 @@ Before we go further, let's demystify some terminology.
 
 That's it. When you type "Explain how photosynthesis works" into ChatGPT, that's a prompt. When you ask Claude to "Review this code for bugs," that's a prompt. When you tell Copilot to "Write a function that calculates shipping costs," that's a prompt.
 
-Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI's response depends heavily on how you craft your prompt—but at its core, a prompt is just a request.
+Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI's response depends heavily on how you craft your prompt, but at its core, a prompt is just a request.
 
 ## What is "Intentional Prompting"?
 
-> **Intentional prompting is the practice of crafting each AI interaction deliberately—to build understanding, not just get output.**
+> **Intentional prompting is the practice of crafting each AI interaction deliberately, to build understanding, not just get output.**
 
 The word "intentional" is key. It means:
 

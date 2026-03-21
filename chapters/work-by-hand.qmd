@@ -1,6 +1,6 @@
 # Work by Hand (Step 3)
 
-Step 3 of the six-step methodology—working through examples by hand—is often the most tempting to skip, especially with AI assistance. Yet it remains one of the most valuable practices for deeply understanding a problem and its solution.
+Step 3 of the six-step methodology, working through examples by hand, is often the most tempting to skip, especially with AI assistance. Yet it remains one of the most valuable practices for deeply understanding a problem and its solution.
 
 ## The Importance of Manual Examples
 
@@ -20,7 +20,7 @@ This step is especially important in the age of AI coding assistants. When AI ca
 
 There are two fundamentally different ways to solve programming problems:
 
-**Pattern matching** involves recognising a problem as similar to something you've seen before and applying a known solution template. This approach is quick but shallow—it doesn't build transferable understanding.
+**Pattern matching** involves recognising a problem as similar to something you've seen before and applying a known solution template. This approach is quick but shallow, and it doesn't build transferable understanding.
 
 **Mental modelling** involves constructing a detailed understanding of the problem dynamics and working through how a solution would operate step by step. This approach builds deeper understanding that transfers to novel problems.
 

@@ -2,7 +2,7 @@
 
 Welcome to "Converse Python, Partner AI: The Python Edition." This book explores a new paradigm for software development in the age of AI assistants.
 
-Programming with AI isn't just about getting code written faster—it's about thinking differently about the development process itself. By mastering intentional prompting techniques, you'll be able to:
+Programming with AI isn't just about getting code written faster. It's about thinking differently about the development process itself. By mastering intentional prompting techniques, you'll be able to:
 
 - Direct AI tools with precision and purpose
 - Maintain control over code quality and architecture

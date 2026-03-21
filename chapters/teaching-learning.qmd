@@ -16,7 +16,7 @@ Traditional programming education has focused on teaching syntax, algorithms, an
 | Implementing standard algorithms | Adapting algorithms to specific contexts |
 | Following prescribed solutions | Exploring multiple approaches |
 
-This shift doesn't mean abandoning the fundamentals—rather, it means teaching them in a new context where AI collaboration is assumed.
+This shift doesn't mean abandoning the fundamentals. Rather, it means teaching them in a new context where AI collaboration is assumed.
 
 ### The Educator's Role in the AI Era
 
@@ -56,7 +56,7 @@ AI assistants can be integrated at different levels of the curriculum:
 
 ### Beyond "AI-Proof" Assignments
 
-Many educators initially responded to AI coding assistants by trying to create "AI-proof" assignments—ones that AI tools couldn't easily solve. This approach is ultimately unsustainable and misses the opportunity to teach intentional prompting skills.
+Many educators initially responded to AI coding assistants by trying to create "AI-proof" assignments, ones that AI tools couldn't easily solve. This approach is ultimately unsustainable and misses the opportunity to teach intentional prompting skills.
 
 Instead, design assignments that incorporate AI collaboration explicitly:
 

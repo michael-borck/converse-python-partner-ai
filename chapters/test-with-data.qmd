@@ -1,12 +1,12 @@
 # Test with Data (Step 6)
 
-The final step in our methodology—testing with a variety of data—is where we verify that our solution works correctly in all scenarios. This critical step ensures that our implementation meets the requirements and handles edge cases properly.
+The final step in our methodology, testing with a variety of data, is where we verify that our solution works correctly in all scenarios. This critical step ensures that our implementation meets the requirements and handles edge cases properly.
 
 ## Comprehensive Testing Strategies
 
 ### The Importance of Thorough Testing
 
-Testing isn't just about confirming that your code works—it's about discovering where and how it might fail. Thorough testing:
+Testing isn't just about confirming that your code works. It's about discovering where and how it might fail. Thorough testing:
 
 1. **Validates correctness** - Ensures the solution produces the expected results
 2. **Reveals edge case issues** - Identifies problems with unusual inputs
@@ -586,4 +586,4 @@ OK
 
 With our solution thoroughly tested, we've completed the six-step methodology. This approach has helped us develop a correct and robust solution while maintaining human understanding and control throughout the process.
 
-In the next section of the book, we'll explore specific patterns and practices for intentional prompting, beginning with Chapter 10's exploration of intentional prompting patterns—techniques for guiding AI through complex programming tasks.
+In the next section of the book, we'll explore specific patterns and practices for intentional prompting, beginning with Chapter 10's exploration of intentional prompting patterns: techniques for guiding AI through complex programming tasks.

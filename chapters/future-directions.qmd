@@ -32,7 +32,7 @@ For intentional prompting, this means prompting strategies will need to focus mo
 
 ### Increasing Autonomy and Agentic Programming
 
-AI systems are gradually moving toward greater autonomy in coding tasks, leading to what's known as "agentic programming"—where AI agents can autonomously perform complex development tasks with minimal human intervention:
+AI systems are gradually moving toward greater autonomy in coding tasks, leading to what's known as "agentic programming," where AI agents can autonomously perform complex development tasks with minimal human intervention:
 
 #### Autonomous Coding Capabilities
 
@@ -268,7 +268,7 @@ Though speculative, longer-term developments might include:
 - Symbiotic human-AI development partnerships
 - New programming paradigms built specifically for human-AI collaboration
 
-The core principles of intentional prompting—maintaining human understanding and control while leveraging AI capabilities effectively—will remain relevant even as the specific practices evolve.
+The core principles of intentional prompting (maintaining human understanding and control while leveraging AI capabilities effectively) will remain relevant even as the specific practices evolve.
 
 ## A Personal Development Roadmap
 
@@ -319,7 +319,7 @@ While this book has focused primarily on applying intentional prompting principl
 
 ### Universal Principles of AI Collaboration
 
-The fundamental principles of intentional prompting that we've explored—maintaining human agency, focusing on understanding, and prioritising process over output—apply universally to any human-AI collaboration:
+The fundamental principles of intentional prompting that we've explored (maintaining human agency, focusing on understanding, and prioritising process over output) apply universally to any human-AI collaboration:
 
 #### In Creative Fields
 
@@ -371,7 +371,7 @@ The six-step methodology and intentional prompting techniques presented in this 
 
 Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI's impact on learning and skill development, intentional prompting's focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.
 
-The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximises benefits while minimising risks.
+The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance: a balanced path that maximises benefits while minimising risks.
 
 As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.
 

@@ -1,6 +1,6 @@
 # Restate and Identify (Steps 1-2)
 
-The first two steps of the six-step methodology—restating the problem and identifying inputs and outputs—set the foundation for everything that follows. This critical preparation phase ensures you fully understand what you're trying to solve before diving into implementation.
+The first two steps of the six-step methodology, restating the problem and identifying inputs and outputs, set the foundation for everything that follows. This critical preparation phase ensures you fully understand what you're trying to solve before diving into implementation.
 
 ## Techniques for Problem Restatement
 

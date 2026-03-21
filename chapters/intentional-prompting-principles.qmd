@@ -366,7 +366,7 @@ The intentional prompting methodology directly addresses Dijkstra's concerns by 
 
 ### The Non-Deterministic Nature of LLMs
 
-Another significant concern involves the non-deterministic behaviour of LLMs—the fact that they can produce different outputs even when given the same input. This unpredictability raises legitimate questions about reliability, especially in mission-critical applications.
+Another significant concern involves the non-deterministic behaviour of LLMs, specifically the fact that they can produce different outputs even when given the same input. This unpredictability raises legitimate questions about reliability, especially in mission-critical applications.
 
 Research has documented significant variations in LLM performance across multiple runs, with accuracy varying up to 15% and gaps between best and worst performance reaching as high as 70%. This variability stems from:
 
@@ -389,7 +389,7 @@ Interestingly, LLMs excel at procedural tasks because they've inherited human pr
 - Mathematical proof structures in STEM literature
 - Software engineering best practices from code repositories
 
-This explains why models respond well to structured methodologies like intentional prompting—they're activating latent procedural knowledge that mirrors human problem-solving approaches.
+This explains why models respond well to structured methodologies like intentional prompting: they're activating latent procedural knowledge that mirrors human problem-solving approaches.
 
 The six-step methodology leverages this characteristic by providing a framework that:
 
@@ -422,6 +422,6 @@ By addressing these concerns directly and providing a structured framework for h
 
 ## Putting Principles Into Practice
 
-These principles—maintaining agency, understanding vs. copying, process over output, the learning mindset, ethical considerations, and addressing common concerns—form the foundation of intentional prompting.
+These principles (maintaining agency, understanding vs. copying, process over output, the learning mindset, ethical considerations, and addressing common concerns) form the foundation of intentional prompting.
 
 In the next section, we'll explore how these principles are applied through the six-step programming methodology, providing a structured approach to developing software with AI assistance.

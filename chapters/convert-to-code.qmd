@@ -1,6 +1,6 @@
 # Convert to Code (Step 5)
 
-The fifth step of our methodology—converting pseudocode to actual code—is where your solution takes executable form. This is often the step where AI assistance becomes most valuable, but it's also where maintaining human understanding is most critical.
+The fifth step of our methodology, converting pseudocode to actual code, is where your solution takes executable form. This is often the step where AI assistance becomes most valuable, but it's also where maintaining human understanding is most critical.
 
 ## Strategies for Code Implementation
 

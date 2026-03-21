@@ -2,7 +2,7 @@
 
 ## The Art of Guiding AI
 
-Effective collaboration with AI assistants requires more than just asking for solutions—it demands a thoughtful approach to crafting prompts that guide the AI toward helpful, educational responses. This chapter explores key patterns for intentional prompting that maximise the learning and development value of AI interactions.
+Effective collaboration with AI assistants requires more than just asking for solutions. It demands a thoughtful approach to crafting prompts that guide the AI toward helpful, educational responses. This chapter explores key patterns for intentional prompting that maximise the learning and development value of AI interactions.
 
 ![Intentional Prompting Patterns](../images/intentional-prompting-patterns.png)
 
@@ -29,7 +29,7 @@ The distinction becomes clearer when considering how each approach would handle 
 | **Verification** | Prompt AI to validate generated code | Follow Step 6: Rigorously test with data, especially edge cases |
 | **Learning Outcome** | Improvement in prompt crafting skills | Improvement in both programming and AI collaboration skills |
 
-Intentional prompting doesn't replace prompt engineering—it integrates its techniques within a broader approach that preserves human agency, understanding, and skill development.
+Intentional prompting doesn't replace prompt engineering. Rather, it integrates its techniques within a broader approach that preserves human agency, understanding, and skill development.
 
 ### Core Prompt Engineering Techniques
 
@@ -270,7 +270,7 @@ This strategy helps ensure the AI covers all necessary aspects of a problem rath
 
 ## Integrating Prompt Engineering with Intentional Prompting
 
-Intentional prompting isn't an alternative to prompt engineering—it's an evolution that incorporates prompt engineering techniques within a more comprehensive methodology. This integration allows us to leverage the power of well-crafted prompts while maintaining the educational and developmental benefits of intentional practice.
+Intentional prompting isn't an alternative to prompt engineering. It's an evolution that incorporates prompt engineering techniques within a more comprehensive methodology. This integration allows us to leverage the power of well-crafted prompts while maintaining the educational and developmental benefits of intentional practice.
 
 ### The Symbiotic Relationship
 

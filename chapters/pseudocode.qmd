@@ -1,6 +1,6 @@
 # Pseudocode (Step 4)
 
-The fourth step in our methodology—writing pseudocode—bridges the conceptual understanding developed in earlier steps to the concrete implementation that follows. Pseudocode provides a language-agnostic blueprint for your solution, focusing on logic and algorithms rather than syntax.
+The fourth step in our methodology, writing pseudocode, bridges the conceptual understanding developed in earlier steps to the concrete implementation that follows. Pseudocode provides a language-agnostic blueprint for your solution, focusing on logic and algorithms rather than syntax.
 
 ## Writing Effective Pseudocode
 
