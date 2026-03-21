@@ -598,6 +598,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<blockquote class="blockquote">
+<p>Every real problem is messier than the textbook version. That is where methodology earns its value.</p>
+</blockquote>
 <p>In this chapter, we’ll explore comprehensive case studies that demonstrate intentional prompting principles applied to real-world programming scenarios. These case studies illustrate how the six-step methodology and intentional prompting techniques come together to solve complex problems effectively.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -619,7 +622,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Payment method</li>
 <li>Store location</li>
 </ul>
-<p>The team needs to: 1. Clean and preprocess the data 2. Identify the most frequently purchased product combinations 3. analyse how purchasing patterns change over time 4. Visualize the results</p>
+<p>The team needs to: 1. Clean and preprocess the data 2. Identify the most frequently purchased product combinations 3. analyse how purchasing patterns change over time 4. Visualise the results</p>
 </section>
 <section id="the-intentional-prompting-approach" class="level3" data-number="14.1.2">
 <h3 data-number="14.1.2" class="anchored" data-anchor-id="the-intentional-prompting-approach"><span class="header-section-number">14.1.2</span> The Intentional Prompting Approach</h3>
@@ -658,13 +661,13 @@ OUTPUTS:
 1. Cleaned dataset (CSV or Parquet)
 2. Top 20 most frequently purchased product combinations (CSV)
 3. Monthly purchasing trends by product category (CSV)
-4. Visualizations:
+4. Visualisations:
    * Bar chart of top product combinations
    * Line chart showing purchasing trends over time
    * Heatmap of purchase patterns by day of week and hour
 
 Do these specifications adequately cover what's needed for the pipeline?</code></pre>
-<p><strong>AI response:</strong> &gt; Your input and output specifications provide a clear framework for the pipeline. They’re comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider: &gt; &gt; <strong>For inputs:</strong> &gt; &gt; 1. <strong>File format details</strong>: You might want to specify if there are any header rows, quoting patterns, or delimiter specifications for the CSV. &gt; &gt; 2. <strong>Expected data sizes</strong>: Approximate size of the file (GB) and typical row count can help plan for resource requirements. &gt; &gt; 3. <strong>Data quality expectations</strong>: Are there known issues with the data? (e.g., are missing values expected in certain columns, are there known inconsistencies in formatting) &gt; &gt; <strong>For outputs:</strong> &gt; &gt; 1. <strong>Definition of “product combinations”</strong>: Clarify whether this means products purchased together in a single transaction, or products frequently purchased by the same customer across different transactions. &gt; &gt; 2. <strong>Granularity of time analysis</strong>: You specified monthly trends, but you might also want daily or weekly analysis depending on the business needs. &gt; &gt; 3. <strong>Additional metrics</strong>: Consider adding: &gt; - Average basket size (number of items and monetary value) &gt; - Payment method distribution &gt; - Store location performance comparison &gt; &gt; 4. <strong>Output file specifications</strong>: For the CSV outputs, specify whether headers should be included and what the column structure should be. &gt; &gt; 5. <strong>Visualization formats</strong>: Specify the file formats for visualizations (PNG, PDF, interactive HTML, etc.) &gt; &gt; Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.</p>
+<p><strong>AI response:</strong> &gt; Your input and output specifications provide a clear framework for the pipeline. They’re comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider: &gt; &gt; <strong>For inputs:</strong> &gt; &gt; 1. <strong>File format details</strong>: You might want to specify if there are any header rows, quoting patterns, or delimiter specifications for the CSV. &gt; &gt; 2. <strong>Expected data sizes</strong>: Approximate size of the file (GB) and typical row count can help plan for resource requirements. &gt; &gt; 3. <strong>Data quality expectations</strong>: Are there known issues with the data? (e.g., are missing values expected in certain columns, are there known inconsistencies in formatting) &gt; &gt; <strong>For outputs:</strong> &gt; &gt; 1. <strong>Definition of “product combinations”</strong>: Clarify whether this means products purchased together in a single transaction, or products frequently purchased by the same customer across different transactions. &gt; &gt; 2. <strong>Granularity of time analysis</strong>: You specified monthly trends, but you might also want daily or weekly analysis depending on the business needs. &gt; &gt; 3. <strong>Additional metrics</strong>: Consider adding: &gt; - Average basket size (number of items and monetary value) &gt; - Payment method distribution &gt; - Store location performance comparison &gt; &gt; 4. <strong>Output file specifications</strong>: For the CSV outputs, specify whether headers should be included and what the column structure should be. &gt; &gt; 5. <strong>Visualisation formats</strong>: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.) &gt; &gt; Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.</p>
 </section>
 <section id="step-3-work-by-hand" class="level4" data-number="14.1.2.3">
 <h4 data-number="14.1.2.3" class="anchored" data-anchor-id="step-3-work-by-hand"><span class="header-section-number">14.1.2.3</span> Step 3: Work by Hand</h4>
@@ -1166,7 +1169,7 @@ A developer needs to build a weather dashboard application in Python. The applic
 1. utilise a weather data module to retrieve current and forecast information
 2. Process and display weather data in a user-friendly interface
 3. Allow users to search for different locations
-4. Provide visualizations of weather trends
+4. Provide visualisations of weather trends
 
 ### The Intentional Prompting Approach
 

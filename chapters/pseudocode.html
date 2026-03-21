@@ -617,7 +617,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The fourth step in our methodology—writing pseudocode—bridges the conceptual understanding developed in earlier steps to the concrete implementation that follows. Pseudocode provides a language-agnostic blueprint for your solution, focusing on logic and algorithms rather than syntax.</p>
+<blockquote class="blockquote">
+<p>Pseudocode is thinking made visible. The syntax can wait.</p>
+</blockquote>
+<p>The fourth step in our methodology, writing pseudocode, bridges the conceptual understanding developed in earlier steps to the concrete implementation that follows. Pseudocode provides a language-agnostic blueprint for your solution, focusing on logic and algorithms rather than syntax.</p>
 <section id="writing-effective-pseudocode" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="writing-effective-pseudocode"><span class="header-section-number">8.1</span> Writing Effective Pseudocode</h2>
 <section id="what-makes-good-pseudocode" class="level3" data-number="8.1.1">
@@ -627,7 +630,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Clear and readable</strong> - understandable by both humans and AI</li>
 <li><strong>Structured</strong> - uses indentation and organisation to show control flow</li>
 <li><strong>Language-agnostic</strong> - avoids specific programming language syntax</li>
-<li><strong>Focused on logic</strong> - emphasizes algorithmic thinking over implementation details</li>
+<li><strong>Focused on logic</strong> - emphasises algorithmic thinking over implementation details</li>
 <li><strong>Complete</strong> - addresses all requirements and edge cases</li>
 <li><strong>Concise</strong> - eliminates unnecessary details</li>
 </ul>
@@ -635,7 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="common-pseudocode-conventions" class="level3" data-number="8.1.2">
 <h3 data-number="8.1.2" class="anchored" data-anchor-id="common-pseudocode-conventions"><span class="header-section-number">8.1.2</span> Common Pseudocode Conventions</h3>
-<p>While pseudocode isn’t standardized, these conventions enhance clarity:</p>
+<p>While pseudocode isn’t standardised, these conventions enhance clarity:</p>
 <section id="control-structures" class="level4" data-number="8.1.2.1">
 <h4 data-number="8.1.2.1" class="anchored" data-anchor-id="control-structures"><span class="header-section-number">8.1.2.1</span> Control Structures</h4>
 <pre><code>IF condition THEN
@@ -682,7 +685,7 @@ WRITE data TO file</code></pre>
 <ol type="1">
 <li><p><strong>Structural alignment with training data</strong> - LLMs have been trained on vast amounts of programming content, including discussions of algorithms that frequently use pseudocode. This training means they have strong internal representations of pseudocode conventions.</p></li>
 <li><p><strong>Reduced ambiguity</strong> - Pseudocode provides more structure than natural language while remaining flexible, striking an ideal balance that reduces misinterpretations.</p></li>
-<li><p><strong>Focus on logic</strong> - By emphasizing algorithmic thinking over syntax, pseudocode aligns with LLMs’ strengths in reasoning about procedures rather than producing perfect syntax.</p></li>
+<li><p><strong>Focus on logic</strong> - By emphasising algorithmic thinking over syntax, pseudocode aligns with LLMs’ strengths in reasoning about procedures rather than producing perfect syntax.</p></li>
 <li><p><strong>Activation of procedural knowledge</strong> - Research shows that LLMs have absorbed procedural knowledge from their training data. Pseudocode effectively activates this latent knowledge by providing clear procedural frameworks.</p></li>
 <li><p><strong>Medium of iterative refinement</strong> - Pseudocode serves as an excellent medium for progressive disambiguation - the process of gradually transforming ambiguous natural language into precise formal code through multiple rounds of interaction.</p></li>
 </ol>
@@ -810,7 +813,7 @@ WRITE data TO file</code></pre>
 &gt; This is an optimised approach that runs in O(n) time: &gt;<br>
 &gt; <code>&gt;    FUNCTION manachers_algorithm(string) &gt;        // Transform string to handle even-length palindromes &gt;        // For example, "babad" becomes "^#b#a#b#a#d#$" &gt;        SET transformed = preprocessString(string) &gt;         &gt;        SET n = length of transformed &gt;        CREATE array p[n] // p[i] = radius of palindrome centered at i &gt;         &gt;        SET center = 0 &gt;        SET right_boundary = 0 &gt;         &gt;        FOR i = 1 TO n-2 &gt;            // Mirror of current position &gt;            SET mirror = 2 * center - i &gt;             &gt;            // If within right boundary, use mirror value &gt;            IF i &lt; right_boundary THEN &gt;                p[i] = MIN(right_boundary - i, p[mirror]) &gt;            ELSE &gt;                p[i] = 0 &gt;            END IF &gt;             &gt;            // Expand palindrome centered at i &gt;            WHILE transformed[i + 1 + p[i]] = transformed[i - 1 - p[i]] &gt;                INCREMENT p[i] &gt;            END WHILE &gt;             &gt;            // Update center if this palindrome extends beyond right boundary &gt;            IF i + p[i] &gt; right_boundary THEN &gt;                center = i &gt;                right_boundary = i + p[i] &gt;            END IF &gt;        END FOR &gt;         &gt;        // Find the maximum element in p &gt;        SET max_len = 0 &gt;        SET center_index = 0 &gt;         &gt;        FOR i = 1 TO n-2 &gt;            IF p[i] &gt; max_len THEN &gt;                max_len = p[i] &gt;                center_index = i &gt;            END IF &gt;        END FOR &gt;         &gt;        // Extract the longest palindromic substring from original string &gt;        SET start = (center_index - max_len) / 2 &gt;        RETURN substring of string from start to start + max_len &gt;    END FUNCTION &gt;</code> &gt;<br>
 &gt; This algorithm is significantly more complex but offers linear time complexity. &gt; &gt; 3. <strong>Suffix Tree Approach</strong> &gt;<br>
-&gt; Building a generalized suffix tree for the string and its reverse, then finding the longest common substring. &gt;<br>
+&gt; Building a generalised suffix tree for the string and its reverse, then finding the longest common substring. &gt;<br>
 &gt; This is even more complex to implement but can be useful when solving multiple related string problems. &gt; &gt; The center expansion approach remains the most intuitive and offers a good balance of simplicity and efficiency for most practical applications.</p>
 </section>
 </section>

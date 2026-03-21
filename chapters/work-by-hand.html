@@ -531,7 +531,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tracing-algorithms-step-by-step" id="toc-tracing-algorithms-step-by-step" class="nav-link" data-scroll-target="#tracing-algorithms-step-by-step"><span class="header-section-number">7.2</span> Tracing Algorithms Step by Step</a>
   <ul class="collapse">
   <li><a href="#the-tracing-process" id="toc-the-tracing-process" class="nav-link" data-scroll-target="#the-tracing-process"><span class="header-section-number">7.2.1</span> The Tracing Process</a></li>
-  <li><a href="#visualization-techniques" id="toc-visualization-techniques" class="nav-link" data-scroll-target="#visualization-techniques"><span class="header-section-number">7.2.2</span> Visualization Techniques</a></li>
+  <li><a href="#visualisation-techniques" id="toc-visualisation-techniques" class="nav-link" data-scroll-target="#visualisation-techniques"><span class="header-section-number">7.2.2</span> Visualisation Techniques</a></li>
   </ul></li>
   <li><a href="#testing-assumptions" id="toc-testing-assumptions" class="nav-link" data-scroll-target="#testing-assumptions"><span class="header-section-number">7.3</span> Testing Assumptions</a>
   <ul class="collapse">
@@ -582,7 +582,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Step 3 of the six-step methodology—working through examples by hand—is often the most tempting to skip, especially with AI assistance. Yet it remains one of the most valuable practices for deeply understanding a problem and its solution.</p>
+<blockquote class="blockquote">
+<p>If you cannot solve it on paper, you cannot explain it to a machine.</p>
+</blockquote>
+<p>Step 3 of the six-step methodology, working through examples by hand, is often the most tempting to skip, especially with AI assistance. Yet it remains one of the most valuable practices for deeply understanding a problem and its solution.</p>
 <section id="the-importance-of-manual-examples" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="the-importance-of-manual-examples"><span class="header-section-number">7.1</span> The Importance of Manual Examples</h2>
 <section id="why-work-by-hand" class="level3" data-number="7.1.1">
@@ -600,7 +603,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="mental-models-vs.-pattern-matching" class="level3" data-number="7.1.2">
 <h3 data-number="7.1.2" class="anchored" data-anchor-id="mental-models-vs.-pattern-matching"><span class="header-section-number">7.1.2</span> Mental Models vs.&nbsp;Pattern Matching</h3>
 <p>There are two fundamentally different ways to solve programming problems:</p>
-<p><strong>Pattern matching</strong> involves recognising a problem as similar to something you’ve seen before and applying a known solution template. This approach is quick but shallow—it doesn’t build transferable understanding.</p>
+<p><strong>Pattern matching</strong> involves recognising a problem as similar to something you’ve seen before and applying a known solution template. This approach is quick but shallow, and it doesn’t build transferable understanding.</p>
 <p><strong>Mental modelling</strong> involves constructing a detailed understanding of the problem dynamics and working through how a solution would operate step by step. This approach builds deeper understanding that transfers to novel problems.</p>
 <p>AI excels at pattern matching but struggles with novel problems that require creative mental models. By working problems by hand, you develop the mental modelling skills that complement AI’s pattern-matching strengths.</p>
 </section>
@@ -619,9 +622,9 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <p>This process mirrors what a debugger does but happens in your mind or on paper, building a deeper understanding of the algorithm’s behaviour.</p>
 </section>
-<section id="visualization-techniques" class="level3" data-number="7.2.2">
-<h3 data-number="7.2.2" class="anchored" data-anchor-id="visualization-techniques"><span class="header-section-number">7.2.2</span> Visualization Techniques</h3>
-<p>Different problems benefit from different visualization approaches:</p>
+<section id="visualisation-techniques" class="level3" data-number="7.2.2">
+<h3 data-number="7.2.2" class="anchored" data-anchor-id="visualisation-techniques"><span class="header-section-number">7.2.2</span> Visualisation Techniques</h3>
+<p>Different problems benefit from different visualisation approaches:</p>
 <section id="tabular-traces" class="level4" data-number="7.2.2.1">
 <h4 data-number="7.2.2.1" class="anchored" data-anchor-id="tabular-traces"><span class="header-section-number">7.2.2.1</span> Tabular Traces</h4>
 <p>For iterative algorithms, use a table where: - Each row represents one iteration - Columns show the values of key variables - Special columns can highlight important conditions or state changes</p>
@@ -855,7 +858,7 @@ Does my manual approach seem correct? Am I missing any important edge cases?</co
 <ul>
 <li>Working problems by hand builds a deep understanding that can’t be replicated by simply using AI to generate solutions</li>
 <li>Manual tracing helps identify edge cases and test assumptions</li>
-<li>Different visualization techniques (tables, diagrams, flow traces) suit different types of problems</li>
+<li>Different visualisation techniques (tables, diagrams, flow traces) suit different types of problems</li>
 <li>AI can complement manual work by verifying solutions and suggesting edge cases</li>
 <li>The insights gained from manual examples inform all subsequent steps of the methodology</li>
 </ul>

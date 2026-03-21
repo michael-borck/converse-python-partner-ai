@@ -536,7 +536,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#preparing-for-future-changes" id="toc-preparing-for-future-changes" class="nav-link" data-scroll-target="#preparing-for-future-changes"><span class="header-section-number">17.3</span> Preparing for Future Changes</a>
   <ul class="collapse">
   <li><a href="#skill-evolution-for-developers" id="toc-skill-evolution-for-developers" class="nav-link" data-scroll-target="#skill-evolution-for-developers"><span class="header-section-number">17.3.1</span> Skill Evolution for Developers</a></li>
-  <li><a href="#organizational-adaptation" id="toc-organizational-adaptation" class="nav-link" data-scroll-target="#organizational-adaptation"><span class="header-section-number">17.3.2</span> Organizational Adaptation</a></li>
+  <li><a href="#organisational-adaptation" id="toc-organisational-adaptation" class="nav-link" data-scroll-target="#organisational-adaptation"><span class="header-section-number">17.3.2</span> Organisational Adaptation</a></li>
   </ul></li>
   <li><a href="#maintaining-the-human-element" id="toc-maintaining-the-human-element" class="nav-link" data-scroll-target="#maintaining-the-human-element"><span class="header-section-number">17.4</span> Maintaining the Human Element</a>
   <ul class="collapse">
@@ -588,6 +588,9 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<blockquote class="blockquote">
+<p>The tools will change. The discipline of thinking clearly will not.</p>
+</blockquote>
 <p>As we reach the conclusion of this book, it’s important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in an increasingly AI-powered development landscape.</p>
 <section id="emerging-ai-capabilities" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="emerging-ai-capabilities"><span class="header-section-number">17.1</span> Emerging AI Capabilities</h2>
@@ -601,9 +604,9 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Visual programming interfaces</strong> that blend graphical and text-based interaction</li>
 <li><strong>Voice-based coding</strong> where spoken instructions translate to code</li>
 <li><strong>Diagram-to-code conversion</strong> where architecture diagrams become implementation scaffolding</li>
-<li><strong>Code-to-visualization generation</strong> where code is automatically visualized for better understanding</li>
+<li><strong>Code-to-visualisation generation</strong> where code is automatically visualised for better understanding</li>
 </ul>
-<p>These multimodal capabilities will require adaptations to intentional prompting practices, with greater emphasis on clear specification and visualization of intent.</p>
+<p>These multimodal capabilities will require adaptations to intentional prompting practices, with greater emphasis on clear specification and visualisation of intent.</p>
 </section>
 <section id="contextual-awareness" class="level4" data-number="17.1.1.2">
 <h4 data-number="17.1.1.2" class="anchored" data-anchor-id="contextual-awareness"><span class="header-section-number">17.1.1.2</span> Contextual Awareness</h4>
@@ -619,7 +622,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="increasing-autonomy-and-agentic-programming" class="level3" data-number="17.1.2">
 <h3 data-number="17.1.2" class="anchored" data-anchor-id="increasing-autonomy-and-agentic-programming"><span class="header-section-number">17.1.2</span> Increasing Autonomy and Agentic Programming</h3>
-<p>AI systems are gradually moving toward greater autonomy in coding tasks, leading to what’s known as “agentic programming”—where AI agents can autonomously perform complex development tasks with minimal human intervention:</p>
+<p>AI systems are gradually moving toward greater autonomy in coding tasks, leading to what’s known as “agentic programming,” where AI agents can autonomously perform complex development tasks with minimal human intervention:</p>
 <section id="autonomous-coding-capabilities" class="level4" data-number="17.1.2.1">
 <h4 data-number="17.1.2.1" class="anchored" data-anchor-id="autonomous-coding-capabilities"><span class="header-section-number">17.1.2.1</span> Autonomous Coding Capabilities</h4>
 <ul>
@@ -629,12 +632,13 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Proactive suggestion</strong> of improvements and optimisations</li>
 </ul>
 <p>This increased autonomy will shift intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.</p>
+<p>It is worth stating plainly: better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.</p>
 </section>
 <section id="ai-pairing-and-collaboration" class="level4" data-number="17.1.2.2">
 <h4 data-number="17.1.2.2" class="anchored" data-anchor-id="ai-pairing-and-collaboration"><span class="header-section-number">17.1.2.2</span> AI Pairing and Collaboration</h4>
 <p>Future development environments may feature:</p>
 <ul>
-<li><strong>Multiple specialized AIs</strong> with different expertise areas</li>
+<li><strong>Multiple specialised AIs</strong> with different expertise areas</li>
 <li><strong>AI-to-AI collaboration</strong> where different models handle different aspects of development</li>
 <li><strong>Continuous AI presence</strong> during the entire development process</li>
 <li><strong>Persistent learning</strong> from team interactions and feedback</li>
@@ -646,9 +650,9 @@ ul.task-list li input[type="checkbox"] {
 <p>As AI development agents become more sophisticated, research has identified critical intervention points where human oversight remains essential:</p>
 <p><strong>Requirements Phase</strong> - <em>AI Role</em>: Convert user stories to technical specifications - <em>Human Role</em>: Validate business alignment and feasibility of proposed approaches</p>
 <p><strong>Design Phase</strong> - <em>AI Role</em>: Generate architecture diagrams from specifications - <em>Human Role</em>: Evaluate maintainability and technical debt implications</p>
-<p><strong>Implementation</strong> - <em>AI Role</em>: Auto-complete functions with context awareness - <em>Human Role</em>: Ensure compliance with security protocols and organizational standards</p>
+<p><strong>Implementation</strong> - <em>AI Role</em>: Auto-complete functions with context awareness - <em>Human Role</em>: Ensure compliance with security protocols and organisational standards</p>
 <p><strong>Deployment</strong> - <em>AI Role</em>: Auto-scale and configure infrastructure - <em>Human Role</em>: Final approval for production releases</p>
-<p>Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalization, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.</p>
+<p>Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.</p>
 <p>Effective human oversight includes:</p>
 <ol type="1">
 <li><strong>Establishing clear protocols and roles</strong> for when and how human intervention should occur</li>
@@ -673,7 +677,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Human review and refinement</strong> of generated code</li>
 <li><strong>Iterative specification improvement</strong> based on implementation feedback</li>
 </ul>
-<p>Intentional prompting in this paradigm emphasizes clear articulation of requirements and constraints, with less focus on implementation syntax.</p>
+<p>Intentional prompting in this paradigm emphasises clear articulation of requirements and constraints, with less focus on implementation syntax.</p>
 </section>
 <section id="quality-oriented-development" class="level4" data-number="17.2.1.2">
 <h4 data-number="17.2.1.2" class="anchored" data-anchor-id="quality-oriented-development"><span class="header-section-number">17.2.1.2</span> Quality-Oriented Development</h4>
@@ -739,8 +743,8 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="organizational-adaptation" class="level3" data-number="17.3.2">
-<h3 data-number="17.3.2" class="anchored" data-anchor-id="organizational-adaptation"><span class="header-section-number">17.3.2</span> Organizational Adaptation</h3>
+<section id="organisational-adaptation" class="level3" data-number="17.3.2">
+<h3 data-number="17.3.2" class="anchored" data-anchor-id="organisational-adaptation"><span class="header-section-number">17.3.2</span> Organisational Adaptation</h3>
 <p>organisations will need to adapt their development processes:</p>
 <section id="evolving-team-structures" class="level4" data-number="17.3.2.1">
 <h4 data-number="17.3.2.1" class="anchored" data-anchor-id="evolving-team-structures"><span class="header-section-number">17.3.2.1</span> Evolving Team Structures</h4>
@@ -759,7 +763,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Balanced human-AI responsibility</strong> with clear accountability</li>
 <li><strong>Knowledge management</strong> becoming increasingly critical</li>
 </ul>
-<p>Intentional prompting principles can guide these organizational transformations, ensuring that human expertise remains central despite increasing automation.</p>
+<p>Intentional prompting principles can guide these organisational transformations, ensuring that human expertise remains central despite increasing automation.</p>
 </section>
 </section>
 </section>
@@ -809,7 +813,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Focus on high-impact decisions</strong> where human judgment adds value</li>
 <li><strong>Cultivate creativity in problem-solving</strong> approaches</li>
 <li><strong>Engage with ethical dimensions</strong> of technical decisions</li>
-<li><strong>Prioritize human-centered design</strong> considerations</li>
+<li><strong>Prioritise human-centred design</strong> considerations</li>
 <li><strong>Develop cross-disciplinary expertise</strong> combining programming with domain knowledge</li>
 </ol>
 </section>
@@ -847,7 +851,7 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Architecture and system design as primary human activities</li>
 <li>Specification languages replacing traditional programming languages</li>
-<li>Orchestration of multiple specialized AI collaborators</li>
+<li>Orchestration of multiple specialised AI collaborators</li>
 <li>Quality assurance through formal specification rather than testing</li>
 </ol>
 </section>
@@ -860,7 +864,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Symbiotic human-AI development partnerships</li>
 <li>New programming paradigms built specifically for human-AI collaboration</li>
 </ul>
-<p>The core principles of intentional prompting—maintaining human understanding and control while leveraging AI capabilities effectively—will remain relevant even as the specific practices evolve.</p>
+<p>The core principles of intentional prompting (maintaining human understanding and control while leveraging AI capabilities effectively) will remain relevant even as the specific practices evolve.</p>
 </section>
 </section>
 <section id="a-personal-development-roadmap" class="level2" data-number="17.6">
@@ -920,7 +924,7 @@ ul.task-list li input[type="checkbox"] {
 <p>While this book has focused primarily on applying intentional prompting principles to programming tasks, the core concepts of intentional prompting have far broader applications across various domains and activities.</p>
 <section id="universal-principles-of-ai-collaboration" class="level3" data-number="17.8.1">
 <h3 data-number="17.8.1" class="anchored" data-anchor-id="universal-principles-of-ai-collaboration"><span class="header-section-number">17.8.1</span> Universal Principles of AI Collaboration</h3>
-<p>The fundamental principles of intentional prompting that we’ve explored—maintaining human agency, focusing on understanding, and prioritizing process over output—apply universally to any human-AI collaboration:</p>
+<p>The fundamental principles of intentional prompting that we’ve explored (maintaining human agency, focusing on understanding, and prioritising process over output) apply universally to any human-AI collaboration:</p>
 <section id="in-creative-fields" class="level4" data-number="17.8.1.1">
 <h4 data-number="17.8.1.1" class="anchored" data-anchor-id="in-creative-fields"><span class="header-section-number">17.8.1.1</span> In Creative Fields</h4>
 <ul>
@@ -965,7 +969,7 @@ ul.task-list li input[type="checkbox"] {
 <p>As AI capabilities continue to evolve, these principles will only become more important. Future systems may offer:</p>
 <ul>
 <li><strong>More seamless multimodal interaction</strong> across text, voice, images, and other media</li>
-<li><strong>Greater domain-specific expertise</strong> in specialized fields</li>
+<li><strong>Greater domain-specific expertise</strong> in specialised fields</li>
 <li><strong>Enhanced contextual awareness</strong> of projects, goals, and constraints</li>
 <li><strong>Increased autonomy</strong> for well-defined tasks</li>
 </ul>
@@ -975,9 +979,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="conclusion" class="level2" data-number="17.9">
 <h2 data-number="17.9" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">17.9</span> Conclusion</h2>
 <p>As we conclude this exploration of intentional prompting, it’s clear that the fundamental relationship between human developers and AI assistants will continue to evolve. What won’t change is the need for a thoughtful, structured approach to leveraging AI capabilities while maintaining human understanding and control.</p>
-<p>The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavor.</p>
-<p>Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those skeptical of AI’s impact on learning and skill development, intentional prompting’s focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.</p>
-<p>The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn’t fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance—a balanced path that maximizes benefits while minimising risks.</p>
+<p>The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavour.</p>
+<p>Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI’s impact on learning and skill development, intentional prompting’s focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.</p>
+<p>The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn’t fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance: a balanced path that maximises benefits while minimising risks.</p>
 <p>As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.</p>
 <p>The six-step methodology provides a framework not just for individual programmers but for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.</p>
 <p>While we’ve focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you’re preparing not just for current AI tools, but for the next generation of human-AI partnership in programming and beyond.</p>
