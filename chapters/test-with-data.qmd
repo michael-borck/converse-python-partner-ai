@@ -1,5 +1,7 @@
 # Test with Data (Step 6)
 
+> Code that has not been tested with edge cases is not finished. It is a hypothesis.
+
 The final step in our methodology, testing with a variety of data, is where we verify that our solution works correctly in all scenarios. This critical step ensures that our implementation meets the requirements and handles edge cases properly.
 
 ## Comprehensive Testing Strategies

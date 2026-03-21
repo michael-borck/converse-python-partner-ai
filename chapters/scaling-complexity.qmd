@@ -1,5 +1,7 @@
 # Scaling to Complex Projects
 
+> The practices that work for a single function do not automatically scale. That is the challenge.
+
 So far, we've primarily focused on applying intentional prompting techniques to isolated functions and small-scale problems. In real-world development, however, you'll often work on complex projects with multiple components, larger codebases, and teams of developers. This chapter explores strategies for scaling intentional prompting practices to handle this increased complexity.
 
 ## Beyond Single-File Programs

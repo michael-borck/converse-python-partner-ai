@@ -1,5 +1,7 @@
 # Debugging with AI
 
+> The best debugging conversations start with what you already know about the problem, not with "fix this."
+
 Debugging is often one of the most challenging and time-consuming aspects of programming. AI assistants can be powerful allies in the debugging process, helping identify and fix issues more efficiently than traditional approaches. This chapter explores how to use intentional prompting techniques specifically for debugging tasks.
 
 ## Common Debugging Scenarios

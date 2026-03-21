@@ -1,5 +1,7 @@
 # Refactoring Strategies
 
+> Refactoring is not rewriting. It is making the code say what you meant more clearly.
+
 Refactoring (improving code structure without changing its external behaviour) is a critical skill for maintaining healthy, adaptable software. AI assistants can be powerful allies in identifying refactoring opportunities and implementing improvements. This chapter explores intentional approaches to refactoring with AI assistance.
 
 ## When and Why to Refactor

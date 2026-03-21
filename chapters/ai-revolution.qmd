@@ -1,5 +1,7 @@
 # The AI Revolution in Programming
 
+> The tools changed. The need for understanding did not.
+
 ## Evolution of Programming Tools
 
 The history of programming is a story of continuous abstraction. From machine code to assembly language, from procedural to object-oriented paradigms, each evolution has aimed to make programming more accessible, maintainable, and powerful.

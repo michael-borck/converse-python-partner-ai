@@ -1,5 +1,7 @@
 # Introduction
 
+> Intentional prompting is not about getting better answers from AI. It is about becoming a better developer alongside it.
+
 ## Applying the Philosophy to Software Development
 
 In the previous chapter, we established the core philosophy: **Conversation, Not Delegation**. We defined intentional prompting as the practice of crafting each AI interaction deliberately, to build understanding, not just get output.

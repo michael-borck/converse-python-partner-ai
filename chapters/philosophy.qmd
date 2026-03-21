@@ -1,5 +1,7 @@
 # Conversation, Not Delegation {#sec-philosophy}
 
+> The difference between using AI well and using it poorly is not technical skill. It is whether you are thinking or just accepting.
+
 ## The Core Distinction
 
 When you interact with AI, you make a choice, often unconsciously, about the nature of that interaction.

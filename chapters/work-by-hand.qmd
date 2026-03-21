@@ -1,5 +1,7 @@
 # Work by Hand (Step 3)
 
+> If you cannot solve it on paper, you cannot explain it to a machine.
+
 Step 3 of the six-step methodology, working through examples by hand, is often the most tempting to skip, especially with AI assistance. Yet it remains one of the most valuable practices for deeply understanding a problem and its solution.
 
 ## The Importance of Manual Examples

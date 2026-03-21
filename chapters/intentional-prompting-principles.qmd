@@ -1,5 +1,7 @@
 # Principles of Intentional Prompting
 
+> The developer who understands the code is more valuable than the developer who generated it.
+
 ## The Spectrum of AI Integration Approaches
 
 Before diving into the core principles of intentional prompting, it's important to understand the broader landscape of approaches to integrating AI into development workflows. These approaches reflect different philosophies about the role of AI and human developers.

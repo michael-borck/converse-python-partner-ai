@@ -1,5 +1,7 @@
 # Teaching and Learning
 
+> Teaching someone to use AI well is teaching them to think well. The tool is secondary.
+
 The advent of AI coding assistants has dramatically changed not just how we program, but also how we teach and learn programming. This chapter explores the application of intentional prompting principles in educational settings, offering guidance for both educators and students.
 
 ## Pedagogical Applications of Intentional Prompting

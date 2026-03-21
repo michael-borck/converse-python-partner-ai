@@ -1,5 +1,7 @@
 # Future Directions
 
+> The tools will change. The discipline of thinking clearly will not.
+
 As we reach the conclusion of this book, it's important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in an increasingly AI-powered development landscape.
 
 ## Emerging AI Capabilities

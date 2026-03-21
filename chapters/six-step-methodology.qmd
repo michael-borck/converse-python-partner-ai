@@ -1,5 +1,7 @@
 # The Six-Step Programming Methodology
 
+> A methodology is not a constraint. It is a way of thinking that transfers to problems you have not seen yet.
+
 ## Overview of the Methodology
 
 The six-step programming methodology provides a structured approach to solving problems that works both with and without AI assistance. This methodology focuses on understanding before implementation and ensures that programmers maintain control of the development process.

@@ -1,5 +1,7 @@
 # Intentional Prompting Patterns
 
+> A good pattern is not a script. It is a starting point that adapts to the problem in front of you.
+
 ## The Art of Guiding AI
 
 Effective collaboration with AI assistants requires more than just asking for solutions. It demands a thoughtful approach to crafting prompts that guide the AI toward helpful, educational responses. This chapter explores key patterns for intentional prompting that maximise the learning and development value of AI interactions.
