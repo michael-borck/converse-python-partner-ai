@@ -89,16 +89,22 @@ This guide is part of a 5-book series designed to help you master modern softwar
 
 Start with "Think Python, Direct AI" if you're a complete beginner, or jump into "Code Python, Consult AI" if you want a more focused approach to Python fundamentals. Both books prepare you for the production-focused content in "Ship Python, Orchestrate AI." For web development, start with "Build Web, Guide AI." The methodology from "Converse Python, Partner AI" enhances all your Python development work.
 
-## Source Code & Feedback
+## Ways to Engage with This Book
 
-**Source Code**
-All code examples and supplementary materials are available at:
-https://github.com/michael-borck/converse-python-partner-ai
+This book is available in several formats. Pick whichever fits how you work and learn.
+
+- **Read it online.** The full book is freely available at the [companion website](https://michael-borck.github.io/converse-python-partner-ai), with dark mode, search, and navigation.
+- **Read it on paper or e-reader.** Available as a paperback and ebook through Amazon KDP.
+- **Converse with it.** The online edition includes a chatbot grounded in the book's content. Ask it questions about intentional prompting, the six-step methodology, or any concept in the book.
+- **Feed it to your own AI.** The `llm.txt` file provides a clean text version of the entire book, ready to paste into ChatGPT, Claude, or any AI tool.
+- **Run the code.** All code examples and supplementary materials are available on [GitHub](https://github.com/michael-borck/converse-python-partner-ai). [DeepWiki](https://deepwiki.com/michael-borck/converse-python-partner-ai) provides an AI-navigable view of the repository.
+- **Browse all books.** This book is part of a series. See all titles at [books.borck.education](https://books.borck.education).
+
+The online version is always the most current. The printed and ebook editions are updated periodically.
 
 **Feedback and Errata**
-Found an error? Have a suggestion? We welcome your feedback:
 
-- Open an issue: https://github.com/michael-borck/converse-python-partner-ai/issues
+Found an error? Have a suggestion?
+
+- Open an issue: [github.com/michael-borck/converse-python-partner-ai/issues](https://github.com/michael-borck/converse-python-partner-ai/issues)
 - Email: michael@borck.me
-
-Your input helps improve this book for future readers.
