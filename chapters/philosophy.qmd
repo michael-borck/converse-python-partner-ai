@@ -84,9 +84,7 @@ The second approach takes longer but produces:
 
 Let's see how delegation and conversation differ in practice.
 
-::: {.panel-tabset}
-
-## Python
+### A Python Example
 
 **Delegation approach:**
 
@@ -114,40 +112,8 @@ Human: Now lets implement it. Can you explain each part as we go?
 [Collaborative implementation with understanding]
 ```
 
-## Business
+The same principle applies beyond programming. Whether you are planning a marketing launch, designing a research methodology, or writing a policy document, the difference between delegation and conversation determines whether you understand the result or just received it.
 
-**Delegation approach:**
-
-```
-Human: Create a marketing launch plan for our new product.
-
-AI: [Generates complete plan]
-
-Human: Looks good... I think? [Accepts without deep understanding]
-```
-
-**Conversation approach:**
-
-```
-Human: I need to create a marketing launch plan for our new productivity
-       app. Before we draft anything, help me think through the key
-       decisions. Who are our potential customer segments?
-
-AI: [Discusses: enterprise vs SMB vs consumer, early adopters vs mainstream,
-     vertical-specific vs horizontal, budget considerations]
-
-Human: Good analysis. Lets focus on SMB. What channels typically work
-       best for reaching SMB buyers in the productivity space?
-
-AI: [Explains channel options with trade-offs]
-
-Human: Content marketing and partnerships make sense for our budget.
-       What should our 90-day launch timeline look like?
-
-[Collaborative planning with clear reasoning]
-```
-
-:::
 
 ## Beyond Programming
 

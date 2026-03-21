@@ -65,23 +65,25 @@ format:
     toc-depth: 3
     number-sections: true
   pdf:
-    documentclass: scrbook
-    papersize: 6in:9in
-    colorlinks: true
+    documentclass: book
+    classoption: [6in:9in]
     toc: true
+    toc-depth: 1
     number-sections: true
-    toc-depth: 3
-    cover-image: images/cover.png
+    hyperrefoptions: draft
     geometry:
+      - paperwidth=6in
+      - paperheight=9in
+      - inner=1in
+      - outer=0.625in
       - top=0.75in
       - bottom=0.75in
-      - outer=0.75in
-      - inner=1in
-    fontsize: 11pt
+    include-in-header: pdf-header.tex
+    include-before-body: copyright-page.tex
   epub:
     toc: true
-    toc-depth: 3
-    cover-image: images/cover.png
+    toc-depth: 1
+    css: epub-styles.css
 
 website:
   repo-url: https://github.com/michael-borck/converse-python-partner-ai
