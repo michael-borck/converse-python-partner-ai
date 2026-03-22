@@ -526,10 +526,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-core-distinction" id="toc-the-core-distinction" class="nav-link active" data-scroll-target="#the-core-distinction"><span class="header-section-number">1.1</span> The Core Distinction</a></li>
   <li><a href="#what-is-a-prompt" id="toc-what-is-a-prompt" class="nav-link" data-scroll-target="#what-is-a-prompt"><span class="header-section-number">1.2</span> What is a “Prompt”?</a></li>
   <li><a href="#what-is-intentional-prompting" id="toc-what-is-intentional-prompting" class="nav-link" data-scroll-target="#what-is-intentional-prompting"><span class="header-section-number">1.3</span> What is “Intentional Prompting”?</a></li>
-  <li><a href="#the-philosophy-in-action" id="toc-the-philosophy-in-action" class="nav-link" data-scroll-target="#the-philosophy-in-action"><span class="header-section-number">1.4</span> The Philosophy in Action</a></li>
-  <li><a href="#beyond-programming" id="toc-beyond-programming" class="nav-link" data-scroll-target="#beyond-programming"><span class="header-section-number">1.5</span> Beyond Programming</a></li>
-  <li><a href="#the-two-chat-workflow" id="toc-the-two-chat-workflow" class="nav-link" data-scroll-target="#the-two-chat-workflow"><span class="header-section-number">1.6</span> The Two-Chat Workflow</a></li>
-  <li><a href="#what-is-ahead" id="toc-what-is-ahead" class="nav-link" data-scroll-target="#what-is-ahead"><span class="header-section-number">1.7</span> What is Ahead</a></li>
+  <li><a href="#one-prompt-one-job" id="toc-one-prompt-one-job" class="nav-link" data-scroll-target="#one-prompt-one-job"><span class="header-section-number">1.4</span> One Prompt, One Job</a></li>
+  <li><a href="#the-philosophy-in-action" id="toc-the-philosophy-in-action" class="nav-link" data-scroll-target="#the-philosophy-in-action"><span class="header-section-number">1.5</span> The Philosophy in Action</a>
+  <ul class="collapse">
+  <li><a href="#a-python-example" id="toc-a-python-example" class="nav-link" data-scroll-target="#a-python-example"><span class="header-section-number">1.5.1</span> A Python Example</a></li>
+  </ul></li>
+  <li><a href="#beyond-programming" id="toc-beyond-programming" class="nav-link" data-scroll-target="#beyond-programming"><span class="header-section-number">1.6</span> Beyond Programming</a></li>
+  <li><a href="#the-two-chat-workflow" id="toc-the-two-chat-workflow" class="nav-link" data-scroll-target="#the-two-chat-workflow"><span class="header-section-number">1.7</span> The Two-Chat Workflow</a></li>
+  <li><a href="#what-is-ahead" id="toc-what-is-ahead" class="nav-link" data-scroll-target="#what-is-ahead"><span class="header-section-number">1.8</span> What is Ahead</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/philosophy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -624,13 +628,17 @@ and explain each part?"
 <li>Skills that grow with each interaction</li>
 </ul>
 </section>
-<section id="the-philosophy-in-action" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="the-philosophy-in-action"><span class="header-section-number">1.4</span> The Philosophy in Action</h2>
+<section id="one-prompt-one-job" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="one-prompt-one-job"><span class="header-section-number">1.4</span> One Prompt, One Job</h2>
+<p>A related principle: give each prompt a single focused task.</p>
+<p>When you ask AI to “write a function, add error handling, write tests, and document it,” you get shallow results for all four. When you ask it to write the function first, then handle errors in the next message, then write tests, each response is deeper and more useful. The model calibrates its depth to match the scope of what you asked. A checklist gets checklist responses. A focused question gets a considered answer.</p>
+<p>This is the foundation of the conversation approach. You are not handing over a task list. You are working through a problem one step at a time, reviewing each result before moving on.</p>
+</section>
+<section id="the-philosophy-in-action" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="the-philosophy-in-action"><span class="header-section-number">1.5</span> The Philosophy in Action</h2>
 <p>Let’s see how delegation and conversation differ in practice.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Python</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Business</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="a-python-example" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="a-python-example"><span class="header-section-number">1.5.1</span> A Python Example</h3>
 <p><strong>Delegation approach:</strong></p>
 <pre><code>Human: Write a Python function that calculates total price with tax and discounts.
 
@@ -649,37 +657,11 @@ AI: [Proposes design with clear separation of concerns]
 Human: Now lets implement it. Can you explain each part as we go?
 
 [Collaborative implementation with understanding]</code></pre>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><strong>Delegation approach:</strong></p>
-<pre><code>Human: Create a marketing launch plan for our new product.
-
-AI: [Generates complete plan]
-
-Human: Looks good... I think? [Accepts without deep understanding]</code></pre>
-<p><strong>Conversation approach:</strong></p>
-<pre><code>Human: I need to create a marketing launch plan for our new productivity
-       app. Before we draft anything, help me think through the key
-       decisions. Who are our potential customer segments?
-
-AI: [Discusses: enterprise vs SMB vs consumer, early adopters vs mainstream,
-     vertical-specific vs horizontal, budget considerations]
-
-Human: Good analysis. Lets focus on SMB. What channels typically work
-       best for reaching SMB buyers in the productivity space?
-
-AI: [Explains channel options with trade-offs]
-
-Human: Content marketing and partnerships make sense for our budget.
-       What should our 90-day launch timeline look like?
-
-[Collaborative planning with clear reasoning]</code></pre>
-</div>
-</div>
-</div>
+<p>The same principle applies beyond programming. Whether you are planning a marketing launch, designing a research methodology, or writing a policy document, the difference between delegation and conversation determines whether you understand the result or just received it.</p>
 </section>
-<section id="beyond-programming" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="beyond-programming"><span class="header-section-number">1.5</span> Beyond Programming</h2>
+</section>
+<section id="beyond-programming" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="beyond-programming"><span class="header-section-number">1.6</span> Beyond Programming</h2>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -694,16 +676,16 @@ Human: Content marketing and partnerships make sense for our budget.
 </div>
 </div>
 </section>
-<section id="the-two-chat-workflow" class="level2" data-number="1.6">
-<h2 data-number="1.6" class="anchored" data-anchor-id="the-two-chat-workflow"><span class="header-section-number">1.6</span> The Two-Chat Workflow</h2>
+<section id="the-two-chat-workflow" class="level2" data-number="1.7">
+<h2 data-number="1.7" class="anchored" data-anchor-id="the-two-chat-workflow"><span class="header-section-number">1.7</span> The Two-Chat Workflow</h2>
 <p>One practical way to build this discipline into your development workflow is to separate thinking from building entirely. Instead of doing everything in one session, run two.</p>
 <p><strong>Chat 1: Understand the problem.</strong> Open a session with no intention of writing code. Use it to explore the requirements, challenge your assumptions, and clarify what you are actually trying to build. What are the edge cases? What are the real constraints? What approaches have you not considered? Let the conversation wander. This session is messy by design. Its purpose is to sharpen your thinking until you know what you actually need.</p>
 <p><strong>Chat 2: Write the code.</strong> Start a fresh session and arrive with a clear specification: what the function should do, what inputs it takes, what edge cases it must handle, and what design decisions you have already made. The code will be dramatically better because the input is better.</p>
 <p>The critical step is the gap between the two chats. You do not dump everything from the first session into the second. You review what emerged, keep what matters, discard what does not, and write a focused brief that reflects your decisions. That act of curation is where your engineering judgement lives.</p>
 <p>This maps directly to the average-versus-precise framework. A project that starts in the danger zone (large, precise) gets decomposed during the thinking chat into components that each sit in different quadrants. The architecture discussion belongs in Chat 1. The individual functions can be written in Chat 2 with appropriate trust for their position on the grid.</p>
 </section>
-<section id="what-is-ahead" class="level2" data-number="1.7">
-<h2 data-number="1.7" class="anchored" data-anchor-id="what-is-ahead"><span class="header-section-number">1.7</span> What is Ahead</h2>
+<section id="what-is-ahead" class="level2" data-number="1.8">
+<h2 data-number="1.8" class="anchored" data-anchor-id="what-is-ahead"><span class="header-section-number">1.8</span> What is Ahead</h2>
 <p>This book will teach you to have productive conversations with AI:</p>
 <ul>
 <li><strong>Part 1: Foundations</strong> establishes the core concepts and principles</li>
@@ -719,13 +701,8 @@ Human: Content marketing and partnerships make sense for our budget.
 </section>
 
 </main> <!-- /main -->
-<!--
-  AnythingLLM chatbot widget for the HTML edition.
-  See: https://github.com/Mintplex-Labs/anythingllm-embed/blob/main/README.md
--->
-<script data-embed-id="ee7606b5-36bb-4bfe-a61f-dd8cb603082f" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
+<script data-embed-id="51b8c5aa-cb61-4a50-b14c-912e886ef6ff" data-base-api-url="https://chat.eduserver.au/api/embed" src="https://chat.eduserver.au/embed/anythingllm-chat-widget.min.js">
 </script>
-<!-- AnythingLLM (https://anythingllm.com) -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

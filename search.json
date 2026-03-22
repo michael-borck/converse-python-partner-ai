@@ -60,11 +60,11 @@
     ]
   },
   {
-    "objectID": "index.html#source-code-feedback",
-    "href": "index.html#source-code-feedback",
+    "objectID": "index.html#ways-to-engage-with-this-book",
+    "href": "index.html#ways-to-engage-with-this-book",
     "title": "Converse Python, Partner AI: The Python Edition",
-    "section": "Source Code & Feedback",
-    "text": "Source Code & Feedback\nSource Code All code examples and supplementary materials are available at: https://github.com/michael-borck/converse-python-partner-ai\nFeedback and Errata Found an error? Have a suggestion? We welcome your feedback:\n\nOpen an issue: https://github.com/michael-borck/converse-python-partner-ai/issues\nEmail: michael@borck.me\n\nYour input helps improve this book for future readers.",
+    "section": "Ways to Engage with This Book",
+    "text": "Ways to Engage with This Book\nThis book is available in several formats. Pick whichever fits how you work and learn.\n\nRead it online. The full book is freely available at the companion website, with dark mode, search, and navigation.\nRead it on paper or e-reader. Available as a paperback and ebook through Amazon KDP.\nConverse with it. The online edition includes a chatbot grounded in the book’s content. Ask it questions about intentional prompting, the six-step methodology, or any concept in the book.\nFeed it to your own AI. The llm.txt file provides a clean text version of the entire book, ready to paste into ChatGPT, Claude, or any AI tool.\nRun the code. All code examples and supplementary materials are available on GitHub. DeepWiki provides an AI-navigable view of the repository.\nBrowse all books. This book is part of a series. See all titles at books.borck.education.\n\nThe online version is always the most current. The printed and ebook editions are updated periodically.\nFeedback and Errata\nFound an error? Have a suggestion?\n\nOpen an issue: github.com/michael-borck/converse-python-partner-ai/issues\nEmail: michael@borck.me",
     "crumbs": [
       "Preface"
     ]
@@ -124,11 +124,22 @@
     ]
   },
   {
+    "objectID": "chapters/philosophy.html#one-prompt-one-job",
+    "href": "chapters/philosophy.html#one-prompt-one-job",
+    "title": "1  Conversation, Not Delegation",
+    "section": "1.4 One Prompt, One Job",
+    "text": "1.4 One Prompt, One Job\nA related principle: give each prompt a single focused task.\nWhen you ask AI to “write a function, add error handling, write tests, and document it,” you get shallow results for all four. When you ask it to write the function first, then handle errors in the next message, then write tests, each response is deeper and more useful. The model calibrates its depth to match the scope of what you asked. A checklist gets checklist responses. A focused question gets a considered answer.\nThis is the foundation of the conversation approach. You are not handing over a task list. You are working through a problem one step at a time, reviewing each result before moving on.",
+    "crumbs": [
+      "The Philosophy",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conversation, Not Delegation</span>"
+    ]
+  },
+  {
     "objectID": "chapters/philosophy.html#the-philosophy-in-action",
     "href": "chapters/philosophy.html#the-philosophy-in-action",
     "title": "1  Conversation, Not Delegation",
-    "section": "1.4 The Philosophy in Action",
-    "text": "1.4 The Philosophy in Action\nLet’s see how delegation and conversation differ in practice.\n\nPythonBusiness\n\n\nDelegation approach:\nHuman: Write a Python function that calculates total price with tax and discounts.\n\nAI: [Generates function - works for simple cases but what about negative\n     prices, multiple discounts, or tax-exempt items?]\nConversation approach:\nHuman: I need to calculate total price with tax and discounts. Before we\n       write code, what business rules should I consider?\n\nAI: [Explains order of operations, compound discounts, rounding, edge cases]\nHuman: Those are good points. Lets handle discounts before tax.\n       What is a clean way to structure this?\n\nAI: [Proposes design with clear separation of concerns]\n\nHuman: Now lets implement it. Can you explain each part as we go?\n\n[Collaborative implementation with understanding]\n\n\nDelegation approach:\nHuman: Create a marketing launch plan for our new product.\n\nAI: [Generates complete plan]\n\nHuman: Looks good... I think? [Accepts without deep understanding]\nConversation approach:\nHuman: I need to create a marketing launch plan for our new productivity\n       app. Before we draft anything, help me think through the key\n       decisions. Who are our potential customer segments?\n\nAI: [Discusses: enterprise vs SMB vs consumer, early adopters vs mainstream,\n     vertical-specific vs horizontal, budget considerations]\n\nHuman: Good analysis. Lets focus on SMB. What channels typically work\n       best for reaching SMB buyers in the productivity space?\n\nAI: [Explains channel options with trade-offs]\n\nHuman: Content marketing and partnerships make sense for our budget.\n       What should our 90-day launch timeline look like?\n\n[Collaborative planning with clear reasoning]",
+    "section": "1.5 The Philosophy in Action",
+    "text": "1.5 The Philosophy in Action\nLet’s see how delegation and conversation differ in practice.\n\n1.5.1 A Python Example\nDelegation approach:\nHuman: Write a Python function that calculates total price with tax and discounts.\n\nAI: [Generates function - works for simple cases but what about negative\n     prices, multiple discounts, or tax-exempt items?]\nConversation approach:\nHuman: I need to calculate total price with tax and discounts. Before we\n       write code, what business rules should I consider?\n\nAI: [Explains order of operations, compound discounts, rounding, edge cases]\nHuman: Those are good points. Lets handle discounts before tax.\n       What is a clean way to structure this?\n\nAI: [Proposes design with clear separation of concerns]\n\nHuman: Now lets implement it. Can you explain each part as we go?\n\n[Collaborative implementation with understanding]\nThe same principle applies beyond programming. Whether you are planning a marketing launch, designing a research methodology, or writing a policy document, the difference between delegation and conversation determines whether you understand the result or just received it.",
     "crumbs": [
       "The Philosophy",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conversation, Not Delegation</span>"
@@ -138,8 +149,8 @@
     "objectID": "chapters/philosophy.html#beyond-programming",
     "href": "chapters/philosophy.html#beyond-programming",
     "title": "1  Conversation, Not Delegation",
-    "section": "1.5 Beyond Programming",
-    "text": "1.5 Beyond Programming\n\n\n\n\n\n\nNoteUniversal Principles\n\n\n\nWhile this book applies intentional prompting to software development, the philosophy of Conversation, Not Delegation works in any domain: business planning, creative writing, research, education, and beyond. The principles transfer - only the examples change.",
+    "section": "1.6 Beyond Programming",
+    "text": "1.6 Beyond Programming\n\n\n\n\n\n\nNoteUniversal Principles\n\n\n\nWhile this book applies intentional prompting to software development, the philosophy of Conversation, Not Delegation works in any domain: business planning, creative writing, research, education, and beyond. The principles transfer - only the examples change.",
     "crumbs": [
       "The Philosophy",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conversation, Not Delegation</span>"
@@ -149,8 +160,8 @@
     "objectID": "chapters/philosophy.html#the-two-chat-workflow",
     "href": "chapters/philosophy.html#the-two-chat-workflow",
     "title": "1  Conversation, Not Delegation",
-    "section": "1.6 The Two-Chat Workflow",
-    "text": "1.6 The Two-Chat Workflow\nOne practical way to build this discipline into your development workflow is to separate thinking from building entirely. Instead of doing everything in one session, run two.\nChat 1: Understand the problem. Open a session with no intention of writing code. Use it to explore the requirements, challenge your assumptions, and clarify what you are actually trying to build. What are the edge cases? What are the real constraints? What approaches have you not considered? Let the conversation wander. This session is messy by design. Its purpose is to sharpen your thinking until you know what you actually need.\nChat 2: Write the code. Start a fresh session and arrive with a clear specification: what the function should do, what inputs it takes, what edge cases it must handle, and what design decisions you have already made. The code will be dramatically better because the input is better.\nThe critical step is the gap between the two chats. You do not dump everything from the first session into the second. You review what emerged, keep what matters, discard what does not, and write a focused brief that reflects your decisions. That act of curation is where your engineering judgement lives.\nThis maps directly to the average-versus-precise framework. A project that starts in the danger zone (large, precise) gets decomposed during the thinking chat into components that each sit in different quadrants. The architecture discussion belongs in Chat 1. The individual functions can be written in Chat 2 with appropriate trust for their position on the grid.",
+    "section": "1.7 The Two-Chat Workflow",
+    "text": "1.7 The Two-Chat Workflow\nOne practical way to build this discipline into your development workflow is to separate thinking from building entirely. Instead of doing everything in one session, run two.\nChat 1: Understand the problem. Open a session with no intention of writing code. Use it to explore the requirements, challenge your assumptions, and clarify what you are actually trying to build. What are the edge cases? What are the real constraints? What approaches have you not considered? Let the conversation wander. This session is messy by design. Its purpose is to sharpen your thinking until you know what you actually need.\nChat 2: Write the code. Start a fresh session and arrive with a clear specification: what the function should do, what inputs it takes, what edge cases it must handle, and what design decisions you have already made. The code will be dramatically better because the input is better.\nThe critical step is the gap between the two chats. You do not dump everything from the first session into the second. You review what emerged, keep what matters, discard what does not, and write a focused brief that reflects your decisions. That act of curation is where your engineering judgement lives.\nThis maps directly to the average-versus-precise framework. A project that starts in the danger zone (large, precise) gets decomposed during the thinking chat into components that each sit in different quadrants. The architecture discussion belongs in Chat 1. The individual functions can be written in Chat 2 with appropriate trust for their position on the grid.",
     "crumbs": [
       "The Philosophy",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conversation, Not Delegation</span>"
@@ -160,8 +171,8 @@
     "objectID": "chapters/philosophy.html#what-is-ahead",
     "href": "chapters/philosophy.html#what-is-ahead",
     "title": "1  Conversation, Not Delegation",
-    "section": "1.7 What is Ahead",
-    "text": "1.7 What is Ahead\nThis book will teach you to have productive conversations with AI:\n\nPart 1: Foundations establishes the core concepts and principles\nPart 2: Methodology provides a structured six-step approach\nPart 3: Patterns and Practices offers reusable conversation patterns\nPart 4: Advanced Topics addresses complex scenarios and future directions\n\nThroughout, you will see examples in both programming and business contexts, reinforcing that these principles apply wherever you work with AI.\nThe goal is not to make you dependent on AI, but to make you more capable with AI as your partner.\nLets begin.",
+    "section": "1.8 What is Ahead",
+    "text": "1.8 What is Ahead\nThis book will teach you to have productive conversations with AI:\n\nPart 1: Foundations establishes the core concepts and principles\nPart 2: Methodology provides a structured six-step approach\nPart 3: Patterns and Practices offers reusable conversation patterns\nPart 4: Advanced Topics addresses complex scenarios and future directions\n\nThroughout, you will see examples in both programming and business contexts, reinforcing that these principles apply wherever you work with AI.\nThe goal is not to make you dependent on AI, but to make you more capable with AI as your partner.\nLets begin.",
     "crumbs": [
       "The Philosophy",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Conversation, Not Delegation</span>"
