@@ -80,6 +80,14 @@ The second approach takes longer but produces:
 - Confidence in the code's limitations
 - Skills that grow with each interaction
 
+## One Prompt, One Job
+
+A related principle: give each prompt a single focused task.
+
+When you ask AI to "write a function, add error handling, write tests, and document it," you get shallow results for all four. When you ask it to write the function first, then handle errors in the next message, then write tests, each response is deeper and more useful. The model calibrates its depth to match the scope of what you asked. A checklist gets checklist responses. A focused question gets a considered answer.
+
+This is the foundation of the conversation approach. You are not handing over a task list. You are working through a problem one step at a time, reviewing each result before moving on.
+
 ## The Philosophy in Action
 
 Let's see how delegation and conversation differ in practice.
