@@ -62,7 +62,9 @@ Understanding the true capabilities and limitations of AI coding assistants is c
 - Inconsistent code quality depending on prompt clarity
 - Potential to reinforce common programming misconceptions
 
-Understanding these limitations is not about dismissing AI assistance, but about knowing when and how to rely on AI versus your own judgment.
+Understanding these limitations is not about dismissing AI assistance, but about knowing when and how to rely on AI versus your own judgement.
+
+Most of these limitations trace back to a single fact: **LLMs interpolate, they do not retrieve.** When you ask an AI assistant to write a function, it is not looking up the correct implementation in a database. It is predicting what plausible code would look like based on the millions of examples it absorbed during training. This is why it can produce a function that looks right, passes simple tests, and fails on edge cases. The prediction was convincing. The prediction was not verified. That distinction is why the intentional prompting methodology in this book emphasises understanding and testing, not just generating.
 
 ## Common Misconceptions
 
