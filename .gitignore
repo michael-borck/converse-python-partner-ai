@@ -40,3 +40,6 @@ _notes/
 **/*.quarto_ipynb
 llm.txt
 rag-documents/
+
+# AnythingLLM workspace config
+.anythingllm.yml
