@@ -45,10 +45,21 @@ book:
     - appendices/common-pitfalls.qmd
     - appendices/ai-tool-comparison.qmd
     - appendices/glossary.qmd
-  
-  downloads: [pdf, epub]
   repo-url: https://github.com/michael-borck/converse-python-partner-ai
   repo-actions: [edit, issue]
+  other-links:
+    - text: Download PDF
+      icon: file-pdf
+      href: converse-python-partner-ai.pdf
+    - text: Download EPUB
+      icon: book
+      href: converse-python-partner-ai.epub
+    - text: Download llm.txt
+      icon: robot
+      href: llm.txt
+    - text: DeepWiki
+      icon: search
+      href: https://deepwiki.com/michael-borck/converse-python-partner-ai
 
 format:
   html:
@@ -58,39 +69,12 @@ format:
     cover-image: images/cover.png
     css: styles.css
     include-after-body: chatbot.html
-    downloads: [pdf, epub]
     code-copy: true
     highlight-style: github
     toc: true
     toc-depth: 3
     number-sections: true
-  pdf:
-    documentclass: book
-    classoption: [6in:9in]
-    toc: true
-    toc-depth: 1
-    number-sections: true
-    hyperrefoptions: draft
-    geometry:
-      - paperwidth=6in
-      - paperheight=9in
-      - inner=1in
-      - outer=0.625in
-      - top=0.75in
-      - bottom=0.75in
-    include-in-header: pdf-header.tex
-    include-before-body: copyright-page.tex
-  epub:
-    toc: true
-    toc-depth: 1
-    css: epub-styles.css
-
-website:
-  repo-url: https://github.com/michael-borck/converse-python-partner-ai
-  repo-actions: [edit, issue]
-  open-graph: true
 
 execute:
   enabled: false
   freeze: auto
-
