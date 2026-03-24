@@ -3,41 +3,30 @@
 ::: {.content-visible when-format="pdf"}
 
 \thispagestyle{empty}
+\vspace*{\fill}
 
 :::
 
 **Converse Python, Partner AI: The Python Edition**
 
-Copyright 2026 Michael Borck. All rights reserved.
+Copyright © 2026 Michael Borck. All rights reserved.
 
-No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the author, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
+Published by Michael Borck\
+Perth, Western Australia
 
-**First Edition, 2026**
+First edition, 2026.
 
-While every precaution has been taken in the preparation of this book, the author assumes no responsibility for errors or omissions, or for damages resulting from the use of information contained herein.
+No part of this publication may be reproduced, distributed, or transmitted in any form or by any means without the prior written permission of the author, except for brief quotations in reviews and certain non-commercial uses permitted by copyright law.
 
----
+This work is also available under a Creative Commons Attribution (CC BY) licence for content and MIT licence for code examples at the companion website. See below for details.
 
-**Cover Art**
-Created using Midjourney AI, with prompts crafted by the author depicting the themes of human-AI collaboration in software development.
+**AI disclosure:** This book was written using the methodology it describes. AI tools were used as thinking partners throughout the drafting, iterating, and refining process. The author reviewed, challenged, and took responsibility for every sentence and line of code. Full details of the tools used are in the acknowledgments.
 
-**Production Notes**
-This book was written in Markdown using Quarto. The text is set in system fonts optimised for screen and print reading. Code examples use a monospace font for clarity.
-
-Editorial assistance provided by Claude (Anthropic). The author reviewed and approved all content.
-
----
-
-**Online Edition**
-A free online version of this book is available at:
-https://michael-borck.github.io/converse-python-partner-ai
-
----
-
-michael@borck.me
+**Companion website:** [https://michael-borck.github.io/converse-python-partner-ai](https://michael-borck.github.io/converse-python-partner-ai)\
+**Source:** [https://github.com/michael-borck/converse-python-partner-ai](https://github.com/michael-borck/converse-python-partner-ai)
 
 ::: {.content-visible when-format="pdf"}
 
-\newpage
+\vspace*{\fill}
 
 :::

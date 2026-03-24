@@ -1,43 +1,45 @@
 # Preface {.unnumbered}
 
-Welcome to "Converse Python, Partner AI: The Python Edition." This book explores a new paradigm for software development in the age of AI assistants.
+## Why This Book Exists
 
-Programming with AI isn't just about getting code written faster. It's about thinking differently about the development process itself. By mastering intentional prompting techniques, you'll be able to:
+Most developers use AI to get code written faster. They prompt, they paste, they ship. That approach produces code, but it skips the thinking that makes a developer good at their job.
 
-- Direct AI tools with precision and purpose
-- Maintain control over code quality and architecture
-- Deepen your understanding of programming concepts
-- Solve complex problems more effectively
+Programming with AI is not just about speed. It is about thinking differently about the development process itself. The developers who get the most from AI tools are not the ones who delegate the most. They are the ones who stay in the conversation: directing, questioning, understanding, and making the architectural decisions that the model cannot make for them.
 
-Let's begin this journey together, exploring how human intellect and artificial intelligence can combine to create a programming partnership greater than the sum of its parts.
-
-If you are feeling uncertain about AI coding tools, you are not alone. Many developers experience a quiet anxiety: that everyone else has figured this out already, that they are falling behind, that their skills are becoming obsolete. That feeling is nearly universal and rarely admitted. You are not behind. The technology is genuinely new, and the developers who appear to have it all figured out are mostly just a few weeks ahead. This book meets you wherever you are.
-
-## Why This Book?
-
-The rapid integration of AI into software development workflows has fundamentally changed how we write code. Yet most programming education still focuses either on traditional coding techniques or on prompt engineering for AI tools, with little guidance on how to effectively combine human expertise with AI capabilities.
-
-This book aims to bridge that gap by presenting a structured methodology for "intentional prompting" - an approach that leverages AI tools while ensuring the human developer remains the architect and decision-maker in the development process.
+This book teaches a structured methodology for that conversation. It calls the approach *intentional prompting* — using AI tools with precision and purpose while ensuring you remain the architect and decision-maker throughout.
 
 ## Who This Book Is For
-
-This book is designed for:
 
 - Software developers looking to integrate AI tools effectively into their workflow
 - Educators teaching programming in an AI-assisted world
 - Students learning to code alongside AI assistants
 - Tech leaders developing best practices for AI-augmented development teams
 
-You don't need to be an expert programmer to benefit from this book, but basic familiarity with programming concepts will help you get the most out of the examples and exercises.
+You do not need to be an expert programmer. Basic familiarity with programming concepts will help you get the most from the examples, but the methodology applies at every level.
 
-## How This Book Is organised
+## What This Book Is Not
 
-The book is divided into four parts:
+This is not a guide to specific AI tools. It does not teach you how to use GitHub Copilot, ChatGPT, Claude, or any particular platform. Interfaces change; the methodology here does not.
 
-1. **Foundations**: Core concepts of intentional prompting and the human-AI partnership
-2. **Methodology**: The six-step programming methodology adapted for AI collaboration
-3. **Patterns & Practices**: Effective prompting patterns and practical coding examples
-4. **Advanced Topics**: Scaling to complex projects and future directions
+It is not a prompt cookbook. You will find prompts throughout, but they are starting points for conversation, not finished products. If you are looking for a library of copy-paste prompts that write your code for you, this is the wrong book.
+
+It is not a book about replacing developers with AI. It argues the opposite: that AI is most powerful when a skilled developer is directing it, and that the skills which make you a good developer — decomposition, abstraction, critical evaluation, architectural judgement — are exactly the skills that make you good at working with AI.
+
+And it is not a book that pretends AI always gets it right. A significant part of the methodology is about recognising when AI output is wrong, understanding why, and knowing how to fix it.
+
+## If You Are Feeling Uncertain
+
+You are not alone. Many developers experience a quiet anxiety: that everyone else has figured this out already, that they are falling behind, that their skills are becoming obsolete. That feeling is nearly universal and rarely admitted. You are not behind. The technology is genuinely new, and the developers who appear to have it all figured out are mostly just a few weeks ahead. This book meets you wherever you are.
+
+## How This Book Is Structured
+
+The book is divided into five parts:
+
+1. **The Philosophy**: Why intentional prompting matters and how it connects to the broader methodology
+2. **Foundations**: Core concepts of the human-AI partnership and the principles behind effective collaboration
+3. **Methodology**: The six-step programming methodology adapted for AI collaboration
+4. **Patterns & Practices**: Effective prompting patterns, debugging, refactoring, and practical case studies
+5. **Advanced Topics**: Scaling to complex projects, teaching and learning contexts, and future directions
 
 Each chapter includes practical examples, exercises, and reflections to help you apply these concepts in your own work.
 
