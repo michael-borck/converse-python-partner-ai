@@ -57,9 +57,15 @@ book:
     - text: Download llm.txt
       icon: robot
       href: llm.txt
+    - text: GitHub
+      icon: github
+      href: https://github.com/michael-borck/converse-python-partner-ai
     - text: DeepWiki
       icon: search
       href: https://deepwiki.com/michael-borck/converse-python-partner-ai
+    - text: All Books
+      icon: collection
+      href: https://books.borck.education
 
 format:
   html:
