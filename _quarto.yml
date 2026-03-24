@@ -4,6 +4,7 @@ project:
 
 book:
   title: "Converse Python, Partner AI: The Python Edition"
+  cover-image: cover.png
   favicon: favicon.svg
   author: "Michael Borck"
   date: "last-modified"
@@ -72,7 +73,6 @@ format:
     theme:
       light: cosmo
       dark: darkly
-    cover-image: images/cover.png
     css: styles.css
     include-after-body: chatbot.html
     code-copy: true
