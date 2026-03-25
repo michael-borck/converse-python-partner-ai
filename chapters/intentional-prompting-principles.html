@@ -302,25 +302,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Converse Python, Partner AI: The Python Edition</a> 
-        <div class="sidebar-tools-main tools-wide">
+        <div class="sidebar-tools-main">
     <a href="https://github.com/michael-borck/converse-python-partner-ai" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <div class="dropdown">
-      <a href="" title="Download" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Download"><i class="bi bi-download"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.pdf">
-              <i class="bi bi-file-pdf pe-1"></i>
-            Download PDF
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="../Converse-Python,-Partner-AI--The-Python-Edition.epub">
-              <i class="bi bi-journal pe-1"></i>
-            Download ePub
-            </a>
-          </li>
-      </ul>
-    </div>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
     </div>
@@ -607,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#putting-principles-into-practice" id="toc-putting-principles-into-practice" class="nav-link" data-scroll-target="#putting-principles-into-practice"><span class="header-section-number">4.9</span> Putting Principles Into Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-principles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-principles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -1043,7 +1026,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-privacy-real-risks-vs-perceived-risks" class="level3" data-number="4.8.4">
 <h3 data-number="4.8.4" class="anchored" data-anchor-id="data-privacy-real-risks-vs-perceived-risks"><span class="header-section-number">4.8.4</span> Data Privacy: Real Risks vs Perceived Risks</h3>
 <p>A common concern among developers and organisations is that code or proprietary logic pasted into AI tools might be extracted by other users. This fear is largely unfounded and worth understanding clearly.</p>
-<p>When you paste code into an AI tool, it is processed and a response is generated. Your code is not stored as a retrievable file inside the model. If your data is used for training at all (enterprise tiers typically exclude it), it becomes a vanishingly small statistical signal distributed across billions of parameters. Reconstructing your specific code from those parameters is not a realistic attack. Jailbreaking an LLM means manipulating its behaviour, not accessing a database of other users’ sessions.</p>
+<p>When you paste code into an AI tool, it is processed and a response is generated. Your code is not stored as a retrievable file inside the model. If your data is used for training at all (enterprise tiers typically exclude it), it becomes a vanishingly small statistical signal distributed across billions of parameters. Reconstructing your specific code from those parameters is not a realistic attack. Jailbreaking an LLM means manipulating its behaviour, not accessing a database of other users’ sessions. And remember: LLMs interpolate, they do not retrieve. There is no mechanism by which another user could query the model and get your code back, because the model never stored it as a file in the first place.</p>
 <p>You will also encounter convergent development mistaken for theft. “I was building a feature using Copilot, and then a competitor released something very similar.” Thousands of developers are solving the same problems with the same tools, reading the same documentation, responding to the same market needs. Independent arrival at similar solutions is how software development normally works.</p>
 <p>The risks that are real and worth managing: pasting API keys, credentials, or access tokens into any external tool is an immediate security exposure. Pasting personally identifiable data or data subject to regulation is a genuine compliance issue. And accepting AI-generated code without testing or understanding it is a professional liability, though that is a verification problem, not a data leakage problem.</p>
 <p>The “non-zero risk means do not use it” stance deserves scrutiny. Every development tool involves trade-offs. Git repositories can be compromised. Dependencies can be supply-chain attacked. We manage these risks through practice and policy, not prohibition. Developers and organisations that refuse to engage with AI because of overestimated data risks face a different set of consequences: slower development, skills that stagnate, and a widening gap with peers who learned to use the tools thoughtfully.</p>
