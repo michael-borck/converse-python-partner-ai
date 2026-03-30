@@ -795,32 +795,34 @@ I should consider?</code></pre>
 <section id="step-4-write-pseudocode" class="level4" data-number="5.4.2.4">
 <h4 data-number="5.4.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">5.4.2.4</span> Step 4: Write Pseudocode</h4>
 <p><strong>Human prompt:</strong></p>
-<pre><code>Based on my manual approach, let me write pseudocode for finding the longest palindromic substring:
-</code></pre>
-<p>function longestPalindromicSubstring(string s): if s is empty, return “”</p>
-<pre><code>start = 0  // Start index of longest palindrome
-maxLength = 1  // Length of longest palindrome
+<pre><code>Based on my manual approach, let me write
+pseudocode for finding the longest palindromic
+substring:
 
-// Helper function to expand around center
-function expandAroundCenter(left, right):
-    while left &gt;= 0 and right &lt; length of s and s[left] equals s[right]:
-        if (right - left + 1) &gt; maxLength:
-            maxLength = right - left + 1
-            start = left
-        left = left - 1
-        right = right + 1
+function longestPalindromicSubstring(string s):
+    if s is empty, return ""
 
-// Check each position as potential palindrome center
-for i from 0 to length of s - 1:
-    // Odd length palindromes
-    expandAroundCenter(i, i)
-    
-    // Even length palindromes
-    expandAroundCenter(i, i + 1)
+    start = 0
+    maxLength = 1
 
-return substring of s from start to start + maxLength</code></pre>
-<pre><code>
-Does this pseudocode correctly implement the approach we discussed?</code></pre>
+    function expandAroundCenter(left, right):
+        while left &gt;= 0 and right &lt; length of s
+              and s[left] equals s[right]:
+            if (right - left + 1) &gt; maxLength:
+                maxLength = right - left + 1
+                start = left
+            left = left - 1
+            right = right + 1
+
+    for i from 0 to length of s - 1:
+        expandAroundCenter(i, i)
+        expandAroundCenter(i, i + 1)
+
+    return substring of s from start
+           to start + maxLength
+
+Does this pseudocode correctly implement the
+approach we discussed?</code></pre>
 <p><strong>AI response:</strong> &gt; Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers. &gt; &gt; There’s just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you’re considering the current palindrome (not a future one). So you should check if (right - left + 1) &gt; maxLength before expanding further. &gt; &gt; Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!</p>
 </section>
 <section id="step-5-convert-to-code" class="level4" data-number="5.4.2.5">

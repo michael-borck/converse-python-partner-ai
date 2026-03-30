@@ -1154,30 +1154,6 @@ AI response:
 
 Human prompt:
 
-function longestPalindromicSubstring(string s):
-    if s is empty, return ""
-    
-    start = 0  // Start index of longest palindrome
-    maxLength = 1  // Length of longest palindrome
-    
-    // Helper function to expand around center
-    function expandAroundCenter(left, right):
-        while left >= 0 and right  maxLength:
-                maxLength = right - left + 1
-                start = left
-            left = left - 1
-            right = right + 1
-    
-    // Check each position as potential palindrome center
-    for i from 0 to length of s - 1:
-        // Odd length palindromes
-        expandAroundCenter(i, i)
-        
-        // Even length palindromes
-        expandAroundCenter(i, i + 1)
-    
-    return substring of s from start to start + maxLength
-
 AI response:
 > Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
 > 
