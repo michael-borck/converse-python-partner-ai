@@ -5,7 +5,8 @@ project:
     - tools/**
 
 book:
-  title: "Converse Python, Partner AI: The Python Edition"
+  title: "Converse Python, Partner AI"
+  subtitle: "The Intentional Prompting Methodology"
   cover-image: cover.png
   favicon: favicon.svg
   author: "Michael Borck"
