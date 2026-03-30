@@ -533,15 +533,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#the-problem" id="toc-the-problem" class="nav-link" data-scroll-target="#the-problem"><span class="header-section-number">14.1.1</span> The Problem</a></li>
   <li><a href="#the-intentional-prompting-approach" id="toc-the-intentional-prompting-approach" class="nav-link" data-scroll-target="#the-intentional-prompting-approach"><span class="header-section-number">14.1.2</span> The Intentional Prompting Approach</a></li>
-  <li><a href="#before-and-after-example-improving-a-key-function" id="toc-before-and-after-example-improving-a-key-function" class="nav-link" data-scroll-target="#before-and-after-example-improving-a-key-function"><span class="header-section-number">14.1.3</span> Before and After Example: Improving a Key Function</a></li>
-  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned"><span class="header-section-number">14.1.4</span> Lessons Learned</a></li>
   </ul></li>
-  <li><a href="#case-study-3-debugging-a-complex-bug" id="toc-case-study-3-debugging-a-complex-bug" class="nav-link" data-scroll-target="#case-study-3-debugging-a-complex-bug"><span class="header-section-number">14.2</span> Case Study 3: Debugging a Complex Bug</a>
+  <li><a href="#add-a-maximum-combination-size-parameter" id="toc-add-a-maximum-combination-size-parameter" class="nav-link" data-scroll-target="#add-a-maximum-combination-size-parameter"><span class="header-section-number">15</span> Add a maximum combination size parameter</a>
   <ul class="collapse">
-  <li><a href="#the-problem-1" id="toc-the-problem-1" class="nav-link" data-scroll-target="#the-problem-1"><span class="header-section-number">14.2.1</span> The Problem</a></li>
-  <li><a href="#the-intentional-prompting-approach-1" id="toc-the-intentional-prompting-approach-1" class="nav-link" data-scroll-target="#the-intentional-prompting-approach-1"><span class="header-section-number">14.2.2</span> The Intentional Prompting Approach</a></li>
+  <li><a href="#before-and-after-example-improving-a-key-function" id="toc-before-and-after-example-improving-a-key-function" class="nav-link" data-scroll-target="#before-and-after-example-improving-a-key-function"><span class="header-section-number">15.0.1</span> Before and After Example: Improving a Key Function</a></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned"><span class="header-section-number">15.0.2</span> Lessons Learned</a></li>
+  <li><a href="#case-study-3-debugging-a-complex-bug" id="toc-case-study-3-debugging-a-complex-bug" class="nav-link" data-scroll-target="#case-study-3-debugging-a-complex-bug"><span class="header-section-number">15.1</span> Case Study 3: Debugging a Complex Bug</a>
+  <ul class="collapse">
+  <li><a href="#the-problem-1" id="toc-the-problem-1" class="nav-link" data-scroll-target="#the-problem-1"><span class="header-section-number">15.1.1</span> The Problem</a></li>
+  <li><a href="#the-intentional-prompting-approach-1" id="toc-the-intentional-prompting-approach-1" class="nav-link" data-scroll-target="#the-intentional-prompting-approach-1"><span class="header-section-number">15.1.2</span> The Intentional Prompting Approach</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">14.3</span> Key Takeaways</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">15.2</span> Key Takeaways</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -610,7 +613,22 @@ We need to:
 4. Create visualizations of the results
 
 Is this understanding correct, and are there any important aspects I've missed?</code></pre>
-<p><strong>AI response:</strong> &gt; Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important: &gt; &gt; 1. <strong>Data volume handling</strong>: With millions of rows, you’ll need efficient processing techniques that can handle large datasets. This might involve streaming processing, chunking the data, or using distributed computing frameworks. &gt; &gt; 2. <strong>Performance considerations</strong>: Some operations like finding product combinations might be computationally expensive. You might need optimisation strategies. &gt; &gt; 3. <strong>Data privacy</strong>: Transaction data may contain sensitive information. You might need to anonymize or handle the data according to relevant privacy regulations. &gt; &gt; 4. <strong>Output format</strong>: It’s worth considering what format the final results should be in (static reports, interactive dashboards, raw data for further analysis, etc.). &gt; &gt; 5. <strong>Repeatability</strong>: Will this be a one-time analysis or something that needs to be run regularly? If it’s the latter, the pipeline should be designed for automation and reproducibility. &gt; &gt; 6. <strong>Data quality assessment</strong>: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results. &gt; &gt; With these considerations in mind, your restatement effectively captures the core of the problem.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important:
+
+1. **Data volume handling**: With millions of rows, you'll need efficient processing techniques that can handle large datasets. This might involve streaming processing, chunking the data, or using distributed computing frameworks.
+
+2. **Performance considerations**: Some operations like finding product combinations might be computationally expensive. You might need optimisation strategies.
+
+3. **Data privacy**: Transaction data may contain sensitive information. You might need to anonymize or handle the data according to relevant privacy regulations.
+
+4. **Output format**: It's worth considering what format the final results should be in (static reports, interactive dashboards, raw data for further analysis, etc.).
+
+5. **Repeatability**: Will this be a one-time analysis or something that needs to be run regularly? If it's the latter, the pipeline should be designed for automation and reproducibility.
+
+6. **Data quality assessment**: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results.
+
+With these considerations in mind, your restatement effectively captures the core of the problem.</code></pre>
 </section>
 <section id="step-2-identify-input-and-output" class="level4" data-number="14.1.2.2">
 <h4 data-number="14.1.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output"><span class="header-section-number">14.1.2.2</span> Step 2: Identify Input and Output</h4>
@@ -637,7 +655,33 @@ OUTPUTS:
    * Heatmap of purchase patterns by day of week and hour
 
 Do these specifications adequately cover what's needed for the pipeline?</code></pre>
-<p><strong>AI response:</strong> &gt; Your input and output specifications provide a clear framework for the pipeline. They’re comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider: &gt; &gt; <strong>For inputs:</strong> &gt; &gt; 1. <strong>File format details</strong>: You might want to specify if there are any header rows, quoting patterns, or delimiter specifications for the CSV. &gt; &gt; 2. <strong>Expected data sizes</strong>: Approximate size of the file (GB) and typical row count can help plan for resource requirements. &gt; &gt; 3. <strong>Data quality expectations</strong>: Are there known issues with the data? (e.g., are missing values expected in certain columns, are there known inconsistencies in formatting) &gt; &gt; <strong>For outputs:</strong> &gt; &gt; 1. <strong>Definition of “product combinations”</strong>: Clarify whether this means products purchased together in a single transaction, or products frequently purchased by the same customer across different transactions. &gt; &gt; 2. <strong>Granularity of time analysis</strong>: You specified monthly trends, but you might also want daily or weekly analysis depending on the business needs. &gt; &gt; 3. <strong>Additional metrics</strong>: Consider adding: &gt; - Average basket size (number of items and monetary value) &gt; - Payment method distribution &gt; - Store location performance comparison &gt; &gt; 4. <strong>Output file specifications</strong>: For the CSV outputs, specify whether headers should be included and what the column structure should be. &gt; &gt; 5. <strong>Visualisation formats</strong>: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.) &gt; &gt; Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Your input and output specifications provide a clear framework for the pipeline. They're comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider:
+
+**For inputs:**
+
+1. **File format details**: You might want to specify if there are any header rows, quoting patterns, or delimiter specifications for the CSV.
+
+2. **Expected data sizes**: Approximate size of the file (GB) and typical row count can help plan for resource requirements.
+
+3. **Data quality expectations**: Are there known issues with the data? (e.g., are missing values expected in certain columns, are there known inconsistencies in formatting)
+
+**For outputs:**
+
+1. **Definition of "product combinations"**: Clarify whether this means products purchased together in a single transaction, or products frequently purchased by the same customer across different transactions.
+
+2. **Granularity of time analysis**: You specified monthly trends, but you might also want daily or weekly analysis depending on the business needs.
+
+3. **Additional metrics**: Consider adding:
+   - Average basket size (number of items and monetary value)
+   - Payment method distribution
+   - Store location performance comparison
+
+4. **Output file specifications**: For the CSV outputs, specify whether headers should be included and what the column structure should be.
+
+5. **Visualisation formats**: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.)
+
+Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.</code></pre>
 </section>
 <section id="step-3-work-by-hand" class="level4" data-number="14.1.2.3">
 <h4 data-number="14.1.2.3" class="anchored" data-anchor-id="step-3-work-by-hand"><span class="header-section-number">14.1.2.3</span> Step 3: Work by Hand</h4>
@@ -668,7 +712,27 @@ From this manual process, I can see that we need to:
 4. Sort by frequency to find the most common combinations
 
 This approach works for pairs, but for larger combinations, we might need association rule mining algorithms like Apriori. Does this manual approach seem correct, and are there any important considerations I'm missing?</code></pre>
-<p><strong>AI response:</strong> &gt; Your manual approach for finding product combinations is sound! You’ve correctly identified the key steps for analysing product pairs. Here are some important considerations and extensions: &gt; &gt; <strong>Validations and extensions:</strong> &gt; &gt; 1. <strong>Multiple levels of combinations</strong>: As you noted, beyond pairs, you might want to find triplets or larger combinations. Apriori or FP-Growth algorithms would indeed be appropriate for this. &gt; &gt; 2. <strong>Association metrics</strong>: Beyond just frequency count, consider calculating: &gt; - Support (frequency of the combination relative to total transactions) &gt; - Confidence (likelihood of Y when X is purchased) &gt; - Lift (how much more likely Y is purchased when X is purchased, compared to normal) &gt; &gt; 3. <strong>Performance for large datasets</strong>: The naive approach of generating all combinations can be computationally expensive for transactions with many items. For the full dataset: &gt; - Consider using optimised libraries like MLxtend or efficient implementations of Apriori &gt; - You might need to set a minimum support threshold to filter out rare combinations early &gt; &gt; 4. <strong>Handling duplicates</strong>: If a customer buys multiple items in the same category in one transaction (e.g., two electronics items), your current approach correctly treats “electronics” as appearing once in that transaction. &gt; &gt; 5. <strong>Time-based analysis</strong>: You might want to see if popular combinations change over time (seasonal patterns, etc.) &gt; &gt; Your manual process demonstrates a good understanding of the approach. For implementation at scale, you’ll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Your manual approach for finding product combinations is sound! You've correctly identified the key steps for analysing product pairs. Here are some important considerations and extensions:
+
+**Validations and extensions:**
+
+1. **Multiple levels of combinations**: As you noted, beyond pairs, you might want to find triplets or larger combinations. Apriori or FP-Growth algorithms would indeed be appropriate for this.
+
+2. **Association metrics**: Beyond just frequency count, consider calculating:
+   - Support (frequency of the combination relative to total transactions)
+   - Confidence (likelihood of Y when X is purchased)
+   - Lift (how much more likely Y is purchased when X is purchased, compared to normal)
+
+3. **Performance for large datasets**: The naive approach of generating all combinations can be computationally expensive for transactions with many items. For the full dataset:
+   - Consider using optimised libraries like MLxtend or efficient implementations of Apriori
+   - You might need to set a minimum support threshold to filter out rare combinations early
+
+4. **Handling duplicates**: If a customer buys multiple items in the same category in one transaction (e.g., two electronics items), your current approach correctly treats "electronics" as appearing once in that transaction.
+
+5. **Time-based analysis**: You might want to see if popular combinations change over time (seasonal patterns, etc.)
+
+Your manual process demonstrates a good understanding of the approach. For implementation at scale, you'll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.</code></pre>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="14.1.2.4">
 <h4 data-number="14.1.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">14.1.2.4</span> Step 4: Write Pseudocode</h4>
@@ -743,10 +807,51 @@ SAVE_PNG(line_chart, output_dir + "/monthly_trends.png")
 SAVE_PNG(heatmap, output_dir + "/hourly_patterns.png")</code></pre>
 <pre><code>
 Does this pseudocode cover all the necessary steps for our data analysis pipeline? Are there any inefficiencies or improvements you would suggest?</code></pre>
-<p><strong>AI response:</strong> &gt; Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations: &gt; &gt; <strong>Efficiency improvements:</strong> &gt; &gt; 1. <strong>Chunked processing</strong>: For millions of rows, you might want to process the data in chunks to avoid memory issues: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     initialize empty dataframe for cleaned_data &gt;     FOR each chunk IN READ_CSV_IN_CHUNKS(input_file, chunk_size=100000): &gt;         # Apply cleaning operations to chunk &gt;         cleaned_chunk = CLEAN_CHUNK(chunk) &gt;         APPEND(cleaned_data, cleaned_chunk) &gt;     RETURN cleaned_data &gt;</code> &gt; &gt; 2. <strong>optimised product combination generation</strong>: The current approach might be inefficient for transactions with many products: &gt; <code>&gt; # Add a maximum combination size parameter &gt; FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size=2): &gt;     # Use an efficient algorithm like Apriori instead of manual combination generation &gt;     frequent_itemsets = APRIORI_ALGORITHM( &gt;         data.product_categories,  &gt;         min_support=min_support, &gt;         max_length=max_combination_size &gt;     ) &gt;     RETURN frequent_itemsets &gt;</code> &gt; &gt; <strong>Additional considerations:</strong> &gt; &gt; 1. <strong>Data validation</strong>: Add checks for data quality: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     # ...existing code... &gt;      &gt;     # Add data validation &gt;     LOG_STATS(COUNT_MISSING_VALUES(data)) &gt;     LOG_STATS(COUNT_UNIQUE_VALUES(data.product_categories)) &gt;     VALIDATE_NUMERIC_RANGE(data.amount, min=0) &gt;      &gt;     # ...rest of function... &gt;</code> &gt; &gt; 2. <strong>Error handling</strong>: Add error handling for robust processing: &gt; <code>&gt; FUNCTION main(input_file, output_dir): &gt;     TRY: &gt;         # ...existing code... &gt;     CATCH FileNotFoundError: &gt;         LOG_ERROR("Input file not found") &gt;     CATCH MemoryError: &gt;         LOG_ERROR("Insufficient memory, try reducing chunk size") &gt;     FINALLY: &gt;         CLEAN_UP_TEMP_FILES() &gt;</code> &gt; &gt; 3. <strong>Parallelization</strong>: For large datasets, consider parallel processing: &gt; <code>&gt; FUNCTION find_product_combinations(data, min_support=0.001): &gt;     # Split data into partitions &gt;     partitions = SPLIT_DATA(data, num_partitions=NUM_CORES) &gt;      &gt;     # Process partitions in parallel &gt;     partial_results = PARALLEL_MAP(PROCESS_PARTITION, partitions) &gt;      &gt;     # Combine results &gt;     combined_results = COMBINE_PARTIAL_RESULTS(partial_results) &gt;     RETURN combined_results &gt;</code> &gt; &gt; 4. <strong>Progress tracking</strong>: For long-running operations, add progress tracking: &gt; <code>&gt; FUNCTION clean_data(input_file): &gt;     total_chunks = ESTIMATE_TOTAL_CHUNKS(input_file, chunk_size) &gt;     FOR i, chunk IN ENUMERATE(READ_CSV_IN_CHUNKS(input_file)): &gt;         LOG_PROGRESS(f"Processing chunk {i}/{total_chunks}") &gt;         # ...process chunk... &gt;</code> &gt; &gt; These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations:
+
+**Efficiency improvements:**
+
+1. **Chunked processing**: For millions of rows, you might want to process the data in chunks to avoid memory issues:</code></pre>
+<p>FUNCTION clean_data(input_file): initialize empty dataframe for cleaned_data FOR each chunk IN READ_CSV_IN_CHUNKS(input_file, chunk_size=100000): # Apply cleaning operations to chunk cleaned_chunk = CLEAN_CHUNK(chunk) APPEND(cleaned_data, cleaned_chunk) RETURN cleaned_data</p>
+<pre><code>
+2. **optimised product combination generation**: The current approach might be inefficient for transactions with many products:</code></pre>
 </section>
-<section id="step-5-convert-to-code" class="level4" data-number="14.1.2.5">
-<h4 data-number="14.1.2.5" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">14.1.2.5</span> Step 5: Convert to Code</h4>
+</section>
+</section>
+<section id="add-a-maximum-combination-size-parameter" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Add a maximum combination size parameter</h1>
+<p>FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size=2): # Use an efficient algorithm like Apriori instead of manual combination generation frequent_itemsets = APRIORI_ALGORITHM( data.product_categories, min_support=min_support, max_length=max_combination_size ) RETURN frequent_itemsets</p>
+<pre><code>
+**Additional considerations:**
+
+1. **Data validation**: Add checks for data quality:</code></pre>
+<p>FUNCTION clean_data(input_file): # …existing code…</p>
+<pre><code># Add data validation
+LOG_STATS(COUNT_MISSING_VALUES(data))
+LOG_STATS(COUNT_UNIQUE_VALUES(data.product_categories))
+VALIDATE_NUMERIC_RANGE(data.amount, min=0)
+
+# ...rest of function...</code></pre>
+<pre><code>
+2. **Error handling**: Add error handling for robust processing:</code></pre>
+<p>FUNCTION main(input_file, output_dir): TRY: # …existing code… CATCH FileNotFoundError: LOG_ERROR(“Input file not found”) CATCH MemoryError: LOG_ERROR(“Insufficient memory, try reducing chunk size”) FINALLY: CLEAN_UP_TEMP_FILES()</p>
+<pre><code>
+3. **Parallelization**: For large datasets, consider parallel processing:</code></pre>
+<p>FUNCTION find_product_combinations(data, min_support=0.001): # Split data into partitions partitions = SPLIT_DATA(data, num_partitions=NUM_CORES)</p>
+<pre><code># Process partitions in parallel
+partial_results = PARALLEL_MAP(PROCESS_PARTITION, partitions)
+
+# Combine results
+combined_results = COMBINE_PARTIAL_RESULTS(partial_results)
+RETURN combined_results</code></pre>
+<pre><code>
+4. **Progress tracking**: For long-running operations, add progress tracking:</code></pre>
+<p>FUNCTION clean_data(input_file): total_chunks = ESTIMATE_TOTAL_CHUNKS(input_file, chunk_size) FOR i, chunk IN ENUMERATE(READ_CSV_IN_CHUNKS(input_file)): LOG_PROGRESS(f”Processing chunk {i}/{total_chunks}“) # …process chunk…</p>
+<pre><code>
+These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</code></pre>
+<section id="step-5-convert-to-code" class="level4" data-number="15.0.0.1">
+<h4 data-number="15.0.0.1" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">15.0.0.1</span> Step 5: Convert to Code</h4>
 <p>Now let’s implement the solution in Python, focusing on the product combination analysis.</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>Let's convert the pseudocode for finding product combinations into Python code using pandas and mlxtend for the Apriori algorithm:
@@ -837,282 +942,281 @@ def clean_data(file_path, chunk_size=100000):
     return cleaned_data</code></pre>
 <p>Is this implementation correct and efficient? Are there any issues or optimisations I should consider?</p>
 <pre><code>
-**AI response:**
-&gt; Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimisations:
-&gt; 
-&gt; **Strengths:**
-&gt; 
-&gt; 1. Using `chunksize` for reading large CSV files is excellent
-&gt; 2. The `mlxtend` library is a good choice for implementing Apriori efficiently
-&gt; 3. The code is well-structured with clear documentation
-&gt; 4. You've added appropriate data cleaning steps
-&gt; 
-&gt; **Potential improvements:**
-&gt; 
-&gt; 1. **Memory optimisation for very large datasets:**
-&gt; 
-&gt; ```python
-&gt; def find_product_combinations(data, min_support=0.001, max_len=3):
-&gt;     # For extremely large datasets, we might want to sample first
-&gt;     if len(data) &gt; 10_000_000:  # Arbitrary threshold
-&gt;         data = data.sample(n=10_000_000, random_state=42)
-&gt;         print(f"Data sampled to {len(data)} rows due to size")
-&gt;     
-&gt;     # Rest of your function...
-&gt; ```
-&gt; 
-&gt; 2. **Error handling and logging:**
-&gt; 
-&gt; ```python
-&gt; def clean_data(file_path, chunk_size=100000):
-&gt;     chunks = []
-&gt;     total_rows = 0
-&gt;     invalid_rows = 0
-&gt;     
-&gt;     try:
-&gt;         for i, chunk in enumerate(pd.read_csv(file_path, chunksize=chunk_size)):
-&gt;             initial_rows = len(chunk)
-&gt;             total_rows += initial_rows
-&gt;             
-&gt;             # Your cleaning code...
-&gt;             
-&gt;             invalid_rows += initial_rows - len(chunk)
-&gt;             chunks.append(chunk)
-&gt;             
-&gt;             if i % 10 == 0:
-&gt;                 print(f"Processed {i+1} chunks ({total_rows} rows)...")
-&gt;         
-&gt;         print(f"Cleaning complete. Processed {total_rows} rows, removed {invalid_rows} invalid rows.")
-&gt;     except Exception as e:
-&gt;         print(f"Error during data cleaning: {str(e)}")
-&gt;         raise
-&gt; ```
-&gt; 
-&gt; 3. **Performance optimisation for Apriori on sparse data:**
-&gt; 
-&gt; ```python
-&gt; # If your dataset has many distinct products but each transaction has few,
-&gt; # use sparse representation for better performance
-&gt; from scipy.sparse import csr_matrix
-&gt; 
-&gt; te_ary = te.fit_transform(transactions)
-&gt; sparse_te_ary = csr_matrix(te_ary)
-&gt; 
-&gt; # Then use the sparse matrix with apriori if mlxtend supports it
-&gt; # Otherwise, for very sparse data, consider alternative implementations
-&gt; ```
-&gt; 
-&gt; 4. **Data validation before processing:**
-&gt; 
-&gt; ```python
-&gt; def find_product_combinations(data, min_support=0.001, max_len=3):
-&gt;     # Validate input data
-&gt;     if 'product_categories' not in data.columns:
-&gt;         raise ValueError("DataFrame must contain 'product_categories' column")
-&gt;     
-&gt;     # Check for empty values post-cleaning
-&gt;     empty_cats = data['product_categories'].isin(['', 'unknown']).sum()
-&gt;     if empty_cats &gt; 0:
-&gt;         print(f"Warning: {empty_cats} rows have empty or unknown product categories")
-&gt;     
-&gt;     # Rest of your function...
-&gt; ```
-&gt; 
-&gt; 5. **Consider adding time-based analysis:**
-&gt; 
-&gt; ```python
-&gt; def find_seasonal_combinations(data, time_period='month'):
-&gt;     """Find how product combinations vary over time."""
-&gt;     # Add time period column
-&gt;     if time_period == 'month':
-&gt;         data['period'] = data['timestamp'].dt.to_period('M')
-&gt;     elif time_period == 'quarter':
-&gt;         data['period'] = data['timestamp'].dt.to_period('Q')
-&gt;     
-&gt;     periods = data['period'].unique()
-&gt;     results = {}
-&gt;     
-&gt;     for period in periods:
-&gt;         period_data = data[data['period'] == period]
-&gt;         period_combos = find_product_combinations(period_data)
-&gt;         results[period] = period_combos.head(10)  # Top 10 for each period
-&gt;     
-&gt;     return results
-&gt; ```
-&gt; 
-&gt; Overall, your implementation is well-designed for the task at hand. These suggestions are refinements that might be helpful in specific scenarios, but your core approach is sound!
-
+**AI response:**</code></pre>
+<p>Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimisations:</p>
+<p><strong>Strengths:</strong></p>
+<ol type="1">
+<li>Using <code>chunksize</code> for reading large CSV files is excellent</li>
+<li>The <code>mlxtend</code> library is a good choice for implementing Apriori efficiently</li>
+<li>The code is well-structured with clear documentation</li>
+<li>You’ve added appropriate data cleaning steps</li>
+</ol>
+<p><strong>Potential improvements:</strong></p>
+<ol type="1">
+<li><strong>Memory optimisation for very large datasets:</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_product_combinations(data, min_support<span class="op">=</span><span class="fl">0.001</span>, max_len<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># For extremely large datasets, we might want to sample first</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(data) <span class="op">&gt;</span> <span class="dv">10_000_000</span>:  <span class="co"># Arbitrary threshold</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        data <span class="op">=</span> data.sample(n<span class="op">=</span><span class="dv">10_000_000</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Data sampled to </span><span class="sc">{</span><span class="bu">len</span>(data)<span class="sc">}</span><span class="ss"> rows due to size"</span>)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rest of your function...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li><strong>Error handling and logging:</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_data(file_path, chunk_size<span class="op">=</span><span class="dv">100000</span>):</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    chunks <span class="op">=</span> []</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    total_rows <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>    invalid_rows <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, chunk <span class="kw">in</span> <span class="bu">enumerate</span>(pd.read_csv(file_path, chunksize<span class="op">=</span>chunk_size)):</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>            initial_rows <span class="op">=</span> <span class="bu">len</span>(chunk)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>            total_rows <span class="op">+=</span> initial_rows</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Your cleaning code...</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>            invalid_rows <span class="op">+=</span> initial_rows <span class="op">-</span> <span class="bu">len</span>(chunk)</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>            chunks.append(chunk)</span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="op">%</span> <span class="dv">10</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="ss">f"Processed </span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss"> chunks (</span><span class="sc">{</span>total_rows<span class="sc">}</span><span class="ss"> rows)..."</span>)</span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Cleaning complete. Processed </span><span class="sc">{</span>total_rows<span class="sc">}</span><span class="ss"> rows, removed </span><span class="sc">{</span>invalid_rows<span class="sc">}</span><span class="ss"> invalid rows."</span>)</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Error during data cleaning: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="3" type="1">
+<li><strong>Performance optimisation for Apriori on sparse data:</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If your dataset has many distinct products but each transaction has few,</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># use sparse representation for better performance</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.sparse <span class="im">import</span> csr_matrix</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>te_ary <span class="op">=</span> te.fit_transform(transactions)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>sparse_te_ary <span class="op">=</span> csr_matrix(te_ary)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Then use the sparse matrix with apriori if mlxtend supports it</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Otherwise, for very sparse data, consider alternative implementations</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="4" type="1">
+<li><strong>Data validation before processing:</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_product_combinations(data, min_support<span class="op">=</span><span class="fl">0.001</span>, max_len<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Validate input data</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'product_categories'</span> <span class="kw">not</span> <span class="kw">in</span> data.columns:</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"DataFrame must contain 'product_categories' column"</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check for empty values post-cleaning</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>    empty_cats <span class="op">=</span> data[<span class="st">'product_categories'</span>].isin([<span class="st">''</span>, <span class="st">'unknown'</span>]).<span class="bu">sum</span>()</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> empty_cats <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Warning: </span><span class="sc">{</span>empty_cats<span class="sc">}</span><span class="ss"> rows have empty or unknown product categories"</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Rest of your function...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li><strong>Consider adding time-based analysis:</strong></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_seasonal_combinations(data, time_period<span class="op">=</span><span class="st">'month'</span>):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Find how product combinations vary over time."""</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Add time period column</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> time_period <span class="op">==</span> <span class="st">'month'</span>:</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>        data[<span class="st">'period'</span>] <span class="op">=</span> data[<span class="st">'timestamp'</span>].dt.to_period(<span class="st">'M'</span>)</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> time_period <span class="op">==</span> <span class="st">'quarter'</span>:</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>        data[<span class="st">'period'</span>] <span class="op">=</span> data[<span class="st">'timestamp'</span>].dt.to_period(<span class="st">'Q'</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    periods <span class="op">=</span> data[<span class="st">'period'</span>].unique()</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> {}</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> period <span class="kw">in</span> periods:</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>        period_data <span class="op">=</span> data[data[<span class="st">'period'</span>] <span class="op">==</span> period]</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>        period_combos <span class="op">=</span> find_product_combinations(period_data)</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>        results[period] <span class="op">=</span> period_combos.head(<span class="dv">10</span>)  <span class="co"># Top 10 for each period</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Overall, your implementation is well-designed for the task at hand. These suggestions are refinements that might be helpful in specific scenarios, but your core approach is sound!</p>
+<pre><code>
 #### Step 6: Test with Data
 
 For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset.
 
 **Human prompt:**</code></pre>
 <p>Let’s test our implementation with a small sample dataset first:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>n_samples <span class="op">=</span> <span class="dv">1000</span></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate transaction IDs</span></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>transaction_ids <span class="op">=</span> [<span class="ss">f'T</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">:04d}</span><span class="ss">'</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate customer IDs (100 unique customers)</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>customer_ids <span class="op">=</span> [<span class="ss">f'C</span><span class="sc">{</span>np<span class="sc">.</span>random<span class="sc">.</span>randint(<span class="dv">1</span>, <span class="dv">101</span>)<span class="sc">:03d}</span><span class="ss">'</span> <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate timestamps (last 90 days)</span></span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>base_date <span class="op">=</span> datetime.now() <span class="op">-</span> timedelta(days<span class="op">=</span><span class="dv">90</span>)</span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>timestamps <span class="op">=</span> [base_date <span class="op">+</span> timedelta(days<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">90</span>), </span>
-<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>                                   hours<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">24</span>),</span>
-<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>                                   minutes<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">60</span>))</span>
-<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
-<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Product categories</span></span>
-<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'electronics'</span>, <span class="st">'accessories'</span>, <span class="st">'clothing'</span>, <span class="st">'shoes'</span>, <span class="st">'books'</span>, </span>
-<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>              <span class="st">'groceries'</span>, <span class="st">'dairy'</span>, <span class="st">'produce'</span>, <span class="st">'meat'</span>, <span class="st">'bakery'</span>, <span class="st">'beverages'</span>,</span>
-<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>              <span class="st">'snacks'</span>, <span class="st">'beauty'</span>, <span class="st">'health'</span>, <span class="st">'kitchen'</span>, <span class="st">'toys'</span>, <span class="st">'sports'</span>,</span>
-<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>              <span class="st">'automotive'</span>, <span class="st">'garden'</span>, <span class="st">'furniture'</span>]</span>
-<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate product categories (1-4 categories per transaction)</span></span>
-<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>product_categories <span class="op">=</span> []</span>
-<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples):</span>
-<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>    n_cats <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">5</span>)</span>
-<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>    cats <span class="op">=</span> np.random.choice(categories, size<span class="op">=</span>n_cats, replace<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>    product_categories.append(<span class="st">','</span>.join(cats))</span>
-<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate amounts</span></span>
-<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>amounts <span class="op">=</span> np.random.uniform(<span class="dv">10</span>, <span class="dv">500</span>, n_samples).<span class="bu">round</span>(<span class="dv">2</span>)</span>
-<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Payment methods</span></span>
-<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>payment_methods <span class="op">=</span> np.random.choice([<span class="st">'credit'</span>, <span class="st">'debit'</span>, <span class="st">'cash'</span>, <span class="st">'mobile'</span>], </span>
-<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>                                   size<span class="op">=</span>n_samples, </span>
-<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>                                   p<span class="op">=</span>[<span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>])</span>
-<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Store locations</span></span>
-<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>store_locations <span class="op">=</span> np.random.choice([<span class="st">'store1'</span>, <span class="st">'store2'</span>, <span class="st">'store3'</span>, <span class="st">'online'</span>], </span>
-<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a>                                  size<span class="op">=</span>n_samples,</span>
-<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>                                  p<span class="op">=</span>[<span class="fl">0.3</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>])</span>
-<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrame</span></span>
-<span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>sample_data <span class="op">=</span> pd.DataFrame({</span>
-<span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transaction_id'</span>: transaction_ids,</span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">'customer_id'</span>: customer_ids,</span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">'timestamp'</span>: timestamps,</span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">'product_categories'</span>: product_categories,</span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amount'</span>: amounts,</span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">'payment_method'</span>: payment_methods,</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">'store_location'</span>: store_locations</span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to CSV</span></span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>sample_data.to_csv(<span class="st">'sample_transactions.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Test our implementation</span></span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Find product combinations</span></span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> find_product_combinations(sample_data, min_support<span class="op">=</span><span class="fl">0.01</span>, max_len<span class="op">=</span><span class="dv">3</span>)</span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Found </span><span class="sc">{</span><span class="bu">len</span>(results)<span class="sc">}</span><span class="ss"> frequent product combinations"</span>)</span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Top 10 product combinations:"</span>)</span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.head(<span class="dv">10</span>))</span>
-<span id="cb14-68"><a href="#cb14-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-69"><a href="#cb14-69" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Check for issues or unexpected results</span></span>
-<span id="cb14-70"><a href="#cb14-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data statistics:"</span>)</span>
-<span id="cb14-71"><a href="#cb14-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total transactions: </span><span class="sc">{</span><span class="bu">len</span>(sample_data)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-72"><a href="#cb14-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Unique product categories: </span><span class="sc">{</span><span class="bu">len</span>(<span class="bu">set</span>(<span class="st">','</span>.join(product_categories).split(<span class="st">','</span>)))<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-73"><a href="#cb14-73" aria-hidden="true" tabindex="-1"></a>unique_combos <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb14-74"><a href="#cb14-74" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cats <span class="kw">in</span> product_categories:</span>
-<span id="cb14-75"><a href="#cb14-75" aria-hidden="true" tabindex="-1"></a>    cat_list <span class="op">=</span> cats.split(<span class="st">','</span>)</span>
-<span id="cb14-76"><a href="#cb14-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cat_list)):</span>
-<span id="cb14-77"><a href="#cb14-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(cat_list)):</span>
-<span id="cb14-78"><a href="#cb14-78" aria-hidden="true" tabindex="-1"></a>            unique_combos.add(<span class="bu">tuple</span>(<span class="bu">sorted</span>([cat_list[i], cat_list[j]])))</span>
-<span id="cb14-79"><a href="#cb14-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Unique product pairs in data: </span><span class="sc">{</span><span class="bu">len</span>(unique_combos)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create sample data</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>n_samples <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate transaction IDs</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>transaction_ids <span class="op">=</span> [<span class="ss">f'T</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">:04d}</span><span class="ss">'</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate customer IDs (100 unique customers)</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>customer_ids <span class="op">=</span> [<span class="ss">f'C</span><span class="sc">{</span>np<span class="sc">.</span>random<span class="sc">.</span>randint(<span class="dv">1</span>, <span class="dv">101</span>)<span class="sc">:03d}</span><span class="ss">'</span> <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate timestamps (last 90 days)</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a>base_date <span class="op">=</span> datetime.now() <span class="op">-</span> timedelta(days<span class="op">=</span><span class="dv">90</span>)</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>timestamps <span class="op">=</span> [base_date <span class="op">+</span> timedelta(days<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">90</span>), </span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>                                   hours<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">24</span>),</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>                                   minutes<span class="op">=</span>np.random.randint(<span class="dv">0</span>, <span class="dv">60</span>))</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>             <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples)]</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Product categories</span></span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>categories <span class="op">=</span> [<span class="st">'electronics'</span>, <span class="st">'accessories'</span>, <span class="st">'clothing'</span>, <span class="st">'shoes'</span>, <span class="st">'books'</span>, </span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>              <span class="st">'groceries'</span>, <span class="st">'dairy'</span>, <span class="st">'produce'</span>, <span class="st">'meat'</span>, <span class="st">'bakery'</span>, <span class="st">'beverages'</span>,</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>              <span class="st">'snacks'</span>, <span class="st">'beauty'</span>, <span class="st">'health'</span>, <span class="st">'kitchen'</span>, <span class="st">'toys'</span>, <span class="st">'sports'</span>,</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>              <span class="st">'automotive'</span>, <span class="st">'garden'</span>, <span class="st">'furniture'</span>]</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate product categories (1-4 categories per transaction)</span></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>product_categories <span class="op">=</span> []</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(n_samples):</span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a>    n_cats <span class="op">=</span> np.random.randint(<span class="dv">1</span>, <span class="dv">5</span>)</span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a>    cats <span class="op">=</span> np.random.choice(categories, size<span class="op">=</span>n_cats, replace<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a>    product_categories.append(<span class="st">','</span>.join(cats))</span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate amounts</span></span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>amounts <span class="op">=</span> np.random.uniform(<span class="dv">10</span>, <span class="dv">500</span>, n_samples).<span class="bu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Payment methods</span></span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>payment_methods <span class="op">=</span> np.random.choice([<span class="st">'credit'</span>, <span class="st">'debit'</span>, <span class="st">'cash'</span>, <span class="st">'mobile'</span>], </span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>                                   size<span class="op">=</span>n_samples, </span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a>                                   p<span class="op">=</span>[<span class="fl">0.4</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.1</span>])</span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a><span class="co"># Store locations</span></span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a>store_locations <span class="op">=</span> np.random.choice([<span class="st">'store1'</span>, <span class="st">'store2'</span>, <span class="st">'store3'</span>, <span class="st">'online'</span>], </span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a>                                  size<span class="op">=</span>n_samples,</span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a>                                  p<span class="op">=</span>[<span class="fl">0.3</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.2</span>])</span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Create DataFrame</span></span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a>sample_data <span class="op">=</span> pd.DataFrame({</span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a>    <span class="st">'transaction_id'</span>: transaction_ids,</span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a>    <span class="st">'customer_id'</span>: customer_ids,</span>
+<span id="cb32-52"><a href="#cb32-52" aria-hidden="true" tabindex="-1"></a>    <span class="st">'timestamp'</span>: timestamps,</span>
+<span id="cb32-53"><a href="#cb32-53" aria-hidden="true" tabindex="-1"></a>    <span class="st">'product_categories'</span>: product_categories,</span>
+<span id="cb32-54"><a href="#cb32-54" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amount'</span>: amounts,</span>
+<span id="cb32-55"><a href="#cb32-55" aria-hidden="true" tabindex="-1"></a>    <span class="st">'payment_method'</span>: payment_methods,</span>
+<span id="cb32-56"><a href="#cb32-56" aria-hidden="true" tabindex="-1"></a>    <span class="st">'store_location'</span>: store_locations</span>
+<span id="cb32-57"><a href="#cb32-57" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb32-58"><a href="#cb32-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-59"><a href="#cb32-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Save to CSV</span></span>
+<span id="cb32-60"><a href="#cb32-60" aria-hidden="true" tabindex="-1"></a>sample_data.to_csv(<span class="st">'sample_transactions.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb32-61"><a href="#cb32-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-62"><a href="#cb32-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Test our implementation</span></span>
+<span id="cb32-63"><a href="#cb32-63" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Find product combinations</span></span>
+<span id="cb32-64"><a href="#cb32-64" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> find_product_combinations(sample_data, min_support<span class="op">=</span><span class="fl">0.01</span>, max_len<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb32-65"><a href="#cb32-65" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Found </span><span class="sc">{</span><span class="bu">len</span>(results)<span class="sc">}</span><span class="ss"> frequent product combinations"</span>)</span>
+<span id="cb32-66"><a href="#cb32-66" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Top 10 product combinations:"</span>)</span>
+<span id="cb32-67"><a href="#cb32-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(results.head(<span class="dv">10</span>))</span>
+<span id="cb32-68"><a href="#cb32-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-69"><a href="#cb32-69" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Check for issues or unexpected results</span></span>
+<span id="cb32-70"><a href="#cb32-70" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Data statistics:"</span>)</span>
+<span id="cb32-71"><a href="#cb32-71" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total transactions: </span><span class="sc">{</span><span class="bu">len</span>(sample_data)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb32-72"><a href="#cb32-72" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Unique product categories: </span><span class="sc">{</span><span class="bu">len</span>(<span class="bu">set</span>(<span class="st">','</span>.join(product_categories).split(<span class="st">','</span>)))<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb32-73"><a href="#cb32-73" aria-hidden="true" tabindex="-1"></a>unique_combos <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb32-74"><a href="#cb32-74" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cats <span class="kw">in</span> product_categories:</span>
+<span id="cb32-75"><a href="#cb32-75" aria-hidden="true" tabindex="-1"></a>    cat_list <span class="op">=</span> cats.split(<span class="st">','</span>)</span>
+<span id="cb32-76"><a href="#cb32-76" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(cat_list)):</span>
+<span id="cb32-77"><a href="#cb32-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(cat_list)):</span>
+<span id="cb32-78"><a href="#cb32-78" aria-hidden="true" tabindex="-1"></a>            unique_combos.add(<span class="bu">tuple</span>(<span class="bu">sorted</span>([cat_list[i], cat_list[j]])))</span>
+<span id="cb32-79"><a href="#cb32-79" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Unique product pairs in data: </span><span class="sc">{</span><span class="bu">len</span>(unique_combos)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>What issues might we encounter when scaling to the full dataset, and how should we address them?</p>
 <pre><code>
-**AI response:**
-&gt; Your test approach with synthetic data is excellent for validating the implementation! Here are the potential issues you might encounter when scaling to the full dataset and strategies to address them:
-&gt; 
-&gt; **Scaling Issues and Solutions:**
-&gt; 
-&gt; 1. **Memory Consumption**
-&gt;    - **Issue**: The TransactionEncoder creates a one-hot encoded matrix which can be extremely memory-intensive for datasets with millions of transactions and many unique products.
-&gt;    - **Solution**: 
-&gt;      - Process in batches based on time periods (e.g., analyse one month at a time)
-&gt;      - Use sampling techniques for initial analysis
-&gt;      - Implement a more memory-efficient version of Apriori or consider alternatives like FP-Growth
-&gt;      - Use sparse matrix representations where possible
-&gt; 
-&gt; 2. **Computation Time**
-&gt;    - **Issue**: Apriori's performance degrades significantly with low support thresholds on large datasets.
-&gt;    - **Solution**:
-&gt;      - Start with higher minimum support values and gradually decrease
-&gt;      - Use parallel processing libraries (e.g., Dask, PySpark)
-&gt;      - Implement an incremental approach that processes data in chunks and merges results
-&gt;      - Consider using GPU-accelerated implementations for very large datasets
-&gt; 
-&gt; 3. **Long Tail of Infrequent Items**
-&gt;    - **Issue**: With millions of transactions, you might get thousands of combinations with low support.
-&gt;    - **Solution**:
-&gt;      - Focus on combinations with higher lift or confidence scores
-&gt;      - Implement filtering for statistically significant associations
-&gt;      - Group similar products into categories for higher-level analysis
-&gt; 
-&gt; 4. **Data Quality at Scale**
-&gt;    - **Issue**: Large datasets often have more varied quality issues that become apparent only at scale.
-&gt;    - **Solution**:
-&gt;      - Implement more robust data cleaning steps
-&gt;      - Add comprehensive logging of anomalies
-&gt;      - Create data quality dashboards to monitor issues
-&gt; 
-&gt; 5. **Time-Based Changes**
-&gt;    - **Issue**: Product associations may change over time, and analysing everything together might obscure patterns.
-&gt;    - **Solution**:
-&gt;      - Implement time-window analysis
-&gt;      - Compare associations across different time periods
-&gt;      - Look for emerging or declining associations
-&gt; 
-&gt; **Implementation Improvements for Scale:**
-&gt; 
-&gt; ```python
-&gt; # For very large datasets, consider this approach:
-&gt; 
-&gt; def analyze_large_dataset(file_path, output_dir):
-&gt;     # 1. First pass: Get data statistics and sample
-&gt;     print("First pass: Collecting statistics...")
-&gt;     stats = collect_data_stats(file_path)
-&gt;     
-&gt;     # 2. Determine optimal processing approach based on stats
-&gt;     if stats['total_rows'] &gt; 10_000_000:
-&gt;         print("Very large dataset detected. Using distributed processing...")
-&gt;         # Initialize Dask or Spark
-&gt;         import dask.dataframe as dd
-&gt;         ddf = dd.read_csv(file_path)
-&gt;         # Process with distributed framework
-&gt;     else:
-&gt;         print("Processing with pandas...")
-&gt;         # Process with your current approach
-&gt;     
-&gt;     # 3. Use progressive sampling for quick insights
-&gt;     sample_sizes = [10000, 100000, 1000000]
-&gt;     for size in sample_sizes:
-&gt;         if size &gt; stats['total_rows']: 
-&gt;             continue
-&gt;         print(f"analysing sample of {size} transactions...")
-&gt;         sample = get_stratified_sample(file_path, size)
-&gt;         # Run analysis on progressively larger samples
-&gt;         results = find_product_combinations(sample)
-&gt;         save_results(results, f"{output_dir}/sample_{size}_results.csv")
-&gt;     
-&gt;     # 4. Full analysis with optimised parameters
-&gt;     print("Running full analysis with optimised parameters...")
-&gt;     # Use parameters learned from sample analysis
-&gt;     full_results = process_in_time_windows(file_path)
-&gt;     
-&gt;     return full_results
-&gt; ```
-&gt; 
-&gt; Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.
-
+**AI response:**</code></pre>
+<p>Your test approach with synthetic data is excellent for validating the implementation! Here are the potential issues you might encounter when scaling to the full dataset and strategies to address them:</p>
+<p><strong>Scaling Issues and Solutions:</strong></p>
+<ol type="1">
+<li><strong>Memory Consumption</strong>
+<ul>
+<li><strong>Issue</strong>: The TransactionEncoder creates a one-hot encoded matrix which can be extremely memory-intensive for datasets with millions of transactions and many unique products.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Process in batches based on time periods (e.g., analyse one month at a time)</li>
+<li>Use sampling techniques for initial analysis</li>
+<li>Implement a more memory-efficient version of Apriori or consider alternatives like FP-Growth</li>
+<li>Use sparse matrix representations where possible</li>
+</ul></li>
+</ul></li>
+<li><strong>Computation Time</strong>
+<ul>
+<li><strong>Issue</strong>: Apriori’s performance degrades significantly with low support thresholds on large datasets.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Start with higher minimum support values and gradually decrease</li>
+<li>Use parallel processing libraries (e.g., Dask, PySpark)</li>
+<li>Implement an incremental approach that processes data in chunks and merges results</li>
+<li>Consider using GPU-accelerated implementations for very large datasets</li>
+</ul></li>
+</ul></li>
+<li><strong>Long Tail of Infrequent Items</strong>
+<ul>
+<li><strong>Issue</strong>: With millions of transactions, you might get thousands of combinations with low support.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Focus on combinations with higher lift or confidence scores</li>
+<li>Implement filtering for statistically significant associations</li>
+<li>Group similar products into categories for higher-level analysis</li>
+</ul></li>
+</ul></li>
+<li><strong>Data Quality at Scale</strong>
+<ul>
+<li><strong>Issue</strong>: Large datasets often have more varied quality issues that become apparent only at scale.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Implement more robust data cleaning steps</li>
+<li>Add comprehensive logging of anomalies</li>
+<li>Create data quality dashboards to monitor issues</li>
+</ul></li>
+</ul></li>
+<li><strong>Time-Based Changes</strong>
+<ul>
+<li><strong>Issue</strong>: Product associations may change over time, and analysing everything together might obscure patterns.</li>
+<li><strong>Solution</strong>:
+<ul>
+<li>Implement time-window analysis</li>
+<li>Compare associations across different time periods</li>
+<li>Look for emerging or declining associations</li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong>Implementation Improvements for Scale:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For very large datasets, consider this approach:</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> analyze_large_dataset(file_path, output_dir):</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 1. First pass: Get data statistics and sample</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"First pass: Collecting statistics..."</span>)</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    stats <span class="op">=</span> collect_data_stats(file_path)</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 2. Determine optimal processing approach based on stats</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> stats[<span class="st">'total_rows'</span>] <span class="op">&gt;</span> <span class="dv">10_000_000</span>:</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Very large dataset detected. Using distributed processing..."</span>)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Initialize Dask or Spark</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>        <span class="im">import</span> dask.dataframe <span class="im">as</span> dd</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>        ddf <span class="op">=</span> dd.read_csv(file_path)</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Process with distributed framework</span></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Processing with pandas..."</span>)</span>
+<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Process with your current approach</span></span>
+<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 3. Use progressive sampling for quick insights</span></span>
+<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a>    sample_sizes <span class="op">=</span> [<span class="dv">10000</span>, <span class="dv">100000</span>, <span class="dv">1000000</span>]</span>
+<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> size <span class="kw">in</span> sample_sizes:</span>
+<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> size <span class="op">&gt;</span> stats[<span class="st">'total_rows'</span>]: </span>
+<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"analysing sample of </span><span class="sc">{</span>size<span class="sc">}</span><span class="ss"> transactions..."</span>)</span>
+<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a>        sample <span class="op">=</span> get_stratified_sample(file_path, size)</span>
+<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Run analysis on progressively larger samples</span></span>
+<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a>        results <span class="op">=</span> find_product_combinations(sample)</span>
+<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a>        save_results(results, <span class="ss">f"</span><span class="sc">{</span>output_dir<span class="sc">}</span><span class="ss">/sample_</span><span class="sc">{</span>size<span class="sc">}</span><span class="ss">_results.csv"</span>)</span>
+<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 4. Full analysis with optimised parameters</span></span>
+<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Running full analysis with optimised parameters..."</span>)</span>
+<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use parameters learned from sample analysis</span></span>
+<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a>    full_results <span class="op">=</span> process_in_time_windows(file_path)</span>
+<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> full_results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.</p>
+<pre><code>
 ### Lessons Learned
 
 This case study demonstrates several key intentional prompting principles:
@@ -1148,19 +1252,10 @@ A developer needs to build a weather dashboard application in Python. The applic
 **Human prompt:**</code></pre>
 <p>I need to create a weather dashboard in Python that uses a provided module to access weather data and displays it in a user-friendly interface. Can you help me restate this problem more clearly to ensure I understand all requirements?</p>
 <pre><code>
-**AI response:**
-&gt; This problem involves creating a Python application that:
-&gt; 1. Utilises an existing weather data module to retrieve weather information
-&gt; 2. Processes that data appropriately
-&gt; 3. Presents the information in a clear, user-friendly interface
-&gt; 4. Allows users to interact with the dashboard to view different weather metrics
-&gt;
-&gt; The key components you'll need to develop are:
-&gt; - Functions to retrieve and process data from the provided module
-&gt; - A display system (likely console-based) to show weather information
-&gt; - User interaction components to allow navigation and selection
-&gt; - Visualisation elements for presenting weather data graphically
-
+**AI response:**</code></pre>
+<p>This problem involves creating a Python application that: 1. Utilises an existing weather data module to retrieve weather information 2. Processes that data appropriately 3. Presents the information in a clear, user-friendly interface 4. Allows users to interact with the dashboard to view different weather metrics</p>
+<p>The key components you’ll need to develop are: - Functions to retrieve and process data from the provided module - A display system (likely console-based) to show weather information - User interaction components to allow navigation and selection - Visualisation elements for presenting weather data graphically</p>
+<pre><code>
 **Human follow-up prompt (clarification):**</code></pre>
 <p>That’s helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.</p>
 <pre><code>
@@ -1172,20 +1267,11 @@ A developer needs to build a weather dashboard application in Python. The applic
 <p>Outputs: - Current weather conditions display - Visual representations of temperature, humidity, etc. - Forecast for upcoming days - User navigation menu</p>
 <p>Does this cover the essential inputs and outputs? Is there anything important I’m missing?</p>
 <pre><code>
-**AI response:**
-&gt; Your input/output identification is strong! A few additional considerations:
-&gt;
-&gt; Additional inputs to consider:
-&gt; - User preferences for temperature units (Celsius/Fahrenheit)
-&gt; - Display preferences (text-only vs. graphical visualisation)
-&gt; - Refresh rate for data updates
-&gt;
-&gt; Additional outputs to consider:
-&gt; - Error messages for handling unavailable data or connection issues
-&gt; - Status indicators for data freshness
-&gt; - Historical data comparisons (if available)
-&gt; - Weather alerts or warnings
-
+**AI response:**</code></pre>
+<p>Your input/output identification is strong! A few additional considerations:</p>
+<p>Additional inputs to consider: - User preferences for temperature units (Celsius/Fahrenheit) - Display preferences (text-only vs.&nbsp;graphical visualisation) - Refresh rate for data updates</p>
+<p>Additional outputs to consider: - Error messages for handling unavailable data or connection issues - Status indicators for data freshness - Historical data comparisons (if available) - Weather alerts or warnings</p>
+<pre><code>
 #### Step 3: Work Problem by Hand
 
 **Human prompt:**</code></pre>
@@ -1286,12 +1372,12 @@ function get_location_from_user():
 2. Weather service connection failures
 3. Handling missing data in the weather response</code></pre>
 </section>
-<section id="step-5-convert-to-python-code" class="level4" data-number="14.1.2.6">
-<h4 data-number="14.1.2.6" class="anchored" data-anchor-id="step-5-convert-to-python-code"><span class="header-section-number">14.1.2.6</span> Step 5: Convert to Python Code</h4>
+<section id="step-5-convert-to-python-code" class="level4" data-number="15.0.0.2">
+<h4 data-number="15.0.0.2" class="anchored" data-anchor-id="step-5-convert-to-python-code"><span class="header-section-number">15.0.0.2</span> Step 5: Convert to Python Code</h4>
 <p>The developer starts implementing the solution based on the pseudocode, focusing on modularity, error handling, and user experience.</p>
 </section>
-<section id="step-6-test-with-data" class="level4" data-number="14.1.2.7">
-<h4 data-number="14.1.2.7" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">14.1.2.7</span> Step 6: Test with Data</h4>
+<section id="step-6-test-with-data" class="level4" data-number="15.0.0.3">
+<h4 data-number="15.0.0.3" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">15.0.0.3</span> Step 6: Test with Data</h4>
 <p><strong>Human prompt:</strong></p>
 <pre><code>Now I want to test this code with some sample data. Can you provide a sample data structure that would be returned by:
 
@@ -1299,22 +1385,81 @@ function get_location_from_user():
 2. weather_api.get_forecast()
 
 Also, what test cases should I consider to ensure my dashboard handles all possible scenarios correctly?</code></pre>
-<p><strong>AI response:</strong> &gt; Here are sample data structures that might be returned by the weather API: &gt; &gt; <code>python &gt; # Sample current weather data &gt; sample_current = { &gt;     'location': 'New York', &gt;     'timestamp': '2023-09-15 14:30', &gt;     'temperature': 22, &gt;     'feels_like': 24, &gt;     'condition': 'Partly Cloudy', &gt;     'humidity': 65, &gt;     'wind_speed': 8, &gt;     'wind_direction': 'NE', &gt;     'pressure': 1012, &gt;     'visibility': 10, &gt;     'uv_index': 5, &gt;     'units': 'metric' &gt; } &gt; &gt; # Sample forecast data (list of days) &gt; sample_forecast = [ &gt;     { &gt;         'date': '2023-09-15', &gt;         'day_of_week': 'Friday', &gt;         'high': 24, &gt;         'low': 18, &gt;         'condition': 'Partly Cloudy', &gt;         'precipitation_chance': 20, &gt;         'humidity': 65, &gt;         'wind_speed': 8, &gt;         'wind_direction': 'NE', &gt;         'units': 'metric' &gt;     }, &gt;     # Additional days would follow... &gt; ] &gt;</code> &gt; &gt; Test cases to consider: &gt; &gt; 1. <strong>Happy path</strong>: &gt; - Valid location with complete weather data &gt; - Multiple days of forecast &gt; &gt; 2. <strong>Data issues</strong>: &gt; - Missing fields in current weather &gt; - Partial forecast data available &gt; - Empty forecast list &gt; &gt; 3. <strong>Connection issues</strong>: &gt; - API timeout &gt; - Service unavailable &gt; &gt; 4. <strong>User input scenarios</strong>: &gt; - Invalid location name &gt; - Empty input &gt; - Special characters in location name</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Here are sample data structures that might be returned by the weather API:
+
+```python
+# Sample current weather data
+sample_current = {
+    'location': 'New York',
+    'timestamp': '2023-09-15 14:30',
+    'temperature': 22,
+    'feels_like': 24,
+    'condition': 'Partly Cloudy',
+    'humidity': 65,
+    'wind_speed': 8,
+    'wind_direction': 'NE',
+    'pressure': 1012,
+    'visibility': 10,
+    'uv_index': 5,
+    'units': 'metric'
+}
+
+# Sample forecast data (list of days)
+sample_forecast = [
+    {
+        'date': '2023-09-15',
+        'day_of_week': 'Friday',
+        'high': 24,
+        'low': 18,
+        'condition': 'Partly Cloudy',
+        'precipitation_chance': 20,
+        'humidity': 65,
+        'wind_speed': 8,
+        'wind_direction': 'NE',
+        'units': 'metric'
+    },
+    # Additional days would follow...
+]</code></pre>
+<p>Test cases to consider:</p>
+<ol type="1">
+<li><strong>Happy path</strong>:
+<ul>
+<li>Valid location with complete weather data</li>
+<li>Multiple days of forecast</li>
+</ul></li>
+<li><strong>Data issues</strong>:
+<ul>
+<li>Missing fields in current weather</li>
+<li>Partial forecast data available</li>
+<li>Empty forecast list</li>
+</ul></li>
+<li><strong>Connection issues</strong>:
+<ul>
+<li>API timeout</li>
+<li>Service unavailable</li>
+</ul></li>
+<li><strong>User input scenarios</strong>:
+<ul>
+<li>Invalid location name</li>
+<li>Empty input</li>
+<li>Special characters in location name ```</li>
+</ul></li>
+</ol>
 </section>
-</section>
-<section id="before-and-after-example-improving-a-key-function" class="level3" data-number="14.1.3">
-<h3 data-number="14.1.3" class="anchored" data-anchor-id="before-and-after-example-improving-a-key-function"><span class="header-section-number">14.1.3</span> Before and After Example: Improving a Key Function</h3>
+<section id="before-and-after-example-improving-a-key-function" class="level3" data-number="15.0.1">
+<h3 data-number="15.0.1" class="anchored" data-anchor-id="before-and-after-example-improving-a-key-function"><span class="header-section-number">15.0.1</span> Before and After Example: Improving a Key Function</h3>
 <p>One of the critical functions in the application is the data retrieval function. Let’s examine how intentional prompting improved this function:</p>
-<section id="before-initial-data-retrieval-function" class="level4" data-number="14.1.3.1">
-<h4 data-number="14.1.3.1" class="anchored" data-anchor-id="before-initial-data-retrieval-function"><span class="header-section-number">14.1.3.1</span> Before: Initial Data Retrieval Function</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_weather_data(location, units):</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Fetch weather data from API."""</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    current_weather <span class="op">=</span> weather_api.get_current(location, units)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> weather_api.get_forecast(location, units, days<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"current"</span>: current_weather, <span class="st">"forecast"</span>: forecast}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="before-initial-data-retrieval-function" class="level4" data-number="15.0.1.1">
+<h4 data-number="15.0.1.1" class="anchored" data-anchor-id="before-initial-data-retrieval-function"><span class="header-section-number">15.0.1.1</span> Before: Initial Data Retrieval Function</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_weather_data(location, units):</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Fetch weather data from API."""</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    current_weather <span class="op">=</span> weather_api.get_current(location, units)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> weather_api.get_forecast(location, units, days<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"current"</span>: current_weather, <span class="st">"forecast"</span>: forecast}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="refinement-process-prompt" class="level4" data-number="14.1.3.2">
-<h4 data-number="14.1.3.2" class="anchored" data-anchor-id="refinement-process-prompt"><span class="header-section-number">14.1.3.2</span> Refinement Process Prompt</h4>
+<section id="refinement-process-prompt" class="level4" data-number="15.0.1.2">
+<h4 data-number="15.0.1.2" class="anchored" data-anchor-id="refinement-process-prompt"><span class="header-section-number">15.0.1.2</span> Refinement Process Prompt</h4>
 <pre><code>The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
 
 1. Handle connection errors
@@ -1322,79 +1467,79 @@ Also, what test cases should I consider to ensure my dashboard handles all possi
 3. Handle missing or incomplete data
 4. Provide meaningful error messages to the user</code></pre>
 </section>
-<section id="after-improved-data-retrieval-function" class="level4" data-number="14.1.3.3">
-<h4 data-number="14.1.3.3" class="anchored" data-anchor-id="after-improved-data-retrieval-function"><span class="header-section-number">14.1.3.3</span> After: Improved Data Retrieval Function</h4>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_weather_data(location, units):</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Fetch weather data from API with comprehensive error handling.</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="co">        location: City name or location</span></span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co">        units: 'metric' or 'imperial'</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="co">        Dictionary containing current weather and forecast</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Raises:</span></span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="co">        ConnectionError: If unable to connect to weather service</span></span>
-<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="co">        ValueError: If location is invalid or data is incomplete</span></span>
-<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
-<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Attempt to get current weather</span></span>
-<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>        current_weather <span class="op">=</span> weather_api.get_current(location, units)</span>
-<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Validate current weather data</span></span>
-<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>        required_current_fields <span class="op">=</span> [<span class="st">'temperature'</span>, <span class="st">'condition'</span>, <span class="st">'humidity'</span>, <span class="st">'wind_speed'</span>]</span>
-<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>        missing_fields <span class="op">=</span> [field <span class="cf">for</span> field <span class="kw">in</span> required_current_fields <span class="cf">if</span> field <span class="kw">not</span> <span class="kw">in</span> current_weather]</span>
-<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> missing_fields:</span>
-<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Handle missing fields by providing defaults</span></span>
-<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> field <span class="kw">in</span> missing_fields:</span>
-<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a>                current_weather[field] <span class="op">=</span> <span class="st">"N/A"</span></span>
-<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb25-29"><a href="#cb25-29" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log the issue but don't fail completely</span></span>
-<span id="cb25-30"><a href="#cb25-30" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Warning: Some current weather data is unavailable: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_fields)<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb25-31"><a href="#cb25-31" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-32"><a href="#cb25-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Attempt to get forecast with retry mechanism</span></span>
-<span id="cb25-33"><a href="#cb25-33" aria-hidden="true" tabindex="-1"></a>        max_retries <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb25-34"><a href="#cb25-34" aria-hidden="true" tabindex="-1"></a>        retry_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb25-35"><a href="#cb25-35" aria-hidden="true" tabindex="-1"></a>        forecast <span class="op">=</span> <span class="va">None</span></span>
-<span id="cb25-36"><a href="#cb25-36" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-37"><a href="#cb25-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> retry_count <span class="op">&lt;</span> max_retries <span class="kw">and</span> forecast <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb25-38"><a href="#cb25-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
-<span id="cb25-39"><a href="#cb25-39" aria-hidden="true" tabindex="-1"></a>                forecast <span class="op">=</span> weather_api.get_forecast(location, units, days<span class="op">=</span><span class="dv">5</span>)</span>
-<span id="cb25-40"><a href="#cb25-40" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
-<span id="cb25-41"><a href="#cb25-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb25-42"><a href="#cb25-42" aria-hidden="true" tabindex="-1"></a>                retry_count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb25-43"><a href="#cb25-43" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> retry_count <span class="op">&gt;=</span> max_retries:</span>
-<span id="cb25-44"><a href="#cb25-44" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"Warning: Could not retrieve forecast data. Using current conditions only."</span>)</span>
-<span id="cb25-45"><a href="#cb25-45" aria-hidden="true" tabindex="-1"></a>                    forecast <span class="op">=</span> []  <span class="co"># Empty forecast as fallback</span></span>
-<span id="cb25-46"><a href="#cb25-46" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
-<span id="cb25-47"><a href="#cb25-47" aria-hidden="true" tabindex="-1"></a>                    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait before retrying</span></span>
-<span id="cb25-48"><a href="#cb25-48" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb25-49"><a href="#cb25-49" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ensure forecast is a list (even if empty)</span></span>
-<span id="cb25-50"><a href="#cb25-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(forecast, <span class="bu">list</span>):</span>
-<span id="cb25-51"><a href="#cb25-51" aria-hidden="true" tabindex="-1"></a>            forecast <span class="op">=</span> []</span>
-<span id="cb25-52"><a href="#cb25-52" aria-hidden="true" tabindex="-1"></a>            </span>
-<span id="cb25-53"><a href="#cb25-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> {</span>
-<span id="cb25-54"><a href="#cb25-54" aria-hidden="true" tabindex="-1"></a>            <span class="st">"current"</span>: current_weather, </span>
-<span id="cb25-55"><a href="#cb25-55" aria-hidden="true" tabindex="-1"></a>            <span class="st">"forecast"</span>: forecast,</span>
-<span id="cb25-56"><a href="#cb25-56" aria-hidden="true" tabindex="-1"></a>            <span class="st">"location"</span>: location,</span>
-<span id="cb25-57"><a href="#cb25-57" aria-hidden="true" tabindex="-1"></a>            <span class="st">"units"</span>: units,</span>
-<span id="cb25-58"><a href="#cb25-58" aria-hidden="true" tabindex="-1"></a>            <span class="st">"timestamp"</span>: time.strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M"</span>)</span>
-<span id="cb25-59"><a href="#cb25-59" aria-hidden="true" tabindex="-1"></a>        }</span>
-<span id="cb25-60"><a href="#cb25-60" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb25-61"><a href="#cb25-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ConnectionError</span>:</span>
-<span id="cb25-62"><a href="#cb25-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ConnectionError</span>(<span class="st">"Failed to connect to weather service. Please check your internet connection."</span>)</span>
-<span id="cb25-63"><a href="#cb25-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
-<span id="cb25-64"><a href="#cb25-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Invalid location: </span><span class="sc">{</span>location<span class="sc">}</span><span class="ss">. Please check spelling and try again."</span>)</span>
-<span id="cb25-65"><a href="#cb25-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
-<span id="cb25-66"><a href="#cb25-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Convert any other exceptions from the API to something we can handle</span></span>
-<span id="cb25-67"><a href="#cb25-67" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"Error fetching weather data: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="after-improved-data-retrieval-function" class="level4" data-number="15.0.1.3">
+<h4 data-number="15.0.1.3" class="anchored" data-anchor-id="after-improved-data-retrieval-function"><span class="header-section-number">15.0.1.3</span> After: Improved Data Retrieval Function</h4>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_weather_data(location, units):</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Fetch weather data from API with comprehensive error handling.</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co">        location: City name or location</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co">        units: 'metric' or 'imperial'</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co">        Dictionary containing current weather and forecast</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Raises:</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="co">        ConnectionError: If unable to connect to weather service</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="co">        ValueError: If location is invalid or data is incomplete</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Attempt to get current weather</span></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>        current_weather <span class="op">=</span> weather_api.get_current(location, units)</span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Validate current weather data</span></span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a>        required_current_fields <span class="op">=</span> [<span class="st">'temperature'</span>, <span class="st">'condition'</span>, <span class="st">'humidity'</span>, <span class="st">'wind_speed'</span>]</span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>        missing_fields <span class="op">=</span> [field <span class="cf">for</span> field <span class="kw">in</span> required_current_fields <span class="cf">if</span> field <span class="kw">not</span> <span class="kw">in</span> current_weather]</span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> missing_fields:</span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Handle missing fields by providing defaults</span></span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> field <span class="kw">in</span> missing_fields:</span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a>                current_weather[field] <span class="op">=</span> <span class="st">"N/A"</span></span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb48-29"><a href="#cb48-29" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Log the issue but don't fail completely</span></span>
+<span id="cb48-30"><a href="#cb48-30" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Warning: Some current weather data is unavailable: </span><span class="sc">{</span><span class="st">', '</span><span class="sc">.</span>join(missing_fields)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb48-31"><a href="#cb48-31" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb48-32"><a href="#cb48-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Attempt to get forecast with retry mechanism</span></span>
+<span id="cb48-33"><a href="#cb48-33" aria-hidden="true" tabindex="-1"></a>        max_retries <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb48-34"><a href="#cb48-34" aria-hidden="true" tabindex="-1"></a>        retry_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb48-35"><a href="#cb48-35" aria-hidden="true" tabindex="-1"></a>        forecast <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb48-36"><a href="#cb48-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb48-37"><a href="#cb48-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> retry_count <span class="op">&lt;</span> max_retries <span class="kw">and</span> forecast <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb48-38"><a href="#cb48-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span>:</span>
+<span id="cb48-39"><a href="#cb48-39" aria-hidden="true" tabindex="-1"></a>                forecast <span class="op">=</span> weather_api.get_forecast(location, units, days<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb48-40"><a href="#cb48-40" aria-hidden="true" tabindex="-1"></a>                <span class="cf">break</span></span>
+<span id="cb48-41"><a href="#cb48-41" aria-hidden="true" tabindex="-1"></a>            <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb48-42"><a href="#cb48-42" aria-hidden="true" tabindex="-1"></a>                retry_count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb48-43"><a href="#cb48-43" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> retry_count <span class="op">&gt;=</span> max_retries:</span>
+<span id="cb48-44"><a href="#cb48-44" aria-hidden="true" tabindex="-1"></a>                    <span class="bu">print</span>(<span class="ss">f"Warning: Could not retrieve forecast data. Using current conditions only."</span>)</span>
+<span id="cb48-45"><a href="#cb48-45" aria-hidden="true" tabindex="-1"></a>                    forecast <span class="op">=</span> []  <span class="co"># Empty forecast as fallback</span></span>
+<span id="cb48-46"><a href="#cb48-46" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb48-47"><a href="#cb48-47" aria-hidden="true" tabindex="-1"></a>                    time.sleep(<span class="dv">1</span>)  <span class="co"># Wait before retrying</span></span>
+<span id="cb48-48"><a href="#cb48-48" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb48-49"><a href="#cb48-49" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Ensure forecast is a list (even if empty)</span></span>
+<span id="cb48-50"><a href="#cb48-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(forecast, <span class="bu">list</span>):</span>
+<span id="cb48-51"><a href="#cb48-51" aria-hidden="true" tabindex="-1"></a>            forecast <span class="op">=</span> []</span>
+<span id="cb48-52"><a href="#cb48-52" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb48-53"><a href="#cb48-53" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> {</span>
+<span id="cb48-54"><a href="#cb48-54" aria-hidden="true" tabindex="-1"></a>            <span class="st">"current"</span>: current_weather, </span>
+<span id="cb48-55"><a href="#cb48-55" aria-hidden="true" tabindex="-1"></a>            <span class="st">"forecast"</span>: forecast,</span>
+<span id="cb48-56"><a href="#cb48-56" aria-hidden="true" tabindex="-1"></a>            <span class="st">"location"</span>: location,</span>
+<span id="cb48-57"><a href="#cb48-57" aria-hidden="true" tabindex="-1"></a>            <span class="st">"units"</span>: units,</span>
+<span id="cb48-58"><a href="#cb48-58" aria-hidden="true" tabindex="-1"></a>            <span class="st">"timestamp"</span>: time.strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M"</span>)</span>
+<span id="cb48-59"><a href="#cb48-59" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb48-60"><a href="#cb48-60" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb48-61"><a href="#cb48-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ConnectionError</span>:</span>
+<span id="cb48-62"><a href="#cb48-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ConnectionError</span>(<span class="st">"Failed to connect to weather service. Please check your internet connection."</span>)</span>
+<span id="cb48-63"><a href="#cb48-63" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">ValueError</span> <span class="im">as</span> e:</span>
+<span id="cb48-64"><a href="#cb48-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Invalid location: </span><span class="sc">{</span>location<span class="sc">}</span><span class="ss">. Please check spelling and try again."</span>)</span>
+<span id="cb48-65"><a href="#cb48-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb48-66"><a href="#cb48-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Convert any other exceptions from the API to something we can handle</span></span>
+<span id="cb48-67"><a href="#cb48-67" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="ss">f"Error fetching weather data: </span><span class="sc">{</span><span class="bu">str</span>(e)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
-<section id="lessons-learned" class="level3" data-number="14.1.4">
-<h3 data-number="14.1.4" class="anchored" data-anchor-id="lessons-learned"><span class="header-section-number">14.1.4</span> Lessons Learned</h3>
+<section id="lessons-learned" class="level3" data-number="15.0.2">
+<h3 data-number="15.0.2" class="anchored" data-anchor-id="lessons-learned"><span class="header-section-number">15.0.2</span> Lessons Learned</h3>
 <p>This case study demonstrates several key aspects of intentional prompting:</p>
 <ol type="1">
 <li><strong>Thorough problem exploration</strong> - The developer took time to understand requirements and data structures before coding</li>
@@ -1405,18 +1550,17 @@ Also, what test cases should I consider to ensure my dashboard handles all possi
 </ol>
 <p>The intentional approach resulted in a robust, maintainable application that properly handles edge cases and provides a good user experience, even when dealing with external data sources that may be unreliable.</p>
 </section>
-</section>
-<section id="case-study-3-debugging-a-complex-bug" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="case-study-3-debugging-a-complex-bug"><span class="header-section-number">14.2</span> Case Study 3: Debugging a Complex Bug</h2>
+<section id="case-study-3-debugging-a-complex-bug" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="case-study-3-debugging-a-complex-bug"><span class="header-section-number">15.1</span> Case Study 3: Debugging a Complex Bug</h2>
 <p>For our final case study, we’ll look at a debugging scenario where intentional prompting techniques help solve a challenging issue.</p>
-<section id="the-problem-1" class="level3" data-number="14.2.1">
-<h3 data-number="14.2.1" class="anchored" data-anchor-id="the-problem-1"><span class="header-section-number">14.2.1</span> The Problem</h3>
+<section id="the-problem-1" class="level3" data-number="15.1.1">
+<h3 data-number="15.1.1" class="anchored" data-anchor-id="the-problem-1"><span class="header-section-number">15.1.1</span> The Problem</h3>
 <p>A team is experiencing intermittent failures in their e-commerce checkout system. The checkout process occasionally fails with a generic error message, but only for certain users and at seemingly random times.</p>
 </section>
-<section id="the-intentional-prompting-approach-1" class="level3" data-number="14.2.2">
-<h3 data-number="14.2.2" class="anchored" data-anchor-id="the-intentional-prompting-approach-1"><span class="header-section-number">14.2.2</span> The Intentional Prompting Approach</h3>
-<section id="step-1-restate-the-problem-1" class="level4" data-number="14.2.2.1">
-<h4 data-number="14.2.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem-1"><span class="header-section-number">14.2.2.1</span> Step 1: Restate the Problem</h4>
+<section id="the-intentional-prompting-approach-1" class="level3" data-number="15.1.2">
+<h3 data-number="15.1.2" class="anchored" data-anchor-id="the-intentional-prompting-approach-1"><span class="header-section-number">15.1.2</span> The Intentional Prompting Approach</h3>
+<section id="step-1-restate-the-problem-1" class="level4" data-number="15.1.2.1">
+<h4 data-number="15.1.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem-1"><span class="header-section-number">15.1.2.1</span> Step 1: Restate the Problem</h4>
 <p><strong>Human prompt:</strong></p>
 <pre><code>We're experiencing intermittent failures in our checkout system. Let me restate the problem:
 
@@ -1431,8 +1575,8 @@ Our goal is to identify the root cause and implement a fix to eliminate these ch
 
 Is this an appropriate restatement of the debugging challenge?</code></pre>
 </section>
-<section id="step-2-identify-information-needed" class="level4" data-number="14.2.2.2">
-<h4 data-number="14.2.2.2" class="anchored" data-anchor-id="step-2-identify-information-needed"><span class="header-section-number">14.2.2.2</span> Step 2: Identify Information Needed</h4>
+<section id="step-2-identify-information-needed" class="level4" data-number="15.1.2.2">
+<h4 data-number="15.1.2.2" class="anchored" data-anchor-id="step-2-identify-information-needed"><span class="header-section-number">15.1.2.2</span> Step 2: Identify Information Needed</h4>
 <p><strong>Human prompt:</strong></p>
 <pre><code>To debug this issue effectively, we need to gather specific information:
 
@@ -1455,8 +1599,8 @@ Are there other information sources or outputs we should consider to effectively
 </section>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">14.3</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">15.2</span> Key Takeaways</h2>
 <p>From these case studies, we can extract several important lessons about intentional prompting:</p>
 <ol type="1">
 <li><strong>Structured methodology yields better results</strong>
@@ -1487,6 +1631,7 @@ Are there other information sources or outputs we should consider to effectively
 </ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

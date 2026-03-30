@@ -543,15 +543,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#generating-test-cases" id="toc-generating-test-cases" class="nav-link" data-scroll-target="#generating-test-cases"><span class="header-section-number">10.3.1</span> Generating Test Cases</a></li>
   <li><a href="#generating-test-code" id="toc-generating-test-code" class="nav-link" data-scroll-target="#generating-test-code"><span class="header-section-number">10.3.2</span> Generating Test Code</a></li>
+  <li><a href="#test-execution-and-results" id="toc-test-execution-and-results" class="nav-link" data-scroll-target="#test-execution-and-results"><span class="header-section-number">10.3.3</span> Test Execution and Results</a></li>
+  <li><a href="#fixing-issues-based-on-test-results" id="toc-fixing-issues-based-on-test-results" class="nav-link" data-scroll-target="#fixing-issues-based-on-test-results"><span class="header-section-number">10.3.4</span> Fixing Issues Based on Test Results</a></li>
+  <li><a href="#rerunning-tests" id="toc-rerunning-tests" class="nav-link" data-scroll-target="#rerunning-tests"><span class="header-section-number">10.3.5</span> Rerunning Tests</a></li>
   </ul></li>
-  <li><a href="#learning-from-test-failures" id="toc-learning-from-test-failures" class="nav-link" data-scroll-target="#learning-from-test-failures"><span class="header-section-number">10.4</span> Learning from Test Failures</a>
-  <ul class="collapse">
-  <li><a href="#debugging-with-ai-assistance" id="toc-debugging-with-ai-assistance" class="nav-link" data-scroll-target="#debugging-with-ai-assistance"><span class="header-section-number">10.4.1</span> Debugging with AI Assistance</a></li>
-  <li><a href="#test-execution-and-results" id="toc-test-execution-and-results" class="nav-link" data-scroll-target="#test-execution-and-results"><span class="header-section-number">10.4.2</span> Test Execution and Results</a></li>
-  <li><a href="#fixing-issues-based-on-test-results" id="toc-fixing-issues-based-on-test-results" class="nav-link" data-scroll-target="#fixing-issues-based-on-test-results"><span class="header-section-number">10.4.3</span> Fixing Issues Based on Test Results</a></li>
-  <li><a href="#rerunning-tests" id="toc-rerunning-tests" class="nav-link" data-scroll-target="#rerunning-tests"><span class="header-section-number">10.4.4</span> Rerunning Tests</a></li>
-  </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">10.5</span> Key Takeaways</a></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">10.4</span> Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -696,7 +692,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>AI assistants can help identify edge cases you might not have considered:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>I've implemented a function to find the longest palindromic substring in a string. What edge cases should I test to ensure it works correctly in all scenarios?</code></pre>
-<p><strong>AI response:</strong> &gt; Here’s a comprehensive list of edge cases you should test for your longest palindromic substring function: &gt; &gt; ### Basic Edge Cases &gt; &gt; 1. <strong>Empty string</strong> - Should return empty string &gt; 2. <strong>Single character</strong> - Should return that character &gt; 3. <strong>Two identical characters</strong> - Should return both characters &gt; 4. <strong>Two different characters</strong> - Should return the first character &gt; &gt; ### Palindrome Pattern Edge Cases &gt; &gt; 5. <strong>No palindromes longer than 1 character</strong> - “abc” should return “a” (or “b” or “c”) &gt; 6. <strong>Odd-length palindromes only</strong> - “aba” should return “aba” &gt; 7. <strong>Even-length palindromes only</strong> - “abba” should return “abba” &gt; 8. <strong>Mix of odd and even palindromes</strong> - “abbac” should return “abba” &gt; 9. <strong>Palindrome at the beginning</strong> - “abbax” should return “abba” &gt; 10. <strong>Palindrome at the end</strong> - “xabba” should return “abba” &gt; 11. <strong>Palindrome in the middle</strong> - “xabbay” should return “abba” &gt; 12. <strong>Entire string is a palindrome</strong> - “racecar” should return “racecar” &gt; &gt; ### Multiple Palindromes Edge Cases &gt; &gt; 13. <strong>Multiple palindromes of different lengths</strong> - “aaaabcbaaaaa” should return “aaaaa” &gt; 14. <strong>Multiple palindromes of same maximum length</strong> - “aabaa” and “baab” in “aabaabaab” (should return either) &gt; 15. <strong>Overlapping palindromes</strong> - “aaaa” has multiple overlapping palindromes &gt; &gt; ### Character Edge Cases &gt; &gt; 16. <strong>Case sensitivity</strong> - “Madam” is not a palindrome if case-sensitive &gt; 17. <strong>Special characters</strong> - “a#a” should return “a#a” &gt; 18. <strong>Numbers and mixed content</strong> - “12321” or “a123a” &gt; 19. <strong>Unicode characters</strong> - Test with non-ASCII characters like “租赁” &gt; &gt; ### Performance Edge Cases &gt; &gt; 20. <strong>Very long strings</strong> - Test with strings of thousands of characters &gt; 21. <strong>Long palindrome within long string</strong> - e.g., 1000 ‘a’s + ’b’ + 1000 ’a’s &gt; 22. <strong>Repeated characters</strong> - “aaaaaaaaaa” (helps test for optimisation issues) &gt; &gt; A well-tested function should handle all these cases correctly and efficiently.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Here's a comprehensive list of edge cases you should test for your longest palindromic substring function:
+
+### Basic Edge Cases
+
+1. **Empty string** - Should return empty string
+2. **Single character** - Should return that character
+3. **Two identical characters** - Should return both characters
+4. **Two different characters** - Should return the first character
+
+### Palindrome Pattern Edge Cases
+
+5. **No palindromes longer than 1 character** - "abc" should return "a" (or "b" or "c")
+6. **Odd-length palindromes only** - "aba" should return "aba"
+7. **Even-length palindromes only** - "abba" should return "abba"
+8. **Mix of odd and even palindromes** - "abbac" should return "abba"
+9. **Palindrome at the beginning** - "abbax" should return "abba"
+10. **Palindrome at the end** - "xabba" should return "abba"
+11. **Palindrome in the middle** - "xabbay" should return "abba"
+12. **Entire string is a palindrome** - "racecar" should return "racecar"
+
+### Multiple Palindromes Edge Cases
+
+13. **Multiple palindromes of different lengths** - "aaaabcbaaaaa" should return "aaaaa"
+14. **Multiple palindromes of same maximum length** - "aabaa" and "baab" in "aabaabaab" (should return either)
+15. **Overlapping palindromes** - "aaaa" has multiple overlapping palindromes
+
+### Character Edge Cases
+
+16. **Case sensitivity** - "Madam" is not a palindrome if case-sensitive
+17. **Special characters** - "a#a" should return "a#a"
+18. **Numbers and mixed content** - "12321" or "a123a"
+19. **Unicode characters** - Test with non-ASCII characters like "租赁" 
+
+### Performance Edge Cases
+
+20. **Very long strings** - Test with strings of thousands of characters
+21. **Long palindrome within long string** - e.g., 1000 'a's + 'b' + 1000 'a's
+22. **Repeated characters** - "aaaaaaaaaa" (helps test for optimisation issues)
+
+A well-tested function should handle all these cases correctly and efficiently.</code></pre>
 </section>
 </section>
 <section id="ai-assisted-test-generation" class="level2" data-number="10.3">
@@ -707,117 +743,188 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Ask AI to generate diverse test inputs:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>Could you generate 10 diverse test cases for the longest palindromic substring function? For each test case, provide the input string and the expected output.</code></pre>
-<p><strong>AI response:</strong> &gt; Here are 10 diverse test cases for the longest palindromic substring function: &gt; &gt; | Test Case | Input String | Expected Output | Description | &gt; |———–|————-|—————-|————-| &gt; | 1 | “” | “” | Empty string | &gt; | 2 | “a” | “a” | Single character | &gt; | 3 | “abcd” | “a” | No palindromes longer than 1 (any single character is valid) | &gt; | 4 | “babad” | “bab” or “aba” | Multiple valid answers of same length | &gt; | 5 | “cbbd” | “bb” | Even-length palindrome | &gt; | 6 | “racecar” | “racecar” | Entire string is a palindrome | &gt; | 7 | “aacabdkacaa” | “aca” | Multiple palindromes, should find longest | &gt; | 8 | “aaaaa” | “aaaaa” | Repeated characters | &gt; | 9 | “civilservice” | “civic” | Palindrome at beginning | &gt; | 10 | “abcdeedcba” | “abcdeedcba” | Even-length palindrome (entire string) | &gt; &gt; These test cases cover empty strings, single characters, no long palindromes, multiple valid answers, even and odd-length palindromes, whole-string palindromes, multiple palindromes of different lengths, repeated characters, and palindromes at different positions in the string.</p>
+<p><strong>AI response:</strong></p>
+<pre><code>Here are 10 diverse test cases for the longest palindromic substring function:
+
+| Test Case | Input String | Expected Output | Description |
+|-----------|-------------|----------------|-------------|
+| 1 | "" | "" | Empty string |
+| 2 | "a" | "a" | Single character |
+| 3 | "abcd" | "a" | No palindromes longer than 1 (any single character is valid) |
+| 4 | "babad" | "bab" or "aba" | Multiple valid answers of same length |
+| 5 | "cbbd" | "bb" | Even-length palindrome |
+| 6 | "racecar" | "racecar" | Entire string is a palindrome |
+| 7 | "aacabdkacaa" | "aca" | Multiple palindromes, should find longest |
+| 8 | "aaaaa" | "aaaaa" | Repeated characters |
+| 9 | "civilservice" | "civic" | Palindrome at beginning |
+| 10 | "abcdeedcba" | "abcdeedcba" | Even-length palindrome (entire string) |
+
+These test cases cover empty strings, single characters, no long palindromes, multiple valid answers, even and odd-length palindromes, whole-string palindromes, multiple palindromes of different lengths, repeated characters, and palindromes at different positions in the string.</code></pre>
 </section>
 <section id="generating-test-code" class="level3" data-number="10.3.2">
 <h3 data-number="10.3.2" class="anchored" data-anchor-id="generating-test-code"><span class="header-section-number">10.3.2</span> Generating Test Code</h3>
 <p>AI can also help generate the actual test code:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>Could you create a Python unit test class using the unittest framework for testing the longest_palindromic_substring function with the test cases you suggested?</code></pre>
-<p><strong>AI response:</strong> &gt; Here’s a comprehensive unit test class using Python’s <code>unittest</code> framework to test the longest palindromic substring function with the test cases I suggested: &gt; &gt; <code>python &gt; import unittest &gt;  &gt; # Import your function &gt; from palindrome import longest_palindromic_substring &gt;  &gt; class TestLongestPalindromicSubstring(unittest.TestCase): &gt;      &gt;     def test_empty_string(self): &gt;         """Test with an empty string.""" &gt;         self.assertEqual(longest_palindromic_substring(""), "") &gt;      &gt;     def test_single_character(self): &gt;         """Test with a single character.""" &gt;         self.assertEqual(longest_palindromic_substring("a"), "a") &gt;      &gt;     def test_no_long_palindromes(self): &gt;         """Test with a string that has no palindromes longer than 1 character.""" &gt;         result = longest_palindromic_substring("abcd") &gt;         # Any single character is a valid answer &gt;         self.assertTrue(result in ["a", "b", "c", "d"]) &gt;         self.assertEqual(len(result), 1) &gt;      &gt;     def test_multiple_valid_answers(self): &gt;         """Test with a string that has multiple valid answers of the same length.""" &gt;         result = longest_palindromic_substring("babad") &gt;         self.assertTrue(result in ["bab", "aba"]) &gt;         self.assertEqual(len(result), 3) &gt;      &gt;     def test_even_length_palindrome(self): &gt;         """Test with a string containing an even-length palindrome.""" &gt;         self.assertEqual(longest_palindromic_substring("cbbd"), "bb") &gt;      &gt;     def test_entire_string_is_palindrome(self): &gt;         """Test with a string that is entirely a palindrome.""" &gt;         self.assertEqual(longest_palindromic_substring("racecar"), "racecar") &gt;      &gt;     def test_multiple_palindromes(self): &gt;         """Test with a string containing multiple palindromes of different lengths.""" &gt;         self.assertEqual(longest_palindromic_substring("aacabdkacaa"), "aca") &gt;      &gt;     def test_repeated_characters(self): &gt;         """Test with a string of repeated characters.""" &gt;         self.assertEqual(longest_palindromic_substring("aaaaa"), "aaaaa") &gt;      &gt;     def test_palindrome_at_beginning(self): &gt;         """Test with a palindrome at the beginning of the string.""" &gt;         self.assertEqual(longest_palindromic_substring("civilservice"), "civic") &gt;      &gt;     def test_even_length_entire_string(self): &gt;         """Test with an even-length palindrome that is the entire string.""" &gt;         self.assertEqual(longest_palindromic_substring("abcdeedcba"), "abcdeedcba") &gt;      &gt;     def test_performance_with_long_string(self): &gt;         """Test performance with a very long string containing a long palindrome.""" &gt;         long_input = "a" * 1000 + "b" + "a" * 1000 &gt;         result = longest_palindromic_substring(long_input) &gt;         self.assertEqual(len(result), 2001) &gt;         self.assertEqual(result, long_input) &gt;  &gt; if __name__ == '__main__': &gt;     unittest.main() &gt;</code> &gt; &gt; This test class includes: &gt; &gt; 1. Tests for all the cases I mentioned earlier &gt; 2. Clear test method names that describe what’s being tested &gt; 3. Docstrings explaining each test &gt; 4. Appropriate assertions for each case &gt; 5. A performance test with a large input &gt; &gt; To use this, save it as <code>test_palindrome.py</code> and make sure your implementation is in a file named <code>palindrome.py</code> with the function <code>longest_palindromic_substring</code>. Then run it with: &gt; &gt; <code>&gt; python -m unittest test_palindrome.py &gt;</code> &gt; &gt; If you’re using a different file structure or function name, you’ll need to adjust the import statement accordingly.</p>
-</section>
-</section>
-<section id="learning-from-test-failures" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="learning-from-test-failures"><span class="header-section-number">10.4</span> Learning from Test Failures</h2>
-<p>Test failures provide valuable learning opportunities that can improve both your current solution and your general understanding.</p>
-<section id="debugging-with-ai-assistance" class="level3" data-number="10.4.1">
-<h3 data-number="10.4.1" class="anchored" data-anchor-id="debugging-with-ai-assistance"><span class="header-section-number">10.4.1</span> Debugging with AI Assistance</h3>
-<p>When tests fail, AI can help analyse the failure:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>My test case for "aacabdkacaa" is failing. The expected output is "aca" but my function returns "aa". Here's my implementation:
+<p><strong>AI response:</strong></p>
+<pre><code>Here's a comprehensive unit test class using Python's `unittest` framework to test the longest palindromic substring function with the test cases I suggested:
 
 ```python
-def longest_palindromic_substring(s):
-    if not s:
-        return ""
+import unittest
+
+# Import your function
+from palindrome import longest_palindromic_substring
+
+class TestLongestPalindromicSubstring(unittest.TestCase):
     
-    start = 0
-    max_length = 1
+    def test_empty_string(self):
+        """Test with an empty string."""
+        self.assertEqual(longest_palindromic_substring(""), "")
     
-    for i in range(len(s)):
-        # Check odd length palindromes
-        left, right = i, i
-        while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-            if right - left + 1 &gt; max_length:
-                max_length = right - left + 1
-                start = left
-            left -= 1
-            right += 1
-        
-        # Check even length palindromes
-        left, right = i, i + 1
-        if right &lt; len(s):
-            while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-                if right - left + 1 &gt; max_length:
-                    max_length = right - left + 1
-                    start = left
-                left -= 1
-                right += 1
+    def test_single_character(self):
+        """Test with a single character."""
+        self.assertEqual(longest_palindromic_substring("a"), "a")
     
-    return s[start:start + max_length]</code></pre>
+    def test_no_long_palindromes(self):
+        """Test with a string that has no palindromes longer than 1 character."""
+        result = longest_palindromic_substring("abcd")
+        # Any single character is a valid answer
+        self.assertTrue(result in ["a", "b", "c", "d"])
+        self.assertEqual(len(result), 1)
+    
+    def test_multiple_valid_answers(self):
+        """Test with a string that has multiple valid answers of the same length."""
+        result = longest_palindromic_substring("babad")
+        self.assertTrue(result in ["bab", "aba"])
+        self.assertEqual(len(result), 3)
+    
+    def test_even_length_palindrome(self):
+        """Test with a string containing an even-length palindrome."""
+        self.assertEqual(longest_palindromic_substring("cbbd"), "bb")
+    
+    def test_entire_string_is_palindrome(self):
+        """Test with a string that is entirely a palindrome."""
+        self.assertEqual(longest_palindromic_substring("racecar"), "racecar")
+    
+    def test_multiple_palindromes(self):
+        """Test with a string containing multiple palindromes of different lengths."""
+        self.assertEqual(longest_palindromic_substring("aacabdkacaa"), "aca")
+    
+    def test_repeated_characters(self):
+        """Test with a string of repeated characters."""
+        self.assertEqual(longest_palindromic_substring("aaaaa"), "aaaaa")
+    
+    def test_palindrome_at_beginning(self):
+        """Test with a palindrome at the beginning of the string."""
+        self.assertEqual(longest_palindromic_substring("civilservice"), "civic")
+    
+    def test_even_length_entire_string(self):
+        """Test with an even-length palindrome that is the entire string."""
+        self.assertEqual(longest_palindromic_substring("abcdeedcba"), "abcdeedcba")
+    
+    def test_performance_with_long_string(self):
+        """Test performance with a very long string containing a long palindrome."""
+        long_input = "a" * 1000 + "b" + "a" * 1000
+        result = longest_palindromic_substring(long_input)
+        self.assertEqual(len(result), 2001)
+        self.assertEqual(result, long_input)
+
+if __name__ == '__main__':
+    unittest.main()</code></pre>
+<p>This test class includes:</p>
+<ol type="1">
+<li>Tests for all the cases I mentioned earlier</li>
+<li>Clear test method names that describe what’s being tested</li>
+<li>Docstrings explaining each test</li>
+<li>Appropriate assertions for each case</li>
+<li>A performance test with a large input</li>
+</ol>
+<p>To use this, save it as <code>test_palindrome.py</code> and make sure your implementation is in a file named <code>palindrome.py</code> with the function <code>longest_palindromic_substring</code>. Then run it with:</p>
+<pre><code>python -m unittest test_palindrome.py</code></pre>
+<p>If you’re using a different file structure or function name, you’ll need to adjust the import statement accordingly.</p>
+<pre><code>
+## Learning from Test Failures
+
+Test failures provide valuable learning opportunities that can improve both your current solution and your general understanding.
+
+### Debugging with AI Assistance
+
+When tests fail, AI can help analyse the failure:
+
+**Human prompt:**</code></pre>
+<p>My test case for “aacabdkacaa” is failing. The expected output is “aca” but my function returns “aa”. Here’s my implementation:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check odd length palindromes</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        left, right <span class="op">=</span> i, i</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span> <span class="op">&gt;</span> max_length:</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> left</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even length palindromes</span></span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        left, right <span class="op">=</span> i, i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s):</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span> <span class="op">&gt;</span> max_length:</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>                    max_length <span class="op">=</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>                    start <span class="op">=</span> left</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>                left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>                right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Can you help me identify what’s wrong?</p>
 <pre><code>
-**AI response:**
-&gt; I see the issue in your implementation when testing with "aacabdkacaa". Let me walk through this step by step.
-&gt; 
-&gt; In the string "aacabdkacaa", the palindromes are:
-&gt; - "aa" at the beginning (length 2)
-&gt; - "a" (multiple single characters, length 1)
-&gt; - "aca" in the middle (length 3)
-&gt; - "acaa" at the end (length 4) ← Wait, this isn't a palindrome!
-&gt; 
-&gt; Ah, I found the issue! The string "acaa" is not a palindrome (it would read "aaca" backwards). Let me trace through your code to see where it's going wrong.
-&gt; 
-&gt; When checking the string "aacabdkacaa", your function should find "aca" as the longest palindrome, which has length 3. But it's returning "aa" which has length 2.
-&gt; 
-&gt; Let me check the expected output again... the expected output is "aca" but your function returns "aa". There must be a bug in your code or an error in my analysis.
-&gt; 
-&gt; Let's carefully trace through the string "aacabdkacaa":
-&gt; - Palindromes at position 0 ('a'): "a", "aa"
-&gt; - Palindromes at position 1 ('a'): "a", "aa", "aaca" (wait, this isn't a palindrome!)
-&gt; 
-&gt; I think I've found the bug! In your implementation, when you're expanding around a center, you're updating `max_length` and `start` *before* confirming the substring is actually a palindrome.
-&gt; 
-&gt; The issue is in both of your while loops. Let's focus on the even-length check. When you check for even-length palindromes starting at position i, you immediately enter the while loop if s[i] == s[i+1]. But then you update `max_length` and `start` before checking if the next characters also match.
-&gt; 
-&gt; Here's the correction needed:
-&gt; 
-&gt; ```python
-&gt; def longest_palindromic_substring(s):
-&gt;     if not s:
-&gt;         return ""
-&gt;     
-&gt;     start = 0
-&gt;     max_length = 1
-&gt;     
-&gt;     for i in range(len(s)):
-&gt;         # Check odd length palindromes
-&gt;         left, right = i, i
-&gt;         while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-&gt;             current_length = right - left + 1
-&gt;             if current_length &gt; max_length:
-&gt;                 max_length = current_length
-&gt;                 start = left
-&gt;             left -= 1
-&gt;             right += 1
-&gt;         
-&gt;         # Check even length palindromes
-&gt;         left, right = i, i + 1
-&gt;         while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-&gt;             current_length = right - left + 1
-&gt;             if current_length &gt; max_length:
-&gt;                 max_length = current_length
-&gt;                 start = left
-&gt;             left -= 1
-&gt;             right += 1
-&gt;     
-&gt;     return s[start:start + max_length]
-&gt; ```
-&gt; 
-&gt; The key change is adding a `current_length` variable to calculate the length inside the while loop. This ensures you're using the correct length for comparison.
-&gt; 
-&gt; This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.
-
+**AI response:**</code></pre>
+<p>I see the issue in your implementation when testing with “aacabdkacaa”. Let me walk through this step by step.</p>
+<p>In the string “aacabdkacaa”, the palindromes are: - “aa” at the beginning (length 2) - “a” (multiple single characters, length 1) - “aca” in the middle (length 3) - “acaa” at the end (length 4) ← Wait, this isn’t a palindrome!</p>
+<p>Ah, I found the issue! The string “acaa” is not a palindrome (it would read “aaca” backwards). Let me trace through your code to see where it’s going wrong.</p>
+<p>When checking the string “aacabdkacaa”, your function should find “aca” as the longest palindrome, which has length 3. But it’s returning “aa” which has length 2.</p>
+<p>Let me check the expected output again… the expected output is “aca” but your function returns “aa”. There must be a bug in your code or an error in my analysis.</p>
+<p>Let’s carefully trace through the string “aacabdkacaa”: - Palindromes at position 0 (‘a’): “a”, “aa” - Palindromes at position 1 (‘a’): “a”, “aa”, “aaca” (wait, this isn’t a palindrome!)</p>
+<p>I think I’ve found the bug! In your implementation, when you’re expanding around a center, you’re updating <code>max_length</code> and <code>start</code> <em>before</em> confirming the substring is actually a palindrome.</p>
+<p>The issue is in both of your while loops. Let’s focus on the even-length check. When you check for even-length palindromes starting at position i, you immediately enter the while loop if s[i] == s[i+1]. But then you update <code>max_length</code> and <code>start</code> before checking if the next characters also match.</p>
+<p>Here’s the correction needed:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check odd length palindromes</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        left, right <span class="op">=</span> i, i</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>            current_length <span class="op">=</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> current_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> current_length</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> left</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even length palindromes</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>        left, right <span class="op">=</span> i, i <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>            current_length <span class="op">=</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> current_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> current_length</span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> left</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>The key change is adding a <code>current_length</code> variable to calculate the length inside the while loop. This ensures you’re using the correct length for comparison.</p>
+<p>This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.</p>
+<pre><code>
 ### Test-Driven Improvements
 
 Use test results to drive improvements to your solution:
@@ -902,8 +1009,8 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()</code></pre>
 </section>
-<section id="test-execution-and-results" class="level3" data-number="10.4.2">
-<h3 data-number="10.4.2" class="anchored" data-anchor-id="test-execution-and-results"><span class="header-section-number">10.4.2</span> Test Execution and Results</h3>
+<section id="test-execution-and-results" class="level3" data-number="10.3.3">
+<h3 data-number="10.3.3" class="anchored" data-anchor-id="test-execution-and-results"><span class="header-section-number">10.3.3</span> Test Execution and Results</h3>
 <p>Running our tests might reveal issues we hadn’t anticipated:</p>
 <pre><code>.F...F
 ======================================================================
@@ -921,56 +1028,56 @@ Test performance with large inputs.
 AssertionError: 999 != 1001
 ...</code></pre>
 </section>
-<section id="fixing-issues-based-on-test-results" class="level3" data-number="10.4.3">
-<h3 data-number="10.4.3" class="anchored" data-anchor-id="fixing-issues-based-on-test-results"><span class="header-section-number">10.4.3</span> Fixing Issues Based on Test Results</h3>
+<section id="fixing-issues-based-on-test-results" class="level3" data-number="10.3.4">
+<h3 data-number="10.3.4" class="anchored" data-anchor-id="fixing-issues-based-on-test-results"><span class="header-section-number">10.3.4</span> Fixing Issues Based on Test Results</h3>
 <p>analysing the failures and updating our implementation:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in a given string.</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">        s (str): The input string to process</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co">        str: The longest palindromic substring</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> expand_around_center(left, right):</span>
-<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
-<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="co">        Expand around center while maintaining palindrome property.</span></span>
-<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns the length of the palindrome.</span></span>
-<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
-<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
-<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># left+1 and right-1 are the actual palindrome boundaries</span></span>
-<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># because we've gone one step too far in the while loop</span></span>
-<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> left <span class="op">+</span> <span class="dv">1</span>, right <span class="op">-</span> <span class="dv">1</span> <span class="op">-</span> left</span>
-<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
-<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check odd length palindromes</span></span>
-<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>        odd_start, odd_length <span class="op">=</span> expand_around_center(i, i)</span>
-<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> odd_length <span class="op">&gt;</span> max_length:</span>
-<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>            start <span class="op">=</span> odd_start</span>
-<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>            max_length <span class="op">=</span> odd_length</span>
-<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even length palindromes</span></span>
-<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span>:</span>
-<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>            even_start, even_length <span class="op">=</span> expand_around_center(i, i <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> even_length <span class="op">&gt;</span> max_length:</span>
-<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> even_start</span>
-<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> even_length</span>
-<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in a given string.</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co">        s (str): The input string to process</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co">        str: The longest palindromic substring</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> expand_around_center(left, right):</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co">        Expand around center while maintaining palindrome property.</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns the length of the palindrome.</span></span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># left+1 and right-1 are the actual palindrome boundaries</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>        <span class="co"># because we've gone one step too far in the while loop</span></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> left <span class="op">+</span> <span class="dv">1</span>, right <span class="op">-</span> <span class="dv">1</span> <span class="op">-</span> left</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check odd length palindromes</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>        odd_start, odd_length <span class="op">=</span> expand_around_center(i, i)</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> odd_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>            start <span class="op">=</span> odd_start</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>            max_length <span class="op">=</span> odd_length</span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even length palindromes</span></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>            even_start, even_length <span class="op">=</span> expand_around_center(i, i <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> even_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> even_start</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> even_length</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="rerunning-tests" class="level3" data-number="10.4.4">
-<h3 data-number="10.4.4" class="anchored" data-anchor-id="rerunning-tests"><span class="header-section-number">10.4.4</span> Rerunning Tests</h3>
+<section id="rerunning-tests" class="level3" data-number="10.3.5">
+<h3 data-number="10.3.5" class="anchored" data-anchor-id="rerunning-tests"><span class="header-section-number">10.3.5</span> Rerunning Tests</h3>
 <p>After fixing the issues, we run the tests again to verify the solution:</p>
 <pre><code>......
 ----------------------------------------------------------------------
@@ -979,8 +1086,8 @@ Ran 6 tests in 0.123s
 OK</code></pre>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">10.5</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">10.4</span> Key Takeaways</h2>
 <ul>
 <li>Thorough testing is essential, even with AI-assisted implementation</li>
 <li>A comprehensive testing strategy includes functional tests, edge cases, stress tests, performance tests, and regression tests</li>
