@@ -1136,14 +1136,14 @@ AI response:
 #### Step 5: Convert to Code
 
 Human prompt:
-python
+`python
 def longest_palindromic_substring(s):
     if not s:
         return ""
-    
+
     start = 0
     max_length = 1
-    
+
     def expand_around_center(left, right):
         nonlocal start, max_length
         while left >= 0 and right  max_length:
@@ -1151,15 +1151,16 @@ def longest_palindromic_substring(s):
                 start = left
             left -= 1
             right += 1
-    
+
     for i in range(len(s)):
         # Odd length palindromes
         expand_around_center(i, i)
-        
+
         # Even length palindromes
         expand_around_center(i, i+1)
-    
+
     return s[start:start + max_length]
+`
 
 AI response:
 ```
@@ -2117,7 +2118,7 @@ When asking AI to implement code, provide context from previous steps:
 Human prompt:
 
 AI response:
-python
+`python
 def longest_palindromic_substring(s):
     """
     Find the longest palindromic substring in a given string.
@@ -2373,8 +2374,10 @@ AI can also help generate the actual test code:
 Human prompt:
 
 AI response:
-```
+````
 Here's a comprehensive unit test class using Python's `unittest` framework to test the longest palindromic substring function with the test cases I suggested:
+
+`
 
 This test class includes:
 
@@ -2419,7 +2422,7 @@ Here's the correction needed:
 The key change is adding a `current_length` variable to calculate the length inside the while loop. This ensures you're using the correct length for comparison.
 
 This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.
-python
+`python
 import unittest
 import time
 
@@ -2860,12 +2863,13 @@ AI assistants can:
 - Suggest corrections based on context
 
 Example prompt:
-python
+`python
 def calculate_total(items):
     total = 0
     for item in items
         total += item.price
     return total
+`
 
 ### Logic Errors
 
@@ -2980,7 +2984,7 @@ Refactoring is most valuable in specific situations:
 AI assistants excel at identifying these opportunities, especially when prompted to look for specific issues.
 
 Example prompt:
-python
+`python
 def process_customer_data(customer):
     # Calculate base price
     if customer.tier == 'premium':
@@ -3018,6 +3022,7 @@ def process_customer_data(customer):
     }
     
     return result
+`
 
 ### The Business Case for Refactoring
 
@@ -3109,6 +3114,7 @@ def process_payment(order_id, card_details, amount):
 ### Incremental Refactoring Approaches
 
 Example prompt:
+`
 
 AI might suggest:
 
@@ -3125,12 +3131,14 @@ AI might suggest:
 
 Original Code:
 
+`
+
 Refactoring Request:
 
 Human prompt:
 
 AI response:
-javascript
+`javascript
 function calculateDiscount(customer, order) {
   // Start with base discount and add volume discount later if applicable
   const baseDiscount = calculateBaseDiscount(customer, order);
@@ -3187,18 +3195,23 @@ function calculateBaseDiscount(customer, order) {
   // Default case - no discount
   return 0;
 }
+``
 
 ### Case Study 2: Reducing Duplication
 
 Original Code:
+
+`
 
 Refactoring Request:
 
 Human prompt:
 
 AI response:
-```
+````
 There's significant duplication in this `UserService` class. The three methods follow the same pattern but just differ in the query condition. Let's refactor to eliminate this duplication:
+
+`
 
 Key improvements in this refactoring:
 
@@ -3460,7 +3473,7 @@ FUNCTION clean_data(input_file):
 Now let's implement the solution in Python, focusing on the product combination analysis.
 
 Human prompt:
-python
+`python
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 from mlxtend.preprocessing import TransactionEncoder
@@ -3544,6 +3557,7 @@ def clean_data(file_path, chunk_size=100000):
     cleaned_data = pd.concat(chunks, ignore_index=True)
     
     return cleaned_data
+`
 
 AI response:
 ```
@@ -3686,7 +3700,7 @@ Before we start coding, I want to sketch out the user interaction flow for the d
 Does this flow make sense? Would you structure the user experience differently?
 
 Now that we have a clear understanding of the problem and user flow, could you help me write pseudocode for this weather dashboard? I want to focus on creating a modular design with separate functions for data retrieval, display, and user interaction.
-python
+`python
 # Main program structure
 function main():
     display_welcome()
@@ -3744,7 +3758,7 @@ function get_location_from_user():
     prompt for location
     validate location
     return location
-
+`
 The pseudocode looks good overall. I noticed that error handling isn't explicitly included. Could you expand the pseudocode to include error handling for:
 
 1. Invalid location input
@@ -3757,8 +3771,10 @@ Now I want to test this code with some sample data. Can you provide a sample dat
 2. weather_api.get_forecast()
 
 Also, what test cases should I consider to ensure my dashboard handles all possible scenarios correctly?
-
+`
 Here are sample data structures that might be returned by the weather API:
+
+`
 
 Test cases to consider:
 
@@ -3779,13 +3795,13 @@ Test cases to consider:
    - Invalid location name
    - Empty input
    - Special characters in location name
-python
+`python
 def fetch_weather_data(location, units):
     """Fetch weather data from API."""
     current_weather = weather_api.get_current(location, units)
     forecast = weather_api.get_forecast(location, units, days=5)
     return {"current": current_weather, "forecast": forecast}
-
+`
 The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
 
 1. Handle connection errors
@@ -3999,7 +4015,7 @@ Complex systems evolve over time. Intentional prompting at scale means designing
 Human prompt:
 
 AI response:
-```
+````
 Designing a payment processing system with future extensibility in mind requires careful architectural planning. Here's a comprehensive approach:
 
 ### Core Architectural Patterns
@@ -4022,7 +4038,7 @@ Designing a payment processing system with future extensibility in mind requires
 ### System Architecture Components
 
 1. Payment Gateway Interface
-   
+   `
 
 2. Abstract Payment Method
    
