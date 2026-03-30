@@ -742,11 +742,19 @@ WRITE data TO file</code></pre>
 <section id="generating-initial-pseudocode" class="level3" data-number="8.3.1">
 <h3 data-number="8.3.1" class="anchored" data-anchor-id="generating-initial-pseudocode"><span class="header-section-number">8.3.1</span> Generating Initial Pseudocode</h3>
 <p>AI can help draft initial pseudocode based on your problem statement:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Based on my manual approach to finding the longest palindromic substring, could you help me develop pseudocode for an algorithm that:
-1. Checks each position in the string as a potential palindrome center
-2. Handles both odd and even length palindromes
-3. Tracks the longest palindrome found</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on my manual approach to finding the longest palindromic substring, could you help me develop pseudocode for an algorithm that: 1. Checks each position in the string as a potential palindrome center 2. Handles both odd and even length palindromes 3. Tracks the longest palindrome found</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -795,11 +803,23 @@ END FUNCTION</code></pre>
 <section id="refining-pseudocode" class="level3" data-number="8.3.2">
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="refining-pseudocode"><span class="header-section-number">8.3.2</span> Refining Pseudocode</h3>
 <p>Once you have initial pseudocode, use AI to help refine it by asking targeted questions:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>This pseudocode looks good. Two questions:
-
-1. Should we check for even-length palindromes between the last character and out of bounds?
-2. Is there any way to optimise this further, perhaps by avoiding redundant checks?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This pseudocode looks good. Two questions:</p>
+<ol type="1">
+<li>Should we check for even-length palindromes between the last character and out of bounds?</li>
+<li>Is there any way to optimise this further, perhaps by avoiding redundant checks?</li>
+</ol>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -863,8 +883,19 @@ END FOR</code></pre>
 <section id="comparing-alternative-approaches" class="level3" data-number="8.3.3">
 <h3 data-number="8.3.3" class="anchored" data-anchor-id="comparing-alternative-approaches"><span class="header-section-number">8.3.3</span> Comparing Alternative Approaches</h3>
 <p>AI can help explore different algorithmic approaches to the same problem:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we've been discussing?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we’ve been discussing?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1015,33 +1046,33 @@ END FOR</code></pre>
 <section id="creating-function-signatures" class="level3" data-number="8.4.2">
 <h3 data-number="8.4.2" class="anchored" data-anchor-id="creating-function-signatures"><span class="header-section-number">8.4.2</span> Creating Function Signatures</h3>
 <p>Based on the pseudocode, define the function signatures that will be needed:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_longest_palindrome(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in the given string.</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string to search</span></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">        The longest palindromic substring</span></span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expand_around_center(s: <span class="bu">str</span>, left: <span class="bu">int</span>, right: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">int</span>, <span class="bu">int</span>]:</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">    Expand around a potential palindrome center and return the bounds</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">    of the longest palindrome found.</span></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string</span></span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">        left: Starting left position</span></span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co">        right: Starting right position</span></span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="co">        Tuple of (start_index, length) of palindrome</span></span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_longest_palindrome(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in the given string.</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string to search</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">        The longest palindromic substring</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expand_around_center(s: <span class="bu">str</span>, left: <span class="bu">int</span>, right: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">int</span>, <span class="bu">int</span>]:</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">    Expand around a potential palindrome center and return the bounds</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">    of the longest palindrome found.</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="co">        left: Starting left position</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">        right: Starting right position</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="co">        Tuple of (start_index, length) of palindrome</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="planning-test-coverage" class="level3" data-number="8.4.3">
 <h3 data-number="8.4.3" class="anchored" data-anchor-id="planning-test-coverage"><span class="header-section-number">8.4.3</span> Planning Test Coverage</h3>

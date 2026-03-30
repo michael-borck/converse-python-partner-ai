@@ -551,7 +551,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#intentional-system-documentation" id="toc-intentional-system-documentation" class="nav-link" data-scroll-target="#intentional-system-documentation"><span class="header-section-number">15.4.1</span> Intentional System Documentation</a></li>
   <li><a href="#ai-enhanced-code-documentation" id="toc-ai-enhanced-code-documentation" class="nav-link" data-scroll-target="#ai-enhanced-code-documentation"><span class="header-section-number">16.10.1</span> AI-Enhanced Code Documentation</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">16.11</span> Key Takeaways</a></li>
+  <li><a href="#knowledge-distribution-in-teams" id="toc-knowledge-distribution-in-teams" class="nav-link" data-scroll-target="#knowledge-distribution-in-teams"><span class="header-section-number">16.11</span> Knowledge Distribution in Teams</a>
+  <ul class="collapse">
+  <li><a href="#collaborative-learning-patterns" id="toc-collaborative-learning-patterns" class="nav-link" data-scroll-target="#collaborative-learning-patterns"><span class="header-section-number">16.11.1</span> Collaborative Learning Patterns</a></li>
+  <li><a href="#documentation-as-code" id="toc-documentation-as-code" class="nav-link" data-scroll-target="#documentation-as-code"><span class="header-section-number">17.6.1</span> Documentation as Code</a></li>
+  </ul></li>
+  <li><a href="#practical-exercise-scaling-an-application" id="toc-practical-exercise-scaling-an-application" class="nav-link" data-scroll-target="#practical-exercise-scaling-an-application"><span class="header-section-number">17.7</span> Practical Exercise: Scaling an Application</a>
+  <ul class="collapse">
+  <li><a href="#initial-simple-application" id="toc-initial-simple-application" class="nav-link" data-scroll-target="#initial-simple-application"><span class="header-section-number">17.7.1</span> Initial Simple Application</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">17.8</span> Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/scaling-complexity.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -599,17 +608,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="intentional-architecture-design" class="level3" data-number="15.1.2">
 <h3 data-number="15.1.2" class="anchored" data-anchor-id="intentional-architecture-design"><span class="header-section-number">15.1.2</span> Intentional Architecture Design</h3>
 <p>For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>I'm designing a microservices architecture for an e-commerce platform. The main functions include:
-- Product catalogue
-- User accounts
-- Cart management
-- Order processing
-- Payment handling
-- Shipping and fulfillment
-- Analytics
-
-What would be a sensible way to divide these into microservices? What are the key considerations for service boundaries, data ownership, and interaction patterns?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’m designing a microservices architecture for an e-commerce platform. The main functions include: - Product catalogue - User accounts - Cart management - Order processing - Payment handling - Shipping and fulfillment - Analytics</p>
+<p>What would be a sensible way to divide these into microservices? What are the key considerations for service boundaries, data ownership, and interaction patterns?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -753,20 +765,29 @@ Based on this architectural context, what are the key considerations I should ke
 <section id="maintaining-consistency" class="level3" data-number="15.2.2">
 <h3 data-number="15.2.2" class="anchored" data-anchor-id="maintaining-consistency"><span class="header-section-number">15.2.2</span> Maintaining Consistency</h3>
 <p>In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Our team has established these coding standards for our Java backend services:
-
-1. Controller-Service-Repository pattern for all API endpoints
-2. Immutable data objects using Lombok
-3. Detailed error handling with custom exception classes
-4. Comprehensive logging with structured log format
-5. Unit tests for all business logic
-
-Here's an example of a controller that follows our standards:
-
-[Example controller code]
-
-I need to create a new endpoint for managing product bundles. Can you help me implement this following our established patterns?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Our team has established these coding standards for our Java backend services:</p>
+<ol type="1">
+<li>Controller-Service-Repository pattern for all API endpoints</li>
+<li>Immutable data objects using Lombok</li>
+<li>Detailed error handling with custom exception classes</li>
+<li>Comprehensive logging with structured log format</li>
+<li>Unit tests for all business logic</li>
+</ol>
+<p>Here’s an example of a controller that follows our standards:</p>
+<p>[Example controller code]</p>
+<p>I need to create a new endpoint for managing product bundles. Can you help me implement this following our established patterns?</p>
+</div>
+</div>
 </section>
 <section id="modular-prompting-strategies" class="level3" data-number="15.2.3">
 <h3 data-number="15.2.3" class="anchored" data-anchor-id="modular-prompting-strategies"><span class="header-section-number">15.2.3</span> Modular Prompting Strategies</h3>
@@ -802,14 +823,20 @@ Please provide:
 <section id="designing-for-evolution" class="level3" data-number="15.3.1">
 <h3 data-number="15.3.1" class="anchored" data-anchor-id="designing-for-evolution"><span class="header-section-number">15.3.1</span> Designing for Evolution</h3>
 <p>Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>I'm designing a payment processing system that currently needs to support credit cards and PayPal. In the future, we anticipate adding:
-- Additional payment providers
-- Cryptocurrency payments
-- Subscription billing
-- Regional payment methods
-
-How should I design the system to make these future additions as straightforward as possible? What patterns would help maintain a clean architecture as the system grows?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’m designing a payment processing system that currently needs to support credit cards and PayPal. In the future, we anticipate adding: - Additional payment providers - Cryptocurrency payments - Subscription billing - Regional payment methods</p>
+<p>How should I design the system to make these future additions as straightforward as possible? What patterns would help maintain a clean architecture as the system grows?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -848,45 +875,45 @@ How should I design the system to make these future additions as straightforward
 <h3 data-number="15.3.3" class="anchored" data-anchor-id="system-architecture-components"><span class="header-section-number">15.3.3</span> System Architecture Components</h3>
 <ol type="1">
 <li><p><strong>Payment Gateway Interface</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> PaymentGateway <span class="op">{</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    PaymentResult <span class="fu">process</span><span class="op">(</span>PaymentRequest request<span class="op">);</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    RefundResult <span class="fu">refund</span><span class="op">(</span>RefundRequest request<span class="op">);</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    PaymentStatus <span class="fu">checkStatus</span><span class="op">(</span><span class="bu">String</span> paymentId<span class="op">);</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Future methods can be added as needed</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">interface</span> PaymentGateway <span class="op">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    PaymentResult <span class="fu">process</span><span class="op">(</span>PaymentRequest request<span class="op">);</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    RefundResult <span class="fu">refund</span><span class="op">(</span>RefundRequest request<span class="op">);</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    PaymentStatus <span class="fu">checkStatus</span><span class="op">(</span><span class="bu">String</span> paymentId<span class="op">);</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Future methods can be added as needed</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Abstract Payment Method</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> PaymentMethod <span class="op">{</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> PaymentGateway gateway<span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">authorize</span><span class="op">(</span>Money amount<span class="op">,</span> Customer customer<span class="op">);</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">capture</span><span class="op">(</span><span class="bu">String</span> authorizationId<span class="op">);</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">refund</span><span class="op">(</span><span class="bu">String</span> paymentId<span class="op">,</span> Money amount<span class="op">);</span></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Methods for subscription handling (future extension)</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">supportsSubscriptions</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span> <span class="op">}</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentResponse <span class="fu">createSubscription</span><span class="op">(</span>SubscriptionRequest request<span class="op">)</span> <span class="op">{</span> </span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">UnsupportedOperationException</span><span class="op">();</span> </span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">abstract</span> <span class="kw">class</span> PaymentMethod <span class="op">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">protected</span> PaymentGateway gateway<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">authorize</span><span class="op">(</span>Money amount<span class="op">,</span> Customer customer<span class="op">);</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">capture</span><span class="op">(</span><span class="bu">String</span> authorizationId<span class="op">);</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="kw">abstract</span> PaymentResponse <span class="fu">refund</span><span class="op">(</span><span class="bu">String</span> paymentId<span class="op">,</span> Money amount<span class="op">);</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Methods for subscription handling (future extension)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">boolean</span> <span class="fu">supportsSubscriptions</span><span class="op">()</span> <span class="op">{</span> <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span> <span class="op">}</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentResponse <span class="fu">createSubscription</span><span class="op">(</span>SubscriptionRequest request<span class="op">)</span> <span class="op">{</span> </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">throw</span> <span class="kw">new</span> <span class="bu">UnsupportedOperationException</span><span class="op">();</span> </span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Payment Provider Registry</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentProviderRegistry <span class="op">{</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> PaymentMethod<span class="op">&gt;</span> providers <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">registerProvider</span><span class="op">(</span><span class="bu">String</span> type<span class="op">,</span> PaymentMethod provider<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        providers<span class="op">.</span><span class="fu">put</span><span class="op">(</span>type<span class="op">,</span> provider<span class="op">);</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentMethod <span class="fu">getProvider</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(!</span>providers<span class="op">.</span><span class="fu">containsKey</span><span class="op">(</span>type<span class="op">))</span> <span class="op">{</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">UnsupportedPaymentTypeException</span><span class="op">(</span>type<span class="op">);</span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> providers<span class="op">.</span><span class="fu">get</span><span class="op">(</span>type<span class="op">);</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> <span class="fu">getSupportedPaymentTypes</span><span class="op">()</span> <span class="op">{</span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;(</span>providers<span class="op">.</span><span class="fu">keySet</span><span class="op">());</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentProviderRegistry <span class="op">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> PaymentMethod<span class="op">&gt;</span> providers <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="dt">void</span> <span class="fu">registerProvider</span><span class="op">(</span><span class="bu">String</span> type<span class="op">,</span> PaymentMethod provider<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        providers<span class="op">.</span><span class="fu">put</span><span class="op">(</span>type<span class="op">,</span> provider<span class="op">);</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentMethod <span class="fu">getProvider</span><span class="op">(</span><span class="bu">String</span> type<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(!</span>providers<span class="op">.</span><span class="fu">containsKey</span><span class="op">(</span>type<span class="op">))</span> <span class="op">{</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">throw</span> <span class="kw">new</span> <span class="fu">UnsupportedPaymentTypeException</span><span class="op">(</span>type<span class="op">);</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> providers<span class="op">.</span><span class="fu">get</span><span class="op">(</span>type<span class="op">);</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> <span class="fu">getSupportedPaymentTypes</span><span class="op">()</span> <span class="op">{</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;(</span>providers<span class="op">.</span><span class="fu">keySet</span><span class="op">());</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </section>
 <section id="design-principles-to-follow" class="level3" data-number="15.3.4">
@@ -945,35 +972,35 @@ How should I design the system to make these future additions as straightforward
 <section id="implementation-example" class="level3" data-number="15.3.6">
 <h3 data-number="15.3.6" class="anchored" data-anchor-id="implementation-example"><span class="header-section-number">15.3.6</span> Implementation Example</h3>
 <p>Here’s a skeleton implementation of the core components:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// The request/response models</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentRequest <span class="op">{</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> paymentMethodType<span class="op">;</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Money amount<span class="op">;</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Customer customer<span class="op">;</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Object</span><span class="op">&gt;</span> methodSpecificData <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// getters and setters</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentResponse <span class="op">{</span></span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">boolean</span> success<span class="op">;</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> transactionId<span class="op">;</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> PaymentStatus status<span class="op">;</span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> errorCode<span class="op">;</span></span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> errorMessage<span class="op">;</span></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// getters and setters</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">// The payment service</span></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentService <span class="op">{</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> PaymentProviderRegistry providerRegistry<span class="op">;</span></span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentResponse <span class="fu">processPayment</span><span class="op">(</span>PaymentRequest request<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>        PaymentMethod method <span class="op">=</span> providerRegistry<span class="op">.</span><span class="fu">getProvider</span><span class="op">(</span>request<span class="op">.</span><span class="fu">getPaymentMethodType</span><span class="op">());</span></span>
-<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> method<span class="op">.</span><span class="fu">authorize</span><span class="op">(</span>request<span class="op">.</span><span class="fu">getAmount</span><span class="op">(),</span> request<span class="op">.</span><span class="fu">getCustomer</span><span class="op">());</span></span>
-<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Additional methods for different payment operations</span></span>
-<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// The request/response models</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentRequest <span class="op">{</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> paymentMethodType<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Money amount<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> Customer customer<span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">Map</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">,</span> <span class="bu">Object</span><span class="op">&gt;</span> methodSpecificData <span class="op">=</span> <span class="kw">new</span> <span class="bu">HashMap</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// getters and setters</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentResponse <span class="op">{</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">boolean</span> success<span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> transactionId<span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> PaymentStatus status<span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> errorCode<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="bu">String</span> errorMessage<span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">// getters and setters</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">// The payment service</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> PaymentService <span class="op">{</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> PaymentProviderRegistry providerRegistry<span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> PaymentResponse <span class="fu">processPayment</span><span class="op">(</span>PaymentRequest request<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>        PaymentMethod method <span class="op">=</span> providerRegistry<span class="op">.</span><span class="fu">getProvider</span><span class="op">(</span>request<span class="op">.</span><span class="fu">getPaymentMethodType</span><span class="op">());</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> method<span class="op">.</span><span class="fu">authorize</span><span class="op">(</span>request<span class="op">.</span><span class="fu">getAmount</span><span class="op">(),</span> request<span class="op">.</span><span class="fu">getCustomer</span><span class="op">());</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Additional methods for different payment operations</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="testing-considerations" class="level3" data-number="15.3.7">
 <h3 data-number="15.3.7" class="anchored" data-anchor-id="testing-considerations"><span class="header-section-number">15.3.7</span> Testing Considerations</h3>
@@ -990,15 +1017,20 @@ How should I design the system to make these future additions as straightforward
 <section id="cross-cutting-concerns" class="level3" data-number="15.3.8">
 <h3 data-number="15.3.8" class="anchored" data-anchor-id="cross-cutting-concerns"><span class="header-section-number">15.3.8</span> Cross-Cutting Concerns</h3>
 <p>In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>In our microservices architecture, we're seeing the same patterns implemented inconsistently across services for:
-- Authentication and authorization
-- Logging and monitoring
-- Error handling and reporting
-- API request validation
-- Rate limiting
-
-How can we standardize these cross-cutting concerns across our services while maintaining each team's autonomy over their service's core functionality?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In our microservices architecture, we’re seeing the same patterns implemented inconsistently across services for: - Authentication and authorization - Logging and monitoring - Error handling and reporting - API request validation - Rate limiting</p>
+<p>How can we standardize these cross-cutting concerns across our services while maintaining each team’s autonomy over their service’s core functionality?</p>
+</div>
+</div>
 </section>
 </section>
 <section id="documentation-and-knowledge-transfer" class="level2" data-number="15.4">
@@ -1006,14 +1038,20 @@ How can we standardize these cross-cutting concerns across our services while ma
 <section id="intentional-system-documentation" class="level3" data-number="15.4.1">
 <h3 data-number="15.4.1" class="anchored"><span class="header-section-number">15.4.1</span> Intentional System Documentation</h3>
 <p>Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>I've implemented a new authentication service with the following components:
-- OAuth2 provider integration
-- JWT token issuance and validation
-- Role-based access control
-- Multi-factor authentication support
-
-I need to create comprehensive documentation for other developers who will integrate with this service. What should my documentation cover, and how should I structure it for maximum clarity?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’ve implemented a new authentication service with the following components: - OAuth2 provider integration - JWT token issuance and validation - Role-based access control - Multi-factor authentication support</p>
+<p>I need to create comprehensive documentation for other developers who will integrate with this service. What should my documentation cover, and how should I structure it for maximum clarity?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1286,237 +1324,326 @@ I need to create comprehensive documentation for other developers who will integ
 <section id="ai-enhanced-code-documentation" class="level3" data-number="16.10.1">
 <h3 data-number="16.10.1" class="anchored" data-anchor-id="ai-enhanced-code-documentation"><span class="header-section-number">16.10.1</span> AI-Enhanced Code Documentation</h3>
 <p>AI can also help create and maintain code-level documentation:</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Here's a complex piece of code from our order processing system:
-
-```java
-public class OrderProcessor {
-    private final InventoryService inventoryService;
-    private final PaymentService paymentService;
-    private final ShippingService shippingService;
-    private final NotificationService notificationService;
-    private final OrderRepository orderRepository;
-    
-    // Constructor and other methods...
-    
-    \\@Transactional
-    public OrderResult processOrder(Order order) {
-        // Validate order
-        if (order == null || order.getItems().isEmpty()) {
-            return OrderResult.failure("Order must contain at least one item");
-        }
-        
-        // Check inventory
-        List&lt;String&gt; unavailableItems = new ArrayList&lt;&gt;();
-        for (OrderItem item : order.getItems()) {
-            InventoryStatus status = inventoryService.checkAvailability(item.getProductId(), item.getQuantity());
-            if (status != InventoryStatus.AVAILABLE) {
-                unavailableItems.add(item.getProductId());
-            }
-        }
-        
-        if (!unavailableItems.isEmpty()) {
-            return OrderResult.failure("Items not available: " + String.join(", ", unavailableItems));
-        }
-        
-        // Reserve inventory
-        try {
-            for (OrderItem item : order.getItems()) {
-                inventoryService.reserveInventory(item.getProductId(), item.getQuantity(), order.getId());
-            }
-        } catch (InventoryException e) {
-            return OrderResult.failure("Failed to reserve inventory: " + e.getMessage());
-        }
-        
-        // Process payment
-        PaymentResult paymentResult;
-        try {
-            paymentResult = paymentService.processPayment(order.getPaymentDetails(), order.getTotalAmount());
-            if (!paymentResult.isSuccessful()) {
-                // Release inventory if payment fails
-                for (OrderItem item : order.getItems()) {
-                    inventoryService.releaseInventory(item.getProductId(), item.getQuantity(), order.getId());
-                }
-                return OrderResult.failure("Payment failed: " + paymentResult.getErrorMessage());
-            }
-        } catch (PaymentException e) {
-            // Release inventory if payment throws exception
-            for (OrderItem item : order.getItems()) {
-                inventoryService.releaseInventory(item.getProductId(), item.getQuantity(), order.getId());
-            }
-            return OrderResult.failure("Payment error: " + e.getMessage());
-        }
-        
-        // Update order status
-        order.setStatus(OrderStatus.PAID);
-        order.setPaymentId(paymentResult.getTransactionId());
-        orderRepository.save(order);
-        
-        // Create shipment
-        try {
-            ShipmentResult shipmentResult = shippingService.createShipment(order);
-            if (shipmentResult.isSuccessful()) {
-                order.setStatus(OrderStatus.SHIPPED);
-                order.setTrackingNumber(shipmentResult.getTrackingNumber());
-                orderRepository.save(order);
-            } else {
-                // Shipment creation failed but payment succeeded
-                // Requires manual intervention
-                order.setStatus(OrderStatus.PAYMENT_RECEIVED);
-                order.setNotes("Shipment creation failed: " + shipmentResult.getErrorMessage());
-                orderRepository.save(order);
-                notificationService.notifyAdminOfShippingIssue(order);
-            }
-        } catch (ShippingException e) {
-            // Shipment creation threw exception
-            order.setStatus(OrderStatus.PAYMENT_RECEIVED);
-            order.setNotes("Shipping error: " + e.getMessage());
-            orderRepository.save(order);
-            notificationService.notifyAdminOfShippingIssue(order);
-        }
-        
-        // Send confirmation
-        notificationService.sendOrderConfirmation(order);
-        
-        return OrderResult.success(order);
-    }
-    
-    // Other methods...
-}</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s a complex piece of code from our order processing system:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="kw">class</span> OrderProcessor <span class="op">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> InventoryService inventoryService<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> PaymentService paymentService<span class="op">;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> ShippingService shippingService<span class="op">;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> NotificationService notificationService<span class="op">;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">private</span> <span class="dt">final</span> OrderRepository orderRepository<span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Constructor and other methods...</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    \\<span class="at">@Transactional</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">public</span> OrderResult <span class="fu">processOrder</span><span class="op">(</span>Order order<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Validate order</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>order <span class="op">==</span> <span class="kw">null</span> <span class="op">||</span> order<span class="op">.</span><span class="fu">getItems</span><span class="op">().</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">failure</span><span class="op">(</span><span class="st">"Order must contain at least one item"</span><span class="op">);</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Check inventory</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">List</span><span class="op">&lt;</span><span class="bu">String</span><span class="op">&gt;</span> unavailableItems <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> <span class="op">(</span>OrderItem item <span class="op">:</span> order<span class="op">.</span><span class="fu">getItems</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>            InventoryStatus status <span class="op">=</span> inventoryService<span class="op">.</span><span class="fu">checkAvailability</span><span class="op">(</span>item<span class="op">.</span><span class="fu">getProductId</span><span class="op">(),</span> item<span class="op">.</span><span class="fu">getQuantity</span><span class="op">());</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>status <span class="op">!=</span> InventoryStatus<span class="op">.</span><span class="fu">AVAILABLE</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>                unavailableItems<span class="op">.</span><span class="fu">add</span><span class="op">(</span>item<span class="op">.</span><span class="fu">getProductId</span><span class="op">());</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(!</span>unavailableItems<span class="op">.</span><span class="fu">isEmpty</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">failure</span><span class="op">(</span><span class="st">"Items not available: "</span> <span class="op">+</span> <span class="bu">String</span><span class="op">.</span><span class="fu">join</span><span class="op">(</span><span class="st">", "</span><span class="op">,</span> unavailableItems<span class="op">));</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Reserve inventory</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span>OrderItem item <span class="op">:</span> order<span class="op">.</span><span class="fu">getItems</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>                inventoryService<span class="op">.</span><span class="fu">reserveInventory</span><span class="op">(</span>item<span class="op">.</span><span class="fu">getProductId</span><span class="op">(),</span> item<span class="op">.</span><span class="fu">getQuantity</span><span class="op">(),</span> order<span class="op">.</span><span class="fu">getId</span><span class="op">());</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>InventoryException e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">failure</span><span class="op">(</span><span class="st">"Failed to reserve inventory: "</span> <span class="op">+</span> e<span class="op">.</span><span class="fu">getMessage</span><span class="op">());</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Process payment</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>        PaymentResult paymentResult<span class="op">;</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>            paymentResult <span class="op">=</span> paymentService<span class="op">.</span><span class="fu">processPayment</span><span class="op">(</span>order<span class="op">.</span><span class="fu">getPaymentDetails</span><span class="op">(),</span> order<span class="op">.</span><span class="fu">getTotalAmount</span><span class="op">());</span></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(!</span>paymentResult<span class="op">.</span><span class="fu">isSuccessful</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Release inventory if payment fails</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> <span class="op">(</span>OrderItem item <span class="op">:</span> order<span class="op">.</span><span class="fu">getItems</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>                    inventoryService<span class="op">.</span><span class="fu">releaseInventory</span><span class="op">(</span>item<span class="op">.</span><span class="fu">getProductId</span><span class="op">(),</span> item<span class="op">.</span><span class="fu">getQuantity</span><span class="op">(),</span> order<span class="op">.</span><span class="fu">getId</span><span class="op">());</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>                <span class="op">}</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">failure</span><span class="op">(</span><span class="st">"Payment failed: "</span> <span class="op">+</span> paymentResult<span class="op">.</span><span class="fu">getErrorMessage</span><span class="op">());</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>PaymentException e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Release inventory if payment throws exception</span></span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> <span class="op">(</span>OrderItem item <span class="op">:</span> order<span class="op">.</span><span class="fu">getItems</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>                inventoryService<span class="op">.</span><span class="fu">releaseInventory</span><span class="op">(</span>item<span class="op">.</span><span class="fu">getProductId</span><span class="op">(),</span> item<span class="op">.</span><span class="fu">getQuantity</span><span class="op">(),</span> order<span class="op">.</span><span class="fu">getId</span><span class="op">());</span></span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">failure</span><span class="op">(</span><span class="st">"Payment error: "</span> <span class="op">+</span> e<span class="op">.</span><span class="fu">getMessage</span><span class="op">());</span></span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Update order status</span></span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>        order<span class="op">.</span><span class="fu">setStatus</span><span class="op">(</span>OrderStatus<span class="op">.</span><span class="fu">PAID</span><span class="op">);</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>        order<span class="op">.</span><span class="fu">setPaymentId</span><span class="op">(</span>paymentResult<span class="op">.</span><span class="fu">getTransactionId</span><span class="op">());</span></span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        orderRepository<span class="op">.</span><span class="fu">save</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Create shipment</span></span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span> <span class="op">{</span></span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>            ShipmentResult shipmentResult <span class="op">=</span> shippingService<span class="op">.</span><span class="fu">createShipment</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="op">(</span>shipmentResult<span class="op">.</span><span class="fu">isSuccessful</span><span class="op">())</span> <span class="op">{</span></span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>                order<span class="op">.</span><span class="fu">setStatus</span><span class="op">(</span>OrderStatus<span class="op">.</span><span class="fu">SHIPPED</span><span class="op">);</span></span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>                order<span class="op">.</span><span class="fu">setTrackingNumber</span><span class="op">(</span>shipmentResult<span class="op">.</span><span class="fu">getTrackingNumber</span><span class="op">());</span></span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>                orderRepository<span class="op">.</span><span class="fu">save</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Shipment creation failed but payment succeeded</span></span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>                <span class="co">// Requires manual intervention</span></span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>                order<span class="op">.</span><span class="fu">setStatus</span><span class="op">(</span>OrderStatus<span class="op">.</span><span class="fu">PAYMENT_RECEIVED</span><span class="op">);</span></span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>                order<span class="op">.</span><span class="fu">setNotes</span><span class="op">(</span><span class="st">"Shipment creation failed: "</span> <span class="op">+</span> shipmentResult<span class="op">.</span><span class="fu">getErrorMessage</span><span class="op">());</span></span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>                orderRepository<span class="op">.</span><span class="fu">save</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>                notificationService<span class="op">.</span><span class="fu">notifyAdminOfShippingIssue</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>            <span class="op">}</span></span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span>ShippingException e<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Shipment creation threw exception</span></span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>            order<span class="op">.</span><span class="fu">setStatus</span><span class="op">(</span>OrderStatus<span class="op">.</span><span class="fu">PAYMENT_RECEIVED</span><span class="op">);</span></span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>            order<span class="op">.</span><span class="fu">setNotes</span><span class="op">(</span><span class="st">"Shipping error: "</span> <span class="op">+</span> e<span class="op">.</span><span class="fu">getMessage</span><span class="op">());</span></span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>            orderRepository<span class="op">.</span><span class="fu">save</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>            notificationService<span class="op">.</span><span class="fu">notifyAdminOfShippingIssue</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Send confirmation</span></span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>        notificationService<span class="op">.</span><span class="fu">sendOrderConfirmation</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-88"><a href="#cb7-88" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-89"><a href="#cb7-89" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> OrderResult<span class="op">.</span><span class="fu">success</span><span class="op">(</span>order<span class="op">);</span></span>
+<span id="cb7-90"><a href="#cb7-90" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb7-91"><a href="#cb7-91" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-92"><a href="#cb7-92" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Other methods...</span></span>
+<span id="cb7-93"><a href="#cb7-93" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Can you provide comprehensive JavaDoc documentation for this class and the processOrder method, explaining its purpose, the process flow, error handling, and any considerations for extending or modifying it?</p>
-<pre><code>
-## Knowledge Distribution in Teams
-
-### Collaborative Learning Patterns
-
-Intentional prompting in team settings requires effective knowledge sharing patterns:
-
-**Human prompt:**</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="knowledge-distribution-in-teams" class="level2" data-number="16.11">
+<h2 data-number="16.11" class="anchored" data-anchor-id="knowledge-distribution-in-teams"><span class="header-section-number">16.11</span> Knowledge Distribution in Teams</h2>
+<section id="collaborative-learning-patterns" class="level3" data-number="16.11.1">
+<h3 data-number="16.11.1" class="anchored"><span class="header-section-number">16.11.1</span> Collaborative Learning Patterns</h3>
+<p>Intentional prompting in team settings requires effective knowledge sharing patterns:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Our development team of 12 engineers is working on a complex system with multiple components. We’re finding that knowledge is becoming siloed, with each developer understanding only their area deeply.</p>
 <p>What collaboration patterns or team practices would help us maintain a shared understanding of the system while allowing for individual specialisation?</p>
-<pre><code>
-::: {.callout-note icon=false title="AI"}
-# Team Knowledge Sharing Patterns for Complex Systems
-
-To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
-
-## Regular Knowledge Exchange Practices
-
-### 1. Rotation-Based Code Reviews
-- **Approach**: Assign code reviews outside of a developer's primary area
-- **Frequency**: Every developer reviews code outside their specialty at least once per sprint
-- **Implementation**: Create a rotation schedule ensuring exposure to different components
-- **Benefits**: Cross-pollination of ideas and gradual knowledge distribution
-
-### 2. Architecture Decision Records (ADRs)
-- **Approach**: Document significant architectural decisions with context and rationale
-- **Content**: Problem statement, constraints, considered options, chosen solution, consequences
-- **Storage**: Keep in version control alongside the code
-- **Review**: Team-wide review of new ADRs in dedicated meetings
-
-### 3. Component Demo Sessions
-- **Approach**: Regular deep-dives into specific components
-- **Format**: 30-45 minute sessions with code walkthroughs, followed by Q&amp;A
-- **Frequency**: Weekly or bi-weekly, rotating through components
-- **Documentation**: Record sessions and summarise key points in a knowledge base
-
-### 4. Pair Programming Rotations
-- **Approach**: Scheduled pair programming sessions across component boundaries
-- **Duration**: Half-day sessions
-- **Frequency**: Bi-weekly for each developer
-- **Pairing**: Deliberate pairings of specialists with non-specialists
-
-## Documentation Practices
-
-### 5. Living Architecture Diagram
-- **Approach**: Maintain an always-current system architecture visualisation
-- **Ownership**: Rotating responsibility for updates
-- **Reviews**: Monthly team reviews to ensure accuracy
-- **Accessibility**: Prominently displayed in team spaces (physical and virtual)
-
-### 6. Component Fact Sheets
-- **Approach**: One-page summaries of each component's purpose, interfaces, and quirks
-- **Content**: Core responsibilities, key interfaces, common issues, future plans
-- **Updates**: Refresh quarterly or after major changes
-- **Usage**: Required reading for onboarding to a new component
-
-## Team Structure Adaptations
-
-### 7. Bounded Rotation Program
-- **Approach**: Planned rotations of developers between components
-- **Duration**: 4-8 weeks per rotation
-- **Scope**: Limited to 1-2 developers rotating at once to maintain continuity
-- **Knowledge Transfer**: Dedicated handoff sessions when starting/ending rotations
-
-### 8. Component Ambassadors
-- **Approach**: Each component has a primary owner and a secondary "ambassador"
-- **Ambassador Role**: Learn enough to answer questions and represent the component
-- **Rotation**: Ambassadors rotate every 3-6 months
-- **Responsibilities**: Attend cross-component design meetings, review integration points
-
-## Meeting Structures
-
-### 9. System-Wide Design Reviews
-- **Approach**: Regular reviews of how components interact
-- **Frequency**: Monthly
-- **Format**: Each team presents recent changes and upcoming work
-- **Focus**: Integration points and cross-cutting concerns
-
-### 10. Technical Brown Bags
-- **Approach**: Lunch-and-learn sessions on specific technical topics
-- **Presenters**: Rotating responsibility among team members
-- **Topics**: Both component-specific and general engineering practices
-- **Schedule**: Weekly or bi-weekly
-
-## Tooling and Infrastructure
-
-### 11. centralised Documentation Portal
-- **Approach**: Single entry point for all system documentation
-- **Content**: Component guides, architecture diagrams, ADRs, API docs
-- **Maintenance**: Part of definition of done for features
-- **Search**: Robust search functionality across all documentation
-
-### 12. Cross-Component Integration Tests
-- **Approach**: Shared ownership of integration test suite
-- **Responsibility**: All developers contribute to integration tests
-- **Reviews**: Cross-component review of test scenarios
-- **Visibility**: Integration test results prominently displayed
-
-## Implementation Strategy
-
-Rather than implementing all these patterns at once:
-
-1. **Start with 3-4 high-impact practices** based on your team's specific needs
-2. **Evaluate after 2-3 months** to assess effectiveness
-3. **Add or adjust practices** based on team feedback
-4. **Create explicit time allocations** for knowledge sharing activities
-
-These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
-:::
-
-
-### Documentation as Code
-
-Treat documentation as a first-class development artifact:
-
-**Human prompt:**</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<section id="team-knowledge-sharing-patterns-for-complex-systems" class="level1 callout-body-container callout-body" data-number="17">
+<h1 data-number="17"><span class="header-section-number">17</span> Team Knowledge Sharing Patterns for Complex Systems</h1>
+<p>To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:</p>
+<section id="regular-knowledge-exchange-practices" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="regular-knowledge-exchange-practices"><span class="header-section-number">17.1</span> Regular Knowledge Exchange Practices</h2>
+<section id="rotation-based-code-reviews" class="level3" data-number="17.1.1">
+<h3 data-number="17.1.1" class="anchored" data-anchor-id="rotation-based-code-reviews"><span class="header-section-number">17.1.1</span> 1. Rotation-Based Code Reviews</h3>
+<ul>
+<li><strong>Approach</strong>: Assign code reviews outside of a developer’s primary area</li>
+<li><strong>Frequency</strong>: Every developer reviews code outside their specialty at least once per sprint</li>
+<li><strong>Implementation</strong>: Create a rotation schedule ensuring exposure to different components</li>
+<li><strong>Benefits</strong>: Cross-pollination of ideas and gradual knowledge distribution</li>
+</ul>
+</section>
+<section id="architecture-decision-records-adrs" class="level3" data-number="17.1.2">
+<h3 data-number="17.1.2" class="anchored" data-anchor-id="architecture-decision-records-adrs"><span class="header-section-number">17.1.2</span> 2. Architecture Decision Records (ADRs)</h3>
+<ul>
+<li><strong>Approach</strong>: Document significant architectural decisions with context and rationale</li>
+<li><strong>Content</strong>: Problem statement, constraints, considered options, chosen solution, consequences</li>
+<li><strong>Storage</strong>: Keep in version control alongside the code</li>
+<li><strong>Review</strong>: Team-wide review of new ADRs in dedicated meetings</li>
+</ul>
+</section>
+<section id="component-demo-sessions" class="level3" data-number="17.1.3">
+<h3 data-number="17.1.3" class="anchored" data-anchor-id="component-demo-sessions"><span class="header-section-number">17.1.3</span> 3. Component Demo Sessions</h3>
+<ul>
+<li><strong>Approach</strong>: Regular deep-dives into specific components</li>
+<li><strong>Format</strong>: 30-45 minute sessions with code walkthroughs, followed by Q&amp;A</li>
+<li><strong>Frequency</strong>: Weekly or bi-weekly, rotating through components</li>
+<li><strong>Documentation</strong>: Record sessions and summarise key points in a knowledge base</li>
+</ul>
+</section>
+<section id="pair-programming-rotations" class="level3" data-number="17.1.4">
+<h3 data-number="17.1.4" class="anchored" data-anchor-id="pair-programming-rotations"><span class="header-section-number">17.1.4</span> 4. Pair Programming Rotations</h3>
+<ul>
+<li><strong>Approach</strong>: Scheduled pair programming sessions across component boundaries</li>
+<li><strong>Duration</strong>: Half-day sessions</li>
+<li><strong>Frequency</strong>: Bi-weekly for each developer</li>
+<li><strong>Pairing</strong>: Deliberate pairings of specialists with non-specialists</li>
+</ul>
+</section>
+</section>
+<section id="documentation-practices" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="documentation-practices"><span class="header-section-number">17.2</span> Documentation Practices</h2>
+<section id="living-architecture-diagram" class="level3" data-number="17.2.1">
+<h3 data-number="17.2.1" class="anchored" data-anchor-id="living-architecture-diagram"><span class="header-section-number">17.2.1</span> 5. Living Architecture Diagram</h3>
+<ul>
+<li><strong>Approach</strong>: Maintain an always-current system architecture visualisation</li>
+<li><strong>Ownership</strong>: Rotating responsibility for updates</li>
+<li><strong>Reviews</strong>: Monthly team reviews to ensure accuracy</li>
+<li><strong>Accessibility</strong>: Prominently displayed in team spaces (physical and virtual)</li>
+</ul>
+</section>
+<section id="component-fact-sheets" class="level3" data-number="17.2.2">
+<h3 data-number="17.2.2" class="anchored" data-anchor-id="component-fact-sheets"><span class="header-section-number">17.2.2</span> 6. Component Fact Sheets</h3>
+<ul>
+<li><strong>Approach</strong>: One-page summaries of each component’s purpose, interfaces, and quirks</li>
+<li><strong>Content</strong>: Core responsibilities, key interfaces, common issues, future plans</li>
+<li><strong>Updates</strong>: Refresh quarterly or after major changes</li>
+<li><strong>Usage</strong>: Required reading for onboarding to a new component</li>
+</ul>
+</section>
+</section>
+<section id="team-structure-adaptations" class="level2" data-number="17.3">
+<h2 data-number="17.3" class="anchored" data-anchor-id="team-structure-adaptations"><span class="header-section-number">17.3</span> Team Structure Adaptations</h2>
+<section id="bounded-rotation-program" class="level3" data-number="17.3.1">
+<h3 data-number="17.3.1" class="anchored" data-anchor-id="bounded-rotation-program"><span class="header-section-number">17.3.1</span> 7. Bounded Rotation Program</h3>
+<ul>
+<li><strong>Approach</strong>: Planned rotations of developers between components</li>
+<li><strong>Duration</strong>: 4-8 weeks per rotation</li>
+<li><strong>Scope</strong>: Limited to 1-2 developers rotating at once to maintain continuity</li>
+<li><strong>Knowledge Transfer</strong>: Dedicated handoff sessions when starting/ending rotations</li>
+</ul>
+</section>
+<section id="component-ambassadors" class="level3" data-number="17.3.2">
+<h3 data-number="17.3.2" class="anchored" data-anchor-id="component-ambassadors"><span class="header-section-number">17.3.2</span> 8. Component Ambassadors</h3>
+<ul>
+<li><strong>Approach</strong>: Each component has a primary owner and a secondary “ambassador”</li>
+<li><strong>Ambassador Role</strong>: Learn enough to answer questions and represent the component</li>
+<li><strong>Rotation</strong>: Ambassadors rotate every 3-6 months</li>
+<li><strong>Responsibilities</strong>: Attend cross-component design meetings, review integration points</li>
+</ul>
+</section>
+</section>
+<section id="meeting-structures" class="level2" data-number="17.4">
+<h2 data-number="17.4" class="anchored" data-anchor-id="meeting-structures"><span class="header-section-number">17.4</span> Meeting Structures</h2>
+<section id="system-wide-design-reviews" class="level3" data-number="17.4.1">
+<h3 data-number="17.4.1" class="anchored" data-anchor-id="system-wide-design-reviews"><span class="header-section-number">17.4.1</span> 9. System-Wide Design Reviews</h3>
+<ul>
+<li><strong>Approach</strong>: Regular reviews of how components interact</li>
+<li><strong>Frequency</strong>: Monthly</li>
+<li><strong>Format</strong>: Each team presents recent changes and upcoming work</li>
+<li><strong>Focus</strong>: Integration points and cross-cutting concerns</li>
+</ul>
+</section>
+<section id="technical-brown-bags" class="level3" data-number="17.4.2">
+<h3 data-number="17.4.2" class="anchored" data-anchor-id="technical-brown-bags"><span class="header-section-number">17.4.2</span> 10. Technical Brown Bags</h3>
+<ul>
+<li><strong>Approach</strong>: Lunch-and-learn sessions on specific technical topics</li>
+<li><strong>Presenters</strong>: Rotating responsibility among team members</li>
+<li><strong>Topics</strong>: Both component-specific and general engineering practices</li>
+<li><strong>Schedule</strong>: Weekly or bi-weekly</li>
+</ul>
+</section>
+</section>
+<section id="tooling-and-infrastructure" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="tooling-and-infrastructure"><span class="header-section-number">17.5</span> Tooling and Infrastructure</h2>
+<section id="centralised-documentation-portal" class="level3" data-number="17.5.1">
+<h3 data-number="17.5.1" class="anchored" data-anchor-id="centralised-documentation-portal"><span class="header-section-number">17.5.1</span> 11. centralised Documentation Portal</h3>
+<ul>
+<li><strong>Approach</strong>: Single entry point for all system documentation</li>
+<li><strong>Content</strong>: Component guides, architecture diagrams, ADRs, API docs</li>
+<li><strong>Maintenance</strong>: Part of definition of done for features</li>
+<li><strong>Search</strong>: Robust search functionality across all documentation</li>
+</ul>
+</section>
+<section id="cross-component-integration-tests" class="level3" data-number="17.5.2">
+<h3 data-number="17.5.2" class="anchored" data-anchor-id="cross-component-integration-tests"><span class="header-section-number">17.5.2</span> 12. Cross-Component Integration Tests</h3>
+<ul>
+<li><strong>Approach</strong>: Shared ownership of integration test suite</li>
+<li><strong>Responsibility</strong>: All developers contribute to integration tests</li>
+<li><strong>Reviews</strong>: Cross-component review of test scenarios</li>
+<li><strong>Visibility</strong>: Integration test results prominently displayed</li>
+</ul>
+</section>
+</section>
+<section id="implementation-strategy" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="implementation-strategy"><span class="header-section-number">17.6</span> Implementation Strategy</h2>
+<p>Rather than implementing all these patterns at once:</p>
+<ol type="1">
+<li><strong>Start with 3-4 high-impact practices</strong> based on your team’s specific needs</li>
+<li><strong>Evaluate after 2-3 months</strong> to assess effectiveness</li>
+<li><strong>Add or adjust practices</strong> based on team feedback</li>
+<li><strong>Create explicit time allocations</strong> for knowledge sharing activities</li>
+</ol>
+<p>These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.</p>
+</section>
+</section>
+</div>
+</section>
+<section id="documentation-as-code" class="level3" data-number="17.6.1">
+<h3 data-number="17.6.1" class="anchored" data-anchor-id="documentation-as-code"><span class="header-section-number">17.6.1</span> Documentation as Code</h3>
+<p>Treat documentation as a first-class development artifact:</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>We want to implement a “documentation as code” approach for our microservices architecture. This would mean: - Documentation lives alongside code in the repository - Documentation is reviewed and updated with code changes - Documentation is automatically generated and published</p>
 <p>What tools, practices, and workflows would you recommend for implementing this approach effectively?</p>
-<pre><code>
-## Practical Exercise: Scaling an Application
-
-Let's apply these principles to a practical exercise scaling a simple application to a more complex system.
-
-### Initial Simple Application
-
-**Human prompt:**</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="practical-exercise-scaling-an-application" class="level2" data-number="17.7">
+<h2 data-number="17.7" class="anchored" data-anchor-id="practical-exercise-scaling-an-application"><span class="header-section-number">17.7</span> Practical Exercise: Scaling an Application</h2>
+<p>Let’s apply these principles to a practical exercise scaling a simple application to a more complex system.</p>
+<section id="initial-simple-application" class="level3" data-number="17.7.1">
+<h3 data-number="17.7.1" class="anchored" data-anchor-id="initial-simple-application"><span class="header-section-number">17.7.1</span> Initial Simple Application</h3>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>I have a simple note-taking application with these components: - A React frontend for creating and viewing notes - A Node.js/Express backend with RESTful APIs - MongoDB for data storage</p>
 <p>Now I need to scale this to an enterprise collaboration platform with: - Team workspaces - Document sharing and editing - User permissions and roles - Activity tracking and notifications - Integration with other tools via webhooks</p>
-<p>How should I approach scaling this application architecture? What components would I need to add or modify, and how can I ensure the system remains maintainable as it grows? ```</p>
+<p>How should I approach scaling this application architecture? What components would I need to add or modify, and how can I ensure the system remains maintainable as it grows?</p>
+</div>
+</div>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="16.11">
-<h2 data-number="16.11" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">16.11</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="17.8">
+<h2 data-number="17.8" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">17.8</span> Key Takeaways</h2>
 <ul>
 <li>Scaling intentional prompting to complex projects requires architectural thinking</li>
 <li>Break down large systems into manageable components with clear boundaries</li>

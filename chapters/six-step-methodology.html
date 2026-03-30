@@ -744,15 +744,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="5.4.2" class="anchored" data-anchor-id="approach-2-the-six-step-methodology-with-ai-assistance"><span class="header-section-number">5.4.2</span> Approach 2: The Six-Step Methodology with AI Assistance</h3>
 <section id="step-1-restate-the-problem" class="level4" data-number="5.4.2.1">
 <h4 data-number="5.4.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem"><span class="header-section-number">5.4.2.1</span> Step 1: Restate the Problem</h4>
-<p><strong>Human prompt:</strong></p>
-<pre><code>I need to write a function that finds the longest palindromic substring in a given string. 
-Let me restate this problem to make sure I understand it correctly:
-
-I need to find the longest continuous sequence of characters within a string that reads 
-the same forward and backward. For example, in "babad", the longest palindromic substring 
-would be "bab" or "aba" (both are valid since they're the same length).
-
-Is this understanding correct? Are there any edge cases I should consider?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I need to write a function that finds the longest palindromic substring in a given string. Let me restate this problem to make sure I understand it correctly:</p>
+<p>I need to find the longest continuous sequence of characters within a string that reads the same forward and backward. For example, in “babad”, the longest palindromic substring would be “bab” or “aba” (both are valid since they’re the same length).</p>
+<p>Is this understanding correct? Are there any edge cases I should consider?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -770,19 +776,22 @@ Is this understanding correct? Are there any edge cases I should consider?</code
 </section>
 <section id="step-2-identify-inputs-and-outputs" class="level4" data-number="5.4.2.2">
 <h4 data-number="5.4.2.2" class="anchored" data-anchor-id="step-2-identify-inputs-and-outputs"><span class="header-section-number">5.4.2.2</span> Step 2: Identify Inputs and Outputs</h4>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Let me specify the input and output for this function:
-
-Input:
-- A string of characters (possibly empty)
-
-Output:
-- The longest palindromic substring within the input string
-- If there are multiple palindromic substrings with the same maximum length, returning any one of them is acceptable
-- If the string is empty, return an empty string
-- If there are no palindromes longer than 1 character, return the first character of the string
-
-Do these input and output specifications cover all the necessary cases?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let me specify the input and output for this function:</p>
+<p>Input: - A string of characters (possibly empty)</p>
+<p>Output: - The longest palindromic substring within the input string - If there are multiple palindromic substrings with the same maximum length, returning any one of them is acceptable - If the string is empty, return an empty string - If there are no palindromes longer than 1 character, return the first character of the string</p>
+<p>Do these input and output specifications cover all the necessary cases?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -807,16 +816,21 @@ Do these input and output specifications cover all the necessary cases?</code></
 <p>For “babad”: - Center at ‘b’ (index 0): Just ‘b’ (length 1) - Center at ‘a’ (index 1): ‘bab’ (length 3) - Center at ‘b’ (index 2): ‘bab’ (length 3) - Center at ‘a’ (index 3): ‘aba’ (length 3) - Center at ‘d’ (index 4): Just ‘d’ (length 1)</p>
 <p>Also check even-length palindromes: - Between ‘b’ and ‘a’ (0-1): None - Between ‘a’ and ‘b’ (1-2): None - Between ‘b’ and ‘a’ (2-3): None - Between ‘a’ and ‘d’ (3-4): None</p>
 <p>Longest palindromes: “bab” or “aba” (both length 3)</p>
-<p><strong>Human prompt:</strong></p>
-<pre><code>I've worked through the example "babad" by hand and found that the longest palindromic 
-substrings are "bab" and "aba", both of length 3.
-
-My approach was to check each position as a potential center of a palindrome and expand 
-outward while the characters match. I also checked for even-length palindromes that have 
-their center between two characters.
-
-Does this approach seem correct and efficient? Are there any algorithmic improvements 
-I should consider?</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I’ve worked through the example “babad” by hand and found that the longest palindromic substrings are “bab” and “aba”, both of length 3.</p>
+<p>My approach was to check each position as a potential center of a palindrome and expand outward while the characters match. I also checked for even-length palindromes that have their center between two characters.</p>
+<p>Does this approach seem correct and efficient? Are there any algorithmic improvements I should consider?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -836,35 +850,39 @@ I should consider?</code></pre>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="5.4.2.4">
 <h4 data-number="5.4.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">5.4.2.4</span> Step 4: Write Pseudocode</h4>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Based on my manual approach, let me write
-pseudocode for finding the longest palindromic
-substring:
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Based on my manual approach, let me write pseudocode for finding the longest palindromic substring:</p>
+<p>function longestPalindromicSubstring(string s): if s is empty, return “”</p>
+<pre><code>start = 0
+maxLength = 1
 
-function longestPalindromicSubstring(string s):
-    if s is empty, return ""
+function expandAroundCenter(left, right):
+    while left &gt;= 0 and right &lt; length of s
+          and s[left] equals s[right]:
+        if (right - left + 1) &gt; maxLength:
+            maxLength = right - left + 1
+            start = left
+        left = left - 1
+        right = right + 1
 
-    start = 0
-    maxLength = 1
+for i from 0 to length of s - 1:
+    expandAroundCenter(i, i)
+    expandAroundCenter(i, i + 1)
 
-    function expandAroundCenter(left, right):
-        while left &gt;= 0 and right &lt; length of s
-              and s[left] equals s[right]:
-            if (right - left + 1) &gt; maxLength:
-                maxLength = right - left + 1
-                start = left
-            left = left - 1
-            right = right + 1
-
-    for i from 0 to length of s - 1:
-        expandAroundCenter(i, i)
-        expandAroundCenter(i, i + 1)
-
-    return substring of s from start
-           to start + maxLength
-
-Does this pseudocode correctly implement the
-approach we discussed?</code></pre>
+return substring of s from start
+       to start + maxLength</code></pre>
+<p>Does this pseudocode correctly implement the approach we discussed?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -883,57 +901,79 @@ approach we discussed?</code></pre>
 </section>
 <section id="step-5-convert-to-code" class="level4" data-number="5.4.2.5">
 <h4 data-number="5.4.2.5" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">5.4.2.5</span> Step 5: Convert to Code</h4>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Now I'll convert my pseudocode to Python:
-
-```python
-def longest_palindromic_substring(s):
-    if not s:
-        return ""
-    
-    start = 0
-    max_length = 1
-    
-    def expand_around_center(left, right):
-        nonlocal start, max_length
-        while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
-            current_length = right - left + 1
-            if current_length &gt; max_length:
-                max_length = current_length
-                start = left
-            left -= 1
-            right += 1
-    
-    for i in range(len(s)):
-        # Odd length palindromes
-        expand_around_center(i, i)
-        
-        # Even length palindromes
-        expand_around_center(i, i+1)
-    
-    return s[start:start + max_length]</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Now I’ll convert my pseudocode to Python:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> longest_palindromic_substring(s):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> expand_around_center(left, right):</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="kw">nonlocal</span> start, max_length</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>            current_length <span class="op">=</span> right <span class="op">-</span> left <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> current_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> current_length</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> left</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Odd length palindromes</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        expand_around_center(i, i)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Even length palindromes</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        expand_around_center(i, i<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Can you review this code for correctness and suggest any improvements?</p>
-<pre><code>
-::: {.callout-note icon=false title="AI"}
-Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
-
-A few small observations:
-
-1. You've correctly used `nonlocal` to update the `start` and `max_length` variables from within the nested function.
-
-2. The algorithm handles both odd and even length palindromes properly by starting from different center positions.
-
-3. The time complexity is O(n²) and space complexity is O(1), which is efficient for most inputs.
-
-4. Your code handles the empty string case correctly.
-
-The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.
-:::
-
-
-#### Step 6: Test with Data
-
-**Human prompt:**</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.</p>
+<p>A few small observations:</p>
+<ol type="1">
+<li><p>You’ve correctly used <code>nonlocal</code> to update the <code>start</code> and <code>max_length</code> variables from within the nested function.</p></li>
+<li><p>The algorithm handles both odd and even length palindromes properly by starting from different center positions.</p></li>
+<li><p>The time complexity is O(n²) and space complexity is O(1), which is efficient for most inputs.</p></li>
+<li><p>Your code handles the empty string case correctly.</p></li>
+</ol>
+<p>The implementation is clean and efficient. The only possible optimisation would be implementing Manacher’s algorithm for linear time complexity, but that’s typically unnecessary unless you’re dealing with extremely large strings.</p>
+</div>
+</div>
+</section>
+<section id="step-6-test-with-data" class="level4" data-number="5.4.2.6">
+<h4 data-number="5.4.2.6" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">5.4.2.6</span> Step 6: Test with Data</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>You
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>Let’s test my function with various test cases:</p>
 <ol type="1">
 <li>Normal case: “babad” → Should return “bab” or “aba”</li>
@@ -944,7 +984,9 @@ The implementation is clean and efficient. The only possible optimisation would 
 <li>Multiple palindromes of same length: “aabbaa” → Should return “aabbaa”</li>
 <li>Even-length palindrome: “abba” → Should return “abba”</li>
 </ol>
-<p>Can you help me verify if my implementation handles all these cases correctly? ```</p>
+<p>Can you help me verify if my implementation handles all these cases correctly?</p>
+</div>
+</div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
