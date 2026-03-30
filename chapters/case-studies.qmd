@@ -1204,6 +1204,3 @@ From these case studies, we can extract several important lessons about intentio
    - Initial solutions often need refinement as scale and complexity increase
    - The methodology provides a framework for iterative improvement
 
-## Moving Forward
-
-In the next chapter, we'll explore how to scale intentional prompting to complex projects, moving beyond individual functions or modules to entire systems and codebases.

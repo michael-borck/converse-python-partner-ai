@@ -590,6 +590,3 @@ for test in test_cases:
 - Use AI to explain unfamiliar syntax or patterns rather than just accepting them
 - Test your implementation against a variety of inputs, especially edge cases
 
-## Moving Forward
-
-With a working implementation in hand, we now need to ensure it functions correctly under all conditions. In the next chapter, we'll explore Step 6: Testing with a variety of data, where we'll verify our solution's correctness and robustness.

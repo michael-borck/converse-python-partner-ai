@@ -531,6 +531,3 @@ Consider the context of your application:
 - Use pseudocode to compare alternative approaches before committing to implementation
 - Pseudocode forms the basis for function signatures and test plans
 
-## Moving Forward
-
-With well-developed pseudocode in hand, we're now ready to move to Step 5: Converting our logical blueprint into working code. In the next chapter, we'll explore strategies for implementing our pseudocode efficiently, leveraging AI assistance while maintaining human understanding and control.

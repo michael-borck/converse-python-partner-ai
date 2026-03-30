@@ -161,5 +161,3 @@ As AI coding assistants continue to evolve, we can expect:
 - More personalised assistance based on your coding style and preferences
 
 These advancements will not eliminate the need for skilled developers, but will continue to transform how we approach programming tasks and what skills are most valuable.
-
-In the next chapter, we'll explore the core principles of intentional prompting: the mindset and practices that enable you to maintain agency and maximise learning while leveraging AI assistance.

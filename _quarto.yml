@@ -44,9 +44,7 @@ book:
     - acknowledgments.qmd
     - about-author.qmd
   appendices:
-    - appendices/prompt-templates.qmd
     - appendices/common-pitfalls.qmd
-    - appendices/ai-tool-comparison.qmd
     - appendices/glossary.qmd
   repo-url: https://github.com/michael-borck/converse-python-partner-ai
   repo-actions: [edit, issue]
@@ -69,6 +67,12 @@ book:
     - text: All Books
       icon: collection
       href: https://books.borck.education
+    - text: Prompt Templates
+      icon: list-task
+      href: tools/prompt-templates.md
+    - text: AI Tool Comparison
+      icon: cpu
+      href: tools/ai-tool-comparison.md
 
 format:
   html:

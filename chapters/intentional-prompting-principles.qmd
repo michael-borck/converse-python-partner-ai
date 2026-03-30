@@ -425,5 +425,3 @@ By addressing these concerns directly and providing a structured framework for h
 ## Putting Principles Into Practice
 
 These principles (maintaining agency, understanding vs. copying, process over output, the learning mindset, ethical considerations, and addressing common concerns) form the foundation of intentional prompting.
-
-In the next section, we'll explore how these principles are applied through the six-step programming methodology, providing a structured approach to developing software with AI assistance.

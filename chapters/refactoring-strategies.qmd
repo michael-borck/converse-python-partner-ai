@@ -555,6 +555,3 @@ This UserService class has significant duplication in its methods. How would you
 - Common refactoring patterns like extracting methods and simplifying conditionals can be effectively implemented with AI assistance
 - Incremental, test-driven approaches minimise risk during refactoring
 
-## Moving Forward
-
-In the next chapter, we'll explore case studies that demonstrate the complete intentional prompting methodology in real-world situations, including both debugging and refactoring as part of larger development efforts.

@@ -868,6 +868,3 @@ How should I approach scaling this application architecture? What components wou
 - Treat documentation as a first-class artifact that evolves with the code
 - Use collaborative patterns to distribute knowledge across the team
 
-## Moving Forward
-
-In the next chapter, we'll explore how intentional prompting principles can be applied in teaching and learning contexts, helping both educators and students navigate programming education in the AI era.

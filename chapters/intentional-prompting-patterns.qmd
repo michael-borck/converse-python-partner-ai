@@ -525,5 +525,3 @@ The key to effective prompting was being specific about what needed improvement 
 3. Intentionally introducing challenges and constraints leads to better learning outcomes
 4. The best programmers aren't those who know all the answers, but those who know how to ask the right questions
 5. Specific, targeted follow-up prompts yield much better results than vague requests for improvement
-
-In the next chapter, we'll explore how these prompting patterns can be applied specifically to debugging tasks, creating a powerful workflow for solving problems in your code.

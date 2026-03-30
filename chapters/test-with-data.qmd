@@ -584,8 +584,3 @@ OK
 - Test failures provide valuable learning opportunities
 - The combination of human oversight and AI assistance leads to more robust solutions
 
-## Moving Forward
-
-With our solution thoroughly tested, we've completed the six-step methodology. This approach has helped us develop a correct and robust solution while maintaining human understanding and control throughout the process.
-
-In the next section of the book, we'll explore specific patterns and practices for intentional prompting, beginning with Chapter 10's exploration of intentional prompting patterns: techniques for guiding AI through complex programming tasks.

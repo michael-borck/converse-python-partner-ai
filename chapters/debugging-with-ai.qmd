@@ -727,6 +727,3 @@ Thank you for helping me trace through the algorithm; it confirmed that my bubbl
 - Root cause analysis is more valuable than symptom mitigation
 - Debugging is a process of investigation, not just code fixing
 
-## Moving Forward
-
-In the next chapter, we'll explore refactoring strategies with AI assistance, building on the debugging skills we've developed here to improve existing code rather than just fixing bugs.
