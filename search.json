@@ -335,7 +335,7 @@
     "href": "chapters/ai-revolution.html#looking-ahead",
     "title": "3  The AI Revolution in Programming",
     "section": "3.7 Looking Ahead",
-    "text": "3.7 Looking Ahead\nAs AI coding assistants continue to evolve, we can expect:\n\nGreater specialisation in domain-specific tools\nBetter integration with development workflows\nImproved reasoning about complex systems\nEnhanced ability to understand, refactor, and maintain legacy code\nMore personalised assistance based on your coding style and preferences\n\nThese advancements will not eliminate the need for skilled developers, but will continue to transform how we approach programming tasks and what skills are most valuable.\nIn the next chapter, we’ll explore the core principles of intentional prompting: the mindset and practices that enable you to maintain agency and maximise learning while leveraging AI assistance.",
+    "text": "3.7 Looking Ahead\nAs AI coding assistants continue to evolve, we can expect:\n\nGreater specialisation in domain-specific tools\nBetter integration with development workflows\nImproved reasoning about complex systems\nEnhanced ability to understand, refactor, and maintain legacy code\nMore personalised assistance based on your coding style and preferences\n\nThese advancements will not eliminate the need for skilled developers, but will continue to transform how we approach programming tasks and what skills are most valuable.",
     "crumbs": [
       "Foundations",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>The AI Revolution in Programming</span>"
@@ -445,7 +445,7 @@
     "href": "chapters/intentional-prompting-principles.html#putting-principles-into-practice",
     "title": "4  Principles of Intentional Prompting",
     "section": "4.9 Putting Principles Into Practice",
-    "text": "4.9 Putting Principles Into Practice\nThese principles (maintaining agency, understanding vs. copying, process over output, the learning mindset, ethical considerations, and addressing common concerns) form the foundation of intentional prompting.\nIn the next section, we’ll explore how these principles are applied through the six-step programming methodology, providing a structured approach to developing software with AI assistance.",
+    "text": "4.9 Putting Principles Into Practice\nThese principles (maintaining agency, understanding vs. copying, process over output, the learning mindset, ethical considerations, and addressing common concerns) form the foundation of intentional prompting.",
     "crumbs": [
       "Foundations",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Principles of Intentional Prompting</span>"
@@ -584,17 +584,6 @@
     ]
   },
   {
-    "objectID": "chapters/restate-and-identify.html#moving-forward",
-    "href": "chapters/restate-and-identify.html#moving-forward",
-    "title": "6  Restate and Identify (Steps 1-2)",
-    "section": "6.5 Moving Forward",
-    "text": "6.5 Moving Forward\nWith a clear problem restatement and detailed input/output specifications, you’ve built a solid foundation for the remaining steps of the methodology. You can now:\n\nWork through examples by hand with confidence that you understand the problem\nDevelop pseudocode that addresses the complete requirements\nImplement a solution that handles all identified edge cases\nTest against the comprehensive I/O specification you’ve developed\n\nIn the next chapter, we’ll explore Step 3: Working the problem by hand with concrete examples.",
-    "crumbs": [
-      "Methodology",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Restate and Identify (Steps 1-2)</span>"
-    ]
-  },
-  {
     "objectID": "chapters/work-by-hand.html",
     "href": "chapters/work-by-hand.html",
     "title": "7  Work by Hand (Step 3)",
@@ -683,17 +672,6 @@
     ]
   },
   {
-    "objectID": "chapters/work-by-hand.html#moving-forward",
-    "href": "chapters/work-by-hand.html#moving-forward",
-    "title": "7  Work by Hand (Step 3)",
-    "section": "7.8 Moving Forward",
-    "text": "7.8 Moving Forward\nWith a solid understanding of the problem gained through manual examples, we’re now ready to develop a structured approach to the solution. In the next chapter, we’ll explore Step 4: Writing pseudocode to outline our solution strategy.",
-    "crumbs": [
-      "Methodology",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Work by Hand (Step 3)</span>"
-    ]
-  },
-  {
     "objectID": "chapters/pseudocode.html",
     "href": "chapters/pseudocode.html",
     "title": "8  Pseudocode (Step 4)",
@@ -771,17 +749,6 @@
     ]
   },
   {
-    "objectID": "chapters/pseudocode.html#moving-forward",
-    "href": "chapters/pseudocode.html#moving-forward",
-    "title": "8  Pseudocode (Step 4)",
-    "section": "8.7 Moving Forward",
-    "text": "8.7 Moving Forward\nWith well-developed pseudocode in hand, we’re now ready to move to Step 5: Converting our logical blueprint into working code. In the next chapter, we’ll explore strategies for implementing our pseudocode efficiently, leveraging AI assistance while maintaining human understanding and control.",
-    "crumbs": [
-      "Methodology",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Pseudocode (Step 4)</span>"
-    ]
-  },
-  {
     "objectID": "chapters/convert-to-code.html",
     "href": "chapters/convert-to-code.html",
     "title": "9  Convert to Code (Step 5)",
@@ -848,17 +815,6 @@
     ]
   },
   {
-    "objectID": "chapters/convert-to-code.html#moving-forward",
-    "href": "chapters/convert-to-code.html#moving-forward",
-    "title": "9  Convert to Code (Step 5)",
-    "section": "9.6 Moving Forward",
-    "text": "9.6 Moving Forward\nWith a working implementation in hand, we now need to ensure it functions correctly under all conditions. In the next chapter, we’ll explore Step 6: Testing with a variety of data, where we’ll verify our solution’s correctness and robustness.",
-    "crumbs": [
-      "Methodology",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Convert to Code (Step 5)</span>"
-    ]
-  },
-  {
     "objectID": "chapters/test-with-data.html",
     "href": "chapters/test-with-data.html",
     "title": "10  Test with Data (Step 6)",
@@ -919,17 +875,6 @@
     "title": "10  Test with Data (Step 6)",
     "section": "10.5 Key Takeaways",
     "text": "10.5 Key Takeaways\n\nThorough testing is essential, even with AI-assisted implementation\nA comprehensive testing strategy includes functional tests, edge cases, stress tests, performance tests, and regression tests\nAI can help identify edge cases and generate test code\nTest failures provide valuable learning opportunities\nThe combination of human oversight and AI assistance leads to more robust solutions",
-    "crumbs": [
-      "Methodology",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Test with Data (Step 6)</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/test-with-data.html#moving-forward",
-    "href": "chapters/test-with-data.html#moving-forward",
-    "title": "10  Test with Data (Step 6)",
-    "section": "10.6 Moving Forward",
-    "text": "10.6 Moving Forward\nWith our solution thoroughly tested, we’ve completed the six-step methodology. This approach has helped us develop a correct and robust solution while maintaining human understanding and control throughout the process.\nIn the next section of the book, we’ll explore specific patterns and practices for intentional prompting, beginning with Chapter 10’s exploration of intentional prompting patterns: techniques for guiding AI through complex programming tasks.",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Test with Data (Step 6)</span>"
@@ -1039,7 +984,7 @@
     "href": "chapters/intentional-prompting-patterns.html#key-takeaways",
     "title": "11  Intentional Prompting Patterns",
     "section": "11.9 Key Takeaways",
-    "text": "11.9 Key Takeaways\n\nThe goal is not to get a perfect solution from the AI, but to use the interaction to deepen your understanding\nYour programming knowledge is demonstrated by the quality of your prompts\nIntentionally introducing challenges and constraints leads to better learning outcomes\nThe best programmers aren’t those who know all the answers, but those who know how to ask the right questions\nSpecific, targeted follow-up prompts yield much better results than vague requests for improvement\n\nIn the next chapter, we’ll explore how these prompting patterns can be applied specifically to debugging tasks, creating a powerful workflow for solving problems in your code.",
+    "text": "11.9 Key Takeaways\n\nThe goal is not to get a perfect solution from the AI, but to use the interaction to deepen your understanding\nYour programming knowledge is demonstrated by the quality of your prompts\nIntentionally introducing challenges and constraints leads to better learning outcomes\nThe best programmers aren’t those who know all the answers, but those who know how to ask the right questions\nSpecific, targeted follow-up prompts yield much better results than vague requests for improvement",
     "crumbs": [
       "Patterns & Practices",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Intentional Prompting Patterns</span>"
@@ -1112,17 +1057,6 @@
     ]
   },
   {
-    "objectID": "chapters/debugging-with-ai.html#moving-forward",
-    "href": "chapters/debugging-with-ai.html#moving-forward",
-    "title": "12  Debugging with AI",
-    "section": "12.6 Moving Forward",
-    "text": "12.6 Moving Forward\nIn the next chapter, we’ll explore refactoring strategies with AI assistance, building on the debugging skills we’ve developed here to improve existing code rather than just fixing bugs.",
-    "crumbs": [
-      "Patterns & Practices",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Debugging with AI</span>"
-    ]
-  },
-  {
     "objectID": "chapters/refactoring-strategies.html",
     "href": "chapters/refactoring-strategies.html",
     "title": "13  Refactoring Strategies",
@@ -1150,17 +1084,6 @@
     "title": "13  Refactoring Strategies",
     "section": "13.2 Key Takeaways",
     "text": "13.2 Key Takeaways\n\nRefactoring is about improving code structure without changing functionality\nAI assistants excel at identifying refactoring opportunities and suggesting improvements\nMeasure the impact of refactoring with both quantitative and qualitative metrics\nPreserve functionality during refactoring through comprehensive testing\nCommon refactoring patterns like extracting methods and simplifying conditionals can be effectively implemented with AI assistance\nIncremental, test-driven approaches minimise risk during refactoring",
-    "crumbs": [
-      "Patterns & Practices",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Refactoring Strategies</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/refactoring-strategies.html#moving-forward",
-    "href": "chapters/refactoring-strategies.html#moving-forward",
-    "title": "13  Refactoring Strategies",
-    "section": "13.3 Moving Forward",
-    "text": "13.3 Moving Forward\nIn the next chapter, we’ll explore case studies that demonstrate the complete intentional prompting methodology in real-world situations, including both debugging and refactoring as part of larger development efforts.",
     "crumbs": [
       "Patterns & Practices",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Refactoring Strategies</span>"
@@ -1205,17 +1128,6 @@
     "title": "14  Case Studies",
     "section": "14.3 Key Takeaways",
     "text": "14.3 Key Takeaways\nFrom these case studies, we can extract several important lessons about intentional prompting:\n\nStructured methodology yields better results\n\nFollowing all six steps produces more robust solutions than jumping straight to implementation\nEach step builds on the previous one, creating a solid foundation\n\nProblem exploration is time well spent\n\nRestating the problem and identifying inputs/outputs reveals critical requirements\nManual exploration uncovers edge cases that might otherwise be missed\n\nAI assistance enhances human capability\n\nAI helps identify potential issues and optimisations\nThe human developer maintains control over the approach and design decisions\n\nTesting is essential\n\nStarting with small, synthetic datasets verifies the approach before scaling\nComprehensive testing reveals potential issues early\n\nReal-world complexity requires adaptability\n\nInitial solutions often need refinement as scale and complexity increase\nThe methodology provides a framework for iterative improvement",
-    "crumbs": [
-      "Patterns & Practices",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Case Studies</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/case-studies.html#moving-forward",
-    "href": "chapters/case-studies.html#moving-forward",
-    "title": "14  Case Studies",
-    "section": "14.4 Moving Forward",
-    "text": "14.4 Moving Forward\nIn the next chapter, we’ll explore how to scale intentional prompting to complex projects, moving beyond individual functions or modules to entire systems and codebases.",
     "crumbs": [
       "Patterns & Practices",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Case Studies</span>"
@@ -1282,17 +1194,6 @@
     "title": "15  Scaling to Complex Projects",
     "section": "15.5 Key Takeaways",
     "text": "15.5 Key Takeaways\n\nScaling intentional prompting to complex projects requires architectural thinking\nBreak down large systems into manageable components with clear boundaries\nUse modular prompting strategies to help AI understand complex contexts\nAddress cross-cutting concerns systematically across the system\nInvest in comprehensive documentation and knowledge-sharing practices\nTreat documentation as a first-class artifact that evolves with the code\nUse collaborative patterns to distribute knowledge across the team",
-    "crumbs": [
-      "Advanced Topics",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Scaling to Complex Projects</span>"
-    ]
-  },
-  {
-    "objectID": "chapters/scaling-complexity.html#moving-forward",
-    "href": "chapters/scaling-complexity.html#moving-forward",
-    "title": "15  Scaling to Complex Projects",
-    "section": "15.6 Moving Forward",
-    "text": "15.6 Moving Forward\nIn the next chapter, we’ll explore how intentional prompting principles can be applied in teaching and learning contexts, helping both educators and students navigate programming education in the AI era.",
     "crumbs": [
       "Advanced Topics",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Scaling to Complex Projects</span>"
@@ -1539,355 +1440,146 @@
     ]
   },
   {
-    "objectID": "appendices/prompt-templates.html",
-    "href": "appendices/prompt-templates.html",
-    "title": "Appendix A — Prompt Templates",
-    "section": "",
-    "text": "A.1 Problem Analysis Templates\nThis appendix provides a collection of prompt templates that can be used as starting points for different programming tasks. These templates follow the intentional prompting patterns discussed in Chapter 10.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#problem-analysis-templates",
-    "href": "appendices/prompt-templates.html#problem-analysis-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "",
-    "text": "A.1.1 Understanding Requirements\nI need to write a program that [brief description of the problem].\n\nTo make sure I understand the requirements correctly:\n1. Is the goal to [restate the problem in your own words]?\n2. What inputs should the program accept?\n3. What should the output format be?\n4. Are there any specific constraints or edge cases I should consider?\n\n\nA.1.2 Exploring Problem Complexity\nI'm trying to understand the complexity of [problem description].\n\n1. What is the theoretical time complexity of solving this problem?\n2. Are there any known algorithms for this type of problem?\n3. What are the trade-offs between different approaches?",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#learning-oriented-templates",
-    "href": "appendices/prompt-templates.html#learning-oriented-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.2 Learning-Oriented Templates",
-    "text": "A.2 Learning-Oriented Templates\n\nA.2.1 Concept Explanation\nI'm trying to understand [programming concept].\n\n1. Can you explain this concept in simple terms?\n2. What problem does this concept solve?\n3. Can you show a simple example of it in use?\n4. What are common mistakes or misconceptions about this concept?\n\n\nA.2.2 Code Comprehension\nI'm trying to understand this code:\n\n[paste code]\n\n1. Can you explain what this code does, line by line?\n2. What is the purpose of [specific variable or function]?\n3. Are there any potential issues or inefficiencies in this implementation?",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#development-templates",
-    "href": "appendices/prompt-templates.html#development-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.3 Development Templates",
-    "text": "A.3 Development Templates\n\nA.3.1 Incremental Development\nI'm building a [description of program].\n\nSo far, I've implemented:\n[describe current functionality or paste code]\n\nNow, I want to add [new feature]. Can you help me:\n1. Design an approach for this feature\n2. Integrate it with my existing code\n3. Test that it works correctly\n\n\nA.3.2 Refactoring\nI have this working code:\n\n[paste code]\n\nI'd like to refactor it to improve [readability/performance/maintainability].\nSpecifically, I'm concerned about [specific issue].\n\nCan you suggest a better approach while maintaining the same functionality?",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#debugging-templates",
-    "href": "appendices/prompt-templates.html#debugging-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.4 Debugging Templates",
-    "text": "A.4 Debugging Templates\n\nA.4.1 Error Diagnosis\nI'm getting this error when running my code:\n\n[paste error message]\n\nHere's the relevant code:\n\n[paste code]\n\n1. What's causing this error?\n2. How can I fix it?\n3. How could I have prevented this error?\n\n\nA.4.2 Performance Issue\nMy code is running slower than expected:\n\n[paste code]\n\n1. Can you identify any performance bottlenecks?\n2. How could I optimise this code?\n3. Are there any built-in functions or libraries that would help?",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#architecture-templates",
-    "href": "appendices/prompt-templates.html#architecture-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.5 Architecture Templates",
-    "text": "A.5 Architecture Templates\n\nA.5.1 Design Pattern Selection\nI'm building a system that needs to [describe functionality].\n\nThe key requirements are:\n- [requirement 1]\n- [requirement 2]\n- [requirement 3]\n\nWhat design pattern(s) might be appropriate for this situation? \nFor each suggested pattern, could you explain:\n1. Why it fits this case\n2. How I would implement it\n3. Potential drawbacks or limitations\n\n\nA.5.2 Component Design\nI'm designing a [component type] that will [component purpose].\n\nIt needs to interact with:\n- [related component 1]\n- [related component 2]\n\nCan you help me design this component with:\n1. A clear interface (methods/functions it should expose)\n2. Internal data structures\n3. Error handling approach\n4. Testing strategy",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#testing-templates",
-    "href": "appendices/prompt-templates.html#testing-templates",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.6 Testing Templates",
-    "text": "A.6 Testing Templates\n\nA.6.1 Test Case Generation\nI've written this function:\n\n[paste function]\n\nCan you help me design a comprehensive set of test cases that cover:\n1. Normal operation\n2. Edge cases\n3. Error conditions\n4. Performance considerations\n\n\nA.6.2 Testing Strategy\nI'm building a [type of application] and need to develop a testing strategy.\n\nThe key features are:\n- [feature 1]\n- [feature 2]\n- [feature 3]\n\nWhat types of tests should I implement (unit, integration, etc.)?\nFor each type, what specific aspects should I focus on testing?",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/prompt-templates.html#using-these-templates-effectively",
-    "href": "appendices/prompt-templates.html#using-these-templates-effectively",
-    "title": "Appendix A — Prompt Templates",
-    "section": "A.7 Using These Templates Effectively",
-    "text": "A.7 Using These Templates Effectively\nThese templates are starting points, not rigid formulas. Adapt them to your specific needs and combine different templates as appropriate. The most effective prompting often involves:\n\nStarting with a clear problem statement\nProviding relevant context\nAsking specific, focused questions\nFollowing up with refinement questions based on the AI’s response\n\nRemember that the goal isn’t just to get a solution, but to engage in a dialogue that deepens your understanding and improves your programming skills.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Prompt Templates</span>"
-    ]
-  },
-  {
     "objectID": "appendices/common-pitfalls.html",
     "href": "appendices/common-pitfalls.html",
-    "title": "Appendix B — Common Pitfalls and Solutions",
+    "title": "Appendix A — Common Pitfalls and Solutions",
     "section": "",
-    "text": "B.1 Over-Reliance on AI\nWhen working with AI coding assistants, certain patterns of challenges tend to emerge. This appendix catalogues common pitfalls in the intentional prompting process and provides practical strategies for avoiding or addressing them.",
+    "text": "A.1 Over-Reliance on AI\nWhen working with AI coding assistants, certain patterns of challenges tend to emerge. This appendix catalogues common pitfalls in the intentional prompting process and provides practical strategies for avoiding or addressing them.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#over-reliance-on-ai",
     "href": "appendices/common-pitfalls.html#over-reliance-on-ai",
-    "title": "Appendix B — Common Pitfalls and Solutions",
+    "title": "Appendix A — Common Pitfalls and Solutions",
     "section": "",
-    "text": "B.1.1 Symptoms\n\nAccepting AI-generated code without critical evaluation\nInability to explain how your code works\nDiscomfort when working without AI assistance\nDecreasing ability to solve problems independently\n\n\n\nB.1.2 Root Causes\n\nConvenience of immediate solutions\nPressure to deliver quickly\nGradual atrophy of independent problem-solving skills\nIncomplete understanding of the problem domain\n\n\n\nB.1.3 Solutions\n\nB.1.3.1 Intentional Skill Building\n\nSchedule regular “AI-free” coding sessions to maintain core skills\nImplement a personal rule to solve problems manually first, then verify with AI\nCreate deliberate learning challenges in unfamiliar areas\n\n\n\nB.1.3.2 Critical Evaluation Process\n\nEstablish a personal checklist for evaluating AI-generated code\nAlways trace through at least one test case manually\nAsk “why” questions about design decisions in AI-generated code\nLook for potential edge cases that might not be handled\n\n\n\nB.1.3.3 Balance Strategies\n\nUse the six-step methodology to ensure you understand the problem before seeking AI solutions\nDistinguish between areas where you need to build expertise (limit AI use) and areas where you can leverage AI more heavily\nSet clear boundaries for when and how you use AI assistance",
+    "text": "A.1.1 Symptoms\n\nAccepting AI-generated code without critical evaluation\nInability to explain how your code works\nDiscomfort when working without AI assistance\nDecreasing ability to solve problems independently\n\n\n\nA.1.2 Root Causes\n\nConvenience of immediate solutions\nPressure to deliver quickly\nGradual atrophy of independent problem-solving skills\nIncomplete understanding of the problem domain\n\n\n\nA.1.3 Solutions\n\nA.1.3.1 Intentional Skill Building\n\nSchedule regular “AI-free” coding sessions to maintain core skills\nImplement a personal rule to solve problems manually first, then verify with AI\nCreate deliberate learning challenges in unfamiliar areas\n\n\n\nA.1.3.2 Critical Evaluation Process\n\nEstablish a personal checklist for evaluating AI-generated code\nAlways trace through at least one test case manually\nAsk “why” questions about design decisions in AI-generated code\nLook for potential edge cases that might not be handled\n\n\n\nA.1.3.3 Balance Strategies\n\nUse the six-step methodology to ensure you understand the problem before seeking AI solutions\nDistinguish between areas where you need to build expertise (limit AI use) and areas where you can leverage AI more heavily\nSet clear boundaries for when and how you use AI assistance",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#unclear-prompt-formulation",
     "href": "appendices/common-pitfalls.html#unclear-prompt-formulation",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.2 Unclear Prompt Formulation",
-    "text": "B.2 Unclear Prompt Formulation\n\nB.2.1 Symptoms\n\nReceiving irrelevant or incorrect solutions\nNeeding many iterations to get useful responses\nFinding yourself frustrated with AI “not understanding” what you want\nReceiving overly generic or simplistic answers\n\n\n\nB.2.2 Root Causes\n\nAmbiguous problem descriptions\nMissing context or requirements\nUnexpressed assumptions\nImprecise terminology\n\n\n\nB.2.3 Solutions\n\nB.2.3.1 Structured Prompting Framework\n\nUse the templates from Appendix A as starting points\nBreak complex requirements into clear, specific points\nInclude explicit constraints and edge cases\nSpecify the level of detail needed in the response\n\n\n\nB.2.3.2 Context Enhancement\n\nProvide relevant background information\nInclude code snippets that show the context\nSpecify the programming language and framework\nDescribe the broader system architecture when relevant\n\n\n\nB.2.3.3 Iterative Refinement\n\nStart with a basic prompt and refine based on initial responses\nUse phrases like “Let me clarify…” to correct misunderstandings\nBuild upon partial successes rather than completely changing approach\nMaintain a library of effective prompts for common tasks",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.2 Unclear Prompt Formulation",
+    "text": "A.2 Unclear Prompt Formulation\n\nA.2.1 Symptoms\n\nReceiving irrelevant or incorrect solutions\nNeeding many iterations to get useful responses\nFinding yourself frustrated with AI “not understanding” what you want\nReceiving overly generic or simplistic answers\n\n\n\nA.2.2 Root Causes\n\nAmbiguous problem descriptions\nMissing context or requirements\nUnexpressed assumptions\nImprecise terminology\n\n\n\nA.2.3 Solutions\n\nA.2.3.1 Structured Prompting Framework\n\nUse the templates from Appendix A as starting points\nBreak complex requirements into clear, specific points\nInclude explicit constraints and edge cases\nSpecify the level of detail needed in the response\n\n\n\nA.2.3.2 Context Enhancement\n\nProvide relevant background information\nInclude code snippets that show the context\nSpecify the programming language and framework\nDescribe the broader system architecture when relevant\n\n\n\nA.2.3.3 Iterative Refinement\n\nStart with a basic prompt and refine based on initial responses\nUse phrases like “Let me clarify…” to correct misunderstandings\nBuild upon partial successes rather than completely changing approach\nMaintain a library of effective prompts for common tasks",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#accepting-incorrect-solutions",
     "href": "appendices/common-pitfalls.html#accepting-incorrect-solutions",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.3 Accepting Incorrect Solutions",
-    "text": "B.3 Accepting Incorrect Solutions\n\nB.3.1 Symptoms\n\nDiscovering bugs after implementation that were present in the AI suggestion\nReceiving user reports of edge case failures\nFinding that AI-generated solutions don’t integrate well with existing code\nCode reviews identifying fundamental flaws in approach\n\n\n\nB.3.2 Root Causes\n\nInsufficient validation of proposed solutions\nMisplaced trust in AI capabilities\nPressure to deliver quickly\nGaps in your own understanding of requirements\n\n\n\nB.3.3 Solutions\n\nB.3.3.1 Systematic Verification\n\nAlways test AI-generated code with multiple inputs, especially edge cases\nReview security implications, particularly for input handling and data access\nCheck for performance issues with realistic data volumes\nVerify integration points with existing systems\n\n\n\nB.3.3.2 Understanding Before Implementation\n\nRequest explanations of unfamiliar patterns in generated code\nStep through complex algorithms manually with example data\nCompare against alternative approaches\nEnsure you can explain every part of the solution yourself\n\n\n\nB.3.3.3 Incremental Adoption\n\nIntegrate AI-generated code in small, testable chunks\nStart with non-critical components to build confidence\nImplement monitoring for new components to catch issues early\nCreate comprehensive tests before implementing AI suggestions",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.3 Accepting Incorrect Solutions",
+    "text": "A.3 Accepting Incorrect Solutions\n\nA.3.1 Symptoms\n\nDiscovering bugs after implementation that were present in the AI suggestion\nReceiving user reports of edge case failures\nFinding that AI-generated solutions don’t integrate well with existing code\nCode reviews identifying fundamental flaws in approach\n\n\n\nA.3.2 Root Causes\n\nInsufficient validation of proposed solutions\nMisplaced trust in AI capabilities\nPressure to deliver quickly\nGaps in your own understanding of requirements\n\n\n\nA.3.3 Solutions\n\nA.3.3.1 Systematic Verification\n\nAlways test AI-generated code with multiple inputs, especially edge cases\nReview security implications, particularly for input handling and data access\nCheck for performance issues with realistic data volumes\nVerify integration points with existing systems\n\n\n\nA.3.3.2 Understanding Before Implementation\n\nRequest explanations of unfamiliar patterns in generated code\nStep through complex algorithms manually with example data\nCompare against alternative approaches\nEnsure you can explain every part of the solution yourself\n\n\n\nA.3.3.3 Incremental Adoption\n\nIntegrate AI-generated code in small, testable chunks\nStart with non-critical components to build confidence\nImplement monitoring for new components to catch issues early\nCreate comprehensive tests before implementing AI suggestions",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#losing-track-of-the-big-picture",
     "href": "appendices/common-pitfalls.html#losing-track-of-the-big-picture",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.4 Losing Track of the Big Picture",
-    "text": "B.4 Losing Track of the Big Picture\n\nB.4.1 Symptoms\n\nSolutions that solve immediate problems but create architectural issues\nInconsistent patterns across different parts of the codebase\nDifficulty explaining how components fit together\nGrowing technical debt from expedient but uncoordinated decisions\n\n\n\nB.4.2 Root Causes\n\nFocus on tactical code generation rather than strategic design\nAI’s limited context window and understanding of full system\nSolving problems in isolation without system-wide perspective\nMissing architectural guidelines for AI collaboration\n\n\n\nB.4.3 Solutions\n\nB.4.3.1 Architectural Discipline\n\nEstablish clear architectural principles to guide AI prompting\nRegularly review how individual components fit into the overall system\nMaintain up-to-date architecture diagrams to reference during development\nUse the six-step methodology to ensure each solution aligns with system goals\n\n\n\nB.4.3.2 Documentation-First Approach\n\nDocument design decisions before implementing them\nCreate clear interface specifications before coding\nMaintain a “source of truth” for architectural patterns\nImplement an architecture decision record (ADR) process\n\n\n\nB.4.3.3 System-Level Review\n\nPeriodically step back to assess the entire system\nSchedule “architectural reviews” to identify drift from intended design\nUse visualisation tools to understand system evolution\nConsider how individual changes affect system properties (performance, security, maintainability)",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.4 Losing Track of the Big Picture",
+    "text": "A.4 Losing Track of the Big Picture\n\nA.4.1 Symptoms\n\nSolutions that solve immediate problems but create architectural issues\nInconsistent patterns across different parts of the codebase\nDifficulty explaining how components fit together\nGrowing technical debt from expedient but uncoordinated decisions\n\n\n\nA.4.2 Root Causes\n\nFocus on tactical code generation rather than strategic design\nAI’s limited context window and understanding of full system\nSolving problems in isolation without system-wide perspective\nMissing architectural guidelines for AI collaboration\n\n\n\nA.4.3 Solutions\n\nA.4.3.1 Architectural Discipline\n\nEstablish clear architectural principles to guide AI prompting\nRegularly review how individual components fit into the overall system\nMaintain up-to-date architecture diagrams to reference during development\nUse the six-step methodology to ensure each solution aligns with system goals\n\n\n\nA.4.3.2 Documentation-First Approach\n\nDocument design decisions before implementing them\nCreate clear interface specifications before coding\nMaintain a “source of truth” for architectural patterns\nImplement an architecture decision record (ADR) process\n\n\n\nA.4.3.3 System-Level Review\n\nPeriodically step back to assess the entire system\nSchedule “architectural reviews” to identify drift from intended design\nUse visualisation tools to understand system evolution\nConsider how individual changes affect system properties (performance, security, maintainability)",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#ethical-and-legal-concerns",
     "href": "appendices/common-pitfalls.html#ethical-and-legal-concerns",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.5 Ethical and Legal Concerns",
-    "text": "B.5 Ethical and Legal Concerns\n\nB.5.1 Symptoms\n\nUncertainty about code ownership and attribution\nPotential licence violations from AI-suggested code\nReuse of code with unclear provenance\nPrivacy or security implications in generated solutions\n\n\n\nB.5.2 Root Causes\n\nUnclear understanding of AI training data sources\nLimited transparency in how AI generates responses\nEvolving legal landscape around AI-generated content\nLack of established ethics frameworks for AI coding assistants\n\n\n\nB.5.3 Solutions\n\nB.5.3.1 Responsible AI Usage\n\nUnderstand how your AI assistant was trained and what data it uses\nReview AI-generated code for potential intellectual property issues\nFollow your organisation’s guidelines for AI use\nConsider the ethical implications of automated decision-making in your code\n\n\n\nB.5.3.2 Documentation and Transparency\n\nDocument when and how AI assistance was used\nMaintain clear attribution for code sources\nKeep records of significant prompts used in development\nBe transparent with stakeholders about AI’s role in development\n\n\n\nB.5.3.3 Verification Processes\n\nImplement review processes specifically for AI-generated code\nCheck for known security vulnerabilities in suggested solutions\nVerify that solutions meet regulatory requirements\nConsider third-party audits for critical systems",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.5 Ethical and Legal Concerns",
+    "text": "A.5 Ethical and Legal Concerns\n\nA.5.1 Symptoms\n\nUncertainty about code ownership and attribution\nPotential licence violations from AI-suggested code\nReuse of code with unclear provenance\nPrivacy or security implications in generated solutions\n\n\n\nA.5.2 Root Causes\n\nUnclear understanding of AI training data sources\nLimited transparency in how AI generates responses\nEvolving legal landscape around AI-generated content\nLack of established ethics frameworks for AI coding assistants\n\n\n\nA.5.3 Solutions\n\nA.5.3.1 Responsible AI Usage\n\nUnderstand how your AI assistant was trained and what data it uses\nReview AI-generated code for potential intellectual property issues\nFollow your organisation’s guidelines for AI use\nConsider the ethical implications of automated decision-making in your code\n\n\n\nA.5.3.2 Documentation and Transparency\n\nDocument when and how AI assistance was used\nMaintain clear attribution for code sources\nKeep records of significant prompts used in development\nBe transparent with stakeholders about AI’s role in development\n\n\n\nA.5.3.3 Verification Processes\n\nImplement review processes specifically for AI-generated code\nCheck for known security vulnerabilities in suggested solutions\nVerify that solutions meet regulatory requirements\nConsider third-party audits for critical systems",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#prompt-pattern-case-studies",
     "href": "appendices/common-pitfalls.html#prompt-pattern-case-studies",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.6 Prompt Pattern Case Studies",
-    "text": "B.6 Prompt Pattern Case Studies\n\nB.6.1 Case Study 1: Debugging a Complex Algorithm\n\nB.6.1.1 Problematic Approach\nInitial prompt:\nFix this sorting algorithm, it's not working correctly.\n\n[code snippet]\nIssues: - Vague problem description - No information about how it’s failing - No context about requirements or constraints\n\n\nB.6.1.2 Improved Approach\nBetter prompt:\nI'm debugging this merge sort implementation that fails when the input contains duplicate values.\n\n[code snippet]\n\nSpecific issues:\n1. When input contains duplicates (e.g., [3,1,3,2]), it produces [1,2,3] instead of [1,2,3,3]\n2. It works correctly for inputs without duplicates\n\nI suspect the issue is in the merging step, but I'm not sure exactly what's wrong.\nCan you help identify the bug and explain how to fix it?\nImprovements: - Specific algorithm identified (merge sort) - Clear description of the failure case - Example input and expected output provided - Indication of where the bug might be located\n\n\n\nB.6.2 Case Study 2: Implementing a New Feature\n\nB.6.2.1 Problematic Approach\nInitial prompt:\nWrite a user authentication system for my web app.\nIssues: - Extremely broad scope - No information about the technology stack - No specific requirements or constraints - No context about the existing application\n\n\nB.6.2.2 Improved Approach\nBetter prompt:\nI need to implement user authentication for a React/Node.js web application.\n\nRequirements:\n- JWT-based authentication\n- Support for email/password login\n- Password reset functionality\n- Role-based authorization (admin and regular users)\n- Integration with existing MongoDB user collection\n\nCurrent user schema:\n```json\n{\n  \"email\": String,\n  \"name\": String,\n  \"created_at\": Date\n}\nI’d like to: 1. Update the user schema to support authentication 2. Implement the backend endpoints for login, registration, and password reset 3. Create a middleware for protecting routes based on authentication 4. Set up the frontend components for the login flow\nCan you help me with the schema design and backend implementation first? ```\nImprovements: - Specific technology stack identified - Clear, detailed requirements - Existing schema provided for context - Scope broken down into manageable parts - Clear starting point specified",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.6 Prompt Pattern Case Studies",
+    "text": "A.6 Prompt Pattern Case Studies\n\nA.6.1 Case Study 1: Debugging a Complex Algorithm\n\nA.6.1.1 Problematic Approach\nInitial prompt:\nFix this sorting algorithm, it's not working correctly.\n\n[code snippet]\nIssues: - Vague problem description - No information about how it’s failing - No context about requirements or constraints\n\n\nA.6.1.2 Improved Approach\nBetter prompt:\nI'm debugging this merge sort implementation that fails when the input contains duplicate values.\n\n[code snippet]\n\nSpecific issues:\n1. When input contains duplicates (e.g., [3,1,3,2]), it produces [1,2,3] instead of [1,2,3,3]\n2. It works correctly for inputs without duplicates\n\nI suspect the issue is in the merging step, but I'm not sure exactly what's wrong.\nCan you help identify the bug and explain how to fix it?\nImprovements: - Specific algorithm identified (merge sort) - Clear description of the failure case - Example input and expected output provided - Indication of where the bug might be located\n\n\n\nA.6.2 Case Study 2: Implementing a New Feature\n\nA.6.2.1 Problematic Approach\nInitial prompt:\nWrite a user authentication system for my web app.\nIssues: - Extremely broad scope - No information about the technology stack - No specific requirements or constraints - No context about the existing application\n\n\nA.6.2.2 Improved Approach\nBetter prompt:\nI need to implement user authentication for a React/Node.js web application.\n\nRequirements:\n- JWT-based authentication\n- Support for email/password login\n- Password reset functionality\n- Role-based authorization (admin and regular users)\n- Integration with existing MongoDB user collection\n\nCurrent user schema:\n```json\n{\n  \"email\": String,\n  \"name\": String,\n  \"created_at\": Date\n}\nI’d like to: 1. Update the user schema to support authentication 2. Implement the backend endpoints for login, registration, and password reset 3. Create a middleware for protecting routes based on authentication 4. Set up the frontend components for the login flow\nCan you help me with the schema design and backend implementation first? ```\nImprovements: - Specific technology stack identified - Clear, detailed requirements - Existing schema provided for context - Scope broken down into manageable parts - Clear starting point specified",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#confusing-prompt-engineering-with-intentional-prompting",
     "href": "appendices/common-pitfalls.html#confusing-prompt-engineering-with-intentional-prompting",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.7 Confusing Prompt Engineering with Intentional Prompting",
-    "text": "B.7 Confusing Prompt Engineering with Intentional Prompting\n\nB.7.1 Symptoms\n\nFocusing exclusively on crafting the perfect prompt to get complete solutions\nNeglecting the manual work and understanding phases of the methodology\nMeasuring success solely by the quality of AI outputs rather than learning outcomes\nMinimal critical evaluation of AI-generated solutions\nSkipping the six-step methodology and moving directly to implementation\n\n\n\nB.7.2 Root Causes\n\nMisconception that intentional prompting is just about creating better prompts\nPrioritising short-term efficiency over long-term understanding\nNot fully grasping the educational purpose of the intentional prompting methodology\nConfusing the means (good prompts) with the end (developer understanding and growth)\n\n\n\nB.7.3 Solutions\n\nB.7.3.1 Clarify the Distinction\n\nRemember that prompt engineering is a set of techniques while intentional prompting is a complete methodology\nrecognise that prompt engineering focuses on getting optimal outputs while intentional prompting focuses on the human development process\nUnderstand that prompt engineering is a component of intentional prompting, not a replacement for it\n\n\n\nB.7.3.2 Balance Output and Process\n\nFollow the complete six-step methodology even when it seems faster to skip steps\nEvaluate success based on both the quality of the solution AND your understanding of it\nSet aside time specifically for the “Work by Hand” and “Test with Data” steps, which are often neglected\nDocument your learning insights separate from code outputs\n\n\n\nB.7.3.3 Adopt a Learning Mindset\n\nAsk AI to explain its solutions rather than just accepting them\nChallenge yourself to modify and extend AI-generated code\nPractice explaining solutions to others without referring to AI explanations\nIdentify gaps in your understanding and use AI to fill them deliberately",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.7 Confusing Prompt Engineering with Intentional Prompting",
+    "text": "A.7 Confusing Prompt Engineering with Intentional Prompting\n\nA.7.1 Symptoms\n\nFocusing exclusively on crafting the perfect prompt to get complete solutions\nNeglecting the manual work and understanding phases of the methodology\nMeasuring success solely by the quality of AI outputs rather than learning outcomes\nMinimal critical evaluation of AI-generated solutions\nSkipping the six-step methodology and moving directly to implementation\n\n\n\nA.7.2 Root Causes\n\nMisconception that intentional prompting is just about creating better prompts\nPrioritising short-term efficiency over long-term understanding\nNot fully grasping the educational purpose of the intentional prompting methodology\nConfusing the means (good prompts) with the end (developer understanding and growth)\n\n\n\nA.7.3 Solutions\n\nA.7.3.1 Clarify the Distinction\n\nRemember that prompt engineering is a set of techniques while intentional prompting is a complete methodology\nrecognise that prompt engineering focuses on getting optimal outputs while intentional prompting focuses on the human development process\nUnderstand that prompt engineering is a component of intentional prompting, not a replacement for it\n\n\n\nA.7.3.2 Balance Output and Process\n\nFollow the complete six-step methodology even when it seems faster to skip steps\nEvaluate success based on both the quality of the solution AND your understanding of it\nSet aside time specifically for the “Work by Hand” and “Test with Data” steps, which are often neglected\nDocument your learning insights separate from code outputs\n\n\n\nA.7.3.3 Adopt a Learning Mindset\n\nAsk AI to explain its solutions rather than just accepting them\nChallenge yourself to modify and extend AI-generated code\nPractice explaining solutions to others without referring to AI explanations\nIdentify gaps in your understanding and use AI to fill them deliberately",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/common-pitfalls.html#key-takeaways",
     "href": "appendices/common-pitfalls.html#key-takeaways",
-    "title": "Appendix B — Common Pitfalls and Solutions",
-    "section": "B.8 Key Takeaways",
-    "text": "B.8 Key Takeaways\n\nBe intentional about balancing AI assistance with skill development to maintain your capabilities\nInvest time in clear, detailed prompts to save time in iterative refinement\nAlways verify AI-generated solutions through testing and manual review\nMaintain system-level perspective when implementing individual components\nAddress ethical and legal concerns proactively through documentation and transparent processes\nLearn from failures by analysing and improving your prompting approach\nDistinguish between prompt engineering techniques and the intentional prompting methodology\n\nBy recognising and addressing these common pitfalls, you can maximise the benefits of AI assistance while avoiding its potential drawbacks.",
+    "title": "Appendix A — Common Pitfalls and Solutions",
+    "section": "A.8 Key Takeaways",
+    "text": "A.8 Key Takeaways\n\nBe intentional about balancing AI assistance with skill development to maintain your capabilities\nInvest time in clear, detailed prompts to save time in iterative refinement\nAlways verify AI-generated solutions through testing and manual review\nMaintain system-level perspective when implementing individual components\nAddress ethical and legal concerns proactively through documentation and transparent processes\nLearn from failures by analysing and improving your prompting approach\nDistinguish between prompt engineering techniques and the intentional prompting methodology\n\nBy recognising and addressing these common pitfalls, you can maximise the benefits of AI assistance while avoiding its potential drawbacks.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html",
-    "href": "appendices/ai-tool-comparison.html",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "",
-    "text": "C.1 Approaches to AI-Assisted Programming\nThe landscape of AI coding assistants is rapidly evolving, with new tools and capabilities emerging regularly. This appendix provides a comparative analysis of major AI coding tools available at the time of writing, highlighting their strengths, limitations, and optimal use cases.\nBefore comparing specific tools, it’s valuable to understand the different approaches to AI-assisted programming. Each represents a distinct philosophy about how humans and AI should collaborate in the development process.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#approaches-to-ai-assisted-programming",
-    "href": "appendices/ai-tool-comparison.html#approaches-to-ai-assisted-programming",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "",
-    "text": "C.1.1 Comparative Framework for AI Programming Approaches\n\n\n\n\n\n\n\n\n\n\n\nAspect\nIntentional Prompting\nPrompt Engineering\nPseudocode for LLMs\nAgentic Programming\nVibe Programming/Coding\n\n\n\n\nPrimary Goal\nHuman understanding, skill development, and quality output\nOptimal AI responses through precise instructions\nClear communication of algorithmic intent\nAutonomous task completion\nFast output with minimal effort\n\n\nUnderlying Philosophy\nAI as collaborative partner with human as director\nAI as powerful tool that requires proper instructions\nBridge between natural language and formal code\nAI as autonomous agent with human oversight\nAI as solution provider\n\n\nCore Methodology\nSix-step structured approach (restate, identify, work by hand, pseudocode, convert, test)\nTechnique-based (zero-shot, few-shot, chain-of-thought)\nSemi-formal notation with structured patterns\nAgent-driven workflows with intervention points\nConversational, iterative prompting\n\n\nHuman Involvement\nHigh; human directs process and makes key decisions\nMedium; human crafts prompts and evaluates responses\nMedium-high; human expresses intent through structured pseudocode\nLow-medium; human provides oversight and validation\nLow; human describes desired outcome\n\n\nLearning Outcome\nProgressive skill development and deeper understanding\nImproved prompt crafting skills\nBetter algorithm communication skills\nSystem design and oversight capabilities\nMinimal technical growth\n\n\nKnowledge Transfer\nStrong; process facilitates team understanding\nLimited; often relies on prompt expertise\nMedium; standardised pseudocode aids sharing\nLimited; often creates “black boxes”\nWeak; often creates knowledge silos\n\n\nCode Quality Focus\nHigh; emphasises understanding, maintainability\nMedium; focuses on correctness over style\nMedium-high; promotes algorithmic clarity\nVariable; depends on agent capabilities\nLow; prioritises working functionality\n\n\nIdeal Use Cases\nEducational contexts, complex systems, team environments\nSpecific technical problems, content generation\nComplex algorithms, cross-language implementation\nRoutine tasks, code generation at scale\nRapid prototyping, personal projects\n\n\nSkill Requirements\nProblem-solving fundamentals, domain knowledge\nUnderstanding of AI behaviour, prompt patterns\nAlgorithm design, logical thinking\nSystem design, oversight capabilities\nBasic problem articulation\n\n\nAgency & Control\nHigh human agency with AI as tool\nSplit agency; human directs, AI executes\nHuman expresses intent, AI interprets\nAI has high agency with human boundaries\nAI has high agency with minimal constraints\n\n\nLimitations\nMore time-intensive initially\nLess focus on human understanding\nLimited to algorithm expression\nRisk of loss of control and understanding\nLimited learning and quality control\n\n\nFuture Adaptability\nHigh; methodology adapts to advancing AI\nMedium; techniques require updating with new models\nMedium-high; concept remains valid with improving models\nHigh; benefits from advancing agent capabilities\nLow; vulnerable to AI limitations\n\n\n\nThis table highlights how intentional prompting focuses on structured human-led collaboration, while other approaches prioritise different aspects of the AI-human interaction. The right approach depends on your specific goals, team composition, and project requirements.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#overview-of-ai-coding-assistant-types",
-    "href": "appendices/ai-tool-comparison.html#overview-of-ai-coding-assistant-types",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.2 Overview of AI Coding Assistant Types",
-    "text": "C.2 Overview of AI Coding Assistant Types\nAI coding tools generally fall into several categories, each with different integration points in the development workflow:\n\nC.2.1 Integrated Development Environment (IDE) Extensions\nThese tools integrate directly into your code editor:\n\nExamples: GitHub Copilot, Amazon CodeWhisperer, Tabnine\nStrengths: Seamless workflow integration, real-time suggestions, context-aware completion\nLimitations: Limited explanation capabilities, primarily focused on code generation\n\n\n\nC.2.2 Conversational Assistants\nThese tools provide a chat interface for code-related discussions:\n\nExamples: Claude, ChatGPT, Bard, Perplexity\nStrengths: Detailed explanations, interactive problem-solving, educational capabilities\nLimitations: Less seamless integration with coding workflow, more context-switching\n\n\n\nC.2.3 AI-Enhanced IDEs\nThese are specialised editors built around AI capabilities:\n\nExamples: Cursor, Replit AI, GitHub Copilot Workspace\nStrengths: Purpose-built for AI collaboration, optimised workflows\nLimitations: May require changing your preferred development environment\n\n\n\nC.2.4 Code Analysers and Explainers\nThese specialised tools focus on understanding existing code:\n\nExamples: Sourcegraph Cody, Mintlify Doc Writer, CodeSquire\nStrengths: Code comprehension, documentation generation, codebase navigation\nLimitations: Often more limited in code generation capabilities",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#feature-comparison-matrix",
-    "href": "appendices/ai-tool-comparison.html#feature-comparison-matrix",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.3 Feature Comparison Matrix",
-    "text": "C.3 Feature Comparison Matrix\n\n\n\n\n\n\n\n\n\n\n\n\nFeature\nGitHub Copilot\nAmazon CodeWhisperer\nTabnine\nClaude\nChatGPT\nCursor\n\n\n\n\nCode Completion\n★★★★★\n★★★★☆\n★★★★☆\n★★☆☆☆\n★★☆☆☆\n★★★★☆\n\n\nCode Generation\n★★★★☆\n★★★☆☆\n★★★☆☆\n★★★★☆\n★★★★☆\n★★★★☆\n\n\nCode Explanation\n★★☆☆☆\n★★☆☆☆\n★☆☆☆☆\n★★★★★\n★★★★☆\n★★★☆☆\n\n\nDebugging Help\n★★☆☆☆\n★★☆☆☆\n★☆☆☆☆\n★★★★☆\n★★★☆☆\n★★★☆☆\n\n\nMulti-file Context\n★★★☆☆\n★★☆☆☆\n★★☆☆☆\n★★☆☆☆\n★★☆☆☆\n★★★★☆\n\n\nLearning Resource\n★★☆☆☆\n★★☆☆☆\n★☆☆☆☆\n★★★★★\n★★★★☆\n★★☆☆☆\n\n\nWorkflow Integration\n★★★★★\n★★★★☆\n★★★★☆\n★★☆☆☆\n★★☆☆☆\n★★★★☆\n\n\nDocumentation Generation\n★★☆☆☆\n★★☆☆☆\n★☆☆☆☆\n★★★★☆\n★★★★☆\n★★★☆☆\n\n\nCode Refactoring\n★★★☆☆\n★★☆☆☆\n★★☆☆☆\n★★★☆☆\n★★★☆☆\n★★★★☆\n\n\nSecurity Focus\n★★★☆☆\n★★★★☆\n★★☆☆☆\n★★☆☆☆\n★★☆☆☆\n★★☆☆☆\n\n\n\nNote: Ratings are subjective and based on capabilities at the time of writing. The AI assistant landscape evolves rapidly, so check current capabilities before making decisions.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#detailed-tool-profiles",
-    "href": "appendices/ai-tool-comparison.html#detailed-tool-profiles",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.4 Detailed Tool Profiles",
-    "text": "C.4 Detailed Tool Profiles\n\nC.4.1 GitHub Copilot\nOverview: Developed by GitHub and OpenAI, Copilot integrates directly into code editors like VS Code, providing real-time code suggestions.\nKey Strengths: - Seamless integration into the coding workflow - Strong at completing code based on context and comments - Supports multiple programming languages - Understands project context and patterns\nLimitations: - Limited explanatory capabilities - May suggest deprecated or insecure patterns - Requires careful review of generated code - Subscription-based pricing model\nBest For: - Accelerating routine coding tasks - Exploring implementation options quickly - Developers who prefer in-editor assistance - Teams already using GitHub ecosystem\nUsage Tips: - Write detailed comments before generating code - Review security implications of suggestions - Use alongside documentation for better understanding - Don’t rely on it exclusively for complex logic\n\n\nC.4.2 Claude\nOverview: Anthropic’s Claude is a conversational AI assistant that excels at nuanced understanding and detailed explanations.\nKey Strengths: - Exceptional at explaining complex concepts - Strong reasoning capabilities - Detailed, thoughtful responses - Good at understanding nuanced requirements - Helpful for educational purposes\nLimitations: - Less direct integration with development environments - Requires context-switching from coding to conversation - Limited awareness of project-wide context\nBest For: - Learning programming concepts - Debugging complex issues - Getting detailed explanations of code behaviour - Exploring multiple solution approaches - Working through design decisions\nUsage Tips: - Provide sufficient context about your project - Use the six-step methodology to structure interactions - Ask for explanations alongside code generation - Verify suggestions against documentation\n\n\nC.4.3 Cursor\nOverview: An AI-native code editor built from the ground up for AI-assisted development, based on VSCode but with enhanced AI capabilities.\nKey Strengths: - Purpose-built for AI collaboration - Strong multi-file context understanding - Chat interface within the coding environment - Code generation and refactoring capabilities - Ability to process and understand larger codebases\nLimitations: - Newer platform with evolving features - Requires adopting a new editor - May have performance issues with very large projects\nBest For: - Developers seeking deep AI integration - Projects requiring context across multiple files - Refactoring and exploring large codebases - Teams fully embracing AI-assisted development\nUsage Tips: - Use the chat interface for complex queries - Leverage multi-file search for context-aware suggestions - Structure prompts clearly for better results - Combine with version control for safer experimentation",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#comparative-strengths-for-specific-tasks",
-    "href": "appendices/ai-tool-comparison.html#comparative-strengths-for-specific-tasks",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.5 Comparative Strengths for Specific Tasks",
-    "text": "C.5 Comparative Strengths for Specific Tasks\n\nC.5.1 Learning New Concepts\nBest Tools: Claude, ChatGPT Approach: These conversational tools excel at explaining programming concepts with examples, analogies, and detailed breakdowns. They can adapt explanations based on your follow-up questions.\n\n\nC.5.2 Rapid Prototyping\nBest Tools: GitHub Copilot, Cursor Approach: For quickly implementing a proof of concept, these tools can generate functional code based on comments or specifications, allowing for fast iteration.\n\n\nC.5.3 Code Documentation\nBest Tools: Claude, ChatGPT, Mintlify Doc Writer Approach: These tools can generate comprehensive documentation for existing code, explaining functionality and providing usage examples.\n\n\nC.5.4 Debugging and Problem-Solving\nBest Tools: Claude, Cursor, ChatGPT Approach: These tools can analyse error messages, trace through code execution, and suggest potential fixes for issues.\n\n\nC.5.5 Refactoring Existing Code\nBest Tools: Cursor, GitHub Copilot, Claude Approach: These tools can suggest improvements to existing code, identify patterns for refactoring, and help implement changes systematically.\n\n\nC.5.6 Security Auditing\nBest Tools: Amazon CodeWhisperer, specialised security tools Approach: Some tools specifically focus on identifying potential security vulnerabilities and suggesting secure coding patterns.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#choosing-the-right-tool-combination",
-    "href": "appendices/ai-tool-comparison.html#choosing-the-right-tool-combination",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.6 Choosing the Right Tool Combination",
-    "text": "C.6 Choosing the Right Tool Combination\nNo single AI coding assistant excels at everything. Consider these complementary combinations:\n\nC.6.1 IDE Extension + Conversational Assistant\nExample: GitHub Copilot + Claude Benefits: Combines seamless in-editor completion with detailed explanations and problem-solving capabilities\n\n\nC.6.2 AI-Enhanced IDE + Specialised Tools\nExample: Cursor + Mintlify Doc Writer Benefits: Comprehensive coding environment with specialised documentation generation\n\n\nC.6.3 Multiple Conversational Assistants\nExample: Claude + ChatGPT Benefits: Leverage different strengths and compare suggestions from multiple models",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#cost-considerations",
-    "href": "appendices/ai-tool-comparison.html#cost-considerations",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.7 Cost Considerations",
-    "text": "C.7 Cost Considerations\nWhen evaluating AI coding tools, consider these cost dimensions:\n\nC.7.1 Direct Costs\n\nSubscription fees (individual or team)\nUsage-based pricing (API calls, tokens)\nFree tiers and limitations\n\n\n\nC.7.2 Indirect Costs\n\nLearning curve for new tools\nIntegration effort\nContext-switching overhead\nCode review requirements\n\n\n\nC.7.3 Return on Investment Factors\n\nDevelopment time savings\nCode quality improvements\nLearning and skill development\nTeam collaboration benefits",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#future-trends",
-    "href": "appendices/ai-tool-comparison.html#future-trends",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.8 Future Trends",
-    "text": "C.8 Future Trends\nThe AI coding assistant landscape is rapidly evolving. Watch for these emerging trends:\n\nDeeper development environment integration with more contextual awareness\nSpecialised domain expertise in particular frameworks or industries\nEnhanced collaboration features for team-based AI interaction\nImproved security and compliance capabilities\ncustomisation and fine-tuning for specific codebases or coding styles\nMultimodal interactions combining code, natural language, and visual elements\nAgent-based capabilities that can autonomously perform complex tasks",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#practical-selection-framework",
-    "href": "appendices/ai-tool-comparison.html#practical-selection-framework",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.9 Practical Selection Framework",
-    "text": "C.9 Practical Selection Framework\nWhen choosing AI coding tools for your workflow, consider:\n\nPrimary Development Environment\n\nWhich editors or IDEs do you currently use?\nWhat integration options are available?\n\nMain Use Cases\n\nCode generation vs. explanation vs. refactoring\nLearning vs. productivity\n\nTeam Considerations\n\nConsistency across team members\nCollaboration requirements\nCode review processes\n\nTechnical Constraints\n\nLanguage and framework support\nProject size and complexity\nSecurity and compliance requirements\n\nLearning Curve\n\nTime investment required\nTraining needs for the team\n\nCost Structure\n\nBudget constraints\nValue alignment with primary use cases",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
-    ]
-  },
-  {
-    "objectID": "appendices/ai-tool-comparison.html#key-takeaways",
-    "href": "appendices/ai-tool-comparison.html#key-takeaways",
-    "title": "Appendix C — AI Tool Comparison",
-    "section": "C.10 Key Takeaways",
-    "text": "C.10 Key Takeaways\n\nNo single tool excels at everything - consider complementary combinations\nMatch tools to specific tasks rather than trying to find one universal solution\nConsider the full development workflow when evaluating integration points\nrecognise that the landscape is evolving rapidly - stay informed about new capabilities\nDifferent team members may benefit from different tools based on their roles and experience\nThe intentional prompting methodology applies regardless of tool choice - the principles remain consistent\n\nBy thoughtfully selecting and combining AI coding tools based on your specific needs, you can create a development environment that maximises the benefits of AI assistance while maintaining human control and understanding.",
-    "crumbs": [
-      "Appendices",
-      "<span class='chapter-number'>C</span>  <span class='chapter-title'>AI Tool Comparison</span>"
+      "<span class='chapter-number'>A</span>  <span class='chapter-title'>Common Pitfalls and Solutions</span>"
     ]
   },
   {
     "objectID": "appendices/glossary.html",
     "href": "appendices/glossary.html",
-    "title": "Appendix D — Glossary",
+    "title": "Appendix B — Glossary",
     "section": "",
-    "text": "D.1 AI-Related Terms\nThis glossary provides definitions for key terms used throughout “Intentional Prompting.”\nAI Coding Assistant: Software tools that use artificial intelligence to help programmers write, understand, and debug code. Examples include GitHub Copilot, Amazon CodeWhisperer, and conversational AI models like Claude and ChatGPT when used for programming tasks.\nChain-of-Thought Prompting: A technique that encourages AI to break down complex reasoning into intermediate steps, producing more comprehensive and accurate outputs.\nFew-Shot Prompting: Providing an AI with examples of the desired input-output behaviour before presenting the actual task, helping guide the model’s response format and approach.\nFoundation Model: Large AI models trained on vast datasets that serve as the basis for more specialised applications, including coding assistants.\nLarge Language Model (LLM): AI systems trained on massive text datasets that can generate human-like text and code based on prompts.\nPrompt Engineering: The practice of crafting effective instructions for AI systems to produce desired outputs, involving specific techniques and patterns.\nZero-Shot Prompting: Asking an AI to perform a task without providing examples, relying on the model’s pre-existing knowledge.",
+    "text": "B.1 AI-Related Terms\nThis glossary provides definitions for key terms used throughout “Intentional Prompting.”\nAI Coding Assistant: Software tools that use artificial intelligence to help programmers write, understand, and debug code. Examples include GitHub Copilot, Amazon CodeWhisperer, and conversational AI models like Claude and ChatGPT when used for programming tasks.\nChain-of-Thought Prompting: A technique that encourages AI to break down complex reasoning into intermediate steps, producing more comprehensive and accurate outputs.\nFew-Shot Prompting: Providing an AI with examples of the desired input-output behaviour before presenting the actual task, helping guide the model’s response format and approach.\nFoundation Model: Large AI models trained on vast datasets that serve as the basis for more specialised applications, including coding assistants.\nLarge Language Model (LLM): AI systems trained on massive text datasets that can generate human-like text and code based on prompts.\nPrompt Engineering: The practice of crafting effective instructions for AI systems to produce desired outputs, involving specific techniques and patterns.\nZero-Shot Prompting: Asking an AI to perform a task without providing examples, relying on the model’s pre-existing knowledge.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "appendices/glossary.html#intentional-prompting-concepts",
     "href": "appendices/glossary.html#intentional-prompting-concepts",
-    "title": "Appendix D — Glossary",
-    "section": "D.2 Intentional Prompting Concepts",
-    "text": "D.2 Intentional Prompting Concepts\nIntentional Prompting: A deliberate approach to programming that leverages AI tools while maintaining human control over the development process. It focuses on understanding, guiding AI through structured methodology, using AI as a learning tool, and maintaining the human developer as the architect and decision-maker.\nSix-Step Methodology: The structured approach at the core of intentional prompting: 1. Restate the problem 2. Identify input and output 3. Work the problem by hand 4. Write pseudocode 5. Convert to code 6. Test with data\nChallenge Prompts: Deliberately introducing programming challenges to test understanding and explore potential issues.\nClarification Prompts: Questions that refine requirements and explore edge cases before implementation.\nFoundation Prompts: Initial prompts that establish baseline requirements for a programming task.\nRefinement Prompts: Prompts that push for code improvements based on best practices and efficiency considerations.\nScaffolding Prompts: Prompts that support learning by breaking down complex concepts into understandable components.",
+    "title": "Appendix B — Glossary",
+    "section": "B.2 Intentional Prompting Concepts",
+    "text": "B.2 Intentional Prompting Concepts\nIntentional Prompting: A deliberate approach to programming that leverages AI tools while maintaining human control over the development process. It focuses on understanding, guiding AI through structured methodology, using AI as a learning tool, and maintaining the human developer as the architect and decision-maker.\nSix-Step Methodology: The structured approach at the core of intentional prompting: 1. Restate the problem 2. Identify input and output 3. Work the problem by hand 4. Write pseudocode 5. Convert to code 6. Test with data\nChallenge Prompts: Deliberately introducing programming challenges to test understanding and explore potential issues.\nClarification Prompts: Questions that refine requirements and explore edge cases before implementation.\nFoundation Prompts: Initial prompts that establish baseline requirements for a programming task.\nRefinement Prompts: Prompts that push for code improvements based on best practices and efficiency considerations.\nScaffolding Prompts: Prompts that support learning by breaking down complex concepts into understandable components.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "appendices/glossary.html#programming-concepts",
     "href": "appendices/glossary.html#programming-concepts",
-    "title": "Appendix D — Glossary",
-    "section": "D.3 Programming Concepts",
-    "text": "D.3 Programming Concepts\nCode Smell: Patterns in code that may indicate deeper problems or potential for improvement.\nEdge Case: A problem or situation that occurs only at an extreme operating parameter, often requiring special handling in code.\nPseudocode: A simplified, high-level description of a computer program or algorithm, using structural conventions of programming languages but intended for human reading rather than machine reading.\nRefactoring: The process of restructuring existing code without changing its external behaviour, typically to improve non-functional attributes like readability, reduce complexity, or improve maintainability.\nTechnical Debt: The implied cost of additional rework caused by choosing an easy (but limited) solution now instead of using a better approach that would take longer.",
+    "title": "Appendix B — Glossary",
+    "section": "B.3 Programming Concepts",
+    "text": "B.3 Programming Concepts\nCode Smell: Patterns in code that may indicate deeper problems or potential for improvement.\nEdge Case: A problem or situation that occurs only at an extreme operating parameter, often requiring special handling in code.\nPseudocode: A simplified, high-level description of a computer program or algorithm, using structural conventions of programming languages but intended for human reading rather than machine reading.\nRefactoring: The process of restructuring existing code without changing its external behaviour, typically to improve non-functional attributes like readability, reduce complexity, or improve maintainability.\nTechnical Debt: The implied cost of additional rework caused by choosing an easy (but limited) solution now instead of using a better approach that would take longer.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glossary</span>"
     ]
   },
   {
     "objectID": "appendices/glossary.html#teaching-and-learning-terms",
     "href": "appendices/glossary.html#teaching-and-learning-terms",
-    "title": "Appendix D — Glossary",
-    "section": "D.4 Teaching and Learning Terms",
-    "text": "D.4 Teaching and Learning Terms\nAI-Proof Assignment: Assignments designed to be difficult for AI coding assistants to solve directly, often focusing on conceptual understanding or novel problems.\nDocumentation-First Methodology: An approach where students create detailed specifications and documentation before writing any code, using AI to evaluate completeness and clarity.\nProcess-Based Assessment: Evaluating students based on their problem-solving approach and understanding rather than just the final code output.",
+    "title": "Appendix B — Glossary",
+    "section": "B.4 Teaching and Learning Terms",
+    "text": "B.4 Teaching and Learning Terms\nAI-Proof Assignment: Assignments designed to be difficult for AI coding assistants to solve directly, often focusing on conceptual understanding or novel problems.\nDocumentation-First Methodology: An approach where students create detailed specifications and documentation before writing any code, using AI to evaluate completeness and clarity.\nProcess-Based Assessment: Evaluating students based on their problem-solving approach and understanding rather than just the final code output.",
     "crumbs": [
       "Appendices",
-      "<span class='chapter-number'>D</span>  <span class='chapter-title'>Glossary</span>"
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Glossary</span>"
     ]
   }
 ]
