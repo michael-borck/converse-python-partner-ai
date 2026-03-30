@@ -296,36 +296,34 @@ I should consider?
 
 **Human prompt:**
 ```
-Based on my manual approach, let me write pseudocode for finding the longest palindromic substring:
+Based on my manual approach, let me write
+pseudocode for finding the longest palindromic
+substring:
 
-```
 function longestPalindromicSubstring(string s):
     if s is empty, return ""
-    
-    start = 0  // Start index of longest palindrome
-    maxLength = 1  // Length of longest palindrome
-    
-    // Helper function to expand around center
+
+    start = 0
+    maxLength = 1
+
     function expandAroundCenter(left, right):
-        while left >= 0 and right < length of s and s[left] equals s[right]:
+        while left >= 0 and right < length of s
+              and s[left] equals s[right]:
             if (right - left + 1) > maxLength:
                 maxLength = right - left + 1
                 start = left
             left = left - 1
             right = right + 1
-    
-    // Check each position as potential palindrome center
-    for i from 0 to length of s - 1:
-        // Odd length palindromes
-        expandAroundCenter(i, i)
-        
-        // Even length palindromes
-        expandAroundCenter(i, i + 1)
-    
-    return substring of s from start to start + maxLength
-```
 
-Does this pseudocode correctly implement the approach we discussed?
+    for i from 0 to length of s - 1:
+        expandAroundCenter(i, i)
+        expandAroundCenter(i, i + 1)
+
+    return substring of s from start
+           to start + maxLength
+
+Does this pseudocode correctly implement the
+approach we discussed?
 ```
 
 **AI response:**
