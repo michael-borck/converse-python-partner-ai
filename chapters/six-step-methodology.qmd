@@ -8,11 +8,7 @@ The six-step programming methodology provides a structured approach to solving p
 
 ![Six-Step Methodology Diagram](../images/simplified-methodology.png)
 
-For a more detailed view of this methodology:
-
-![Detailed Six-Step Methodology](../images/six-step-methodology.png)
-
-As shown in the diagram, the methodology divides programming into two distinct phases:
+The methodology divides programming into two distinct phases:
 
 ### Design (Thinking) Phase - Steps 1-4
 
@@ -45,6 +41,8 @@ While the six steps appear sequential, the methodology contains several importan
 4. **Understanding to Doing**: The methodology follows a natural progression from abstract understanding to concrete implementation.
 
 This methodology isn't revolutionary on its own. It draws from established problem-solving approaches and computational thinking practices like Waterfall, Agile, and Test-Driven Development. What makes it valuable in the age of AI is how it provides a framework for intentional prompting and collaboration with AI assistants while maintaining human understanding and control.
+
+![Detailed Six-Step Methodology](../images/six-step-methodology.png)
 
 ### Adapting to Your Preferred Methodology
 
