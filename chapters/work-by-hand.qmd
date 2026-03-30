@@ -249,24 +249,22 @@ Does my manual approach seem correct? Am I missing any important edge cases?
 ```
 
 **AI response:**
-```
-Your manual approach of checking each possible center position and expanding outward is exactly right! This is the standard approach for solving this problem efficiently.
-
-Your edge cases are also well-chosen and cover the important scenarios:
-
-- Empty string
-- Single character
-- All same characters (a special case where the entire string is a palindrome)
-- No palindromes longer than 1 character
-
-One additional edge case you might consider:
-
-- Input with even-length palindromes only, like "abba" where the palindrome doesn't have a single center character
-
-But your approach already handles this by checking both single character centers and between-character centers, so it's just a matter of verifying with an example.
-
-Your manual working shows a strong understanding of the problem and solution approach!
-```
+> Your manual approach of checking each possible center position and expanding outward is exactly right! This is the standard approach for solving this problem efficiently.
+> 
+> Your edge cases are also well-chosen and cover the important scenarios:
+> 
+> - Empty string
+> - Single character
+> - All same characters (a special case where the entire string is a palindrome)
+> - No palindromes longer than 1 character
+> 
+> One additional edge case you might consider:
+> 
+> - Input with even-length palindromes only, like "abba" where the palindrome doesn't have a single center character
+> 
+> But your approach already handles this by checking both single character centers and between-character centers, so it's just a matter of verifying with an example.
+> 
+> Your manual working shows a strong understanding of the problem and solution approach!
 
 ## Insights from Working By Hand
 

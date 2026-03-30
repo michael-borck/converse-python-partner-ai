@@ -88,13 +88,11 @@ This example from an educational setting shows how to guide students through int
 
 **Example: Building a Python Gradebook**
 
-```
-**Task:** Create a gradebook program that:
-- Uses a dictionary to store student names and their list of scores
-- Has a function to calculate average score
-- Prints each student's name and average
-- Handles edge cases (e.g., empty lists, invalid inputs)
-```
+> **Task:** Create a gradebook program that:
+> - Uses a dictionary to store student names and their list of scores
+> - Has a function to calculate average score
+> - Prints each student's name and average
+> - Handles edge cases (e.g., empty lists, invalid inputs)
 
 **Step 1: Start Simple**
 ```

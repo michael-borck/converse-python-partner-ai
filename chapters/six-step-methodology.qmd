@@ -208,17 +208,15 @@ Is this understanding correct? Are there any edge cases I should consider?
 ```
 
 **AI response:**
-```
-Your understanding is correct! The function should find the longest substring that is a palindrome.
-
-Edge cases to consider:
-- Empty strings
-- Strings with no palindromes longer than 1 character
-- Strings where the entire string is a palindrome
-- Strings with multiple palindromic substrings of the same length
-- Very long strings (performance considerations)
-- Case sensitivity (usually palindromes are case-sensitive)
-```
+> Your understanding is correct! The function should find the longest substring that is a palindrome.
+> 
+> Edge cases to consider:
+> - Empty strings
+> - Strings with no palindromes longer than 1 character
+> - Strings where the entire string is a palindrome
+> - Strings with multiple palindromic substrings of the same length
+> - Very long strings (performance considerations)
+> - Case sensitivity (usually palindromes are case-sensitive)
 
 #### Step 2: Identify Inputs and Outputs
 
@@ -239,13 +237,11 @@ Do these input and output specifications cover all the necessary cases?
 ```
 
 **AI response:**
-```
-Those specifications are good, but let me suggest a small clarification:
-
-For the case where there are no palindromes longer than 1 character, technically every individual character is a palindrome by itself. So returning the first character would be correct, but it might be clearer to explicitly state "return any single character" since any character is a palindrome of length 1.
-
-With that clarification, your input and output specifications cover all the necessary cases!
-```
+> Those specifications are good, but let me suggest a small clarification:
+> 
+> For the case where there are no palindromes longer than 1 character, technically every individual character is a palindrome by itself. So returning the first character would be correct, but it might be clearer to explicitly state "return any single character" since any character is a palindrome of length 1.
+> 
+> With that clarification, your input and output specifications cover all the necessary cases!
 
 #### Step 3: Work the Problem by Hand
 
@@ -286,17 +282,15 @@ I should consider?
 ```
 
 **AI response:**
-```
-Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.
-
-The two key components you've identified are essential:
-1. Checking odd-length palindromes (with a single character as the center)
-2. Checking even-length palindromes (with the center between two characters)
-
-There are some more complex algorithms like Manacher's algorithm that can solve this in O(n) time, but they're significantly more complex and typically unnecessary unless you're dealing with very long strings where performance is critical.
-
-Your approach is intuitive and efficient for most practical purposes!
-```
+> Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.
+> 
+> The two key components you've identified are essential:
+> 1. Checking odd-length palindromes (with a single character as the center)
+> 2. Checking even-length palindromes (with the center between two characters)
+> 
+> There are some more complex algorithms like Manacher's algorithm that can solve this in O(n) time, but they're significantly more complex and typically unnecessary unless you're dealing with very long strings where performance is critical.
+> 
+> Your approach is intuitive and efficient for most practical purposes!
 
 #### Step 4: Write Pseudocode
 
@@ -333,28 +327,26 @@ approach we discussed?
 ```
 
 **AI response:**
-```
-Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
-
-There's just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you're considering the current palindrome (not a future one). So you should check if (right - left + 1) > maxLength before expanding further.
-
-Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!
-```
+> Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
+> 
+> There's just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you're considering the current palindrome (not a future one). So you should check if (right - left + 1) > maxLength before expanding further.
+> 
+> Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!
 
 #### Step 5: Convert to Code
 
 **Human prompt:**
-````
+```
 Now I'll convert my pseudocode to Python:
 
 ```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
-
+    
     start = 0
     max_length = 1
-
+    
     def expand_around_center(left, right):
         nonlocal start, max_length
         while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -364,37 +356,34 @@ def longest_palindromic_substring(s):
                 start = left
             left -= 1
             right += 1
-
+    
     for i in range(len(s)):
         # Odd length palindromes
         expand_around_center(i, i)
-
+        
         # Even length palindromes
         expand_around_center(i, i+1)
-
+    
     return s[start:start + max_length]
 ```
 
-Can you review this code for correctness
-and suggest any improvements?
-````
+Can you review this code for correctness and suggest any improvements?
+```
 
 **AI response:**
-```
-Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
-
-A few small observations:
-
-1. You've correctly used `nonlocal` to update the `start` and `max_length` variables from within the nested function.
-
-2. The algorithm handles both odd and even length palindromes properly by starting from different center positions.
-
-3. The time complexity is O(n²) and space complexity is O(1), which is efficient for most inputs.
-
-4. Your code handles the empty string case correctly.
-
-The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.
-```
+> Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
+> 
+> A few small observations:
+> 
+> 1. You've correctly used `nonlocal` to update the `start` and `max_length` variables from within the nested function.
+> 
+> 2. The algorithm handles both odd and even length palindromes properly by starting from different center positions.
+> 
+> 3. The time complexity is O(n²) and space complexity is O(1), which is efficient for most inputs.
+> 
+> 4. Your code handles the empty string case correctly.
+> 
+> The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.
 
 #### Step 6: Test with Data
 
@@ -414,37 +403,35 @@ Can you help me verify if my implementation handles all these cases correctly?
 ```
 
 **AI response:**
-```
-Let's trace through your implementation for each test case:
-
-1. `"babad"`:
-   - For center at 'b' (index 0): Just 'b' (length 1)
-   - For center at 'a' (index 1): 'bab' (length 3)
-   - For center at 'b' (index 2): 'bab' (length 3)
-   - For center at 'a' (index 3): 'aba' (length 3)
-   - For center at 'd' (index 4): Just 'd' (length 1)
-   - The first palindrome of length 3 found is "bab" ✓
-
-2. `"racecar"`:
-   - Expands from middle 'e' to full string "racecar" ✓
-
-3. `""`:
-   - Immediate return of empty string ✓
-
-4. `"a"`:
-   - Single character is a palindrome of length 1 ✓
-
-5. `"abc"`:
-   - No palindromes longer than 1, returns first character "a" ✓
-
-6. `"aabbaa"`:
-   - Full string is palindrome ✓
-
-7. `"abba"`:
-   - Checking even centers finds "abba" ✓
-
-Your implementation handles all these test cases correctly! It will return the expected outputs for each scenario.
-```
+> Let's trace through your implementation for each test case:
+> 
+> 1. `"babad"`:
+>    - For center at 'b' (index 0): Just 'b' (length 1)
+>    - For center at 'a' (index 1): 'bab' (length 3)
+>    - For center at 'b' (index 2): 'bab' (length 3)
+>    - For center at 'a' (index 3): 'aba' (length 3)
+>    - For center at 'd' (index 4): Just 'd' (length 1)
+>    - The first palindrome of length 3 found is "bab" ✓
+> 
+> 2. `"racecar"`:
+>    - Expands from middle 'e' to full string "racecar" ✓
+> 
+> 3. `""`:
+>    - Immediate return of empty string ✓
+> 
+> 4. `"a"`:
+>    - Single character is a palindrome of length 1 ✓
+> 
+> 5. `"abc"`:
+>    - No palindromes longer than 1, returns first character "a" ✓
+> 
+> 6. `"aabbaa"`:
+>    - Full string is palindrome ✓
+> 
+> 7. `"abba"`:
+>    - Checking even centers finds "abba" ✓
+> 
+> Your implementation handles all these test cases correctly! It will return the expected outputs for each scenario.
 
 ### Comparing the Approaches
 
