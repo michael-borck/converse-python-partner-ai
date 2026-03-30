@@ -161,43 +161,45 @@ Based on my manual approach to finding the longest palindromic substring, could 
 3. Tracks the longest palindrome found
 ```
 
-**AI response:**
-> Here's pseudocode for finding the longest palindromic substring:
-> 
-> ```
-> FUNCTION findLongestPalindromicSubstring(string)
->     IF string is empty THEN
->         RETURN empty string
->     END IF
->     
->     SET startIndex = 0
->     SET maxLength = 1
->     
->     FUNCTION expandAroundCenter(left, right)
->         WHILE left >= 0 AND right < length of string AND string[left] = string[right]
->             currentLength = right - left + 1
->             IF currentLength > maxLength THEN
->                 SET maxLength = currentLength
->                 SET startIndex = left
->             END IF
->             DECREMENT left
->             INCREMENT right
->         END WHILE
->     END FUNCTION
->     
->     FOR i = 0 TO length of string - 1
->         // Check odd length palindromes (single character center)
->         expandAroundCenter(i, i)
->         
->         // Check even length palindromes (between character center)
->         expandAroundCenter(i, i + 1)
->     END FOR
->     
->     RETURN substring of string from startIndex to startIndex + maxLength - 1
-> END FUNCTION
-> ```
-> 
-> This pseudocode implements the approach we discussed, checking both odd and even length palindromes by expanding around potential centers and tracking the longest palindrome found.
+::: {.callout-note icon=false title="AI"}
+Here's pseudocode for finding the longest palindromic substring:
+
+```
+FUNCTION findLongestPalindromicSubstring(string)
+    IF string is empty THEN
+        RETURN empty string
+    END IF
+    
+    SET startIndex = 0
+    SET maxLength = 1
+    
+    FUNCTION expandAroundCenter(left, right)
+        WHILE left >= 0 AND right < length of string AND string[left] = string[right]
+            currentLength = right - left + 1
+            IF currentLength > maxLength THEN
+                SET maxLength = currentLength
+                SET startIndex = left
+            END IF
+            DECREMENT left
+            INCREMENT right
+        END WHILE
+    END FUNCTION
+    
+    FOR i = 0 TO length of string - 1
+        // Check odd length palindromes (single character center)
+        expandAroundCenter(i, i)
+        
+        // Check even length palindromes (between character center)
+        expandAroundCenter(i, i + 1)
+    END FOR
+    
+    RETURN substring of string from startIndex to startIndex + maxLength - 1
+END FUNCTION
+```
+
+This pseudocode implements the approach we discussed, checking both odd and even length palindromes by expanding around potential centers and tracking the longest palindrome found.
+:::
+
 
 ### Refining Pseudocode
 
@@ -211,70 +213,72 @@ This pseudocode looks good. Two questions:
 2. Is there any way to optimise this further, perhaps by avoiding redundant checks?
 ```
 
-**AI response:**
-> Great questions! Let me address both:
-> 
-> 1. Regarding even-length palindromes at the end of the string:
->    
->    In the current pseudocode, we check for even-length palindromes between positions i and i+1 for i ranging from 0 to length-1. When i is length-1 (the last character), we'd check between the last character and one past the end of the string, which would immediately fail the boundary check in expandAroundCenter().
->    
->    This isn't harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2:
->    
->    ```
->    // Odd length palindromes
->    FOR i = 0 TO length of string - 1
->        expandAroundCenter(i, i)
->    END FOR
->    
->    // Even length palindromes
->    FOR i = 0 TO length of string - 2
->        expandAroundCenter(i, i + 1)
->    END FOR
->    ```
->    
->    Or keep the single loop but add a condition:
->    
->    ```
->    FOR i = 0 TO length of string - 1
->        // Odd length
->        expandAroundCenter(i, i)
->        
->        // Even length (only if not at last character)
->        IF i < length of string - 1 THEN
->            expandAroundCenter(i, i + 1)
->        END IF
->    END FOR
->    ```
-> 
-> 2. Regarding further optimisation:
->    
->    Yes, there are a few potential optimisations:
->    
->    a) Early termination: If we find a palindrome of length N, then we only need to check centers that could potentially produce longer palindromes. If we're at position i and there are fewer than N/2 characters on either side, we can skip that center.
->    
->    b) Avoid redundant expansions: If we know a substring isn't a palindrome, any larger substring containing it also isn't a palindrome.
->    
->    c) For very long strings, Manacher's algorithm gives a linear-time solution instead of quadratic, but it's significantly more complex.
->    
->    Here's an optimisation for the early termination case:
->    
->    ```
->    FOR i = 0 TO length of string - 1
->        // Only check centers with enough characters on both sides to beat maxLength
->        remainingChars = MIN(i, length of string - i - 1)
->        IF remainingChars * 2 + 1 > maxLength THEN
->            // Odd length
->            expandAroundCenter(i, i)
->        END IF
->        
->        IF i < length of string - 1 AND MIN(i, length of string - i - 2) * 2 + 2 > maxLength THEN
->            // Even length
->            expandAroundCenter(i, i + 1)
->        END IF
->    END FOR
->    ```
->    
->    However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.
+::: {.callout-note icon=false title="AI"}
+Great questions! Let me address both:
+
+1. Regarding even-length palindromes at the end of the string:
+   
+   In the current pseudocode, we check for even-length palindromes between positions i and i+1 for i ranging from 0 to length-1. When i is length-1 (the last character), we'd check between the last character and one past the end of the string, which would immediately fail the boundary check in expandAroundCenter().
+   
+   This isn't harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2:
+   
+   ```
+   // Odd length palindromes
+   FOR i = 0 TO length of string - 1
+       expandAroundCenter(i, i)
+   END FOR
+   
+   // Even length palindromes
+   FOR i = 0 TO length of string - 2
+       expandAroundCenter(i, i + 1)
+   END FOR
+   ```
+   
+   Or keep the single loop but add a condition:
+   
+   ```
+   FOR i = 0 TO length of string - 1
+       // Odd length
+       expandAroundCenter(i, i)
+       
+       // Even length (only if not at last character)
+       IF i < length of string - 1 THEN
+           expandAroundCenter(i, i + 1)
+       END IF
+   END FOR
+   ```
+
+2. Regarding further optimisation:
+   
+   Yes, there are a few potential optimisations:
+   
+   a) Early termination: If we find a palindrome of length N, then we only need to check centers that could potentially produce longer palindromes. If we're at position i and there are fewer than N/2 characters on either side, we can skip that center.
+   
+   b) Avoid redundant expansions: If we know a substring isn't a palindrome, any larger substring containing it also isn't a palindrome.
+   
+   c) For very long strings, Manacher's algorithm gives a linear-time solution instead of quadratic, but it's significantly more complex.
+   
+   Here's an optimisation for the early termination case:
+   
+   ```
+   FOR i = 0 TO length of string - 1
+       // Only check centers with enough characters on both sides to beat maxLength
+       remainingChars = MIN(i, length of string - i - 1)
+       IF remainingChars * 2 + 1 > maxLength THEN
+           // Odd length
+           expandAroundCenter(i, i)
+       END IF
+       
+       IF i < length of string - 1 AND MIN(i, length of string - i - 2) * 2 + 2 > maxLength THEN
+           // Even length
+           expandAroundCenter(i, i + 1)
+       END IF
+   END FOR
+   ```
+   
+   However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.
+:::
+
 
 ### Comparing Alternative Approaches
 
@@ -285,124 +289,126 @@ AI can help explore different algorithmic approaches to the same problem:
 Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we've been discussing?
 ```
 
-**AI response:**
-> Yes, there are several fundamentally different approaches to finding the longest palindromic substring:
-> 
-> 1. **Dynamic Programming Approach**
->    
->    Instead of expanding from centers, we can use a bottom-up DP approach:
->    
->    ```
->    FUNCTION findLongestPalindrome_DP(string)
->        SET n = length of string
->        
->        // Create n x n table where dp[i][j] = true if substring from i to j is palindrome
->        CREATE boolean table dp[n][n]
->        
->        // All substrings of length 1 are palindromes
->        FOR i = 0 TO n-1
->            dp[i][i] = true
->        END FOR
->        
->        SET start = 0
->        SET maxLength = 1
->        
->        // Check substrings of length 2
->        FOR i = 0 TO n-2
->            IF string[i] = string[i+1] THEN
->                dp[i][i+1] = true
->                start = i
->                maxLength = 2
->            END IF
->        END FOR
->        
->        // Check substrings of length 3 or more
->        FOR length = 3 TO n
->            FOR i = 0 TO n-length
->                j = i + length - 1
->                
->                IF string[i] = string[j] AND dp[i+1][j-1] = true THEN
->                    dp[i][j] = true
->                    
->                    IF length > maxLength THEN
->                        start = i
->                        maxLength = length
->                    END IF
->                END IF
->            END FOR
->        END FOR
->        
->        RETURN substring of string from start to start + maxLength - 1
->    END FUNCTION
->    ```
->    
->    This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory.
-> 
-> 2. **Manacher's Algorithm**
->    
->    This is an optimised approach that runs in O(n) time:
->    
->    ```
->    FUNCTION manachers_algorithm(string)
->        // Transform string to handle even-length palindromes
->        // For example, "babad" becomes "^#b#a#b#a#d#$"
->        SET transformed = preprocessString(string)
->        
->        SET n = length of transformed
->        CREATE array p[n] // p[i] = radius of palindrome centered at i
->        
->        SET center = 0
->        SET right_boundary = 0
->        
->        FOR i = 1 TO n-2
->            // Mirror of current position
->            SET mirror = 2 * center - i
->            
->            // If within right boundary, use mirror value
->            IF i < right_boundary THEN
->                p[i] = MIN(right_boundary - i, p[mirror])
->            ELSE
->                p[i] = 0
->            END IF
->            
->            // Expand palindrome centered at i
->            WHILE transformed[i + 1 + p[i]] = transformed[i - 1 - p[i]]
->                INCREMENT p[i]
->            END WHILE
->            
->            // Update center if this palindrome extends beyond right boundary
->            IF i + p[i] > right_boundary THEN
->                center = i
->                right_boundary = i + p[i]
->            END IF
->        END FOR
->        
->        // Find the maximum element in p
->        SET max_len = 0
->        SET center_index = 0
->        
->        FOR i = 1 TO n-2
->            IF p[i] > max_len THEN
->                max_len = p[i]
->                center_index = i
->            END IF
->        END FOR
->        
->        // Extract the longest palindromic substring from original string
->        SET start = (center_index - max_len) / 2
->        RETURN substring of string from start to start + max_len
->    END FUNCTION
->    ```
->    
->    This algorithm is significantly more complex but offers linear time complexity.
-> 
-> 3. **Suffix Tree Approach**
->    
->    Building a generalised suffix tree for the string and its reverse, then finding the longest common substring.
->    
->    This is even more complex to implement but can be useful when solving multiple related string problems.
-> 
-> The center expansion approach remains the most intuitive and offers a good balance of simplicity and efficiency for most practical applications.
+::: {.callout-note icon=false title="AI"}
+Yes, there are several fundamentally different approaches to finding the longest palindromic substring:
+
+1. **Dynamic Programming Approach**
+   
+   Instead of expanding from centers, we can use a bottom-up DP approach:
+   
+   ```
+   FUNCTION findLongestPalindrome_DP(string)
+       SET n = length of string
+       
+       // Create n x n table where dp[i][j] = true if substring from i to j is palindrome
+       CREATE boolean table dp[n][n]
+       
+       // All substrings of length 1 are palindromes
+       FOR i = 0 TO n-1
+           dp[i][i] = true
+       END FOR
+       
+       SET start = 0
+       SET maxLength = 1
+       
+       // Check substrings of length 2
+       FOR i = 0 TO n-2
+           IF string[i] = string[i+1] THEN
+               dp[i][i+1] = true
+               start = i
+               maxLength = 2
+           END IF
+       END FOR
+       
+       // Check substrings of length 3 or more
+       FOR length = 3 TO n
+           FOR i = 0 TO n-length
+               j = i + length - 1
+               
+               IF string[i] = string[j] AND dp[i+1][j-1] = true THEN
+                   dp[i][j] = true
+                   
+                   IF length > maxLength THEN
+                       start = i
+                       maxLength = length
+                   END IF
+               END IF
+           END FOR
+       END FOR
+       
+       RETURN substring of string from start to start + maxLength - 1
+   END FUNCTION
+   ```
+   
+   This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory.
+
+2. **Manacher's Algorithm**
+   
+   This is an optimised approach that runs in O(n) time:
+   
+   ```
+   FUNCTION manachers_algorithm(string)
+       // Transform string to handle even-length palindromes
+       // For example, "babad" becomes "^#b#a#b#a#d#$"
+       SET transformed = preprocessString(string)
+       
+       SET n = length of transformed
+       CREATE array p[n] // p[i] = radius of palindrome centered at i
+       
+       SET center = 0
+       SET right_boundary = 0
+       
+       FOR i = 1 TO n-2
+           // Mirror of current position
+           SET mirror = 2 * center - i
+           
+           // If within right boundary, use mirror value
+           IF i < right_boundary THEN
+               p[i] = MIN(right_boundary - i, p[mirror])
+           ELSE
+               p[i] = 0
+           END IF
+           
+           // Expand palindrome centered at i
+           WHILE transformed[i + 1 + p[i]] = transformed[i - 1 - p[i]]
+               INCREMENT p[i]
+           END WHILE
+           
+           // Update center if this palindrome extends beyond right boundary
+           IF i + p[i] > right_boundary THEN
+               center = i
+               right_boundary = i + p[i]
+           END IF
+       END FOR
+       
+       // Find the maximum element in p
+       SET max_len = 0
+       SET center_index = 0
+       
+       FOR i = 1 TO n-2
+           IF p[i] > max_len THEN
+               max_len = p[i]
+               center_index = i
+           END IF
+       END FOR
+       
+       // Extract the longest palindromic substring from original string
+       SET start = (center_index - max_len) / 2
+       RETURN substring of string from start to start + max_len
+   END FUNCTION
+   ```
+   
+   This algorithm is significantly more complex but offers linear time complexity.
+
+3. **Suffix Tree Approach**
+   
+   Building a generalised suffix tree for the string and its reverse, then finding the longest common substring.
+   
+   This is even more complex to implement but can be useful when solving multiple related string problems.
+
+The center expansion approach remains the most intuitive and offers a good balance of simplicity and efficiency for most practical applications.
+:::
+
 
 ## From Pseudocode to Implementation Plan
 

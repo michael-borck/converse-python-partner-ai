@@ -36,98 +36,100 @@ I'm designing a microservices architecture for an e-commerce platform. The main 
 What would be a sensible way to divide these into microservices? What are the key considerations for service boundaries, data ownership, and interaction patterns?
 ```
 
-**AI response:**
-> Here's a sensible approach to dividing your e-commerce platform into microservices, along with key considerations:
-> 
-> ### Proposed Microservice Architecture
-> 
-> 1. **Product Service**
->    - Product catalogue and management
->    - Categories and taxonomies
->    - Product search and filtering capabilities
->    - Inventory and stock information
-> 
-> 2. **User Service**
->    - User accounts and profiles
->    - Authentication and authorization
->    - User preferences and settings
->    - Address book management
-> 
-> 3. **Cart Service**
->    - Shopping cart management
->    - Cart item operations (add, remove, update)
->    - Cart pricing calculations
->    - Saved/wishlist items
-> 
-> 4. **Order Service**
->    - Order creation and management
->    - Order status tracking
->    - Order history
->    - Returns and cancellations
-> 
-> 5. **Payment Service**
->    - Payment processing
->    - Payment method management
->    - Refund handling
->    - Fraud detection (or integration with fraud services)
-> 
-> 6. **Fulfillment Service**
->    - Shipping and delivery management
->    - Carrier integrations
->    - Tracking information
->    - Warehouse/inventory coordination
-> 
-> 7. **Analytics Service**
->    - Data collection and processing
->    - Reporting and dashboards
->    - Business intelligence
->    - Customer behaviour analysis
-> 
-> ### Key Considerations
-> 
-> **Service Boundaries:**
-> 
-> 1. **Business Capability Alignment**: Each service should align with a specific business capability and have a clearly defined responsibility.
-> 
-> 2. **Domain-Driven Design (DDD)**: Consider using DDD principles to identify bounded contexts that form natural service boundaries.
-> 
-> 3. **Autonomy**: Services should be able to function independently as much as possible, with their own databases and minimal dependencies.
-> 
-> 4. **Size Balance**: Neither too large (becoming a monolith) nor too small (creating excessive inter-service communication).
-> 
-> **Data Ownership:**
-> 
-> 1. **Single Source of Truth**: Each type of data should be owned by exactly one service that serves as the authority for that data.
-> 
-> 2. **Data Duplication vs. Service Calls**: Decide when to duplicate data across services (for performance/autonomy) versus making service-to-service calls.
-> 
-> 3. **Consistency Models**: Determine where strong consistency is needed (typically within a service) and where eventual consistency is acceptable (typically across services).
-> 
-> 4. **Data Evolution**: Plan for how data schemas can evolve while maintaining compatibility.
-> 
-> **Interaction Patterns:**
-> 
-> 1. **Synchronous vs. Asynchronous**: Choose between direct API calls (synchronous) and message/event-based communication (asynchronous) based on the needs of each interaction.
-> 
-> 2. **Event-Driven Architecture**: Consider an event bus for broadcasting state changes, which can help decouple services.
-> 
-> 3. **API Gateway**: Implement an API gateway for client applications to simplify their interaction with multiple backend services.
-> 
-> 4. **Service Discovery**: Implement a service registry so services can find each other dynamically.
-> 
-> 5. **Circuit Breakers**: Implement circuit breakers to prevent cascading failures when dependent services are unavailable.
-> 
-> ### Additional Considerations
-> 
-> - **Authentication/Authorization**: This could be handled by the User Service or a dedicated Auth Service, potentially using an identity provider.
-> 
-> - **Notification Service**: Consider adding a dedicated service for handling all communications (email, SMS, push notifications).
-> 
-> - **Review/Rating Service**: For product reviews and ratings, which crosses concerns between products and users.
-> 
-> - **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialised search technology.
-> 
-> This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
+::: {.callout-note icon=false title="AI"}
+Here's a sensible approach to dividing your e-commerce platform into microservices, along with key considerations:
+
+### Proposed Microservice Architecture
+
+1. **Product Service**
+   - Product catalogue and management
+   - Categories and taxonomies
+   - Product search and filtering capabilities
+   - Inventory and stock information
+
+2. **User Service**
+   - User accounts and profiles
+   - Authentication and authorization
+   - User preferences and settings
+   - Address book management
+
+3. **Cart Service**
+   - Shopping cart management
+   - Cart item operations (add, remove, update)
+   - Cart pricing calculations
+   - Saved/wishlist items
+
+4. **Order Service**
+   - Order creation and management
+   - Order status tracking
+   - Order history
+   - Returns and cancellations
+
+5. **Payment Service**
+   - Payment processing
+   - Payment method management
+   - Refund handling
+   - Fraud detection (or integration with fraud services)
+
+6. **Fulfillment Service**
+   - Shipping and delivery management
+   - Carrier integrations
+   - Tracking information
+   - Warehouse/inventory coordination
+
+7. **Analytics Service**
+   - Data collection and processing
+   - Reporting and dashboards
+   - Business intelligence
+   - Customer behaviour analysis
+
+### Key Considerations
+
+**Service Boundaries:**
+
+1. **Business Capability Alignment**: Each service should align with a specific business capability and have a clearly defined responsibility.
+
+2. **Domain-Driven Design (DDD)**: Consider using DDD principles to identify bounded contexts that form natural service boundaries.
+
+3. **Autonomy**: Services should be able to function independently as much as possible, with their own databases and minimal dependencies.
+
+4. **Size Balance**: Neither too large (becoming a monolith) nor too small (creating excessive inter-service communication).
+
+**Data Ownership:**
+
+1. **Single Source of Truth**: Each type of data should be owned by exactly one service that serves as the authority for that data.
+
+2. **Data Duplication vs. Service Calls**: Decide when to duplicate data across services (for performance/autonomy) versus making service-to-service calls.
+
+3. **Consistency Models**: Determine where strong consistency is needed (typically within a service) and where eventual consistency is acceptable (typically across services).
+
+4. **Data Evolution**: Plan for how data schemas can evolve while maintaining compatibility.
+
+**Interaction Patterns:**
+
+1. **Synchronous vs. Asynchronous**: Choose between direct API calls (synchronous) and message/event-based communication (asynchronous) based on the needs of each interaction.
+
+2. **Event-Driven Architecture**: Consider an event bus for broadcasting state changes, which can help decouple services.
+
+3. **API Gateway**: Implement an API gateway for client applications to simplify their interaction with multiple backend services.
+
+4. **Service Discovery**: Implement a service registry so services can find each other dynamically.
+
+5. **Circuit Breakers**: Implement circuit breakers to prevent cascading failures when dependent services are unavailable.
+
+### Additional Considerations
+
+- **Authentication/Authorization**: This could be handled by the User Service or a dedicated Auth Service, potentially using an identity provider.
+
+- **Notification Service**: Consider adding a dedicated service for handling all communications (email, SMS, push notifications).
+
+- **Review/Rating Service**: For product reviews and ratings, which crosses concerns between products and users.
+
+- **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialised search technology.
+
+This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
+:::
+
 
 ### Component-Level Intentional Prompting
 
@@ -238,159 +240,161 @@ I'm designing a payment processing system that currently needs to support credit
 How should I design the system to make these future additions as straightforward as possible? What patterns would help maintain a clean architecture as the system grows?
 ```
 
-**AI response:**
-> Designing a payment processing system with future extensibility in mind requires careful architectural planning. Here's a comprehensive approach:
-> 
-> ### Core Architectural Patterns
-> 
-> 1. **Strategy Pattern** for Payment Methods
->    - Create a common `PaymentProcessor` interface
->    - Implement concrete strategies for each payment method (CreditCardProcessor, PayPalProcessor)
->    - Use a factory to instantiate the appropriate processor based on payment type
-> 
-> 2. **Adapter Pattern** for External Services
->    - Create a consistent internal API for payment operations
->    - Implement adapters for each external service (Stripe, PayPal, etc.)
->    - This isolates external API changes from your core system
-> 
-> 3. **Provider Model** for New Payment Types
->    - Implement a plugin/provider registration system
->    - New payment methods can be added as modules without modifying core code
->    - Use dependency injection to load payment providers
-> 
-> ### System Architecture Components
-> 
-> 1. **Payment Gateway Interface**
->    ```java
->    public interface PaymentGateway {
->        PaymentResult process(PaymentRequest request);
->        RefundResult refund(RefundRequest request);
->        PaymentStatus checkStatus(String paymentId);
->        // Future methods can be added as needed
->    }
->    ```
-> 
-> 2. **Abstract Payment Method**
->    ```java
->    public abstract class PaymentMethod {
->        protected PaymentGateway gateway;
->        
->        public abstract PaymentResponse authorize(Money amount, Customer customer);
->        public abstract PaymentResponse capture(String authorizationId);
->        public abstract PaymentResponse refund(String paymentId, Money amount);
->        
->        // Methods for subscription handling (future extension)
->        public boolean supportsSubscriptions() { return false; }
->        public PaymentResponse createSubscription(SubscriptionRequest request) { 
->            throw new UnsupportedOperationException(); 
->        }
->    }
->    ```
-> 
-> 3. **Payment Provider Registry**
->    ```java
->    public class PaymentProviderRegistry {
->        private Map<String, PaymentMethod> providers = new HashMap<>();
->        
->        public void registerProvider(String type, PaymentMethod provider) {
->            providers.put(type, provider);
->        }
->        
->        public PaymentMethod getProvider(String type) {
->            if (!providers.containsKey(type)) {
->                throw new UnsupportedPaymentTypeException(type);
->            }
->            return providers.get(type);
->        }
->        
->        public List<String> getSupportedPaymentTypes() {
->            return new ArrayList<>(providers.keySet());
->        }
->    }
->    ```
-> 
-> ### Design Principles to Follow
-> 
-> 1. **Abstraction Layers**
->    - Separate business logic from payment provider integration
->    - Create clear boundaries between components
->    
-> 2. **Configuration Over Code**
->    - Use configuration files for provider settings
->    - Enable/disable payment methods without code changes
-> 
-> 3. **Event-Driven Approach**
->    - Implement payment events (initiated, authorized, captured, failed, refunded)
->    - Allow other systems to react to payment events without tight coupling
-> 
-> 4. **Idempotency**
->    - Design all operations to be idempotent (can be safely retried)
->    - Use idempotency keys for external API calls
-> 
-> 5. **Generic Data Models**
->    - Design data models that can accommodate various payment methods
->    - Use extensible property bags for method-specific data
-> 
-> ### Specific Extension Points
-> 
-> 1. **For Cryptocurrency Support:**
->    - Add a `CryptocurrencyPaymentMethod` class
->    - Implement blockchain transaction monitoring
->    - Consider address generation and validation
-> 
-> 2. **For Subscription Billing:**
->    - Extend the payment interface with subscription-specific methods
->    - Add models for subscription plans, billing cycles, etc.
->    - Implement subscription state management
-> 
-> 3. **For Regional Payment Methods:**
->    - Add metadata for region availability to payment methods
->    - Implement region-specific validation and processing rules
->    - Consider internationalization requirements
-> 
-> ### Implementation Example
-> 
-> Here's a skeleton implementation of the core components:
-> 
-> ```java
-> // The request/response models
-> public class PaymentRequest {
->     private String paymentMethodType;
->     private Money amount;
->     private Customer customer;
->     private Map<String, Object> methodSpecificData = new HashMap<>();
->     // getters and setters
-> }
-> 
-> public class PaymentResponse {
->     private boolean success;
->     private String transactionId;
->     private PaymentStatus status;
->     private String errorCode;
->     private String errorMessage;
->     // getters and setters
-> }
-> 
-> // The payment service
-> public class PaymentService {
->     private PaymentProviderRegistry providerRegistry;
->     
->     public PaymentResponse processPayment(PaymentRequest request) {
->         PaymentMethod method = providerRegistry.getProvider(request.getPaymentMethodType());
->         return method.authorize(request.getAmount(), request.getCustomer());
->     }
->     
->     // Additional methods for different payment operations
-> }
-> ```
-> 
-> ### Testing Considerations
-> 
-> 1. Create mock implementations of payment gateways for testing
-> 2. Implement comprehensive integration tests for each payment provider
-> 3. Design a test framework that can validate new payment methods
-> 
-> By following these patterns and principles, your payment system will be well-positioned to accommodate new payment methods and functionality with minimal changes to the core architecture.
+::: {.callout-note icon=false title="AI"}
+Designing a payment processing system with future extensibility in mind requires careful architectural planning. Here's a comprehensive approach:
+
+### Core Architectural Patterns
+
+1. **Strategy Pattern** for Payment Methods
+   - Create a common `PaymentProcessor` interface
+   - Implement concrete strategies for each payment method (CreditCardProcessor, PayPalProcessor)
+   - Use a factory to instantiate the appropriate processor based on payment type
+
+2. **Adapter Pattern** for External Services
+   - Create a consistent internal API for payment operations
+   - Implement adapters for each external service (Stripe, PayPal, etc.)
+   - This isolates external API changes from your core system
+
+3. **Provider Model** for New Payment Types
+   - Implement a plugin/provider registration system
+   - New payment methods can be added as modules without modifying core code
+   - Use dependency injection to load payment providers
+
+### System Architecture Components
+
+1. **Payment Gateway Interface**
+   ```java
+   public interface PaymentGateway {
+       PaymentResult process(PaymentRequest request);
+       RefundResult refund(RefundRequest request);
+       PaymentStatus checkStatus(String paymentId);
+       // Future methods can be added as needed
+   }
+   ```
+
+2. **Abstract Payment Method**
+   ```java
+   public abstract class PaymentMethod {
+       protected PaymentGateway gateway;
+       
+       public abstract PaymentResponse authorize(Money amount, Customer customer);
+       public abstract PaymentResponse capture(String authorizationId);
+       public abstract PaymentResponse refund(String paymentId, Money amount);
+       
+       // Methods for subscription handling (future extension)
+       public boolean supportsSubscriptions() { return false; }
+       public PaymentResponse createSubscription(SubscriptionRequest request) { 
+           throw new UnsupportedOperationException(); 
+       }
+   }
+   ```
+
+3. **Payment Provider Registry**
+   ```java
+   public class PaymentProviderRegistry {
+       private Map<String, PaymentMethod> providers = new HashMap<>();
+       
+       public void registerProvider(String type, PaymentMethod provider) {
+           providers.put(type, provider);
+       }
+       
+       public PaymentMethod getProvider(String type) {
+           if (!providers.containsKey(type)) {
+               throw new UnsupportedPaymentTypeException(type);
+           }
+           return providers.get(type);
+       }
+       
+       public List<String> getSupportedPaymentTypes() {
+           return new ArrayList<>(providers.keySet());
+       }
+   }
+   ```
+
+### Design Principles to Follow
+
+1. **Abstraction Layers**
+   - Separate business logic from payment provider integration
+   - Create clear boundaries between components
+   
+2. **Configuration Over Code**
+   - Use configuration files for provider settings
+   - Enable/disable payment methods without code changes
+
+3. **Event-Driven Approach**
+   - Implement payment events (initiated, authorized, captured, failed, refunded)
+   - Allow other systems to react to payment events without tight coupling
+
+4. **Idempotency**
+   - Design all operations to be idempotent (can be safely retried)
+   - Use idempotency keys for external API calls
+
+5. **Generic Data Models**
+   - Design data models that can accommodate various payment methods
+   - Use extensible property bags for method-specific data
+
+### Specific Extension Points
+
+1. **For Cryptocurrency Support:**
+   - Add a `CryptocurrencyPaymentMethod` class
+   - Implement blockchain transaction monitoring
+   - Consider address generation and validation
+
+2. **For Subscription Billing:**
+   - Extend the payment interface with subscription-specific methods
+   - Add models for subscription plans, billing cycles, etc.
+   - Implement subscription state management
+
+3. **For Regional Payment Methods:**
+   - Add metadata for region availability to payment methods
+   - Implement region-specific validation and processing rules
+   - Consider internationalization requirements
+
+### Implementation Example
+
+Here's a skeleton implementation of the core components:
+
+```java
+// The request/response models
+public class PaymentRequest {
+    private String paymentMethodType;
+    private Money amount;
+    private Customer customer;
+    private Map<String, Object> methodSpecificData = new HashMap<>();
+    // getters and setters
+}
+
+public class PaymentResponse {
+    private boolean success;
+    private String transactionId;
+    private PaymentStatus status;
+    private String errorCode;
+    private String errorMessage;
+    // getters and setters
+}
+
+// The payment service
+public class PaymentService {
+    private PaymentProviderRegistry providerRegistry;
+    
+    public PaymentResponse processPayment(PaymentRequest request) {
+        PaymentMethod method = providerRegistry.getProvider(request.getPaymentMethodType());
+        return method.authorize(request.getAmount(), request.getCustomer());
+    }
+    
+    // Additional methods for different payment operations
+}
+```
+
+### Testing Considerations
+
+1. Create mock implementations of payment gateways for testing
+2. Implement comprehensive integration tests for each payment provider
+3. Design a test framework that can validate new payment methods
+
+By following these patterns and principles, your payment system will be well-positioned to accommodate new payment methods and functionality with minimal changes to the core architecture.
+:::
+
 
 ### Cross-Cutting Concerns
 
@@ -425,183 +429,185 @@ I've implemented a new authentication service with the following components:
 I need to create comprehensive documentation for other developers who will integrate with this service. What should my documentation cover, and how should I structure it for maximum clarity?
 ```
 
-**AI response:**
-> # Authentication Service Documentation Structure
-> 
-> Here's a comprehensive documentation structure for your authentication service that balances thoroughness with usability:
-> 
-> ## 1. Overview
-> 
-> ### 1.1 Purpose and Scope
-> - Brief description of the authentication service
-> - Core features (OAuth2, JWT, RBAC, MFA)
-> - Where it fits in the overall system architecture
-> 
-> ### 1.2 High-Level Architecture
-> - Component diagram showing major parts of the auth service
-> - Integration points with other systems
-> - Data flow diagrams for key authentication paths
-> 
-> ### 1.3. Terminology
-> - Clear definitions of domain-specific terms
-> - Explanation of OAuth2 concepts for those unfamiliar
-> 
-> ## 2. Getting Started
-> 
-> ### 2.1 Prerequisites
-> - Required credentials and access
-> - Development environment setup
-> - Dependencies
-> 
-> ### 2.2 Quick Start Guide
-> - Basic implementation examples for common scenarios
-> - Sample code for authentication flows
-> - Minimal configuration example
-> 
-> ### 2.3 Integration Checklist
-> - Step-by-step guide for service integration
-> - Security best practices checklist
-> 
-> ## 3. Core Features
-> 
-> ### 3.1 OAuth2 Provider Integration
-> - Supported OAuth providers
-> - Configuration parameters
-> - Authorization code flow implementation
-> - Refresh token handling
-> - Error scenarios and troubleshooting
-> 
-> ### 3.2 JWT Token Management
-> - Token structure and payload
-> - Issuance process and endpoints
-> - Validation procedures
-> - Token lifecycle (expiration, refresh)
-> - Signature verification
-> 
-> ### 3.3 Role-Based Access Control
-> - Role hierarchy and definitions
-> - Permission assignments
-> - Role checking API
-> - Integration with resource servers
-> - Custom permission logic
-> 
-> ### 3.4 Multi-Factor Authentication
-> - Supported MFA methods
-> - Enrollment process
-> - Verification flow
-> - Fallback mechanisms
-> - End-user experience considerations
-> 
-> ## 4. API Reference
-> 
-> ### 4.1 Authentication Endpoints
-> - Complete API specification (OpenAPI/Swagger)
-> - Request/response formats
-> - Error codes and handling
-> - Rate limits
-> 
-> ### 4.2 Client Libraries
-> - Available client libraries for different languages
-> - Installation instructions
-> - Basic usage patterns
-> 
-> ### 4.3 Middleware Components
-> - Authentication middleware for different frameworks
-> - Configuration options
-> - Error handling
-> 
-> ## 5. Implementation Guides
-> 
-> ### 5.1 Backend Service Integration
-> - Step-by-step guide with code examples
-> - Validation middleware setup
-> - Error handling best practices
-> 
-> ### 5.2 Frontend Application Integration
-> - Login implementation
-> - Token storage strategies
-> - Handling token expiration
-> - Logout procedures
-> 
-> ### 5.3 Mobile Application Integration
-> - Native app authentication flows
-> - Biometric integration
-> - Token storage on mobile devices
-> 
-> ## 6. Security Considerations
-> 
-> ### 6.1 Security Best Practices
-> - HTTPS requirements
-> - Token storage recommendations
-> - CSRF protection
-> - XSS prevention
-> 
-> ### 6.2 Common Vulnerabilities
-> - Known attack vectors
-> - Prevention strategies
-> - Security testing checklist
-> 
-> ### 6.3 Compliance Information
-> - Relevant standards compliance (GDPR, SOC2, etc.)
-> - Audit logging capabilities
-> 
-> ## 7. Operations
-> 
-> ### 7.1 Monitoring and Alerting
-> - Available metrics
-> - Recommended alerts
-> - Performance benchmarks
-> 
-> ### 7.2 Troubleshooting
-> - Common issues and resolutions
-> - Logging details
-> - Debugging tools
-> 
-> ### 7.3 Disaster Recovery
-> - Failure scenarios
-> - Recovery procedures
-> 
-> ## 8. Reference Implementations
-> 
-> ### 8.1 Sample Applications
-> - Links to reference implementations
-> - Example projects demonstrating best practices
-> 
-> ### 8.2 Common Patterns
-> - Authentication patterns for microservices
-> - Single sign-on implementation
-> - API gateway integration
-> 
-> ## 9. FAQ and Support
-> 
-> ### 9.1 Frequently Asked Questions
-> - Answers to common questions
-> - Clarification of complex concepts
-> 
-> ### 9.2 Getting Help
-> - Support channels
-> - Issue reporting procedure
-> - SLAs and response times
-> 
-> ## Documentation Tips
-> 
-> 1. **Use consistent terminology** throughout all documentation
-> 
-> 2. **Include working code examples** that developers can copy and adapt
-> 
-> 3. **Create diagrams for complex flows**, especially the OAuth2 and MFA processes
-> 
-> 4. **Add sequence diagrams** showing the authentication process across systems
-> 
-> 5. **Document error scenarios** just as thoroughly as success paths
-> 
-> 6. **Version your documentation** to align with service versions
-> 
-> 7. **Provide a searchable format** (ideally with a good search function)
-> 
-> 8. **Include a changelog** tracking major documentation updates
-> 
-> This structure provides a comprehensive yet navigable documentation set that addresses the needs of different audiences - from developers getting started to those troubleshooting specific issues.
+::: {.callout-note icon=false title="AI"}
+# Authentication Service Documentation Structure
+
+Here's a comprehensive documentation structure for your authentication service that balances thoroughness with usability:
+
+## 1. Overview
+
+### 1.1 Purpose and Scope
+- Brief description of the authentication service
+- Core features (OAuth2, JWT, RBAC, MFA)
+- Where it fits in the overall system architecture
+
+### 1.2 High-Level Architecture
+- Component diagram showing major parts of the auth service
+- Integration points with other systems
+- Data flow diagrams for key authentication paths
+
+### 1.3. Terminology
+- Clear definitions of domain-specific terms
+- Explanation of OAuth2 concepts for those unfamiliar
+
+## 2. Getting Started
+
+### 2.1 Prerequisites
+- Required credentials and access
+- Development environment setup
+- Dependencies
+
+### 2.2 Quick Start Guide
+- Basic implementation examples for common scenarios
+- Sample code for authentication flows
+- Minimal configuration example
+
+### 2.3 Integration Checklist
+- Step-by-step guide for service integration
+- Security best practices checklist
+
+## 3. Core Features
+
+### 3.1 OAuth2 Provider Integration
+- Supported OAuth providers
+- Configuration parameters
+- Authorization code flow implementation
+- Refresh token handling
+- Error scenarios and troubleshooting
+
+### 3.2 JWT Token Management
+- Token structure and payload
+- Issuance process and endpoints
+- Validation procedures
+- Token lifecycle (expiration, refresh)
+- Signature verification
+
+### 3.3 Role-Based Access Control
+- Role hierarchy and definitions
+- Permission assignments
+- Role checking API
+- Integration with resource servers
+- Custom permission logic
+
+### 3.4 Multi-Factor Authentication
+- Supported MFA methods
+- Enrollment process
+- Verification flow
+- Fallback mechanisms
+- End-user experience considerations
+
+## 4. API Reference
+
+### 4.1 Authentication Endpoints
+- Complete API specification (OpenAPI/Swagger)
+- Request/response formats
+- Error codes and handling
+- Rate limits
+
+### 4.2 Client Libraries
+- Available client libraries for different languages
+- Installation instructions
+- Basic usage patterns
+
+### 4.3 Middleware Components
+- Authentication middleware for different frameworks
+- Configuration options
+- Error handling
+
+## 5. Implementation Guides
+
+### 5.1 Backend Service Integration
+- Step-by-step guide with code examples
+- Validation middleware setup
+- Error handling best practices
+
+### 5.2 Frontend Application Integration
+- Login implementation
+- Token storage strategies
+- Handling token expiration
+- Logout procedures
+
+### 5.3 Mobile Application Integration
+- Native app authentication flows
+- Biometric integration
+- Token storage on mobile devices
+
+## 6. Security Considerations
+
+### 6.1 Security Best Practices
+- HTTPS requirements
+- Token storage recommendations
+- CSRF protection
+- XSS prevention
+
+### 6.2 Common Vulnerabilities
+- Known attack vectors
+- Prevention strategies
+- Security testing checklist
+
+### 6.3 Compliance Information
+- Relevant standards compliance (GDPR, SOC2, etc.)
+- Audit logging capabilities
+
+## 7. Operations
+
+### 7.1 Monitoring and Alerting
+- Available metrics
+- Recommended alerts
+- Performance benchmarks
+
+### 7.2 Troubleshooting
+- Common issues and resolutions
+- Logging details
+- Debugging tools
+
+### 7.3 Disaster Recovery
+- Failure scenarios
+- Recovery procedures
+
+## 8. Reference Implementations
+
+### 8.1 Sample Applications
+- Links to reference implementations
+- Example projects demonstrating best practices
+
+### 8.2 Common Patterns
+- Authentication patterns for microservices
+- Single sign-on implementation
+- API gateway integration
+
+## 9. FAQ and Support
+
+### 9.1 Frequently Asked Questions
+- Answers to common questions
+- Clarification of complex concepts
+
+### 9.2 Getting Help
+- Support channels
+- Issue reporting procedure
+- SLAs and response times
+
+## Documentation Tips
+
+1. **Use consistent terminology** throughout all documentation
+
+2. **Include working code examples** that developers can copy and adapt
+
+3. **Create diagrams for complex flows**, especially the OAuth2 and MFA processes
+
+4. **Add sequence diagrams** showing the authentication process across systems
+
+5. **Document error scenarios** just as thoroughly as success paths
+
+6. **Version your documentation** to align with service versions
+
+7. **Provide a searchable format** (ideally with a good search function)
+
+8. **Include a changelog** tracking major documentation updates
+
+This structure provides a comprehensive yet navigable documentation set that addresses the needs of different audiences - from developers getting started to those troubleshooting specific issues.
+:::
+
 
 ### AI-Enhanced Code Documentation
 
@@ -723,103 +729,105 @@ Our development team of 12 engineers is working on a complex system with multipl
 What collaboration patterns or team practices would help us maintain a shared understanding of the system while allowing for individual specialisation?
 ```
 
-**AI response:**
-> # Team Knowledge Sharing Patterns for Complex Systems
-> 
-> To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
-> 
-> ## Regular Knowledge Exchange Practices
-> 
-> ### 1. Rotation-Based Code Reviews
-> - **Approach**: Assign code reviews outside of a developer's primary area
-> - **Frequency**: Every developer reviews code outside their specialty at least once per sprint
-> - **Implementation**: Create a rotation schedule ensuring exposure to different components
-> - **Benefits**: Cross-pollination of ideas and gradual knowledge distribution
-> 
-> ### 2. Architecture Decision Records (ADRs)
-> - **Approach**: Document significant architectural decisions with context and rationale
-> - **Content**: Problem statement, constraints, considered options, chosen solution, consequences
-> - **Storage**: Keep in version control alongside the code
-> - **Review**: Team-wide review of new ADRs in dedicated meetings
-> 
-> ### 3. Component Demo Sessions
-> - **Approach**: Regular deep-dives into specific components
-> - **Format**: 30-45 minute sessions with code walkthroughs, followed by Q&A
-> - **Frequency**: Weekly or bi-weekly, rotating through components
-> - **Documentation**: Record sessions and summarise key points in a knowledge base
-> 
-> ### 4. Pair Programming Rotations
-> - **Approach**: Scheduled pair programming sessions across component boundaries
-> - **Duration**: Half-day sessions
-> - **Frequency**: Bi-weekly for each developer
-> - **Pairing**: Deliberate pairings of specialists with non-specialists
-> 
-> ## Documentation Practices
-> 
-> ### 5. Living Architecture Diagram
-> - **Approach**: Maintain an always-current system architecture visualisation
-> - **Ownership**: Rotating responsibility for updates
-> - **Reviews**: Monthly team reviews to ensure accuracy
-> - **Accessibility**: Prominently displayed in team spaces (physical and virtual)
-> 
-> ### 6. Component Fact Sheets
-> - **Approach**: One-page summaries of each component's purpose, interfaces, and quirks
-> - **Content**: Core responsibilities, key interfaces, common issues, future plans
-> - **Updates**: Refresh quarterly or after major changes
-> - **Usage**: Required reading for onboarding to a new component
-> 
-> ## Team Structure Adaptations
-> 
-> ### 7. Bounded Rotation Program
-> - **Approach**: Planned rotations of developers between components
-> - **Duration**: 4-8 weeks per rotation
-> - **Scope**: Limited to 1-2 developers rotating at once to maintain continuity
-> - **Knowledge Transfer**: Dedicated handoff sessions when starting/ending rotations
-> 
-> ### 8. Component Ambassadors
-> - **Approach**: Each component has a primary owner and a secondary "ambassador"
-> - **Ambassador Role**: Learn enough to answer questions and represent the component
-> - **Rotation**: Ambassadors rotate every 3-6 months
-> - **Responsibilities**: Attend cross-component design meetings, review integration points
-> 
-> ## Meeting Structures
-> 
-> ### 9. System-Wide Design Reviews
-> - **Approach**: Regular reviews of how components interact
-> - **Frequency**: Monthly
-> - **Format**: Each team presents recent changes and upcoming work
-> - **Focus**: Integration points and cross-cutting concerns
-> 
-> ### 10. Technical Brown Bags
-> - **Approach**: Lunch-and-learn sessions on specific technical topics
-> - **Presenters**: Rotating responsibility among team members
-> - **Topics**: Both component-specific and general engineering practices
-> - **Schedule**: Weekly or bi-weekly
-> 
-> ## Tooling and Infrastructure
-> 
-> ### 11. centralised Documentation Portal
-> - **Approach**: Single entry point for all system documentation
-> - **Content**: Component guides, architecture diagrams, ADRs, API docs
-> - **Maintenance**: Part of definition of done for features
-> - **Search**: Robust search functionality across all documentation
-> 
-> ### 12. Cross-Component Integration Tests
-> - **Approach**: Shared ownership of integration test suite
-> - **Responsibility**: All developers contribute to integration tests
-> - **Reviews**: Cross-component review of test scenarios
-> - **Visibility**: Integration test results prominently displayed
-> 
-> ## Implementation Strategy
-> 
-> Rather than implementing all these patterns at once:
-> 
-> 1. **Start with 3-4 high-impact practices** based on your team's specific needs
-> 2. **Evaluate after 2-3 months** to assess effectiveness
-> 3. **Add or adjust practices** based on team feedback
-> 4. **Create explicit time allocations** for knowledge sharing activities
-> 
-> These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
+::: {.callout-note icon=false title="AI"}
+# Team Knowledge Sharing Patterns for Complex Systems
+
+To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
+
+## Regular Knowledge Exchange Practices
+
+### 1. Rotation-Based Code Reviews
+- **Approach**: Assign code reviews outside of a developer's primary area
+- **Frequency**: Every developer reviews code outside their specialty at least once per sprint
+- **Implementation**: Create a rotation schedule ensuring exposure to different components
+- **Benefits**: Cross-pollination of ideas and gradual knowledge distribution
+
+### 2. Architecture Decision Records (ADRs)
+- **Approach**: Document significant architectural decisions with context and rationale
+- **Content**: Problem statement, constraints, considered options, chosen solution, consequences
+- **Storage**: Keep in version control alongside the code
+- **Review**: Team-wide review of new ADRs in dedicated meetings
+
+### 3. Component Demo Sessions
+- **Approach**: Regular deep-dives into specific components
+- **Format**: 30-45 minute sessions with code walkthroughs, followed by Q&A
+- **Frequency**: Weekly or bi-weekly, rotating through components
+- **Documentation**: Record sessions and summarise key points in a knowledge base
+
+### 4. Pair Programming Rotations
+- **Approach**: Scheduled pair programming sessions across component boundaries
+- **Duration**: Half-day sessions
+- **Frequency**: Bi-weekly for each developer
+- **Pairing**: Deliberate pairings of specialists with non-specialists
+
+## Documentation Practices
+
+### 5. Living Architecture Diagram
+- **Approach**: Maintain an always-current system architecture visualisation
+- **Ownership**: Rotating responsibility for updates
+- **Reviews**: Monthly team reviews to ensure accuracy
+- **Accessibility**: Prominently displayed in team spaces (physical and virtual)
+
+### 6. Component Fact Sheets
+- **Approach**: One-page summaries of each component's purpose, interfaces, and quirks
+- **Content**: Core responsibilities, key interfaces, common issues, future plans
+- **Updates**: Refresh quarterly or after major changes
+- **Usage**: Required reading for onboarding to a new component
+
+## Team Structure Adaptations
+
+### 7. Bounded Rotation Program
+- **Approach**: Planned rotations of developers between components
+- **Duration**: 4-8 weeks per rotation
+- **Scope**: Limited to 1-2 developers rotating at once to maintain continuity
+- **Knowledge Transfer**: Dedicated handoff sessions when starting/ending rotations
+
+### 8. Component Ambassadors
+- **Approach**: Each component has a primary owner and a secondary "ambassador"
+- **Ambassador Role**: Learn enough to answer questions and represent the component
+- **Rotation**: Ambassadors rotate every 3-6 months
+- **Responsibilities**: Attend cross-component design meetings, review integration points
+
+## Meeting Structures
+
+### 9. System-Wide Design Reviews
+- **Approach**: Regular reviews of how components interact
+- **Frequency**: Monthly
+- **Format**: Each team presents recent changes and upcoming work
+- **Focus**: Integration points and cross-cutting concerns
+
+### 10. Technical Brown Bags
+- **Approach**: Lunch-and-learn sessions on specific technical topics
+- **Presenters**: Rotating responsibility among team members
+- **Topics**: Both component-specific and general engineering practices
+- **Schedule**: Weekly or bi-weekly
+
+## Tooling and Infrastructure
+
+### 11. centralised Documentation Portal
+- **Approach**: Single entry point for all system documentation
+- **Content**: Component guides, architecture diagrams, ADRs, API docs
+- **Maintenance**: Part of definition of done for features
+- **Search**: Robust search functionality across all documentation
+
+### 12. Cross-Component Integration Tests
+- **Approach**: Shared ownership of integration test suite
+- **Responsibility**: All developers contribute to integration tests
+- **Reviews**: Cross-component review of test scenarios
+- **Visibility**: Integration test results prominently displayed
+
+## Implementation Strategy
+
+Rather than implementing all these patterns at once:
+
+1. **Start with 3-4 high-impact practices** based on your team's specific needs
+2. **Evaluate after 2-3 months** to assess effectiveness
+3. **Add or adjust practices** based on team feedback
+4. **Create explicit time allocations** for knowledge sharing activities
+
+These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
+:::
+
 
 ### Documentation as Code
 

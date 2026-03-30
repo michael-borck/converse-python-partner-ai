@@ -512,15 +512,16 @@ And here's my validation function:
 How could the CSS be breaking my JavaScript?
 ```
 
-**AI might respond:**
-> The CSS you've added is unlikely to directly break your JavaScript validation. These are separate concerns in web development. Let's look for other possible causes:
-> 
-> 1. Did you make any other changes at the same time?
-> 2. Could there be a JS syntax error that's preventing execution?
-> 3. Are you using CSS selectors in your JS that might no longer match?
-> 4. Did you accidentally change any IDs or classes used by both?
-> 
-> Let's examine your JavaScript for the actual issue...
+::: {.callout-note icon=false title="AI"}
+The CSS you've added is unlikely to directly break your JavaScript validation. These are separate concerns in web development. Let's look for other possible causes:
+
+1. Did you make any other changes at the same time?
+2. Could there be a JS syntax error that's preventing execution?
+3. Are you using CSS selectors in your JS that might no longer match?
+4. Did you accidentally change any IDs or classes used by both?
+
+Let's examine your JavaScript for the actual issue...
+:::
 
 ### The Bandage Solution
 
@@ -577,58 +578,60 @@ What's going wrong?
 
 ### Tracing Execution
 
-**AI response:**
-> Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].
-> 
-> In bubble sort, we compare adjacent elements and swap them if they're in the wrong order. After each complete pass through the array, the largest element "bubbles up" to its correct position.
-> 
-> Let's trace through each pass:
-> 
-> Initial array: [5, 3, 8, 1, 2, 9, 4]
-> 
-> Pass 1 (i=0):
-> - Compare 5 and 3: Swap → [3, 5, 8, 1, 2, 9, 4]
-> - Compare 5 and 8: No swap → [3, 5, 8, 1, 2, 9, 4]
-> - Compare 8 and 1: Swap → [3, 5, 1, 8, 2, 9, 4]
-> - Compare 8 and 2: Swap → [3, 5, 1, 2, 8, 9, 4]
-> - Compare 8 and 9: No swap → [3, 5, 1, 2, 8, 9, 4]
-> - Compare 9 and 4: Swap → [3, 5, 1, 2, 8, 4, 9]
-> 
-> After Pass 1: [3, 5, 1, 2, 8, 4, 9]
-> 
-> Pass 2 (i=1):
-> - Compare 3 and 5: No swap → [3, 5, 1, 2, 8, 4, 9]
-> - Compare 5 and 1: Swap → [3, 1, 5, 2, 8, 4, 9]
-> - Compare 5 and 2: Swap → [3, 1, 2, 5, 8, 4, 9]
-> - Compare 5 and 8: No swap → [3, 1, 2, 5, 8, 4, 9]
-> - Compare 8 and 4: Swap → [3, 1, 2, 5, 4, 8, 9]
-> 
-> After Pass 2: [3, 1, 2, 5, 4, 8, 9]
-> 
-> Wait, I need to review the algorithm. In a correct bubble sort, the largest elements should bubble to the end, and we should get closer to the correct sort with each pass. Let me carefully check your implementation...
-> 
-> I don't see anything wrong with your bubble sort implementation. Let me continue tracing:
-> 
-> Pass 3 (i=2):
-> - Compare 3 and 1: Swap → [1, 3, 2, 5, 4, 8, 9]
-> - Compare 3 and 2: Swap → [1, 2, 3, 5, 4, 8, 9]
-> - Compare 3 and 5: No swap → [1, 2, 3, 5, 4, 8, 9]
-> - Compare 5 and 4: Swap → [1, 2, 3, 4, 5, 8, 9]
-> 
-> After Pass 3: [1, 2, 3, 4, 5, 8, 9]
-> 
-> Wait, this is now correctly sorted! Let me trace one more pass to be sure:
-> 
-> Pass 4 (i=3):
-> - Compare 1 and 2: No swap → [1, 2, 3, 4, 5, 8, 9]
-> - Compare 2 and 3: No swap → [1, 2, 3, 4, 5, 8, 9]
-> - Compare 3 and 4: No swap → [1, 2, 3, 4, 5, 8, 9]
-> 
-> No more swaps are needed. The array is now [1, 2, 3, 4, 5, 8, 9], which is correctly sorted.
-> 
-> It seems the algorithm is working correctly after all. The expected output for [5, 3, 8, 1, 2, 9, 4] should be [1, 2, 3, 4, 5, 8, 9], not [1, 2, 3, 5, 4, 8, 9] as you mentioned.
-> 
-> There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you're calling and testing this function?
+::: {.callout-note icon=false title="AI"}
+Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].
+
+In bubble sort, we compare adjacent elements and swap them if they're in the wrong order. After each complete pass through the array, the largest element "bubbles up" to its correct position.
+
+Let's trace through each pass:
+
+Initial array: [5, 3, 8, 1, 2, 9, 4]
+
+Pass 1 (i=0):
+- Compare 5 and 3: Swap → [3, 5, 8, 1, 2, 9, 4]
+- Compare 5 and 8: No swap → [3, 5, 8, 1, 2, 9, 4]
+- Compare 8 and 1: Swap → [3, 5, 1, 8, 2, 9, 4]
+- Compare 8 and 2: Swap → [3, 5, 1, 2, 8, 9, 4]
+- Compare 8 and 9: No swap → [3, 5, 1, 2, 8, 9, 4]
+- Compare 9 and 4: Swap → [3, 5, 1, 2, 8, 4, 9]
+
+After Pass 1: [3, 5, 1, 2, 8, 4, 9]
+
+Pass 2 (i=1):
+- Compare 3 and 5: No swap → [3, 5, 1, 2, 8, 4, 9]
+- Compare 5 and 1: Swap → [3, 1, 5, 2, 8, 4, 9]
+- Compare 5 and 2: Swap → [3, 1, 2, 5, 8, 4, 9]
+- Compare 5 and 8: No swap → [3, 1, 2, 5, 8, 4, 9]
+- Compare 8 and 4: Swap → [3, 1, 2, 5, 4, 8, 9]
+
+After Pass 2: [3, 1, 2, 5, 4, 8, 9]
+
+Wait, I need to review the algorithm. In a correct bubble sort, the largest elements should bubble to the end, and we should get closer to the correct sort with each pass. Let me carefully check your implementation...
+
+I don't see anything wrong with your bubble sort implementation. Let me continue tracing:
+
+Pass 3 (i=2):
+- Compare 3 and 1: Swap → [1, 3, 2, 5, 4, 8, 9]
+- Compare 3 and 2: Swap → [1, 2, 3, 5, 4, 8, 9]
+- Compare 3 and 5: No swap → [1, 2, 3, 5, 4, 8, 9]
+- Compare 5 and 4: Swap → [1, 2, 3, 4, 5, 8, 9]
+
+After Pass 3: [1, 2, 3, 4, 5, 8, 9]
+
+Wait, this is now correctly sorted! Let me trace one more pass to be sure:
+
+Pass 4 (i=3):
+- Compare 1 and 2: No swap → [1, 2, 3, 4, 5, 8, 9]
+- Compare 2 and 3: No swap → [1, 2, 3, 4, 5, 8, 9]
+- Compare 3 and 4: No swap → [1, 2, 3, 4, 5, 8, 9]
+
+No more swaps are needed. The array is now [1, 2, 3, 4, 5, 8, 9], which is correctly sorted.
+
+It seems the algorithm is working correctly after all. The expected output for [5, 3, 8, 1, 2, 9, 4] should be [1, 2, 3, 4, 5, 8, 9], not [1, 2, 3, 5, 4, 8, 9] as you mentioned.
+
+There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you're calling and testing this function?
+:::
+
 
 ### Debugging the Test Case
 
@@ -654,47 +657,49 @@ And I'm still seeing some incorrect sorts in the output. Could there be an issue
 
 ### Identifying the Root Cause
 
-**AI response:**
-> Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
-> 
-> Let's analyse the `process_data` function:
-> 
-> ```python
-> def process_data(data_sets):
->     results = []
->     for data in data_sets:
->         sorted_data = bubble_sort(data.copy())
->         results.append(sorted_data)
->     return results
-> ```
-> 
-> This function:
-> 1. Takes a list of data sets
-> 2. Creates a copy of each data set
-> 3. Sorts the copy using bubble_sort
-> 4. Appends the sorted data to a results list
-> 5. Returns all results
-> 
-> This approach seems correct. You're creating a copy of each data set before sorting, which is good practice to avoid modifying the original data.
-> 
-> Here are some potential issues to check:
-> 
-> 1. **Data type consistency**: Are all elements in your arrays numbers? Sorting mixed types (like strings and numbers) can lead to unexpected results.
-> 
-> 2. **Mutable objects**: If your arrays contain mutable objects rather than simple numbers, the sorting might be affected by reference issues.
-> 
-> 3. **Preservation of original data**: Double-check that `data.copy()` is creating a proper copy. For nested structures, you might need a deep copy.
-> 
-> 4. **Concurrency issues**: If your application is multi-threaded, there could be race conditions affecting the sorting.
-> 
-> 5. **Data transformation**: Is the data being transformed between the sorting and when you observe the results?
-> 
-> 6. **Visualisation/display issue**: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
-> 
-> Can you share:
-> 1. A specific example of a dataset that's being incorrectly sorted in your application
-> 2. How you're verifying the results (e.g., printing them, displaying in UI)
-> 3. Any processing that happens to the results after sorting
+::: {.callout-note icon=false title="AI"}
+Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
+
+Let's analyse the `process_data` function:
+
+```python
+def process_data(data_sets):
+    results = []
+    for data in data_sets:
+        sorted_data = bubble_sort(data.copy())
+        results.append(sorted_data)
+    return results
+```
+
+This function:
+1. Takes a list of data sets
+2. Creates a copy of each data set
+3. Sorts the copy using bubble_sort
+4. Appends the sorted data to a results list
+5. Returns all results
+
+This approach seems correct. You're creating a copy of each data set before sorting, which is good practice to avoid modifying the original data.
+
+Here are some potential issues to check:
+
+1. **Data type consistency**: Are all elements in your arrays numbers? Sorting mixed types (like strings and numbers) can lead to unexpected results.
+
+2. **Mutable objects**: If your arrays contain mutable objects rather than simple numbers, the sorting might be affected by reference issues.
+
+3. **Preservation of original data**: Double-check that `data.copy()` is creating a proper copy. For nested structures, you might need a deep copy.
+
+4. **Concurrency issues**: If your application is multi-threaded, there could be race conditions affecting the sorting.
+
+5. **Data transformation**: Is the data being transformed between the sorting and when you observe the results?
+
+6. **Visualisation/display issue**: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
+
+Can you share:
+1. A specific example of a dataset that's being incorrectly sorted in your application
+2. How you're verifying the results (e.g., printing them, displaying in UI)
+3. Any processing that happens to the results after sorting
+:::
+
 
 ### Resolution
 
