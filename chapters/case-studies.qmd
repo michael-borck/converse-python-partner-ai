@@ -30,8 +30,8 @@ The team needs to:
 
 #### Step 1: Restate the Problem
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I need to build a data analysis pipeline to process customer transaction data. Let me restate the problem:
 
 We have a large CSV file (millions of rows) with transaction data including transaction ID, customer ID, date/time, product categories, purchase amount, payment method, and store location.
@@ -43,7 +43,8 @@ We need to:
 4. Create visualizations of the results
 
 Is this understanding correct, and are there any important aspects I've missed?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important:
@@ -66,8 +67,8 @@ With these considerations in mind, your restatement effectively captures the cor
 
 #### Step 2: Identify Input and Output
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Let me define the specific inputs and outputs for this pipeline:
 
 INPUTS:
@@ -90,7 +91,8 @@ OUTPUTS:
    * Heatmap of purchase patterns by day of week and hour
 
 Do these specifications adequately cover what's needed for the pipeline?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your input and output specifications provide a clear framework for the pipeline. They're comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider:
@@ -158,8 +160,8 @@ Counting frequencies:
 
 Most frequent combinations: ("dairy", "produce") and ("groceries", "dairy")
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I've worked through a small sample of the data manually to understand the process of finding product combinations. Here's what I did:
 
 [The manual work shown above]
@@ -171,7 +173,8 @@ From this manual process, I can see that we need to:
 4. Sort by frequency to find the most common combinations
 
 This approach works for pairs, but for larger combinations, we might need association rule mining algorithms like Apriori. Does this manual approach seem correct, and are there any important considerations I'm missing?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your manual approach for finding product combinations is sound! You've correctly identified the key steps for analysing product pairs. Here are some important considerations and extensions:
@@ -201,11 +204,12 @@ Your manual process demonstrates a good understanding of the approach. For imple
 
 Based on the manual exploration, we can now outline the solution in pseudocode.
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Based on my manual exploration, let me write pseudocode for the data analysis pipeline:
 
-```
+:::
+
 FUNCTION clean_data(input_file):
     data = READ_CSV(input_file)
     
@@ -387,8 +391,8 @@ These improvements would make your pipeline more robust, efficient, and suitable
 
 Now let's implement the solution in Python, focusing on the product combination analysis.
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Let's convert the pseudocode for finding product combinations into Python code using pandas and mlxtend for the Apriori algorithm:
 
 ```python
@@ -478,7 +482,8 @@ def clean_data(file_path, chunk_size=100000):
 ```
 
 Is this implementation correct and efficient? Are there any issues or optimisations I should consider?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimisations:
@@ -591,8 +596,8 @@ Overall, your implementation is well-designed for the task at hand. These sugges
 
 For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset.
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Let's test our implementation with a small sample dataset first:
 
 ```python
@@ -678,7 +683,8 @@ print(f"Unique product pairs in data: {len(unique_combos)}")
 ```
 
 What issues might we encounter when scaling to the full dataset, and how should we address them?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your test approach with synthetic data is excellent for validating the implementation! Here are the potential issues you might encounter when scaling to the full dataset and strategies to address them:
@@ -798,10 +804,11 @@ A developer needs to build a weather dashboard application in Python. The applic
 
 #### Step 1: Restate the Problem
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I need to create a weather dashboard in Python that uses a provided module to access weather data and displays it in a user-friendly interface. Can you help me restate this problem more clearly to ensure I understand all requirements?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 This problem involves creating a Python application that:
@@ -825,8 +832,8 @@ That's helpful. Could you help me understand what types of weather data are typi
 
 #### Step 2: Identify Input and Output Requirements
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Based on our discussion, let me identify the specific inputs and outputs for my weather dashboard:
 
 Inputs:
@@ -841,7 +848,8 @@ Outputs:
 - User navigation menu
 
 Does this cover the essential inputs and outputs? Is there anything important I'm missing?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your input/output identification is strong! A few additional considerations:
@@ -861,8 +869,8 @@ Additional outputs to consider:
 
 #### Step 3: Work Problem by Hand
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Before we start coding, I want to sketch out the user interaction flow for the dashboard:
 
 1. User starts program
@@ -884,14 +892,16 @@ Before we start coding, I want to sketch out the user interaction flow for the d
 9. Return to menu (step 6)
 
 Does this flow make sense? Would you structure the user experience differently?
-```
+:::
+
 
 #### Step 4: Write Pseudocode
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Now that we have a clear understanding of the problem and user flow, could you help me write pseudocode for this weather dashboard? I want to focus on creating a modular design with separate functions for data retrieval, display, and user interaction.
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 :::
@@ -971,15 +981,16 @@ The developer starts implementing the solution based on the pseudocode, focusing
 
 #### Step 6: Test with Data
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Now I want to test this code with some sample data. Can you provide a sample data structure that would be returned by:
 
 1. weather_api.get_current()
 2. weather_api.get_forecast()
 
 Also, what test cases should I consider to ensure my dashboard handles all possible scenarios correctly?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Here are sample data structures that might be returned by the weather API:
@@ -1159,8 +1170,8 @@ A team is experiencing intermittent failures in their e-commerce checkout system
 
 #### Step 1: Restate the Problem
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 We're experiencing intermittent failures in our checkout system. Let me restate the problem:
 
 Users occasionally receive a generic "Unable to complete checkout" error when attempting to purchase items. The issue:
@@ -1173,12 +1184,13 @@ Users occasionally receive a generic "Unable to complete checkout" error when at
 Our goal is to identify the root cause and implement a fix to eliminate these checkout failures.
 
 Is this an appropriate restatement of the debugging challenge?
-```
+:::
+
 
 #### Step 2: Identify Information Needed
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 To debug this issue effectively, we need to gather specific information:
 
 INPUTS (Information sources):
@@ -1196,7 +1208,8 @@ OUTPUTS (What we need to determine):
 - Potential fix or mitigation strategy
 
 Are there other information sources or outputs we should consider to effectively debug this intermittent issue?
-```
+:::
+
 
 The debugging case study would continue through a systematic investigation process, demonstrating how intentional prompting techniques help narrow down the cause of complex bugs.
 

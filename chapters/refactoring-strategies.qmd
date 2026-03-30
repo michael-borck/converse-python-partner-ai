@@ -317,10 +317,11 @@ function calculateDiscount(customer, order) {
 
 **Refactoring Request:**
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 This discount calculation function has become difficult to understand and maintain due to nested conditionals. How would you refactor it to improve readability and maintainability?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 I'll refactor this function to simplify the nested conditionals using a few strategies:
@@ -463,10 +464,11 @@ class UserService:
 
 **Refactoring Request:**
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 This UserService class has significant duplication in its methods. How would you refactor it to reduce repetition while maintaining the same functionality?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 There's significant duplication in this `UserService` class. The three methods follow the same pattern but just differ in the query condition. Let's refactor to eliminate this duplication:

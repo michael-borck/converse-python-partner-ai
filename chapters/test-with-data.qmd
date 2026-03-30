@@ -129,10 +129,11 @@ For our palindrome example:
 
 AI assistants can help identify edge cases you might not have considered:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I've implemented a function to find the longest palindromic substring in a string. What edge cases should I test to ensure it works correctly in all scenarios?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Here's a comprehensive list of edge cases you should test for your longest palindromic substring function:
@@ -186,10 +187,11 @@ AI can be particularly helpful in generating both test cases and test code.
 
 Ask AI to generate diverse test inputs:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Could you generate 10 diverse test cases for the longest palindromic substring function? For each test case, provide the input string and the expected output.
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Here are 10 diverse test cases for the longest palindromic substring function:
@@ -215,10 +217,11 @@ These test cases cover empty strings, single characters, no long palindromes, mu
 
 AI can also help generate the actual test code:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Could you create a Python unit test class using the unittest framework for testing the longest_palindromic_substring function with the test cases you suggested?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Here's a comprehensive unit test class using Python's `unittest` framework to test the longest palindromic substring function with the test cases I suggested:
@@ -313,8 +316,8 @@ Test failures provide valuable learning opportunities that can improve both your
 
 When tests fail, AI can help analyse the failure:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 My test case for "aacabdkacaa" is failing. The expected output is "aca" but my function returns "aa". Here's my implementation:
 
 ```python
@@ -349,7 +352,8 @@ def longest_palindromic_substring(s):
 ```
 
 Can you help me identify what's wrong?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 I see the issue in your implementation when testing with "aacabdkacaa". Let me walk through this step by step.

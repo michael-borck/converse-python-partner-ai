@@ -195,8 +195,8 @@ This code may work, but:
 
 #### Step 1: Restate the Problem
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I need to write a function that finds the longest palindromic substring in a given string. 
 Let me restate this problem to make sure I understand it correctly:
 
@@ -205,7 +205,8 @@ the same forward and backward. For example, in "babad", the longest palindromic 
 would be "bab" or "aba" (both are valid since they're the same length).
 
 Is this understanding correct? Are there any edge cases I should consider?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your understanding is correct! The function should find the longest substring that is a palindrome.
@@ -222,8 +223,8 @@ Edge cases to consider:
 
 #### Step 2: Identify Inputs and Outputs
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Let me specify the input and output for this function:
 
 Input:
@@ -236,7 +237,8 @@ Output:
 - If there are no palindromes longer than 1 character, return the first character of the string
 
 Do these input and output specifications cover all the necessary cases?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Those specifications are good, but let me suggest a small clarification:
@@ -272,8 +274,8 @@ Also check even-length palindromes:
 
 Longest palindromes: "bab" or "aba" (both length 3)
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I've worked through the example "babad" by hand and found that the longest palindromic 
 substrings are "bab" and "aba", both of length 3.
 
@@ -283,7 +285,8 @@ their center between two characters.
 
 Does this approach seem correct and efficient? Are there any algorithmic improvements 
 I should consider?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.
@@ -300,8 +303,8 @@ Your approach is intuitive and efficient for most practical purposes!
 
 #### Step 4: Write Pseudocode
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Based on my manual approach, let me write
 pseudocode for finding the longest palindromic
 substring:
@@ -330,7 +333,8 @@ function longestPalindromicSubstring(string s):
 
 Does this pseudocode correctly implement the
 approach we discussed?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
@@ -343,18 +347,17 @@ Other than that, this pseudocode correctly captures the solution and is ready to
 
 #### Step 5: Convert to Code
 
-**Human prompt:**
-```
+::: {.callout-note icon=false title="You"}
 Now I'll convert my pseudocode to Python:
 
 ```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
-    
+
     start = 0
     max_length = 1
-    
+
     def expand_around_center(left, right):
         nonlocal start, max_length
         while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -364,19 +367,19 @@ def longest_palindromic_substring(s):
                 start = left
             left -= 1
             right += 1
-    
+
     for i in range(len(s)):
         # Odd length palindromes
         expand_around_center(i, i)
-        
+
         # Even length palindromes
         expand_around_center(i, i+1)
-    
+
     return s[start:start + max_length]
 ```
 
 Can you review this code for correctness and suggest any improvements?
-```
+:::
 
 ::: {.callout-note icon=false title="AI"}
 Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
@@ -397,8 +400,8 @@ The implementation is clean and efficient. The only possible optimisation would 
 
 #### Step 6: Test with Data
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Let's test my function with various test cases:
 
 1. Normal case: "babad" → Should return "bab" or "aba"
@@ -410,7 +413,8 @@ Let's test my function with various test cases:
 7. Even-length palindrome: "abba" → Should return "abba"
 
 Can you help me verify if my implementation handles all these cases correctly?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Let's trace through your implementation for each test case:

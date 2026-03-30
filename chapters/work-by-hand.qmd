@@ -235,8 +235,8 @@ Result: "a" (any single character)
 
 ### Validating Our Approach with AI
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I've manually traced through finding the longest palindromic substring in "babad" by checking each possible center position and expanding outward. I found that "bab" and "aba" are both valid answers with length 3.
 
 I also tried these edge cases:
@@ -246,7 +246,8 @@ I also tried these edge cases:
 - No palindromes longer than 1 "abcd" -> "a" (or any single character)
 
 Does my manual approach seem correct? Am I missing any important edge cases?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Your manual approach of checking each possible center position and expanding outward is exactly right! This is the standard approach for solving this problem efficiently.

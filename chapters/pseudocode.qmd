@@ -153,13 +153,14 @@ AI assistants can be valuable partners in developing pseudocode, offering differ
 
 AI can help draft initial pseudocode based on your problem statement:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Based on my manual approach to finding the longest palindromic substring, could you help me develop pseudocode for an algorithm that:
 1. Checks each position in the string as a potential palindrome center
 2. Handles both odd and even length palindromes
 3. Tracks the longest palindrome found
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Here's pseudocode for finding the longest palindromic substring:
@@ -205,13 +206,14 @@ This pseudocode implements the approach we discussed, checking both odd and even
 
 Once you have initial pseudocode, use AI to help refine it by asking targeted questions:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 This pseudocode looks good. Two questions:
 
 1. Should we check for even-length palindromes between the last character and out of bounds?
 2. Is there any way to optimise this further, perhaps by avoiding redundant checks?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Great questions! Let me address both:
@@ -284,10 +286,11 @@ Great questions! Let me address both:
 
 AI can help explore different algorithmic approaches to the same problem:
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we've been discussing?
-```
+:::
+
 
 ::: {.callout-note icon=false title="AI"}
 Yes, there are several fundamentally different approaches to finding the longest palindromic substring:

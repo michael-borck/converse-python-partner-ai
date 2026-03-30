@@ -557,8 +557,8 @@ Let's walk through a complete debugging process using AI assistance:
 
 ### Initial Problem Statement
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 My sorting algorithm isn't working properly. It's supposed to sort an array of numbers in ascending order, but some arrays end up partially sorted:
 
 ```python
@@ -574,7 +574,8 @@ def bubble_sort(arr):
 It works for [5, 3, 8, 1, 2], giving [1, 2, 3, 5, 8].
 But for [5, 3, 8, 1, 2, 9, 4], it gives [1, 2, 3, 5, 4, 8, 9].
 What's going wrong?
-```
+:::
+
 
 ### Tracing Execution
 
@@ -635,8 +636,8 @@ There may be an issue elsewhere in your code, or perhaps there was a mistake in 
 
 ### Debugging the Test Case
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 You're right, I made a mistake in reporting the output. Let me recheck... 
 
 I ran the function again with [5, 3, 8, 1, 2, 9, 4], and now I'm getting [1, 2, 3, 4, 5, 8, 9], which is correct.
@@ -653,7 +654,8 @@ def process_data(data_sets):
 ```
 
 And I'm still seeing some incorrect sorts in the output. Could there be an issue with how I'm calling it?
-```
+:::
+
 
 ### Identifying the Root Cause
 
@@ -703,8 +705,8 @@ Can you share:
 
 ### Resolution
 
-**Human prompt:**
-```
+
+::: {.callout-note icon=false title="You"}
 I think I found the issue. In another part of the code, there's a function that modifies the results after sorting:
 
 ```python
@@ -720,7 +722,8 @@ def highlight_outliers(data_list):
 This is being called on the results from process_data! It's intentionally un-sorting some elements to highlight outliers, but I forgot it was there.
 
 Thank you for helping me trace through the algorithm; it confirmed that my bubble sort is correct and led me to look elsewhere for the issue.
-```
+:::
+
 
 ## Key Takeaways
 
