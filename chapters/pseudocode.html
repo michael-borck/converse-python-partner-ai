@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -512,15 +547,20 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#generating-initial-pseudocode" id="toc-generating-initial-pseudocode" class="nav-link" data-scroll-target="#generating-initial-pseudocode"><span class="header-section-number">8.3.1</span> Generating Initial Pseudocode</a></li>
   <li><a href="#refining-pseudocode" id="toc-refining-pseudocode" class="nav-link" data-scroll-target="#refining-pseudocode"><span class="header-section-number">8.3.2</span> Refining Pseudocode</a></li>
   <li><a href="#comparing-alternative-approaches" id="toc-comparing-alternative-approaches" class="nav-link" data-scroll-target="#comparing-alternative-approaches"><span class="header-section-number">8.3.3</span> Comparing Alternative Approaches</a></li>
-  <li><a href="#planning-test-coverage" id="toc-planning-test-coverage" class="nav-link" data-scroll-target="#planning-test-coverage"><span class="header-section-number">8.3.4</span> Planning Test Coverage</a></li>
   </ul></li>
-  <li><a href="#comparing-alternative-approaches-1" id="toc-comparing-alternative-approaches-1" class="nav-link" data-scroll-target="#comparing-alternative-approaches-1"><span class="header-section-number">8.4</span> Comparing Alternative Approaches</a>
+  <li><a href="#from-pseudocode-to-implementation-plan" id="toc-from-pseudocode-to-implementation-plan" class="nav-link" data-scroll-target="#from-pseudocode-to-implementation-plan"><span class="header-section-number">8.4</span> From Pseudocode to Implementation Plan</a>
   <ul class="collapse">
-  <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria"><span class="header-section-number">8.4.1</span> Evaluation Criteria</a></li>
-  <li><a href="#structured-comparison" id="toc-structured-comparison" class="nav-link" data-scroll-target="#structured-comparison"><span class="header-section-number">8.4.2</span> Structured Comparison</a></li>
-  <li><a href="#making-an-informed-decision" id="toc-making-an-informed-decision" class="nav-link" data-scroll-target="#making-an-informed-decision"><span class="header-section-number">8.4.3</span> Making an Informed Decision</a></li>
+  <li><a href="#adding-implementation-details" id="toc-adding-implementation-details" class="nav-link" data-scroll-target="#adding-implementation-details"><span class="header-section-number">8.4.1</span> Adding Implementation Details</a></li>
+  <li><a href="#creating-function-signatures" id="toc-creating-function-signatures" class="nav-link" data-scroll-target="#creating-function-signatures"><span class="header-section-number">8.4.2</span> Creating Function Signatures</a></li>
+  <li><a href="#planning-test-coverage" id="toc-planning-test-coverage" class="nav-link" data-scroll-target="#planning-test-coverage"><span class="header-section-number">8.4.3</span> Planning Test Coverage</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.5</span> Key Takeaways</a></li>
+  <li><a href="#comparing-alternative-approaches-1" id="toc-comparing-alternative-approaches-1" class="nav-link" data-scroll-target="#comparing-alternative-approaches-1"><span class="header-section-number">8.5</span> Comparing Alternative Approaches</a>
+  <ul class="collapse">
+  <li><a href="#evaluation-criteria" id="toc-evaluation-criteria" class="nav-link" data-scroll-target="#evaluation-criteria"><span class="header-section-number">8.5.1</span> Evaluation Criteria</a></li>
+  <li><a href="#structured-comparison" id="toc-structured-comparison" class="nav-link" data-scroll-target="#structured-comparison"><span class="header-section-number">8.5.2</span> Structured Comparison</a></li>
+  <li><a href="#making-an-informed-decision" id="toc-making-an-informed-decision" class="nav-link" data-scroll-target="#making-an-informed-decision"><span class="header-section-number">8.5.3</span> Making an Informed Decision</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.6</span> Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -707,37 +747,50 @@ WRITE data TO file</code></pre>
 1. Checks each position in the string as a potential palindrome center
 2. Handles both odd and even length palindromes
 3. Tracks the longest palindrome found</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Here's pseudocode for finding the longest palindromic substring:
-</code></pre>
-<p>FUNCTION findLongestPalindromicSubstring(string) IF string is empty THEN RETURN empty string END IF</p>
-<pre><code>SET startIndex = 0
-SET maxLength = 1
-
-FUNCTION expandAroundCenter(left, right)
-    WHILE left &gt;= 0 AND right &lt; length of string AND string[left] = string[right]
-        currentLength = right - left + 1
-        IF currentLength &gt; maxLength THEN
-            SET maxLength = currentLength
-            SET startIndex = left
-        END IF
-        DECREMENT left
-        INCREMENT right
-    END WHILE
-END FUNCTION
-
-FOR i = 0 TO length of string - 1
-    // Check odd length palindromes (single character center)
-    expandAroundCenter(i, i)
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here’s pseudocode for finding the longest palindromic substring:</p>
+<pre><code>FUNCTION findLongestPalindromicSubstring(string)
+    IF string is empty THEN
+        RETURN empty string
+    END IF
     
-    // Check even length palindromes (between character center)
-    expandAroundCenter(i, i + 1)
-END FOR
-
-RETURN substring of string from startIndex to startIndex + maxLength - 1</code></pre>
-<p>END FUNCTION</p>
-<pre><code>
-This pseudocode implements the approach we discussed, checking both odd and even length palindromes by expanding around potential centers and tracking the longest palindrome found.</code></pre>
+    SET startIndex = 0
+    SET maxLength = 1
+    
+    FUNCTION expandAroundCenter(left, right)
+        WHILE left &gt;= 0 AND right &lt; length of string AND string[left] = string[right]
+            currentLength = right - left + 1
+            IF currentLength &gt; maxLength THEN
+                SET maxLength = currentLength
+                SET startIndex = left
+            END IF
+            DECREMENT left
+            INCREMENT right
+        END WHILE
+    END FUNCTION
+    
+    FOR i = 0 TO length of string - 1
+        // Check odd length palindromes (single character center)
+        expandAroundCenter(i, i)
+        
+        // Check even length palindromes (between character center)
+        expandAroundCenter(i, i + 1)
+    END FOR
+    
+    RETURN substring of string from startIndex to startIndex + maxLength - 1
+END FUNCTION</code></pre>
+<p>This pseudocode implements the approach we discussed, checking both odd and even length palindromes by expanding around potential centers and tracking the longest palindrome found.</p>
+</div>
+</div>
 </section>
 <section id="refining-pseudocode" class="level3" data-number="8.3.2">
 <h3 data-number="8.3.2" class="anchored" data-anchor-id="refining-pseudocode"><span class="header-section-number">8.3.2</span> Refining Pseudocode</h3>
@@ -747,28 +800,40 @@ This pseudocode implements the approach we discussed, checking both odd and even
 
 1. Should we check for even-length palindromes between the last character and out of bounds?
 2. Is there any way to optimise this further, perhaps by avoiding redundant checks?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Great questions! Let me address both:
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Great questions! Let me address both:</p>
+<ol type="1">
+<li><p>Regarding even-length palindromes at the end of the string:</p>
+<p>In the current pseudocode, we check for even-length palindromes between positions i and i+1 for i ranging from 0 to length-1. When i is length-1 (the last character), we’d check between the last character and one past the end of the string, which would immediately fail the boundary check in expandAroundCenter().</p>
+<p>This isn’t harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2:</p>
+<pre><code>// Odd length palindromes
+FOR i = 0 TO length of string - 1
+    expandAroundCenter(i, i)
+END FOR
 
-1. Regarding even-length palindromes at the end of the string:
-   
-   In the current pseudocode, we check for even-length palindromes between positions i and i+1 for i ranging from 0 to length-1. When i is length-1 (the last character), we'd check between the last character and one past the end of the string, which would immediately fail the boundary check in expandAroundCenter().
-   
-   This isn't harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2:
-   </code></pre>
-<p>// Odd length palindromes FOR i = 0 TO length of string - 1 expandAroundCenter(i, i) END FOR</p>
-<p>// Even length palindromes FOR i = 0 TO length of string - 2 expandAroundCenter(i, i + 1) END FOR ```</p>
+// Even length palindromes
+FOR i = 0 TO length of string - 2
+    expandAroundCenter(i, i + 1)
+END FOR</code></pre>
 <p>Or keep the single loop but add a condition:</p>
 <pre><code>FOR i = 0 TO length of string - 1
     // Odd length
     expandAroundCenter(i, i)
-    
+
     // Even length (only if not at last character)
     IF i &lt; length of string - 1 THEN
         expandAroundCenter(i, i + 1)
     END IF
-END FOR</code></pre>
-<ol start="2" type="1">
+END FOR</code></pre></li>
 <li><p>Regarding further optimisation:</p>
 <p>Yes, there are a few potential optimisations:</p>
 <ol type="a">
@@ -790,62 +855,72 @@ END FOR</code></pre>
         expandAroundCenter(i, i + 1)
     END IF
 END FOR</code></pre>
-<p>However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough. ```</p></li>
+<p>However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.</p></li>
 </ol>
+</div>
+</div>
 </section>
 <section id="comparing-alternative-approaches" class="level3" data-number="8.3.3">
 <h3 data-number="8.3.3" class="anchored" data-anchor-id="comparing-alternative-approaches"><span class="header-section-number">8.3.3</span> Comparing Alternative Approaches</h3>
 <p>AI can help explore different algorithmic approaches to the same problem:</p>
 <p><strong>Human prompt:</strong></p>
 <pre><code>Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we've been discussing?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Yes, there are several fundamentally different approaches to finding the longest palindromic substring:
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Yes, there are several fundamentally different approaches to finding the longest palindromic substring:</p>
+<ol type="1">
+<li><p><strong>Dynamic Programming Approach</strong></p>
+<p>Instead of expanding from centers, we can use a bottom-up DP approach:</p>
+<pre><code>FUNCTION findLongestPalindrome_DP(string)
+    SET n = length of string
 
-1. **Dynamic Programming Approach**
-   
-   Instead of expanding from centers, we can use a bottom-up DP approach:
-   </code></pre>
-<p>FUNCTION findLongestPalindrome_DP(string) SET n = length of string</p>
-<pre><code>   // Create n x n table where dp[i][j] = true if substring from i to j is palindrome
-   CREATE boolean table dp[n][n]
-   
-   // All substrings of length 1 are palindromes
-   FOR i = 0 TO n-1
-       dp[i][i] = true
-   END FOR
-   
-   SET start = 0
-   SET maxLength = 1
-   
-   // Check substrings of length 2
-   FOR i = 0 TO n-2
-       IF string[i] = string[i+1] THEN
-           dp[i][i+1] = true
-           start = i
-           maxLength = 2
-       END IF
-   END FOR
-   
-   // Check substrings of length 3 or more
-   FOR length = 3 TO n
-       FOR i = 0 TO n-length
-           j = i + length - 1
-           
-           IF string[i] = string[j] AND dp[i+1][j-1] = true THEN
-               dp[i][j] = true
-               
-               IF length &gt; maxLength THEN
-                   start = i
-                   maxLength = length
-               END IF
-           END IF
-       END FOR
-   END FOR
-   
-   RETURN substring of string from start to start + maxLength - 1</code></pre>
-<p>END FUNCTION ```</p>
-<p>This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory.</p>
-<ol start="2" type="1">
+    // Create n x n table where dp[i][j] = true if substring from i to j is palindrome
+    CREATE boolean table dp[n][n]
+
+    // All substrings of length 1 are palindromes
+    FOR i = 0 TO n-1
+        dp[i][i] = true
+    END FOR
+
+    SET start = 0
+    SET maxLength = 1
+
+    // Check substrings of length 2
+    FOR i = 0 TO n-2
+        IF string[i] = string[i+1] THEN
+            dp[i][i+1] = true
+            start = i
+            maxLength = 2
+        END IF
+    END FOR
+
+    // Check substrings of length 3 or more
+    FOR length = 3 TO n
+        FOR i = 0 TO n-length
+            j = i + length - 1
+
+            IF string[i] = string[j] AND dp[i+1][j-1] = true THEN
+                dp[i][j] = true
+
+                IF length &gt; maxLength THEN
+                    start = i
+                    maxLength = length
+                END IF
+            END IF
+        END FOR
+    END FOR
+
+    RETURN substring of string from start to start + maxLength - 1
+END FUNCTION</code></pre>
+<p>This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory.</p></li>
 <li><p><strong>Manacher’s Algorithm</strong></p>
 <p>This is an optimised approach that runs in O(n) time:</p>
 <pre><code>FUNCTION manachers_algorithm(string)
@@ -903,62 +978,73 @@ END FUNCTION</code></pre>
 <p>This is even more complex to implement but can be useful when solving multiple related string problems.</p></li>
 </ol>
 <p>The center expansion approach remains the most intuitive and offers a good balance of simplicity and efficiency for most practical applications.</p>
-<pre><code>
-## From Pseudocode to Implementation Plan
+</div>
+</div>
+</section>
+</section>
+<section id="from-pseudocode-to-implementation-plan" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="from-pseudocode-to-implementation-plan"><span class="header-section-number">8.4</span> From Pseudocode to Implementation Plan</h2>
+<p>Pseudocode should eventually lead to a concrete implementation plan, outlining how to translate the logical structure into actual code.</p>
+<section id="adding-implementation-details" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="adding-implementation-details"><span class="header-section-number">8.4.1</span> Adding Implementation Details</h3>
+<p>Once the core logic is established in pseudocode, gradually add implementation-specific details:</p>
+<pre><code>// Initial pseudocode
+FOR each character in string
+    check for palindromes centered at this character
+END FOR
 
-Pseudocode should eventually lead to a concrete implementation plan, outlining how to translate the logical structure into actual code.
-
-### Adding Implementation Details
-
-Once the core logic is established in pseudocode, gradually add implementation-specific details:
-</code></pre>
-<p>// Initial pseudocode FOR each character in string check for palindromes centered at this character END FOR</p>
-<p>// Enhanced with implementation details FOR i = 0 TO length - 1 // For odd-length palindromes left = i, right = i WHILE left &gt;= 0 AND right &lt; length AND string[left] == string[right] update longest palindrome if needed left–, right++ END WHILE</p>
-<pre><code>// For even-length palindromes
-left = i, right = i + 1
-IF right &lt; length THEN
+// Enhanced with implementation details
+FOR i = 0 TO length - 1
+    // For odd-length palindromes
+    left = i, right = i
     WHILE left &gt;= 0 AND right &lt; length AND string[left] == string[right]
         update longest palindrome if needed
         left--, right++
     END WHILE
-END IF</code></pre>
-<p>END FOR</p>
-<pre><code>
-### Creating Function Signatures
-
-Based on the pseudocode, define the function signatures that will be needed:
-
-```python
-def find_longest_palindrome(s: str) -&gt; str:
-    """
-    Find the longest palindromic substring in the given string.
     
-    Args:
-        s: Input string to search
-        
-    Returns:
-        The longest palindromic substring
-    """
-    pass
-
-
-def expand_around_center(s: str, left: int, right: int) -&gt; tuple[int, int]:
-    """
-    Expand around a potential palindrome center and return the bounds
-    of the longest palindrome found.
-    
-    Args:
-        s: Input string
-        left: Starting left position
-        right: Starting right position
-        
-    Returns:
-        Tuple of (start_index, length) of palindrome
-    """
-    pass</code></pre>
+    // For even-length palindromes
+    left = i, right = i + 1
+    IF right &lt; length THEN
+        WHILE left &gt;= 0 AND right &lt; length AND string[left] == string[right]
+            update longest palindrome if needed
+            left--, right++
+        END WHILE
+    END IF
+END FOR</code></pre>
 </section>
-<section id="planning-test-coverage" class="level3" data-number="8.3.4">
-<h3 data-number="8.3.4" class="anchored" data-anchor-id="planning-test-coverage"><span class="header-section-number">8.3.4</span> Planning Test Coverage</h3>
+<section id="creating-function-signatures" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="creating-function-signatures"><span class="header-section-number">8.4.2</span> Creating Function Signatures</h3>
+<p>Based on the pseudocode, define the function signatures that will be needed:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_longest_palindrome(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Find the longest palindromic substring in the given string.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string to search</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="co">        The longest palindromic substring</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> expand_around_center(s: <span class="bu">str</span>, left: <span class="bu">int</span>, right: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">int</span>, <span class="bu">int</span>]:</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="co">    Expand around a potential palindrome center and return the bounds</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co">    of the longest palindrome found.</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="co">        s: Input string</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="co">        left: Starting left position</span></span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="co">        right: Starting right position</span></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="co">        Tuple of (start_index, length) of palindrome</span></span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="planning-test-coverage" class="level3" data-number="8.4.3">
+<h3 data-number="8.4.3" class="anchored" data-anchor-id="planning-test-coverage"><span class="header-section-number">8.4.3</span> Planning Test Coverage</h3>
 <p>Use pseudocode to identify the test cases needed for comprehensive coverage:</p>
 <pre><code>TEST CASES:
 1. Empty string -&gt; should return empty string
@@ -971,11 +1057,11 @@ def expand_around_center(s: str, left: int, right: int) -&gt; tuple[int, int]:
 8. Entire string is a palindrome -&gt; should return entire string</code></pre>
 </section>
 </section>
-<section id="comparing-alternative-approaches-1" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="comparing-alternative-approaches-1"><span class="header-section-number">8.4</span> Comparing Alternative Approaches</h2>
+<section id="comparing-alternative-approaches-1" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="comparing-alternative-approaches-1"><span class="header-section-number">8.5</span> Comparing Alternative Approaches</h2>
 <p>When faced with multiple valid algorithmic approaches, pseudocode provides a concise way to compare them before committing to implementation.</p>
-<section id="evaluation-criteria" class="level3" data-number="8.4.1">
-<h3 data-number="8.4.1" class="anchored" data-anchor-id="evaluation-criteria"><span class="header-section-number">8.4.1</span> Evaluation Criteria</h3>
+<section id="evaluation-criteria" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="evaluation-criteria"><span class="header-section-number">8.5.1</span> Evaluation Criteria</h3>
 <p>Evaluate pseudocode approaches based on:</p>
 <ol type="1">
 <li><strong>Time complexity</strong> - theoretical performance as input size grows</li>
@@ -986,8 +1072,8 @@ def expand_around_center(s: str, left: int, right: int) -&gt; tuple[int, int]:
 <li><strong>Scalability</strong> - ability to handle very large inputs or to be extended</li>
 </ol>
 </section>
-<section id="structured-comparison" class="level3" data-number="8.4.2">
-<h3 data-number="8.4.2" class="anchored" data-anchor-id="structured-comparison"><span class="header-section-number">8.4.2</span> Structured Comparison</h3>
+<section id="structured-comparison" class="level3" data-number="8.5.2">
+<h3 data-number="8.5.2" class="anchored" data-anchor-id="structured-comparison"><span class="header-section-number">8.5.2</span> Structured Comparison</h3>
 <p>Create a comparison table to evaluate different approaches:</p>
 <table class="caption-top table">
 <colgroup>
@@ -1036,8 +1122,8 @@ def expand_around_center(s: str, left: int, right: int) -&gt; tuple[int, int]:
 </tbody>
 </table>
 </section>
-<section id="making-an-informed-decision" class="level3" data-number="8.4.3">
-<h3 data-number="8.4.3" class="anchored" data-anchor-id="making-an-informed-decision"><span class="header-section-number">8.4.3</span> Making an Informed Decision</h3>
+<section id="making-an-informed-decision" class="level3" data-number="8.5.3">
+<h3 data-number="8.5.3" class="anchored" data-anchor-id="making-an-informed-decision"><span class="header-section-number">8.5.3</span> Making an Informed Decision</h3>
 <p>Consider the context of your application:</p>
 <ul>
 <li>For educational purposes or moderate string lengths, the center expansion approach is ideal due to its simplicity and efficiency</li>
@@ -1047,8 +1133,8 @@ def expand_around_center(s: str, left: int, right: int) -&gt; tuple[int, int]:
 </ul>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">8.5</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">8.6</span> Key Takeaways</h2>
 <ul>
 <li>Pseudocode provides a language-agnostic blueprint focusing on logic rather than syntax</li>
 <li>Good pseudocode strikes a balance between abstraction and detail</li>

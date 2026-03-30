@@ -753,16 +753,20 @@ the same forward and backward. For example, in "babad", the longest palindromic 
 would be "bab" or "aba" (both are valid since they're the same length).
 
 Is this understanding correct? Are there any edge cases I should consider?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Your understanding is correct! The function should find the longest substring that is a palindrome.
-
-Edge cases to consider:
-- Empty strings
-- Strings with no palindromes longer than 1 character
-- Strings where the entire string is a palindrome
-- Strings with multiple palindromic substrings of the same length
-- Very long strings (performance considerations)
-- Case sensitivity (usually palindromes are case-sensitive)</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your understanding is correct! The function should find the longest substring that is a palindrome.</p>
+<p>Edge cases to consider: - Empty strings - Strings with no palindromes longer than 1 character - Strings where the entire string is a palindrome - Strings with multiple palindromic substrings of the same length - Very long strings (performance considerations) - Case sensitivity (usually palindromes are case-sensitive)</p>
+</div>
+</div>
 </section>
 <section id="step-2-identify-inputs-and-outputs" class="level4" data-number="5.4.2.2">
 <h4 data-number="5.4.2.2" class="anchored" data-anchor-id="step-2-identify-inputs-and-outputs"><span class="header-section-number">5.4.2.2</span> Step 2: Identify Inputs and Outputs</h4>
@@ -779,12 +783,21 @@ Output:
 - If there are no palindromes longer than 1 character, return the first character of the string
 
 Do these input and output specifications cover all the necessary cases?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Those specifications are good, but let me suggest a small clarification:
-
-For the case where there are no palindromes longer than 1 character, technically every individual character is a palindrome by itself. So returning the first character would be correct, but it might be clearer to explicitly state "return any single character" since any character is a palindrome of length 1.
-
-With that clarification, your input and output specifications cover all the necessary cases!</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Those specifications are good, but let me suggest a small clarification:</p>
+<p>For the case where there are no palindromes longer than 1 character, technically every individual character is a palindrome by itself. So returning the first character would be correct, but it might be clearer to explicitly state “return any single character” since any character is a palindrome of length 1.</p>
+<p>With that clarification, your input and output specifications cover all the necessary cases!</p>
+</div>
+</div>
 </section>
 <section id="step-3-work-the-problem-by-hand" class="level4" data-number="5.4.2.3">
 <h4 data-number="5.4.2.3" class="anchored" data-anchor-id="step-3-work-the-problem-by-hand"><span class="header-section-number">5.4.2.3</span> Step 3: Work the Problem by Hand</h4>
@@ -804,16 +817,22 @@ their center between two characters.
 
 Does this approach seem correct and efficient? Are there any algorithmic improvements 
 I should consider?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.
-
-The two key components you've identified are essential:
-1. Checking odd-length palindromes (with a single character as the center)
-2. Checking even-length palindromes (with the center between two characters)
-
-There are some more complex algorithms like Manacher's algorithm that can solve this in O(n) time, but they're significantly more complex and typically unnecessary unless you're dealing with very long strings where performance is critical.
-
-Your approach is intuitive and efficient for most practical purposes!</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.</p>
+<p>The two key components you’ve identified are essential: 1. Checking odd-length palindromes (with a single character as the center) 2. Checking even-length palindromes (with the center between two characters)</p>
+<p>There are some more complex algorithms like Manacher’s algorithm that can solve this in O(n) time, but they’re significantly more complex and typically unnecessary unless you’re dealing with very long strings where performance is critical.</p>
+<p>Your approach is intuitive and efficient for most practical purposes!</p>
+</div>
+</div>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="5.4.2.4">
 <h4 data-number="5.4.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">5.4.2.4</span> Step 4: Write Pseudocode</h4>
@@ -846,12 +865,21 @@ function longestPalindromicSubstring(string s):
 
 Does this pseudocode correctly implement the
 approach we discussed?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
-
-There's just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you're considering the current palindrome (not a future one). So you should check if (right - left + 1) &gt; maxLength before expanding further.
-
-Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.</p>
+<p>There’s just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you’re considering the current palindrome (not a future one). So you should check if (right - left + 1) &gt; maxLength before expanding further.</p>
+<p>Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!</p>
+</div>
+</div>
 </section>
 <section id="step-5-convert-to-code" class="level4" data-number="5.4.2.5">
 <h4 data-number="5.4.2.5" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">5.4.2.5</span> Step 5: Convert to Code</h4>
@@ -862,10 +890,10 @@ Other than that, this pseudocode correctly captures the solution and is ready to
 def longest_palindromic_substring(s):
     if not s:
         return ""
-
+    
     start = 0
     max_length = 1
-
+    
     def expand_around_center(left, right):
         nonlocal start, max_length
         while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
@@ -875,21 +903,19 @@ def longest_palindromic_substring(s):
                 start = left
             left -= 1
             right += 1
-
+    
     for i in range(len(s)):
         # Odd length palindromes
         expand_around_center(i, i)
-
+        
         # Even length palindromes
         expand_around_center(i, i+1)
-
-    return s[start:start + max_length]
-```
-
-Can you review this code for correctness
-and suggest any improvements?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
+    
+    return s[start:start + max_length]</code></pre>
+<p>Can you review this code for correctness and suggest any improvements?</p>
+<pre><code>
+::: {.callout-note icon=false title="AI"}
+Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
 
 A few small observations:
 
@@ -901,52 +927,73 @@ A few small observations:
 
 4. Your code handles the empty string case correctly.
 
-The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.</code></pre>
-</section>
-<section id="step-6-test-with-data" class="level4" data-number="5.4.2.6">
-<h4 data-number="5.4.2.6" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">5.4.2.6</span> Step 6: Test with Data</h4>
-<p><strong>Human prompt:</strong></p>
-<pre><code>Let's test my function with various test cases:
+The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.
+:::
 
-1. Normal case: "babad" → Should return "bab" or "aba"
-2. Entire string is a palindrome: "racecar" → Should return "racecar"
-3. Empty string: "" → Should return ""
-4. Single character: "a" → Should return "a"
-5. No palindromes longer than 1: "abc" → Should return "a" (or "b" or "c")
-6. Multiple palindromes of same length: "aabbaa" → Should return "aabbaa"
-7. Even-length palindrome: "abba" → Should return "abba"
 
-Can you help me verify if my implementation handles all these cases correctly?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Let's trace through your implementation for each test case:
+#### Step 6: Test with Data
 
-1. `"babad"`:
-   - For center at 'b' (index 0): Just 'b' (length 1)
-   - For center at 'a' (index 1): 'bab' (length 3)
-   - For center at 'b' (index 2): 'bab' (length 3)
-   - For center at 'a' (index 3): 'aba' (length 3)
-   - For center at 'd' (index 4): Just 'd' (length 1)
-   - The first palindrome of length 3 found is "bab" ✓
-
-2. `"racecar"`:
-   - Expands from middle 'e' to full string "racecar" ✓
-
-3. `""`:
-   - Immediate return of empty string ✓
-
-4. `"a"`:
-   - Single character is a palindrome of length 1 ✓
-
-5. `"abc"`:
-   - No palindromes longer than 1, returns first character "a" ✓
-
-6. `"aabbaa"`:
-   - Full string is palindrome ✓
-
-7. `"abba"`:
-   - Checking even centers finds "abba" ✓
-
-Your implementation handles all these test cases correctly! It will return the expected outputs for each scenario.</code></pre>
+**Human prompt:**</code></pre>
+<p>Let’s test my function with various test cases:</p>
+<ol type="1">
+<li>Normal case: “babad” → Should return “bab” or “aba”</li>
+<li>Entire string is a palindrome: “racecar” → Should return “racecar”</li>
+<li>Empty string: “” → Should return “”</li>
+<li>Single character: “a” → Should return “a”</li>
+<li>No palindromes longer than 1: “abc” → Should return “a” (or “b” or “c”)</li>
+<li>Multiple palindromes of same length: “aabbaa” → Should return “aabbaa”</li>
+<li>Even-length palindrome: “abba” → Should return “abba”</li>
+</ol>
+<p>Can you help me verify if my implementation handles all these cases correctly? ```</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Let’s trace through your implementation for each test case:</p>
+<ol type="1">
+<li><code>"babad"</code>:
+<ul>
+<li>For center at ‘b’ (index 0): Just ‘b’ (length 1)</li>
+<li>For center at ‘a’ (index 1): ‘bab’ (length 3)</li>
+<li>For center at ‘b’ (index 2): ‘bab’ (length 3)</li>
+<li>For center at ‘a’ (index 3): ‘aba’ (length 3)</li>
+<li>For center at ‘d’ (index 4): Just ‘d’ (length 1)</li>
+<li>The first palindrome of length 3 found is “bab” ✓</li>
+</ul></li>
+<li><code>"racecar"</code>:
+<ul>
+<li>Expands from middle ‘e’ to full string “racecar” ✓</li>
+</ul></li>
+<li><code>""</code>:
+<ul>
+<li>Immediate return of empty string ✓</li>
+</ul></li>
+<li><code>"a"</code>:
+<ul>
+<li>Single character is a palindrome of length 1 ✓</li>
+</ul></li>
+<li><code>"abc"</code>:
+<ul>
+<li>No palindromes longer than 1, returns first character “a” ✓</li>
+</ul></li>
+<li><code>"aabbaa"</code>:
+<ul>
+<li>Full string is palindrome ✓</li>
+</ul></li>
+<li><code>"abba"</code>:
+<ul>
+<li>Checking even centers finds “abba” ✓</li>
+</ul></li>
+</ol>
+<p>Your implementation handles all these test cases correctly! It will return the expected outputs for each scenario.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="comparing-the-approaches" class="level3" data-number="5.4.3">

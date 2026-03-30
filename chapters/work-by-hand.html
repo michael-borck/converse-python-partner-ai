@@ -808,23 +808,32 @@ I also tried these edge cases:
 - No palindromes longer than 1 "abcd" -&gt; "a" (or any single character)
 
 Does my manual approach seem correct? Am I missing any important edge cases?</code></pre>
-<p><strong>AI response:</strong></p>
-<pre><code>Your manual approach of checking each possible center position and expanding outward is exactly right! This is the standard approach for solving this problem efficiently.
-
-Your edge cases are also well-chosen and cover the important scenarios:
-
-- Empty string
-- Single character
-- All same characters (a special case where the entire string is a palindrome)
-- No palindromes longer than 1 character
-
-One additional edge case you might consider:
-
-- Input with even-length palindromes only, like "abba" where the palindrome doesn't have a single center character
-
-But your approach already handles this by checking both single character centers and between-character centers, so it's just a matter of verifying with an example.
-
-Your manual working shows a strong understanding of the problem and solution approach!</code></pre>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your manual approach of checking each possible center position and expanding outward is exactly right! This is the standard approach for solving this problem efficiently.</p>
+<p>Your edge cases are also well-chosen and cover the important scenarios:</p>
+<ul>
+<li>Empty string</li>
+<li>Single character</li>
+<li>All same characters (a special case where the entire string is a palindrome)</li>
+<li>No palindromes longer than 1 character</li>
+</ul>
+<p>One additional edge case you might consider:</p>
+<ul>
+<li>Input with even-length palindromes only, like “abba” where the palindrome doesn’t have a single center character</li>
+</ul>
+<p>But your approach already handles this by checking both single character centers and between-character centers, so it’s just a matter of verifying with an example.</p>
+<p>Your manual working shows a strong understanding of the problem and solution approach!</p>
+</div>
+</div>
 </section>
 </section>
 <section id="insights-from-working-by-hand" class="level2" data-number="7.6">
