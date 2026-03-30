@@ -305,15 +305,17 @@ Have I missed anything important in my restatement?
 ```
 
 **AI Response:**
-> Your restatement covers the main aspects well, but here are a few additional considerations:
-> 
-> - Time zones: How should the function handle time zone information? Should it preserve, convert, or ignore time zones?
-> - Locale-specific formatting: Dates can be formatted differently in different locales (e.g., month names in different languages)
-> - Ambiguous dates: How to handle dates like "01/02/2023" which could be January 2nd or February 1st depending on region
-> - Partial dates: Should the function support dates with missing components (e.g., year only, month and year only)?
-> - Format specifications: Will you use standard format strings (like those in Python's datetime), or custom specifications?
-> 
-> These considerations can greatly affect the scope and complexity of your function.
+```
+Your restatement covers the main aspects well, but here are a few additional considerations:
+
+- Time zones: How should the function handle time zone information? Should it preserve, convert, or ignore time zones?
+- Locale-specific formatting: Dates can be formatted differently in different locales (e.g., month names in different languages)
+- Ambiguous dates: How to handle dates like "01/02/2023" which could be January 2nd or February 1st depending on region
+- Partial dates: Should the function support dates with missing components (e.g., year only, month and year only)?
+- Format specifications: Will you use standard format strings (like those in Python's datetime), or custom specifications?
+
+These considerations can greatly affect the scope and complexity of your function.
+```
 
 ### Step 2: Identify Input and Output
 
@@ -341,36 +343,38 @@ What edge cases should I consider for a date format conversion function with the
 ```
 
 **AI Response:**
-> Here are important edge cases to consider:
-> 
-> **Input Date String Edge Cases:**
-> - Empty string
-> - Dates with two-digit years (ambiguity between centuries)
-> - Dates with missing components (e.g., no year specified)
-> - Dates with extra information (whitespace, additional text)
-> - Dates with time components when only date is expected
-> 
-> **Format Specification Edge Cases:**
-> - Empty format strings
-> - Invalid format specifiers
-> - Format requires information not present in the input date
-> - Mismatched formats (e.g., time format for date-only string)
-> 
-> **Calendar/Time Edge Cases:**
-> - Leap years and February 29
-> - Daylight saving time transitions
-> - Dates before the Unix epoch
-> - Very old or future dates
-> - Non-existent dates (e.g., November 31)
-> - Dates from different calendar systems
-> 
-> **Locale-Specific Edge Cases:**
-> - Month/day order ambiguity (MM/DD vs DD/MM)
-> - Language-specific month and day names
-> - Different separators in different locales
-> 
-> **Technical Edge Cases:**
-> - Performance with very large dates
-> - Thread safety if applicable
-> - Memory usage concerns
+```
+Here are important edge cases to consider:
+
+**Input Date String Edge Cases:**
+- Empty string
+- Dates with two-digit years (ambiguity between centuries)
+- Dates with missing components (e.g., no year specified)
+- Dates with extra information (whitespace, additional text)
+- Dates with time components when only date is expected
+
+**Format Specification Edge Cases:**
+- Empty format strings
+- Invalid format specifiers
+- Format requires information not present in the input date
+- Mismatched formats (e.g., time format for date-only string)
+
+**Calendar/Time Edge Cases:**
+- Leap years and February 29
+- Daylight saving time transitions
+- Dates before the Unix epoch
+- Very old or future dates
+- Non-existent dates (e.g., November 31)
+- Dates from different calendar systems
+
+**Locale-Specific Edge Cases:**
+- Month/day order ambiguity (MM/DD vs DD/MM)
+- Language-specific month and day names
+- Different separators in different locales
+
+**Technical Edge Cases:**
+- Performance with very large dates
+- Thread safety if applicable
+- Memory usage concerns
+```
 
