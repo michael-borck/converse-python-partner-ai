@@ -241,7 +241,7 @@ How should I design the system to make these future additions as straightforward
 ```
 
 **AI response:**
-```
+````
 Designing a payment processing system with future extensibility in mind requires careful architectural planning. Here's a comprehensive approach:
 
 ### Core Architectural Patterns
@@ -271,7 +271,7 @@ Designing a payment processing system with future extensibility in mind requires
        PaymentStatus checkStatus(String paymentId);
        // Future methods can be added as needed
    }
-   ```
+````
 
 2. **Abstract Payment Method**
    ```java

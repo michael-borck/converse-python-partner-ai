@@ -388,7 +388,7 @@ These improvements would make your pipeline more robust, efficient, and suitable
 Now let's implement the solution in Python, focusing on the product combination analysis.
 
 **Human prompt:**
-```
+````
 Let's convert the pseudocode for finding product combinations into Python code using pandas and mlxtend for the Apriori algorithm:
 
 ```python
@@ -475,7 +475,7 @@ def clean_data(file_path, chunk_size=100000):
     cleaned_data = pd.concat(chunks, ignore_index=True)
     
     return cleaned_data
-```
+````
 
 Is this implementation correct and efficient? Are there any issues or optimisations I should consider?
 ```
@@ -891,7 +891,7 @@ Does this flow make sense? Would you structure the user experience differently?
 **Human prompt:**
 ```
 Now that we have a clear understanding of the problem and user flow, could you help me write pseudocode for this weather dashboard? I want to focus on creating a modular design with separate functions for data retrieval, display, and user interaction.
-```
+````
 
 **AI response:**
 ```python
@@ -952,7 +952,7 @@ function get_location_from_user():
     prompt for location
     validate location
     return location
-```
+````
 
 **Follow-up prompt (challenge):**
 ```
@@ -980,7 +980,7 @@ Also, what test cases should I consider to ensure my dashboard handles all possi
 ```
 
 **AI response:**
-```
+````
 Here are sample data structures that might be returned by the weather API:
 
 ```python
@@ -1016,7 +1016,7 @@ sample_forecast = [
     },
     # Additional days would follow...
 ]
-```
+````
 
 Test cases to consider:
 
@@ -1037,7 +1037,7 @@ Test cases to consider:
    - Invalid location name
    - Empty input
    - Special characters in location name
-```
+````
 
 ### Before and After Example: Improving a Key Function
 
@@ -1050,7 +1050,7 @@ def fetch_weather_data(location, units):
     current_weather = weather_api.get_current(location, units)
     forecast = weather_api.get_forecast(location, units, days=5)
     return {"current": current_weather, "forecast": forecast}
-```
+````
 
 #### Refinement Process Prompt
 ```

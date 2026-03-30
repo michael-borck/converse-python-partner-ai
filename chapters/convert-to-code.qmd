@@ -143,7 +143,7 @@ Could you provide a clean Python implementation with good variable names and doc
 ```
 
 **AI response:**
-```
+````
 Here's a clean implementation of the longest palindromic substring algorithm in Python:
 
 ```python
@@ -199,7 +199,7 @@ def longest_palindromic_substring(s):
     
     # Extract and return the longest palindromic substring
     return s[start:start + max_length]
-```
+````
 
 This implementation follows the center expansion approach we discussed. It has:
 
@@ -356,7 +356,7 @@ Tuple unpacking is particularly useful in this algorithm because:
 This pattern is very common in Python, especially when functions naturally produce multiple related values. It's considered a Pythonic way to handle multiple return values without creating custom classes or using more complex data structures.
 
 Would you like me to show you some other common patterns for tuple unpacking in Python?
-```
+````
 
 ## Maintaining Code Quality
 
@@ -377,7 +377,7 @@ while i < len(collection):
 # Idiomatic Python
 for item in collection:
     process(item)
-```
+````
 
 Ask AI to make code more idiomatic:
 

@@ -221,7 +221,7 @@ Could you create a Python unit test class using the unittest framework for testi
 ```
 
 **AI response:**
-```
+````
 Here's a comprehensive unit test class using Python's `unittest` framework to test the longest palindromic substring function with the test cases I suggested:
 
 ```python
@@ -286,7 +286,7 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
+````
 
 This test class includes:
 
@@ -412,7 +412,7 @@ def longest_palindromic_substring(s):
 The key change is adding a `current_length` variable to calculate the length inside the while loop. This ensures you're using the correct length for comparison.
 
 This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.
-```
+````
 
 ### Test-Driven Improvements
 
@@ -497,7 +497,7 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-```
+````
 
 ### Test Execution and Results
 

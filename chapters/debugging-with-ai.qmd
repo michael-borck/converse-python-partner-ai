@@ -16,7 +16,7 @@ AI assistants can:
 - Suggest corrections based on context
 
 **Example prompt:**
-```
+````
 I'm getting this syntax error in my Python code:
 
 ```python
@@ -25,7 +25,7 @@ def calculate_total(items):
     for item in items
         total += item.price
     return total
-```
+````
 
 SyntaxError: invalid syntax
 
@@ -395,7 +395,7 @@ def fetch_user_data(user_id):
 ```
 
 What could be the root cause, and how can I fix it?
-```
+````
 
 ### Debugging AI-Generated Code
 
@@ -414,7 +414,7 @@ students = {
 for name in students:
     avg = sum(students[name]) / len(students[name])
     print(f"{name}: {avg}")
-```
+````
 
 **Analysis of Errors:**
 
@@ -529,7 +529,7 @@ Let's examine your JavaScript for the actual issue...
 This occurs when you fix the symptoms of a bug rather than the underlying cause. AI can help identify deeper issues.
 
 **Example prompt:**
-```
+````
 My function sometimes returns NaN, so I added a check to return 0 instead when that happens:
 
 ```javascript
@@ -547,7 +547,7 @@ function calculateAverage(numbers) {
   
   return average;
 }
-```
+````
 
 This fixes the immediate problem, but is there a better approach?
 ```

@@ -20,7 +20,7 @@ Refactoring is most valuable in specific situations:
 AI assistants excel at identifying these opportunities, especially when prompted to look for specific issues.
 
 **Example prompt:**
-```
+````
 Here's a section of our codebase that's becoming difficult to maintain:
 
 ```python
@@ -61,7 +61,7 @@ def process_customer_data(customer):
     }
     
     return result
-```
+````
 
 Can you identify refactoring opportunities in this code? What code smells do you notice?
 ```
@@ -260,7 +260,7 @@ What types of tests should I write before refactoring, and how should I structur
 **Example prompt:**
 ```
 I need to refactor a large legacy class (800+ lines) that handles multiple responsibilities. What's the most effective step-by-step approach to break this down safely?
-```
+````
 
 AI might suggest:
 
@@ -313,7 +313,7 @@ function calculateDiscount(customer, order) {
   
   return discount;
 }
-```
+````
 
 **Refactoring Request:**
 
@@ -323,7 +323,7 @@ This discount calculation function has become difficult to understand and mainta
 ```
 
 **AI response:**
-```
+````
 I'll refactor this function to simplify the nested conditionals using a few strategies:
 
 1. Use early returns for special cases
@@ -390,7 +390,7 @@ function calculateBaseDiscount(customer, order) {
   // Default case - no discount
   return 0;
 }
-```
+````
 
 Benefits of this refactoring:
 
@@ -401,7 +401,7 @@ Benefits of this refactoring:
 5. **Testability**: Each function can be tested independently
 
 For even further improvement, you could refactor this to use a more object-oriented approach with strategy patterns, or use a rules engine for complex discount logic.
-```
+````
 
 ### Case Study 2: Reducing Duplication
 
@@ -459,7 +459,7 @@ class UserService:
                 'created_at': result[3]
             }
         return None
-```
+````
 
 **Refactoring Request:**
 
@@ -469,7 +469,7 @@ This UserService class has significant duplication in its methods. How would you
 ```
 
 **AI response:**
-```
+````
 There's significant duplication in this `UserService` class. The three methods follow the same pattern but just differ in the query condition. Let's refactor to eliminate this duplication:
 
 ```python
@@ -530,7 +530,7 @@ class UserService:
             "SELECT * FROM users WHERE username = %s", 
             (username,)
         )
-```
+````
 
 Key improvements in this refactoring:
 

@@ -344,17 +344,17 @@ Other than that, this pseudocode correctly captures the solution and is ready to
 #### Step 5: Convert to Code
 
 **Human prompt:**
-```
+````
 Now I'll convert my pseudocode to Python:
 
 ```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
-    
+
     start = 0
     max_length = 1
-    
+
     def expand_around_center(left, right):
         nonlocal start, max_length
         while left >= 0 and right < len(s) and s[left] == s[right]:
@@ -364,19 +364,20 @@ def longest_palindromic_substring(s):
                 start = left
             left -= 1
             right += 1
-    
+
     for i in range(len(s)):
         # Odd length palindromes
         expand_around_center(i, i)
-        
+
         # Even length palindromes
         expand_around_center(i, i+1)
-    
+
     return s[start:start + max_length]
 ```
 
-Can you review this code for correctness and suggest any improvements?
-```
+Can you review this code for correctness
+and suggest any improvements?
+````
 
 **AI response:**
 ```
