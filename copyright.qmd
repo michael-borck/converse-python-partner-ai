@@ -7,12 +7,15 @@
 
 :::
 
-**Converse Python, Partner AI: The Python Edition**
+**Converse Python, Partner AI**\
+The Intentional Prompting Methodology
 
 Copyright © 2026 Michael Borck. All rights reserved.
 
 Published by Michael Borck\
 Perth, Western Australia
+
+**ISBN:** 979-8-2543-0182-0
 
 First edition, 2026.
 
