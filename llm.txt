@@ -1,4 +1,5 @@
-CONVERSE PYTHON, PARTNER AI: THE PYTHON EDITION
+CONVERSE PYTHON, PARTNER AI
+The Intentional Prompting Methodology
 By Michael Borck
 ============================================================
 

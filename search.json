@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "",
     "text": "Preface",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#why-this-book-exists",
     "href": "index.html#why-this-book-exists",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "Why This Book Exists",
     "text": "Why This Book Exists\nMost developers use AI to get code written faster. They prompt, they paste, they ship. That approach produces code, but it skips the thinking that makes a developer good at their job.\nProgramming with AI is not just about speed. It is about thinking differently about the development process itself. The developers who get the most from AI tools are not the ones who delegate the most. They are the ones who stay in the conversation: directing, questioning, understanding, and making the architectural decisions that the model cannot make for them.\nThis book teaches a structured methodology for that conversation. It calls the approach intentional prompting — using AI tools with precision and purpose while ensuring you remain the architect and decision-maker throughout.",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#who-this-book-is-for",
     "href": "index.html#who-this-book-is-for",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "Who This Book Is For",
     "text": "Who This Book Is For\n\nSoftware developers looking to integrate AI tools effectively into their workflow\nEducators teaching programming in an AI-assisted world\nStudents learning to code alongside AI assistants\nTech leaders developing best practices for AI-augmented development teams\n\nYou do not need to be an expert programmer. Basic familiarity with programming concepts will help you get the most from the examples, but the methodology applies at every level.",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#what-this-book-is-not",
     "href": "index.html#what-this-book-is-not",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "What This Book Is Not",
     "text": "What This Book Is Not\nThis is not a guide to specific AI tools. It does not teach you how to use GitHub Copilot, ChatGPT, Claude, or any particular platform. Interfaces change; the methodology here does not.\nIt is not a prompt cookbook. You will find prompts throughout, but they are starting points for conversation, not finished products. If you are looking for a library of copy-paste prompts that write your code for you, this is the wrong book.\nIt is not a book about replacing developers with AI. It argues the opposite: that AI is most powerful when a skilled developer is directing it, and that the skills which make you a good developer — decomposition, abstraction, critical evaluation, architectural judgement — are exactly the skills that make you good at working with AI.\nAnd it is not a book that pretends AI always gets it right. A significant part of the methodology is about recognising when AI output is wrong, understanding why, and knowing how to fix it.",
     "crumbs": [
@@ -42,7 +42,7 @@
   {
     "objectID": "index.html#if-you-are-feeling-uncertain",
     "href": "index.html#if-you-are-feeling-uncertain",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "If You Are Feeling Uncertain",
     "text": "If You Are Feeling Uncertain\nYou are not alone. Many developers experience a quiet anxiety: that everyone else has figured this out already, that they are falling behind, that their skills are becoming obsolete. That feeling is nearly universal and rarely admitted. You are not behind. The technology is genuinely new, and the developers who appear to have it all figured out are mostly just a few weeks ahead. This book meets you wherever you are.",
     "crumbs": [
@@ -52,7 +52,7 @@
   {
     "objectID": "index.html#how-this-book-is-structured",
     "href": "index.html#how-this-book-is-structured",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "How This Book Is Structured",
     "text": "How This Book Is Structured\nThe book is divided into five parts:\n\nThe Philosophy: Why intentional prompting matters and how it connects to the broader methodology\nFoundations: Core concepts of the human-AI partnership and the principles behind effective collaboration\nMethodology: The six-step programming methodology adapted for AI collaboration\nPatterns & Practices: Effective prompting patterns, debugging, refactoring, and practical case studies\nAdvanced Topics: Scaling to complex projects, teaching and learning contexts, and future directions\n\nEach chapter includes practical examples, exercises, and reflections to help you apply these concepts in your own work.",
     "crumbs": [
@@ -62,7 +62,7 @@
   {
     "objectID": "index.html#the-companion-book",
     "href": "index.html#the-companion-book",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "The Companion Book",
     "text": "The Companion Book\nThis book applies the methodology developed in Conversation, Not Delegation: How to Think With AI, Not Just Use It (Borck, 2025) to software development. That companion book covers the full framework in depth: the Conversation Loop, the VET framework for evaluating AI output, the average-versus-precise decision grid, and the principle of AI Last. If you want the underlying rationale for why the approaches in this book work, or you want to share a discipline-neutral version with non-developer colleagues, start there. Available at https://michael-borck.github.io/conversation-not-delegation.",
     "crumbs": [
@@ -72,7 +72,7 @@
   {
     "objectID": "index.html#related-resources",
     "href": "index.html#related-resources",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "Related Resources",
     "text": "Related Resources\nThis guide is part of a 5-book series designed to help you master modern software development in the AI era:\n\nFoundational Methodology\nConverse Python, Partner AI: The Python Edition (this book) - Intentional AI collaboration for programmers (human oversight + methodology + LLM = success)\n\n\nPython Track\nThink Python, Direct AI: Computational Thinking for Beginners - An innovative programming textbook that embraces AI as a learning partner. Master Python by learning how to think computationally and direct AI to help you build solutions. Perfect for absolute beginners in the age of AI.\nCode Python, Consult AI: Python Fundamentals for the AI Era - Learn fundamental Python with AI integration - ideal for those who want a focused introduction to Python fundamentals\nShip Python, Orchestrate AI: Professional Python in the AI Era - Build professional-grade Python applications with modern tools (uv, ruff, mypy, pytest - simple but not simplistic)\n\n\nWeb Track\nBuild Web, Guide AI: Business Web Development with AI - A practical guide to modern web development that embraces AI as your development partner while building real business solutions.\n\n\nBook Progression\n                    ┌─────────────────────┐\n                    │   CONVERSATION,     │\n                    │  NOT DELEGATION     │\n                    │   (Methodology)     │\n                    └─────────────────────┘\n                           │\n            ┌──────────────┼──────────────┐\n            ▼                             ▼\n    ┌───────────────┐             ┌───────────────┐\n    │  PYTHON TRACK │             │   WEB TRACK   │\n    │               │             │               │\n    │ Think Python  │             │ Build Web,    │\n    │      ↓        │             │ Guide AI      │\n    │ Code Python   │             └───────────────┘\n    │      ↓        │\n    │ Ship Python   │\n    └───────────────┘\nStart with “Think Python, Direct AI” if you’re a complete beginner, or jump into “Code Python, Consult AI” if you want a more focused approach to Python fundamentals. Both books prepare you for the production-focused content in “Ship Python, Orchestrate AI.” For web development, start with “Build Web, Guide AI.” The methodology from “Converse Python, Partner AI” enhances all your Python development work.",
     "crumbs": [
@@ -82,7 +82,7 @@
   {
     "objectID": "index.html#ways-to-engage-with-this-book",
     "href": "index.html#ways-to-engage-with-this-book",
-    "title": "Converse Python, Partner AI: The Python Edition",
+    "title": "Converse Python, Partner AI",
     "section": "Ways to Engage with This Book",
     "text": "Ways to Engage with This Book\nThis book is available in several formats. Pick whichever fits how you work and learn.\n\nRead it online. The full book is freely available at the companion website, with dark mode, search, and navigation.\nRead it on paper or e-reader. Available as a paperback and ebook through Amazon KDP.\nConverse with it. The online edition includes a chatbot grounded in the book’s content. Ask it questions about intentional prompting, the six-step methodology, or any concept in the book.\nFeed it to your own AI. The llm.txt file provides a clean text version of the entire book, ready to paste into ChatGPT, Claude, or any AI tool.\nRun the code. All code examples and supplementary materials are available on GitHub. DeepWiki provides an AI-navigable view of the repository.\nBrowse all books. This book is part of a series. See all titles at books.borck.education.\n\nThe online version is always the most current. The printed and ebook editions are updated periodically.\nFeedback and Errata\nFound an error? Have a suggestion?\n\nOpen an issue: github.com/michael-borck/converse-python-partner-ai/issues\nEmail: michael@borck.me",
     "crumbs": [
