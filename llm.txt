@@ -933,9 +933,7 @@ SOURCE: chapters/six-step-methodology.qmd
 
 The six-step programming methodology provides a structured approach to solving problems that works both with and without AI assistance. This methodology focuses on understanding before implementation and ensures that programmers maintain control of the development process.
 
-For a more detailed view of this methodology:
-
-As shown in the diagram, the methodology divides programming into two distinct phases:
+The methodology divides programming into two distinct phases:
 
 ### Design (Thinking) Phase - Steps 1-4
 
