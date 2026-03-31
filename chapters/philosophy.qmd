@@ -38,6 +38,8 @@ The six-step methodology in this book is not slower than vibe coding. It is fast
 
 There is also a complexity ceiling. Vibe coding works for single-file scripts and quick prototypes. But when a project grows to multiple modules, shared state, external APIs, and concurrent users, the AI gets stuck too. It suggests fixes that introduce new bugs because it is guessing at the architecture — just like you are. A developer who understands the system's structure can describe the problem precisely enough for the AI to help. A developer who does not understand the structure is reduced to pasting error messages and hoping. The gap between those two developers widens with every layer of complexity.
 
+An important clarification: intentional prompting does not mean avoiding AI until Step 5. AI is your partner through all six steps — brainstorming requirements in Step 1, exploring edge cases in Step 2, tracing through examples in Step 3, refining pseudocode in Step 4. The methodology is not "think without AI, then code with AI." It is "think *with* AI at every stage, so that when you reach the coding stage, both you and the AI have the context to produce something good." This is the Conversation Loop from *Conversation, Not Delegation* applied to programming: brainstorm, ideate, iterate, amplify — with AI as your thinking partner throughout.
+
 This book does not argue against using AI to write code. It argues for understanding what you are asking the AI to build, so that when it builds it, you can tell whether it is right.
 
 ## What is a "Prompt"?
