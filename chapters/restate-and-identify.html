@@ -780,27 +780,16 @@ I've restated it as:
 - Handles errors for invalid dates or formats
 
 Have I missed anything important in my restatement?</code></pre>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your restatement covers the main aspects well, but here are a few additional considerations:</p>
-<ul>
-<li>Time zones: How should the function handle time zone information? Should it preserve, convert, or ignore time zones?</li>
-<li>Locale-specific formatting: Dates can be formatted differently in different locales (e.g., month names in different languages)</li>
-<li>Ambiguous dates: How to handle dates like “01/02/2023” which could be January 2nd or February 1st depending on region</li>
-<li>Partial dates: Should the function support dates with missing components (e.g., year only, month and year only)?</li>
-<li>Format specifications: Will you use standard format strings (like those in Python’s datetime), or custom specifications?</li>
-</ul>
-<p>These considerations can greatly affect the scope and complexity of your function.</p>
-</div>
-</div>
+<p><strong>AI:</strong></p>
+<pre class="text"><code>Your restatement covers the main aspects well, but here are a few additional considerations:
+
+- Time zones: How should the function handle time zone information? Should it preserve, convert, or ignore time zones?
+- Locale-specific formatting: Dates can be formatted differently in different locales (e.g., month names in different languages)
+- Ambiguous dates: How to handle dates like "01/02/2023" which could be January 2nd or February 1st depending on region
+- Partial dates: Should the function support dates with missing components (e.g., year only, month and year only)?
+- Format specifications: Will you use standard format strings (like those in Python's datetime), or custom specifications?
+
+These considerations can greatly affect the scope and complexity of your function.</code></pre>
 </section>
 <section id="step-2-identify-input-and-output" class="level3" data-number="6.4.2">
 <h3 data-number="6.4.2" class="anchored" data-anchor-id="step-2-identify-input-and-output"><span class="header-section-number">6.4.2</span> Step 2: Identify Input and Output</h3>
@@ -812,24 +801,39 @@ Have I missed anything important in my restatement?</code></pre>
 - date_str: A string representing a date
 - source_format: The format of the input date
 - target_format: The desired output format</code></pre>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Here are important edge cases to consider:</p>
-<p><strong>Input Date String Edge Cases:</strong> - Empty string - Dates with two-digit years (ambiguity between centuries) - Dates with missing components (e.g., no year specified) - Dates with extra information (whitespace, additional text) - Dates with time components when only date is expected</p>
-<p><strong>Format Specification Edge Cases:</strong> - Empty format strings - Invalid format specifiers - Format requires information not present in the input date - Mismatched formats (e.g., time format for date-only string)</p>
-<p><strong>Calendar/Time Edge Cases:</strong> - Leap years and February 29 - Daylight saving time transitions - Dates before the Unix epoch - Very old or future dates - Non-existent dates (e.g., November 31) - Dates from different calendar systems</p>
-<p><strong>Locale-Specific Edge Cases:</strong> - Month/day order ambiguity (MM/DD vs DD/MM) - Language-specific month and day names - Different separators in different locales</p>
-<p><strong>Technical Edge Cases:</strong> - Performance with very large dates - Thread safety if applicable - Memory usage concerns</p>
-</div>
-</div>
+<p><strong>AI:</strong></p>
+<pre class="text"><code>Here are important edge cases to consider:
+
+**Input Date String Edge Cases:**
+- Empty string
+- Dates with two-digit years (ambiguity between centuries)
+- Dates with missing components (e.g., no year specified)
+- Dates with extra information (whitespace, additional text)
+- Dates with time components when only date is expected
+
+**Format Specification Edge Cases:**
+- Empty format strings
+- Invalid format specifiers
+- Format requires information not present in the input date
+- Mismatched formats (e.g., time format for date-only string)
+
+**Calendar/Time Edge Cases:**
+- Leap years and February 29
+- Daylight saving time transitions
+- Dates before the Unix epoch
+- Very old or future dates
+- Non-existent dates (e.g., November 31)
+- Dates from different calendar systems
+
+**Locale-Specific Edge Cases:**
+- Month/day order ambiguity (MM/DD vs DD/MM)
+- Language-specific month and day names
+- Different separators in different locales
+
+**Technical Edge Cases:**
+- Performance with very large dates
+- Thread safety if applicable
+- Memory usage concerns</code></pre>
 
 
 </section>

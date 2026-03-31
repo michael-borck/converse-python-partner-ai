@@ -958,26 +958,15 @@ And here's my validation function:
 [JS code]
 
 How could the CSS be breaking my JavaScript?</code></pre>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The CSS you’ve added is unlikely to directly break your JavaScript validation. These are separate concerns in web development. Let’s look for other possible causes:</p>
-<ol type="1">
-<li>Did you make any other changes at the same time?</li>
-<li>Could there be a JS syntax error that’s preventing execution?</li>
-<li>Are you using CSS selectors in your JS that might no longer match?</li>
-<li>Did you accidentally change any IDs or classes used by both?</li>
-</ol>
-<p>Let’s examine your JavaScript for the actual issue…</p>
-</div>
-</div>
+<p><strong>AI:</strong></p>
+<pre class="text"><code>The CSS you've added is unlikely to directly break your JavaScript validation. These are separate concerns in web development. Let's look for other possible causes:
+
+1. Did you make any other changes at the same time?
+2. Could there be a JS syntax error that's preventing execution?
+3. Are you using CSS selectors in your JS that might no longer match?
+4. Did you accidentally change any IDs or classes used by both?
+
+Let's examine your JavaScript for the actual issue...</code></pre>
 </section>
 <section id="the-bandage-solution" class="level3" data-number="12.4.3">
 <h3 data-number="12.4.3" class="anchored" data-anchor-id="the-bandage-solution"><span class="header-section-number">12.4.3</span> The Bandage Solution</h3>
@@ -1009,135 +998,155 @@ Let's walk through a complete debugging process using AI assistance:
 ### Initial Problem Statement
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 My sorting algorithm isn't working properly. It's supposed to sort an array of numbers in ascending order, but some arrays end up partially sorted:
 
-```python
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         for j in range(0, n - i - 1):
             if arr[j] &gt; arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
-    return arr</code></pre>
-<p>It works for [5, 3, 8, 1, 2], giving [1, 2, 3, 5, 8]. But for [5, 3, 8, 1, 2, 9, 4], it gives [1, 2, 3, 5, 4, 8, 9]. What’s going wrong? :::</p>
+    return arr
+
+It works for [5, 3, 8, 1, 2], giving [1, 2, 3, 5, 8].
+But for [5, 3, 8, 1, 2, 9, 4], it gives [1, 2, 3, 5, 4, 8, 9].
+What's going wrong?</code></pre>
 </section>
 <section id="tracing-execution" class="level3" data-number="12.4.4">
 <h3 data-number="12.4.4" class="anchored" data-anchor-id="tracing-execution"><span class="header-section-number">12.4.4</span> Tracing Execution</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].</p>
-<p>In bubble sort, we compare adjacent elements and swap them if they’re in the wrong order. After each complete pass through the array, the largest element “bubbles up” to its correct position.</p>
-<p>Let’s trace through each pass:</p>
-<p>Initial array: [5, 3, 8, 1, 2, 9, 4]</p>
-<p>Pass 1 (i=0): - Compare 5 and 3: Swap → [3, 5, 8, 1, 2, 9, 4] - Compare 5 and 8: No swap → [3, 5, 8, 1, 2, 9, 4] - Compare 8 and 1: Swap → [3, 5, 1, 8, 2, 9, 4] - Compare 8 and 2: Swap → [3, 5, 1, 2, 8, 9, 4] - Compare 8 and 9: No swap → [3, 5, 1, 2, 8, 9, 4] - Compare 9 and 4: Swap → [3, 5, 1, 2, 8, 4, 9]</p>
-<p>After Pass 1: [3, 5, 1, 2, 8, 4, 9]</p>
-<p>Pass 2 (i=1): - Compare 3 and 5: No swap → [3, 5, 1, 2, 8, 4, 9] - Compare 5 and 1: Swap → [3, 1, 5, 2, 8, 4, 9] - Compare 5 and 2: Swap → [3, 1, 2, 5, 8, 4, 9] - Compare 5 and 8: No swap → [3, 1, 2, 5, 8, 4, 9] - Compare 8 and 4: Swap → [3, 1, 2, 5, 4, 8, 9]</p>
-<p>After Pass 2: [3, 1, 2, 5, 4, 8, 9]</p>
-<p>Wait, I need to review the algorithm. In a correct bubble sort, the largest elements should bubble to the end, and we should get closer to the correct sort with each pass. Let me carefully check your implementation…</p>
-<p>I don’t see anything wrong with your bubble sort implementation. Let me continue tracing:</p>
-<p>Pass 3 (i=2): - Compare 3 and 1: Swap → [1, 3, 2, 5, 4, 8, 9] - Compare 3 and 2: Swap → [1, 2, 3, 5, 4, 8, 9] - Compare 3 and 5: No swap → [1, 2, 3, 5, 4, 8, 9] - Compare 5 and 4: Swap → [1, 2, 3, 4, 5, 8, 9]</p>
-<p>After Pass 3: [1, 2, 3, 4, 5, 8, 9]</p>
-<p>Wait, this is now correctly sorted! Let me trace one more pass to be sure:</p>
-<p>Pass 4 (i=3): - Compare 1 and 2: No swap → [1, 2, 3, 4, 5, 8, 9] - Compare 2 and 3: No swap → [1, 2, 3, 4, 5, 8, 9] - Compare 3 and 4: No swap → [1, 2, 3, 4, 5, 8, 9]</p>
-<p>No more swaps are needed. The array is now [1, 2, 3, 4, 5, 8, 9], which is correctly sorted.</p>
-<p>It seems the algorithm is working correctly after all. The expected output for [5, 3, 8, 1, 2, 9, 4] should be [1, 2, 3, 4, 5, 8, 9], not [1, 2, 3, 5, 4, 8, 9] as you mentioned.</p>
-<p>There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you’re calling and testing this function?</p>
-</div>
-</div>
+<p><strong>AI:</strong></p>
+<pre class="text"><code>Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].
+
+In bubble sort, we compare adjacent elements and swap them if they're in the wrong order. After each complete pass through the array, the largest element "bubbles up" to its correct position.
+
+Let's trace through each pass:
+
+Initial array: [5, 3, 8, 1, 2, 9, 4]
+
+Pass 1 (i=0):
+- Compare 5 and 3: Swap → [3, 5, 8, 1, 2, 9, 4]
+- Compare 5 and 8: No swap → [3, 5, 8, 1, 2, 9, 4]
+- Compare 8 and 1: Swap → [3, 5, 1, 8, 2, 9, 4]
+- Compare 8 and 2: Swap → [3, 5, 1, 2, 8, 9, 4]
+- Compare 8 and 9: No swap → [3, 5, 1, 2, 8, 9, 4]
+- Compare 9 and 4: Swap → [3, 5, 1, 2, 8, 4, 9]
+
+After Pass 1: [3, 5, 1, 2, 8, 4, 9]
+
+Pass 2 (i=1):
+- Compare 3 and 5: No swap → [3, 5, 1, 2, 8, 4, 9]
+- Compare 5 and 1: Swap → [3, 1, 5, 2, 8, 4, 9]
+- Compare 5 and 2: Swap → [3, 1, 2, 5, 8, 4, 9]
+- Compare 5 and 8: No swap → [3, 1, 2, 5, 8, 4, 9]
+- Compare 8 and 4: Swap → [3, 1, 2, 5, 4, 8, 9]
+
+After Pass 2: [3, 1, 2, 5, 4, 8, 9]
+
+Wait, I need to review the algorithm. In a correct bubble sort, the largest elements should bubble to the end, and we should get closer to the correct sort with each pass. Let me carefully check your implementation...
+
+I don't see anything wrong with your bubble sort implementation. Let me continue tracing:
+
+Pass 3 (i=2):
+- Compare 3 and 1: Swap → [1, 3, 2, 5, 4, 8, 9]
+- Compare 3 and 2: Swap → [1, 2, 3, 5, 4, 8, 9]
+- Compare 3 and 5: No swap → [1, 2, 3, 5, 4, 8, 9]
+- Compare 5 and 4: Swap → [1, 2, 3, 4, 5, 8, 9]
+
+After Pass 3: [1, 2, 3, 4, 5, 8, 9]
+
+Wait, this is now correctly sorted! Let me trace one more pass to be sure:
+
+Pass 4 (i=3):
+- Compare 1 and 2: No swap → [1, 2, 3, 4, 5, 8, 9]
+- Compare 2 and 3: No swap → [1, 2, 3, 4, 5, 8, 9]
+- Compare 3 and 4: No swap → [1, 2, 3, 4, 5, 8, 9]
+
+No more swaps are needed. The array is now [1, 2, 3, 4, 5, 8, 9], which is correctly sorted.
+
+It seems the algorithm is working correctly after all. The expected output for [5, 3, 8, 1, 2, 9, 4] should be [1, 2, 3, 4, 5, 8, 9], not [1, 2, 3, 5, 4, 8, 9] as you mentioned.
+
+There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you're calling and testing this function?</code></pre>
 </section>
 <section id="debugging-the-test-case" class="level3" data-number="12.4.5">
 <h3 data-number="12.4.5" class="anchored" data-anchor-id="debugging-the-test-case"><span class="header-section-number">12.4.5</span> Debugging the Test Case</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>You
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You’re right, I made a mistake in reporting the output. Let me recheck…</p>
-<p>I ran the function again with [5, 3, 8, 1, 2, 9, 4], and now I’m getting [1, 2, 3, 4, 5, 8, 9], which is correct.</p>
-<p>However, I’m running this inside a larger application where I call the function like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(data_sets):</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> data <span class="kw">in</span> data_sets:</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>        sorted_data <span class="op">=</span> bubble_sort(data.copy())</span>
-<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>        results.append(sorted_data)</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>And I’m still seeing some incorrect sorts in the output. Could there be an issue with how I’m calling it?</p>
-</div>
-</div>
+<p><strong>You:</strong></p>
+<pre class="text"><code>You're right, I made a mistake in reporting the output. Let me recheck... 
+
+I ran the function again with [5, 3, 8, 1, 2, 9, 4], and now I'm getting [1, 2, 3, 4, 5, 8, 9], which is correct.
+
+However, I'm running this inside a larger application where I call the function like this:
+
+def process_data(data_sets):
+    results = []
+    for data in data_sets:
+        sorted_data = bubble_sort(data.copy())
+        results.append(sorted_data)
+    return results
+
+And I'm still seeing some incorrect sorts in the output. Could there be an issue with how I'm calling it?</code></pre>
 </section>
 <section id="identifying-the-root-cause" class="level3" data-number="12.4.6">
 <h3 data-number="12.4.6" class="anchored" data-anchor-id="identifying-the-root-cause"><span class="header-section-number">12.4.6</span> Identifying the Root Cause</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="AI">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>AI
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it’s being called or how the data is being processed within your larger application.</p>
-<p>Let’s analyse the <code>process_data</code> function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(data_sets):</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> data <span class="kw">in</span> data_sets:</span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>        sorted_data <span class="op">=</span> bubble_sort(data.copy())</span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>        results.append(sorted_data)</span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This function: 1. Takes a list of data sets 2. Creates a copy of each data set 3. Sorts the copy using bubble_sort 4. Appends the sorted data to a results list 5. Returns all results</p>
-<p>This approach seems correct. You’re creating a copy of each data set before sorting, which is good practice to avoid modifying the original data.</p>
-<p>Here are some potential issues to check:</p>
-<ol type="1">
-<li><p><strong>Data type consistency</strong>: Are all elements in your arrays numbers? Sorting mixed types (like strings and numbers) can lead to unexpected results.</p></li>
-<li><p><strong>Mutable objects</strong>: If your arrays contain mutable objects rather than simple numbers, the sorting might be affected by reference issues.</p></li>
-<li><p><strong>Preservation of original data</strong>: Double-check that <code>data.copy()</code> is creating a proper copy. For nested structures, you might need a deep copy.</p></li>
-<li><p><strong>Concurrency issues</strong>: If your application is multi-threaded, there could be race conditions affecting the sorting.</p></li>
-<li><p><strong>Data transformation</strong>: Is the data being transformed between the sorting and when you observe the results?</p></li>
-<li><p><strong>Visualisation/display issue</strong>: Sometimes the issue is not with the sorting but with how results are displayed or accessed.</p></li>
-</ol>
-<p>Can you share: 1. A specific example of a dataset that’s being incorrectly sorted in your application 2. How you’re verifying the results (e.g., printing them, displaying in UI) 3. Any processing that happens to the results after sorting</p>
-</div>
-</div>
+<p><strong>AI:</strong></p>
+<pre class="text"><code>Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
+
+Let's analyse the `process_data` function:
+
+def process_data(data_sets):
+    results = []
+    for data in data_sets:
+        sorted_data = bubble_sort(data.copy())
+        results.append(sorted_data)
+    return results
+
+This function:
+1. Takes a list of data sets
+2. Creates a copy of each data set
+3. Sorts the copy using bubble_sort
+4. Appends the sorted data to a results list
+5. Returns all results
+
+This approach seems correct. You're creating a copy of each data set before sorting, which is good practice to avoid modifying the original data.
+
+Here are some potential issues to check:
+
+1. **Data type consistency**: Are all elements in your arrays numbers? Sorting mixed types (like strings and numbers) can lead to unexpected results.
+
+2. **Mutable objects**: If your arrays contain mutable objects rather than simple numbers, the sorting might be affected by reference issues.
+
+3. **Preservation of original data**: Double-check that `data.copy()` is creating a proper copy. For nested structures, you might need a deep copy.
+
+4. **Concurrency issues**: If your application is multi-threaded, there could be race conditions affecting the sorting.
+
+5. **Data transformation**: Is the data being transformed between the sorting and when you observe the results?
+
+6. **Visualisation/display issue**: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
+
+Can you share:
+1. A specific example of a dataset that's being incorrectly sorted in your application
+2. How you're verifying the results (e.g., printing them, displaying in UI)
+3. Any processing that happens to the results after sorting</code></pre>
 </section>
 <section id="resolution" class="level3" data-number="12.4.7">
 <h3 data-number="12.4.7" class="anchored" data-anchor-id="resolution"><span class="header-section-number">12.4.7</span> Resolution</h3>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="You">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>You
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I think I found the issue. In another part of the code, there’s a function that modifies the results after sorting:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> highlight_outliers(data_list):</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_list)):</span>
-<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Swap positions of certain elements to highlight them</span></span>
-<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_list[i])<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> data_list[i][j] <span class="op">&gt;</span> data_list[i][j<span class="op">+</span><span class="dv">1</span>] <span class="op">*</span> <span class="dv">2</span>:  <span class="co"># Highlight elements 2x larger than next</span></span>
-<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>                data_list[i][j], data_list[i][j<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> data_list[i][j<span class="op">+</span><span class="dv">1</span>], data_list[i][j]</span>
-<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> data_list</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This is being called on the results from process_data! It’s intentionally un-sorting some elements to highlight outliers, but I forgot it was there.</p>
-<p>Thank you for helping me trace through the algorithm; it confirmed that my bubble sort is correct and led me to look elsewhere for the issue.</p>
-</div>
-</div>
+<p><strong>You:</strong></p>
+<pre class="text"><code>I think I found the issue. In another part of the code, there's a function that modifies the results after sorting:
+
+def highlight_outliers(data_list):
+    for i in range(len(data_list)):
+        # Swap positions of certain elements to highlight them
+        for j in range(len(data_list[i])-1):
+            if data_list[i][j] &gt; data_list[i][j+1] * 2:  # Highlight elements 2x larger than next
+                data_list[i][j], data_list[i][j+1] = data_list[i][j+1], data_list[i][j]
+    return data_list
+
+This is being called on the results from process_data! It's intentionally un-sorting some elements to highlight outliers, but I forgot it was there.
+
+Thank you for helping me trace through the algorithm; it confirmed that my bubble sort is correct and led me to look elsewhere for the issue.</code></pre>
 </section>
 </section>
 <section id="key-takeaways" class="level2" data-number="12.5">
