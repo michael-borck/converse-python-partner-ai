@@ -677,14 +677,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h4 data-number="11.2.2.1" class="anchored" data-anchor-id="zero-shot-prompting"><span class="header-section-number">11.2.2.1</span> Zero-Shot Prompting</h4>
 <p>Zero-shot prompting instructs an AI to perform a task without providing examples within the prompt. This technique leverages the model’s pre-existing knowledge to generate responses to novel tasks.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Write a function that validates email addresses using regular expressions.</code></pre>
+<pre class="text"><code>Write a function that validates email addresses using regular expressions.</code></pre>
 <p>Zero-shot prompting works well for common tasks where the AI has extensive training data, but may struggle with specialised or complex tasks.</p>
 </section>
 <section id="few-shot-prompting" class="level4" data-number="11.2.2.2">
 <h4 data-number="11.2.2.2" class="anchored" data-anchor-id="few-shot-prompting"><span class="header-section-number">11.2.2.2</span> Few-Shot Prompting</h4>
 <p>This technique provides the model with one or more examples of expected input-output pairs before presenting the actual task. Examples help the model understand the desired format and approach.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Here's an example of validating a phone number:
+<pre class="text"><code>Here's an example of validating a phone number:
 
 Input: "555-123-4567"
 Output: Valid (matches pattern XXX-XXX-XXXX)
@@ -702,7 +702,7 @@ Now, write a function that validates phone numbers according to this logic.</cod
 <h4 data-number="11.2.2.3" class="anchored" data-anchor-id="chain-of-thought-prompting"><span class="header-section-number">11.2.2.3</span> Chain-of-Thought Prompting</h4>
 <p>Chain-of-Thought (CoT) prompting encourages the model to break down complex reasoning into intermediate steps, leading to more comprehensive and accurate outputs. This technique mimics human reasoning processes.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Let's solve this step by step: Write a function that finds the longest common subsequence of two strings. 
+<pre class="text"><code>Let's solve this step by step: Write a function that finds the longest common subsequence of two strings. 
 
 First, let's understand what a subsequence is...
 Next, let's think about how to identify common subsequences...
@@ -713,7 +713,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h4 data-number="11.2.2.4" class="anchored" data-anchor-id="role-based-prompting"><span class="header-section-number">11.2.2.4</span> Role-Based Prompting</h4>
 <p>Role-based prompting assigns a specific professional or character role to the AI, which helps frame its responses within a particular domain of expertise or perspective.</p>
 <p><strong>Example:</strong></p>
-<pre><code>As an experienced software architect, analyse this function and suggest improvements for scalability and performance.</code></pre>
+<pre class="text"><code>As an experienced software architect, analyse this function and suggest improvements for scalability and performance.</code></pre>
 <p>This technique helps orient the AI toward specific terminology, frameworks, and priorities relevant to the assigned role.</p>
 </section>
 </section>
@@ -724,7 +724,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.1" class="anchored" data-anchor-id="foundation-prompts"><span class="header-section-number">11.3.1</span> Foundation Prompts</h3>
 <p>Foundation prompts establish the baseline requirements for a programming task. Instead of just asking for a solution, these prompts set the stage for a productive dialogue.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"I need to write a Python program that analyses student grades and calculates statistics."
+<pre class="text"><code>"I need to write a Python program that analyses student grades and calculates statistics."
 
 "Can you help me design a function that validates user input according to these requirements..."
 
@@ -735,7 +735,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.2" class="anchored" data-anchor-id="clarification-prompts"><span class="header-section-number">11.3.2</span> Clarification Prompts</h3>
 <p>Clarification prompts refine requirements and explore edge cases before diving into implementation.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"Should the function handle negative numbers, or can we assume all inputs are positive?"
+<pre class="text"><code>"Should the function handle negative numbers, or can we assume all inputs are positive?"
 
 "What's a better approach for storing this data: a nested dictionary or a custom class?"
 
@@ -746,7 +746,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.3" class="anchored" data-anchor-id="scaffolding-prompts"><span class="header-section-number">11.3.3</span> Scaffolding Prompts</h3>
 <p>Scaffolding prompts support learning by breaking down complex concepts into understandable components.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"Before we implement this recursion, can you explain how the call stack will work in this case?"
+<pre class="text"><code>"Before we implement this recursion, can you explain how the call stack will work in this case?"
 
 "What's happening in this line of code that uses list comprehension? Can you break it down step by step?"
 
@@ -757,7 +757,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.4" class="anchored" data-anchor-id="challenge-prompts"><span class="header-section-number">11.3.4</span> Challenge Prompts</h3>
 <p>Challenge prompts deliberately introduce programming challenges to test understanding and explore potential issues.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"What happens if the user enters an empty string here?"
+<pre class="text"><code>"What happens if the user enters an empty string here?"
 
 "How would this code handle a very large dataset? Would it still be efficient?"
 
@@ -768,7 +768,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.5" class="anchored" data-anchor-id="refinement-prompts"><span class="header-section-number">11.3.5</span> Refinement Prompts</h3>
 <p>Refinement prompts push for code improvements based on best practices and efficiency considerations.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"Can we make this code more efficient in terms of memory usage?"
+<pre class="text"><code>"Can we make this code more efficient in terms of memory usage?"
 
 "Is there a more idiomatic way to write this in Python?"
 
@@ -779,7 +779,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.3.6" class="anchored" data-anchor-id="error-induction-prompts"><span class="header-section-number">11.3.6</span> Error Induction Prompts</h3>
 <p>Error induction prompts intentionally guide the AI toward making specific mistakes to explore error handling and debugging processes.</p>
 <p><strong>Examples:</strong></p>
-<pre><code>"Let's use a recursive approach without considering the base case first."
+<pre class="text"><code>"Let's use a recursive approach without considering the base case first."
 
 "What if we don't handle the edge case where the input is empty?"
 
@@ -835,7 +835,7 @@ Then, we'll need an algorithm to find the longest one...</code></pre>
 <h3 data-number="11.5.1" class="anchored" data-anchor-id="context-enhanced-prompting"><span class="header-section-number">11.5.1</span> Context-Enhanced Prompting</h3>
 <p>This technique involves providing rich background information to help the AI generate more appropriate and contextually relevant responses.</p>
 <p><strong>Example:</strong></p>
-<pre><code>I'm building a web application with React frontend and Django backend. The application needs to handle both authenticated and unauthenticated users. We're using JWT for authentication. 
+<pre class="text"><code>I'm building a web application with React frontend and Django backend. The application needs to handle both authenticated and unauthenticated users. We're using JWT for authentication. 
 
 Now I need to implement a function that checks if a user's token is valid and returns appropriate data based on their permission level.</code></pre>
 <p>Context-enhanced prompting is particularly valuable when working on components of larger systems where architectural decisions and constraints need to be considered.</p>
@@ -844,7 +844,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <h3 data-number="11.5.2" class="anchored" data-anchor-id="constraint-based-prompting"><span class="header-section-number">11.5.2</span> Constraint-Based Prompting</h3>
 <p>By explicitly stating constraints and requirements, you can guide the AI to produce solutions that fit within your project’s specific parameters.</p>
 <p><strong>Example:</strong></p>
-<pre><code>Write a sorting algorithm that:
+<pre class="text"><code>Write a sorting algorithm that:
 - Uses O(n log n) time complexity
 - Uses no more than O(1) extra space
 - Is stable (maintains relative order of equal elements)
@@ -855,7 +855,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <h3 data-number="11.5.3" class="anchored" data-anchor-id="template-guided-prompting"><span class="header-section-number">11.5.3</span> Template-Guided Prompting</h3>
 <p>Template-guided prompting provides a structural framework that the AI should follow in its response. This ensures consistency and completeness.</p>
 <p><strong>Example:</strong></p>
-<pre><code>analyse this function using the following template:
+<pre class="text"><code>analyse this function using the following template:
 1. Time complexity: 
 2. Space complexity:
 3. Edge cases not handled:
@@ -974,7 +974,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <section id="initial-prompt" class="level3" data-number="11.8.1">
 <h3 data-number="11.8.1" class="anchored" data-anchor-id="initial-prompt"><span class="header-section-number">11.8.1</span> Initial Prompt</h3>
 <p>A developer starts with a simple request:</p>
-<pre><code>Write a function to retrieve weather data from the wttr.in API for a given location.</code></pre>
+<pre class="text"><code>Write a function to retrieve weather data from the wttr.in API for a given location.</code></pre>
 </section>
 <section id="initial-ai-generated-code" class="level3" data-number="11.8.2">
 <h3 data-number="11.8.2" class="anchored" data-anchor-id="initial-ai-generated-code"><span class="header-section-number">11.8.2</span> Initial AI-Generated Code</h3>
@@ -1001,7 +1001,7 @@ Now I need to implement a function that checks if a user's token is valid and re
 <section id="follow-up-prompt-with-specific-improvements" class="level3" data-number="11.8.4">
 <h3 data-number="11.8.4" class="anchored" data-anchor-id="follow-up-prompt-with-specific-improvements"><span class="header-section-number">11.8.4</span> Follow-up Prompt with Specific Improvements</h3>
 <p>The developer then crafts a follow-up prompt that addresses each identified issue:</p>
-<pre><code>Thanks for the starting point. I'd like to improve this function with:
+<pre class="text"><code>Thanks for the starting point. I'd like to improve this function with:
 
 1. Error handling for API failures and bad responses
 2. Location input validation

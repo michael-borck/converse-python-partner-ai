@@ -691,12 +691,17 @@ Overall, your specifications are solid and provide a good foundation for the imp
 <p>In this step, we’d manually process a small sample of the data to understand the analysis process. For brevity, we’ll focus on a simple example of finding product combinations.</p>
 <p><strong>Human work:</strong></p>
 <p>Sample data (5 transactions):</p>
-<pre><code>transaction_id,customer_id,timestamp,product_categories,amount,payment_method,store_location
-T1001,C1,2023-01-15 14:30:00,"electronics,accessories",120.50,credit,store1
-T1002,C2,2023-01-15 15:45:00,"groceries,dairy,produce",65.75,debit,store2
-T1003,C1,2023-01-17 10:15:00,"electronics,videogames",210.99,credit,store1
-T1004,C3,2023-01-18 09:30:00,"dairy,produce,meat",95.30,cash,store2
-T1005,C2,2023-01-20 16:20:00,"groceries,dairy,bakery",45.60,debit,store2</code></pre>
+<pre class="text"><code>id,cust,date,categories,amt,pay,store
+T1001,C1,2023-01-15,"electronics,accessories",
+  120.50,credit,store1
+T1002,C2,2023-01-15,"groceries,dairy,produce",
+  65.75,debit,store2
+T1003,C1,2023-01-17,"electronics,videogames",
+  210.99,credit,store1
+T1004,C3,2023-01-18,"dairy,produce,meat",
+  95.30,cash,store2
+T1005,C2,2023-01-20,"groceries,dairy,bakery",
+  45.60,debit,store2</code></pre>
 <p>To find product combinations: 1. Split each transaction’s product_categories field 2. Generate all pair combinations 3. Count frequency of each pair</p>
 <p>For T1001: [“electronics”, “accessories”] Pairs: [(“electronics”, “accessories”)]</p>
 <p>For T1002: [“groceries”, “dairy”, “produce”] Pairs: [(“groceries”, “dairy”), (“groceries”, “produce”), (“dairy”, “produce”)]</p>
@@ -807,7 +812,7 @@ bar_chart, line_chart, heatmap = create_visualizations(
 SAVE_PNG(bar_chart, output_dir + "/top_combinations.png")
 SAVE_PNG(line_chart, output_dir + "/monthly_trends.png")
 SAVE_PNG(heatmap, output_dir + "/hourly_patterns.png")</code></pre>
-<pre><code>
+<pre class="text"><code>
 Does this pseudocode cover all the necessary steps for our data analysis pipeline? Are there any inefficiencies or improvements you would suggest?</code></pre>
 <p><strong>AI:</strong></p>
 <pre class="text"><code>Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations:
@@ -1491,7 +1496,7 @@ Test cases to consider:
 </section>
 <section id="refinement-process-prompt" class="level4" data-number="14.2.3.2">
 <h4 data-number="14.2.3.2" class="anchored" data-anchor-id="refinement-process-prompt"><span class="header-section-number">14.2.3.2</span> Refinement Process Prompt</h4>
-<pre><code>The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
+<pre class="text"><code>The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
 
 1. Handle connection errors
 2. Validate returned data structure

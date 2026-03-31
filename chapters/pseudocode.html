@@ -611,7 +611,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>While pseudocode isn’t standardised, these conventions enhance clarity:</p>
 <section id="control-structures" class="level4" data-number="8.1.2.1">
 <h4 data-number="8.1.2.1" class="anchored" data-anchor-id="control-structures"><span class="header-section-number">8.1.2.1</span> Control Structures</h4>
-<pre><code>IF condition THEN
+<pre class="text"><code>IF condition THEN
     action1
 ELSE
     action2
@@ -627,20 +627,20 @@ END WHILE</code></pre>
 </section>
 <section id="function-definitions" class="level4" data-number="8.1.2.2">
 <h4 data-number="8.1.2.2" class="anchored" data-anchor-id="function-definitions"><span class="header-section-number">8.1.2.2</span> Function Definitions</h4>
-<pre><code>FUNCTION name(parameters)
+<pre class="text"><code>FUNCTION name(parameters)
     actions
     RETURN value
 END FUNCTION</code></pre>
 </section>
 <section id="variable-operations" class="level4" data-number="8.1.2.3">
 <h4 data-number="8.1.2.3" class="anchored" data-anchor-id="variable-operations"><span class="header-section-number">8.1.2.3</span> Variable Operations</h4>
-<pre><code>SET variable TO value
+<pre class="text"><code>SET variable TO value
 INCREMENT counter
 ADD item TO collection</code></pre>
 </section>
 <section id="inputoutput" class="level4" data-number="8.1.2.4">
 <h4 data-number="8.1.2.4" class="anchored" data-anchor-id="inputoutput"><span class="header-section-number">8.1.2.4</span> Input/Output</h4>
-<pre><code>READ input FROM user
+<pre class="text"><code>READ input FROM user
 DISPLAY message
 WRITE data TO file</code></pre>
 </section>
@@ -683,7 +683,7 @@ WRITE data TO file</code></pre>
 <li><strong>Unambiguous structure</strong> that reduces misinterpretation by AI models</li>
 </ul>
 <p>A simple example in SudoLang:</p>
-<pre><code>function sortUsersByAge({ users }) {
+<pre class="text"><code>function sortUsersByAge({ users }) {
   return users.sort(by: user =&gt; user.age)
 }</code></pre>
 <p>When working with AI assistants on complex programming tasks, SudoLang can help create more precise, intentional prompts that result in higher-quality code generation. It’s especially valuable when you need to communicate algorithmic intent clearly without getting lost in language-specific syntax details.</p>
@@ -977,7 +977,7 @@ The center expansion approach remains the most intuitive and offers a good balan
 <section id="adding-implementation-details" class="level3" data-number="8.4.1">
 <h3 data-number="8.4.1" class="anchored" data-anchor-id="adding-implementation-details"><span class="header-section-number">8.4.1</span> Adding Implementation Details</h3>
 <p>Once the core logic is established in pseudocode, gradually add implementation-specific details:</p>
-<pre><code>// Initial pseudocode
+<pre class="text"><code>// Initial pseudocode
 FOR each character in string
     check for palindromes centered at this character
 END FOR
@@ -1035,7 +1035,7 @@ END FOR</code></pre>
 <section id="planning-test-coverage" class="level3" data-number="8.4.3">
 <h3 data-number="8.4.3" class="anchored" data-anchor-id="planning-test-coverage"><span class="header-section-number">8.4.3</span> Planning Test Coverage</h3>
 <p>Use pseudocode to identify the test cases needed for comprehensive coverage:</p>
-<pre><code>TEST CASES:
+<pre class="text"><code>TEST CASES:
 1. Empty string -&gt; should return empty string
 2. Single character -&gt; should return that character
 3. Two identical characters -&gt; should return both characters

@@ -677,7 +677,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="16.2.2" class="anchored" data-anchor-id="prompting-focused-assignments"><span class="header-section-number">16.2.2</span> Prompting-Focused Assignments</h3>
 <p>These assignments emphasise the skill of effective prompting:</p>
 <p><strong>Example assignment:</strong></p>
-<pre><code>Topic: Sorting Algorithms
+<pre class="text"><code>Topic: Sorting Algorithms
 
 Your task is to implement a merge sort algorithm in Python. Instead of
 coding it directly, you'll guide an AI assistant through the implementation
@@ -698,7 +698,7 @@ Requirements:
 <p><strong>Task:</strong> Create a gradebook program that: - Uses a dictionary to store student names and their list of scores - Has a function to calculate average score - Prints each student’s name and average - Handles edge cases (e.g., empty lists, invalid inputs)</p>
 </blockquote>
 <p><strong>Step 1: Start Simple</strong></p>
-<pre><code>"Can you help me write a Python program to store student names and their test scores, and print their average?"</code></pre>
+<pre class="text"><code>"Can you help me write a Python program to store student names and their test scores, and print their average?"</code></pre>
 <p>The AI might provide a basic implementation:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Alice"</span>: [<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>],</span>
@@ -710,7 +710,7 @@ Requirements:
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> <span class="bu">sum</span>(scores) <span class="op">/</span> <span class="bu">len</span>(scores)</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has an average of </span><span class="sc">{</span>avg<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Step 2: Add a Function</strong></p>
-<pre><code>"Can you turn the average calculation into a function?"</code></pre>
+<pre class="text"><code>"Can you turn the average calculation into a function?"</code></pre>
 <p>The AI improves the implementation:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average(scores):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(scores) <span class="op">/</span> <span class="bu">len</span>(scores)</span>
@@ -718,7 +718,7 @@ Requirements:
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, scores <span class="kw">in</span> students.items():</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> has an average of </span><span class="sc">{</span>average(scores)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Step 3: Improve Robustness</strong></p>
-<pre><code>"What happens if a student has no scores? Can you fix that?"</code></pre>
+<pre class="text"><code>"What happens if a student has no scores? Can you fix that?"</code></pre>
 <p>The AI addresses the edge case:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average(scores):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> scores:</span>
@@ -730,7 +730,7 @@ Requirements:
 <h3 data-number="16.2.4" class="anchored" data-anchor-id="evaluation-and-improvement-assignments"><span class="header-section-number">16.2.4</span> Evaluation and Improvement Assignments</h3>
 <p>These assignments focus on critical evaluation of AI-generated code:</p>
 <p><strong>Example assignment:</strong></p>
-<pre><code>Topic: Error Handling
+<pre class="text"><code>Topic: Error Handling
 
 You are provided with an AI-generated function that processes user
 input for a banking application. The code is functional but has
@@ -747,7 +747,7 @@ Requirements:
 <h3 data-number="16.2.5" class="anchored" data-anchor-id="comparative-analysis-assignments"><span class="header-section-number">16.2.5</span> Comparative Analysis Assignments</h3>
 <p>These assignments emphasise exploring multiple approaches:</p>
 <p><strong>Example assignment:</strong></p>
-<pre><code>Topic: Data Structures
+<pre class="text"><code>Topic: Data Structures
 
 Use an AI assistant to implement three different data structures for
 storing and retrieving student records: a hash table, a binary search
@@ -764,7 +764,7 @@ Requirements:
 <h3 data-number="16.2.6" class="anchored" data-anchor-id="process-documentation-assignments"><span class="header-section-number">16.2.6</span> Process Documentation Assignments</h3>
 <p>These assignments focus on the development process rather than just the final code:</p>
 <p><strong>Example assignment:</strong></p>
-<pre><code>Topic: API Development
+<pre class="text"><code>Topic: API Development
 
 Create a RESTful API for a library management system, documenting your
 entire development process.

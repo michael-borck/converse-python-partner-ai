@@ -594,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="restatement-verification" class="level4" data-number="6.1.3.1">
 <h4 data-number="6.1.3.1" class="anchored" data-anchor-id="restatement-verification"><span class="header-section-number">6.1.3.1</span> Restatement Verification</h4>
 <p>After restating the problem yourself, ask the AI to verify your understanding:</p>
-<pre><code>I'm working on this problem: [original problem statement]
+<pre class="text"><code>I'm working on this problem: [original problem statement]
 
 I've restated it as: [your restatement]
 
@@ -603,17 +603,17 @@ Have I missed anything important or misunderstood any aspect of the problem?</co
 <section id="assumptions-identification" class="level4" data-number="6.1.3.2">
 <h4 data-number="6.1.3.2" class="anchored" data-anchor-id="assumptions-identification"><span class="header-section-number">6.1.3.2</span> Assumptions Identification</h4>
 <p>AI can help uncover hidden assumptions in the problem:</p>
-<pre><code>What assumptions might I be making about this problem that aren't explicitly stated?</code></pre>
+<pre class="text"><code>What assumptions might I be making about this problem that aren't explicitly stated?</code></pre>
 </section>
 <section id="edge-case-exploration" class="level4" data-number="6.1.3.3">
 <h4 data-number="6.1.3.3" class="anchored" data-anchor-id="edge-case-exploration"><span class="header-section-number">6.1.3.3</span> Edge Case Exploration</h4>
 <p>AI can help identify boundary conditions and special cases:</p>
-<pre><code>What edge cases should I consider for this problem?</code></pre>
+<pre class="text"><code>What edge cases should I consider for this problem?</code></pre>
 </section>
 <section id="domain-specific-context" class="level4" data-number="6.1.3.4">
 <h4 data-number="6.1.3.4" class="anchored" data-anchor-id="domain-specific-context"><span class="header-section-number">6.1.3.4</span> Domain-Specific Context</h4>
 <p>For problems in unfamiliar domains, AI can provide context:</p>
-<pre><code>Could you explain any domain-specific considerations I should keep in mind when solving this problem?</code></pre>
+<pre class="text"><code>Could you explain any domain-specific considerations I should keep in mind when solving this problem?</code></pre>
 </section>
 </section>
 </section>
@@ -656,7 +656,7 @@ Have I missed anything important or misunderstood any aspect of the problem?</co
 <section id="documenting-io-with-examples" class="level3" data-number="6.2.3">
 <h3 data-number="6.2.3" class="anchored" data-anchor-id="documenting-io-with-examples"><span class="header-section-number">6.2.3</span> Documenting I/O With Examples</h3>
 <p>Examples can clarify I/O specifications better than abstract descriptions:</p>
-<pre><code>Function: calculate_shipping_cost(weight, distance, express=False)
+<pre class="text"><code>Function: calculate_shipping_cost(weight, distance, express=False)
 
 Inputs:
 - weight: A positive float representing item weight in kilograms
@@ -678,7 +678,7 @@ Examples:
 <section id="input-edge-cases" class="level4" data-number="6.2.4.1">
 <h4 data-number="6.2.4.1" class="anchored" data-anchor-id="input-edge-cases"><span class="header-section-number">6.2.4.1</span> Input Edge Cases</h4>
 <p>Ask the AI to help identify input edge cases:</p>
-<pre><code>What are potential edge cases for these inputs?
+<pre class="text"><code>What are potential edge cases for these inputs?
 - weight: A positive float representing item weight in kilograms
 - distance: A positive float representing distance in kilometers
 - express: Optional boolean flag for express shipping</code></pre>
@@ -687,13 +687,13 @@ Examples:
 <section id="output-edge-cases" class="level4" data-number="6.2.4.2">
 <h4 data-number="6.2.4.2" class="anchored" data-anchor-id="output-edge-cases"><span class="header-section-number">6.2.4.2</span> Output Edge Cases</h4>
 <p>Similarly, explore edge cases for outputs:</p>
-<pre><code>What are potential edge cases for the output of this shipping cost calculator?</code></pre>
+<pre class="text"><code>What are potential edge cases for the output of this shipping cost calculator?</code></pre>
 <p>This might reveal considerations like: - Minimum shipping costs - Free shipping thresholds - Rounding rules - Currency formatting - Maximum possible costs</p>
 </section>
 <section id="error-condition-exploration" class="level4" data-number="6.2.4.3">
 <h4 data-number="6.2.4.3" class="anchored" data-anchor-id="error-condition-exploration"><span class="header-section-number">6.2.4.3</span> Error Condition Exploration</h4>
 <p>Use AI to explore potential error conditions:</p>
-<pre><code>What error conditions should I handle in this shipping cost calculator?</code></pre>
+<pre class="text"><code>What error conditions should I handle in this shipping cost calculator?</code></pre>
 <p>This might reveal considerations like: - Invalid input types - Values outside acceptable ranges - Unavailable shipping routes - Rate limit restrictions</p>
 </section>
 </section>
@@ -704,7 +704,7 @@ Examples:
 <section id="the-five-whys-technique" class="level3" data-number="6.3.1">
 <h3 data-number="6.3.1" class="anchored" data-anchor-id="the-five-whys-technique"><span class="header-section-number">6.3.1</span> The Five Whys Technique</h3>
 <p>Repeatedly ask “why” to dig deeper into requirements:</p>
-<pre><code>The requirement is to "implement a user profile page."
+<pre class="text"><code>The requirement is to "implement a user profile page."
 
 Why does the user need a profile page?
 [AI response]
@@ -718,7 +718,7 @@ Why can't we achieve that with the existing functionality?</code></pre>
 <section id="stakeholder-perspective-prompting" class="level3" data-number="6.3.2">
 <h3 data-number="6.3.2" class="anchored" data-anchor-id="stakeholder-perspective-prompting"><span class="header-section-number">6.3.2</span> Stakeholder Perspective Prompting</h3>
 <p>Ask the AI to consider requirements from different perspectives:</p>
-<pre><code>How might different users view this profile page requirement differently?
+<pre class="text"><code>How might different users view this profile page requirement differently?
 
 - From an end user's perspective: ...
 - From an administrator's perspective: ...
@@ -728,7 +728,7 @@ Why can't we achieve that with the existing functionality?</code></pre>
 <section id="requirement-expansion" class="level3" data-number="6.3.3">
 <h3 data-number="6.3.3" class="anchored" data-anchor-id="requirement-expansion"><span class="header-section-number">6.3.3</span> Requirement Expansion</h3>
 <p>Ask the AI to expand terse requirements into detailed specifications:</p>
-<pre><code>The requirement is: "Add sorting functionality to the user table."
+<pre class="text"><code>The requirement is: "Add sorting functionality to the user table."
 
 Can you expand this into a comprehensive specification including:
 - Which columns should be sortable
@@ -740,7 +740,7 @@ Can you expand this into a comprehensive specification including:
 <section id="comparative-analysis" class="level3" data-number="6.3.4">
 <h3 data-number="6.3.4" class="anchored" data-anchor-id="comparative-analysis"><span class="header-section-number">6.3.4</span> Comparative Analysis</h3>
 <p>Use AI to compare different interpretations of ambiguous requirements:</p>
-<pre><code>The requirement "ensure the application is responsive" could be interpreted in two ways:
+<pre class="text"><code>The requirement "ensure the application is responsive" could be interpreted in two ways:
 1. The UI should adapt to different screen sizes
 2. The application should respond quickly to user interactions
 

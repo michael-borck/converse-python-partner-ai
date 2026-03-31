@@ -2072,7 +2072,7 @@ while i >> longest_palindromic_substring("babad")
         "bb"
     """
     # Implementation...
-
+text
 FUNCTION findLongestPalindromicSubstring(string)
     IF string is empty THEN
         RETURN empty string
@@ -2514,7 +2514,7 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
                 max_length = even_length
     
     return s[start:start + max_length]
-
+text
 ......
 ----------------------------------------------------------------------
 Ran 6 tests in 0.123s
@@ -2921,29 +2921,17 @@ Example prompt:
 
 When you encounter an error message:
 
-[language]
-[paste the relevant code section]
-
 ### Code Review Template
 
 When your code runs but doesn't behave as expected:
-
-[language]
-[paste the code]
 
 ### Step-by-Step Tracing Template
 
 For understanding exactly where logic goes wrong:
 
-[language]
-[paste function code]
-
 ### Performance Debugging Template
 
 For optimising slow code:
-
-[language]
-[paste code]
 
 ## Effective Debugging Workflows
 
@@ -4024,7 +4012,7 @@ def fetch_weather_data(location, units):
     current_weather = weather_api.get_current(location, units)
     forecast = weather_api.get_forecast(location, units, days=5)
     return {"current": current_weather, "forecast": forecast}
-
+text
 The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
 
 1. Handle connection errors
