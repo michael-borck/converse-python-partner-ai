@@ -105,9 +105,11 @@ This guide is part of a 5-book series designed to help you master modern softwar
 
 ```{mermaid}
 flowchart TD
-    CND["Conversation, Not Delegation\n(Methodology)"]
-    CND --> Think["Think Python, Direct AI\nComputational Thinking"]
+    CND["Conversation, Not Delegation\n(General Methodology)"]
+    CPPA["Converse Python, Partner AI\n(Python Methodology)"]
+    CND --> CPPA
     CND --> Web["Build Web, Guide AI\nWeb Development"]
+    CPPA --> Think["Think Python, Direct AI\nComputational Thinking"]
     Think --> Code["Code Python, Consult AI\nPython Fundamentals"]
     Code --> Ship["Ship Python, Orchestrate AI\nProfessional Practices"]
 ```
