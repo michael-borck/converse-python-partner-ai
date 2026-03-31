@@ -18,6 +18,26 @@ This distinction matters because:
 
 The philosophy of this book is simple: **Treat AI as a thinking partner, not a task executor.**
 
+## Vibe Coding and What Comes After
+
+There is a popular approach to AI-assisted development called "vibe coding" — a term coined by Andrej Karpathy to describe coding by feel, prompting AI until something works, without necessarily understanding the code it produces. The idea is liberating: anyone can build software by describing what they want and iterating until it runs.
+
+Vibe coding is real, and for quick prototypes and throwaway scripts it can be genuinely useful. Communities like [roadmap.sh/vibe-coding](https://roadmap.sh/vibe-coding) have documented practical workflows around it: plan before you code, be specific in your prompts, manage context, test your output, use version control. These are sensible practices, and many of them overlap with what this book teaches.
+
+The difference is what happens when something goes wrong — or when something needs to change.
+
+A vibe coder who gets a working function cannot explain why it works. When a bug appears in production, they paste the error back into the AI and hope for a fix. When requirements shift, they start the conversation from scratch because they never understood the original design. Each interaction is independent. Nothing compounds.
+
+An intentional prompter who gets the same function can explain the algorithm, identify where it will fail, and modify it confidently. When they ask the AI for help, they can describe the problem precisely — not "it's broken" but "the expand_around_center function isn't handling even-length palindromes because the boundary check is off by one." That precision gives the AI the context it needs to be genuinely useful, rather than guessing.
+
+::: {.callout-note title="The compounding advantage"}
+Understanding compounds. Each problem you work through intentionally makes the next one easier — you recognise patterns, you know what questions to ask, you can evaluate AI suggestions against your own mental model. Vibe coding does not compound. Each session starts from zero because no understanding was built in the previous one.
+:::
+
+The six-step methodology in this book is not slower than vibe coding. It is faster in the medium term, because the understanding you build in Steps 1-4 makes Steps 5-6 dramatically more productive. You are not guessing at prompts — you are giving the AI precise specifications based on work you already did. The AI responds better because you gave it better input. And when the output needs fixing, you know exactly where to look.
+
+This book does not argue against using AI to write code. It argues for understanding what you are asking the AI to build, so that when it builds it, you can tell whether it is right.
+
 ## What is a "Prompt"?
 
 Before we go further, let's demystify some terminology.
