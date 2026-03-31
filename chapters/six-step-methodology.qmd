@@ -196,7 +196,10 @@ This code may work, but:
 #### Step 1: Restate the Problem
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I need to write a function that finds the longest palindromic substring in a given string. 
 Let me restate this problem to make sure I understand it correctly:
 
@@ -205,10 +208,14 @@ the same forward and backward. For example, in "babad", the longest palindromic 
 would be "bab" or "aba" (both are valid since they're the same length).
 
 Is this understanding correct? Are there any edge cases I should consider?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your understanding is correct! The function should find the longest substring that is a palindrome.
 
 Edge cases to consider:
@@ -218,13 +225,17 @@ Edge cases to consider:
 - Strings with multiple palindromic substrings of the same length
 - Very long strings (performance considerations)
 - Case sensitivity (usually palindromes are case-sensitive)
-:::
+```
+
 
 
 #### Step 2: Identify Inputs and Outputs
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Let me specify the input and output for this function:
 
 Input:
@@ -237,16 +248,21 @@ Output:
 - If there are no palindromes longer than 1 character, return the first character of the string
 
 Do these input and output specifications cover all the necessary cases?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Those specifications are good, but let me suggest a small clarification:
 
 For the case where there are no palindromes longer than 1 character, technically every individual character is a palindrome by itself. So returning the first character would be correct, but it might be clearer to explicitly state "return any single character" since any character is a palindrome of length 1.
 
 With that clarification, your input and output specifications cover all the necessary cases!
-:::
+```
+
 
 
 #### Step 3: Work the Problem by Hand
@@ -275,7 +291,10 @@ Also check even-length palindromes:
 Longest palindromes: "bab" or "aba" (both length 3)
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I've worked through the example "babad" by hand and found that the longest palindromic 
 substrings are "bab" and "aba", both of length 3.
 
@@ -285,10 +304,14 @@ their center between two characters.
 
 Does this approach seem correct and efficient? Are there any algorithmic improvements 
 I should consider?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your approach is correct and is actually the standard solution for this problem with O(n²) time complexity and O(1) space complexity.
 
 The two key components you've identified are essential:
@@ -298,13 +321,17 @@ The two key components you've identified are essential:
 There are some more complex algorithms like Manacher's algorithm that can solve this in O(n) time, but they're significantly more complex and typically unnecessary unless you're dealing with very long strings where performance is critical.
 
 Your approach is intuitive and efficient for most practical purposes!
-:::
+```
+
 
 
 #### Step 4: Write Pseudocode
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Based on my manual approach, let me write
 pseudocode for finding the longest palindromic
 substring:
@@ -333,24 +360,31 @@ function longestPalindromicSubstring(string s):
 
 Does this pseudocode correctly implement the
 approach we discussed?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your pseudocode looks correct and implements the approach we discussed! It handles both odd and even length palindromes by expanding around different centers.
 
 There's just one small detail to be careful about: in your expandAroundCenter function, when you update maxLength and start, make sure you're considering the current palindrome (not a future one). So you should check if (right - left + 1) > maxLength before expanding further.
 
 Other than that, this pseudocode correctly captures the solution and is ready to be converted to actual code!
-:::
+```
+
 
 
 #### Step 5: Convert to Code
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Now I'll convert my pseudocode to Python:
 
-```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
@@ -376,12 +410,15 @@ def longest_palindromic_substring(s):
         expand_around_center(i, i+1)
 
     return s[start:start + max_length]
-```
 
 Can you review this code for correctness and suggest any improvements?
-:::
+```
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your Python implementation looks correct and follows your pseudocode closely! It will find the longest palindromic substring as required.
 
 A few small observations:
@@ -395,13 +432,17 @@ A few small observations:
 4. Your code handles the empty string case correctly.
 
 The implementation is clean and efficient. The only possible optimisation would be implementing Manacher's algorithm for linear time complexity, but that's typically unnecessary unless you're dealing with extremely large strings.
-:::
+```
+
 
 
 #### Step 6: Test with Data
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Let's test my function with various test cases:
 
 1. Normal case: "babad" → Should return "bab" or "aba"
@@ -413,10 +454,14 @@ Let's test my function with various test cases:
 7. Even-length palindrome: "abba" → Should return "abba"
 
 Can you help me verify if my implementation handles all these cases correctly?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Let's trace through your implementation for each test case:
 
 1. `"babad"`:
@@ -446,7 +491,8 @@ Let's trace through your implementation for each test case:
    - Checking even centers finds "abba" ✓
 
 Your implementation handles all these test cases correctly! It will return the expected outputs for each scenario.
-:::
+```
+
 
 
 ### Comparing the Approaches

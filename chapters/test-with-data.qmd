@@ -130,12 +130,19 @@ For our palindrome example:
 AI assistants can help identify edge cases you might not have considered:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I've implemented a function to find the longest palindromic substring in a string. What edge cases should I test to ensure it works correctly in all scenarios?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here's a comprehensive list of edge cases you should test for your longest palindromic substring function:
 
 ### Basic Edge Cases
@@ -176,7 +183,8 @@ Here's a comprehensive list of edge cases you should test for your longest palin
 22. **Repeated characters** - "aaaaaaaaaa" (helps test for optimisation issues)
 
 A well-tested function should handle all these cases correctly and efficiently.
-:::
+```
+
 
 
 ## AI-Assisted Test Generation
@@ -188,12 +196,19 @@ AI can be particularly helpful in generating both test cases and test code.
 Ask AI to generate diverse test inputs:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Could you generate 10 diverse test cases for the longest palindromic substring function? For each test case, provide the input string and the expected output.
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here are 10 diverse test cases for the longest palindromic substring function:
 
 | Test Case | Input String | Expected Output | Description |
@@ -210,7 +225,8 @@ Here are 10 diverse test cases for the longest palindromic substring function:
 | 10 | "abcdeedcba" | "abcdeedcba" | Even-length palindrome (entire string) |
 
 These test cases cover empty strings, single characters, no long palindromes, multiple valid answers, even and odd-length palindromes, whole-string palindromes, multiple palindromes of different lengths, repeated characters, and palindromes at different positions in the string.
-:::
+```
+
 
 
 ### Generating Test Code
@@ -218,15 +234,21 @@ These test cases cover empty strings, single characters, no long palindromes, mu
 AI can also help generate the actual test code:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Could you create a Python unit test class using the unittest framework for testing the longest_palindromic_substring function with the test cases you suggested?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here's a comprehensive unit test class using Python's `unittest` framework to test the longest palindromic substring function with the test cases I suggested:
 
-```python
 import unittest
 
 # Import your function
@@ -288,7 +310,6 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-```
 
 This test class includes:
 
@@ -300,12 +321,11 @@ This test class includes:
 
 To use this, save it as `test_palindrome.py` and make sure your implementation is in a file named `palindrome.py` with the function `longest_palindromic_substring`. Then run it with:
 
-```
 python -m unittest test_palindrome.py
-```
 
 If you're using a different file structure or function name, you'll need to adjust the import statement accordingly.
-:::
+```
+
 
 
 ## Learning from Test Failures
@@ -317,10 +337,12 @@ Test failures provide valuable learning opportunities that can improve both your
 When tests fail, AI can help analyse the failure:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 My test case for "aacabdkacaa" is failing. The expected output is "aca" but my function returns "aa". Here's my implementation:
 
-```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
@@ -349,13 +371,16 @@ def longest_palindromic_substring(s):
                 right += 1
     
     return s[start:start + max_length]
-```
 
 Can you help me identify what's wrong?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 I see the issue in your implementation when testing with "aacabdkacaa". Let me walk through this step by step.
 
 In the string "aacabdkacaa", the palindromes are:
@@ -380,7 +405,6 @@ The issue is in both of your while loops. Let's focus on the even-length check. 
 
 Here's the correction needed:
 
-```python
 def longest_palindromic_substring(s):
     if not s:
         return ""
@@ -410,12 +434,12 @@ def longest_palindromic_substring(s):
             right += 1
     
     return s[start:start + max_length]
-```
 
 The key change is adding a `current_length` variable to calculate the length inside the while loop. This ensures you're using the correct length for comparison.
 
 This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.
-:::
+```
+
 
 
 ### Test-Driven Improvements

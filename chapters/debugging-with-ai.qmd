@@ -512,7 +512,10 @@ And here's my validation function:
 How could the CSS be breaking my JavaScript?
 ```
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 The CSS you've added is unlikely to directly break your JavaScript validation. These are separate concerns in web development. Let's look for other possible causes:
 
 1. Did you make any other changes at the same time?
@@ -521,7 +524,8 @@ The CSS you've added is unlikely to directly break your JavaScript validation. T
 4. Did you accidentally change any IDs or classes used by both?
 
 Let's examine your JavaScript for the actual issue...
-:::
+```
+
 
 ### The Bandage Solution
 
@@ -558,10 +562,12 @@ Let's walk through a complete debugging process using AI assistance:
 ### Initial Problem Statement
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 My sorting algorithm isn't working properly. It's supposed to sort an array of numbers in ascending order, but some arrays end up partially sorted:
 
-```python
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -569,17 +575,20 @@ def bubble_sort(arr):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
-```
 
 It works for [5, 3, 8, 1, 2], giving [1, 2, 3, 5, 8].
 But for [5, 3, 8, 1, 2, 9, 4], it gives [1, 2, 3, 5, 4, 8, 9].
 What's going wrong?
-:::
+```
+
 
 
 ### Tracing Execution
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].
 
 In bubble sort, we compare adjacent elements and swap them if they're in the wrong order. After each complete pass through the array, the largest element "bubbles up" to its correct position.
@@ -631,47 +640,51 @@ No more swaps are needed. The array is now [1, 2, 3, 4, 5, 8, 9], which is corre
 It seems the algorithm is working correctly after all. The expected output for [5, 3, 8, 1, 2, 9, 4] should be [1, 2, 3, 4, 5, 8, 9], not [1, 2, 3, 5, 4, 8, 9] as you mentioned.
 
 There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you're calling and testing this function?
-:::
+```
+
 
 
 ### Debugging the Test Case
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 You're right, I made a mistake in reporting the output. Let me recheck... 
 
 I ran the function again with [5, 3, 8, 1, 2, 9, 4], and now I'm getting [1, 2, 3, 4, 5, 8, 9], which is correct.
 
 However, I'm running this inside a larger application where I call the function like this:
 
-```python
 def process_data(data_sets):
     results = []
     for data in data_sets:
         sorted_data = bubble_sort(data.copy())
         results.append(sorted_data)
     return results
-```
 
 And I'm still seeing some incorrect sorts in the output. Could there be an issue with how I'm calling it?
-:::
+```
+
 
 
 ### Identifying the Root Cause
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
 
 Let's analyse the `process_data` function:
 
-```python
 def process_data(data_sets):
     results = []
     for data in data_sets:
         sorted_data = bubble_sort(data.copy())
         results.append(sorted_data)
     return results
-```
 
 This function:
 1. Takes a list of data sets
@@ -700,16 +713,19 @@ Can you share:
 1. A specific example of a dataset that's being incorrectly sorted in your application
 2. How you're verifying the results (e.g., printing them, displaying in UI)
 3. Any processing that happens to the results after sorting
-:::
+```
+
 
 
 ### Resolution
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I think I found the issue. In another part of the code, there's a function that modifies the results after sorting:
 
-```python
 def highlight_outliers(data_list):
     for i in range(len(data_list)):
         # Swap positions of certain elements to highlight them
@@ -717,12 +733,12 @@ def highlight_outliers(data_list):
             if data_list[i][j] > data_list[i][j+1] * 2:  # Highlight elements 2x larger than next
                 data_list[i][j], data_list[i][j+1] = data_list[i][j+1], data_list[i][j]
     return data_list
-```
 
 This is being called on the results from process_data! It's intentionally un-sorting some elements to highlight outliers, but I forgot it was there.
 
 Thank you for helping me trace through the algorithm; it confirmed that my bubble sort is correct and led me to look elsewhere for the issue.
-:::
+```
+
 
 
 ## Key Takeaways

@@ -23,7 +23,10 @@ These challenges require adaptations to our intentional prompting approach.
 For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I'm designing a microservices architecture for an e-commerce platform. The main functions include:
 - Product catalogue
 - User accounts
@@ -34,10 +37,14 @@ I'm designing a microservices architecture for an e-commerce platform. The main 
 - Analytics
 
 What would be a sensible way to divide these into microservices? What are the key considerations for service boundaries, data ownership, and interaction patterns?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here's a sensible approach to dividing your e-commerce platform into microservices, along with key considerations:
 
 ### Proposed Microservice Architecture
@@ -129,7 +136,8 @@ Here's a sensible approach to dividing your e-commerce platform into microservic
 - **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialised search technology.
 
 This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
-:::
+```
+
 
 
 ### Component-Level Intentional Prompting
@@ -177,7 +185,10 @@ Based on this architectural context, what are the key considerations I should ke
 In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Our team has established these coding standards for our Java backend services:
 
 1. Controller-Service-Repository pattern for all API endpoints
@@ -191,7 +202,8 @@ Here's an example of a controller that follows our standards:
 [Example controller code]
 
 I need to create a new endpoint for managing product bundles. Can you help me implement this following our established patterns?
-:::
+```
+
 
 
 ### Modular Prompting Strategies
@@ -232,7 +244,10 @@ Please provide:
 Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I'm designing a payment processing system that currently needs to support credit cards and PayPal. In the future, we anticipate adding:
 - Additional payment providers
 - Cryptocurrency payments
@@ -240,10 +255,14 @@ I'm designing a payment processing system that currently needs to support credit
 - Regional payment methods
 
 How should I design the system to make these future additions as straightforward as possible? What patterns would help maintain a clean architecture as the system grows?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Designing a payment processing system with future extensibility in mind requires careful architectural planning. Here's a comprehensive approach:
 
 ### Core Architectural Patterns
@@ -266,17 +285,14 @@ Designing a payment processing system with future extensibility in mind requires
 ### System Architecture Components
 
 1. **Payment Gateway Interface**
-   ```java
    public interface PaymentGateway {
        PaymentResult process(PaymentRequest request);
        RefundResult refund(RefundRequest request);
        PaymentStatus checkStatus(String paymentId);
        // Future methods can be added as needed
    }
-   ```
 
 2. **Abstract Payment Method**
-   ```java
    public abstract class PaymentMethod {
        protected PaymentGateway gateway;
        
@@ -290,10 +306,8 @@ Designing a payment processing system with future extensibility in mind requires
            throw new UnsupportedOperationException(); 
        }
    }
-   ```
 
 3. **Payment Provider Registry**
-   ```java
    public class PaymentProviderRegistry {
        private Map<String, PaymentMethod> providers = new HashMap<>();
        
@@ -312,7 +326,6 @@ Designing a payment processing system with future extensibility in mind requires
            return new ArrayList<>(providers.keySet());
        }
    }
-   ```
 
 ### Design Principles to Follow
 
@@ -357,7 +370,6 @@ Designing a payment processing system with future extensibility in mind requires
 
 Here's a skeleton implementation of the core components:
 
-```java
 // The request/response models
 public class PaymentRequest {
     private String paymentMethodType;
@@ -387,7 +399,6 @@ public class PaymentService {
     
     // Additional methods for different payment operations
 }
-```
 
 ### Testing Considerations
 
@@ -396,7 +407,8 @@ public class PaymentService {
 3. Design a test framework that can validate new payment methods
 
 By following these patterns and principles, your payment system will be well-positioned to accommodate new payment methods and functionality with minimal changes to the core architecture.
-:::
+```
+
 
 
 ### Cross-Cutting Concerns
@@ -404,7 +416,10 @@ By following these patterns and principles, your payment system will be well-pos
 In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 In our microservices architecture, we're seeing the same patterns implemented inconsistently across services for:
 - Authentication and authorization
 - Logging and monitoring
@@ -413,7 +428,8 @@ In our microservices architecture, we're seeing the same patterns implemented in
 - Rate limiting
 
 How can we standardize these cross-cutting concerns across our services while maintaining each team's autonomy over their service's core functionality?
-:::
+```
+
 
 
 ## Documentation and Knowledge Transfer
@@ -423,7 +439,10 @@ How can we standardize these cross-cutting concerns across our services while ma
 Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I've implemented a new authentication service with the following components:
 - OAuth2 provider integration
 - JWT token issuance and validation
@@ -431,10 +450,14 @@ I've implemented a new authentication service with the following components:
 - Multi-factor authentication support
 
 I need to create comprehensive documentation for other developers who will integrate with this service. What should my documentation cover, and how should I structure it for maximum clarity?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 # Authentication Service Documentation Structure
 
 Here's a comprehensive documentation structure for your authentication service that balances thoroughness with usability:
@@ -611,7 +634,8 @@ Here's a comprehensive documentation structure for your authentication service t
 8. **Include a changelog** tracking major documentation updates
 
 This structure provides a comprehensive yet navigable documentation set that addresses the needs of different audiences - from developers getting started to those troubleshooting specific issues.
-:::
+```
+
 
 
 ### AI-Enhanced Code Documentation
@@ -619,10 +643,12 @@ This structure provides a comprehensive yet navigable documentation set that add
 AI can also help create and maintain code-level documentation:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Here's a complex piece of code from our order processing system:
 
-```java
 public class OrderProcessor {
     private final InventoryService inventoryService;
     private final PaymentService paymentService;
@@ -716,10 +742,10 @@ public class OrderProcessor {
     
     // Other methods...
 }
-```
 
 Can you provide comprehensive JavaDoc documentation for this class and the processOrder method, explaining its purpose, the process flow, error handling, and any considerations for extending or modifying it?
-:::
+```
+
 
 
 ## Knowledge Distribution in Teams
@@ -729,14 +755,21 @@ Can you provide comprehensive JavaDoc documentation for this class and the proce
 Intentional prompting in team settings requires effective knowledge sharing patterns:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Our development team of 12 engineers is working on a complex system with multiple components. We're finding that knowledge is becoming siloed, with each developer understanding only their area deeply.
 
 What collaboration patterns or team practices would help us maintain a shared understanding of the system while allowing for individual specialisation?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 # Team Knowledge Sharing Patterns for Complex Systems
 
 To balance specialised expertise with shared understanding in your team of 12 engineers, consider implementing these complementary practices:
@@ -833,7 +866,8 @@ Rather than implementing all these patterns at once:
 4. **Create explicit time allocations** for knowledge sharing activities
 
 These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
-:::
+```
+
 
 
 ### Documentation as Code
@@ -841,14 +875,18 @@ These practices will help create multiple knowledge bridges across component bou
 Treat documentation as a first-class development artifact:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 We want to implement a "documentation as code" approach for our microservices architecture. This would mean:
 - Documentation lives alongside code in the repository
 - Documentation is reviewed and updated with code changes
 - Documentation is automatically generated and published
 
 What tools, practices, and workflows would you recommend for implementing this approach effectively?
-:::
+```
+
 
 
 ## Practical Exercise: Scaling an Application
@@ -858,7 +896,10 @@ Let's apply these principles to a practical exercise scaling a simple applicatio
 ### Initial Simple Application
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I have a simple note-taking application with these components:
 - A React frontend for creating and viewing notes
 - A Node.js/Express backend with RESTful APIs
@@ -872,7 +913,8 @@ Now I need to scale this to an enterprise collaboration platform with:
 - Integration with other tools via webhooks
 
 How should I approach scaling this application architecture? What components would I need to add or modify, and how can I ensure the system remains maintainable as it grows?
-:::
+```
+
 
 
 ## Key Takeaways

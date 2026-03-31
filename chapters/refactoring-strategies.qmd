@@ -318,12 +318,19 @@ function calculateDiscount(customer, order) {
 **Refactoring Request:**
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 This discount calculation function has become difficult to understand and maintain due to nested conditionals. How would you refactor it to improve readability and maintainability?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 I'll refactor this function to simplify the nested conditionals using a few strategies:
 
 1. Use early returns for special cases
@@ -333,7 +340,6 @@ I'll refactor this function to simplify the nested conditionals using a few stra
 
 Here's the refactored version:
 
-```javascript
 function calculateDiscount(customer, order) {
   // Start with base discount and add volume discount later if applicable
   const baseDiscount = calculateBaseDiscount(customer, order);
@@ -390,7 +396,6 @@ function calculateBaseDiscount(customer, order) {
   // Default case - no discount
   return 0;
 }
-```
 
 Benefits of this refactoring:
 
@@ -401,7 +406,8 @@ Benefits of this refactoring:
 5. **Testability**: Each function can be tested independently
 
 For even further improvement, you could refactor this to use a more object-oriented approach with strategy patterns, or use a rules engine for complex discount logic.
-:::
+```
+
 
 
 ### Case Study 2: Reducing Duplication
@@ -465,15 +471,21 @@ class UserService:
 **Refactoring Request:**
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 This UserService class has significant duplication in its methods. How would you refactor it to reduce repetition while maintaining the same functionality?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 There's significant duplication in this `UserService` class. The three methods follow the same pattern but just differ in the query condition. Let's refactor to eliminate this duplication:
 
-```python
 class UserService:
     def __get_user_by_query(self, query, params):
         """
@@ -531,7 +543,6 @@ class UserService:
             "SELECT * FROM users WHERE username = %s", 
             (username,)
         )
-```
 
 Key improvements in this refactoring:
 
@@ -549,7 +560,8 @@ Further improvements could include:
 - Implementing a data access layer or repository pattern
 
 This refactoring maintains exactly the same functionality while making the code much more maintainable.
-:::
+```
+
 
 
 ## Key Takeaways

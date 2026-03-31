@@ -31,7 +31,10 @@ The team needs to:
 #### Step 1: Restate the Problem
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I need to build a data analysis pipeline to process customer transaction data. Let me restate the problem:
 
 We have a large CSV file (millions of rows) with transaction data including transaction ID, customer ID, date/time, product categories, purchase amount, payment method, and store location.
@@ -43,10 +46,14 @@ We need to:
 4. Create visualizations of the results
 
 Is this understanding correct, and are there any important aspects I've missed?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your understanding is correct! Your restatement captures the main requirements of building a data analysis pipeline for transaction data. Here are a few additional considerations that might be important:
 
 1. **Data volume handling**: With millions of rows, you'll need efficient processing techniques that can handle large datasets. This might involve streaming processing, chunking the data, or using distributed computing frameworks.
@@ -62,13 +69,17 @@ Your understanding is correct! Your restatement captures the main requirements o
 6. **Data quality assessment**: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results.
 
 With these considerations in mind, your restatement effectively captures the core of the problem.
-:::
+```
+
 
 
 #### Step 2: Identify Input and Output
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Let me define the specific inputs and outputs for this pipeline:
 
 INPUTS:
@@ -91,10 +102,14 @@ OUTPUTS:
    * Heatmap of purchase patterns by day of week and hour
 
 Do these specifications adequately cover what's needed for the pipeline?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your input and output specifications provide a clear framework for the pipeline. They're comprehensive and specific, which is excellent for guiding the implementation. Here are a few additional points to consider:
 
 **For inputs:**
@@ -121,7 +136,8 @@ Your input and output specifications provide a clear framework for the pipeline.
 5. **Visualisation formats**: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.)
 
 Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.
-:::
+```
+
 
 
 #### Step 3: Work by Hand
@@ -161,7 +177,10 @@ Counting frequencies:
 Most frequent combinations: ("dairy", "produce") and ("groceries", "dairy")
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I've worked through a small sample of the data manually to understand the process of finding product combinations. Here's what I did:
 
 [The manual work shown above]
@@ -173,10 +192,14 @@ From this manual process, I can see that we need to:
 4. Sort by frequency to find the most common combinations
 
 This approach works for pairs, but for larger combinations, we might need association rule mining algorithms like Apriori. Does this manual approach seem correct, and are there any important considerations I'm missing?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your manual approach for finding product combinations is sound! You've correctly identified the key steps for analysing product pairs. Here are some important considerations and extensions:
 
 **Validations and extensions:**
@@ -197,7 +220,8 @@ Your manual approach for finding product combinations is sound! You've correctly
 5. **Time-based analysis**: You might want to see if popular combinations change over time (seasonal patterns, etc.)
 
 Your manual process demonstrates a good understanding of the approach. For implementation at scale, you'll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.
-:::
+```
+
 
 
 #### Step 4: Write Pseudocode
@@ -205,10 +229,13 @@ Your manual process demonstrates a good understanding of the approach. For imple
 Based on the manual exploration, we can now outline the solution in pseudocode.
 
 
-::: {.callout-note icon=false title="You"}
-Based on my manual exploration, let me write pseudocode for the data analysis pipeline:
 
-:::
+**You:**
+
+```text
+Based on my manual exploration, let me write pseudocode for the data analysis pipeline:
+```
+
 
 FUNCTION clean_data(input_file):
     data = READ_CSV(input_file)
@@ -303,13 +330,15 @@ FUNCTION main(input_file, output_dir):
 Does this pseudocode cover all the necessary steps for our data analysis pipeline? Are there any inefficiencies or improvements you would suggest?
 ```
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 Your pseudocode provides a good framework for the data analysis pipeline! It covers the main steps and follows a logical flow. Here are some suggestions for improvements and considerations:
 
 **Efficiency improvements:**
 
 1. **Chunked processing**: For millions of rows, you might want to process the data in chunks to avoid memory issues:
-```
 FUNCTION clean_data(input_file):
     initialize empty dataframe for cleaned_data
     FOR each chunk IN READ_CSV_IN_CHUNKS(input_file, chunk_size=100000):
@@ -317,10 +346,8 @@ FUNCTION clean_data(input_file):
         cleaned_chunk = CLEAN_CHUNK(chunk)
         APPEND(cleaned_data, cleaned_chunk)
     RETURN cleaned_data
-```
 
 2. **optimised product combination generation**: The current approach might be inefficient for transactions with many products:
-```
 # Add a maximum combination size parameter
 FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size=2):
     # Use an efficient algorithm like Apriori instead of manual combination generation
@@ -330,12 +357,10 @@ FUNCTION find_product_combinations(data, min_support=0.001, max_combination_size
         max_length=max_combination_size
     )
     RETURN frequent_itemsets
-```
 
 **Additional considerations:**
 
 1. **Data validation**: Add checks for data quality:
-```
 FUNCTION clean_data(input_file):
     # ...existing code...
     
@@ -345,10 +370,8 @@ FUNCTION clean_data(input_file):
     VALIDATE_NUMERIC_RANGE(data.amount, min=0)
     
     # ...rest of function...
-```
 
 2. **Error handling**: Add error handling for robust processing:
-```
 FUNCTION main(input_file, output_dir):
     TRY:
         # ...existing code...
@@ -358,10 +381,8 @@ FUNCTION main(input_file, output_dir):
         LOG_ERROR("Insufficient memory, try reducing chunk size")
     FINALLY:
         CLEAN_UP_TEMP_FILES()
-```
 
 3. **Parallelization**: For large datasets, consider parallel processing:
-```
 FUNCTION find_product_combinations(data, min_support=0.001):
     # Split data into partitions
     partitions = SPLIT_DATA(data, num_partitions=NUM_CORES)
@@ -372,19 +393,17 @@ FUNCTION find_product_combinations(data, min_support=0.001):
     # Combine results
     combined_results = COMBINE_PARTIAL_RESULTS(partial_results)
     RETURN combined_results
-```
 
 4. **Progress tracking**: For long-running operations, add progress tracking:
-```
 FUNCTION clean_data(input_file):
     total_chunks = ESTIMATE_TOTAL_CHUNKS(input_file, chunk_size)
     FOR i, chunk IN ENUMERATE(READ_CSV_IN_CHUNKS(input_file)):
         LOG_PROGRESS(f"Processing chunk {i}/{total_chunks}")
         # ...process chunk...
-```
 
 These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.
-:::
+```
+
 
 
 #### Step 5: Convert to Code
@@ -392,10 +411,12 @@ These improvements would make your pipeline more robust, efficient, and suitable
 Now let's implement the solution in Python, focusing on the product combination analysis.
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Let's convert the pseudocode for finding product combinations into Python code using pandas and mlxtend for the Apriori algorithm:
 
-```python
 import pandas as pd
 from mlxtend.frequent_patterns import apriori, association_rules
 from mlxtend.preprocessing import TransactionEncoder
@@ -479,13 +500,16 @@ def clean_data(file_path, chunk_size=100000):
     cleaned_data = pd.concat(chunks, ignore_index=True)
     
     return cleaned_data
-```
 
 Is this implementation correct and efficient? Are there any issues or optimisations I should consider?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your implementation is solid and follows good practices for processing large datasets! Here are some thoughts and potential optimisations:
 
 **Strengths:**
@@ -499,7 +523,6 @@ Your implementation is solid and follows good practices for processing large dat
 
 1. **Memory optimisation for very large datasets:**
 
-```python
 def find_product_combinations(data, min_support=0.001, max_len=3):
     # For extremely large datasets, we might want to sample first
     if len(data) > 10_000_000:  # Arbitrary threshold
@@ -507,11 +530,9 @@ def find_product_combinations(data, min_support=0.001, max_len=3):
         print(f"Data sampled to {len(data)} rows due to size")
     
     # Rest of your function...
-```
 
 2. **Error handling and logging:**
 
-```python
 def clean_data(file_path, chunk_size=100000):
     chunks = []
     total_rows = 0
@@ -534,11 +555,9 @@ def clean_data(file_path, chunk_size=100000):
     except Exception as e:
         print(f"Error during data cleaning: {str(e)}")
         raise
-```
 
 3. **Performance optimisation for Apriori on sparse data:**
 
-```python
 # If your dataset has many distinct products but each transaction has few,
 # use sparse representation for better performance
 from scipy.sparse import csr_matrix
@@ -548,11 +567,9 @@ sparse_te_ary = csr_matrix(te_ary)
 
 # Then use the sparse matrix with apriori if mlxtend supports it
 # Otherwise, for very sparse data, consider alternative implementations
-```
 
 4. **Data validation before processing:**
 
-```python
 def find_product_combinations(data, min_support=0.001, max_len=3):
     # Validate input data
     if 'product_categories' not in data.columns:
@@ -564,11 +581,9 @@ def find_product_combinations(data, min_support=0.001, max_len=3):
         print(f"Warning: {empty_cats} rows have empty or unknown product categories")
     
     # Rest of your function...
-```
 
 5. **Consider adding time-based analysis:**
 
-```python
 def find_seasonal_combinations(data, time_period='month'):
     """Find how product combinations vary over time."""
     # Add time period column
@@ -586,10 +601,10 @@ def find_seasonal_combinations(data, time_period='month'):
         results[period] = period_combos.head(10)  # Top 10 for each period
     
     return results
-```
 
 Overall, your implementation is well-designed for the task at hand. These suggestions are refinements that might be helpful in specific scenarios, but your core approach is sound!
-:::
+```
+
 
 
 #### Step 6: Test with Data
@@ -597,10 +612,12 @@ Overall, your implementation is well-designed for the task at hand. These sugges
 For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset.
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Let's test our implementation with a small sample dataset first:
 
-```python
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
@@ -680,13 +697,16 @@ for cats in product_categories:
         for j in range(i+1, len(cat_list)):
             unique_combos.add(tuple(sorted([cat_list[i], cat_list[j]])))
 print(f"Unique product pairs in data: {len(unique_combos)}")
-```
 
 What issues might we encounter when scaling to the full dataset, and how should we address them?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your test approach with synthetic data is excellent for validating the implementation! Here are the potential issues you might encounter when scaling to the full dataset and strategies to address them:
 
 **Scaling Issues and Solutions:**
@@ -730,7 +750,6 @@ Your test approach with synthetic data is excellent for validating the implement
 
 **Implementation Improvements for Scale:**
 
-```python
 # For very large datasets, consider this approach:
 
 def analyze_large_dataset(file_path, output_dir):
@@ -766,10 +785,10 @@ def analyze_large_dataset(file_path, output_dir):
     full_results = process_in_time_windows(file_path)
     
     return full_results
-```
 
 Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.
-:::
+```
+
 
 
 ### Lessons Learned
@@ -805,12 +824,19 @@ A developer needs to build a weather dashboard application in Python. The applic
 #### Step 1: Restate the Problem
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 I need to create a weather dashboard in Python that uses a provided module to access weather data and displays it in a user-friendly interface. Can you help me restate this problem more clearly to ensure I understand all requirements?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 This problem involves creating a Python application that:
 1. Utilises an existing weather data module to retrieve weather information
 2. Processes that data appropriately
@@ -822,7 +848,8 @@ The key components you'll need to develop are:
 - A display system (likely console-based) to show weather information
 - User interaction components to allow navigation and selection
 - Visualisation elements for presenting weather data graphically
-:::
+```
+
 
 
 **Human follow-up prompt (clarification):**
@@ -833,7 +860,10 @@ That's helpful. Could you help me understand what types of weather data are typi
 #### Step 2: Identify Input and Output Requirements
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Based on our discussion, let me identify the specific inputs and outputs for my weather dashboard:
 
 Inputs:
@@ -848,10 +878,14 @@ Outputs:
 - User navigation menu
 
 Does this cover the essential inputs and outputs? Is there anything important I'm missing?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Your input/output identification is strong! A few additional considerations:
 
 Additional inputs to consider:
@@ -864,13 +898,17 @@ Additional outputs to consider:
 - Status indicators for data freshness
 - Historical data comparisons (if available)
 - Weather alerts or warnings
-:::
+```
+
 
 
 #### Step 3: Work Problem by Hand
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Before we start coding, I want to sketch out the user interaction flow for the dashboard:
 
 1. User starts program
@@ -892,19 +930,28 @@ Before we start coding, I want to sketch out the user interaction flow for the d
 9. Return to menu (step 6)
 
 Does this flow make sense? Would you structure the user experience differently?
-:::
+```
+
 
 
 #### Step 4: Write Pseudocode
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Now that we have a clear understanding of the problem and user flow, could you help me write pseudocode for this weather dashboard? I want to focus on creating a modular design with separate functions for data retrieval, display, and user interaction.
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
-:::
+
+
+**AI:**
+
+```text
+```
+
 
 ```python
 # Main program structure
@@ -982,20 +1029,26 @@ The developer starts implementing the solution based on the pseudocode, focusing
 #### Step 6: Test with Data
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Now I want to test this code with some sample data. Can you provide a sample data structure that would be returned by:
 
 1. weather_api.get_current()
 2. weather_api.get_forecast()
 
 Also, what test cases should I consider to ensure my dashboard handles all possible scenarios correctly?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here are sample data structures that might be returned by the weather API:
 
-```python
 # Sample current weather data
 sample_current = {
     'location': 'New York',
@@ -1028,7 +1081,6 @@ sample_forecast = [
     },
     # Additional days would follow...
 ]
-```
 
 Test cases to consider:
 
@@ -1049,7 +1101,8 @@ Test cases to consider:
    - Invalid location name
    - Empty input
    - Special characters in location name
-:::
+```
+
 
 
 ### Before and After Example: Improving a Key Function
@@ -1171,7 +1224,10 @@ A team is experiencing intermittent failures in their e-commerce checkout system
 #### Step 1: Restate the Problem
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 We're experiencing intermittent failures in our checkout system. Let me restate the problem:
 
 Users occasionally receive a generic "Unable to complete checkout" error when attempting to purchase items. The issue:
@@ -1184,13 +1240,17 @@ Users occasionally receive a generic "Unable to complete checkout" error when at
 Our goal is to identify the root cause and implement a fix to eliminate these checkout failures.
 
 Is this an appropriate restatement of the debugging challenge?
-:::
+```
+
 
 
 #### Step 2: Identify Information Needed
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 To debug this issue effectively, we need to gather specific information:
 
 INPUTS (Information sources):
@@ -1208,7 +1268,8 @@ OUTPUTS (What we need to determine):
 - Potential fix or mitigation strategy
 
 Are there other information sources or outputs we should consider to effectively debug this intermittent issue?
-:::
+```
+
 
 
 The debugging case study would continue through a systematic investigation process, demonstrating how intentional prompting techniques help narrow down the cause of complex bugs.

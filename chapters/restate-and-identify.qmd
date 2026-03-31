@@ -305,7 +305,10 @@ Have I missed anything important in my restatement?
 ```
 
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 Your restatement covers the main aspects well, but here are a few additional considerations:
 
 - Time zones: How should the function handle time zone information? Should it preserve, convert, or ignore time zones?
@@ -315,7 +318,8 @@ Your restatement covers the main aspects well, but here are a few additional con
 - Format specifications: Will you use standard format strings (like those in Python's datetime), or custom specifications?
 
 These considerations can greatly affect the scope and complexity of your function.
-:::
+```
+
 
 
 ### Step 2: Identify Input and Output
@@ -344,7 +348,10 @@ What edge cases should I consider for a date format conversion function with the
 ```
 
 
-::: {.callout-note icon=false title="AI"}
+
+**AI:**
+
+```text
 Here are important edge cases to consider:
 
 **Input Date String Edge Cases:**
@@ -377,6 +384,7 @@ Here are important edge cases to consider:
 - Performance with very large dates
 - Thread safety if applicable
 - Memory usage concerns
-:::
+```
+
 
 

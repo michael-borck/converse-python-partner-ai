@@ -154,18 +154,24 @@ AI assistants can be valuable partners in developing pseudocode, offering differ
 AI can help draft initial pseudocode based on your problem statement:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Based on my manual approach to finding the longest palindromic substring, could you help me develop pseudocode for an algorithm that:
 1. Checks each position in the string as a potential palindrome center
 2. Handles both odd and even length palindromes
 3. Tracks the longest palindrome found
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Here's pseudocode for finding the longest palindromic substring:
 
-```
 FUNCTION findLongestPalindromicSubstring(string)
     IF string is empty THEN
         RETURN empty string
@@ -196,10 +202,10 @@ FUNCTION findLongestPalindromicSubstring(string)
     
     RETURN substring of string from startIndex to startIndex + maxLength - 1
 END FUNCTION
-```
 
 This pseudocode implements the approach we discussed, checking both odd and even length palindromes by expanding around potential centers and tracking the longest palindrome found.
-:::
+```
+
 
 
 ### Refining Pseudocode
@@ -207,15 +213,22 @@ This pseudocode implements the approach we discussed, checking both odd and even
 Once you have initial pseudocode, use AI to help refine it by asking targeted questions:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 This pseudocode looks good. Two questions:
 
 1. Should we check for even-length palindromes between the last character and out of bounds?
 2. Is there any way to optimise this further, perhaps by avoiding redundant checks?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Great questions! Let me address both:
 
 1. Regarding even-length palindromes at the end of the string:
@@ -224,7 +237,6 @@ Great questions! Let me address both:
    
    This isn't harmful, but we could optimise by changing the loop for even-length palindromes to stop at length-2:
    
-   ```
    // Odd length palindromes
    FOR i = 0 TO length of string - 1
        expandAroundCenter(i, i)
@@ -234,11 +246,9 @@ Great questions! Let me address both:
    FOR i = 0 TO length of string - 2
        expandAroundCenter(i, i + 1)
    END FOR
-   ```
    
    Or keep the single loop but add a condition:
    
-   ```
    FOR i = 0 TO length of string - 1
        // Odd length
        expandAroundCenter(i, i)
@@ -248,7 +258,6 @@ Great questions! Let me address both:
            expandAroundCenter(i, i + 1)
        END IF
    END FOR
-   ```
 
 2. Regarding further optimisation:
    
@@ -262,7 +271,6 @@ Great questions! Let me address both:
    
    Here's an optimisation for the early termination case:
    
-   ```
    FOR i = 0 TO length of string - 1
        // Only check centers with enough characters on both sides to beat maxLength
        remainingChars = MIN(i, length of string - i - 1)
@@ -276,10 +284,10 @@ Great questions! Let me address both:
            expandAroundCenter(i, i + 1)
        END IF
    END FOR
-   ```
    
    However, these optimisations add complexity. For most practical cases, the original pseudocode is clear and efficient enough.
-:::
+```
+
 
 
 ### Comparing Alternative Approaches
@@ -287,19 +295,25 @@ Great questions! Let me address both:
 AI can help explore different algorithmic approaches to the same problem:
 
 
-::: {.callout-note icon=false title="You"}
+
+**You:**
+
+```text
 Are there fundamentally different approaches to finding the longest palindromic substring besides the center-expansion method we've been discussing?
-:::
+```
 
 
-::: {.callout-note icon=false title="AI"}
+
+
+**AI:**
+
+```text
 Yes, there are several fundamentally different approaches to finding the longest palindromic substring:
 
 1. **Dynamic Programming Approach**
    
    Instead of expanding from centers, we can use a bottom-up DP approach:
    
-   ```
    FUNCTION findLongestPalindrome_DP(string)
        SET n = length of string
        
@@ -341,7 +355,6 @@ Yes, there are several fundamentally different approaches to finding the longest
        
        RETURN substring of string from start to start + maxLength - 1
    END FUNCTION
-   ```
    
    This uses O(n²) space and time, similar to the center expansion approach in time complexity but using more memory.
 
@@ -349,7 +362,6 @@ Yes, there are several fundamentally different approaches to finding the longest
    
    This is an optimised approach that runs in O(n) time:
    
-   ```
    FUNCTION manachers_algorithm(string)
        // Transform string to handle even-length palindromes
        // For example, "babad" becomes "^#b#a#b#a#d#$"
@@ -399,7 +411,6 @@ Yes, there are several fundamentally different approaches to finding the longest
        SET start = (center_index - max_len) / 2
        RETURN substring of string from start to start + max_len
    END FUNCTION
-   ```
    
    This algorithm is significantly more complex but offers linear time complexity.
 
@@ -410,7 +421,8 @@ Yes, there are several fundamentally different approaches to finding the longest
    This is even more complex to implement but can be useful when solving multiple related string problems.
 
 The center expansion approach remains the most intuitive and offers a good balance of simplicity and efficiency for most practical applications.
-:::
+```
+
 
 
 ## From Pseudocode to Implementation Plan
