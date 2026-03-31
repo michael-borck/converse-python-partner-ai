@@ -168,7 +168,7 @@ A key challenge when using AI with large codebases is providing sufficient conte
 
 **Example prompt for hierarchical exploration:**
 
-```
+```text
 I'm working on a large e-commerce platform. Let me first describe the high-level architecture:
 
 [High-level description of system components and their interactions]
@@ -217,7 +217,7 @@ For complex tasks, break down your prompts into modular components:
 
 **Example of modular prompting:**
 
-```
+```text
 CONTEXT:
 I'm working on an analytics dashboard for our e-commerce platform. The dashboard uses React on the frontend with a Node.js/Express backend. We fetch data from multiple microservices and aggregate it for display.
 

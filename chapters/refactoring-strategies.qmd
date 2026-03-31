@@ -20,10 +20,9 @@ Refactoring is most valuable in specific situations:
 AI assistants excel at identifying these opportunities, especially when prompted to look for specific issues.
 
 **Example prompt:**
-```
+```text
 Here's a section of our codebase that's becoming difficult to maintain:
 
-```python
 def process_customer_data(customer):
     # Calculate base price
     if customer.tier == 'premium':
@@ -61,7 +60,6 @@ def process_customer_data(customer):
     }
     
     return result
-```
 
 Can you identify refactoring opportunities in this code? What code smells do you notice?
 ```
@@ -71,7 +69,7 @@ Can you identify refactoring opportunities in this code? What code smells do you
 Refactoring is sometimes seen as unnecessary by non-technical stakeholders. AI can help articulate the business value:
 
 **Example prompt:**
-```
+```text
 I need to make a case to my manager for refactoring our payment processing module. 
 The current code works, but it's difficult to maintain and extend.
 
@@ -86,11 +84,10 @@ What specific metrics or outcomes should I highlight?
 AI can analyse code to identify specific improvement opportunities:
 
 **Example prompt:**
-```
+```text
 Could you analyse this function and suggest potential refactoring improvements? 
 Focus on maintainability, readability, and adherence to best practices.
 
-```java
 public List<Transaction> getTransactions(String userId, Date startDate, Date endDate, 
                                         String category, String merchantName, 
                                         Double minAmount, Double maxAmount, 
@@ -146,14 +143,13 @@ public List<Transaction> getTransactions(String userId, Date startDate, Date end
     return results;
 }
 ```
-```
 
 ### Suggesting Improved Designs
 
 AI can propose architectural improvements:
 
 **Example prompt:**
-```
+```text
 I have a monolithic class that handles user authentication, profile management, and notification preferences. It's become unwieldy at 500+ lines.
 
 Based on the SOLID principles, how should I refactor this into more focused classes? What would the new class structure look like?
@@ -164,10 +160,9 @@ Based on the SOLID principles, how should I refactor this into more focused clas
 AI can implement common refactoring patterns:
 
 **Example prompt:**
-```
+```text
 I'd like to apply the "Extract Method" refactoring to this code:
 
-```javascript
 function calculateTotalPrice(items, customer) {
   let subtotal = 0;
   for (const item of items) {
@@ -196,7 +191,6 @@ function calculateTotalPrice(items, customer) {
   
   return subtotal + tax + shipping;
 }
-```
 
 Please extract methods for calculating the subtotal, tax, and shipping.
 ```
@@ -208,7 +202,7 @@ Refactoring should produce measurable improvements. AI can help identify metrics
 ### Quantitative Metrics
 
 **Example prompt:**
-```
+```text
 I'm planning to refactor our API request handling code. What quantitative metrics should I measure before and after refactoring to demonstrate the impact?
 ```
 
@@ -223,7 +217,7 @@ AI might suggest:
 ### Qualitative Assessment
 
 **Example prompt:**
-```
+```text
 Beyond quantitative metrics, what qualitative factors should I consider when evaluating the success of my refactoring efforts?
 ```
 
@@ -242,15 +236,13 @@ One of the most critical aspects of refactoring is preserving existing behaviour
 ### Test-Driven Refactoring
 
 **Example prompt:**
-```
+```text
 I want to refactor this payment processing function, but I need to ensure I don't break existing functionality. What testing approach would you recommend?
 
 Here's the current function:
 
-```python
 def process_payment(order_id, card_details, amount):
     # Implementation details...
-```
 
 What types of tests should I write before refactoring, and how should I structure the refactoring process to minimise risk?
 ```
@@ -258,7 +250,7 @@ What types of tests should I write before refactoring, and how should I structur
 ### Incremental Refactoring Approaches
 
 **Example prompt:**
-```
+```text
 I need to refactor a large legacy class (800+ lines) that handles multiple responsibilities. What's the most effective step-by-step approach to break this down safely?
 ```
 

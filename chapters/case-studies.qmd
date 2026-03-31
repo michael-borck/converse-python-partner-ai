@@ -853,7 +853,7 @@ The key components you'll need to develop are:
 
 
 **Human follow-up prompt (clarification):**
-```
+```text
 That's helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.
 ```
 
@@ -1014,7 +1014,7 @@ function get_location_from_user():
 ```
 
 **Follow-up prompt (challenge):**
-```
+```text
 The pseudocode looks good overall. I noticed that error handling isn't explicitly included. Could you expand the pseudocode to include error handling for:
 
 1. Invalid location input

@@ -45,14 +45,14 @@ Consider the difference:
 
 **Unintentional prompting:**
 
-```
+```text
 "Write a function to validate email addresses"
 [Accept output, move on]
 ```
 
 **Intentional prompting:**
 
-```
+```text
 "I need to validate email addresses. Before we write code,
 what makes an email address valid? What edge cases should we consider?"
 

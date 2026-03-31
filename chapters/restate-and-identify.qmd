@@ -292,7 +292,7 @@ Let's apply Steps 1 and 2 to a sample problem:
 - "The function should raise appropriate errors for invalid inputs"
 
 **AI Verification Prompt:**
-```
+```text
 I'm working on a function that converts dates between different formats.
 
 I've restated it as:
@@ -340,7 +340,7 @@ These considerations can greatly affect the scope and complexity of your functio
 - `convert_date("invalid", "%Y-%m-%d", "%m/%d/%Y")` → `ValueError("Unable to parse date")`
 
 **Edge Case Exploration Prompt:**
-```
+```text
 What edge cases should I consider for a date format conversion function with these inputs?
 - date_str: A string representing a date
 - source_format: The format of the input date

@@ -202,7 +202,7 @@ When working with AI coding assistants, certain patterns of challenges tend to e
 #### Problematic Approach
 
 **Initial prompt:**
-```
+```text
 Fix this sorting algorithm, it's not working correctly.
 
 [code snippet]
@@ -216,7 +216,7 @@ Fix this sorting algorithm, it's not working correctly.
 #### Improved Approach
 
 **Better prompt:**
-```
+```text
 I'm debugging this merge sort implementation that fails when the input contains duplicate values.
 
 [code snippet]
@@ -240,7 +240,7 @@ Can you help identify the bug and explain how to fix it?
 #### Problematic Approach
 
 **Initial prompt:**
-```
+```text
 Write a user authentication system for my web app.
 ```
 
@@ -253,7 +253,7 @@ Write a user authentication system for my web app.
 #### Improved Approach
 
 **Better prompt:**
-```
+```text
 I need to implement user authentication for a React/Node.js web application.
 
 Requirements:
@@ -264,13 +264,11 @@ Requirements:
 - Integration with existing MongoDB user collection
 
 Current user schema:
-```json
 {
   "email": String,
   "name": String,
   "created_at": Date
 }
-```
 
 I'd like to:
 1. Update the user schema to support authentication

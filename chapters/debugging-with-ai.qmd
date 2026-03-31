@@ -16,16 +16,14 @@ AI assistants can:
 - Suggest corrections based on context
 
 **Example prompt:**
-```
+```text
 I'm getting this syntax error in my Python code:
 
-```python
 def calculate_total(items):
     total = 0
     for item in items
         total += item.price
     return total
-```
 
 SyntaxError: invalid syntax
 
@@ -42,10 +40,9 @@ AI assistants can:
 - Suggest alternative approaches
 
 **Example prompt:**
-```
+```text
 My binary search function seems to work for some cases but fails for others:
 
-```python
 def binary_search(arr, target):
     left = 0
     right = len(arr) - 1
@@ -61,7 +58,6 @@ def binary_search(arr, target):
             right = mid - 1
     
     return -1
-```
 
 It correctly finds 5 in [1, 3, 5, 7, 9], but when I search for 7 in [1, 3, 5, 7, 9], it returns -1 instead of 3. Can you help me find the bug?
 ```
@@ -76,20 +72,18 @@ AI assistants can:
 - Suggest defensive programming techniques to prevent crashes
 
 **Example prompt:**
-```
+```text
 My code is throwing the following exception:
 
 IndexError: list index out of range
 
 Here's the relevant function:
 
-```python
 def process_data(data_list):
     result = []
     for i in range(len(data_list)):
         result.append(data_list[i] + data_list[i+1])
     return result
-```
 
 It crashes when I call it with process_data([1, 2, 3, 4]). Why is this happening and how can I fix it?
 ```
@@ -104,10 +98,9 @@ AI assistants can:
 - Recommend more efficient data structures or libraries
 
 **Example prompt:**
-```
+```text
 My function to find duplicate values in a list becomes extremely slow with large inputs:
 
-```python
 def find_duplicates(values):
     duplicates = []
     for i in range(len(values)):
@@ -115,7 +108,6 @@ def find_duplicates(values):
             if values[i] == values[j] and values[i] not in duplicates:
                 duplicates.append(values[i])
     return duplicates
-```
 
 How can I optimise this to handle lists with thousands of items efficiently?
 ```
@@ -284,7 +276,7 @@ When sharing error messages with AI, include:
 5. The context surrounding the error
 
 **Example prompt:**
-```
+```text
 I'm getting this error message, but I don't understand what it means:
 
 TypeError: cannot unpack non-iterable int object
@@ -306,7 +298,7 @@ Can you explain what this error means and how to fix it?
 AI can help identify patterns in errors that might indicate systemic issues:
 
 **Example prompt:**
-```
+```text
 I keep getting different errors in different parts of my codebase, but they all seem related to type mismatches. Here are three recent examples:
 
 [Error 1 details]
@@ -323,10 +315,9 @@ Is there a common root cause that might explain all of these errors? Should I be
 Rubber duck debugging involves explaining your code line by line, which often helps you spot the issue yourself. AI can serve as an advanced "rubber duck" that can also respond with insights.
 
 **Example prompt:**
-```
+```text
 I'm going to walk through this function line by line to try to understand why it's not working. Please let me know if you spot any issues in my explanation:
 
-```python
 def merge_sorted_lists(list1, list2):
     result = []
     i = j = 0
@@ -347,7 +338,6 @@ def merge_sorted_lists(list1, list2):
     result.extend(list2)
     
     return result
-```
 
 When I call this with [1, 3, 5] and [2, 4, 6], I expect [1, 2, 3, 4, 5, 6] but get [1, 2, 3, 4, 5, 6, 3, 5, 2, 4, 6]. What am I missing?
 ```
@@ -357,16 +347,14 @@ When I call this with [1, 3, 5] and [2, 4, 6], I expect [1, 2, 3, 4, 5, 6] but g
 Print debugging involves adding print statements to track variable values. AI can suggest strategic places to add these statements.
 
 **Example prompt:**
-```
+```text
 I suspect my recursive function is not terminating correctly. Where should I add print statements to debug it effectively?
 
-```python
 def factorial(n):
     if n <= 1:
         return 1
     else:
         return n * factorial(n-1)
-```
 
 It works for small inputs but crashes with large ones.
 ```
@@ -376,14 +364,13 @@ It works for small inputs but crashes with large ones.
 AI can help trace errors back to their root causes:
 
 **Example prompt:**
-```
+```text
 My web application is throwing this error:
 
 DatabaseError: too many database connections
 
 This happens sporadically, usually during peak usage hours. The database connection code looks like this:
 
-```python
 def get_db_connection():
     return psycopg2.connect(DATABASE_URL)
 
@@ -392,7 +379,6 @@ def fetch_user_data(user_id):
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
     return cursor.fetchone()
-```
 
 What could be the root cause, and how can I fix it?
 ```
@@ -424,7 +410,7 @@ This code contains several issues:
 3. Using string length for division will give incorrect results
 
 **Effective Debugging Prompt:**
-```
+```text
 Your code stores scores as strings. Can you fix it so each student has a list of numbers instead?
 ```
 
@@ -447,7 +433,7 @@ for name in students:
 The code now works but has a critical flaw: it assumes each student has exactly 3 scores.
 
 **Follow-up Debugging Prompt:**
-```
+```text
 Can you make a function to calculate the average of any list of scores, instead of assuming 3?
 ```
 
@@ -499,7 +485,7 @@ What's the best approach for validating email addresses, considering these requi
 This occurs when you attribute a bug to something that happened around the same time, but isn't actually the cause.
 
 **Example:**
-```
+```text
 After adding a new CSS file to my project, my JavaScript form validation stopped working. 
 Here's the new CSS I added:
 
@@ -532,10 +518,9 @@ Let's examine your JavaScript for the actual issue...
 This occurs when you fix the symptoms of a bug rather than the underlying cause. AI can help identify deeper issues.
 
 **Example prompt:**
-```
+```text
 My function sometimes returns NaN, so I added a check to return 0 instead when that happens:
 
-```javascript
 function calculateAverage(numbers) {
   let sum = 0;
   for (let i = 0; i < numbers.length; i++) {
@@ -550,7 +535,6 @@ function calculateAverage(numbers) {
   
   return average;
 }
-```
 
 This fixes the immediate problem, but is there a better approach?
 ```
