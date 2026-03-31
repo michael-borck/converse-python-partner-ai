@@ -52,6 +52,24 @@ The book is divided into five parts:
 
 Each chapter includes practical examples, exercises, and reflections to help you apply these concepts in your own work.
 
+## Conventions Used in This Book
+
+Throughout the book, AI conversations appear as grey monospace blocks labelled You: (what you type into the AI) and AI: (what comes back). These look like what you would see on screen — plain text, no formatting.
+
+You:
+
+AI:
+
+Narrative text between conversations provides commentary — explaining why the prompt was structured that way, what to notice in the response, and what principle is being demonstrated.
+
+You will also encounter coloured callout boxes. Each serves a different purpose.
+
+Green boxes offer tips you can apply immediately — prompting strategies, workflow suggestions, things to try.
+
+Blue boxes highlight important ideas worth pausing on — principles of intentional prompting, methodology insights, things to remember.
+
+Yellow boxes flag common mistakes or misconceptions — things that look right but lead to poor results.
+
 ## The Companion Book
 
 This book applies the methodology developed in Conversation, Not Delegation: How to Think With AI, Not Just Use It (Borck, 2025) to software development. That companion book covers the full framework in depth: the Conversation Loop, the VET framework for evaluating AI output, the average-versus-precise decision grid, and the principle of AI Last. If you want the underlying rationale for why the approaches in this book work, or you want to share a discipline-neutral version with non-developer colleagues, start there. Available at https://michael-borck.github.io/conversation-not-delegation.
@@ -1952,9 +1970,13 @@ AI assistants excel at generating code, but using them effectively requires a th
 
 ### Prompting for Implementation
 
-When asking AI to implement code, provide context from previous steps:
+When asking AI to implement code, provide context from previous steps. The key is to give the AI your pseudocode and design decisions so it generates code that matches what you've already reasoned through, not whatever it might invent on its own.
 
 You:
+
+## Bring your pseudocode to the prompt
+
+Notice how the human restated the algorithm's key steps before asking for code. This is Step 5 building directly on Step 4 -- the pseudocode provides constraints that keep the AI's output aligned with the solution you designed, not one the AI might prefer.
 
 AI:
 
@@ -3405,15 +3427,26 @@ The team needs to:
 
 #### Step 1: Restate the Problem
 
+The first move is not to ask for code — it is to prove you understand the problem. By restating requirements in your own words, you invite the AI to catch gaps before any code is written.
+
 You:
 
 AI:
+
+Notice what happened here: the AI surfaced six considerations — data privacy, repeatability, output format — that were not in the original requirements. A one-shot prompt like "build me a data pipeline" would have skipped straight past these. The restatement turned a vague goal into a shared understanding.
+
+## The restatement is a filter, not a formality
+If the AI's response to your restatement surprises you, that is the methodology working. Better to discover missing requirements now than after you have written 200 lines of code.
 
 #### Step 2: Identify Input and Output
 
+With the problem understood, the next step is to nail down exactly what goes in and what comes out. Vague specifications produce vague code — precise ones give the AI concrete targets.
+
 You:
 
 AI:
+
+The AI pushed back on an ambiguity that could have produced the wrong analysis entirely: does "product combinations" mean items in the same basket, or items the same customer buys over time? That single clarification question could save hours of rework.
 
 #### Step 3: Work by Hand
 
@@ -3443,13 +3476,18 @@ Counting frequencies:
 
 Most frequent combinations: ("dairy", "produce") and ("groceries", "dairy")
 
+Now the human shares the results of working through the problem by hand. This is the step most people skip — and the one that matters most. By showing the AI your manual process, you give it concrete evidence of what you expect the code to do.
+
 You:
 
 AI:
 
+## Each step builds on the previous — the AI has context from earlier exchanges
+By Step 3, the AI knows the data schema, the desired outputs, and the manual process. When it suggests association metrics like support, confidence, and lift, it is making a recommendation informed by three rounds of shared context — not guessing in a vacuum.
+
 #### Step 4: Write Pseudocode
 
-Based on the manual exploration, we can now outline the solution in pseudocode.
+Based on the manual exploration, we can now outline the solution in pseudocode. The goal here is to capture the logic — the structure and flow — without getting tangled in syntax or library details.
 
 You:
 
@@ -3544,9 +3582,14 @@ FUNCTION main(input_file, output_dir):
 
 AI:
 
+The human is not just accepting the first answer — they are pushing for specifics by sharing detailed pseudocode and asking "are there inefficiencies?" This kind of directed follow-up consistently produces better results than passively accepting whatever the AI offers.
+
+## This is the six-step methodology in action
+The thinking happened in Steps 1-4, so Step 5 is informed delegation. When the human asks for Python code next, the AI already knows the data schema, the algorithm choice, the chunking strategy, and the error-handling requirements. Compare this with a one-shot prompt — the quality difference comes from the structured conversation.
+
 #### Step 5: Convert to Code
 
-Now let's implement the solution in Python, focusing on the product combination analysis.
+Now let's implement the solution in Python, focusing on the product combination analysis. Because the pseudocode already captures the design, this step becomes a translation exercise rather than a design exercise.
 
 You:
 
@@ -4116,6 +4159,9 @@ Are there other information sources or outputs we should consider to effectively
 
 The debugging case study would continue through a systematic investigation process, demonstrating how intentional prompting techniques help narrow down the cause of complex bugs.
 
+## The methodology adapts to the problem type
+Notice how the six steps flex to fit debugging: "restate the problem" becomes "describe what you know about the failure," "identify inputs/outputs" becomes "identify information sources," and "work by hand" becomes "trace the failure path manually." The structure is consistent; the application is flexible.
+
 ## Key Takeaways
 
 From these case studies, we can extract several important lessons about intentional prompting:
@@ -4166,11 +4212,18 @@ These challenges require adaptations to our intentional prompting approach.
 
 ### Intentional Architecture Design
 
-For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process:
+For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process.
+
+The following prompt demonstrates a key scaling skill: asking the AI to help you think through a design before you build it. Notice how the prompt lists the functional areas upfront — this gives the AI enough context to reason about boundaries and trade-offs.
 
 You:
 
 AI:
+
+The AI produced a solid starting point, but that's exactly what it is — a starting point. The real value here isn't the specific service breakdown (which is fairly standard for e-commerce). It's the framework of considerations — data ownership, consistency models, interaction patterns — that you now need to evaluate against your specific constraints.
+
+## Architecture Is a Human Decision
+AI can generate sensible default architectures, and it's good at enumerating trade-offs. But the choices between those trade-offs — synchronous vs. asynchronous, strong vs. eventual consistency, separate auth service vs. embedded — depend on your team size, deployment constraints, and business priorities. Use the AI's output as a checklist of things to decide, not as decisions already made.
 
 ### Component-Level Intentional Prompting
 
@@ -4202,9 +4255,14 @@ Example prompt for hierarchical exploration:
 
 ### Maintaining Consistency
 
-In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards:
+In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards.
+
+This next prompt shows a technique that becomes essential at scale: teaching the AI your team's patterns by example. Rather than hoping the AI guesses your conventions, you explicitly provide a reference implementation and ask it to follow the same shape.
 
 You:
+
+## Show, Don't Just Tell
+Listing your coding standards is helpful. Including an example that demonstrates those standards is far more effective. AI models learn patterns from examples much more reliably than from abstract descriptions. When you include `[Example controller code]`, you're giving the AI a concrete template to follow rather than a set of rules to interpret.
 
 ### Modular Prompting Strategies
 
@@ -4221,7 +4279,9 @@ Example of modular prompting:
 
 ### Designing for Evolution
 
-Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind:
+Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind.
+
+The next prompt illustrates a powerful technique: telling the AI not just what you need now, but what you anticipate needing later. This shifts the conversation from "build me a thing" to "help me design a thing that can grow."
 
 You:
 

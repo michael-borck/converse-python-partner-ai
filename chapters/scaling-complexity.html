@@ -572,7 +572,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="intentional-architecture-design" class="level3" data-number="15.1.2">
 <h3 data-number="15.1.2" class="anchored" data-anchor-id="intentional-architecture-design"><span class="header-section-number">15.1.2</span> Intentional Architecture Design</h3>
-<p>For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process:</p>
+<p>For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process.</p>
+<p>The following prompt demonstrates a key scaling skill: asking the AI to help you <em>think through</em> a design before you build it. Notice how the prompt lists the functional areas upfront — this gives the AI enough context to reason about boundaries and trade-offs.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I'm designing a microservices architecture for an e-commerce platform. The main functions include:
 - Product catalogue
@@ -676,6 +677,20 @@ What would be a sensible way to divide these into microservices? What are the ke
 - **Search Service**: For complex search functionality across multiple domains, consider a dedicated service using specialised search technology.
 
 This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.</code></pre>
+<p>The AI produced a solid starting point, but that’s exactly what it is — a starting point. The real value here isn’t the specific service breakdown (which is fairly standard for e-commerce). It’s the framework of <em>considerations</em> — data ownership, consistency models, interaction patterns — that you now need to evaluate against your specific constraints.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Architecture Is a Human Decision
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>AI can generate sensible default architectures, and it’s good at enumerating trade-offs. But the choices between those trade-offs — synchronous vs.&nbsp;asynchronous, strong vs.&nbsp;eventual consistency, separate auth service vs.&nbsp;embedded — depend on your team size, deployment constraints, and business priorities. Use the AI’s output as a checklist of things to decide, not as decisions already made.</p>
+</div>
+</div>
 </section>
 <section id="component-level-intentional-prompting" class="level3" data-number="15.1.3">
 <h3 data-number="15.1.3" class="anchored" data-anchor-id="component-level-intentional-prompting"><span class="header-section-number">15.1.3</span> Component-Level Intentional Prompting</h3>
@@ -716,7 +731,8 @@ Based on this architectural context, what are the key considerations I should ke
 </section>
 <section id="maintaining-consistency" class="level3" data-number="15.2.2">
 <h3 data-number="15.2.2" class="anchored" data-anchor-id="maintaining-consistency"><span class="header-section-number">15.2.2</span> Maintaining Consistency</h3>
-<p>In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards:</p>
+<p>In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards.</p>
+<p>This next prompt shows a technique that becomes essential at scale: <em>teaching the AI your team’s patterns by example</em>. Rather than hoping the AI guesses your conventions, you explicitly provide a reference implementation and ask it to follow the same shape.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Our team has established these coding standards for our Java backend services:
 
@@ -731,6 +747,19 @@ Here's an example of a controller that follows our standards:
 [Example controller code]
 
 I need to create a new endpoint for managing product bundles. Can you help me implement this following our established patterns?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Show, Don’t Just Tell
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Listing your coding standards is helpful. Including an example that <em>demonstrates</em> those standards is far more effective. AI models learn patterns from examples much more reliably than from abstract descriptions. When you include <code>[Example controller code]</code>, you’re giving the AI a concrete template to follow rather than a set of rules to interpret.</p>
+</div>
+</div>
 </section>
 <section id="modular-prompting-strategies" class="level3" data-number="15.2.3">
 <h3 data-number="15.2.3" class="anchored" data-anchor-id="modular-prompting-strategies"><span class="header-section-number">15.2.3</span> Modular Prompting Strategies</h3>
@@ -765,7 +794,8 @@ Please provide:
 <h2 data-number="15.3" class="anchored" data-anchor-id="intentional-system-design-with-prompting"><span class="header-section-number">15.3</span> Intentional System Design with Prompting</h2>
 <section id="designing-for-evolution" class="level3" data-number="15.3.1">
 <h3 data-number="15.3.1" class="anchored" data-anchor-id="designing-for-evolution"><span class="header-section-number">15.3.1</span> Designing for Evolution</h3>
-<p>Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind:</p>
+<p>Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind.</p>
+<p>The next prompt illustrates a powerful technique: telling the AI not just what you need <em>now</em>, but what you anticipate needing <em>later</em>. This shifts the conversation from “build me a thing” to “help me design a thing that can grow.”</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I'm designing a payment processing system that currently needs to support credit cards and PayPal. In the future, we anticipate adding:
 - Additional payment providers
@@ -919,10 +949,25 @@ public class PaymentService {
 3. Design a test framework that can validate new payment methods
 
 By following these patterns and principles, your payment system will be well-positioned to accommodate new payment methods and functionality with minimal changes to the core architecture.</code></pre>
+<p>Look at the structure of the AI’s response: it didn’t just suggest one pattern, it layered multiple complementary patterns (Strategy, Adapter, Provider Model) and then showed how future requirements map onto the design. This is exactly the kind of response you get when your prompt includes future requirements — the AI can reason about extensibility only if you tell it what needs to extend.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Future Requirements Shape Present Design
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you share anticipated future needs in your prompt, the AI can recommend patterns that accommodate growth rather than patterns that merely solve today’s problem. You don’t need to predict the future perfectly — even approximate future requirements lead to significantly more extensible designs.</p>
+</div>
+</div>
 </section>
 <section id="cross-cutting-concerns" class="level3" data-number="15.3.2">
 <h3 data-number="15.3.2" class="anchored" data-anchor-id="cross-cutting-concerns"><span class="header-section-number">15.3.2</span> Cross-Cutting Concerns</h3>
-<p>In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically:</p>
+<p>In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically.</p>
+<p>This prompt demonstrates something important: the human has already identified the problem (inconsistent implementations across services) and the specific areas of concern. They’re not asking the AI to diagnose the issue — they’re asking for a solution strategy. That distinction matters. The more precisely you frame the problem, the more actionable the response.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>In our microservices architecture, we're seeing the same patterns implemented inconsistently across services for:
 - Authentication and authorization
@@ -938,7 +983,8 @@ How can we standardize these cross-cutting concerns across our services while ma
 <h2 data-number="15.4" class="anchored" data-anchor-id="documentation-and-knowledge-transfer"><span class="header-section-number">15.4</span> Documentation and Knowledge Transfer</h2>
 <section id="intentional-system-documentation" class="level3" data-number="15.4.1">
 <h3 data-number="15.4.1" class="anchored" data-anchor-id="intentional-system-documentation"><span class="header-section-number">15.4.1</span> Intentional System Documentation</h3>
-<p>Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation:</p>
+<p>Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation.</p>
+<p>Here’s a case where delegation to the AI is entirely appropriate. Documentation structure is largely a solved problem — there are well-known best practices for API docs, and the AI has seen thousands of examples. The human’s job is providing the specifics of <em>what</em> was built; the AI’s job is organising that information into a structure other developers can navigate.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I've implemented a new authentication service with the following components:
 - OAuth2 provider integration
@@ -1124,10 +1170,12 @@ Here's a comprehensive documentation structure for your authentication service t
 8. **Include a changelog** tracking major documentation updates
 
 This structure provides a comprehensive yet navigable documentation set that addresses the needs of different audiences - from developers getting started to those troubleshooting specific issues.</code></pre>
+<p>The AI generated a thorough documentation outline, but notice what it <em>can’t</em> do: fill in the actual content. The structure is the easy part. The hard work — writing accurate quick-start guides, documenting real error scenarios, creating useful sequence diagrams — still requires someone who understands the system. Use this kind of output as a scaffold, not as finished documentation.</p>
 </section>
 <section id="ai-enhanced-code-documentation" class="level3" data-number="15.4.2">
 <h3 data-number="15.4.2" class="anchored" data-anchor-id="ai-enhanced-code-documentation"><span class="header-section-number">15.4.2</span> AI-Enhanced Code Documentation</h3>
-<p>AI can also help create and maintain code-level documentation:</p>
+<p>AI can also help create and maintain code-level documentation.</p>
+<p>This next exchange shows one of AI’s genuine strengths: reading complex code and producing clear documentation for it. The human provides real code with multiple interacting services, error handling branches, and compensating transactions. Writing good documentation for code like this is tedious but important — exactly the kind of task where AI saves real time.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Here's a complex piece of code from our order processing system:
 
@@ -1232,7 +1280,8 @@ Can you provide comprehensive JavaDoc documentation for this class and the proce
 <h2 data-number="15.5" class="anchored" data-anchor-id="knowledge-distribution-in-teams"><span class="header-section-number">15.5</span> Knowledge Distribution in Teams</h2>
 <section id="collaborative-learning-patterns" class="level3" data-number="15.5.1">
 <h3 data-number="15.5.1" class="anchored" data-anchor-id="collaborative-learning-patterns"><span class="header-section-number">15.5.1</span> Collaborative Learning Patterns</h3>
-<p>Intentional prompting in team settings requires effective knowledge sharing patterns:</p>
+<p>Intentional prompting in team settings requires effective knowledge sharing patterns.</p>
+<p>The following prompt tackles an organisational problem rather than a technical one. This is worth highlighting: AI can be a useful thinking partner for process and team challenges, not just code. The key to making it work is being specific about your situation — team size, the symptom you’re seeing, and what you’re trying to achieve.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Our development team of 12 engineers is working on a complex system with multiple components. We're finding that knowledge is becoming siloed, with each developer understanding only their area deeply.
 
@@ -1334,10 +1383,24 @@ Rather than implementing all these patterns at once:
 4. **Create explicit time allocations** for knowledge sharing activities
 
 These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>AI as Brainstorming Partner, Not Decision-Maker
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The AI generated twelve different knowledge-sharing practices. No team should implement all twelve at once — that would be overwhelming. The value is in having a comprehensive menu to choose from. Your job as the human is to pick the 2-3 practices that fit your team’s culture and current pain points, then evaluate whether they’re working before adding more.</p>
+</div>
+</div>
 </section>
 <section id="documentation-as-code" class="level3" data-number="15.5.2">
 <h3 data-number="15.5.2" class="anchored" data-anchor-id="documentation-as-code"><span class="header-section-number">15.5.2</span> Documentation as Code</h3>
-<p>Treat documentation as a first-class development artifact:</p>
+<p>Treat documentation as a first-class development artifact.</p>
+<p>This prompt is a good example of providing constraints that guide the response. By specifying the three requirements (lives alongside code, reviewed with changes, automatically published), the human narrows the AI’s response from general documentation advice to specific tooling and workflow recommendations.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>We want to implement a "documentation as code" approach for our microservices architecture. This would mean:
 - Documentation lives alongside code in the repository
@@ -1352,6 +1415,20 @@ What tools, practices, and workflows would you recommend for implementing this a
 <p>Let’s apply these principles to a practical exercise scaling a simple application to a more complex system.</p>
 <section id="initial-simple-application" class="level3" data-number="15.6.1">
 <h3 data-number="15.6.1" class="anchored" data-anchor-id="initial-simple-application"><span class="header-section-number">15.6.1</span> Initial Simple Application</h3>
+<p>This exercise brings together the chapter’s themes. Notice how the prompt establishes where you are (a simple app with three components) and where you need to go (an enterprise platform with five new capabilities). This “from X to Y” framing gives the AI a clear picture of the gap it needs to help bridge.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Describe the Gap, Not Just the Goal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When scaling an existing system, always tell the AI what you have <em>now</em> alongside what you need. An AI designing a collaboration platform from scratch will give different advice than one helping you evolve a note-taking app into one. The starting point shapes which changes are incremental and which require rethinking the architecture.</p>
+</div>
+</div>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I have a simple note-taking application with these components:
 - A React frontend for creating and viewing notes

@@ -604,6 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="14.1.2" class="anchored" data-anchor-id="the-intentional-prompting-approach"><span class="header-section-number">14.1.2</span> The Intentional Prompting Approach</h3>
 <section id="step-1-restate-the-problem" class="level4" data-number="14.1.2.1">
 <h4 data-number="14.1.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem"><span class="header-section-number">14.1.2.1</span> Step 1: Restate the Problem</h4>
+<p>The first move is not to ask for code — it is to prove you understand the problem. By restating requirements in your own words, you invite the AI to catch gaps before any code is written.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I need to build a data analysis pipeline to process customer transaction data. Let me restate the problem:
 
@@ -632,9 +633,24 @@ Is this understanding correct, and are there any important aspects I've missed?<
 6. **Data quality assessment**: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results.
 
 With these considerations in mind, your restatement effectively captures the core of the problem.</code></pre>
+<p>Notice what happened here: the AI surfaced six considerations — data privacy, repeatability, output format — that were not in the original requirements. A one-shot prompt like “build me a data pipeline” would have skipped straight past these. The restatement turned a vague goal into a shared understanding.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>The restatement is a filter, not a formality
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the AI’s response to your restatement surprises you, that is the methodology working. Better to discover missing requirements now than after you have written 200 lines of code.</p>
+</div>
+</div>
 </section>
 <section id="step-2-identify-input-and-output" class="level4" data-number="14.1.2.2">
 <h4 data-number="14.1.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output"><span class="header-section-number">14.1.2.2</span> Step 2: Identify Input and Output</h4>
+<p>With the problem understood, the next step is to nail down exactly what goes in and what comes out. Vague specifications produce vague code — precise ones give the AI concrete targets.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Let me define the specific inputs and outputs for this pipeline:
 
@@ -685,6 +701,7 @@ Do these specifications adequately cover what's needed for the pipeline?</code><
 5. **Visualisation formats**: Specify the file formats for visualisations (PNG, PDF, interactive HTML, etc.)
 
 Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.</code></pre>
+<p>The AI pushed back on an ambiguity that could have produced the wrong analysis entirely: does “product combinations” mean items in the same basket, or items the same customer buys over time? That single clarification question could save hours of rework.</p>
 </section>
 <section id="step-3-work-by-hand" class="level4" data-number="14.1.2.3">
 <h4 data-number="14.1.2.3" class="anchored" data-anchor-id="step-3-work-by-hand"><span class="header-section-number">14.1.2.3</span> Step 3: Work by Hand</h4>
@@ -708,6 +725,7 @@ T1005,C2,2023-01-20,"groceries,dairy,bakery",
 <p>…and so on for all transactions.</p>
 <p>Counting frequencies: - (“dairy”, “produce”): 2 - (“groceries”, “dairy”): 2 - All others: 1</p>
 <p>Most frequent combinations: (“dairy”, “produce”) and (“groceries”, “dairy”)</p>
+<p>Now the human shares the results of working through the problem by hand. This is the step most people skip — and the one that matters most. By showing the AI your manual process, you give it concrete evidence of what you expect the code to do.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I've worked through a small sample of the data manually to understand the process of finding product combinations. Here's what I did:
 
@@ -741,10 +759,23 @@ This approach works for pairs, but for larger combinations, we might need associ
 5. **Time-based analysis**: You might want to see if popular combinations change over time (seasonal patterns, etc.)
 
 Your manual process demonstrates a good understanding of the approach. For implementation at scale, you'll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Each step builds on the previous — the AI has context from earlier exchanges
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By Step 3, the AI knows the data schema, the desired outputs, and the manual process. When it suggests association metrics like support, confidence, and lift, it is making a recommendation informed by three rounds of shared context — not guessing in a vacuum.</p>
+</div>
+</div>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="14.1.2.4">
 <h4 data-number="14.1.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">14.1.2.4</span> Step 4: Write Pseudocode</h4>
-<p>Based on the manual exploration, we can now outline the solution in pseudocode.</p>
+<p>Based on the manual exploration, we can now outline the solution in pseudocode. The goal here is to capture the logic — the structure and flow — without getting tangled in syntax or library details.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Based on my manual exploration, let me write pseudocode for the data analysis pipeline:</code></pre>
 <p>FUNCTION clean_data(input_file): data = READ_CSV(input_file)</p>
@@ -883,10 +914,24 @@ FUNCTION clean_data(input_file):
         # ...process chunk...
 
 These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</code></pre>
+<p>The human is not just accepting the first answer — they are pushing for specifics by sharing detailed pseudocode and asking “are there inefficiencies?” This kind of directed follow-up consistently produces better results than passively accepting whatever the AI offers.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>This is the six-step methodology in action
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The thinking happened in Steps 1-4, so Step 5 is informed delegation. When the human asks for Python code next, the AI already knows the data schema, the algorithm choice, the chunking strategy, and the error-handling requirements. Compare this with a one-shot prompt — the quality difference comes from the structured conversation.</p>
+</div>
+</div>
 </section>
 <section id="step-5-convert-to-code" class="level4" data-number="14.1.2.5">
 <h4 data-number="14.1.2.5" class="anchored" data-anchor-id="step-5-convert-to-code"><span class="header-section-number">14.1.2.5</span> Step 5: Convert to Code</h4>
-<p>Now let’s implement the solution in Python, focusing on the product combination analysis.</p>
+<p>Now let’s implement the solution in Python, focusing on the product combination analysis. Because the pseudocode already captures the design, this step becomes a translation exercise rather than a design exercise.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Let's convert the pseudocode for finding product combinations into Python code using pandas and mlxtend for the Apriori algorithm:
 
@@ -1072,7 +1117,7 @@ Overall, your implementation is well-designed for the task at hand. These sugges
 </section>
 <section id="step-6-test-with-data" class="level4" data-number="14.1.2.6">
 <h4 data-number="14.1.2.6" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">14.1.2.6</span> Step 6: Test with Data</h4>
-<p>For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset.</p>
+<p>For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset. The human does not wait until the full pipeline is built — they create synthetic test data to validate the core logic first.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Let's test our implementation with a small sample dataset first:
 
@@ -1238,6 +1283,7 @@ def analyze_large_dataset(file_path, output_dir):
     return full_results
 
 Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.</code></pre>
+<p>By the end of six exchanges, the conversation has produced a tested, production-aware implementation — not because the AI was given a single brilliant prompt, but because each step added information the AI could use to give better answers.</p>
 </section>
 </section>
 <section id="lessons-learned" class="level3" data-number="14.1.3">
@@ -1270,6 +1316,7 @@ Your test setup is well-designed. When scaling to millions of rows, implementing
 <h3 data-number="14.2.2" class="anchored" data-anchor-id="the-intentional-prompting-approach-1"><span class="header-section-number">14.2.2</span> The Intentional Prompting Approach</h3>
 <section id="step-1-restate-the-problem-1" class="level4" data-number="14.2.2.1">
 <h4 data-number="14.2.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem-1"><span class="header-section-number">14.2.2.1</span> Step 1: Restate the Problem</h4>
+<p>This case study starts differently from the first — the developer asks the AI to help with the restatement itself, rather than presenting one for review. Both approaches work; the key is that the restatement happens at all.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I need to create a weather dashboard in Python that uses a provided module to access weather data and displays it in a user-friendly interface. Can you help me restate this problem more clearly to ensure I understand all requirements?</code></pre>
 <p><strong>AI:</strong></p>
@@ -1284,11 +1331,13 @@ The key components you'll need to develop are:
 - A display system (likely console-based) to show weather information
 - User interaction components to allow navigation and selection
 - Visualisation elements for presenting weather data graphically</code></pre>
+<p>The developer does not stop at the AI’s restatement. They follow up with a clarification question to fill in their own knowledge gaps before moving forward. This is intentional conversation — using the AI as a thinking partner, not a code generator.</p>
 <p><strong>Human follow-up prompt (clarification):</strong></p>
 <pre class="text"><code>That's helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.</code></pre>
 </section>
 <section id="step-2-identify-input-and-output-requirements" class="level4" data-number="14.2.2.2">
 <h4 data-number="14.2.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output-requirements"><span class="header-section-number">14.2.2.2</span> Step 2: Identify Input and Output Requirements</h4>
+<p>With the problem restated, the developer defines the boundary of the system — what comes in, what goes out.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Based on our discussion, let me identify the specific inputs and outputs for my weather dashboard:
 
@@ -1317,9 +1366,11 @@ Additional outputs to consider:
 - Status indicators for data freshness
 - Historical data comparisons (if available)
 - Weather alerts or warnings</code></pre>
+<p>The AI adds error messages and status indicators to the output list. These are easy to forget during initial design but painful to retrofit later. The methodology catches them early.</p>
 </section>
 <section id="step-3-work-problem-by-hand" class="level4" data-number="14.2.2.3">
 <h4 data-number="14.2.2.3" class="anchored" data-anchor-id="step-3-work-problem-by-hand"><span class="header-section-number">14.2.2.3</span> Step 3: Work Problem by Hand</h4>
+<p>For a UI-focused project, “working by hand” means sketching the user flow rather than processing data manually. The principle is the same: walk through the problem concretely before writing any code.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Before we start coding, I want to sketch out the user interaction flow for the dashboard:
 
@@ -1345,6 +1396,7 @@ Does this flow make sense? Would you structure the user experience differently?<
 </section>
 <section id="step-4-write-pseudocode-1" class="level4" data-number="14.2.2.4">
 <h4 data-number="14.2.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode-1"><span class="header-section-number">14.2.2.4</span> Step 4: Write Pseudocode</h4>
+<p>The developer explicitly requests modular design in the prompt. This kind of architectural direction keeps the AI’s output aligned with your design goals.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Now that we have a clear understanding of the problem and user flow, could you help me write pseudocode for this weather dashboard? I want to focus on creating a modular design with separate functions for data retrieval, display, and user interaction.</code></pre>
 <p><strong>AI:</strong></p>
@@ -1406,6 +1458,19 @@ Does this flow make sense? Would you structure the user experience differently?<
 <span id="cb28-55"><a href="#cb28-55" aria-hidden="true" tabindex="-1"></a>    prompt <span class="cf">for</span> location</span>
 <span id="cb28-56"><a href="#cb28-56" aria-hidden="true" tabindex="-1"></a>    validate location</span>
 <span id="cb28-57"><a href="#cb28-57" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> location</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Challenge the AI’s output — do not just accept it
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The developer spots a gap in the pseudocode and pushes back. This is intentional prompting at work: the human is not a passive recipient of AI output but an active collaborator who catches what the AI missed.</p>
+</div>
+</div>
 <p><strong>Follow-up prompt (challenge):</strong></p>
 <pre class="text"><code>The pseudocode looks good overall. I noticed that error handling isn't explicitly included. Could you expand the pseudocode to include error handling for:
 
@@ -1415,10 +1480,11 @@ Does this flow make sense? Would you structure the user experience differently?<
 </section>
 <section id="step-5-convert-to-python-code" class="level4" data-number="14.2.2.5">
 <h4 data-number="14.2.2.5" class="anchored" data-anchor-id="step-5-convert-to-python-code"><span class="header-section-number">14.2.2.5</span> Step 5: Convert to Python Code</h4>
-<p>The developer starts implementing the solution based on the pseudocode, focusing on modularity, error handling, and user experience.</p>
+<p>The developer starts implementing the solution based on the pseudocode, focusing on modularity, error handling, and user experience. With four steps of context established, the conversion to real code is straightforward.</p>
 </section>
 <section id="step-6-test-with-data-1" class="level4" data-number="14.2.2.6">
 <h4 data-number="14.2.2.6" class="anchored" data-anchor-id="step-6-test-with-data-1"><span class="header-section-number">14.2.2.6</span> Step 6: Test with Data</h4>
+<p>Before testing with a live API, the developer asks for sample data structures. This lets them validate their parsing and display logic without depending on network connectivity or API rate limits.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Now I want to test this code with some sample data. Can you provide a sample data structure that would be returned by:
 
@@ -1481,11 +1547,24 @@ Test cases to consider:
    - Invalid location name
    - Empty input
    - Special characters in location name</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Test cases reveal what you have not thought about
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The AI suggests testing for empty forecast lists, API timeouts, and special characters in location names. These are the kinds of edge cases that cause production failures — and they emerged naturally from a conversation, not from staring at code.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="before-and-after-example-improving-a-key-function" class="level3" data-number="14.2.3">
 <h3 data-number="14.2.3" class="anchored" data-anchor-id="before-and-after-example-improving-a-key-function"><span class="header-section-number">14.2.3</span> Before and After Example: Improving a Key Function</h3>
-<p>One of the critical functions in the application is the data retrieval function. Let’s examine how intentional prompting improved this function:</p>
+<p>One of the critical functions in the application is the data retrieval function. Let’s examine how intentional prompting improved this function.</p>
 <section id="before-initial-data-retrieval-function" class="level4" data-number="14.2.3.1">
 <h4 data-number="14.2.3.1" class="anchored" data-anchor-id="before-initial-data-retrieval-function"><span class="header-section-number">14.2.3.1</span> Before: Initial Data Retrieval Function</h4>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_weather_data(location, units):</span>
@@ -1493,6 +1572,7 @@ Test cases to consider:
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    current_weather <span class="op">=</span> weather_api.get_current(location, units)</span>
 <span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>    forecast <span class="op">=</span> weather_api.get_forecast(location, units, days<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {<span class="st">"current"</span>: current_weather, <span class="st">"forecast"</span>: forecast}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This initial version works for the happy path but silently fails on any error. The developer uses a targeted refinement prompt to improve it.</p>
 </section>
 <section id="refinement-process-prompt" class="level4" data-number="14.2.3.2">
 <h4 data-number="14.2.3.2" class="anchored" data-anchor-id="refinement-process-prompt"><span class="header-section-number">14.2.3.2</span> Refinement Process Prompt</h4>
@@ -1502,6 +1582,7 @@ Test cases to consider:
 2. Validate returned data structure
 3. Handle missing or incomplete data
 4. Provide meaningful error messages to the user</code></pre>
+<p>The result is a function that degrades gracefully — missing fields get defaults, forecast retrieval retries automatically, and every failure produces a meaningful message. This is the difference between code that works in a demo and code that works in production.</p>
 </section>
 <section id="after-improved-data-retrieval-function" class="level4" data-number="14.2.3.3">
 <h4 data-number="14.2.3.3" class="anchored" data-anchor-id="after-improved-data-retrieval-function"><span class="header-section-number">14.2.3.3</span> After: Improved Data Retrieval Function</h4>
@@ -1589,7 +1670,7 @@ Test cases to consider:
 </section>
 <section id="case-study-3-debugging-a-complex-bug" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="case-study-3-debugging-a-complex-bug"><span class="header-section-number">14.3</span> Case Study 3: Debugging a Complex Bug</h2>
-<p>For our final case study, we’ll look at a debugging scenario where intentional prompting techniques help solve a challenging issue.</p>
+<p>For our final case study, we’ll look at a debugging scenario where intentional prompting techniques help solve a challenging issue. Debugging is where many developers abandon methodology and start guessing — this case study shows why the structured approach pays off even when you are under pressure to find a fix.</p>
 <section id="the-problem-2" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="the-problem-2"><span class="header-section-number">14.3.1</span> The Problem</h3>
 <p>A team is experiencing intermittent failures in their e-commerce checkout system. The checkout process occasionally fails with a generic error message, but only for certain users and at seemingly random times.</p>
@@ -1598,6 +1679,7 @@ Test cases to consider:
 <h3 data-number="14.3.2" class="anchored" data-anchor-id="the-intentional-prompting-approach-2"><span class="header-section-number">14.3.2</span> The Intentional Prompting Approach</h3>
 <section id="step-1-restate-the-problem-2" class="level4" data-number="14.3.2.1">
 <h4 data-number="14.3.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem-2"><span class="header-section-number">14.3.2.1</span> Step 1: Restate the Problem</h4>
+<p>The temptation with a bug is to jump straight to “here’s the error, fix it.” Instead, the developer starts by restating what they know and do not know about the failure.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>We're experiencing intermittent failures in our checkout system. Let me restate the problem:
 
@@ -1614,6 +1696,7 @@ Is this an appropriate restatement of the debugging challenge?</code></pre>
 </section>
 <section id="step-2-identify-information-needed" class="level4" data-number="14.3.2.2">
 <h4 data-number="14.3.2.2" class="anchored" data-anchor-id="step-2-identify-information-needed"><span class="header-section-number">14.3.2.2</span> Step 2: Identify Information Needed</h4>
+<p>For debugging, Step 2 shifts from “inputs and outputs of the program” to “what information do we need to diagnose the problem?” The developer treats the investigation itself as a problem to be solved methodically.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>To debug this issue effectively, we need to gather specific information:
 
@@ -1633,6 +1716,19 @@ OUTPUTS (What we need to determine):
 
 Are there other information sources or outputs we should consider to effectively debug this intermittent issue?</code></pre>
 <p>The debugging case study would continue through a systematic investigation process, demonstrating how intentional prompting techniques help narrow down the cause of complex bugs.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The methodology adapts to the problem type
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice how the six steps flex to fit debugging: “restate the problem” becomes “describe what you know about the failure,” “identify inputs/outputs” becomes “identify information sources,” and “work by hand” becomes “trace the failure path manually.” The structure is consistent; the application is flexible.</p>
+</div>
+</div>
 </section>
 </section>
 </section>

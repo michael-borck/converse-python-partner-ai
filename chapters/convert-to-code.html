@@ -692,7 +692,7 @@ END FUNCTION</code></pre>
 <p>AI assistants excel at generating code, but using them effectively requires a thoughtful approach.</p>
 <section id="prompting-for-implementation" class="level3" data-number="9.2.1">
 <h3 data-number="9.2.1" class="anchored" data-anchor-id="prompting-for-implementation"><span class="header-section-number">9.2.1</span> Prompting for Implementation</h3>
-<p>When asking AI to implement code, provide context from previous steps:</p>
+<p>When asking AI to implement code, provide context from previous steps. The key is to give the AI your pseudocode and design decisions so it generates code that matches what you’ve already reasoned through, not whatever it might invent on its own.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I'd like to implement our longest palindromic substring algorithm in Python based on the pseudocode we developed. Here's a reminder of our approach:
 
@@ -702,6 +702,19 @@ END FUNCTION</code></pre>
 4. We'll keep track of the longest palindrome found
 
 Could you provide a clean Python implementation with good variable names and documentation?</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Bring your pseudocode to the prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice how the human restated the algorithm’s key steps before asking for code. This is Step 5 building directly on Step 4 – the pseudocode provides constraints that keep the AI’s output aligned with the solution you designed, not one the AI might prefer.</p>
+</div>
+</div>
 <p><strong>AI:</strong></p>
 <pre class="text"><code>Here's a clean implementation of the longest palindromic substring algorithm in Python:
 
@@ -767,6 +780,7 @@ This implementation follows the center expansion approach we discussed. It has:
 5. Efficient tracking of the longest palindrome found
 
 The time complexity is O(n²) where n is the length of the string, and the space complexity is O(1) since we only use a constant amount of extra space.</code></pre>
+<p>The AI produced a working implementation – but working is not the same as finished. Because you understand the algorithm from earlier steps, you’re in a position to evaluate the design choices, not just whether it runs.</p>
 </section>
 <section id="evaluating-ai-generated-code" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="evaluating-ai-generated-code"><span class="header-section-number">9.2.2</span> Evaluating AI-Generated Code</h3>
@@ -778,7 +792,7 @@ The time complexity is O(n²) where n is the length of the string, and the space
 <li><strong>Readability</strong> - Is it clearly written and well-documented?</li>
 <li><strong>Idiomaticity</strong> - Does it follow language-specific best practices?</li>
 </ol>
-<p>If there are issues, provide specific feedback:</p>
+<p>If there are issues, provide specific feedback. Vague responses like “looks good” or “can you fix it?” don’t give the AI enough to work with. Point to specific lines and explain what you’d change and why.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>This implementation looks generally good, but I noticed two potential issues:
 
@@ -787,6 +801,19 @@ The time complexity is O(n²) where n is the length of the string, and the space
 2. We don't need to check for even-length palindromes when i is the last character since there's no character after it.
 
 Could you address these issues in a revised implementation?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Review means engaging, not just accepting
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The human reviewed the code and raised two specific concerns – one about design (returning values vs.&nbsp;modifying globals) and one about correctness (unnecessary check). This kind of targeted feedback is only possible because the human understood the algorithm before seeing the code.</p>
+</div>
+</div>
 <p><strong>AI:</strong></p>
 <pre class="text"><code>You've made excellent observations. Here's a revised implementation that addresses both issues:
 
@@ -855,10 +882,11 @@ The changes I've made:
 3. Updated the main loop to capture the returned values from `expand_around_center` and update our tracking variables only if a longer palindrome is found.
 
 These changes make the code more modular and eliminate the unnecessary check, while maintaining the correct functionality.</code></pre>
+<p>The revised version is cleaner because the human drove the design decisions. The AI handled the mechanical work of rewriting the function, but the human identified what needed to change. That’s the right division of labour at this step.</p>
 </section>
 <section id="handling-unfamiliar-syntax-or-libraries" class="level3" data-number="9.2.3">
 <h3 data-number="9.2.3" class="anchored" data-anchor-id="handling-unfamiliar-syntax-or-libraries"><span class="header-section-number">9.2.3</span> Handling Unfamiliar Syntax or Libraries</h3>
-<p>When AI suggests code that uses unfamiliar syntax or libraries, ask for explanations:</p>
+<p>When AI suggests code that uses unfamiliar syntax or libraries, ask for explanations rather than blindly accepting them. This is an opportunity to learn, not just to ship.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>In the implementation, you're returning a tuple and then unpacking it with:
 
@@ -895,6 +923,19 @@ Tuple unpacking is particularly useful in this algorithm because:
 This pattern is very common in Python, especially when functions naturally produce multiple related values. It's considered a Pythonic way to handle multiple return values without creating custom classes or using more complex data structures.
 
 Would you like me to show you some other common patterns for tuple unpacking in Python?</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Asking “how does this work?” is not a weakness
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If the AI introduces syntax you don’t recognise, stop and ask. You’ll use that pattern again, and understanding it now means you won’t need to ask next time. Copying code you don’t understand is borrowing knowledge you’ll have to repay later – with interest.</p>
+</div>
+</div>
 </section>
 </section>
 <section id="maintaining-code-quality" class="level2" data-number="9.3">
@@ -913,9 +954,22 @@ Would you like me to show you some other common patterns for tuple unpacking in 
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Idiomatic Python</span></span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> collection:</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    process(item)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ask AI to make code more idiomatic:</p>
+<p>Ask AI to make code more idiomatic. This is a case where a little delegation is fine – once you understand the logic, asking the AI to polish syntax into language-native patterns is a good use of its strengths.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>This code works, but I'd like it to be more idiomatic Python. Can you suggest any improvements?</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Delegating boilerplate vs.&nbsp;delegating thinking
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Asking the AI to make working code more idiomatic is appropriate delegation. The understanding came from earlier steps; you’re now asking for syntactic polish. That’s different from asking the AI to write the solution from scratch.</p>
+</div>
+</div>
 </section>
 <section id="error-handling" class="level3" data-number="9.3.2">
 <h3 data-number="9.3.2" class="anchored" data-anchor-id="error-handling"><span class="header-section-number">9.3.2</span> Error Handling</h3>
