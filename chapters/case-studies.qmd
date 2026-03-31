@@ -30,7 +30,7 @@ The team needs to:
 
 #### Step 1: Restate the Problem
 
-
+The first move is not to ask for code — it is to prove you understand the problem. By restating requirements in your own words, you invite the AI to catch gaps before any code is written.
 
 **You:**
 
@@ -71,11 +71,16 @@ Your understanding is correct! Your restatement captures the main requirements o
 With these considerations in mind, your restatement effectively captures the core of the problem.
 ```
 
+Notice what happened here: the AI surfaced six considerations — data privacy, repeatability, output format — that were not in the original requirements. A one-shot prompt like "build me a data pipeline" would have skipped straight past these. The restatement turned a vague goal into a shared understanding.
 
+::: {.callout-tip}
+## The restatement is a filter, not a formality
+If the AI's response to your restatement surprises you, that is the methodology working. Better to discover missing requirements now than after you have written 200 lines of code.
+:::
 
 #### Step 2: Identify Input and Output
 
-
+With the problem understood, the next step is to nail down exactly what goes in and what comes out. Vague specifications produce vague code — precise ones give the AI concrete targets.
 
 **You:**
 
@@ -138,7 +143,7 @@ Your input and output specifications provide a clear framework for the pipeline.
 Overall, your specifications are solid and provide a good foundation for the implementation. These additional considerations can help make the requirements even more precise.
 ```
 
-
+The AI pushed back on an ambiguity that could have produced the wrong analysis entirely: does "product combinations" mean items in the same basket, or items the same customer buys over time? That single clarification question could save hours of rework.
 
 #### Step 3: Work by Hand
 
@@ -182,6 +187,8 @@ Counting frequencies:
 Most frequent combinations: ("dairy", "produce") and ("groceries", "dairy")
 
 
+
+Now the human shares the results of working through the problem by hand. This is the step most people skip — and the one that matters most. By showing the AI your manual process, you give it concrete evidence of what you expect the code to do.
 
 **You:**
 
@@ -227,13 +234,14 @@ Your manual approach for finding product combinations is sound! You've correctly
 Your manual process demonstrates a good understanding of the approach. For implementation at scale, you'll want to leverage existing libraries rather than building the combination generator from scratch, especially as you move beyond pairs to larger combinations.
 ```
 
-
+::: {.callout-note}
+## Each step builds on the previous — the AI has context from earlier exchanges
+By Step 3, the AI knows the data schema, the desired outputs, and the manual process. When it suggests association metrics like support, confidence, and lift, it is making a recommendation informed by three rounds of shared context — not guessing in a vacuum.
+:::
 
 #### Step 4: Write Pseudocode
 
-Based on the manual exploration, we can now outline the solution in pseudocode.
-
-
+Based on the manual exploration, we can now outline the solution in pseudocode. The goal here is to capture the logic — the structure and flow — without getting tangled in syntax or library details.
 
 **You:**
 
@@ -409,13 +417,16 @@ FUNCTION clean_data(input_file):
 These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.
 ```
 
+The human is not just accepting the first answer — they are pushing for specifics by sharing detailed pseudocode and asking "are there inefficiencies?" This kind of directed follow-up consistently produces better results than passively accepting whatever the AI offers.
 
+::: {.callout-tip}
+## This is the six-step methodology in action
+The thinking happened in Steps 1-4, so Step 5 is informed delegation. When the human asks for Python code next, the AI already knows the data schema, the algorithm choice, the chunking strategy, and the error-handling requirements. Compare this with a one-shot prompt — the quality difference comes from the structured conversation.
+:::
 
 #### Step 5: Convert to Code
 
-Now let's implement the solution in Python, focusing on the product combination analysis.
-
-
+Now let's implement the solution in Python, focusing on the product combination analysis. Because the pseudocode already captures the design, this step becomes a translation exercise rather than a design exercise.
 
 **You:**
 
@@ -614,9 +625,7 @@ Overall, your implementation is well-designed for the task at hand. These sugges
 
 #### Step 6: Test with Data
 
-For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset.
-
-
+For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset. The human does not wait until the full pipeline is built — they create synthetic test data to validate the core logic first.
 
 **You:**
 
@@ -794,7 +803,7 @@ def analyze_large_dataset(file_path, output_dir):
 Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.
 ```
 
-
+By the end of six exchanges, the conversation has produced a tested, production-aware implementation — not because the AI was given a single brilliant prompt, but because each step added information the AI could use to give better answers.
 
 ### Lessons Learned
 
@@ -828,7 +837,7 @@ A developer needs to build a weather dashboard application in Python. The applic
 
 #### Step 1: Restate the Problem
 
-
+This case study starts differently from the first — the developer asks the AI to help with the restatement itself, rather than presenting one for review. Both approaches work; the key is that the restatement happens at all.
 
 **You:**
 
@@ -857,6 +866,8 @@ The key components you'll need to develop are:
 
 
 
+The developer does not stop at the AI's restatement. They follow up with a clarification question to fill in their own knowledge gaps before moving forward. This is intentional conversation — using the AI as a thinking partner, not a code generator.
+
 **Human follow-up prompt (clarification):**
 ```text
 That's helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.
@@ -864,7 +875,7 @@ That's helpful. Could you help me understand what types of weather data are typi
 
 #### Step 2: Identify Input and Output Requirements
 
-
+With the problem restated, the developer defines the boundary of the system — what comes in, what goes out.
 
 **You:**
 
@@ -905,11 +916,11 @@ Additional outputs to consider:
 - Weather alerts or warnings
 ```
 
-
+The AI adds error messages and status indicators to the output list. These are easy to forget during initial design but painful to retrofit later. The methodology catches them early.
 
 #### Step 3: Work Problem by Hand
 
-
+For a UI-focused project, "working by hand" means sketching the user flow rather than processing data manually. The principle is the same: walk through the problem concretely before writing any code.
 
 **You:**
 
@@ -941,7 +952,7 @@ Does this flow make sense? Would you structure the user experience differently?
 
 #### Step 4: Write Pseudocode
 
-
+The developer explicitly requests modular design in the prompt. This kind of architectural direction keeps the AI's output aligned with your design goals.
 
 **You:**
 
@@ -1018,6 +1029,11 @@ function get_location_from_user():
     return location
 ```
 
+::: {.callout-tip}
+## Challenge the AI's output — do not just accept it
+The developer spots a gap in the pseudocode and pushes back. This is intentional prompting at work: the human is not a passive recipient of AI output but an active collaborator who catches what the AI missed.
+:::
+
 **Follow-up prompt (challenge):**
 ```text
 The pseudocode looks good overall. I noticed that error handling isn't explicitly included. Could you expand the pseudocode to include error handling for:
@@ -1029,11 +1045,11 @@ The pseudocode looks good overall. I noticed that error handling isn't explicitl
 
 #### Step 5: Convert to Python Code
 
-The developer starts implementing the solution based on the pseudocode, focusing on modularity, error handling, and user experience.
+The developer starts implementing the solution based on the pseudocode, focusing on modularity, error handling, and user experience. With four steps of context established, the conversion to real code is straightforward.
 
 #### Step 6: Test with Data
 
-
+Before testing with a live API, the developer asks for sample data structures. This lets them validate their parsing and display logic without depending on network connectivity or API rate limits.
 
 **You:**
 
@@ -1110,9 +1126,14 @@ Test cases to consider:
 
 
 
+::: {.callout-note}
+## Test cases reveal what you have not thought about
+The AI suggests testing for empty forecast lists, API timeouts, and special characters in location names. These are the kinds of edge cases that cause production failures — and they emerged naturally from a conversation, not from staring at code.
+:::
+
 ### Before and After Example: Improving a Key Function
 
-One of the critical functions in the application is the data retrieval function. Let's examine how intentional prompting improved this function:
+One of the critical functions in the application is the data retrieval function. Let's examine how intentional prompting improved this function.
 
 #### Before: Initial Data Retrieval Function
 ```python
@@ -1123,6 +1144,8 @@ def fetch_weather_data(location, units):
     return {"current": current_weather, "forecast": forecast}
 ```
 
+This initial version works for the happy path but silently fails on any error. The developer uses a targeted refinement prompt to improve it.
+
 #### Refinement Process Prompt
 ```text
 The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
@@ -1132,6 +1155,8 @@ The fetch_weather_data() function needs improvement. It doesn't handle errors or
 3. Handle missing or incomplete data
 4. Provide meaningful error messages to the user
 ```
+
+The result is a function that degrades gracefully — missing fields get defaults, forecast retrieval retries automatically, and every failure produces a meaningful message. This is the difference between code that works in a demo and code that works in production.
 
 #### After: Improved Data Retrieval Function
 ```python
@@ -1218,7 +1243,7 @@ The intentional approach resulted in a robust, maintainable application that pro
 
 ## Case Study 3: Debugging a Complex Bug
 
-For our final case study, we'll look at a debugging scenario where intentional prompting techniques help solve a challenging issue.
+For our final case study, we'll look at a debugging scenario where intentional prompting techniques help solve a challenging issue. Debugging is where many developers abandon methodology and start guessing — this case study shows why the structured approach pays off even when you are under pressure to find a fix.
 
 ### The Problem
 
@@ -1228,7 +1253,7 @@ A team is experiencing intermittent failures in their e-commerce checkout system
 
 #### Step 1: Restate the Problem
 
-
+The temptation with a bug is to jump straight to "here's the error, fix it." Instead, the developer starts by restating what they know and do not know about the failure.
 
 **You:**
 
@@ -1251,7 +1276,7 @@ Is this an appropriate restatement of the debugging challenge?
 
 #### Step 2: Identify Information Needed
 
-
+For debugging, Step 2 shifts from "inputs and outputs of the program" to "what information do we need to diagnose the problem?" The developer treats the investigation itself as a problem to be solved methodically.
 
 **You:**
 
@@ -1278,6 +1303,11 @@ Are there other information sources or outputs we should consider to effectively
 
 
 The debugging case study would continue through a systematic investigation process, demonstrating how intentional prompting techniques help narrow down the cause of complex bugs.
+
+::: {.callout-note}
+## The methodology adapts to the problem type
+Notice how the six steps flex to fit debugging: "restate the problem" becomes "describe what you know about the failure," "identify inputs/outputs" becomes "identify information sources," and "work by hand" becomes "trace the failure path manually." The structure is consistent; the application is flexible.
+:::
 
 ## Key Takeaways
 

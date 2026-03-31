@@ -20,9 +20,9 @@ These challenges require adaptations to our intentional prompting approach.
 
 ### Intentional Architecture Design
 
-For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process:
+For larger projects, architectural planning becomes an essential first step. AI can be a valuable partner in this process.
 
-
+The following prompt demonstrates a key scaling skill: asking the AI to help you *think through* a design before you build it. Notice how the prompt lists the functional areas upfront — this gives the AI enough context to reason about boundaries and trade-offs.
 
 **You:**
 
@@ -138,7 +138,12 @@ Here's a sensible approach to dividing your e-commerce platform into microservic
 This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
 ```
 
+The AI produced a solid starting point, but that's exactly what it is — a starting point. The real value here isn't the specific service breakdown (which is fairly standard for e-commerce). It's the framework of *considerations* — data ownership, consistency models, interaction patterns — that you now need to evaluate against your specific constraints.
 
+::: {.callout-tip}
+## Architecture Is a Human Decision
+AI can generate sensible default architectures, and it's good at enumerating trade-offs. But the choices between those trade-offs — synchronous vs. asynchronous, strong vs. eventual consistency, separate auth service vs. embedded — depend on your team size, deployment constraints, and business priorities. Use the AI's output as a checklist of things to decide, not as decisions already made.
+:::
 
 ### Component-Level Intentional Prompting
 
@@ -182,9 +187,9 @@ Based on this architectural context, what are the key considerations I should ke
 
 ### Maintaining Consistency
 
-In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards:
+In larger projects, maintaining consistent patterns and approaches becomes critical. AI can help enforce these standards.
 
-
+This next prompt shows a technique that becomes essential at scale: *teaching the AI your team's patterns by example*. Rather than hoping the AI guesses your conventions, you explicitly provide a reference implementation and ask it to follow the same shape.
 
 **You:**
 
@@ -204,7 +209,10 @@ Here's an example of a controller that follows our standards:
 I need to create a new endpoint for managing product bundles. Can you help me implement this following our established patterns?
 ```
 
-
+::: {.callout-note}
+## Show, Don't Just Tell
+Listing your coding standards is helpful. Including an example that *demonstrates* those standards is far more effective. AI models learn patterns from examples much more reliably than from abstract descriptions. When you include `[Example controller code]`, you're giving the AI a concrete template to follow rather than a set of rules to interpret.
+:::
 
 ### Modular Prompting Strategies
 
@@ -241,9 +249,9 @@ Please provide:
 
 ### Designing for Evolution
 
-Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind:
+Complex systems evolve over time. Intentional prompting at scale means designing with this evolution in mind.
 
-
+The next prompt illustrates a powerful technique: telling the AI not just what you need *now*, but what you anticipate needing *later*. This shifts the conversation from "build me a thing" to "help me design a thing that can grow."
 
 **You:**
 
@@ -409,13 +417,18 @@ public class PaymentService {
 By following these patterns and principles, your payment system will be well-positioned to accommodate new payment methods and functionality with minimal changes to the core architecture.
 ```
 
+Look at the structure of the AI's response: it didn't just suggest one pattern, it layered multiple complementary patterns (Strategy, Adapter, Provider Model) and then showed how future requirements map onto the design. This is exactly the kind of response you get when your prompt includes future requirements — the AI can reason about extensibility only if you tell it what needs to extend.
 
+::: {.callout-tip}
+## Future Requirements Shape Present Design
+When you share anticipated future needs in your prompt, the AI can recommend patterns that accommodate growth rather than patterns that merely solve today's problem. You don't need to predict the future perfectly — even approximate future requirements lead to significantly more extensible designs.
+:::
 
 ### Cross-Cutting Concerns
 
-In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically:
+In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically.
 
-
+This prompt demonstrates something important: the human has already identified the problem (inconsistent implementations across services) and the specific areas of concern. They're not asking the AI to diagnose the issue — they're asking for a solution strategy. That distinction matters. The more precisely you frame the problem, the more actionable the response.
 
 **You:**
 
@@ -436,9 +449,9 @@ How can we standardize these cross-cutting concerns across our services while ma
 
 ### Intentional System Documentation
 
-Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation:
+Documentation is particularly crucial for complex systems. AI can help create and maintain effective documentation.
 
-
+Here's a case where delegation to the AI is entirely appropriate. Documentation structure is largely a solved problem — there are well-known best practices for API docs, and the AI has seen thousands of examples. The human's job is providing the specifics of *what* was built; the AI's job is organising that information into a structure other developers can navigate.
 
 **You:**
 
@@ -636,13 +649,13 @@ Here's a comprehensive documentation structure for your authentication service t
 This structure provides a comprehensive yet navigable documentation set that addresses the needs of different audiences - from developers getting started to those troubleshooting specific issues.
 ```
 
-
+The AI generated a thorough documentation outline, but notice what it *can't* do: fill in the actual content. The structure is the easy part. The hard work — writing accurate quick-start guides, documenting real error scenarios, creating useful sequence diagrams — still requires someone who understands the system. Use this kind of output as a scaffold, not as finished documentation.
 
 ### AI-Enhanced Code Documentation
 
-AI can also help create and maintain code-level documentation:
+AI can also help create and maintain code-level documentation.
 
-
+This next exchange shows one of AI's genuine strengths: reading complex code and producing clear documentation for it. The human provides real code with multiple interacting services, error handling branches, and compensating transactions. Writing good documentation for code like this is tedious but important — exactly the kind of task where AI saves real time.
 
 **You:**
 
@@ -752,9 +765,9 @@ Can you provide comprehensive JavaDoc documentation for this class and the proce
 
 ### Collaborative Learning Patterns
 
-Intentional prompting in team settings requires effective knowledge sharing patterns:
+Intentional prompting in team settings requires effective knowledge sharing patterns.
 
-
+The following prompt tackles an organisational problem rather than a technical one. This is worth highlighting: AI can be a useful thinking partner for process and team challenges, not just code. The key to making it work is being specific about your situation — team size, the symptom you're seeing, and what you're trying to achieve.
 
 **You:**
 
@@ -868,13 +881,16 @@ Rather than implementing all these patterns at once:
 These practices will help create multiple knowledge bridges across component boundaries while still allowing for deep specialisation where needed.
 ```
 
-
+::: {.callout-note}
+## AI as Brainstorming Partner, Not Decision-Maker
+The AI generated twelve different knowledge-sharing practices. No team should implement all twelve at once — that would be overwhelming. The value is in having a comprehensive menu to choose from. Your job as the human is to pick the 2-3 practices that fit your team's culture and current pain points, then evaluate whether they're working before adding more.
+:::
 
 ### Documentation as Code
 
-Treat documentation as a first-class development artifact:
+Treat documentation as a first-class development artifact.
 
-
+This prompt is a good example of providing constraints that guide the response. By specifying the three requirements (lives alongside code, reviewed with changes, automatically published), the human narrows the AI's response from general documentation advice to specific tooling and workflow recommendations.
 
 **You:**
 
@@ -895,7 +911,12 @@ Let's apply these principles to a practical exercise scaling a simple applicatio
 
 ### Initial Simple Application
 
+This exercise brings together the chapter's themes. Notice how the prompt establishes where you are (a simple app with three components) and where you need to go (an enterprise platform with five new capabilities). This "from X to Y" framing gives the AI a clear picture of the gap it needs to help bridge.
 
+::: {.callout-tip}
+## Describe the Gap, Not Just the Goal
+When scaling an existing system, always tell the AI what you have *now* alongside what you need. An AI designing a collaboration platform from scratch will give different advice than one helping you evolve a note-taking app into one. The starting point shapes which changes are incremental and which require rethinking the architecture.
+:::
 
 **You:**
 
