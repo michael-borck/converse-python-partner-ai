@@ -103,24 +103,13 @@ This guide is part of a 5-book series designed to help you master modern softwar
 
 ### Book Progression
 
-```
-                    ┌─────────────────────┐
-                    │   CONVERSATION,     │
-                    │  NOT DELEGATION     │
-                    │   (Methodology)     │
-                    └─────────────────────┘
-                           │
-            ┌──────────────┼──────────────┐
-            ▼                             ▼
-    ┌───────────────┐             ┌───────────────┐
-    │  PYTHON TRACK │             │   WEB TRACK   │
-    │               │             │               │
-    │ Think Python  │             │ Build Web,    │
-    │      ↓        │             │ Guide AI      │
-    │ Code Python   │             └───────────────┘
-    │      ↓        │
-    │ Ship Python   │
-    └───────────────┘
+```{mermaid}
+flowchart TD
+    CND["Conversation, Not Delegation\n(Methodology)"]
+    CND --> Think["Think Python, Direct AI\nComputational Thinking"]
+    CND --> Web["Build Web, Guide AI\nWeb Development"]
+    Think --> Code["Code Python, Consult AI\nPython Fundamentals"]
+    Code --> Ship["Ship Python, Orchestrate AI\nProfessional Practices"]
 ```
 
 Start with "Think Python, Direct AI" if you're a complete beginner, or jump into "Code Python, Consult AI" if you want a more focused approach to Python fundamentals. Both books prepare you for the production-focused content in "Ship Python, Orchestrate AI." For web development, start with "Build Web, Guide AI." The methodology from "Converse Python, Partner AI" enhances all your Python development work.
