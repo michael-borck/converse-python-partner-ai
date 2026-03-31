@@ -76,6 +76,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -668,23 +671,25 @@ Same monospace style, just a different label.</code></pre>
 </section>
 <section id="book-progression" class="level3">
 <h3 class="anchored" data-anchor-id="book-progression">Book Progression</h3>
-<pre><code>                    ┌─────────────────────┐
-                    │   CONVERSATION,     │
-                    │  NOT DELEGATION     │
-                    │   (Methodology)     │
-                    └─────────────────────┘
-                           │
-            ┌──────────────┼──────────────┐
-            ▼                             ▼
-    ┌───────────────┐             ┌───────────────┐
-    │  PYTHON TRACK │             │   WEB TRACK   │
-    │               │             │               │
-    │ Think Python  │             │ Build Web,    │
-    │      ↓        │             │ Guide AI      │
-    │ Code Python   │             └───────────────┘
-    │      ↓        │
-    │ Ship Python   │
-    └───────────────┘</code></pre>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    CND["Conversation, Not Delegation\n(General Methodology)"]
+    CPPA["Converse Python, Partner AI\n(Python Methodology)"]
+    CND --&gt; CPPA
+    CND --&gt; Web["Build Web, Guide AI\nWeb Development"]
+    CPPA --&gt; Think["Think Python, Direct AI\nComputational Thinking"]
+    Think --&gt; Code["Code Python, Consult AI\nPython Fundamentals"]
+    Code --&gt; Ship["Ship Python, Orchestrate AI\nProfessional Practices"]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
 <p>Start with “Think Python, Direct AI” if you’re a complete beginner, or jump into “Code Python, Consult AI” if you want a more focused approach to Python fundamentals. Both books prepare you for the production-focused content in “Ship Python, Orchestrate AI.” For web development, start with “Build Web, Guide AI.” The methodology from “Converse Python, Partner AI” enhances all your Python development work.</p>
 </section>
 </section>
