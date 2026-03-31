@@ -507,13 +507,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#how-this-book-is-structured" id="toc-how-this-book-is-structured" class="nav-link" data-scroll-target="#how-this-book-is-structured">How This Book Is Structured</a></li>
   <li><a href="#conventions-used-in-this-book" id="toc-conventions-used-in-this-book" class="nav-link" data-scroll-target="#conventions-used-in-this-book">Conventions Used in This Book</a></li>
   <li><a href="#the-companion-book" id="toc-the-companion-book" class="nav-link" data-scroll-target="#the-companion-book">The Companion Book</a></li>
-  <li><a href="#related-resources" id="toc-related-resources" class="nav-link" data-scroll-target="#related-resources">Related Resources</a>
-  <ul class="collapse">
-  <li><a href="#foundational-methodology" id="toc-foundational-methodology" class="nav-link" data-scroll-target="#foundational-methodology">Foundational Methodology</a></li>
-  <li><a href="#python-track" id="toc-python-track" class="nav-link" data-scroll-target="#python-track">Python Track</a></li>
-  <li><a href="#web-track" id="toc-web-track" class="nav-link" data-scroll-target="#web-track">Web Track</a></li>
-  <li><a href="#book-progression" id="toc-book-progression" class="nav-link" data-scroll-target="#book-progression">Book Progression</a></li>
-  </ul></li>
+  <li><a href="#related-resources" id="toc-related-resources" class="nav-link" data-scroll-target="#related-resources">Related Resources</a></li>
   <li><a href="#ways-to-engage-with-this-book" id="toc-ways-to-engage-with-this-book" class="nav-link" data-scroll-target="#ways-to-engage-with-this-book">Ways to Engage with This Book</a></li>
   </ul></li>
   </ul>
@@ -654,44 +648,38 @@ Same monospace style, just a different label.</code></pre>
 </section>
 <section id="related-resources" class="level2">
 <h2 class="anchored" data-anchor-id="related-resources">Related Resources</h2>
-<p>This guide is part of a 5-book series designed to help you master modern software development in the AI era:</p>
-<section id="foundational-methodology" class="level3">
-<h3 class="anchored" data-anchor-id="foundational-methodology">Foundational Methodology</h3>
-<p><strong>Converse Python, Partner AI: The Python Edition</strong> (this book) - Intentional AI collaboration for programmers (human oversight + methodology + LLM = success)</p>
-</section>
-<section id="python-track" class="level3">
-<h3 class="anchored" data-anchor-id="python-track">Python Track</h3>
-<p><strong>Think Python, Direct AI: Computational Thinking for Beginners</strong> - An innovative programming textbook that embraces AI as a learning partner. Master Python by learning how to think computationally and direct AI to help you build solutions. Perfect for absolute beginners in the age of AI.</p>
-<p><strong>Code Python, Consult AI: Python Fundamentals for the AI Era</strong> - Learn fundamental Python with AI integration - ideal for those who want a focused introduction to Python fundamentals</p>
-<p><strong>Ship Python, Orchestrate AI: Professional Python in the AI Era</strong> - Build professional-grade Python applications with modern tools (uv, ruff, mypy, pytest - simple but not simplistic)</p>
-</section>
-<section id="web-track" class="level3">
-<h3 class="anchored" data-anchor-id="web-track">Web Track</h3>
-<p><strong>Build Web, Guide AI: Business Web Development with AI</strong> - A practical guide to modern web development that embraces AI as your development partner while building real business solutions.</p>
-</section>
-<section id="book-progression" class="level3">
-<h3 class="anchored" data-anchor-id="book-progression">Book Progression</h3>
-<div class="cell" data-layout-align="default">
+<p>This guide is part of a series designed to help you master modern software development in the AI era.</p>
+<div class="cell" data-fig-width="4" data-layout-align="default">
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
-    CND["Conversation, Not Delegation\n(General Methodology)"]
-    CPPA["Converse Python, Partner AI\n(Python Methodology)"]
+    CND["Conversation,&lt;br/&gt;Not Delegation"]
+    CPPA["Converse Python,&lt;br/&gt;Partner AI"]
+    Think["Think Python,&lt;br/&gt;Direct AI"]
+    Code["Code Python,&lt;br/&gt;Consult AI"]
+    Ship["Ship Python,&lt;br/&gt;Orchestrate AI"]
+    Web["Build Web,&lt;br/&gt;Guide AI"]
     CND --&gt; CPPA
-    CND --&gt; Web["Build Web, Guide AI\nWeb Development"]
-    CPPA --&gt; Think["Think Python, Direct AI\nComputational Thinking"]
-    Think --&gt; Code["Code Python, Consult AI\nPython Fundamentals"]
-    Code --&gt; Ship["Ship Python, Orchestrate AI\nProfessional Practices"]
+    CND --&gt; Web
+    CPPA --&gt; Think
+    Think --&gt; Code
+    Code --&gt; Ship
 </pre>
 </div>
 <p></p></figure><p></p>
 </div>
 </div>
 </div>
-<p>Start with “Think Python, Direct AI” if you’re a complete beginner, or jump into “Code Python, Consult AI” if you want a more focused approach to Python fundamentals. Both books prepare you for the production-focused content in “Ship Python, Orchestrate AI.” For web development, start with “Build Web, Guide AI.” The methodology from “Converse Python, Partner AI” enhances all your Python development work.</p>
-</section>
+<p>Start with <em>Think Python, Direct AI</em> if you are a complete beginner, or jump into <em>Code Python, Consult AI</em> if you want a more focused approach to Python fundamentals. Both prepare you for the production-focused content in <em>Ship Python, Orchestrate AI</em>. For web development, start with <em>Build Web, Guide AI</em>. The methodology from <em>Converse Python, Partner AI</em> enhances all your development work.</p>
+<p><strong>Conversation, Not Delegation</strong> — the general methodology for working with AI across any discipline. Covers the Conversation Loop, the VET framework, and the principle of AI Last.</p>
+<p><strong>Converse Python, Partner AI</strong> (this book) — intentional prompting methodology applied to software development.</p>
+<p><strong>Think Python, Direct AI</strong> — computational thinking for absolute beginners. Learn to think like a programmer with AI as an exploration partner.</p>
+<p><strong>Code Python, Consult AI</strong> — focused Python fundamentals with AI integration.</p>
+<p><strong>Ship Python, Orchestrate AI</strong> — professional Python development practices with modern tools (uv, ruff, mypy, pytest).</p>
+<p><strong>Build Web, Guide AI</strong> — web development (HTML, CSS, JavaScript, WordPress, React) with AI as your development partner.</p>
+<p>All titles are available at <a href="https://books.borck.education">books.borck.education</a>.</p>
 </section>
 <section id="ways-to-engage-with-this-book" class="level2">
 <h2 class="anchored" data-anchor-id="ways-to-engage-with-this-book">Ways to Engage with This Book</h2>
