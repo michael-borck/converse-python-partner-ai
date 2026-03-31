@@ -118,38 +118,35 @@ How can I optimise this to handle lists with thousands of items efficiently?
 
 When you encounter an error message:
 
-```
+```text
 I'm getting this error message:
 
-[paste the complete error message including stack trace]
+[paste the complete error message]
 
 From this code:
 
-```[language]
 [paste the relevant code section]
-```
 
 1. What is causing this error?
 2. How can I fix it?
-3. Is there a better approach to what I'm trying to do?
+3. Is there a better approach?
 ```
 
 ### Code Review Template
 
 When your code runs but doesn't behave as expected:
 
-```
-My code should [describe expected behaviour], but instead it [describe actual behaviour]:
+```text
+My code should [describe expected behaviour],
+but instead it [describe actual behaviour]:
 
-```[language]
 [paste the code]
-```
 
 Here's an example of the input:
 [provide a specific example]
 
-Expected output: [describe what you expect]
-Actual output: [describe what actually happens]
+Expected output: [what you expect]
+Actual output: [what actually happens]
 
 Can you help me identify what's wrong?
 ```
@@ -158,30 +155,31 @@ Can you help me identify what's wrong?
 
 For understanding exactly where logic goes wrong:
 
-```
-Could you help me trace through this function step by step with the input [specific input]?
+```text
+Could you help me trace through this function
+step by step with the input [specific input]?
 
-```[language]
 [paste function code]
-```
 
-I'd like to see the value of each variable at each step to understand where my logic is failing.
+I'd like to see the value of each variable at
+each step to understand where my logic is
+failing.
 ```
 
 ### Performance Debugging Template
 
 For optimising slow code:
 
-```
-This function works correctly but becomes slow with larger inputs:
+```text
+This function works correctly but becomes
+slow with larger inputs:
 
-```[language]
 [paste code]
-```
 
-1. What is the time complexity of this function?
+1. What is the time complexity?
 2. Where are the performance bottlenecks?
-3. How can I optimise it while maintaining the same functionality?
+3. How can I optimise it while maintaining
+   the same functionality?
 ```
 
 ## Effective Debugging Workflows
@@ -191,19 +189,19 @@ This function works correctly but becomes slow with larger inputs:
 When debugging complex issues, breaking the problem down is often the most effective strategy:
 
 1. **Isolate the problem**:
-   ```
+   ```text
    I'm not sure which part of my code is causing the issue. 
    If I comment out the sections marked #A, #B, and #C, does anything stand out as a likely culprit?
    ```
 
 2. **Create a minimal reproduction**:
-   ```
+   ```text
    Here's a simplified version of my code that still produces the error.
    Can you identify the issue in this smaller example?
    ```
 
 3. **Binary search the code**:
-   ```
+   ```text
    If I commented out the first half of the function, the error disappears.
    Can you help me narrow down which part of the first half is problematic?
    ```
@@ -213,18 +211,18 @@ When debugging complex issues, breaking the problem down is often the most effec
 Debugging by forming and testing specific hypotheses:
 
 1. **Form a hypothesis**:
-   ```
+   ```text
    I suspect the issue might be related to how I'm handling null values.
    Does that seem like a plausible cause based on the symptoms?
    ```
 
 2. **Design a test**:
-   ```
+   ```text
    How can I modify my code to verify whether null values are causing the issue?
    ```
 
 3. **Interpret results**:
-   ```
+   ```text
    I added print statements before and after the suspected line,
    and I'm seeing [specific output]. What does this tell us?
    ```
@@ -234,7 +232,7 @@ Debugging by forming and testing specific hypotheses:
 Debugging by comparing working and non-working code:
 
 1. **Identify differences**:
-   ```
+   ```text
    This code works correctly:
    [working code]
    
@@ -245,13 +243,13 @@ Debugging by comparing working and non-working code:
    ```
 
 2. **Incremental changes**:
-   ```
+   ```text
    If I change my code from A to B incrementally, at what point does it break?
    I'll start by changing X and see if that affects the behaviour.
    ```
 
 3. **Reference implementation**:
-   ```
+   ```text
    Here's my implementation of algorithm X that isn't working:
    [my code]
    
@@ -461,14 +459,14 @@ This approach is particularly valuable for learning, as it requires understandin
 The XY Problem occurs when you ask about your attempted solution (Y) rather than your actual problem (X), leading to inefficient debugging. AI can help identify this pattern.
 
 **Wrong approach:**
-```
+```text
 How do I make this regex work for validating email addresses?
 
 /^[a-zA-Z0-9]+@[a-zA-Z0-9]+$/
 ```
 
 **Better approach:**
-```
+```text
 I need to validate email addresses in my application. 
 I tried using this regex: /^[a-zA-Z0-9]+\\@[a-zA-Z0-9]+$/
 

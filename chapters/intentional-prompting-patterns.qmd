@@ -40,7 +40,7 @@ Intentional prompting doesn't replace prompt engineering. Rather, it integrates 
 Zero-shot prompting instructs an AI to perform a task without providing examples within the prompt. This technique leverages the model's pre-existing knowledge to generate responses to novel tasks.
 
 **Example:**
-```
+```text
 Write a function that validates email addresses using regular expressions.
 ```
 
@@ -51,7 +51,7 @@ Zero-shot prompting works well for common tasks where the AI has extensive train
 This technique provides the model with one or more examples of expected input-output pairs before presenting the actual task. Examples help the model understand the desired format and approach.
 
 **Example:**
-```
+```text
 Here's an example of validating a phone number:
 
 Input: "555-123-4567"
@@ -73,7 +73,7 @@ Few-shot prompting is particularly valuable for tasks with specific formatting r
 Chain-of-Thought (CoT) prompting encourages the model to break down complex reasoning into intermediate steps, leading to more comprehensive and accurate outputs. This technique mimics human reasoning processes.
 
 **Example:**
-```
+```text
 Let's solve this step by step: Write a function that finds the longest common subsequence of two strings. 
 
 First, let's understand what a subsequence is...
@@ -88,7 +88,7 @@ Chain-of-thought prompting significantly improves performance on problems requir
 Role-based prompting assigns a specific professional or character role to the AI, which helps frame its responses within a particular domain of expertise or perspective.
 
 **Example:**
-```
+```text
 As an experienced software architect, analyse this function and suggest improvements for scalability and performance.
 ```
 
@@ -101,7 +101,7 @@ This technique helps orient the AI toward specific terminology, frameworks, and 
 Foundation prompts establish the baseline requirements for a programming task. Instead of just asking for a solution, these prompts set the stage for a productive dialogue.
 
 **Examples:**
-```
+```text
 "I need to write a Python program that analyses student grades and calculates statistics."
 
 "Can you help me design a function that validates user input according to these requirements..."
@@ -116,7 +116,7 @@ Foundation prompts should provide enough context for the AI to understand the go
 Clarification prompts refine requirements and explore edge cases before diving into implementation.
 
 **Examples:**
-```
+```text
 "Should the function handle negative numbers, or can we assume all inputs are positive?"
 
 "What's a better approach for storing this data: a nested dictionary or a custom class?"
@@ -131,7 +131,7 @@ These prompts encourage thinking about requirements thoroughly before committing
 Scaffolding prompts support learning by breaking down complex concepts into understandable components.
 
 **Examples:**
-```
+```text
 "Before we implement this recursion, can you explain how the call stack will work in this case?"
 
 "What's happening in this line of code that uses list comprehension? Can you break it down step by step?"
@@ -146,7 +146,7 @@ These prompts transform the AI from a code generator into a tutor that helps bui
 Challenge prompts deliberately introduce programming challenges to test understanding and explore potential issues.
 
 **Examples:**
-```
+```text
 "What happens if the user enters an empty string here?"
 
 "How would this code handle a very large dataset? Would it still be efficient?"
@@ -161,7 +161,7 @@ Challenge prompts help develop critical thinking about code rather than just acc
 Refinement prompts push for code improvements based on best practices and efficiency considerations.
 
 **Examples:**
-```
+```text
 "Can we make this code more efficient in terms of memory usage?"
 
 "Is there a more idiomatic way to write this in Python?"
@@ -176,7 +176,7 @@ These prompts help develop an eye for quality and foster continuous improvement.
 Error induction prompts intentionally guide the AI toward making specific mistakes to explore error handling and debugging processes.
 
 **Examples:**
-```
+```text
 "Let's use a recursive approach without considering the base case first."
 
 "What if we don't handle the edge case where the input is empty?"
@@ -231,7 +231,7 @@ Beyond the basic techniques described earlier, several advanced prompt engineeri
 This technique involves providing rich background information to help the AI generate more appropriate and contextually relevant responses.
 
 **Example:**
-```
+```text
 I'm building a web application with React frontend and Django backend. The application needs to handle both authenticated and unauthenticated users. We're using JWT for authentication. 
 
 Now I need to implement a function that checks if a user's token is valid and returns appropriate data based on their permission level.
@@ -244,7 +244,7 @@ Context-enhanced prompting is particularly valuable when working on components o
 By explicitly stating constraints and requirements, you can guide the AI to produce solutions that fit within your project's specific parameters.
 
 **Example:**
-```
+```text
 Write a sorting algorithm that:
 - Uses O(n log n) time complexity
 - Uses no more than O(1) extra space
@@ -259,7 +259,7 @@ This approach is especially useful for performance-critical applications or when
 Template-guided prompting provides a structural framework that the AI should follow in its response. This ensures consistency and completeness.
 
 **Example:**
-```
+```text
 analyse this function using the following template:
 1. Time complexity: 
 2. Space complexity:
@@ -369,7 +369,7 @@ Let's examine a practical example of intentional prompting that demonstrates how
 
 A developer starts with a simple request:
 
-```
+```text
 Write a function to retrieve weather data from the wttr.in API for a given location.
 ```
 
@@ -400,7 +400,7 @@ The developer analyses the initial code and identifies several issues:
 
 The developer then crafts a follow-up prompt that addresses each identified issue:
 
-```
+```text
 Thanks for the starting point. I'd like to improve this function with:
 
 1. Error handling for API failures and bad responses

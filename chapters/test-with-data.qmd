@@ -531,7 +531,7 @@ if __name__ == "__main__":
 
 Running our tests might reveal issues we hadn't anticipated:
 
-```
+```text
 .F...F
 ======================================================================
 FAIL: test_comprehensive_cases (__main__.TestLongestPalindromicSubstring)
@@ -604,7 +604,7 @@ def longest_palindromic_substring(s):
 
 After fixing the issues, we run the tests again to verify the solution:
 
-```
+```text
 ......
 ----------------------------------------------------------------------
 Ran 6 tests in 0.123s

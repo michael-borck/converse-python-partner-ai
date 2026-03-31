@@ -149,7 +149,7 @@ To illustrate the methodology in action, let's consider a practical programming 
 
 A common approach is to simply ask the AI directly:
 
-```
+```text
 "Write a function to find the longest palindromic substring in a string."
 ```
 

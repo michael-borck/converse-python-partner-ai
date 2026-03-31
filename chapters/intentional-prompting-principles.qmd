@@ -132,7 +132,7 @@ The permissive approach emphasises speed but may involve several iterations of t
 **AI**: *Explains different approaches with their advantages and limitations*
 
 **Human**: I'll choose the regex approach for simplicity. Let's write pseudocode first:
-```
+```text
 function validateEmail(email):
   if email is empty:
     return false

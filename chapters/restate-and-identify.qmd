@@ -70,7 +70,7 @@ AI assistants can help refine your problem restatements in several ways:
 
 After restating the problem yourself, ask the AI to verify your understanding:
 
-```
+```text
 I'm working on this problem: [original problem statement]
 
 I've restated it as: [your restatement]
@@ -82,7 +82,7 @@ Have I missed anything important or misunderstood any aspect of the problem?
 
 AI can help uncover hidden assumptions in the problem:
 
-```
+```text
 What assumptions might I be making about this problem that aren't explicitly stated?
 ```
 
@@ -90,7 +90,7 @@ What assumptions might I be making about this problem that aren't explicitly sta
 
 AI can help identify boundary conditions and special cases:
 
-```
+```text
 What edge cases should I consider for this problem?
 ```
 
@@ -98,7 +98,7 @@ What edge cases should I consider for this problem?
 
 For problems in unfamiliar domains, AI can provide context:
 
-```
+```text
 Could you explain any domain-specific considerations I should keep in mind when solving this problem?
 ```
 
@@ -137,7 +137,7 @@ Clearly defining inputs and outputs:
 
 Examples can clarify I/O specifications better than abstract descriptions:
 
-```
+```text
 Function: calculate_shipping_cost(weight, distance, express=False)
 
 Inputs:
@@ -163,7 +163,7 @@ AI assistants excel at identifying edge cases and boundary conditions that might
 
 Ask the AI to help identify input edge cases:
 
-```
+```text
 What are potential edge cases for these inputs?
 - weight: A positive float representing item weight in kilograms
 - distance: A positive float representing distance in kilometers
@@ -181,7 +181,7 @@ This might reveal considerations like:
 
 Similarly, explore edge cases for outputs:
 
-```
+```text
 What are potential edge cases for the output of this shipping cost calculator?
 ```
 
@@ -196,7 +196,7 @@ This might reveal considerations like:
 
 Use AI to explore potential error conditions:
 
-```
+```text
 What error conditions should I handle in this shipping cost calculator?
 ```
 
@@ -214,7 +214,7 @@ When requirements are unclear or incomplete, AI can help explore the problem spa
 
 Repeatedly ask "why" to dig deeper into requirements:
 
-```
+```text
 The requirement is to "implement a user profile page."
 
 Why does the user need a profile page?
@@ -232,7 +232,7 @@ This technique helps uncover the underlying goals behind requirements.
 
 Ask the AI to consider requirements from different perspectives:
 
-```
+```text
 How might different users view this profile page requirement differently?
 
 - From an end user's perspective: ...
@@ -245,7 +245,7 @@ How might different users view this profile page requirement differently?
 
 Ask the AI to expand terse requirements into detailed specifications:
 
-```
+```text
 The requirement is: "Add sorting functionality to the user table."
 
 Can you expand this into a comprehensive specification including:
@@ -260,7 +260,7 @@ Can you expand this into a comprehensive specification including:
 
 Use AI to compare different interpretations of ambiguous requirements:
 
-```
+```text
 The requirement "ensure the application is responsive" could be interpreted in two ways:
 1. The UI should adapt to different screen sizes
 2. The application should respond quickly to user interactions

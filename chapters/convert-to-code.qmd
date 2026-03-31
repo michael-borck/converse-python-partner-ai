@@ -22,7 +22,7 @@ This incremental approach ensures that you maintain control of the implementatio
 
 Rather than converting all pseudocode at once, implement in manageable chunks:
 
-```
+```text
 // Pseudocode
 FUNCTION findLongestPalindrome(string)
     FUNCTION expandAroundCenter(left, right)
@@ -480,7 +480,7 @@ Let's apply Step 5 to our ongoing example of finding the longest palindromic sub
 
 Starting with our pseudocode from the previous chapter:
 
-```
+```text
 FUNCTION findLongestPalindromicSubstring(string)
     IF string is empty THEN
         RETURN empty string

@@ -147,13 +147,18 @@ In this step, we'd manually process a small sample of the data to understand the
 **Human work:**
 
 Sample data (5 transactions):
-```
-transaction_id,customer_id,timestamp,product_categories,amount,payment_method,store_location
-T1001,C1,2023-01-15 14:30:00,"electronics,accessories",120.50,credit,store1
-T1002,C2,2023-01-15 15:45:00,"groceries,dairy,produce",65.75,debit,store2
-T1003,C1,2023-01-17 10:15:00,"electronics,videogames",210.99,credit,store1
-T1004,C3,2023-01-18 09:30:00,"dairy,produce,meat",95.30,cash,store2
-T1005,C2,2023-01-20 16:20:00,"groceries,dairy,bakery",45.60,debit,store2
+```text
+id,cust,date,categories,amt,pay,store
+T1001,C1,2023-01-15,"electronics,accessories",
+  120.50,credit,store1
+T1002,C2,2023-01-15,"groceries,dairy,produce",
+  65.75,debit,store2
+T1003,C1,2023-01-17,"electronics,videogames",
+  210.99,credit,store1
+T1004,C3,2023-01-18,"dairy,produce,meat",
+  95.30,cash,store2
+T1005,C2,2023-01-20,"groceries,dairy,bakery",
+  45.60,debit,store2
 ```
 
 To find product combinations:
@@ -325,7 +330,7 @@ FUNCTION main(input_file, output_dir):
     SAVE_PNG(bar_chart, output_dir + "/top_combinations.png")
     SAVE_PNG(line_chart, output_dir + "/monthly_trends.png")
     SAVE_PNG(heatmap, output_dir + "/hourly_patterns.png")
-```
+```text
 
 Does this pseudocode cover all the necessary steps for our data analysis pipeline? Are there any inefficiencies or improvements you would suggest?
 ```
@@ -1119,7 +1124,7 @@ def fetch_weather_data(location, units):
 ```
 
 #### Refinement Process Prompt
-```
+```text
 The fetch_weather_data() function needs improvement. It doesn't handle errors or validate the data. How can I make it more robust to:
 
 1. Handle connection errors

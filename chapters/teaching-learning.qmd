@@ -67,7 +67,7 @@ Instead, design assignments that incorporate AI collaboration explicitly:
 These assignments emphasise the skill of effective prompting:
 
 **Example assignment:**
-```
+```text
 Topic: Sorting Algorithms
 
 Your task is to implement a merge sort algorithm in Python. Instead of
@@ -95,7 +95,7 @@ This example from an educational setting shows how to guide students through int
 > - Handles edge cases (e.g., empty lists, invalid inputs)
 
 **Step 1: Start Simple**
-```
+```text
 "Can you help me write a Python program to store student names and their test scores, and print their average?"
 ```
 
@@ -113,7 +113,7 @@ for name, scores in students.items():
 ```
 
 **Step 2: Add a Function**
-```
+```text
 "Can you turn the average calculation into a function?"
 ```
 
@@ -127,7 +127,7 @@ for name, scores in students.items():
 ```
 
 **Step 3: Improve Robustness**
-```
+```text
 "What happens if a student has no scores? Can you fix that?"
 ```
 
@@ -151,7 +151,7 @@ This guided approach teaches students to:
 These assignments focus on critical evaluation of AI-generated code:
 
 **Example assignment:**
-```
+```text
 Topic: Error Handling
 
 You are provided with an AI-generated function that processes user
@@ -171,7 +171,7 @@ Requirements:
 These assignments emphasise exploring multiple approaches:
 
 **Example assignment:**
-```
+```text
 Topic: Data Structures
 
 Use an AI assistant to implement three different data structures for
@@ -191,7 +191,7 @@ Requirements:
 These assignments focus on the development process rather than just the final code:
 
 **Example assignment:**
-```
+```text
 Topic: API Development
 
 Create a RESTful API for a library management system, documenting your

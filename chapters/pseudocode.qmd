@@ -25,7 +25,7 @@ While pseudocode isn't standardised, these conventions enhance clarity:
 
 #### Control Structures
 
-```
+```text
 IF condition THEN
     action1
 ELSE
@@ -43,7 +43,7 @@ END WHILE
 
 #### Function Definitions
 
-```
+```text
 FUNCTION name(parameters)
     actions
     RETURN value
@@ -52,7 +52,7 @@ END FUNCTION
 
 #### Variable Operations
 
-```
+```text
 SET variable TO value
 INCREMENT counter
 ADD item TO collection
@@ -60,7 +60,7 @@ ADD item TO collection
 
 #### Input/Output
 
-```
+```text
 READ input FROM user
 DISPLAY message
 WRITE data TO file
@@ -109,7 +109,7 @@ Key features of SudoLang include:
 
 A simple example in SudoLang:
 
-```
+```text
 function sortUsersByAge({ users }) {
   return users.sort(by: user => user.age)
 }
@@ -433,7 +433,7 @@ Pseudocode should eventually lead to a concrete implementation plan, outlining h
 
 Once the core logic is established in pseudocode, gradually add implementation-specific details:
 
-```
+```text
 // Initial pseudocode
 FOR each character in string
     check for palindromes centered at this character
@@ -497,7 +497,7 @@ def expand_around_center(s: str, left: int, right: int) -> tuple[int, int]:
 
 Use pseudocode to identify the test cases needed for comprehensive coverage:
 
-```
+```text
 TEST CASES:
 1. Empty string -> should return empty string
 2. Single character -> should return that character

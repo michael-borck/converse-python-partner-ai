@@ -96,7 +96,7 @@ Let's see how delegation and conversation differ in practice.
 
 **Delegation approach:**
 
-```
+```text
 Human: Write a Python function that calculates total price with tax and discounts.
 
 AI: [Generates function - works for simple cases but what about negative
@@ -105,7 +105,7 @@ AI: [Generates function - works for simple cases but what about negative
 
 **Conversation approach:**
 
-```
+```text
 Human: I need to calculate total price with tax and discounts. Before we
        write code, what business rules should I consider?
 
