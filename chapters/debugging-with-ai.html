@@ -532,29 +532,43 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#common-debugging-scenarios" id="toc-common-debugging-scenarios" class="nav-link active" data-scroll-target="#common-debugging-scenarios"><span class="header-section-number">12.1</span> Common Debugging Scenarios</a>
   <ul class="collapse">
   <li><a href="#syntax-errors" id="toc-syntax-errors" class="nav-link" data-scroll-target="#syntax-errors"><span class="header-section-number">12.1.1</span> Syntax Errors</a></li>
-  <li><a href="#the-hypothesis-testing-approach" id="toc-the-hypothesis-testing-approach" class="nav-link" data-scroll-target="#the-hypothesis-testing-approach"><span class="header-section-number">12.1.2</span> The Hypothesis Testing Approach</a></li>
-  <li><a href="#the-comparative-analysis-approach" id="toc-the-comparative-analysis-approach" class="nav-link" data-scroll-target="#the-comparative-analysis-approach"><span class="header-section-number">12.1.3</span> The Comparative Analysis Approach</a></li>
+  <li><a href="#logic-errors" id="toc-logic-errors" class="nav-link" data-scroll-target="#logic-errors"><span class="header-section-number">12.1.2</span> Logic Errors</a></li>
+  <li><a href="#runtime-errors" id="toc-runtime-errors" class="nav-link" data-scroll-target="#runtime-errors"><span class="header-section-number">12.1.3</span> Runtime Errors</a></li>
+  <li><a href="#performance-issues" id="toc-performance-issues" class="nav-link" data-scroll-target="#performance-issues"><span class="header-section-number">12.1.4</span> Performance Issues</a></li>
   </ul></li>
-  <li><a href="#understanding-error-messages-with-ai" id="toc-understanding-error-messages-with-ai" class="nav-link" data-scroll-target="#understanding-error-messages-with-ai"><span class="header-section-number">12.2</span> Understanding Error Messages with AI</a>
+  <li><a href="#prompt-templates-for-debugging" id="toc-prompt-templates-for-debugging" class="nav-link" data-scroll-target="#prompt-templates-for-debugging"><span class="header-section-number">12.2</span> Prompt Templates for Debugging</a>
   <ul class="collapse">
-  <li><a href="#anatomy-of-error-messages" id="toc-anatomy-of-error-messages" class="nav-link" data-scroll-target="#anatomy-of-error-messages"><span class="header-section-number">12.2.1</span> Anatomy of Error Messages</a></li>
-  <li><a href="#common-error-patterns" id="toc-common-error-patterns" class="nav-link" data-scroll-target="#common-error-patterns"><span class="header-section-number">12.2.2</span> Common Error Patterns</a></li>
+  <li><a href="#error-diagnosis-template" id="toc-error-diagnosis-template" class="nav-link" data-scroll-target="#error-diagnosis-template"><span class="header-section-number">12.2.1</span> Error Diagnosis Template</a></li>
+  <li><a href="#the-hypothesis-testing-approach" id="toc-the-hypothesis-testing-approach" class="nav-link" data-scroll-target="#the-hypothesis-testing-approach"><span class="header-section-number">12.2.2</span> The Hypothesis Testing Approach</a></li>
+  <li><a href="#the-comparative-analysis-approach" id="toc-the-comparative-analysis-approach" class="nav-link" data-scroll-target="#the-comparative-analysis-approach"><span class="header-section-number">12.2.3</span> The Comparative Analysis Approach</a></li>
   </ul></li>
-  <li><a href="#debugging-strategies-with-ai" id="toc-debugging-strategies-with-ai" class="nav-link" data-scroll-target="#debugging-strategies-with-ai"><span class="header-section-number">12.3</span> Debugging Strategies with AI</a>
+  <li><a href="#understanding-error-messages-with-ai" id="toc-understanding-error-messages-with-ai" class="nav-link" data-scroll-target="#understanding-error-messages-with-ai"><span class="header-section-number">12.3</span> Understanding Error Messages with AI</a>
   <ul class="collapse">
-  <li><a href="#rubber-duck-debugging" id="toc-rubber-duck-debugging" class="nav-link" data-scroll-target="#rubber-duck-debugging"><span class="header-section-number">12.3.1</span> Rubber Duck Debugging</a></li>
+  <li><a href="#anatomy-of-error-messages" id="toc-anatomy-of-error-messages" class="nav-link" data-scroll-target="#anatomy-of-error-messages"><span class="header-section-number">12.3.1</span> Anatomy of Error Messages</a></li>
+  <li><a href="#common-error-patterns" id="toc-common-error-patterns" class="nav-link" data-scroll-target="#common-error-patterns"><span class="header-section-number">12.3.2</span> Common Error Patterns</a></li>
   </ul></li>
-  <li><a href="#avoiding-debugging-pitfalls" id="toc-avoiding-debugging-pitfalls" class="nav-link" data-scroll-target="#avoiding-debugging-pitfalls"><span class="header-section-number">12.4</span> Avoiding Debugging Pitfalls</a>
+  <li><a href="#debugging-strategies-with-ai" id="toc-debugging-strategies-with-ai" class="nav-link" data-scroll-target="#debugging-strategies-with-ai"><span class="header-section-number">12.4</span> Debugging Strategies with AI</a>
   <ul class="collapse">
-  <li><a href="#the-xy-problem" id="toc-the-xy-problem" class="nav-link" data-scroll-target="#the-xy-problem"><span class="header-section-number">12.4.1</span> The XY Problem</a></li>
-  <li><a href="#the-correlation-causation-trap" id="toc-the-correlation-causation-trap" class="nav-link" data-scroll-target="#the-correlation-causation-trap"><span class="header-section-number">12.4.2</span> The Correlation ≠ Causation Trap</a></li>
-  <li><a href="#the-bandage-solution" id="toc-the-bandage-solution" class="nav-link" data-scroll-target="#the-bandage-solution"><span class="header-section-number">12.4.3</span> The Bandage Solution</a></li>
-  <li><a href="#tracing-execution" id="toc-tracing-execution" class="nav-link" data-scroll-target="#tracing-execution"><span class="header-section-number">12.4.4</span> Tracing Execution</a></li>
-  <li><a href="#debugging-the-test-case" id="toc-debugging-the-test-case" class="nav-link" data-scroll-target="#debugging-the-test-case"><span class="header-section-number">12.4.5</span> Debugging the Test Case</a></li>
-  <li><a href="#identifying-the-root-cause" id="toc-identifying-the-root-cause" class="nav-link" data-scroll-target="#identifying-the-root-cause"><span class="header-section-number">12.4.6</span> Identifying the Root Cause</a></li>
-  <li><a href="#resolution" id="toc-resolution" class="nav-link" data-scroll-target="#resolution"><span class="header-section-number">12.4.7</span> Resolution</a></li>
+  <li><a href="#rubber-duck-debugging" id="toc-rubber-duck-debugging" class="nav-link" data-scroll-target="#rubber-duck-debugging"><span class="header-section-number">12.4.1</span> Rubber Duck Debugging</a></li>
+  <li><a href="#print-debugging-with-ai" id="toc-print-debugging-with-ai" class="nav-link" data-scroll-target="#print-debugging-with-ai"><span class="header-section-number">12.4.2</span> Print Debugging with AI</a></li>
+  <li><a href="#root-cause-analysis" id="toc-root-cause-analysis" class="nav-link" data-scroll-target="#root-cause-analysis"><span class="header-section-number">12.4.3</span> Root Cause Analysis</a></li>
+  <li><a href="#debugging-ai-generated-code" id="toc-debugging-ai-generated-code" class="nav-link" data-scroll-target="#debugging-ai-generated-code"><span class="header-section-number">12.4.4</span> Debugging AI-Generated Code</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">12.5</span> Key Takeaways</a></li>
+  <li><a href="#avoiding-debugging-pitfalls" id="toc-avoiding-debugging-pitfalls" class="nav-link" data-scroll-target="#avoiding-debugging-pitfalls"><span class="header-section-number">12.5</span> Avoiding Debugging Pitfalls</a>
+  <ul class="collapse">
+  <li><a href="#the-xy-problem" id="toc-the-xy-problem" class="nav-link" data-scroll-target="#the-xy-problem"><span class="header-section-number">12.5.1</span> The XY Problem</a></li>
+  <li><a href="#the-correlation-causation-trap" id="toc-the-correlation-causation-trap" class="nav-link" data-scroll-target="#the-correlation-causation-trap"><span class="header-section-number">12.5.2</span> The Correlation ≠ Causation Trap</a></li>
+  <li><a href="#the-bandage-solution" id="toc-the-bandage-solution" class="nav-link" data-scroll-target="#the-bandage-solution"><span class="header-section-number">12.5.3</span> The Bandage Solution</a></li>
+  </ul></li>
+  <li><a href="#case-study-debugging-a-complex-issue" id="toc-case-study-debugging-a-complex-issue" class="nav-link" data-scroll-target="#case-study-debugging-a-complex-issue"><span class="header-section-number">12.6</span> Case Study: Debugging a Complex Issue</a>
+  <ul class="collapse">
+  <li><a href="#initial-problem-statement" id="toc-initial-problem-statement" class="nav-link" data-scroll-target="#initial-problem-statement"><span class="header-section-number">12.6.1</span> Initial Problem Statement</a></li>
+  <li><a href="#tracing-execution" id="toc-tracing-execution" class="nav-link" data-scroll-target="#tracing-execution"><span class="header-section-number">12.6.2</span> Tracing Execution</a></li>
+  <li><a href="#debugging-the-test-case" id="toc-debugging-the-test-case" class="nav-link" data-scroll-target="#debugging-the-test-case"><span class="header-section-number">12.6.3</span> Debugging the Test Case</a></li>
+  <li><a href="#identifying-the-root-cause" id="toc-identifying-the-root-cause" class="nav-link" data-scroll-target="#identifying-the-root-cause"><span class="header-section-number">12.6.4</span> Identifying the Root Cause</a></li>
+  <li><a href="#resolution" id="toc-resolution" class="nav-link" data-scroll-target="#resolution"><span class="header-section-number">12.6.5</span> Resolution</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">12.7</span> Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/debugging-with-ai.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -592,95 +606,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Syntax errors occur when code violates the rules of the programming language. These are typically the easiest errors to fix, as they’re caught by compilers or interpreters before the code runs.</p>
 <p>AI assistants can: - Explain cryptic error messages in plain language - Identify the exact location of syntax errors - Suggest corrections based on context</p>
 <p><strong>Example prompt:</strong></p>
-<pre><code>I'm getting this syntax error in my Python code:
+<pre class="text"><code>I'm getting this syntax error in my Python code:
 
-```python
 def calculate_total(items):
     total = 0
     for item in items
         total += item.price
-    return total</code></pre>
-<p>SyntaxError: invalid syntax</p>
-<p>Can you identify what’s wrong and how to fix it?</p>
-<pre><code>
-### Logic Errors
+    return total
 
-Logic errors occur when the code runs without errors but doesn't produce the expected results. These are often more difficult to identify and fix than syntax errors.
+SyntaxError: invalid syntax
 
-AI assistants can:
-- Trace through code execution step by step
-- Identify flawed assumptions or logical gaps
-- Suggest alternative approaches
+Can you identify what's wrong and how to fix it?</code></pre>
+</section>
+<section id="logic-errors" class="level3" data-number="12.1.2">
+<h3 data-number="12.1.2" class="anchored" data-anchor-id="logic-errors"><span class="header-section-number">12.1.2</span> Logic Errors</h3>
+<p>Logic errors occur when the code runs without errors but doesn’t produce the expected results. These are often more difficult to identify and fix than syntax errors.</p>
+<p>AI assistants can: - Trace through code execution step by step - Identify flawed assumptions or logical gaps - Suggest alternative approaches</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>My binary search function seems to work for some cases but fails for others:
 
-**Example prompt:**</code></pre>
-<p>My binary search function seems to work for some cases but fails for others:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_search(arr, target):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    left <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    right <span class="op">=</span> <span class="bu">len</span>(arr) <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> left <span class="op">&lt;=</span> right:</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        mid <span class="op">=</span> (left <span class="op">+</span> right) <span class="op">//</span> <span class="dv">2</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> arr[mid] <span class="op">==</span> target:</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> mid</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> arr[mid] <span class="op">&lt;</span> target:</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>            left <span class="op">=</span> mid <span class="op">+</span> <span class="dv">1</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>            right <span class="op">=</span> mid <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It correctly finds 5 in [1, 3, 5, 7, 9], but when I search for 7 in [1, 3, 5, 7, 9], it returns -1 instead of 3. Can you help me find the bug?</p>
-<pre><code>
-### Runtime Errors
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+    
+    while left &lt;= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] &lt; target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return -1
 
-Runtime errors occur during program execution and cause the program to terminate unexpectedly. These include exceptions, segmentation faults, and other crashes.
+It correctly finds 5 in [1, 3, 5, 7, 9], but when I search for 7 in [1, 3, 5, 7, 9], it returns -1 instead of 3. Can you help me find the bug?</code></pre>
+</section>
+<section id="runtime-errors" class="level3" data-number="12.1.3">
+<h3 data-number="12.1.3" class="anchored" data-anchor-id="runtime-errors"><span class="header-section-number">12.1.3</span> Runtime Errors</h3>
+<p>Runtime errors occur during program execution and cause the program to terminate unexpectedly. These include exceptions, segmentation faults, and other crashes.</p>
+<p>AI assistants can: - analyse error messages and stack traces - Identify common causes for specific exceptions - Suggest defensive programming techniques to prevent crashes</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>My code is throwing the following exception:
 
-AI assistants can:
-- analyse error messages and stack traces
-- Identify common causes for specific exceptions
-- Suggest defensive programming techniques to prevent crashes
+IndexError: list index out of range
 
-**Example prompt:**</code></pre>
-<p>My code is throwing the following exception:</p>
-<p>IndexError: list index out of range</p>
-<p>Here’s the relevant function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_data(data_list):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_list)):</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        result.append(data_list[i] <span class="op">+</span> data_list[i<span class="op">+</span><span class="dv">1</span>])</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It crashes when I call it with process_data([1, 2, 3, 4]). Why is this happening and how can I fix it?</p>
-<pre><code>
-### Performance Issues
+Here's the relevant function:
 
-Performance issues occur when code runs correctly but takes too long to execute or consumes excessive resources.
+def process_data(data_list):
+    result = []
+    for i in range(len(data_list)):
+        result.append(data_list[i] + data_list[i+1])
+    return result
 
-AI assistants can:
-- Identify performance bottlenecks
-- Suggest algorithmic improvements
-- Recommend more efficient data structures or libraries
+It crashes when I call it with process_data([1, 2, 3, 4]). Why is this happening and how can I fix it?</code></pre>
+</section>
+<section id="performance-issues" class="level3" data-number="12.1.4">
+<h3 data-number="12.1.4" class="anchored" data-anchor-id="performance-issues"><span class="header-section-number">12.1.4</span> Performance Issues</h3>
+<p>Performance issues occur when code runs correctly but takes too long to execute or consumes excessive resources.</p>
+<p>AI assistants can: - Identify performance bottlenecks - Suggest algorithmic improvements - Recommend more efficient data structures or libraries</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>My function to find duplicate values in a list becomes extremely slow with large inputs:
 
-**Example prompt:**</code></pre>
-<p>My function to find duplicate values in a list becomes extremely slow with large inputs:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_duplicates(values):</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    duplicates <span class="op">=</span> []</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(values)):</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(i<span class="op">+</span><span class="dv">1</span>, <span class="bu">len</span>(values)):</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> values[i] <span class="op">==</span> values[j] <span class="kw">and</span> values[i] <span class="kw">not</span> <span class="kw">in</span> duplicates:</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>                duplicates.append(values[i])</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> duplicates</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>How can I optimise this to handle lists with thousands of items efficiently?</p>
-<pre><code>
-## Prompt Templates for Debugging
+def find_duplicates(values):
+    duplicates = []
+    for i in range(len(values)):
+        for j in range(i+1, len(values)):
+            if values[i] == values[j] and values[i] not in duplicates:
+                duplicates.append(values[i])
+    return duplicates
 
-### Error Diagnosis Template
+How can I optimise this to handle lists with thousands of items efficiently?</code></pre>
+</section>
+</section>
+<section id="prompt-templates-for-debugging" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="prompt-templates-for-debugging"><span class="header-section-number">12.2</span> Prompt Templates for Debugging</h2>
+<section id="error-diagnosis-template" class="level3" data-number="12.2.1">
+<h3 data-number="12.2.1" class="anchored" data-anchor-id="error-diagnosis-template"><span class="header-section-number">12.2.1</span> Error Diagnosis Template</h3>
+<p>When you encounter an error message:</p>
+<pre><code>I'm getting this error message:
 
-When you encounter an error message:
-</code></pre>
-<p>I’m getting this error message:</p>
-<p>[paste the complete error message including stack trace]</p>
-<p>From this code:</p>
-<pre class="[language]"><code>[paste the relevant code section]</code></pre>
+[paste the complete error message including stack trace]
+
+From this code:
+
+```[language]
+[paste the relevant code section]</code></pre>
 <ol type="1">
 <li>What is causing this error?</li>
 <li>How can I fix it?</li>
@@ -734,8 +746,8 @@ Can you identify the issue in this smaller example?</code></pre></li>
 Can you help me narrow down which part of the first half is problematic?</code></pre></li>
 </ol>
 </section>
-<section id="the-hypothesis-testing-approach" class="level3" data-number="12.1.2">
-<h3 data-number="12.1.2" class="anchored" data-anchor-id="the-hypothesis-testing-approach"><span class="header-section-number">12.1.2</span> The Hypothesis Testing Approach</h3>
+<section id="the-hypothesis-testing-approach" class="level3" data-number="12.2.2">
+<h3 data-number="12.2.2" class="anchored" data-anchor-id="the-hypothesis-testing-approach"><span class="header-section-number">12.2.2</span> The Hypothesis Testing Approach</h3>
 <p>Debugging by forming and testing specific hypotheses:</p>
 <ol type="1">
 <li><p><strong>Form a hypothesis</strong>:</p>
@@ -748,8 +760,8 @@ Does that seem like a plausible cause based on the symptoms?</code></pre></li>
 and I'm seeing [specific output]. What does this tell us?</code></pre></li>
 </ol>
 </section>
-<section id="the-comparative-analysis-approach" class="level3" data-number="12.1.3">
-<h3 data-number="12.1.3" class="anchored" data-anchor-id="the-comparative-analysis-approach"><span class="header-section-number">12.1.3</span> The Comparative Analysis Approach</h3>
+<section id="the-comparative-analysis-approach" class="level3" data-number="12.2.3">
+<h3 data-number="12.2.3" class="anchored" data-anchor-id="the-comparative-analysis-approach"><span class="header-section-number">12.2.3</span> The Comparative Analysis Approach</h3>
 <p>Debugging by comparing working and non-working code:</p>
 <ol type="1">
 <li><p><strong>Identify differences</strong>:</p>
@@ -774,11 +786,11 @@ What am I doing differently that could cause my issues?</code></pre></li>
 </ol>
 </section>
 </section>
-<section id="understanding-error-messages-with-ai" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="understanding-error-messages-with-ai"><span class="header-section-number">12.2</span> Understanding Error Messages with AI</h2>
+<section id="understanding-error-messages-with-ai" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="understanding-error-messages-with-ai"><span class="header-section-number">12.3</span> Understanding Error Messages with AI</h2>
 <p>Error messages can often be cryptic, especially for beginners. AI assistants can translate these messages into actionable information.</p>
-<section id="anatomy-of-error-messages" class="level3" data-number="12.2.1">
-<h3 data-number="12.2.1" class="anchored" data-anchor-id="anatomy-of-error-messages"><span class="header-section-number">12.2.1</span> Anatomy of Error Messages</h3>
+<section id="anatomy-of-error-messages" class="level3" data-number="12.3.1">
+<h3 data-number="12.3.1" class="anchored" data-anchor-id="anatomy-of-error-messages"><span class="header-section-number">12.3.1</span> Anatomy of Error Messages</h3>
 <p>When sharing error messages with AI, include:</p>
 <ol type="1">
 <li>The error type/name</li>
@@ -788,7 +800,7 @@ What am I doing differently that could cause my issues?</code></pre></li>
 <li>The context surrounding the error</li>
 </ol>
 <p><strong>Example prompt:</strong></p>
-<pre><code>I'm getting this error message, but I don't understand what it means:
+<pre class="text"><code>I'm getting this error message, but I don't understand what it means:
 
 TypeError: cannot unpack non-iterable int object
   File "my_script.py", line 42, in process_data
@@ -803,11 +815,11 @@ for data_point in processed_points:
 
 Can you explain what this error means and how to fix it?</code></pre>
 </section>
-<section id="common-error-patterns" class="level3" data-number="12.2.2">
-<h3 data-number="12.2.2" class="anchored" data-anchor-id="common-error-patterns"><span class="header-section-number">12.2.2</span> Common Error Patterns</h3>
+<section id="common-error-patterns" class="level3" data-number="12.3.2">
+<h3 data-number="12.3.2" class="anchored" data-anchor-id="common-error-patterns"><span class="header-section-number">12.3.2</span> Common Error Patterns</h3>
 <p>AI can help identify patterns in errors that might indicate systemic issues:</p>
 <p><strong>Example prompt:</strong></p>
-<pre><code>I keep getting different errors in different parts of my codebase, but they all seem related to type mismatches. Here are three recent examples:
+<pre class="text"><code>I keep getting different errors in different parts of my codebase, but they all seem related to type mismatches. Here are three recent examples:
 
 [Error 1 details]
 [Error 2 details]
@@ -816,15 +828,14 @@ Can you explain what this error means and how to fix it?</code></pre>
 Is there a common root cause that might explain all of these errors? Should I be looking for a specific pattern in my code?</code></pre>
 </section>
 </section>
-<section id="debugging-strategies-with-ai" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="debugging-strategies-with-ai"><span class="header-section-number">12.3</span> Debugging Strategies with AI</h2>
-<section id="rubber-duck-debugging" class="level3" data-number="12.3.1">
-<h3 data-number="12.3.1" class="anchored" data-anchor-id="rubber-duck-debugging"><span class="header-section-number">12.3.1</span> Rubber Duck Debugging</h3>
+<section id="debugging-strategies-with-ai" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="debugging-strategies-with-ai"><span class="header-section-number">12.4</span> Debugging Strategies with AI</h2>
+<section id="rubber-duck-debugging" class="level3" data-number="12.4.1">
+<h3 data-number="12.4.1" class="anchored" data-anchor-id="rubber-duck-debugging"><span class="header-section-number">12.4.1</span> Rubber Duck Debugging</h3>
 <p>Rubber duck debugging involves explaining your code line by line, which often helps you spot the issue yourself. AI can serve as an advanced “rubber duck” that can also respond with insights.</p>
 <p><strong>Example prompt:</strong></p>
-<pre><code>I'm going to walk through this function line by line to try to understand why it's not working. Please let me know if you spot any issues in my explanation:
+<pre class="text"><code>I'm going to walk through this function line by line to try to understand why it's not working. Please let me know if you spot any issues in my explanation:
 
-```python
 def merge_sorted_lists(list1, list2):
     result = []
     i = j = 0
@@ -844,90 +855,91 @@ def merge_sorted_lists(list1, list2):
     # And this should add any remaining elements from list2
     result.extend(list2)
     
-    return result</code></pre>
-<p>When I call this with [1, 3, 5] and [2, 4, 6], I expect [1, 2, 3, 4, 5, 6] but get [1, 2, 3, 4, 5, 6, 3, 5, 2, 4, 6]. What am I missing?</p>
-<pre><code>
-### Print Debugging with AI
+    return result
 
-Print debugging involves adding print statements to track variable values. AI can suggest strategic places to add these statements.
+When I call this with [1, 3, 5] and [2, 4, 6], I expect [1, 2, 3, 4, 5, 6] but get [1, 2, 3, 4, 5, 6, 3, 5, 2, 4, 6]. What am I missing?</code></pre>
+</section>
+<section id="print-debugging-with-ai" class="level3" data-number="12.4.2">
+<h3 data-number="12.4.2" class="anchored" data-anchor-id="print-debugging-with-ai"><span class="header-section-number">12.4.2</span> Print Debugging with AI</h3>
+<p>Print debugging involves adding print statements to track variable values. AI can suggest strategic places to add these statements.</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I suspect my recursive function is not terminating correctly. Where should I add print statements to debug it effectively?
 
-**Example prompt:**</code></pre>
-<p>I suspect my recursive function is not terminating correctly. Where should I add print statements to debug it effectively?</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(n):</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> n <span class="op">&lt;=</span> <span class="dv">1</span>:</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="dv">1</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> n <span class="op">*</span> factorial(n<span class="op">-</span><span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>It works for small inputs but crashes with large ones.</p>
-<pre><code>
-### Root Cause Analysis
+def factorial(n):
+    if n &lt;= 1:
+        return 1
+    else:
+        return n * factorial(n-1)
 
-AI can help trace errors back to their root causes:
+It works for small inputs but crashes with large ones.</code></pre>
+</section>
+<section id="root-cause-analysis" class="level3" data-number="12.4.3">
+<h3 data-number="12.4.3" class="anchored" data-anchor-id="root-cause-analysis"><span class="header-section-number">12.4.3</span> Root Cause Analysis</h3>
+<p>AI can help trace errors back to their root causes:</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>My web application is throwing this error:
 
-**Example prompt:**</code></pre>
-<p>My web application is throwing this error:</p>
-<p>DatabaseError: too many database connections</p>
-<p>This happens sporadically, usually during peak usage hours. The database connection code looks like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_db_connection():</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> psycopg2.<span class="ex">connect</span>(DATABASE_URL)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_user_data(user_id):</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    conn <span class="op">=</span> get_db_connection()</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    cursor <span class="op">=</span> conn.cursor()</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    cursor.execute(<span class="st">"SELECT * FROM users WHERE id = </span><span class="sc">%s</span><span class="st">"</span>, (user_id,))</span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> cursor.fetchone()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>What could be the root cause, and how can I fix it?</p>
-<pre><code>
-### Debugging AI-Generated Code
+DatabaseError: too many database connections
 
-A common scenario is debugging code that AI has generated but contains subtle errors. This situation provides excellent learning opportunities by requiring you to critically analyse and fix issues.
+This happens sporadically, usually during peak usage hours. The database connection code looks like this:
 
-**Example: Debugging a Gradebook Program**
+def get_db_connection():
+    return psycopg2.connect(DATABASE_URL)
 
-Consider this AI-generated code for a student gradebook:
+def fetch_user_data(user_id):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE id = %s", (user_id,))
+    return cursor.fetchone()
 
-```python
-students = {
-    "Alice": "85, 90, 78",
-    "Bob": "70, 88, 92"
-}
-
-for name in students:
-    avg = sum(students[name]) / len(students[name])
-    print(f"{name}: {avg}")</code></pre>
+What could be the root cause, and how can I fix it?</code></pre>
+</section>
+<section id="debugging-ai-generated-code" class="level3" data-number="12.4.4">
+<h3 data-number="12.4.4" class="anchored" data-anchor-id="debugging-ai-generated-code"><span class="header-section-number">12.4.4</span> Debugging AI-Generated Code</h3>
+<p>A common scenario is debugging code that AI has generated but contains subtle errors. This situation provides excellent learning opportunities by requiring you to critically analyse and fix issues.</p>
+<p><strong>Example: Debugging a Gradebook Program</strong></p>
+<p>Consider this AI-generated code for a student gradebook:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> {</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Alice"</span>: <span class="st">"85, 90, 78"</span>,</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bob"</span>: <span class="st">"70, 88, 92"</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> students:</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> <span class="bu">sum</span>(students[name]) <span class="op">/</span> <span class="bu">len</span>(students[name])</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>avg<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Analysis of Errors:</strong></p>
 <p>This code contains several issues: 1. The scores are stored as strings rather than numbers 2. The <code>sum()</code> function won’t work on strings 3. Using string length for division will give incorrect results</p>
 <p><strong>Effective Debugging Prompt:</strong></p>
-<pre><code>Your code stores scores as strings. Can you fix it so each student has a list of numbers instead?</code></pre>
+<pre class="text"><code>Your code stores scores as strings. Can you fix it so each student has a list of numbers instead?</code></pre>
 <p><strong>AI Response (improved but still with issues):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> {</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Alice"</span>: [<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>],</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bob"</span>: [<span class="dv">70</span>, <span class="dv">88</span>, <span class="dv">92</span>]</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> students:</span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> score <span class="kw">in</span> students[name]:</span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> score</span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> total <span class="op">/</span> <span class="dv">3</span></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> average is </span><span class="sc">{</span>avg<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>students <span class="op">=</span> {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Alice"</span>: [<span class="dv">85</span>, <span class="dv">90</span>, <span class="dv">78</span>],</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Bob"</span>: [<span class="dv">70</span>, <span class="dv">88</span>, <span class="dv">92</span>]</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name <span class="kw">in</span> students:</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>    total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> score <span class="kw">in</span> students[name]:</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> score</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> total <span class="op">/</span> <span class="dv">3</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> average is </span><span class="sc">{</span>avg<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Further Analysis:</strong> The code now works but has a critical flaw: it assumes each student has exactly 3 scores.</p>
 <p><strong>Follow-up Debugging Prompt:</strong></p>
-<pre><code>Can you make a function to calculate the average of any list of scores, instead of assuming 3?</code></pre>
+<pre class="text"><code>Can you make a function to calculate the average of any list of scores, instead of assuming 3?</code></pre>
 <p><strong>AI Response (further improved):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average(scores):</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(scores) <span class="op">/</span> <span class="bu">len</span>(scores)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, scores <span class="kw">in</span> students.items():</span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> average: </span><span class="sc">{</span>average(scores)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> average(scores):</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">sum</span>(scores) <span class="op">/</span> <span class="bu">len</span>(scores)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, scores <span class="kw">in</span> students.items():</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>name<span class="sc">}</span><span class="ss"> average: </span><span class="sc">{</span>average(scores)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This iterative debugging process demonstrates key skills: 1. Identifying specific errors in AI-generated code 2. Creating targeted prompts to address those errors 3. Iteratively improving the solution through focused feedback 4. Thinking critically about assumptions and edge cases</p>
 <p>This approach is particularly valuable for learning, as it requires understanding both the problem and the implementation details rather than just accepting whatever code the AI generates.</p>
 </section>
 </section>
-<section id="avoiding-debugging-pitfalls" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="avoiding-debugging-pitfalls"><span class="header-section-number">12.4</span> Avoiding Debugging Pitfalls</h2>
-<section id="the-xy-problem" class="level3" data-number="12.4.1">
-<h3 data-number="12.4.1" class="anchored" data-anchor-id="the-xy-problem"><span class="header-section-number">12.4.1</span> The XY Problem</h3>
+<section id="avoiding-debugging-pitfalls" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="avoiding-debugging-pitfalls"><span class="header-section-number">12.5</span> Avoiding Debugging Pitfalls</h2>
+<section id="the-xy-problem" class="level3" data-number="12.5.1">
+<h3 data-number="12.5.1" class="anchored" data-anchor-id="the-xy-problem"><span class="header-section-number">12.5.1</span> The XY Problem</h3>
 <p>The XY Problem occurs when you ask about your attempted solution (Y) rather than your actual problem (X), leading to inefficient debugging. AI can help identify this pattern.</p>
 <p><strong>Wrong approach:</strong></p>
 <pre><code>How do I make this regex work for validating email addresses?
@@ -944,11 +956,11 @@ But it doesn't handle cases like:
 
 What's the best approach for validating email addresses, considering these requirements?</code></pre>
 </section>
-<section id="the-correlation-causation-trap" class="level3" data-number="12.4.2">
-<h3 data-number="12.4.2" class="anchored" data-anchor-id="the-correlation-causation-trap"><span class="header-section-number">12.4.2</span> The Correlation ≠ Causation Trap</h3>
+<section id="the-correlation-causation-trap" class="level3" data-number="12.5.2">
+<h3 data-number="12.5.2" class="anchored" data-anchor-id="the-correlation-causation-trap"><span class="header-section-number">12.5.2</span> The Correlation ≠ Causation Trap</h3>
 <p>This occurs when you attribute a bug to something that happened around the same time, but isn’t actually the cause.</p>
 <p><strong>Example:</strong></p>
-<pre><code>After adding a new CSS file to my project, my JavaScript form validation stopped working. 
+<pre class="text"><code>After adding a new CSS file to my project, my JavaScript form validation stopped working. 
 Here's the new CSS I added:
 
 [CSS code]
@@ -968,13 +980,12 @@ How could the CSS be breaking my JavaScript?</code></pre>
 
 Let's examine your JavaScript for the actual issue...</code></pre>
 </section>
-<section id="the-bandage-solution" class="level3" data-number="12.4.3">
-<h3 data-number="12.4.3" class="anchored" data-anchor-id="the-bandage-solution"><span class="header-section-number">12.4.3</span> The Bandage Solution</h3>
+<section id="the-bandage-solution" class="level3" data-number="12.5.3">
+<h3 data-number="12.5.3" class="anchored" data-anchor-id="the-bandage-solution"><span class="header-section-number">12.5.3</span> The Bandage Solution</h3>
 <p>This occurs when you fix the symptoms of a bug rather than the underlying cause. AI can help identify deeper issues.</p>
 <p><strong>Example prompt:</strong></p>
-<pre><code>My function sometimes returns NaN, so I added a check to return 0 instead when that happens:
+<pre class="text"><code>My function sometimes returns NaN, so I added a check to return 0 instead when that happens:
 
-```javascript
 function calculateAverage(numbers) {
   let sum = 0;
   for (let i = 0; i &lt; numbers.length; i++) {
@@ -988,21 +999,18 @@ function calculateAverage(numbers) {
   }
   
   return average;
-}</code></pre>
-<p>This fixes the immediate problem, but is there a better approach?</p>
-<pre><code>
-## Case Study: Debugging a Complex Issue
+}
 
-Let's walk through a complete debugging process using AI assistance:
-
-### Initial Problem Statement
-
-
-
-**You:**
-
-```text
-My sorting algorithm isn't working properly. It's supposed to sort an array of numbers in ascending order, but some arrays end up partially sorted:
+This fixes the immediate problem, but is there a better approach?</code></pre>
+</section>
+</section>
+<section id="case-study-debugging-a-complex-issue" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="case-study-debugging-a-complex-issue"><span class="header-section-number">12.6</span> Case Study: Debugging a Complex Issue</h2>
+<p>Let’s walk through a complete debugging process using AI assistance:</p>
+<section id="initial-problem-statement" class="level3" data-number="12.6.1">
+<h3 data-number="12.6.1" class="anchored" data-anchor-id="initial-problem-statement"><span class="header-section-number">12.6.1</span> Initial Problem Statement</h3>
+<p><strong>You:</strong></p>
+<pre class="text"><code>My sorting algorithm isn't working properly. It's supposed to sort an array of numbers in ascending order, but some arrays end up partially sorted:
 
 def bubble_sort(arr):
     n = len(arr)
@@ -1016,8 +1024,8 @@ It works for [5, 3, 8, 1, 2], giving [1, 2, 3, 5, 8].
 But for [5, 3, 8, 1, 2, 9, 4], it gives [1, 2, 3, 5, 4, 8, 9].
 What's going wrong?</code></pre>
 </section>
-<section id="tracing-execution" class="level3" data-number="12.4.4">
-<h3 data-number="12.4.4" class="anchored" data-anchor-id="tracing-execution"><span class="header-section-number">12.4.4</span> Tracing Execution</h3>
+<section id="tracing-execution" class="level3" data-number="12.6.2">
+<h3 data-number="12.6.2" class="anchored" data-anchor-id="tracing-execution"><span class="header-section-number">12.6.2</span> Tracing Execution</h3>
 <p><strong>AI:</strong></p>
 <pre class="text"><code>Let me trace through the bubble sort algorithm step by step with the input [5, 3, 8, 1, 2, 9, 4].
 
@@ -1071,8 +1079,8 @@ It seems the algorithm is working correctly after all. The expected output for [
 
 There may be an issue elsewhere in your code, or perhaps there was a mistake in the observed output. Could you verify the output again, or provide more context about how you're calling and testing this function?</code></pre>
 </section>
-<section id="debugging-the-test-case" class="level3" data-number="12.4.5">
-<h3 data-number="12.4.5" class="anchored" data-anchor-id="debugging-the-test-case"><span class="header-section-number">12.4.5</span> Debugging the Test Case</h3>
+<section id="debugging-the-test-case" class="level3" data-number="12.6.3">
+<h3 data-number="12.6.3" class="anchored" data-anchor-id="debugging-the-test-case"><span class="header-section-number">12.6.3</span> Debugging the Test Case</h3>
 <p><strong>You:</strong></p>
 <pre class="text"><code>You're right, I made a mistake in reporting the output. Let me recheck... 
 
@@ -1089,8 +1097,8 @@ def process_data(data_sets):
 
 And I'm still seeing some incorrect sorts in the output. Could there be an issue with how I'm calling it?</code></pre>
 </section>
-<section id="identifying-the-root-cause" class="level3" data-number="12.4.6">
-<h3 data-number="12.4.6" class="anchored" data-anchor-id="identifying-the-root-cause"><span class="header-section-number">12.4.6</span> Identifying the Root Cause</h3>
+<section id="identifying-the-root-cause" class="level3" data-number="12.6.4">
+<h3 data-number="12.6.4" class="anchored" data-anchor-id="identifying-the-root-cause"><span class="header-section-number">12.6.4</span> Identifying the Root Cause</h3>
 <p><strong>AI:</strong></p>
 <pre class="text"><code>Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
 
@@ -1131,8 +1139,8 @@ Can you share:
 2. How you're verifying the results (e.g., printing them, displaying in UI)
 3. Any processing that happens to the results after sorting</code></pre>
 </section>
-<section id="resolution" class="level3" data-number="12.4.7">
-<h3 data-number="12.4.7" class="anchored" data-anchor-id="resolution"><span class="header-section-number">12.4.7</span> Resolution</h3>
+<section id="resolution" class="level3" data-number="12.6.5">
+<h3 data-number="12.6.5" class="anchored" data-anchor-id="resolution"><span class="header-section-number">12.6.5</span> Resolution</h3>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I think I found the issue. In another part of the code, there's a function that modifies the results after sorting:
 
@@ -1149,8 +1157,8 @@ This is being called on the results from process_data! It's intentionally un-sor
 Thank you for helping me trace through the algorithm; it confirmed that my bubble sort is correct and led me to look elsewhere for the issue.</code></pre>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">12.5</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">12.7</span> Key Takeaways</h2>
 <ul>
 <li>Effective debugging with AI requires clear communication about errors and context</li>
 <li>Different debugging scenarios call for different prompting strategies</li>

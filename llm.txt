@@ -2881,12 +2881,6 @@ AI assistants can:
 - Suggest corrections based on context
 
 Example prompt:
-python
-def calculate_total(items):
-    total = 0
-    for item in items
-        total += item.price
-    return total
 
 ### Logic Errors
 
@@ -2898,12 +2892,267 @@ AI assistants can:
 - Suggest alternative approaches
 
 Example prompt:
-python
-def binary_search(arr, target):
-    left = 0
-    right = len(arr) - 1
-    
-    while left  data_list[i][j+1] * 2:  # Highlight elements 2x larger than next
+
+### Runtime Errors
+
+Runtime errors occur during program execution and cause the program to terminate unexpectedly. These include exceptions, segmentation faults, and other crashes.
+
+AI assistants can:
+- analyse error messages and stack traces
+- Identify common causes for specific exceptions
+- Suggest defensive programming techniques to prevent crashes
+
+Example prompt:
+
+### Performance Issues
+
+Performance issues occur when code runs correctly but takes too long to execute or consumes excessive resources.
+
+AI assistants can:
+- Identify performance bottlenecks
+- Suggest algorithmic improvements
+- Recommend more efficient data structures or libraries
+
+Example prompt:
+
+## Prompt Templates for Debugging
+
+### Error Diagnosis Template
+
+When you encounter an error message:
+
+[language]
+[paste the relevant code section]
+
+### Code Review Template
+
+When your code runs but doesn't behave as expected:
+
+[language]
+[paste the code]
+
+### Step-by-Step Tracing Template
+
+For understanding exactly where logic goes wrong:
+
+[language]
+[paste function code]
+
+### Performance Debugging Template
+
+For optimising slow code:
+
+[language]
+[paste code]
+
+## Effective Debugging Workflows
+
+### The Divide and Conquer Approach
+
+When debugging complex issues, breaking the problem down is often the most effective strategy:
+
+1. Isolate the problem:
+   
+
+2. Create a minimal reproduction:
+   
+
+3. Binary search the code:
+   
+
+### The Hypothesis Testing Approach
+
+Debugging by forming and testing specific hypotheses:
+
+1. Form a hypothesis:
+   
+
+2. Design a test:
+   
+
+3. Interpret results:
+   
+
+### The Comparative Analysis Approach
+
+Debugging by comparing working and non-working code:
+
+1. Identify differences:
+   
+
+2. Incremental changes:
+   
+
+3. Reference implementation:
+   
+
+## Understanding Error Messages with AI
+
+Error messages can often be cryptic, especially for beginners. AI assistants can translate these messages into actionable information.
+
+### Anatomy of Error Messages
+
+When sharing error messages with AI, include:
+
+1. The error type/name
+2. The error message
+3. The line number or location
+4. The stack trace (if available)
+5. The context surrounding the error
+
+Example prompt:
+
+### Common Error Patterns
+
+AI can help identify patterns in errors that might indicate systemic issues:
+
+Example prompt:
+
+## Debugging Strategies with AI
+
+### Rubber Duck Debugging
+
+Rubber duck debugging involves explaining your code line by line, which often helps you spot the issue yourself. AI can serve as an advanced "rubber duck" that can also respond with insights.
+
+Example prompt:
+
+### Print Debugging with AI
+
+Print debugging involves adding print statements to track variable values. AI can suggest strategic places to add these statements.
+
+Example prompt:
+
+### Root Cause Analysis
+
+AI can help trace errors back to their root causes:
+
+Example prompt:
+
+### Debugging AI-Generated Code
+
+A common scenario is debugging code that AI has generated but contains subtle errors. This situation provides excellent learning opportunities by requiring you to critically analyse and fix issues.
+
+Example: Debugging a Gradebook Program
+
+Consider this AI-generated code for a student gradebook:
+
+Analysis of Errors:
+
+This code contains several issues:
+1. The scores are stored as strings rather than numbers
+2. The `sum()` function won't work on strings
+3. Using string length for division will give incorrect results
+
+Effective Debugging Prompt:
+
+AI Response (improved but still with issues):
+
+Further Analysis:
+The code now works but has a critical flaw: it assumes each student has exactly 3 scores.
+
+Follow-up Debugging Prompt:
+
+AI Response (further improved):
+
+This iterative debugging process demonstrates key skills:
+1. Identifying specific errors in AI-generated code
+2. Creating targeted prompts to address those errors
+3. Iteratively improving the solution through focused feedback
+4. Thinking critically about assumptions and edge cases
+
+This approach is particularly valuable for learning, as it requires understanding both the problem and the implementation details rather than just accepting whatever code the AI generates.
+
+## Avoiding Debugging Pitfalls
+
+### The XY Problem
+
+The XY Problem occurs when you ask about your attempted solution (Y) rather than your actual problem (X), leading to inefficient debugging. AI can help identify this pattern.
+
+Wrong approach:
+
+Better approach:
+
+### The Correlation ≠ Causation Trap
+
+This occurs when you attribute a bug to something that happened around the same time, but isn't actually the cause.
+
+Example:
+
+AI:
+
+### The Bandage Solution
+
+This occurs when you fix the symptoms of a bug rather than the underlying cause. AI can help identify deeper issues.
+
+Example prompt:
+
+## Case Study: Debugging a Complex Issue
+
+Let's walk through a complete debugging process using AI assistance:
+
+### Initial Problem Statement
+
+You:
+
+### Tracing Execution
+
+AI:
+
+### Debugging the Test Case
+
+You:
+
+### Identifying the Root Cause
+
+AI:
+
+```text
+Based on your updated information, the bubble sort implementation itself appears to be working correctly. The issue might be in how it's being called or how the data is being processed within your larger application.
+
+Let's analyse the `process_data` function:
+
+def process_data(data_sets):
+    results = []
+    for data in data_sets:
+        sorted_data = bubble_sort(data.copy())
+        results.append(sorted_data)
+    return results
+
+This function:
+1. Takes a list of data sets
+2. Creates a copy of each data set
+3. Sorts the copy using bubble_sort
+4. Appends the sorted data to a results list
+5. Returns all results
+
+This approach seems correct. You're creating a copy of each data set before sorting, which is good practice to avoid modifying the original data.
+
+Here are some potential issues to check:
+
+1. Data type consistency: Are all elements in your arrays numbers? Sorting mixed types (like strings and numbers) can lead to unexpected results.
+
+2. Mutable objects: If your arrays contain mutable objects rather than simple numbers, the sorting might be affected by reference issues.
+
+3. Preservation of original data: Double-check that `data.copy()` is creating a proper copy. For nested structures, you might need a deep copy.
+
+4. Concurrency issues: If your application is multi-threaded, there could be race conditions affecting the sorting.
+
+5. Data transformation: Is the data being transformed between the sorting and when you observe the results?
+
+6. Visualisation/display issue: Sometimes the issue is not with the sorting but with how results are displayed or accessed.
+
+Can you share:
+1. A specific example of a dataset that's being incorrectly sorted in your application
+2. How you're verifying the results (e.g., printing them, displaying in UI)
+3. Any processing that happens to the results after sorting
+text
+I think I found the issue. In another part of the code, there's a function that modifies the results after sorting:
+
+def highlight_outliers(data_list):
+    for i in range(len(data_list)):
+        # Swap positions of certain elements to highlight them
+        for j in range(len(data_list[i])-1):
+            if data_list[i][j] > data_list[i][j+1] * 2:  # Highlight elements 2x larger than next
                 data_list[i][j], data_list[i][j+1] = data_list[i][j+1], data_list[i][j]
     return data_list
 
@@ -2948,44 +3197,6 @@ Refactoring is most valuable in specific situations:
 AI assistants excel at identifying these opportunities, especially when prompted to look for specific issues.
 
 Example prompt:
-python
-def process_customer_data(customer):
-    # Calculate base price
-    if customer.tier == 'premium':
-        base_price = 99.99
-    elif customer.tier == 'standard':
-        base_price = 49.99
-    elif customer.tier == 'basic':
-        base_price = 19.99
-    else:
-        base_price = 29.99
-    
-    # Apply discounts
-    if customer.years > 5:
-        discount = 0.15
-    elif customer.years > 2:
-        discount = 0.10
-    elif customer.is_first_responder:
-        discount = 0.20
-    elif customer.is_teacher:
-        discount = 0.10
-    else:
-        discount = 0
-    
-    # Calculate final price
-    final_price = base_price * (1 - discount)
-    
-    # Generate output data
-    result = {
-        'customer_id': customer.id,
-        'name': customer.name,
-        'email': customer.email,
-        'price': final_price,
-        'discount': discount,
-        'tier': customer.tier,
-    }
-    
-    return result
 
 ### The Business Case for Refactoring
 
@@ -3000,40 +3211,18 @@ Example prompt:
 AI can analyse code to identify specific improvement opportunities:
 
 Example prompt:
-java
-public List getTransactions(String userId, Date startDate, Date endDate, 
-                                        String category, String merchantName, 
-                                        Double minAmount, Double maxAmount, 
-                                        boolean includeDeclined, String sortBy, 
-                                        String sortDirection, int pageSize, int pageNum) {
-    List results = new ArrayList<>();
-    Connection conn = null;
-    PreparedStatement stmt = null;
-    ResultSet rs = null;
-    
-    try {
-        conn = dataSource.getConnection();
-        StringBuilder sql = new StringBuilder("SELECT * FROM transactions WHERE user_id = ?");
-        
-        List params = new ArrayList<>();
-        params.add(userId);
-        
-        if (startDate != null) {
-            sql.append(" AND transaction_date >= ?");
-            params.add(startDate);
-        }
-        
-        if (endDate != null) {
-            sql.append(" AND transaction_date = 100) {
-    shipping = 0;
-  } else if (customer.isPremium) {
-    shipping = 5.99;
-  } else {
-    shipping = 10.99;
-  }
-  
-  return subtotal + tax + shipping;
-}
+
+### Suggesting Improved Designs
+
+AI can propose architectural improvements:
+
+Example prompt:
+
+### Implementing Specific Refactorings
+
+AI can implement common refactoring patterns:
+
+Example prompt:
 
 ## Measuring Impact of Refactoring
 
@@ -3070,9 +3259,6 @@ One of the most critical aspects of refactoring is preserving existing behaviour
 ### Test-Driven Refactoring
 
 Example prompt:
-python
-def process_payment(order_id, card_details, amount):
-    # Implementation details...
 
 ### Incremental Refactoring Approaches
 
@@ -3651,7 +3837,7 @@ The key components you'll need to develop are:
 - A display system (likely console-based) to show weather information
 - User interaction components to allow navigation and selection
 - Visualisation elements for presenting weather data graphically
-
+text
 That's helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.
 text
 Based on our discussion, let me identify the specific inputs and outputs for my weather dashboard:
@@ -3764,7 +3950,7 @@ function get_location_from_user():
     prompt for location
     validate location
     return location
-
+text
 The pseudocode looks good overall. I noticed that error handling isn't explicitly included. Could you expand the pseudocode to include error handling for:
 
 1. Invalid location input
@@ -5687,12 +5873,6 @@ Issues:
 #### Improved Approach
 
 Better prompt:
-json
-{
-  "email": String,
-  "name": String,
-  "created_at": Date
-}
 
 Improvements:
 - Specific technology stack identified

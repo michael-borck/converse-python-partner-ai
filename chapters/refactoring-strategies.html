@@ -532,9 +532,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#when-and-why-to-refactor" id="toc-when-and-why-to-refactor" class="nav-link active" data-scroll-target="#when-and-why-to-refactor"><span class="header-section-number">13.1</span> When and Why to Refactor</a>
   <ul class="collapse">
   <li><a href="#recognising-refactoring-opportunities" id="toc-recognising-refactoring-opportunities" class="nav-link" data-scroll-target="#recognising-refactoring-opportunities"><span class="header-section-number">13.1.1</span> recognising Refactoring Opportunities</a></li>
-  <li><a href="#case-study-2-reducing-duplication" id="toc-case-study-2-reducing-duplication" class="nav-link" data-scroll-target="#case-study-2-reducing-duplication"><span class="header-section-number">13.1.2</span> Case Study 2: Reducing Duplication</a></li>
+  <li><a href="#the-business-case-for-refactoring" id="toc-the-business-case-for-refactoring" class="nav-link" data-scroll-target="#the-business-case-for-refactoring"><span class="header-section-number">13.1.2</span> The Business Case for Refactoring</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">13.2</span> Key Takeaways</a></li>
+  <li><a href="#ai-assisted-code-improvements" id="toc-ai-assisted-code-improvements" class="nav-link" data-scroll-target="#ai-assisted-code-improvements"><span class="header-section-number">13.2</span> AI-Assisted Code Improvements</a>
+  <ul class="collapse">
+  <li><a href="#identifying-refactoring-targets" id="toc-identifying-refactoring-targets" class="nav-link" data-scroll-target="#identifying-refactoring-targets"><span class="header-section-number">13.2.1</span> Identifying Refactoring Targets</a></li>
+  <li><a href="#suggesting-improved-designs" id="toc-suggesting-improved-designs" class="nav-link" data-scroll-target="#suggesting-improved-designs"><span class="header-section-number">13.2.2</span> Suggesting Improved Designs</a></li>
+  <li><a href="#implementing-specific-refactorings" id="toc-implementing-specific-refactorings" class="nav-link" data-scroll-target="#implementing-specific-refactorings"><span class="header-section-number">13.2.3</span> Implementing Specific Refactorings</a></li>
+  </ul></li>
+  <li><a href="#measuring-impact-of-refactoring" id="toc-measuring-impact-of-refactoring" class="nav-link" data-scroll-target="#measuring-impact-of-refactoring"><span class="header-section-number">13.3</span> Measuring Impact of Refactoring</a>
+  <ul class="collapse">
+  <li><a href="#quantitative-metrics" id="toc-quantitative-metrics" class="nav-link" data-scroll-target="#quantitative-metrics"><span class="header-section-number">13.3.1</span> Quantitative Metrics</a></li>
+  <li><a href="#qualitative-assessment" id="toc-qualitative-assessment" class="nav-link" data-scroll-target="#qualitative-assessment"><span class="header-section-number">13.3.2</span> Qualitative Assessment</a></li>
+  </ul></li>
+  <li><a href="#maintaining-functionality-during-refactoring" id="toc-maintaining-functionality-during-refactoring" class="nav-link" data-scroll-target="#maintaining-functionality-during-refactoring"><span class="header-section-number">13.4</span> Maintaining Functionality During Refactoring</a>
+  <ul class="collapse">
+  <li><a href="#test-driven-refactoring" id="toc-test-driven-refactoring" class="nav-link" data-scroll-target="#test-driven-refactoring"><span class="header-section-number">13.4.1</span> Test-Driven Refactoring</a></li>
+  <li><a href="#incremental-refactoring-approaches" id="toc-incremental-refactoring-approaches" class="nav-link" data-scroll-target="#incremental-refactoring-approaches"><span class="header-section-number">13.4.2</span> Incremental Refactoring Approaches</a></li>
+  </ul></li>
+  <li><a href="#case-studies" id="toc-case-studies" class="nav-link" data-scroll-target="#case-studies"><span class="header-section-number">13.5</span> Case Studies</a>
+  <ul class="collapse">
+  <li><a href="#case-study-1-simplifying-complex-conditionals" id="toc-case-study-1-simplifying-complex-conditionals" class="nav-link" data-scroll-target="#case-study-1-simplifying-complex-conditionals"><span class="header-section-number">13.5.1</span> Case Study 1: Simplifying Complex Conditionals</a></li>
+  <li><a href="#case-study-2-reducing-duplication" id="toc-case-study-2-reducing-duplication" class="nav-link" data-scroll-target="#case-study-2-reducing-duplication"><span class="header-section-number">13.5.2</span> Case Study 2: Reducing Duplication</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">13.6</span> Key Takeaways</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/refactoring-strategies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
@@ -580,9 +601,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>AI assistants excel at identifying these opportunities, especially when prompted to look for specific issues.</p>
 <p><strong>Example prompt:</strong></p>
-<pre><code>Here's a section of our codebase that's becoming difficult to maintain:
+<pre class="text"><code>Here's a section of our codebase that's becoming difficult to maintain:
 
-```python
 def process_customer_data(customer):
     # Calculate base price
     if customer.tier == 'premium':
@@ -619,223 +639,231 @@ def process_customer_data(customer):
         'tier': customer.tier,
     }
     
-    return result</code></pre>
-<p>Can you identify refactoring opportunities in this code? What code smells do you notice?</p>
-<pre><code>
-### The Business Case for Refactoring
+    return result
 
-Refactoring is sometimes seen as unnecessary by non-technical stakeholders. AI can help articulate the business value:
+Can you identify refactoring opportunities in this code? What code smells do you notice?</code></pre>
+</section>
+<section id="the-business-case-for-refactoring" class="level3" data-number="13.1.2">
+<h3 data-number="13.1.2" class="anchored" data-anchor-id="the-business-case-for-refactoring"><span class="header-section-number">13.1.2</span> The Business Case for Refactoring</h3>
+<p>Refactoring is sometimes seen as unnecessary by non-technical stakeholders. AI can help articulate the business value:</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I need to make a case to my manager for refactoring our payment processing module. 
+The current code works, but it's difficult to maintain and extend.
 
-**Example prompt:**</code></pre>
-<p>I need to make a case to my manager for refactoring our payment processing module. The current code works, but it’s difficult to maintain and extend.</p>
-<p>How can I effectively communicate the business value of this refactoring effort? What specific metrics or outcomes should I highlight?</p>
-<pre><code>
-## AI-Assisted Code Improvements
+How can I effectively communicate the business value of this refactoring effort? 
+What specific metrics or outcomes should I highlight?</code></pre>
+</section>
+</section>
+<section id="ai-assisted-code-improvements" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="ai-assisted-code-improvements"><span class="header-section-number">13.2</span> AI-Assisted Code Improvements</h2>
+<section id="identifying-refactoring-targets" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="identifying-refactoring-targets"><span class="header-section-number">13.2.1</span> Identifying Refactoring Targets</h3>
+<p>AI can analyse code to identify specific improvement opportunities:</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>Could you analyse this function and suggest potential refactoring improvements? 
+Focus on maintainability, readability, and adherence to best practices.
 
-### Identifying Refactoring Targets
-
-AI can analyse code to identify specific improvement opportunities:
-
-**Example prompt:**</code></pre>
-<p>Could you analyse this function and suggest potential refactoring improvements? Focus on maintainability, readability, and adherence to best practices.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode java code-with-copy"><code class="sourceCode java"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">public</span> <span class="bu">List</span><span class="op">&lt;</span>Transaction<span class="op">&gt;</span> <span class="fu">getTransactions</span><span class="op">(</span><span class="bu">String</span> userId<span class="op">,</span> <span class="bu">Date</span> startDate<span class="op">,</span> <span class="bu">Date</span> endDate<span class="op">,</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                                        <span class="bu">String</span> category<span class="op">,</span> <span class="bu">String</span> merchantName<span class="op">,</span> </span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="bu">Double</span> minAmount<span class="op">,</span> <span class="bu">Double</span> maxAmount<span class="op">,</span> </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                        <span class="dt">boolean</span> includeDeclined<span class="op">,</span> <span class="bu">String</span> sortBy<span class="op">,</span> </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                                        <span class="bu">String</span> sortDirection<span class="op">,</span> <span class="dt">int</span> pageSize<span class="op">,</span> <span class="dt">int</span> pageNum<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">List</span><span class="op">&lt;</span>Transaction<span class="op">&gt;</span> results <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">Connection</span> conn <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">PreparedStatement</span> stmt <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">ResultSet</span> rs <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span> <span class="op">{</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        conn <span class="op">=</span> dataSource<span class="op">.</span><span class="fu">getConnection</span><span class="op">();</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">StringBuilder</span> sql <span class="op">=</span> <span class="kw">new</span> <span class="bu">StringBuilder</span><span class="op">(</span><span class="st">"SELECT * FROM transactions WHERE user_id = ?"</span><span class="op">);</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">List</span><span class="op">&lt;</span><span class="bu">Object</span><span class="op">&gt;</span> params <span class="op">=</span> <span class="kw">new</span> <span class="bu">ArrayList</span><span class="op">&lt;&gt;();</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        params<span class="op">.</span><span class="fu">add</span><span class="op">(</span>userId<span class="op">);</span></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>startDate <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>            sql<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">" AND transaction_date &gt;= ?"</span><span class="op">);</span></span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>            params<span class="op">.</span><span class="fu">add</span><span class="op">(</span>startDate<span class="op">);</span></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>endDate <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>            sql<span class="op">.</span><span class="fu">append</span><span class="op">(</span><span class="st">" AND transaction_date &lt;= ?"</span><span class="op">);</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>            params<span class="op">.</span><span class="fu">add</span><span class="op">(</span>endDate<span class="op">);</span></span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">// 30+ more lines of similar parameter handling...</span></span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Pagination and sorting logic</span></span>
-<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>        <span class="co">// More database handling code...</span></span>
-<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> <span class="op">(</span>rs<span class="op">.</span><span class="fu">next</span><span class="op">())</span> <span class="op">{</span></span>
-<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>            <span class="co">// Transform ResultSet to Transaction objects</span></span>
-<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>            <span class="co">// 20+ lines of mapping code...</span></span>
-<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>            results<span class="op">.</span><span class="fu">add</span><span class="op">(</span>transaction<span class="op">);</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">SQLException</span> e<span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        logger<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="st">"Database error"</span><span class="op">,</span> e<span class="op">);</span></span>
-<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span> <span class="cf">finally</span> <span class="op">{</span></span>
-<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Close resources</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>rs <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> <span class="op">{</span> rs<span class="op">.</span><span class="fu">close</span><span class="op">();</span> <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">SQLException</span> e<span class="op">)</span> <span class="op">{</span> logger<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="st">"Error closing ResultSet"</span><span class="op">,</span> e<span class="op">);</span> <span class="op">}</span></span>
-<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>stmt <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> <span class="op">{</span> stmt<span class="op">.</span><span class="fu">close</span><span class="op">();</span> <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">SQLException</span> e<span class="op">)</span> <span class="op">{</span> logger<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="st">"Error closing Statement"</span><span class="op">,</span> e<span class="op">);</span> <span class="op">}</span></span>
-<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="op">(</span>conn <span class="op">!=</span> <span class="kw">null</span><span class="op">)</span> <span class="op">{</span></span>
-<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>            <span class="cf">try</span> <span class="op">{</span> conn<span class="op">.</span><span class="fu">close</span><span class="op">();</span> <span class="op">}</span> <span class="cf">catch</span> <span class="op">(</span><span class="bu">SQLException</span> e<span class="op">)</span> <span class="op">{</span> logger<span class="op">.</span><span class="fu">error</span><span class="op">(</span><span class="st">"Error closing Connection"</span><span class="op">,</span> e<span class="op">);</span> <span class="op">}</span></span>
-<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
-<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
-<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> results<span class="op">;</span></span>
-<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<pre><code>
-### Suggesting Improved Designs
-
-AI can propose architectural improvements:
-
-**Example prompt:**</code></pre>
-<p>I have a monolithic class that handles user authentication, profile management, and notification preferences. It’s become unwieldy at 500+ lines.</p>
-<p>Based on the SOLID principles, how should I refactor this into more focused classes? What would the new class structure look like?</p>
-<pre><code>
-### Implementing Specific Refactorings
-
-AI can implement common refactoring patterns:
-
-**Example prompt:**</code></pre>
-<p>I’d like to apply the “Extract Method” refactoring to this code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">calculateTotalPrice</span>(items<span class="op">,</span> customer) {</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> subtotal <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (<span class="kw">const</span> item <span class="kw">of</span> items) {</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    subtotal <span class="op">+=</span> item<span class="op">.</span><span class="at">price</span> <span class="op">*</span> item<span class="op">.</span><span class="at">quantity</span><span class="op">;</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> tax <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (customer<span class="op">.</span><span class="at">state</span> <span class="op">===</span> <span class="st">'CA'</span>) {</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    tax <span class="op">=</span> subtotal <span class="op">*</span> <span class="fl">0.0725</span><span class="op">;</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer<span class="op">.</span><span class="at">state</span> <span class="op">===</span> <span class="st">'NY'</span>) {</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    tax <span class="op">=</span> subtotal <span class="op">*</span> <span class="fl">0.045</span><span class="op">;</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer<span class="op">.</span><span class="at">state</span> <span class="op">===</span> <span class="st">'TX'</span>) {</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    tax <span class="op">=</span> subtotal <span class="op">*</span> <span class="fl">0.0625</span><span class="op">;</span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    tax <span class="op">=</span> subtotal <span class="op">*</span> <span class="fl">0.05</span><span class="op">;</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> shipping <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (subtotal <span class="op">&gt;=</span> <span class="dv">100</span>) {</span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    shipping <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer<span class="op">.</span><span class="at">isPremium</span>) {</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    shipping <span class="op">=</span> <span class="fl">5.99</span><span class="op">;</span></span>
-<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    shipping <span class="op">=</span> <span class="fl">10.99</span><span class="op">;</span></span>
-<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> subtotal <span class="op">+</span> tax <span class="op">+</span> shipping<span class="op">;</span></span>
-<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Please extract methods for calculating the subtotal, tax, and shipping.</p>
-<pre><code>
-## Measuring Impact of Refactoring
-
-Refactoring should produce measurable improvements. AI can help identify metrics and assess results.
-
-### Quantitative Metrics
-
-**Example prompt:**</code></pre>
-<p>I’m planning to refactor our API request handling code. What quantitative metrics should I measure before and after refactoring to demonstrate the impact?</p>
-<pre><code>
-AI might suggest:
-
-- **Performance metrics**: Response time, throughput, resource utilisation
-- **Code metrics**: Cyclomatic complexity, lines of code, method length
-- **Testing metrics**: Test coverage, test execution time
-- **Maintenance metrics**: Time to implement new features, bug fix duration
-- **Error rates**: Exceptions, crashes, incorrect results
-
-### Qualitative Assessment
-
-**Example prompt:**</code></pre>
-<p>Beyond quantitative metrics, what qualitative factors should I consider when evaluating the success of my refactoring efforts?</p>
-<pre><code>
-AI might suggest:
-
-- **Developer feedback**: Team assessment of code clarity and maintainability
-- **Onboarding impact**: How quickly new team members understand the code
-- **Flexibility**: Ease of implementing new requirements
-- **Documentation needs**: Reduction in necessary explanation
-- **Knowledge distribution**: Less reliance on specific team members
-
-## Maintaining Functionality During Refactoring
-
-One of the most critical aspects of refactoring is preserving existing behaviour.
-
-### Test-Driven Refactoring
-
-**Example prompt:**</code></pre>
-<p>I want to refactor this payment processing function, but I need to ensure I don’t break existing functionality. What testing approach would you recommend?</p>
-<p>Here’s the current function:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> process_payment(order_id, card_details, amount):</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Implementation details...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>What types of tests should I write before refactoring, and how should I structure the refactoring process to minimise risk?</p>
-<pre><code>
-### Incremental Refactoring Approaches
-
-**Example prompt:**</code></pre>
-<p>I need to refactor a large legacy class (800+ lines) that handles multiple responsibilities. What’s the most effective step-by-step approach to break this down safely?</p>
-<pre><code>
-AI might suggest:
-
-1. **Create a comprehensive test suite** first
-2. **Identify clear boundaries** between responsibilities
-3. **Extract one responsibility at a time**, starting with the most independent
-4. **Introduce interfaces** to define clear contracts
-5. **Refactor clients** to use the new interfaces
-6. **Run tests after each incremental change**
-
-## Case Studies
-
-### Case Study 1: Simplifying Complex Conditionals
-
-**Original Code:**
-
-```javascript
-function calculateDiscount(customer, order) {
-  let discount = 0;
-  
-  if (customer.type === 'regular') {
-    if (order.total &gt; 100) {
-      if (customer.years &gt; 2) {
-        discount = 0.15;
-      } else {
-        discount = 0.10;
-      }
-    } else if (order.total &gt; 50) {
-      if (customer.years &gt; 2) {
-        discount = 0.10;
-      } else {
-        discount = 0.05;
-      }
+public List&lt;Transaction&gt; getTransactions(String userId, Date startDate, Date endDate, 
+                                        String category, String merchantName, 
+                                        Double minAmount, Double maxAmount, 
+                                        boolean includeDeclined, String sortBy, 
+                                        String sortDirection, int pageSize, int pageNum) {
+    List&lt;Transaction&gt; results = new ArrayList&lt;&gt;();
+    Connection conn = null;
+    PreparedStatement stmt = null;
+    ResultSet rs = null;
+    
+    try {
+        conn = dataSource.getConnection();
+        StringBuilder sql = new StringBuilder("SELECT * FROM transactions WHERE user_id = ?");
+        
+        List&lt;Object&gt; params = new ArrayList&lt;&gt;();
+        params.add(userId);
+        
+        if (startDate != null) {
+            sql.append(" AND transaction_date &gt;= ?");
+            params.add(startDate);
+        }
+        
+        if (endDate != null) {
+            sql.append(" AND transaction_date &lt;= ?");
+            params.add(endDate);
+        }
+        
+        // 30+ more lines of similar parameter handling...
+        
+        // Pagination and sorting logic
+        // More database handling code...
+        
+        while (rs.next()) {
+            // Transform ResultSet to Transaction objects
+            // 20+ lines of mapping code...
+            results.add(transaction);
+        }
+    } catch (SQLException e) {
+        logger.error("Database error", e);
+    } finally {
+        // Close resources
+        if (rs != null) {
+            try { rs.close(); } catch (SQLException e) { logger.error("Error closing ResultSet", e); }
+        }
+        if (stmt != null) {
+            try { stmt.close(); } catch (SQLException e) { logger.error("Error closing Statement", e); }
+        }
+        if (conn != null) {
+            try { conn.close(); } catch (SQLException e) { logger.error("Error closing Connection", e); }
+        }
     }
-  } else if (customer.type === 'premium') {
-    if (order.total &gt; 100) {
-      discount = 0.20;
-    } else if (order.total &gt; 50) {
-      discount = 0.15;
-    } else {
-      discount = 0.10;
-    }
-  } else if (customer.type === 'vip') {
-    discount = 0.25;
-  }
-  
-  if (order.items.length &gt; 10) {
-    discount += 0.05;
-  }
-  
-  return discount;
+    
+    return results;
 }</code></pre>
+</section>
+<section id="suggesting-improved-designs" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="suggesting-improved-designs"><span class="header-section-number">13.2.2</span> Suggesting Improved Designs</h3>
+<p>AI can propose architectural improvements:</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I have a monolithic class that handles user authentication, profile management, and notification preferences. It's become unwieldy at 500+ lines.
+
+Based on the SOLID principles, how should I refactor this into more focused classes? What would the new class structure look like?</code></pre>
+</section>
+<section id="implementing-specific-refactorings" class="level3" data-number="13.2.3">
+<h3 data-number="13.2.3" class="anchored" data-anchor-id="implementing-specific-refactorings"><span class="header-section-number">13.2.3</span> Implementing Specific Refactorings</h3>
+<p>AI can implement common refactoring patterns:</p>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I'd like to apply the "Extract Method" refactoring to this code:
+
+function calculateTotalPrice(items, customer) {
+  let subtotal = 0;
+  for (const item of items) {
+    subtotal += item.price * item.quantity;
+  }
+  
+  let tax = 0;
+  if (customer.state === 'CA') {
+    tax = subtotal * 0.0725;
+  } else if (customer.state === 'NY') {
+    tax = subtotal * 0.045;
+  } else if (customer.state === 'TX') {
+    tax = subtotal * 0.0625;
+  } else {
+    tax = subtotal * 0.05;
+  }
+  
+  let shipping = 0;
+  if (subtotal &gt;= 100) {
+    shipping = 0;
+  } else if (customer.isPremium) {
+    shipping = 5.99;
+  } else {
+    shipping = 10.99;
+  }
+  
+  return subtotal + tax + shipping;
+}
+
+Please extract methods for calculating the subtotal, tax, and shipping.</code></pre>
+</section>
+</section>
+<section id="measuring-impact-of-refactoring" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="measuring-impact-of-refactoring"><span class="header-section-number">13.3</span> Measuring Impact of Refactoring</h2>
+<p>Refactoring should produce measurable improvements. AI can help identify metrics and assess results.</p>
+<section id="quantitative-metrics" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="quantitative-metrics"><span class="header-section-number">13.3.1</span> Quantitative Metrics</h3>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I'm planning to refactor our API request handling code. What quantitative metrics should I measure before and after refactoring to demonstrate the impact?</code></pre>
+<p>AI might suggest:</p>
+<ul>
+<li><strong>Performance metrics</strong>: Response time, throughput, resource utilisation</li>
+<li><strong>Code metrics</strong>: Cyclomatic complexity, lines of code, method length</li>
+<li><strong>Testing metrics</strong>: Test coverage, test execution time</li>
+<li><strong>Maintenance metrics</strong>: Time to implement new features, bug fix duration</li>
+<li><strong>Error rates</strong>: Exceptions, crashes, incorrect results</li>
+</ul>
+</section>
+<section id="qualitative-assessment" class="level3" data-number="13.3.2">
+<h3 data-number="13.3.2" class="anchored" data-anchor-id="qualitative-assessment"><span class="header-section-number">13.3.2</span> Qualitative Assessment</h3>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>Beyond quantitative metrics, what qualitative factors should I consider when evaluating the success of my refactoring efforts?</code></pre>
+<p>AI might suggest:</p>
+<ul>
+<li><strong>Developer feedback</strong>: Team assessment of code clarity and maintainability</li>
+<li><strong>Onboarding impact</strong>: How quickly new team members understand the code</li>
+<li><strong>Flexibility</strong>: Ease of implementing new requirements</li>
+<li><strong>Documentation needs</strong>: Reduction in necessary explanation</li>
+<li><strong>Knowledge distribution</strong>: Less reliance on specific team members</li>
+</ul>
+</section>
+</section>
+<section id="maintaining-functionality-during-refactoring" class="level2" data-number="13.4">
+<h2 data-number="13.4" class="anchored" data-anchor-id="maintaining-functionality-during-refactoring"><span class="header-section-number">13.4</span> Maintaining Functionality During Refactoring</h2>
+<p>One of the most critical aspects of refactoring is preserving existing behaviour.</p>
+<section id="test-driven-refactoring" class="level3" data-number="13.4.1">
+<h3 data-number="13.4.1" class="anchored" data-anchor-id="test-driven-refactoring"><span class="header-section-number">13.4.1</span> Test-Driven Refactoring</h3>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I want to refactor this payment processing function, but I need to ensure I don't break existing functionality. What testing approach would you recommend?
+
+Here's the current function:
+
+def process_payment(order_id, card_details, amount):
+    # Implementation details...
+
+What types of tests should I write before refactoring, and how should I structure the refactoring process to minimise risk?</code></pre>
+</section>
+<section id="incremental-refactoring-approaches" class="level3" data-number="13.4.2">
+<h3 data-number="13.4.2" class="anchored" data-anchor-id="incremental-refactoring-approaches"><span class="header-section-number">13.4.2</span> Incremental Refactoring Approaches</h3>
+<p><strong>Example prompt:</strong></p>
+<pre class="text"><code>I need to refactor a large legacy class (800+ lines) that handles multiple responsibilities. What's the most effective step-by-step approach to break this down safely?</code></pre>
+<p>AI might suggest:</p>
+<ol type="1">
+<li><strong>Create a comprehensive test suite</strong> first</li>
+<li><strong>Identify clear boundaries</strong> between responsibilities</li>
+<li><strong>Extract one responsibility at a time</strong>, starting with the most independent</li>
+<li><strong>Introduce interfaces</strong> to define clear contracts</li>
+<li><strong>Refactor clients</strong> to use the new interfaces</li>
+<li><strong>Run tests after each incremental change</strong></li>
+</ol>
+</section>
+</section>
+<section id="case-studies" class="level2" data-number="13.5">
+<h2 data-number="13.5" class="anchored" data-anchor-id="case-studies"><span class="header-section-number">13.5</span> Case Studies</h2>
+<section id="case-study-1-simplifying-complex-conditionals" class="level3" data-number="13.5.1">
+<h3 data-number="13.5.1" class="anchored" data-anchor-id="case-study-1-simplifying-complex-conditionals"><span class="header-section-number">13.5.1</span> Case Study 1: Simplifying Complex Conditionals</h3>
+<p><strong>Original Code:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">calculateDiscount</span>(customer<span class="op">,</span> order) {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> discount <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (customer<span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'regular'</span>) {</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (order<span class="op">.</span><span class="at">total</span> <span class="op">&gt;</span> <span class="dv">100</span>) {</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (customer<span class="op">.</span><span class="at">years</span> <span class="op">&gt;</span> <span class="dv">2</span>) {</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>        discount <span class="op">=</span> <span class="fl">0.15</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>        discount <span class="op">=</span> <span class="fl">0.10</span><span class="op">;</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (order<span class="op">.</span><span class="at">total</span> <span class="op">&gt;</span> <span class="dv">50</span>) {</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (customer<span class="op">.</span><span class="at">years</span> <span class="op">&gt;</span> <span class="dv">2</span>) {</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        discount <span class="op">=</span> <span class="fl">0.10</span><span class="op">;</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        discount <span class="op">=</span> <span class="fl">0.05</span><span class="op">;</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer<span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'premium'</span>) {</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (order<span class="op">.</span><span class="at">total</span> <span class="op">&gt;</span> <span class="dv">100</span>) {</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>      discount <span class="op">=</span> <span class="fl">0.20</span><span class="op">;</span></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (order<span class="op">.</span><span class="at">total</span> <span class="op">&gt;</span> <span class="dv">50</span>) {</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>      discount <span class="op">=</span> <span class="fl">0.15</span><span class="op">;</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>      discount <span class="op">=</span> <span class="fl">0.10</span><span class="op">;</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (customer<span class="op">.</span><span class="at">type</span> <span class="op">===</span> <span class="st">'vip'</span>) {</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>    discount <span class="op">=</span> <span class="fl">0.25</span><span class="op">;</span></span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (order<span class="op">.</span><span class="at">items</span><span class="op">.</span><span class="at">length</span> <span class="op">&gt;</span> <span class="dv">10</span>) {</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>    discount <span class="op">+=</span> <span class="fl">0.05</span><span class="op">;</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> discount<span class="op">;</span></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Refactoring Request:</strong></p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>This discount calculation function has become difficult to understand and maintain due to nested conditionals. How would you refactor it to improve readability and maintainability?</code></pre>
@@ -916,60 +944,60 @@ Benefits of this refactoring:
 
 For even further improvement, you could refactor this to use a more object-oriented approach with strategy patterns, or use a rules engine for complex discount logic.</code></pre>
 </section>
-<section id="case-study-2-reducing-duplication" class="level3" data-number="13.1.2">
-<h3 data-number="13.1.2" class="anchored" data-anchor-id="case-study-2-reducing-duplication"><span class="header-section-number">13.1.2</span> Case Study 2: Reducing Duplication</h3>
+<section id="case-study-2-reducing-duplication" class="level3" data-number="13.5.2">
+<h3 data-number="13.5.2" class="anchored" data-anchor-id="case-study-2-reducing-duplication"><span class="header-section-number">13.5.2</span> Case Study 2: Reducing Duplication</h3>
 <p><strong>Original Code:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UserService:</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_id(<span class="va">self</span>, user_id):</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE id = </span><span class="sc">%s</span><span class="st">"</span>, (user_id,))</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_email(<span class="va">self</span>, email):</span>
-<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
-<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
-<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE email = </span><span class="sc">%s</span><span class="st">"</span>, (email,))</span>
-<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
-<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
-<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
-<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
-<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
-<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
-<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
-<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
-<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
-<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_username(<span class="va">self</span>, username):</span>
-<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
-<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
-<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE username = </span><span class="sc">%s</span><span class="st">"</span>, (username,))</span>
-<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
-<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
-<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
-<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
-<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
-<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
-<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
-<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
-<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
-<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a>            }</span>
-<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UserService:</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_id(<span class="va">self</span>, user_id):</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE id = </span><span class="sc">%s</span><span class="st">"</span>, (user_id,))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_email(<span class="va">self</span>, email):</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE email = </span><span class="sc">%s</span><span class="st">"</span>, (email,))</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> get_user_by_username(<span class="va">self</span>, username):</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>        connection <span class="op">=</span> database.<span class="ex">connect</span>()</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>        cursor <span class="op">=</span> connection.cursor()</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>        cursor.execute(<span class="st">"SELECT * FROM users WHERE username = </span><span class="sc">%s</span><span class="st">"</span>, (username,))</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> cursor.fetchone()</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>        cursor.close()</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>        connection.close()</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> result:</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> {</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>                <span class="st">'id'</span>: result[<span class="dv">0</span>],</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>                <span class="st">'username'</span>: result[<span class="dv">1</span>],</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>                <span class="st">'email'</span>: result[<span class="dv">2</span>],</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>                <span class="st">'created_at'</span>: result[<span class="dv">3</span>]</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>            }</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Refactoring Request:</strong></p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>This UserService class has significant duplication in its methods. How would you refactor it to reduce repetition while maintaining the same functionality?</code></pre>
@@ -1052,8 +1080,8 @@ Further improvements could include:
 This refactoring maintains exactly the same functionality while making the code much more maintainable.</code></pre>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">13.2</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="13.6">
+<h2 data-number="13.6" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">13.6</span> Key Takeaways</h2>
 <ul>
 <li>Refactoring is about improving code structure without changing functionality</li>
 <li>AI assistants excel at identifying refactoring opportunities and suggesting improvements</li>

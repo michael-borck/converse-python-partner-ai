@@ -771,7 +771,7 @@ Can you compare these interpretations and their implications for implementation?
 <li>“The function should raise appropriate errors for invalid inputs”</li>
 </ul>
 <p><strong>AI Verification Prompt:</strong></p>
-<pre><code>I'm working on a function that converts dates between different formats.
+<pre class="text"><code>I'm working on a function that converts dates between different formats.
 
 I've restated it as:
 - A function that takes a date string, source format, and target format
@@ -797,7 +797,7 @@ These considerations can greatly affect the scope and complexity of your functio
 <p><strong>Output Specification:</strong> - On success: A string representing the same date in the target format - On error: Raises appropriate exceptions with clear error messages</p>
 <p><strong>Examples:</strong> - <code>convert_date("2023-04-01", "%Y-%m-%d", "%m/%d/%Y")</code> → <code>"04/01/2023"</code> - <code>convert_date("April 1, 2023", "%B %d, %Y", "%Y-%m-%d")</code> → <code>"2023-04-01"</code> - <code>convert_date("invalid", "%Y-%m-%d", "%m/%d/%Y")</code> → <code>ValueError("Unable to parse date")</code></p>
 <p><strong>Edge Case Exploration Prompt:</strong></p>
-<pre><code>What edge cases should I consider for a date format conversion function with these inputs?
+<pre class="text"><code>What edge cases should I consider for a date format conversion function with these inputs?
 - date_str: A string representing a date
 - source_format: The format of the input date
 - target_format: The desired output format</code></pre>

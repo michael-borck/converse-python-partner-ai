@@ -823,7 +823,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="problematic-approach" class="level4" data-number="A.6.1.1">
 <h4 data-number="A.6.1.1" class="anchored" data-anchor-id="problematic-approach"><span class="header-section-number">A.6.1.1</span> Problematic Approach</h4>
 <p><strong>Initial prompt:</strong></p>
-<pre><code>Fix this sorting algorithm, it's not working correctly.
+<pre class="text"><code>Fix this sorting algorithm, it's not working correctly.
 
 [code snippet]</code></pre>
 <p><strong>Issues:</strong> - Vague problem description - No information about how it’s failing - No context about requirements or constraints</p>
@@ -831,7 +831,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="improved-approach" class="level4" data-number="A.6.1.2">
 <h4 data-number="A.6.1.2" class="anchored" data-anchor-id="improved-approach"><span class="header-section-number">A.6.1.2</span> Improved Approach</h4>
 <p><strong>Better prompt:</strong></p>
-<pre><code>I'm debugging this merge sort implementation that fails when the input contains duplicate values.
+<pre class="text"><code>I'm debugging this merge sort implementation that fails when the input contains duplicate values.
 
 [code snippet]
 
@@ -849,13 +849,13 @@ Can you help identify the bug and explain how to fix it?</code></pre>
 <section id="problematic-approach-1" class="level4" data-number="A.6.2.1">
 <h4 data-number="A.6.2.1" class="anchored" data-anchor-id="problematic-approach-1"><span class="header-section-number">A.6.2.1</span> Problematic Approach</h4>
 <p><strong>Initial prompt:</strong></p>
-<pre><code>Write a user authentication system for my web app.</code></pre>
+<pre class="text"><code>Write a user authentication system for my web app.</code></pre>
 <p><strong>Issues:</strong> - Extremely broad scope - No information about the technology stack - No specific requirements or constraints - No context about the existing application</p>
 </section>
 <section id="improved-approach-1" class="level4" data-number="A.6.2.2">
 <h4 data-number="A.6.2.2" class="anchored" data-anchor-id="improved-approach-1"><span class="header-section-number">A.6.2.2</span> Improved Approach</h4>
 <p><strong>Better prompt:</strong></p>
-<pre><code>I need to implement user authentication for a React/Node.js web application.
+<pre class="text"><code>I need to implement user authentication for a React/Node.js web application.
 
 Requirements:
 - JWT-based authentication
@@ -865,14 +865,19 @@ Requirements:
 - Integration with existing MongoDB user collection
 
 Current user schema:
-```json
 {
   "email": String,
   "name": String,
   "created_at": Date
-}</code></pre>
-<p>I’d like to: 1. Update the user schema to support authentication 2. Implement the backend endpoints for login, registration, and password reset 3. Create a middleware for protecting routes based on authentication 4. Set up the frontend components for the login flow</p>
-<p>Can you help me with the schema design and backend implementation first? ```</p>
+}
+
+I'd like to:
+1. Update the user schema to support authentication
+2. Implement the backend endpoints for login, registration, and password reset
+3. Create a middleware for protecting routes based on authentication
+4. Set up the frontend components for the login flow
+
+Can you help me with the schema design and backend implementation first?</code></pre>
 <p><strong>Improvements:</strong> - Specific technology stack identified - Clear, detailed requirements - Existing schema provided for context - Scope broken down into manageable parts - Clear starting point specified</p>
 </section>
 </section>
