@@ -43,6 +43,40 @@ The book is divided into five parts:
 
 Each chapter includes practical examples, exercises, and reflections to help you apply these concepts in your own work.
 
+## Conventions Used in This Book
+
+Throughout the book, AI conversations appear as grey monospace blocks labelled **You:** (what you type into the AI) and **AI:** (what comes back). These look like what you would see on screen — plain text, no formatting.
+
+**You:**
+
+```text
+This is what a human prompt looks like.
+It includes any code you paste into the chat.
+```
+
+**AI:**
+
+```text
+This is what an AI response looks like.
+Same monospace style, just a different label.
+```
+
+Narrative text between conversations provides commentary — explaining why the prompt was structured that way, what to notice in the response, and what principle is being demonstrated.
+
+You will also encounter coloured callout boxes. Each serves a different purpose.
+
+::: {.callout-tip title="Practical advice"}
+**Green boxes** offer tips you can apply immediately — prompting strategies, workflow suggestions, things to try.
+:::
+
+::: {.callout-note title="Key concept"}
+**Blue boxes** highlight important ideas worth pausing on — principles of intentional prompting, methodology insights, things to remember.
+:::
+
+::: {.callout-warning title="Watch out"}
+**Yellow boxes** flag common mistakes or misconceptions — things that look right but lead to poor results.
+:::
+
 ## The Companion Book
 
 This book applies the methodology developed in *Conversation, Not Delegation: How to Think With AI, Not Just Use It* (Borck, 2025) to software development. That companion book covers the full framework in depth: the Conversation Loop, the VET framework for evaluating AI output, the average-versus-precise decision grid, and the principle of AI Last. If you want the underlying rationale for why the approaches in this book work, or you want to share a discipline-neutral version with non-developer colleagues, start there. Available at [https://michael-borck.github.io/conversation-not-delegation](https://michael-borck.github.io/conversation-not-delegation).
