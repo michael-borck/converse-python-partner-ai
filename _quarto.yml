@@ -7,7 +7,6 @@ project:
 book:
   title: "Converse Python, Partner AI"
   subtitle: "The Intentional Prompting Methodology"
-  cover-image: cover.png
   favicon: favicon.svg
   author: "Michael Borck"
   date: "last-modified"
@@ -81,6 +80,7 @@ format:
       light: cosmo
       dark: darkly
     css: styles.css
+    cover-image: cover.png
     include-after-body: chatbot.html
     code-copy: true
     highlight-style: github
