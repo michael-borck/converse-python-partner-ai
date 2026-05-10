@@ -46,6 +46,8 @@ Write a function that validates email addresses using regular expressions.
 
 Zero-shot prompting works well for common tasks where the AI has extensive training data, but may struggle with specialised or complex tasks.
 
+A note before moving on: zero-shot prompting is a technique, not a methodology. Stringing zero-shot prompts back-to-back without pushback, verification, or course correction between exchanges is delegation in volume, not intentional prompting. The methodology in this book treats each prompt as one move in a structured conversation, not a self-contained transaction. See the discussion of human agency in the principles chapter for why this distinction matters.
+
 #### Few-Shot Prompting
 
 This technique provides the model with one or more examples of expected input-output pairs before presenting the actual task. Examples help the model understand the desired format and approach.

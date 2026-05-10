@@ -188,6 +188,8 @@ This example illustrates how the different approaches affect not just the final 
 
 At the core of intentional prompting is the principle of human agency - the programmer remains the architect and decision-maker throughout the development process, not just a consumer of AI-generated solutions.
 
+This principle goes by several names depending on the audience. Philosophers and ethicists call it **human agency**: the capacity to choose, weigh, and own the outcome. Practitioners and team leads call it **human oversight**: the practice of reviewing AI output before it ships. AI policy and system design call it **human-in-the-loop** (HIL): the structural requirement that a person remains an active participant in decisions a system could otherwise automate. **Intentional prompting** is the methodology that operationalises all three. Agency is the principle, oversight is the practice, HIL is the system-design view, and intentional prompting is the workflow that keeps them in place during development. Four vocabularies, one stance.
+
 ### Directive vs. Delegative Approaches
 
 There are two fundamental ways to interact with AI coding assistants:

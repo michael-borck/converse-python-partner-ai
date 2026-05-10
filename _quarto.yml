@@ -10,7 +10,7 @@ book:
   favicon: favicon.svg
   author: "Michael Borck"
   date: "last-modified"
-  license: "CC BY 4.0 (content), MIT (code examples)"
+  license: "CC BY-SA 4.0 (content), MIT (code examples)"
   chapters:
     - index.qmd
     - copyright.qmd
