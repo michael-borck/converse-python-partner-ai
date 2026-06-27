@@ -34,7 +34,7 @@ For intentional prompting, this means prompting strategies will need to focus mo
 
 ### Increasing Autonomy and Agentic Programming
 
-AI systems are gradually moving toward greater autonomy in coding tasks, leading to what's known as "agentic programming," where AI agents can autonomously perform complex development tasks with minimal human intervention:
+AI systems have moved toward greater autonomy in coding tasks. "Agentic programming" — where AI agents perform development tasks with varying degrees of independence — is no longer emerging; it is how a great deal of code is written today. Tools like Cursor, Claude Code, and Aider run inside your repository, edit files, execute tests, and iterate on a goal you set. The bullet list below describes what that looks like in practice:
 
 #### Autonomous Coding Capabilities
 
@@ -43,7 +43,7 @@ AI systems are gradually moving toward greater autonomy in coding tasks, leading
 - **Self-debugging and refinement** of initial solutions
 - **Proactive suggestion** of improvements and optimisations
 
-This increased autonomy will shift intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.
+This increased autonomy shifts intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.
 
 It is worth stating plainly: better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.
 
@@ -56,7 +56,7 @@ Future development environments may feature:
 - **Continuous AI presence** during the entire development process
 - **Persistent learning** from team interactions and feedback
 
-Intentional prompting in this environment will involve orchestrating these AI collaborators effectively, ensuring they work toward cohesive solutions.
+Intentional prompting in this environment involves orchestrating these AI collaborators effectively, ensuring they work toward cohesive solutions.
 
 #### The Essential Role of Human Oversight in Agentic Systems
 
@@ -88,6 +88,8 @@ Effective human oversight includes:
 4. **Implementing robust monitoring tools** and evaluation frameworks
 
 The future of intentional prompting will likely involve more sophisticated techniques for providing this essential oversight, ensuring that increasingly autonomous AI systems remain aligned with human goals, values, and quality standards.
+
+The deepest treatment of what changes — and what does not — when a loop runs without you in it is in *Conversation, Not Delegation* (the chapter "When the Loop Runs Itself"). The short version: a loop is only as good as the test it cannot talk its way past. Where you can give an agent an external, verifiable check — a test suite, a type-checker, a metric it cannot edit — it is excellent delegation. Where the only judge is the model itself, you have delegation of judgement, automated. Intentional prompting is what keeps you on the right side of that line.
 
 ## Evolving Programming Paradigms
 
@@ -226,6 +228,10 @@ To ensure programming remains a fulfilling human activity:
 3. **Engage with ethical dimensions** of technical decisions
 4. **Prioritise human-centred design** considerations
 5. **Develop cross-disciplinary expertise** combining programming with domain knowledge
+
+## The One Thing That Does Not Change
+
+Across every horizon above, one thing stays constant. As the models improve, they commoditise competent execution — everyone gets the same capable assistant, producing the same competent averages. The variation the model cannot generate is a particular developer's judgement, taste, and point of view. Intentional prompting is not a way to get more out of AI. It is the discipline that builds the one capability AI cannot hand you. That is the argument of *Conversation, Not Delegation*, and it is the note this book ends on.
 
 ## Vision for Intentional Prompting's Evolution
 
