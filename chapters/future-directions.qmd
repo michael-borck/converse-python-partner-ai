@@ -34,7 +34,7 @@ For intentional prompting, this means prompting strategies will need to focus mo
 
 ### Increasing Autonomy and Agentic Programming
 
-AI systems have moved toward greater autonomy in coding tasks. "Agentic programming" — where AI agents perform development tasks with varying degrees of independence — is no longer emerging; it is how a great deal of code is written today. Tools like Cursor, Claude Code, and Aider run inside your repository, edit files, execute tests, and iterate on a goal you set. The bullet list below describes what that looks like in practice:
+AI systems have moved toward greater autonomy in coding tasks. "Agentic programming," where AI agents perform development tasks with varying degrees of independence, is no longer emerging; it is how a great deal of code is written today. Tools like Cursor, Claude Code, and Aider run inside your repository, edit files, execute tests, and iterate on a goal you set. The bullet list below describes what that looks like in practice:
 
 #### Autonomous Coding Capabilities
 
@@ -89,7 +89,7 @@ Effective human oversight includes:
 
 The future of intentional prompting will likely involve more sophisticated techniques for providing this essential oversight, ensuring that increasingly autonomous AI systems remain aligned with human goals, values, and quality standards.
 
-The deepest treatment of what changes — and what does not — when a loop runs without you in it is in *Conversation, Not Delegation* (the chapter "When the Loop Runs Itself"). The short version: a loop is only as good as the test it cannot talk its way past. Where you can give an agent an external, verifiable check — a test suite, a type-checker, a metric it cannot edit — it is excellent delegation. Where the only judge is the model itself, you have delegation of judgement, automated. Intentional prompting is what keeps you on the right side of that line.
+The deepest treatment of what changes, and what does not, when a loop runs without you in it is in *Conversation, Not Delegation* (the chapter "When the Loop Runs Itself"). The short version: a loop is only as good as the test it cannot talk its way past. Where you can give an agent an external, verifiable check (a test suite, a type-checker, a metric it cannot edit) it is excellent delegation. Where the only judge is the model itself, you have delegation of judgement, automated. Intentional prompting is what keeps you on the right side of that line.
 
 ## Evolving Programming Paradigms
 
@@ -231,7 +231,7 @@ To ensure programming remains a fulfilling human activity:
 
 ## The One Thing That Does Not Change
 
-Across every horizon above, one thing stays constant. As the models improve, they commoditise competent execution — everyone gets the same capable assistant, producing the same competent averages. The variation the model cannot generate is a particular developer's judgement, taste, and point of view. Intentional prompting is not a way to get more out of AI. It is the discipline that builds the one capability AI cannot hand you. That is the argument of *Conversation, Not Delegation*, and it is the note this book ends on.
+Across every horizon above, one thing stays constant. As the models improve, they commoditise competent execution, so everyone gets the same capable assistant, producing the same competent averages. The variation the model cannot generate is a particular developer's judgement, taste, and point of view. Intentional prompting is not a way to get more out of AI. It is the discipline that builds the one capability AI cannot hand you. That is the argument of *Conversation, Not Delegation*, and it is the note this book ends on.
 
 ## Vision for Intentional Prompting's Evolution
 
@@ -377,7 +377,7 @@ As we conclude this exploration of intentional prompting, it's clear that the fu
 
 The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavour.
 
-Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI's impact on learning and skill development, intentional prompting's focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.
+The methodology also addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI's impact on learning and skill development, intentional prompting's focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.
 
 The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance: a balanced path that maximises benefits while minimising risks.
 

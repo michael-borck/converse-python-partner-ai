@@ -6,7 +6,7 @@ Most developers use AI to get code written faster. They prompt, they paste, they
 
 Programming with AI is not just about speed. It is about thinking differently about the development process itself. The developers who get the most from AI tools are not the ones who delegate the most. They are the ones who stay in the conversation: directing, questioning, understanding, and making the architectural decisions that the model cannot make for them.
 
-This book teaches a structured methodology for that conversation. It calls the approach *intentional prompting* — using AI tools with precision and purpose while ensuring you remain the architect and decision-maker throughout.
+This book teaches a structured methodology for that conversation. It calls the approach *intentional prompting*: using AI tools with precision and purpose while ensuring you remain the architect and decision-maker throughout.
 
 ## Who This Book Is For
 
@@ -23,7 +23,7 @@ This is not a guide to specific AI tools. It does not teach you how to use GitHu
 
 It is not a prompt cookbook. You will find prompts throughout, but they are starting points for conversation, not finished products. If you are looking for a library of copy-paste prompts that write your code for you, this is the wrong book.
 
-It is not a book about replacing developers with AI. It argues the opposite: that AI is most powerful when a skilled developer is directing it, and that the skills which make you a good developer — decomposition, abstraction, critical evaluation, architectural judgement — are exactly the skills that make you good at working with AI.
+It is not a book about replacing developers with AI. It argues the opposite: that AI is most powerful when a skilled developer is directing it, and that the skills which make you a good developer (decomposition, abstraction, critical evaluation, architectural judgement) are exactly the skills that make you good at working with AI.
 
 And it is not a book that pretends AI always gets it right. A significant part of the methodology is about recognising when AI output is wrong, understanding why, and knowing how to fix it.
 
@@ -45,7 +45,7 @@ Each chapter includes practical examples, exercises, and reflections to help you
 
 ## Conventions Used in This Book
 
-Throughout the book, AI conversations appear as grey monospace blocks labelled **You:** (what you type into the AI) and **AI:** (what comes back). These look like what you would see on screen — plain text, no formatting.
+Throughout the book, AI conversations appear as grey monospace blocks labelled **You:** (what you type into the AI) and **AI:** (what comes back). These look like what you would see on screen: plain text, no formatting.
 
 **You:**
 
@@ -61,20 +61,20 @@ This is what an AI response looks like.
 Same monospace style, just a different label.
 ```
 
-Narrative text between conversations provides commentary — explaining why the prompt was structured that way, what to notice in the response, and what principle is being demonstrated.
+Narrative text between conversations provides commentary, explaining why the prompt was structured that way, what to notice in the response, and what principle is being demonstrated.
 
 You will also encounter coloured callout boxes. Each serves a different purpose.
 
 ::: {.callout-tip title="Practical advice"}
-**Green boxes** offer tips you can apply immediately — prompting strategies, workflow suggestions, things to try.
+**Green boxes** offer tips you can apply immediately: prompting strategies, workflow suggestions, things to try.
 :::
 
 ::: {.callout-note title="Key concept"}
-**Blue boxes** highlight important ideas worth pausing on — principles of intentional prompting, methodology insights, things to remember.
+**Blue boxes** highlight important ideas worth pausing on: principles of intentional prompting, methodology insights, things to remember.
 :::
 
 ::: {.callout-warning title="Watch out"}
-**Yellow boxes** flag common mistakes or misconceptions — things that look right but lead to poor results.
+**Yellow boxes** flag common mistakes or misconceptions: things that look right but lead to poor results.
 :::
 
 ## The Companion Book
@@ -104,12 +104,12 @@ flowchart TD
 
 Two ways in: start with *Conversation, Not Delegation* if you want the ideas before (or without) code, or start with *Think Python, Direct AI* if you want to code from your first page. The methodology in *Converse Python, Partner AI* enhances every path.
 
-- **Conversation, Not Delegation** — the general methodology for working with AI across any discipline. No code required; the broadest entry point.
-- **Think Python, Direct AI** — computational thinking for absolute beginners. The entry point if you want to code from the start.
-- **Converse Python, Partner AI** (this book) — the intentional prompting methodology applied to software development. A companion you can read alongside any Python book.
-- **Code Python, Consult AI** — focused Python fundamentals through AI conversation.
-- **Ship Python, Orchestrate AI** — professional Python development practices and tooling.
-- **Build Web, Guide AI** — web development with AI as your development partner.
+- **Conversation, Not Delegation**: the general methodology for working with AI across any discipline. No code required; the broadest entry point.
+- **Think Python, Direct AI**: computational thinking for absolute beginners. The entry point if you want to code from the start.
+- **Converse Python, Partner AI** (this book): the intentional prompting methodology applied to software development. A companion you can read alongside any Python book.
+- **Code Python, Consult AI**: focused Python fundamentals through AI conversation.
+- **Ship Python, Orchestrate AI**: professional Python development practices and tooling.
+- **Build Web, Guide AI**: web development with AI as your development partner.
 
 All titles are available at [books.borck.education](https://books.borck.education).
 

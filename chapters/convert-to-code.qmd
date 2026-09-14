@@ -146,7 +146,7 @@ Could you provide a clean Python implementation with good variable names and doc
 ::: {.callout-tip}
 ## Bring your pseudocode to the prompt
 
-Notice how the human restated the algorithm's key steps before asking for code. This is Step 5 building directly on Step 4 -- the pseudocode provides constraints that keep the AI's output aligned with the solution you designed, not one the AI might prefer.
+Notice how the human restated the algorithm's key steps before asking for code. This is Step 5 building directly on Step 4: the pseudocode provides constraints that keep the AI's output aligned with the solution you designed, not one the AI might prefer.
 :::
 
 
@@ -219,7 +219,7 @@ This implementation follows the center expansion approach we discussed. It has:
 The time complexity is O(n²) where n is the length of the string, and the space complexity is O(1) since we only use a constant amount of extra space.
 ```
 
-The AI produced a working implementation -- but working is not the same as finished. Because you understand the algorithm from earlier steps, you're in a position to evaluate the design choices, not just whether it runs.
+The AI produced a working implementation, but working is not the same as finished. Because you understand the algorithm from earlier steps, you're in a position to evaluate the design choices, not just whether it runs.
 
 ### Evaluating AI-Generated Code
 
@@ -248,7 +248,7 @@ Could you address these issues in a revised implementation?
 ::: {.callout-note}
 ## Review means engaging, not just accepting
 
-The human reviewed the code and raised two specific concerns -- one about design (returning values vs. modifying globals) and one about correctness (unnecessary check). This kind of targeted feedback is only possible because the human understood the algorithm before seeing the code.
+The human reviewed the code and raised two specific concerns: one about design (returning values vs. modifying globals) and one about correctness (unnecessary check). This kind of targeted feedback is only possible because the human understood the algorithm before seeing the code.
 :::
 
 **AI:**
@@ -376,7 +376,7 @@ Would you like me to show you some other common patterns for tuple unpacking in 
 ::: {.callout-tip}
 ## Asking "how does this work?" is not a weakness
 
-If the AI introduces syntax you don't recognise, stop and ask. You'll use that pattern again, and understanding it now means you won't need to ask next time. Copying code you don't understand is borrowing knowledge you'll have to repay later -- with interest.
+If the AI introduces syntax you don't recognise, stop and ask. You'll use that pattern again, and understanding it now means you won't need to ask next time. Copying code you don't understand is borrowing knowledge you'll have to repay later, with interest.
 :::
 
 ## Maintaining Code Quality
@@ -400,7 +400,7 @@ for item in collection:
     process(item)
 ```
 
-Ask AI to make code more idiomatic. This is a case where a little delegation is fine -- once you understand the logic, asking the AI to polish syntax into language-native patterns is a good use of its strengths.
+Ask AI to make code more idiomatic. This is a case where a little delegation is fine: once you understand the logic, asking the AI to polish syntax into language-native patterns is a good use of its strengths.
 
 **You:**
 
