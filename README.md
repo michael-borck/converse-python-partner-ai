@@ -43,9 +43,15 @@ This book is part of a comprehensive series for mastering modern software develo
 
 This book is being developed as a [Quarto](https://quarto.org/) project, with content written in Markdown format.
 
-## License
+## Licence
 
-[License information will be added here]
+Book content is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0 International)](https://creativecommons.org/licenses/by/4.0/). Original code examples and accompanying software are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+These grants cover material the author has authority to license. Separately credited third-party material retains its stated terms. Give appropriate credit, link the content licence and indicate changes; retain the MIT notice when reusing code.
+
+See [LICENSE](LICENSE), [LICENSE-CONTENT.md](LICENSE-CONTENT.md) and [LICENSE-CODE.md](LICENSE-CODE.md) for scope and full terms.
+
+
 
 ## Contact
 
