@@ -151,7 +151,7 @@ function validateEmail(email):
 ```python
 def validate_email(email):
     """
-    Validates an email address according to RFC 5322 standards.
+    Validate an email address against a common practical pattern.
     
     Args:
         email: String to validate as an email address
@@ -172,13 +172,13 @@ def validate_email(email):
 ```
 
 **Human**: Let's test this with various cases including edge cases:
-- user\@example.com
-- user+alias\@example.com
-- user.name\@example.co.uk
-- user\@sub.example.com
-- incomplete-email-without-domain\\@
-- incomplete-email-without-username\\@example.com
-- user\\@incomplete-domain
+- `user@example.com`
+- `user+alias@example.com`
+- `user.name@example.co.uk`
+- `user@sub.example.com`
+- `incomplete-email-without-domain@`
+- `incomplete-email-without-username@example.com`
+- `user@incomplete-domain`
 
 The collaborative approach takes longer initially but builds understanding, produces better-documented code, and addresses edge cases proactively rather than reactively.
 
@@ -272,7 +272,7 @@ Intentional prompting emphasises the development process rather than just the fi
 
 ### The Six-Step Process
 
-The six-step programming methodology (which we'll explore in depth in Part 2) provides a structured process that works with or without AI assistance:
+The six-step programming methodology (which we'll explore in depth in Part III, Methodology) provides a structured process that works with or without AI assistance:
 
 1. Restate the problem
 2. Identify inputs and outputs
@@ -372,7 +372,7 @@ The intentional prompting methodology directly addresses Dijkstra's concerns by 
 
 Another significant concern involves the non-deterministic behaviour of LLMs, specifically the fact that they can produce different outputs even when given the same input. This unpredictability raises legitimate questions about reliability, especially in mission-critical applications.
 
-Research has documented significant variations in LLM performance across multiple runs, with accuracy varying up to 15% and gaps between best and worst performance reaching as high as 70%. This variability stems from:
+Hands-on evaluation has documented significant variation in LLM performance across multiple runs: the same prompt can produce answers of materially different quality, and the gap between the best and worst of several attempts can be larger than the difference between competing models. Two sources of this variability stand out:
 
 1. **Input interpretation variability** - LLMs may interpret the same natural language prompt differently across different runs
 2. **Output generation variability** - Even with the same interpretation, the code generated may vary due to sampling methods

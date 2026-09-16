@@ -16,11 +16,11 @@ While the methodology is applied to software development, the core philosophy—
 
 The book is organized into the following sections:
 
-- **Part 0: The Philosophy** - The core distinction between delegation and conversation, with definitions of key terms
-- **Part 1: Foundations** - Core concepts of intentional prompting and the human-AI partnership
-- **Part 2: Methodology** - The six-step programming methodology adapted for AI collaboration
-- **Part 3: Patterns & Practices** - Effective prompting patterns and practical coding examples
-- **Part 4: Advanced Topics** - Scaling to complex projects and future directions
+- **Part I: The Philosophy** - The core distinction between delegation and conversation, with definitions of key terms
+- **Part II: Foundations** - Core concepts of intentional prompting and the human-AI partnership
+- **Part III: Methodology** - The six-step programming methodology adapted for AI collaboration
+- **Part IV: Patterns & Practices** - Effective prompting patterns and practical coding examples
+- **Part V: Advanced Topics** - Scaling to complex projects and future directions
 
 Throughout the book, examples are provided in both programming and business contexts, reinforcing that these principles apply wherever you work with AI.
 
@@ -34,7 +34,7 @@ This book is part of a comprehensive series for mastering modern software develo
 ### Python Track
 - **[Think Python, Direct AI](https://michael-borck.github.io/think-python-direct-ai)**: Computational Thinking for Beginners
 - **[Code Python, Consult AI](https://michael-borck.github.io/code-python-consult-ai)**: Python Fundamentals for the AI Era
-- **[Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-it-python-in-production)**: Professional Python in the AI Era
+- **[Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai)**: Professional Python in the AI Era
 
 ### Web Track
 - **[Build Web, Guide AI](https://michael-borck.github.io/build-web-guide-ai)**: Business Web Development with AI

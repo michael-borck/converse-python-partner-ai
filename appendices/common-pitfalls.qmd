@@ -59,7 +59,7 @@ When working with AI coding assistants, certain patterns of challenges tend to e
 
 #### Structured Prompting Framework
 
-- Use the templates from Appendix A as starting points
+- Use the Prompt Templates resource (see `tools/prompt-templates.md` in the sidebar) as starting points
 - Break complex requirements into clear, specific points
 - Include explicit constraints and edge cases
 - Specify the level of detail needed in the response

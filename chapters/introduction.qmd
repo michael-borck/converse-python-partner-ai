@@ -45,7 +45,7 @@ It's important to distinguish intentional prompting from the related but distinc
 
 In essence, intentional prompting integrates prompt engineering techniques within a broader methodology that maintains human agency and prioritises understanding and learning throughout the development process. This distinction becomes especially important as AI capabilities advance toward autonomous coding agents, where maintaining human oversight and understanding becomes increasingly critical.
 
-For a comprehensive comparison of intentional prompting with other approaches to AI-assisted programming (including prompt engineering, pseudocode for LLMs, agentic programming, and vibe coding), see the comparative framework in Appendix C: AI Tool Comparison.
+For a comprehensive comparison of intentional prompting with other approaches to AI-assisted programming (including prompt engineering, pseudocode for LLMs, agentic programming, and vibe coding), see the **AI Tool Comparison** resource linked in the book's sidebar.
 
 ## Why Intentional Prompting Matters
 
@@ -63,7 +63,7 @@ For students learning to code, this approach is particularly valuable. Rather th
 
 The rapid advancement of AI has led to the emergence of agentic programming, where AI agents can autonomously perform complex development tasks with minimal human intervention. While these systems show impressive capabilities in routine coding tasks, they also highlight precisely why methodologies like intentional prompting remain essential.
 
-Research reveals that even the most sophisticated AI agents face fundamental limitations that necessitate human oversight:
+Experience so far suggests that even the most sophisticated AI agents face fundamental limitations that necessitate human oversight:
 
 1. **Understanding Gap**: AI agents lack true comprehension of problem context and domain requirements. They can pattern-match solutions but miss critical business or user needs that aren't explicitly stated.
 
@@ -117,7 +117,7 @@ This book is part of a comprehensive series for mastering modern software develo
 
 - [Think Python, Direct AI: Computational Thinking for Beginners](https://michael-borck.github.io/think-python-direct-ai) - Perfect for absolute beginners
 - [Code Python, Consult AI: Python Fundamentals for the AI Era](https://michael-borck.github.io/code-python-consult-ai) - Core Python knowledge
-- [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-it-python-in-production) - Professional Python in the AI Era
+- [Ship Python, Orchestrate AI](https://michael-borck.github.io/ship-python-orchestrate-ai) - Professional Python in the AI Era
 
 **Web Track**
 

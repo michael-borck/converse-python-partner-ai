@@ -183,12 +183,12 @@ For single-character centers (odd-length palindromes):
 - Center at 'a' (index 1):
   - Check "a" -> palindrome of length 1
   - Check "bab" -> palindrome of length 3
-  - Check "babα" (out of bounds) -> stop
+  - Next expansion would be out of bounds -> stop
 
 - Center at 'b' (index 2):
   - Check "b" -> palindrome of length 1
   - Check "aba" -> palindrome of length 3
-  - Check "babα" (out of bounds) -> stop
+  - Next expansion would be out of bounds -> stop
 
 - Center at 'a' (index 3):
   - Check "a" -> palindrome of length 1

@@ -134,12 +134,12 @@ Human: I need to calculate total price with tax and discounts. Before we
        write code, what business rules should I consider?
 
 AI: [Explains order of operations, compound discounts, rounding, edge cases]
-Human: Those are good points. Lets handle discounts before tax.
+Human: Those are good points. Let's handle discounts before tax.
        What is a clean way to structure this?
 
 AI: [Proposes design with clear separation of concerns]
 
-Human: Now lets implement it. Can you explain each part as we go?
+Human: Now let's implement it. Can you explain each part as we go?
 
 [Collaborative implementation with understanding]
 ```
@@ -173,10 +173,11 @@ This maps directly to the average-versus-precise framework. A project that start
 
 This book will teach you to have productive conversations with AI:
 
-- **Part 1: Foundations** establishes the core concepts and principles
-- **Part 2: Methodology** provides a structured six-step approach
-- **Part 3: Patterns and Practices** offers reusable conversation patterns
-- **Part 4: Advanced Topics** addresses complex scenarios and future directions
+- **Part I: The Philosophy** (this part) establishes the core distinction and key terms
+- **Part II: Foundations** establishes the core concepts and principles
+- **Part III: Methodology** provides a structured six-step approach
+- **Part IV: Patterns and Practices** offers reusable conversation patterns
+- **Part V: Advanced Topics** addresses complex scenarios and future directions
 
 Throughout, you will see examples in both programming and business contexts,
 reinforcing that these principles apply wherever you work with AI.
@@ -184,4 +185,4 @@ reinforcing that these principles apply wherever you work with AI.
 The goal is not to make you dependent on AI, but to make you more capable
 with AI as your partner.
 
-Lets begin.
+Let's begin.

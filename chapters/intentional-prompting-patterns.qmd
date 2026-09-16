@@ -375,6 +375,10 @@ A developer starts with a simple request:
 Write a function to retrieve weather data from the wttr.in API for a given location.
 ```
 
+::: {.callout-note title="Live Services Rot"}
+The wttr.in service is the subject of this case study, not a dependency of the book. Community-run services change terms, throttle, or disappear; when an example like this stops working, treat it as an opportunity to practise the verification habit — check whether the service is up, then whether your code, then whether the API contract changed.
+:::
+
 ### Initial AI-Generated Code
 
 ```python

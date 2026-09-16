@@ -14,7 +14,7 @@ Several categories of AI tools have emerged to assist programmers:
 
 ### Code Completion Tools
 
-Tools like GitHub Copilot, Amazon CodeWhisperer, and TabNine integrate directly into the development environment and suggest code completions as you type. These suggestions range from completing a single line to generating entire functions.
+Tools like GitHub Copilot and Amazon Q Developer (formerly CodeWhisperer) integrate directly into the development environment and suggest code completions as you type. These suggestions range from completing a single line to generating entire functions.
 
 These tools excel at:
 - Automating repetitive coding patterns
@@ -24,7 +24,7 @@ These tools excel at:
 
 ### Conversational AI Assistants
 
-Conversational AI models like Claude, ChatGPT, and Bard take a different approach. Rather than integrating directly into the code editor, they provide a chat interface where developers can:
+Conversational AI models like Claude, ChatGPT, and Gemini take a different approach. Rather than integrating directly into the code editor, they provide a chat interface where developers can:
 - Ask questions about programming concepts
 - Request code suggestions for specific problems
 - Explain existing code
@@ -34,9 +34,9 @@ Conversational AI models like Claude, ChatGPT, and Bard take a different approac
 ### IDE Integrations
 
 Some tools combine both approaches, integrating conversational AI directly into development environments. Examples include:
-- Visual Studio IntelliCode
+- GitHub Copilot's chat panel in VS Code and JetBrains
+- Cursor (Anysphere's AI-first code editor)
 - JetBrains AI Assistant
-- Cursor (formerly Mutable AI)
 
 These tools allow developers to maintain their familiar workflow while accessing AI assistance.
 

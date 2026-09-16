@@ -173,25 +173,24 @@ def longest_palindromic_substring(s):
     
     def expand_around_center(left, right):
         """
-        Expand around a potential palindrome center and return the bounds.
-        
+        Expand around a potential palindrome center and update the
+        tracking variables when a longer palindrome is found.
+
         Args:
             left: Left index of the potential palindrome center
             right: Right index of the potential palindrome center
-            
-        Returns:
-            Tuple of (start_index, length) of the palindrome
         """
+        nonlocal start, max_length
+
         # Expand as long as we stay in bounds and have matching characters
         while left >= 0 and right < len(s) and s[left] == s[right]:
             current_length = right - left + 1
-            
+
             # Update longest palindrome if current one is longer
             if current_length > max_length:
-                nonlocal start, max_length
                 start = left
                 max_length = current_length
-                
+
             # Expand outward
             left -= 1
             right += 1
@@ -439,11 +438,15 @@ Look for opportunities to optimise performance without sacrificing readability:
 ```python
 # Original implementation
 for i in range(len(s)):
-    # Only check centers with potential to beat current max
-    if min(i, len(s) - i - 1) * 2 + 1 <= max_length:
-        continue  # Skip this center if it can't yield a longer palindrome
-    
-    # Process this center...
+    # An odd palindrome centred at i needs i characters on the left and
+    # len(s)-i-1 on the right; skip it when it cannot beat max_length.
+    if min(i, len(s) - i - 1) * 2 + 1 > max_length:
+        expand_around_center(i, i)
+
+    # The even centre (i, i+1) gets its own bound. Guarding both
+    # parities with one condition skips valid even palindromes.
+    if i < len(s) - 1 and min(i + 1, len(s) - i - 2) * 2 + 2 > max_length:
+        expand_around_center(i, i + 1)
 ```
 
 ### Documentation and Comments
@@ -538,9 +541,11 @@ def longest_palindromic_substring(s):
         
     Examples:
         >>> longest_palindromic_substring("babad")
-        "bab"  # Note: "aba" would also be a valid return value
+        'bab'  # Note: "aba" would also be a valid return value
         >>> longest_palindromic_substring("cbbd")
-        "bb"
+        'bb'
+        >>> longest_palindromic_substring("aa")
+        'aa'
     """
     # Handle empty input
     if not s:
@@ -573,23 +578,24 @@ def longest_palindromic_substring(s):
     
     # Check each potential center
     for i in range(len(s)):
-        # Skip centers that can't yield longer palindromes
-        remaining_chars = min(i, len(s) - i - 1)
-        if remaining_chars * 2 + 1 <= max_length:
-            continue
+        # Skip odd centres that cannot yield longer palindromes
+        odd_potential = min(i, len(s) - i - 1) * 2 + 1
+        if odd_potential > max_length:
+            # Check odd-length palindrome
+            odd_start, odd_length = expand_around_center(i, i)
+            if odd_length > max_length:
+                start = odd_start
+                max_length = odd_length
         
-        # Check odd-length palindrome
-        odd_start, odd_length = expand_around_center(i, i)
-        if odd_length > max_length:
-            start = odd_start
-            max_length = odd_length
-        
-        # Check even-length palindrome
+        # Check even-length palindrome (its bound is separate — one
+        # guard for both parities skips valid even palindromes)
         if i < len(s) - 1:
-            even_start, even_length = expand_around_center(i, i + 1)
-            if even_length > max_length:
-                start = even_start
-                max_length = even_length
+            even_potential = min(i + 1, len(s) - i - 2) * 2 + 2
+            if even_potential > max_length:
+                even_start, even_length = expand_around_center(i, i + 1)
+                if even_length > max_length:
+                    start = even_start
+                    max_length = even_length
     
     # Return the longest palindromic substring
     return s[start:start + max_length]

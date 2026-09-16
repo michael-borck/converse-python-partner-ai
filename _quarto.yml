@@ -57,10 +57,10 @@ book:
   other-links:
     - text: Download PDF
       icon: file-pdf
-      href: converse-python-partner-ai.pdf
+      href: /converse-python-partner-ai.pdf
     - text: Download EPUB
       icon: book
-      href: converse-python-partner-ai.epub
+      href: /converse-python-partner-ai.epub
     - text: Download llm.txt
       icon: robot
       href: llm.txt

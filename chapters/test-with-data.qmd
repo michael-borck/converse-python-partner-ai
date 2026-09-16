@@ -221,7 +221,7 @@ Here are 10 diverse test cases for the longest palindromic substring function:
 | 6 | "racecar" | "racecar" | Entire string is a palindrome |
 | 7 | "aacabdkacaa" | "aca" | Multiple palindromes, should find longest |
 | 8 | "aaaaa" | "aaaaa" | Repeated characters |
-| 9 | "civilservice" | "civic" | Palindrome at beginning |
+| 9 | "civiccenter" | "civic" | Palindrome at beginning |
 | 10 | "abcdeedcba" | "abcdeedcba" | Even-length palindrome (entire string) |
 
 These test cases cover empty strings, single characters, no long palindromes, multiple valid answers, even and odd-length palindromes, whole-string palindromes, multiple palindromes of different lengths, repeated characters, and palindromes at different positions in the string.
@@ -295,7 +295,7 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
     
     def test_palindrome_at_beginning(self):
         """Test with a palindrome at the beginning of the string."""
-        self.assertEqual(longest_palindromic_substring("civilservice"), "civic")
+        self.assertEqual(longest_palindromic_substring("civiccenter"), "civic")
     
     def test_even_length_entire_string(self):
         """Test with an even-length palindrome that is the entire string."""
@@ -334,7 +334,7 @@ Test failures provide valuable learning opportunities that can improve both your
 
 ### Debugging with AI Assistance
 
-When tests fail, AI can help analyse the failure:
+When tests fail, AI can help analyse the failure — and the analysis needs verifying just like the code does. Watch what happens in this exchange:
 
 
 
@@ -442,6 +442,19 @@ This bug would cause your function to sometimes return shorter palindromes when 
 
 
 
+::: {.callout-warning}
+## Check the Diagnosis Before Applauding the Fix
+
+Go back and run the "buggy" implementation from that prompt against `"aacabdkacaa"`. It returns `"aca"` — the failing test passes, because the update happens inside the while loop, after the palindrome condition has already been verified. The AI's confident explanation ("updating `max_length` before confirming the substring is actually a palindrome") describes a bug that is not in this code, and its fix — extracting a `current_length` variable — is a cosmetic no-op. The staged failure was in the report, not the implementation.
+
+Two habits fall out of this:
+
+1. **Verify the failure before asking why.** Rerun the test and print the actual output first. A failure report you did not just reproduce is itself an untested claim — and an AI will happily diagnose a bug the code does not have if you hand it one.
+2. **Treat an AI's explanation of a bug as a hypothesis, exactly like its code.** The tell in this exchange is that the "fix" changes no behaviour. A diff that changes nothing cannot fix anything. The test suite — not the explanation's confidence — is the verdict.
+:::
+
+
+
 ### Test-Driven Improvements
 
 Use test results to drive improvements to your solution:
@@ -508,9 +521,8 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
         # Multiple palindromes of different lengths
         self.assertEqual(longest_palindromic_substring("abcbaxyzzyxabc"), "xyzzyxa")
         
-        # Multiple palindromes of same length
-        result = longest_palindromic_substring("abacababacab")
-        self.assertTrue(result in ["abacaba", "bacabab"])
+        # The longest palindrome spans almost the entire string
+        self.assertEqual(longest_palindromic_substring("abacababacab"), "bacababacab")
     
     def test_performance(self):
         """Test performance with large inputs."""

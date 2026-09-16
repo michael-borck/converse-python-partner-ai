@@ -278,7 +278,7 @@ To find palindromes:
 For "babad":
 - Center at 'b' (index 0): Just 'b' (length 1)
 - Center at 'a' (index 1): 'bab' (length 3)
-- Center at 'b' (index 2): 'bab' (length 3)
+- Center at 'b' (index 2): 'aba' (length 3)
 - Center at 'a' (index 3): 'aba' (length 3)
 - Center at 'd' (index 4): Just 'd' (length 1)
 
@@ -467,7 +467,7 @@ Let's trace through your implementation for each test case:
 1. `"babad"`:
    - For center at 'b' (index 0): Just 'b' (length 1)
    - For center at 'a' (index 1): 'bab' (length 3)
-   - For center at 'b' (index 2): 'bab' (length 3)
+   - For center at 'b' (index 2): 'aba' (length 3)
    - For center at 'a' (index 3): 'aba' (length 3)
    - For center at 'd' (index 4): Just 'd' (length 1)
    - The first palindrome of length 3 found is "bab" ✓
