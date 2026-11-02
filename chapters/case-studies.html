@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -523,7 +527,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -551,7 +557,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">14.4</span> Key Takeaways</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/case-studies.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -606,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 data-number="14.1.2" class="anchored" data-anchor-id="the-intentional-prompting-approach"><span class="header-section-number">14.1.2</span> The Intentional Prompting Approach</h3>
 <section id="step-1-restate-the-problem" class="level4" data-number="14.1.2.1">
 <h4 data-number="14.1.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem"><span class="header-section-number">14.1.2.1</span> Step 1: Restate the Problem</h4>
-<p>The first move is not to ask for code — it is to prove you understand the problem. By restating requirements in your own words, you invite the AI to catch gaps before any code is written.</p>
+<p>The first move is not to ask for code. It is to prove you understand the problem. By restating requirements in your own words, you invite the AI to catch gaps before any code is written.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I need to build a data analysis pipeline to process customer transaction data. Let me restate the problem:
 
@@ -635,7 +641,7 @@ Is this understanding correct, and are there any important aspects I've missed?<
 6. **Data quality assessment**: Beyond basic cleaning, you might want to include statistical analysis to identify outliers or anomalies that could skew the results.
 
 With these considerations in mind, your restatement effectively captures the core of the problem.</code></pre>
-<p>Notice what happened here: the AI surfaced six considerations — data privacy, repeatability, output format — that were not in the original requirements. A one-shot prompt like “build me a data pipeline” would have skipped straight past these. The restatement turned a vague goal into a shared understanding.</p>
+<p>Notice what happened here: the AI surfaced six considerations (data privacy, repeatability, output format) that were not in the original requirements. A one-shot prompt like “build me a data pipeline” would have skipped straight past these. The restatement turned a vague goal into a shared understanding.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -652,7 +658,7 @@ With these considerations in mind, your restatement effectively captures the cor
 </section>
 <section id="step-2-identify-input-and-output" class="level4" data-number="14.1.2.2">
 <h4 data-number="14.1.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output"><span class="header-section-number">14.1.2.2</span> Step 2: Identify Input and Output</h4>
-<p>With the problem understood, the next step is to nail down exactly what goes in and what comes out. Vague specifications produce vague code — precise ones give the AI concrete targets.</p>
+<p>With the problem understood, the next step is to nail down exactly what goes in and what comes out. Vague specifications produce vague code. Precise ones give the AI concrete targets.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Let me define the specific inputs and outputs for this pipeline:
 
@@ -727,7 +733,7 @@ T1005,C2,2023-01-20,"groceries,dairy,bakery",
 <p>…and so on for all transactions.</p>
 <p>Counting frequencies: - (“dairy”, “produce”): 2 - (“groceries”, “dairy”): 2 - All others: 1</p>
 <p>Most frequent combinations: (“dairy”, “produce”) and (“groceries”, “dairy”)</p>
-<p>Now the human shares the results of working through the problem by hand. This is the step most people skip — and the one that matters most. By showing the AI your manual process, you give it concrete evidence of what you expect the code to do.</p>
+<p>Now the human shares the results of working through the problem by hand. This is the step most people skip, and the one that matters most. By showing the AI your manual process, you give it concrete evidence of what you expect the code to do.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I've worked through a small sample of the data manually to understand the process of finding product combinations. Here's what I did:
 
@@ -767,17 +773,17 @@ Your manual process demonstrates a good understanding of the approach. For imple
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Each step builds on the previous — the AI has context from earlier exchanges
+<span class="screen-reader-only">Note</span>Each step builds on the previous; the AI has context from earlier exchanges
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By Step 3, the AI knows the data schema, the desired outputs, and the manual process. When it suggests association metrics like support, confidence, and lift, it is making a recommendation informed by three rounds of shared context — not guessing in a vacuum.</p>
+<p>By Step 3, the AI knows the data schema, the desired outputs, and the manual process. When it suggests association metrics like support, confidence, and lift, it is making a recommendation informed by three rounds of shared context, rather than guessing in a vacuum.</p>
 </div>
 </div>
 </section>
 <section id="step-4-write-pseudocode" class="level4" data-number="14.1.2.4">
 <h4 data-number="14.1.2.4" class="anchored" data-anchor-id="step-4-write-pseudocode"><span class="header-section-number">14.1.2.4</span> Step 4: Write Pseudocode</h4>
-<p>Based on the manual exploration, we can now outline the solution in pseudocode. The goal here is to capture the logic — the structure and flow — without getting tangled in syntax or library details.</p>
+<p>Based on the manual exploration, we can now outline the solution in pseudocode. The goal here is to capture the logic, the structure and the flow, without getting tangled in syntax or library details.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Based on my manual exploration, let me write pseudocode for the data analysis pipeline:</code></pre>
 <p>FUNCTION clean_data(input_file): data = READ_CSV(input_file)</p>
@@ -916,7 +922,7 @@ FUNCTION clean_data(input_file):
         # ...process chunk...
 
 These improvements would make your pipeline more robust, efficient, and suitable for large-scale data processing. Your current pseudocode is a great starting point, and these suggestions help address some common challenges in real-world data processing.</code></pre>
-<p>The human is not just accepting the first answer — they are pushing for specifics by sharing detailed pseudocode and asking “are there inefficiencies?” This kind of directed follow-up consistently produces better results than passively accepting whatever the AI offers.</p>
+<p>The human is not just accepting the first answer. They are pushing for specifics by sharing detailed pseudocode and asking “are there inefficiencies?” This kind of directed follow-up consistently produces better results than passively accepting whatever the AI offers.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -927,7 +933,7 @@ These improvements would make your pipeline more robust, efficient, and suitable
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The thinking happened in Steps 1-4, so Step 5 is informed delegation. When the human asks for Python code next, the AI already knows the data schema, the algorithm choice, the chunking strategy, and the error-handling requirements. Compare this with a one-shot prompt — the quality difference comes from the structured conversation.</p>
+<p>The thinking happened in Steps 1-4, so Step 5 is informed delegation. When the human asks for Python code next, the AI already knows the data schema, the algorithm choice, the chunking strategy, and the error-handling requirements. Compare this with a one-shot prompt: the quality difference comes from the structured conversation.</p>
 </div>
 </div>
 </section>
@@ -1119,7 +1125,7 @@ Overall, your implementation is well-designed for the task at hand. These sugges
 </section>
 <section id="step-6-test-with-data" class="level4" data-number="14.1.2.6">
 <h4 data-number="14.1.2.6" class="anchored" data-anchor-id="step-6-test-with-data"><span class="header-section-number">14.1.2.6</span> Step 6: Test with Data</h4>
-<p>For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset. The human does not wait until the full pipeline is built — they create synthetic test data to validate the core logic first.</p>
+<p>For this step, we would test our implementation with real data, starting with a small sample and progressively increasing to the full dataset. The human does not wait until the full pipeline is built. They create synthetic test data to validate the core logic first.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Let's test our implementation with a small sample dataset first:
 
@@ -1285,7 +1291,7 @@ def analyze_large_dataset(file_path, output_dir):
     return full_results
 
 Your test setup is well-designed. When scaling to millions of rows, implementing these strategies will help manage both memory consumption and computation time while still extracting valuable insights from the data.</code></pre>
-<p>By the end of six exchanges, the conversation has produced a tested, production-aware implementation — not because the AI was given a single brilliant prompt, but because each step added information the AI could use to give better answers.</p>
+<p>By the end of six exchanges, the conversation has produced a tested, production-aware implementation, not because the AI was given a single brilliant prompt, but because each step added information the AI could use to give better answers.</p>
 </section>
 </section>
 <section id="lessons-learned" class="level3" data-number="14.1.3">
@@ -1318,7 +1324,7 @@ Your test setup is well-designed. When scaling to millions of rows, implementing
 <h3 data-number="14.2.2" class="anchored" data-anchor-id="the-intentional-prompting-approach-1"><span class="header-section-number">14.2.2</span> The Intentional Prompting Approach</h3>
 <section id="step-1-restate-the-problem-1" class="level4" data-number="14.2.2.1">
 <h4 data-number="14.2.2.1" class="anchored" data-anchor-id="step-1-restate-the-problem-1"><span class="header-section-number">14.2.2.1</span> Step 1: Restate the Problem</h4>
-<p>This case study starts differently from the first — the developer asks the AI to help with the restatement itself, rather than presenting one for review. Both approaches work; the key is that the restatement happens at all.</p>
+<p>This case study starts differently from the first: the developer asks the AI to help with the restatement itself, rather than presenting one for review. Both approaches work; the key is that the restatement happens at all.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>I need to create a weather dashboard in Python that uses a provided module to access weather data and displays it in a user-friendly interface. Can you help me restate this problem more clearly to ensure I understand all requirements?</code></pre>
 <p><strong>AI:</strong></p>
@@ -1333,13 +1339,13 @@ The key components you'll need to develop are:
 - A display system (likely console-based) to show weather information
 - User interaction components to allow navigation and selection
 - Visualisation elements for presenting weather data graphically</code></pre>
-<p>The developer does not stop at the AI’s restatement. They follow up with a clarification question to fill in their own knowledge gaps before moving forward. This is intentional conversation — using the AI as a thinking partner, not a code generator.</p>
+<p>The developer does not stop at the AI’s restatement. They follow up with a clarification question to fill in their own knowledge gaps before moving forward. This is intentional conversation: using the AI as a thinking partner, not a code generator.</p>
 <p><strong>Human follow-up prompt (clarification):</strong></p>
 <pre class="text"><code>That's helpful. Could you help me understand what types of weather data are typically available through weather APIs, and what visualisations might be most useful for users? This will help me plan my dashboard layout.</code></pre>
 </section>
 <section id="step-2-identify-input-and-output-requirements" class="level4" data-number="14.2.2.2">
 <h4 data-number="14.2.2.2" class="anchored" data-anchor-id="step-2-identify-input-and-output-requirements"><span class="header-section-number">14.2.2.2</span> Step 2: Identify Input and Output Requirements</h4>
-<p>With the problem restated, the developer defines the boundary of the system — what comes in, what goes out.</p>
+<p>With the problem restated, the developer defines the boundary of the system: what comes in, what goes out.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>Based on our discussion, let me identify the specific inputs and outputs for my weather dashboard:
 
@@ -1466,7 +1472,7 @@ Does this flow make sense? Would you structure the user experience differently?<
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Challenge the AI’s output — do not just accept it
+<span class="screen-reader-only">Tip</span>Challenge the AI’s output; do not just accept it
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1559,7 +1565,7 @@ Test cases to consider:
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The AI suggests testing for empty forecast lists, API timeouts, and special characters in location names. These are the kinds of edge cases that cause production failures — and they emerged naturally from a conversation, not from staring at code.</p>
+<p>The AI suggests testing for empty forecast lists, API timeouts, and special characters in location names. These are the kinds of edge cases that cause production failures, and they emerged naturally from a conversation, not from staring at code.</p>
 </div>
 </div>
 </section>
@@ -1584,7 +1590,7 @@ Test cases to consider:
 2. Validate returned data structure
 3. Handle missing or incomplete data
 4. Provide meaningful error messages to the user</code></pre>
-<p>The result is a function that degrades gracefully — missing fields get defaults, forecast retrieval retries automatically, and every failure produces a meaningful message. This is the difference between code that works in a demo and code that works in production.</p>
+<p>The result is a function that degrades gracefully: missing fields get defaults, forecast retrieval retries automatically, and every failure produces a meaningful message. This is the difference between code that works in a demo and code that works in production.</p>
 </section>
 <section id="after-improved-data-retrieval-function" class="level4" data-number="14.2.3.3">
 <h4 data-number="14.2.3.3" class="anchored" data-anchor-id="after-improved-data-retrieval-function"><span class="header-section-number">14.2.3.3</span> After: Improved Data Retrieval Function</h4>
@@ -1672,7 +1678,7 @@ Test cases to consider:
 </section>
 <section id="case-study-3-debugging-a-complex-bug" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="case-study-3-debugging-a-complex-bug"><span class="header-section-number">14.3</span> Case Study 3: Debugging a Complex Bug</h2>
-<p>For our final case study, we’ll look at a debugging scenario where intentional prompting techniques help solve a challenging issue. Debugging is where many developers abandon methodology and start guessing — this case study shows why the structured approach pays off even when you are under pressure to find a fix.</p>
+<p>For our final case study, we’ll look at a debugging scenario where intentional prompting techniques help solve a challenging issue. Debugging is where many developers abandon methodology and start guessing. This case study shows why the structured approach pays off even when you are under pressure to find a fix.</p>
 <section id="the-problem-2" class="level3" data-number="14.3.1">
 <h3 data-number="14.3.1" class="anchored" data-anchor-id="the-problem-2"><span class="header-section-number">14.3.1</span> The Problem</h3>
 <p>A team is experiencing intermittent failures in their e-commerce checkout system. The checkout process occasionally fails with a generic error message, but only for certain users and at seemingly random times.</p>

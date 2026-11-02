@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -523,7 +527,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -564,7 +570,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">8.6</span> Key Takeaways</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/pseudocode.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -650,7 +656,7 @@ WRITE data TO file</code></pre>
 </section>
 <section id="pseudocode-and-llms-a-natural-partnership" class="level2" data-number="8.2">
 <h2 data-number="8.2" class="anchored" data-anchor-id="pseudocode-and-llms-a-natural-partnership"><span class="header-section-number">8.2</span> Pseudocode and LLMs: A Natural Partnership</h2>
-<p>Pseudocode plays a particularly important role when working with Large Language Models. It serves as a bridge between natural language ambiguity and the precision of formal programming languages, creating an ideal medium for human-AI collaboration.</p>
+<p>Pseudocode plays a particularly important role when working with Large Language Models. It is a bridge between natural language ambiguity and the precision of formal programming languages, creating an ideal medium for human-AI collaboration.</p>
 <section id="why-pseudocode-works-well-with-llms" class="level3" data-number="8.2.1">
 <h3 data-number="8.2.1" class="anchored" data-anchor-id="why-pseudocode-works-well-with-llms"><span class="header-section-number">8.2.1</span> Why Pseudocode Works Well with LLMs</h3>
 <p>Several factors make pseudocode especially effective for LLM interactions:</p>
@@ -659,7 +665,7 @@ WRITE data TO file</code></pre>
 <li><p><strong>Reduced ambiguity</strong> - Pseudocode provides more structure than natural language while remaining flexible, striking an ideal balance that reduces misinterpretations.</p></li>
 <li><p><strong>Focus on logic</strong> - By emphasising algorithmic thinking over syntax, pseudocode aligns with LLMs’ strengths in reasoning about procedures rather than producing perfect syntax.</p></li>
 <li><p><strong>Activation of procedural knowledge</strong> - Research shows that LLMs have absorbed procedural knowledge from their training data. Pseudocode effectively activates this latent knowledge by providing clear procedural frameworks.</p></li>
-<li><p><strong>Medium of iterative refinement</strong> - Pseudocode serves as an excellent medium for progressive disambiguation - the process of gradually transforming ambiguous natural language into precise formal code through multiple rounds of interaction.</p></li>
+<li><p><strong>Medium of iterative refinement</strong> - Pseudocode serves as an excellent medium for progressive disambiguation, the process of gradually transforming ambiguous natural language into precise formal code through multiple rounds of interaction.</p></li>
 </ol>
 </section>
 <section id="pseudocode-as-disambiguation-tool" class="level3" data-number="8.2.2">
@@ -675,7 +681,7 @@ WRITE data TO file</code></pre>
 </section>
 <section id="sudolang-pseudocode-optimised-for-llms" class="level3" data-number="8.2.3">
 <h3 data-number="8.2.3" class="anchored" data-anchor-id="sudolang-pseudocode-optimised-for-llms"><span class="header-section-number">8.2.3</span> SudoLang: Pseudocode optimised for LLMs</h3>
-<p>SudoLang represents an evolution of pseudocode specifically designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimised for human-AI collaboration.</p>
+<p>SudoLang is a form of pseudocode designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimised for human-AI collaboration.</p>
 <p>Key features of SudoLang include:</p>
 <ul>
 <li><strong>Simplified syntax</strong> that both humans and AI can easily understand</li>
@@ -692,7 +698,7 @@ WRITE data TO file</code></pre>
 </section>
 <section id="llms-as-pseudocode-interpreters" class="level3" data-number="8.2.4">
 <h3 data-number="8.2.4" class="anchored" data-anchor-id="llms-as-pseudocode-interpreters"><span class="header-section-number">8.2.4</span> LLMs as Pseudocode Interpreters</h3>
-<p>An intriguing aspect of LLMs is their ability to act as “interpreters” for pseudocode. Unlike traditional pseudocode that serves purely as documentation, LLMs can actually process and “execute” pseudocode to generate outputs, transforming it from a planning tool into a functional programming interface.</p>
+<p>LLMs can act as “interpreters” for pseudocode. Unlike traditional pseudocode that serves purely as documentation, LLMs can actually process and “execute” pseudocode to generate outputs, transforming it from a planning tool into a functional programming interface.</p>
 <p>This capability enables new workflows where:</p>
 <ol type="1">
 <li>Humans write pseudocode expressing algorithmic intent</li>

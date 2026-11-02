@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -523,7 +527,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -580,7 +586,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#putting-principles-into-practice" id="toc-putting-principles-into-practice" class="nav-link" data-scroll-target="#putting-principles-into-practice"><span class="header-section-number">4.9</span> Putting Principles Into Practice</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-principles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/intentional-prompting-principles.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -610,7 +616,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <section id="the-spectrum-of-ai-integration-approaches" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="the-spectrum-of-ai-integration-approaches"><span class="header-section-number">4.1</span> The Spectrum of AI Integration Approaches</h2>
-<p>Before diving into the core principles of intentional prompting, it’s important to understand the broader landscape of approaches to integrating AI into development workflows. These approaches reflect different philosophies about the role of AI and human developers.</p>
+<p>Intentional prompting is one of several approaches to integrating AI into development workflows. These approaches reflect different philosophies about the role of AI and human developers.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="../images/ai-human-collaboration.png" class="img-fluid figure-img"></p>
@@ -754,7 +760,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>Human</strong>: Now let’s implement this in Python with a clear approach:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> validate_email(email):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Validates an email address according to RFC 5322 standards.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Validate an email address against a common practical pattern.</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">        email: String to validate as an email address</span></span>
@@ -772,15 +778,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        </span>
 <span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">bool</span>(re.match(pattern, email))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p><strong>Human</strong>: Let’s test this with various cases including edge cases: - user@example.com - user+alias@example.com - user.name@example.co.uk - user@sub.example.com - incomplete-email-without-domain\@ - incomplete-email-without-username\<span class="citation" data-cites="example.com">@example.com</span> - user\<span class="citation" data-cites="incomplete-domain">@incomplete-domain</span></p>
+<p><strong>Human</strong>: Let’s test this with various cases including edge cases: - <code>user@example.com</code> - <code>user+alias@example.com</code> - <code>user.name@example.co.uk</code> - <code>user@sub.example.com</code> - <code>incomplete-email-without-domain@</code> - <code>incomplete-email-without-username@example.com</code> - <code>user@incomplete-domain</code></p>
 <p>The collaborative approach takes longer initially but builds understanding, produces better-documented code, and addresses edge cases proactively rather than reactively.</p>
-<p>This example illustrates how the different approaches affect not just the final code but the entire development process and learning experience.</p>
 </section>
 </section>
 </section>
 <section id="maintaining-human-agency" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="maintaining-human-agency"><span class="header-section-number">4.2</span> Maintaining Human Agency</h2>
-<p>At the core of intentional prompting is the principle of human agency - the programmer remains the architect and decision-maker throughout the development process, not just a consumer of AI-generated solutions.</p>
+<p>Intentional prompting rests on human agency: the programmer remains the architect and decision-maker throughout the development process, not just a consumer of AI-generated solutions.</p>
 <p>This principle goes by several names depending on the audience. Philosophers and ethicists call it <strong>human agency</strong>: the capacity to choose, weigh, and own the outcome. Practitioners and team leads call it <strong>human oversight</strong>: the practice of reviewing AI output before it ships. AI policy and system design call it <strong>human-in-the-loop</strong> (HIL): the structural requirement that a person remains an active participant in decisions a system could otherwise automate. <strong>Intentional prompting</strong> is the methodology that operationalises all three. Agency is the principle, oversight is the practice, HIL is the system-design view, and intentional prompting is the workflow that keeps them in place during development. Four vocabularies, one stance.</p>
 <section id="directive-vs.-delegative-approaches" class="level3" data-number="4.2.1">
 <h3 data-number="4.2.1" class="anchored" data-anchor-id="directive-vs.-delegative-approaches"><span class="header-section-number">4.2.1</span> Directive vs.&nbsp;Delegative Approaches</h3>
@@ -811,7 +816,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>A critical distinction in intentional prompting is the difference between understanding a solution and merely copying it. The goal is not just working code, but comprehension that builds long-term programming capabilities.</p>
 <section id="the-black-box-problem" class="level3" data-number="4.3.1">
 <h3 data-number="4.3.1" class="anchored" data-anchor-id="the-black-box-problem"><span class="header-section-number">4.3.1</span> The “Black Box” Problem</h3>
-<p>When developers copy AI-generated code without understanding it, they create “black boxes” in their codebase - components they can’t effectively debug, maintain, or explain. Over time, this leads to brittle systems and stunted professional growth.</p>
+<p>When developers copy AI-generated code without understanding it, they create “black boxes” in their codebase, components they can’t effectively debug, maintain, or explain. Over time, this leads to brittle systems and stunted professional growth.</p>
 </section>
 <section id="the-vet-check" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="the-vet-check"><span class="header-section-number">4.3.2</span> The VET Check</h3>
@@ -884,7 +889,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-six-step-process" class="level3" data-number="4.5.2">
 <h3 data-number="4.5.2" class="anchored" data-anchor-id="the-six-step-process"><span class="header-section-number">4.5.2</span> The Six-Step Process</h3>
-<p>The six-step programming methodology (which we’ll explore in depth in Part 2) provides a structured process that works with or without AI assistance:</p>
+<p>The six-step programming methodology (which we’ll explore in depth in Part III, Methodology) provides a structured process that works with or without AI assistance:</p>
 <ol type="1">
 <li>Restate the problem</li>
 <li>Identify inputs and outputs</li>
@@ -901,7 +906,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-learning-mindset" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="the-learning-mindset"><span class="header-section-number">4.6</span> The Learning Mindset</h2>
-<p>Intentional prompting is fundamentally about continuous learning rather than just task completion. This mindset treats every programming challenge as an opportunity to deepen understanding and build skills.</p>
+<p>Intentional prompting is about continuous learning rather than just task completion. This mindset treats every programming challenge as an opportunity to deepen understanding and build skills.</p>
 <section id="characteristics-of-a-learning-mindset" class="level3" data-number="4.6.1">
 <h3 data-number="4.6.1" class="anchored" data-anchor-id="characteristics-of-a-learning-mindset"><span class="header-section-number">4.6.1</span> Characteristics of a Learning Mindset</h3>
 <ul>
@@ -984,7 +989,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-non-deterministic-nature-of-llms" class="level3" data-number="4.8.2">
 <h3 data-number="4.8.2" class="anchored" data-anchor-id="the-non-deterministic-nature-of-llms"><span class="header-section-number">4.8.2</span> The Non-Deterministic Nature of LLMs</h3>
 <p>Another significant concern involves the non-deterministic behaviour of LLMs, specifically the fact that they can produce different outputs even when given the same input. This unpredictability raises legitimate questions about reliability, especially in mission-critical applications.</p>
-<p>Research has documented significant variations in LLM performance across multiple runs, with accuracy varying up to 15% and gaps between best and worst performance reaching as high as 70%. This variability stems from:</p>
+<p>Hands-on evaluation has documented significant variation in LLM performance across multiple runs: the same prompt can produce answers of materially different quality, and the gap between the best and worst of several attempts can be larger than the difference between competing models. Two sources of this variability stand out:</p>
 <ol type="1">
 <li><strong>Input interpretation variability</strong> - LLMs may interpret the same natural language prompt differently across different runs</li>
 <li><strong>Output generation variability</strong> - Even with the same interpretation, the code generated may vary due to sampling methods</li>
@@ -999,7 +1004,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="procedural-knowledge-transfer" class="level3" data-number="4.8.3">
 <h3 data-number="4.8.3" class="anchored" data-anchor-id="procedural-knowledge-transfer"><span class="header-section-number">4.8.3</span> Procedural Knowledge Transfer</h3>
-<p>Interestingly, LLMs excel at procedural tasks because they’ve inherited human problem-solving patterns through their training data. Research shows that LLMs have absorbed procedural knowledge through exposure to:</p>
+<p>LLMs excel at procedural tasks because they’ve inherited human problem-solving patterns through their training data. Research shows that LLMs have absorbed procedural knowledge through exposure to:</p>
 <ul>
 <li>Error-checking protocols from technical manuals</li>
 <li>Creative iteration cycles in writing samples</li>

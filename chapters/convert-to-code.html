@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -523,7 +527,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -558,7 +564,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">9.5</span> Key Takeaways</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/convert-to-code.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/convert-to-code.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -714,7 +720,7 @@ Could you provide a clean Python implementation with good variable names and doc
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Notice how the human restated the algorithm’s key steps before asking for code. This is Step 5 building directly on Step 4 – the pseudocode provides constraints that keep the AI’s output aligned with the solution you designed, not one the AI might prefer.</p>
+<p>Notice how the human restated the algorithm’s key steps before asking for code. This is Step 5 building directly on Step 4: the pseudocode provides constraints that keep the AI’s output aligned with the solution you designed, not one the AI might prefer.</p>
 </div>
 </div>
 <p><strong>AI:</strong></p>
@@ -738,25 +744,24 @@ def longest_palindromic_substring(s):
     
     def expand_around_center(left, right):
         """
-        Expand around a potential palindrome center and return the bounds.
-        
+        Expand around a potential palindrome center and update the
+        tracking variables when a longer palindrome is found.
+
         Args:
             left: Left index of the potential palindrome center
             right: Right index of the potential palindrome center
-            
-        Returns:
-            Tuple of (start_index, length) of the palindrome
         """
+        nonlocal start, max_length
+
         # Expand as long as we stay in bounds and have matching characters
         while left &gt;= 0 and right &lt; len(s) and s[left] == s[right]:
             current_length = right - left + 1
-            
+
             # Update longest palindrome if current one is longer
             if current_length &gt; max_length:
-                nonlocal start, max_length
                 start = left
                 max_length = current_length
-                
+
             # Expand outward
             left -= 1
             right += 1
@@ -782,7 +787,7 @@ This implementation follows the center expansion approach we discussed. It has:
 5. Efficient tracking of the longest palindrome found
 
 The time complexity is O(n²) where n is the length of the string, and the space complexity is O(1) since we only use a constant amount of extra space.</code></pre>
-<p>The AI produced a working implementation – but working is not the same as finished. Because you understand the algorithm from earlier steps, you’re in a position to evaluate the design choices, not just whether it runs.</p>
+<p>The AI produced a working implementation, but working is not the same as finished. Because you understand the algorithm from earlier steps, you’re in a position to evaluate the design choices, not just whether it runs.</p>
 </section>
 <section id="evaluating-ai-generated-code" class="level3" data-number="9.2.2">
 <h3 data-number="9.2.2" class="anchored" data-anchor-id="evaluating-ai-generated-code"><span class="header-section-number">9.2.2</span> Evaluating AI-Generated Code</h3>
@@ -813,7 +818,7 @@ Could you address these issues in a revised implementation?</code></pre>
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The human reviewed the code and raised two specific concerns – one about design (returning values vs.&nbsp;modifying globals) and one about correctness (unnecessary check). This kind of targeted feedback is only possible because the human understood the algorithm before seeing the code.</p>
+<p>The human reviewed the code and raised two specific concerns: one about design (returning values vs.&nbsp;modifying globals) and one about correctness (unnecessary check). This kind of targeted feedback is only possible because the human understood the algorithm before seeing the code.</p>
 </div>
 </div>
 <p><strong>AI:</strong></p>
@@ -935,7 +940,7 @@ Would you like me to show you some other common patterns for tuple unpacking in 
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If the AI introduces syntax you don’t recognise, stop and ask. You’ll use that pattern again, and understanding it now means you won’t need to ask next time. Copying code you don’t understand is borrowing knowledge you’ll have to repay later – with interest.</p>
+<p>If the AI introduces syntax you don’t recognise, stop and ask. You’ll use that pattern again, and understanding it now means you won’t need to ask next time. Copying code you don’t understand is borrowing knowledge you’ll have to repay later, with interest.</p>
 </div>
 </div>
 </section>
@@ -956,7 +961,7 @@ Would you like me to show you some other common patterns for tuple unpacking in 
 <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Idiomatic Python</span></span>
 <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> collection:</span>
 <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    process(item)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ask AI to make code more idiomatic. This is a case where a little delegation is fine – once you understand the logic, asking the AI to polish syntax into language-native patterns is a good use of its strengths.</p>
+<p>Ask AI to make code more idiomatic. This is a case where a little delegation is fine: once you understand the logic, asking the AI to polish syntax into language-native patterns is a good use of its strengths.</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>This code works, but I'd like it to be more idiomatic Python. Can you suggest any improvements?</code></pre>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -991,11 +996,15 @@ Would you like me to show you some other common patterns for tuple unpacking in 
 <p>Look for opportunities to optimise performance without sacrificing readability:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Original implementation</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Only check centers with potential to beat current max</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">min</span>(i, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;=</span> max_length:</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span>  <span class="co"># Skip this center if it can't yield a longer palindrome</span></span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Process this center...</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># An odd palindrome centred at i needs i characters on the left and</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># len(s)-i-1 on the right; skip it when it cannot beat max_length.</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">min</span>(i, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">&gt;</span> max_length:</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        expand_around_center(i, i)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># The even centre (i, i+1) gets its own bound. Guarding both</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># parities with one condition skips valid even palindromes.</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span> <span class="kw">and</span> <span class="bu">min</span>(i <span class="op">+</span> <span class="dv">1</span>, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">&gt;</span> max_length:</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        expand_around_center(i, i <span class="op">+</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="documentation-and-comments" class="level3" data-number="9.3.4">
 <h3 data-number="9.3.4" class="anchored" data-anchor-id="documentation-and-comments"><span class="header-section-number">9.3.4</span> Documentation and Comments</h3>
@@ -1081,61 +1090,64 @@ END FUNCTION</code></pre>
 <span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
 <span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Examples:</span></span>
 <span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; longest_palindromic_substring("babad")</span></span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co">        "bab"  # Note: "aba" would also be a valid return value</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a><span class="co">        'bab'  # Note: "aba" would also be a valid return value</span></span>
 <span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; longest_palindromic_substring("cbbd")</span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">        "bb"</span></span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle empty input</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
-<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
-<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Helper function to expand around a center</span></span>
-<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> expand_around_center(left, right):</span>
-<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
-<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a><span class="co">        Expand around a potential palindrome center and find the longest palindrome.</span></span>
-<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="co">        Args:</span></span>
-<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="co">            left (int): Left position of the center</span></span>
-<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="co">            right (int): Right position of the center</span></span>
-<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
-<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns:</span></span>
-<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="co">            tuple: (start_index, length) of the palindrome</span></span>
-<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
-<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Expand as long as characters match and we're in bounds</span></span>
-<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
-<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
-<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return palindrome bounds</span></span>
-<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># left+1 because we went one position too far left</span></span>
-<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># right-left-1 calculates the length</span></span>
-<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> left <span class="op">+</span> <span class="dv">1</span>, right <span class="op">-</span> left <span class="op">-</span> <span class="dv">1</span></span>
-<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check each potential center</span></span>
-<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
-<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Skip centers that can't yield longer palindromes</span></span>
-<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>        remaining_chars <span class="op">=</span> <span class="bu">min</span>(i, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span>)</span>
-<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> remaining_chars <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;=</span> max_length:</span>
-<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
-<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check odd-length palindrome</span></span>
-<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>        odd_start, odd_length <span class="op">=</span> expand_around_center(i, i)</span>
-<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> odd_length <span class="op">&gt;</span> max_length:</span>
-<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>            start <span class="op">=</span> odd_start</span>
-<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>            max_length <span class="op">=</span> odd_length</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co">        'bb'</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a><span class="co">        &gt;&gt;&gt; longest_palindromic_substring("aa")</span></span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a><span class="co">        'aa'</span></span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handle empty input</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> s:</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">""</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>    max_length <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Helper function to expand around a center</span></span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> expand_around_center(left, right):</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a><span class="co">        Expand around a potential palindrome center and find the longest palindrome.</span></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a><span class="co">        Args:</span></span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a><span class="co">            left (int): Left position of the center</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a><span class="co">            right (int): Right position of the center</span></span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a><span class="co">            </span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a><span class="co">        Returns:</span></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="co">            tuple: (start_index, length) of the palindrome</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a><span class="co">        """</span></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Expand as long as characters match and we're in bounds</span></span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> left <span class="op">&gt;=</span> <span class="dv">0</span> <span class="kw">and</span> right <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="kw">and</span> s[left] <span class="op">==</span> s[right]:</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>            left <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>            right <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Return palindrome bounds</span></span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>        <span class="co"># left+1 because we went one position too far left</span></span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>        <span class="co"># right-left-1 calculates the length</span></span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> left <span class="op">+</span> <span class="dv">1</span>, right <span class="op">-</span> left <span class="op">-</span> <span class="dv">1</span></span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Check each potential center</span></span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(s)):</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Skip odd centres that cannot yield longer palindromes</span></span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a>        odd_potential <span class="op">=</span> <span class="bu">min</span>(i, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">1</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> odd_potential <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-53"><a href="#cb19-53" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Check odd-length palindrome</span></span>
+<span id="cb19-54"><a href="#cb19-54" aria-hidden="true" tabindex="-1"></a>            odd_start, odd_length <span class="op">=</span> expand_around_center(i, i)</span>
+<span id="cb19-55"><a href="#cb19-55" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> odd_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-56"><a href="#cb19-56" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> odd_start</span>
+<span id="cb19-57"><a href="#cb19-57" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> odd_length</span>
 <span id="cb19-58"><a href="#cb19-58" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even-length palindrome</span></span>
-<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span>:</span>
-<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a>            even_start, even_length <span class="op">=</span> expand_around_center(i, i <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> even_length <span class="op">&gt;</span> max_length:</span>
-<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>                start <span class="op">=</span> even_start</span>
-<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>                max_length <span class="op">=</span> even_length</span>
-<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the longest palindromic substring</span></span>
-<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb19-59"><a href="#cb19-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Check even-length palindrome (its bound is separate — one</span></span>
+<span id="cb19-60"><a href="#cb19-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># guard for both parities skips valid even palindromes)</span></span>
+<span id="cb19-61"><a href="#cb19-61" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;</span> <span class="bu">len</span>(s) <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb19-62"><a href="#cb19-62" aria-hidden="true" tabindex="-1"></a>            even_potential <span class="op">=</span> <span class="bu">min</span>(i <span class="op">+</span> <span class="dv">1</span>, <span class="bu">len</span>(s) <span class="op">-</span> i <span class="op">-</span> <span class="dv">2</span>) <span class="op">*</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb19-63"><a href="#cb19-63" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> even_potential <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-64"><a href="#cb19-64" aria-hidden="true" tabindex="-1"></a>                even_start, even_length <span class="op">=</span> expand_around_center(i, i <span class="op">+</span> <span class="dv">1</span>)</span>
+<span id="cb19-65"><a href="#cb19-65" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> even_length <span class="op">&gt;</span> max_length:</span>
+<span id="cb19-66"><a href="#cb19-66" aria-hidden="true" tabindex="-1"></a>                    start <span class="op">=</span> even_start</span>
+<span id="cb19-67"><a href="#cb19-67" aria-hidden="true" tabindex="-1"></a>                    max_length <span class="op">=</span> even_length</span>
+<span id="cb19-68"><a href="#cb19-68" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-69"><a href="#cb19-69" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Return the longest palindromic substring</span></span>
+<span id="cb19-70"><a href="#cb19-70" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> s[start:start <span class="op">+</span> max_length]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="testing-the-implementation" class="level3" data-number="9.4.3">
 <h3 data-number="9.4.3" class="anchored" data-anchor-id="testing-the-implementation"><span class="header-section-number">9.4.3</span> Testing the Implementation</h3>

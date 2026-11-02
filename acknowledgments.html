@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -488,12 +492,14 @@ ul.task-list li input[type="checkbox"] {
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></div>
+    <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -517,10 +523,10 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This book began as a set of Jupyter notebooks for teaching computational thinking. The students who worked through those notebooks — sometimes struggling, sometimes surprising me with approaches I had not considered — shaped the methodology that became intentional prompting. Their willingness to experiment with AI tools when the ground rules were still being written made this book possible.</p>
+<p>This book began as a set of Jupyter notebooks for teaching computational thinking. The students who worked through those notebooks (sometimes struggling, sometimes surprising me with approaches I had not considered) shaped the methodology that became intentional prompting. Their willingness to experiment with AI tools when the ground rules were still being written made this book possible.</p>
 <p>Colleagues who teach programming in various contexts provided feedback that kept the ideas practical. The question “would this actually work in a first-year unit?” came up often enough to become a design principle.</p>
 <p>The methodology in this book draws on <em>Conversation, Not Delegation</em>, and the two were developed in parallel. Ideas that emerged in the programming context were generalised for the companion book; principles from the companion book were tested against code. Each made the other sharper.</p>
-<p>The open source community behind Python, Quarto, GitHub, and the broader ecosystem of developer tools made both the writing and the publishing possible. The entire toolchain — from drafting to building to hosting — is free and open, and that matters.</p>
+<p>The open source community behind Python, Quarto, GitHub, and the broader ecosystem of developer tools made both the writing and the publishing possible. The entire toolchain, from drafting to building to hosting, is free and open, and that matters.</p>
 <p>AI tools were used throughout the writing process. Claude (Anthropic) served as a conversation partner for drafting, iterating, and refining both text and code examples. The process was exactly what the book advocates: intentional, directed, and critically evaluated. The author made the decisions. The AI made the work faster. Every sentence and every line of code reflects the author’s judgement.</p>
 
 

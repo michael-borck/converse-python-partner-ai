@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -488,7 +492,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -509,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-two-chat-workflow" id="toc-the-two-chat-workflow" class="nav-link" data-scroll-target="#the-two-chat-workflow"><span class="header-section-number">1.8</span> The Two-Chat Workflow</a></li>
   <li><a href="#what-is-ahead" id="toc-what-is-ahead" class="nav-link" data-scroll-target="#what-is-ahead"><span class="header-section-number">1.9</span> What is Ahead</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/philosophy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/philosophy.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -551,11 +557,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="vibe-coding-and-what-comes-after" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="vibe-coding-and-what-comes-after"><span class="header-section-number">1.2</span> Vibe Coding and What Comes After</h2>
-<p>There is a popular approach to AI-assisted development called “vibe coding” — a term coined by Andrej Karpathy to describe coding by feel, prompting AI until something works, without necessarily understanding the code it produces. The idea is liberating: anyone can build software by describing what they want and iterating until it runs.</p>
+<p>There is a popular approach to AI-assisted development called “vibe coding,” a term coined by Andrej Karpathy to describe coding by feel, prompting AI until something works, without necessarily understanding the code it produces. The idea is liberating: anyone can build software by describing what they want and iterating until it runs.</p>
 <p>Vibe coding is real, and for quick prototypes and throwaway scripts it can be genuinely useful. Communities like <a href="https://roadmap.sh/vibe-coding">roadmap.sh/vibe-coding</a> have documented practical workflows around it: plan before you code, be specific in your prompts, manage context, test your output, use version control. These are sensible practices, and many of them overlap with what this book teaches.</p>
-<p>The difference is what happens when something goes wrong — or when something needs to change.</p>
+<p>The difference is what happens when something goes wrong, or when something needs to change.</p>
 <p>A vibe coder who gets a working function cannot explain why it works. When a bug appears in production, they paste the error back into the AI and hope for a fix. When requirements shift, they start the conversation from scratch because they never understood the original design. Each interaction is independent. Nothing compounds.</p>
-<p>An intentional prompter who gets the same function can explain the algorithm, identify where it will fail, and modify it confidently. When they ask the AI for help, they can describe the problem precisely — not “it’s broken” but “the expand_around_center function isn’t handling even-length palindromes because the boundary check is off by one.” That precision gives the AI the context it needs to be genuinely useful, rather than guessing.</p>
+<p>An intentional prompter who gets the same function can explain the algorithm, identify where it will fail, and modify it confidently. When they ask the AI for help, they can describe the problem precisely, not “it’s broken” but “the expand_around_center function isn’t handling even-length palindromes because the boundary check is off by one.” That precision gives the AI the context it needs to be genuinely useful, rather than guessing.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="The compounding advantage">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -566,22 +572,21 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Understanding compounds. Each problem you work through intentionally makes the next one easier — you recognise patterns, you know what questions to ask, you can evaluate AI suggestions against your own mental model. Vibe coding does not compound. Each session starts from zero because no understanding was built in the previous one.</p>
+<p>Understanding compounds. Each problem you work through intentionally makes the next one easier: you recognise patterns, you know what questions to ask, you can evaluate AI suggestions against your own mental model. Vibe coding does not compound. Each session starts from zero because no understanding was built in the previous one.</p>
 </div>
 </div>
-<p>The six-step methodology in this book is not slower than vibe coding. It is faster in the medium term, because the understanding you build in Steps 1-4 makes Steps 5-6 dramatically more productive. You are not guessing at prompts — you are giving the AI precise specifications based on work you already did. The AI responds better because you gave it better input. And when the output needs fixing, you know exactly where to look.</p>
-<p>There is also a complexity ceiling. Vibe coding works for single-file scripts and quick prototypes. But when a project grows to multiple modules, shared state, external APIs, and concurrent users, the AI gets stuck too. It suggests fixes that introduce new bugs because it is guessing at the architecture — just like you are. A developer who understands the system’s structure can describe the problem precisely enough for the AI to help. A developer who does not understand the structure is reduced to pasting error messages and hoping. The gap between those two developers widens with every layer of complexity.</p>
-<p>An important clarification: intentional prompting does not mean avoiding AI until Step 5. AI is your partner through all six steps — brainstorming requirements in Step 1, exploring edge cases in Step 2, tracing through examples in Step 3, refining pseudocode in Step 4. The methodology is not “think without AI, then code with AI.” It is “think <em>with</em> AI at every stage, so that when you reach the coding stage, both you and the AI have the context to produce something good.” This is the Conversation Loop from <em>Conversation, Not Delegation</em> applied to programming: brainstorm, ideate, iterate, amplify — with AI as your thinking partner throughout.</p>
+<p>The six-step methodology in this book is not slower than vibe coding. It is faster in the medium term, because the understanding you build in Steps 1-4 makes Steps 5-6 dramatically more productive. You are not guessing at prompts. You are giving the AI precise specifications based on work you already did. The AI responds better because you gave it better input. And when the output needs fixing, you know exactly where to look.</p>
+<p>There is also a complexity ceiling. Vibe coding works for single-file scripts and quick prototypes. But when a project grows to multiple modules, shared state, external APIs, and concurrent users, the AI gets stuck too. It suggests fixes that introduce new bugs because it is guessing at the architecture, just like you are. A developer who understands the system’s structure can describe the problem precisely enough for the AI to help. A developer who does not understand the structure is reduced to pasting error messages and hoping. The gap between those two developers widens with every layer of complexity.</p>
+<p>An important clarification: intentional prompting does not mean avoiding AI until Step 5. AI is your partner through all six steps: brainstorming requirements in Step 1, exploring edge cases in Step 2, tracing through examples in Step 3, refining pseudocode in Step 4. The methodology is not “think without AI, then code with AI.” It is “think <em>with</em> AI at every stage, so that when you reach the coding stage, both you and the AI have the context to produce something good.” This is the Conversation Loop from <em>Conversation, Not Delegation</em> applied to programming: brainstorm, ideate, iterate, amplify, with AI as your thinking partner throughout.</p>
 <p>This book does not argue against using AI to write code. It argues for understanding what you are asking the AI to build, so that when it builds it, you can tell whether it is right.</p>
 </section>
 <section id="what-is-a-prompt" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="what-is-a-prompt"><span class="header-section-number">1.3</span> What is a “Prompt”?</h2>
-<p>Before we go further, let’s demystify some terminology.</p>
 <blockquote class="blockquote">
 <p><strong>A prompt is simply a request or instruction you give to AI.</strong></p>
 </blockquote>
 <p>That’s it. When you type “Explain how photosynthesis works” into ChatGPT, that’s a prompt. When you ask Claude to “Review this code for bugs,” that’s a prompt. When you tell Copilot to “Write a function that calculates shipping costs,” that’s a prompt.</p>
-<p>Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI’s response depends heavily on how you craft your prompt, but at its core, a prompt is just a request.</p>
+<p>Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI’s response depends heavily on how you craft your prompt, but a prompt is still just a request.</p>
 </section>
 <section id="what-is-intentional-prompting" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="what-is-intentional-prompting"><span class="header-section-number">1.4</span> What is “Intentional Prompting”?</h2>
@@ -648,12 +653,12 @@ AI: [Generates function - works for simple cases but what about negative
        write code, what business rules should I consider?
 
 AI: [Explains order of operations, compound discounts, rounding, edge cases]
-Human: Those are good points. Lets handle discounts before tax.
+Human: Those are good points. Let's handle discounts before tax.
        What is a clean way to structure this?
 
 AI: [Proposes design with clear separation of concerns]
 
-Human: Now lets implement it. Can you explain each part as we go?
+Human: Now let's implement it. Can you explain each part as we go?
 
 [Collaborative implementation with understanding]</code></pre>
 <p>The same principle applies beyond programming. Whether you are planning a marketing launch, designing a research methodology, or writing a policy document, the difference between delegation and conversation determines whether you understand the result or just received it.</p>
@@ -671,7 +676,7 @@ Human: Now lets implement it. Can you explain each part as we go?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>While this book applies intentional prompting to software development, the philosophy of Conversation, Not Delegation works in any domain: business planning, creative writing, research, education, and beyond. The principles transfer - only the examples change.</p>
+<p>While this book applies intentional prompting to software development, the philosophy of Conversation, Not Delegation works in any domain: business planning, creative writing, research, education, and beyond. The principles transfer; only the examples change.</p>
 </div>
 </div>
 </section>
@@ -687,14 +692,15 @@ Human: Now lets implement it. Can you explain each part as we go?
 <h2 data-number="1.9" class="anchored" data-anchor-id="what-is-ahead"><span class="header-section-number">1.9</span> What is Ahead</h2>
 <p>This book will teach you to have productive conversations with AI:</p>
 <ul>
-<li><strong>Part 1: Foundations</strong> establishes the core concepts and principles</li>
-<li><strong>Part 2: Methodology</strong> provides a structured six-step approach</li>
-<li><strong>Part 3: Patterns and Practices</strong> offers reusable conversation patterns</li>
-<li><strong>Part 4: Advanced Topics</strong> addresses complex scenarios and future directions</li>
+<li><strong>Part I: The Philosophy</strong> (this part) establishes the core distinction and key terms</li>
+<li><strong>Part II: Foundations</strong> establishes the core concepts and principles</li>
+<li><strong>Part III: Methodology</strong> provides a structured six-step approach</li>
+<li><strong>Part IV: Patterns and Practices</strong> offers reusable conversation patterns</li>
+<li><strong>Part V: Advanced Topics</strong> addresses complex scenarios and future directions</li>
 </ul>
 <p>Throughout, you will see examples in both programming and business contexts, reinforcing that these principles apply wherever you work with AI.</p>
 <p>The goal is not to make you dependent on AI, but to make you more capable with AI as your partner.</p>
-<p>Lets begin.</p>
+<p>Let’s begin.</p>
 
 
 </section>

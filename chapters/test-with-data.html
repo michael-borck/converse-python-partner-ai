@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,14 +80,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,6 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -523,7 +527,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -560,7 +566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">10.6</span> Key Takeaways</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/test-with-data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -593,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="10.1" class="anchored" data-anchor-id="comprehensive-testing-strategies"><span class="header-section-number">10.1</span> Comprehensive Testing Strategies</h2>
 <section id="the-importance-of-thorough-testing" class="level3" data-number="10.1.1">
 <h3 data-number="10.1.1" class="anchored" data-anchor-id="the-importance-of-thorough-testing"><span class="header-section-number">10.1.1</span> The Importance of Thorough Testing</h3>
-<p>Testing isn’t just about confirming that your code works. It’s about discovering where and how it might fail. Thorough testing:</p>
+<p>Testing confirms that your code works and discovers where and how it might fail. Thorough testing:</p>
 <ol type="1">
 <li><strong>Validates correctness</strong> - Ensures the solution produces the expected results</li>
 <li><strong>Reveals edge case issues</strong> - Identifies problems with unusual inputs</li>
@@ -767,7 +773,7 @@ A well-tested function should handle all these cases correctly and efficiently.<
 | 6 | "racecar" | "racecar" | Entire string is a palindrome |
 | 7 | "aacabdkacaa" | "aca" | Multiple palindromes, should find longest |
 | 8 | "aaaaa" | "aaaaa" | Repeated characters |
-| 9 | "civilservice" | "civic" | Palindrome at beginning |
+| 9 | "civiccenter" | "civic" | Palindrome at beginning |
 | 10 | "abcdeedcba" | "abcdeedcba" | Even-length palindrome (entire string) |
 
 These test cases cover empty strings, single characters, no long palindromes, multiple valid answers, even and odd-length palindromes, whole-string palindromes, multiple palindromes of different lengths, repeated characters, and palindromes at different positions in the string.</code></pre>
@@ -826,7 +832,7 @@ class TestLongestPalindromicSubstring(unittest.TestCase):
     
     def test_palindrome_at_beginning(self):
         """Test with a palindrome at the beginning of the string."""
-        self.assertEqual(longest_palindromic_substring("civilservice"), "civic")
+        self.assertEqual(longest_palindromic_substring("civiccenter"), "civic")
     
     def test_even_length_entire_string(self):
         """Test with an even-length palindrome that is the entire string."""
@@ -862,7 +868,7 @@ If you're using a different file structure or function name, you'll need to adju
 <p>Test failures provide valuable learning opportunities that can improve both your current solution and your general understanding.</p>
 <section id="debugging-with-ai-assistance" class="level3" data-number="10.4.1">
 <h3 data-number="10.4.1" class="anchored" data-anchor-id="debugging-with-ai-assistance"><span class="header-section-number">10.4.1</span> Debugging with AI Assistance</h3>
-<p>When tests fail, AI can help analyse the failure:</p>
+<p>When tests fail, AI can help analyse the failure, and the analysis needs verifying just like the code does. Watch what happens in this exchange:</p>
 <p><strong>You:</strong></p>
 <pre class="text"><code>My test case for "aacabdkacaa" is failing. The expected output is "aca" but my function returns "aa". Here's my implementation:
 
@@ -954,6 +960,24 @@ def longest_palindromic_substring(s):
 The key change is adding a `current_length` variable to calculate the length inside the while loop. This ensures you're using the correct length for comparison.
 
 This bug would cause your function to sometimes return shorter palindromes when longer ones exist, especially in cases with repeated characters.</code></pre>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Check the Diagnosis Before Applauding the Fix
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Go back and run the “buggy” implementation from that prompt against <code>"aacabdkacaa"</code>. It returns <code>"aca"</code>. The failing test passes, because the update happens inside the while loop, after the palindrome condition has already been verified. The AI’s confident explanation (“updating <code>max_length</code> before confirming the substring is actually a palindrome”) describes a bug that is not in this code, and its fix, extracting a <code>current_length</code> variable, is a cosmetic no-op. The staged failure was in the report, not the implementation.</p>
+<p>Two habits fall out of this:</p>
+<ol type="1">
+<li><strong>Verify the failure before asking why.</strong> Rerun the test and print the actual output first. A failure report you did not just reproduce is itself an untested claim, and an AI will happily diagnose a bug the code does not have if you hand it one.</li>
+<li><strong>Treat an AI’s explanation of a bug as a hypothesis, exactly like its code.</strong> The tell in this exchange is that the “fix” changes no behaviour. A diff that changes nothing cannot fix anything. The test suite, not the explanation’s confidence, is the verdict.</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="test-driven-improvements" class="level3" data-number="10.4.2">
 <h3 data-number="10.4.2" class="anchored" data-anchor-id="test-driven-improvements"><span class="header-section-number">10.4.2</span> Test-Driven Improvements</h3>
@@ -1021,23 +1045,22 @@ This bug would cause your function to sometimes return shorter palindromes when 
 <span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Multiple palindromes of different lengths</span></span>
 <span id="cb14-49"><a href="#cb14-49" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(longest_palindromic_substring(<span class="st">"abcbaxyzzyxabc"</span>), <span class="st">"xyzzyxa"</span>)</span>
 <span id="cb14-50"><a href="#cb14-50" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Multiple palindromes of same length</span></span>
-<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> longest_palindromic_substring(<span class="st">"abacababacab"</span>)</span>
-<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(result <span class="kw">in</span> [<span class="st">"abacaba"</span>, <span class="st">"bacabab"</span>])</span>
-<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_performance(<span class="va">self</span>):</span>
-<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Test performance with large inputs."""</span></span>
-<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Long string with long palindrome</span></span>
-<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>        long_input <span class="op">=</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">500</span> <span class="op">+</span> <span class="st">"b"</span> <span class="op">+</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">500</span></span>
-<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>        start_time <span class="op">=</span> time.time()</span>
-<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> longest_palindromic_substring(long_input)</span>
-<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>        end_time <span class="op">=</span> time.time()</span>
-<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="bu">len</span>(result), <span class="dv">1001</span>)</span>
-<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(end_time <span class="op">-</span> start_time <span class="op">&lt;</span> <span class="fl">1.0</span>)  <span class="co"># Should complete in under 1 second</span></span>
-<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
-<span id="cb14-67"><a href="#cb14-67" aria-hidden="true" tabindex="-1"></a>    unittest.main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-51"><a href="#cb14-51" aria-hidden="true" tabindex="-1"></a>        <span class="co"># The longest palindrome spans almost the entire string</span></span>
+<span id="cb14-52"><a href="#cb14-52" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(longest_palindromic_substring(<span class="st">"abacababacab"</span>), <span class="st">"bacababacab"</span>)</span>
+<span id="cb14-53"><a href="#cb14-53" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb14-54"><a href="#cb14-54" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> test_performance(<span class="va">self</span>):</span>
+<span id="cb14-55"><a href="#cb14-55" aria-hidden="true" tabindex="-1"></a>        <span class="co">"""Test performance with large inputs."""</span></span>
+<span id="cb14-56"><a href="#cb14-56" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Long string with long palindrome</span></span>
+<span id="cb14-57"><a href="#cb14-57" aria-hidden="true" tabindex="-1"></a>        long_input <span class="op">=</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">500</span> <span class="op">+</span> <span class="st">"b"</span> <span class="op">+</span> <span class="st">"a"</span> <span class="op">*</span> <span class="dv">500</span></span>
+<span id="cb14-58"><a href="#cb14-58" aria-hidden="true" tabindex="-1"></a>        start_time <span class="op">=</span> time.time()</span>
+<span id="cb14-59"><a href="#cb14-59" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> longest_palindromic_substring(long_input)</span>
+<span id="cb14-60"><a href="#cb14-60" aria-hidden="true" tabindex="-1"></a>        end_time <span class="op">=</span> time.time()</span>
+<span id="cb14-61"><a href="#cb14-61" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb14-62"><a href="#cb14-62" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertEqual(<span class="bu">len</span>(result), <span class="dv">1001</span>)</span>
+<span id="cb14-63"><a href="#cb14-63" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.assertTrue(end_time <span class="op">-</span> start_time <span class="op">&lt;</span> <span class="fl">1.0</span>)  <span class="co"># Should complete in under 1 second</span></span>
+<span id="cb14-64"><a href="#cb14-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-65"><a href="#cb14-65" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb14-66"><a href="#cb14-66" aria-hidden="true" tabindex="-1"></a>    unittest.main()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="test-execution-and-results" class="level3" data-number="10.5.2">
 <h3 data-number="10.5.2" class="anchored" data-anchor-id="test-execution-and-results"><span class="header-section-number">10.5.2</span> Test Execution and Results</h3>

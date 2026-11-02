@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.37">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -42,14 +45,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-6453f418aeef366c23116eb9cb0b6816.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5c1318cf63eba56dbef7ba16bc7d56f5.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-512512a359692b6a4a631bfed0d4ecc0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-d05bf2c3428979ef9cb136ebd9d2bc87.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-67bea543f22db4742c43a9439edb3419.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-a0c208db2eb124d1f96df216fe31c4f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -80,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../book-design.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -488,7 +492,9 @@ ul.task-list li input[type="checkbox"] {
   </li>
     </ul>
     </div>
-</nav>
+<div class="quarto-sidebar-footer"><div class="sidebar-footer-item">
+<p>Paperback ISBN 979-8-2543-0182-0</p>
+</div></div></nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -516,27 +522,28 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations"><span class="header-section-number">17.4.1</span> Ethical Considerations</a></li>
   <li><a href="#human-comparative-advantages" id="toc-human-comparative-advantages" class="nav-link" data-scroll-target="#human-comparative-advantages"><span class="header-section-number">17.4.2</span> Human Comparative Advantages</a></li>
   </ul></li>
-  <li><a href="#vision-for-intentional-promptings-evolution" id="toc-vision-for-intentional-promptings-evolution" class="nav-link" data-scroll-target="#vision-for-intentional-promptings-evolution"><span class="header-section-number">17.5</span> Vision for Intentional Prompting’s Evolution</a>
+  <li><a href="#the-one-thing-that-does-not-change" id="toc-the-one-thing-that-does-not-change" class="nav-link" data-scroll-target="#the-one-thing-that-does-not-change"><span class="header-section-number">17.5</span> The One Thing That Does Not Change</a></li>
+  <li><a href="#vision-for-intentional-promptings-evolution" id="toc-vision-for-intentional-promptings-evolution" class="nav-link" data-scroll-target="#vision-for-intentional-promptings-evolution"><span class="header-section-number">17.6</span> Vision for Intentional Prompting’s Evolution</a>
   <ul class="collapse">
-  <li><a href="#short-term-evolution-1-3-years" id="toc-short-term-evolution-1-3-years" class="nav-link" data-scroll-target="#short-term-evolution-1-3-years"><span class="header-section-number">17.5.1</span> Short-Term Evolution (1-3 Years)</a></li>
-  <li><a href="#medium-term-evolution-3-7-years" id="toc-medium-term-evolution-3-7-years" class="nav-link" data-scroll-target="#medium-term-evolution-3-7-years"><span class="header-section-number">17.5.2</span> Medium-Term Evolution (3-7 Years)</a></li>
-  <li><a href="#long-term-vision-7-years" id="toc-long-term-vision-7-years" class="nav-link" data-scroll-target="#long-term-vision-7-years"><span class="header-section-number">17.5.3</span> Long-Term Vision (7+ Years)</a></li>
+  <li><a href="#short-term-evolution-1-3-years" id="toc-short-term-evolution-1-3-years" class="nav-link" data-scroll-target="#short-term-evolution-1-3-years"><span class="header-section-number">17.6.1</span> Short-Term Evolution (1-3 Years)</a></li>
+  <li><a href="#medium-term-evolution-3-7-years" id="toc-medium-term-evolution-3-7-years" class="nav-link" data-scroll-target="#medium-term-evolution-3-7-years"><span class="header-section-number">17.6.2</span> Medium-Term Evolution (3-7 Years)</a></li>
+  <li><a href="#long-term-vision-7-years" id="toc-long-term-vision-7-years" class="nav-link" data-scroll-target="#long-term-vision-7-years"><span class="header-section-number">17.6.3</span> Long-Term Vision (7+ Years)</a></li>
   </ul></li>
-  <li><a href="#a-personal-development-roadmap" id="toc-a-personal-development-roadmap" class="nav-link" data-scroll-target="#a-personal-development-roadmap"><span class="header-section-number">17.6</span> A Personal Development Roadmap</a>
+  <li><a href="#a-personal-development-roadmap" id="toc-a-personal-development-roadmap" class="nav-link" data-scroll-target="#a-personal-development-roadmap"><span class="header-section-number">17.7</span> A Personal Development Roadmap</a>
   <ul class="collapse">
-  <li><a href="#building-your-intentional-prompting-skills" id="toc-building-your-intentional-prompting-skills" class="nav-link" data-scroll-target="#building-your-intentional-prompting-skills"><span class="header-section-number">17.6.1</span> Building Your Intentional Prompting Skills</a></li>
-  <li><a href="#continuous-adaptation" id="toc-continuous-adaptation" class="nav-link" data-scroll-target="#continuous-adaptation"><span class="header-section-number">17.6.2</span> Continuous Adaptation</a></li>
+  <li><a href="#building-your-intentional-prompting-skills" id="toc-building-your-intentional-prompting-skills" class="nav-link" data-scroll-target="#building-your-intentional-prompting-skills"><span class="header-section-number">17.7.1</span> Building Your Intentional Prompting Skills</a></li>
+  <li><a href="#continuous-adaptation" id="toc-continuous-adaptation" class="nav-link" data-scroll-target="#continuous-adaptation"><span class="header-section-number">17.7.2</span> Continuous Adaptation</a></li>
   </ul></li>
-  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">17.7</span> Key Takeaways</a></li>
-  <li><a href="#intentional-prompting-beyond-programming" id="toc-intentional-prompting-beyond-programming" class="nav-link" data-scroll-target="#intentional-prompting-beyond-programming"><span class="header-section-number">17.8</span> Intentional Prompting Beyond Programming</a>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways"><span class="header-section-number">17.8</span> Key Takeaways</a></li>
+  <li><a href="#intentional-prompting-beyond-programming" id="toc-intentional-prompting-beyond-programming" class="nav-link" data-scroll-target="#intentional-prompting-beyond-programming"><span class="header-section-number">17.9</span> Intentional Prompting Beyond Programming</a>
   <ul class="collapse">
-  <li><a href="#universal-principles-of-ai-collaboration" id="toc-universal-principles-of-ai-collaboration" class="nav-link" data-scroll-target="#universal-principles-of-ai-collaboration"><span class="header-section-number">17.8.1</span> Universal Principles of AI Collaboration</a></li>
-  <li><a href="#the-five-principles-in-any-domain" id="toc-the-five-principles-in-any-domain" class="nav-link" data-scroll-target="#the-five-principles-in-any-domain"><span class="header-section-number">17.8.2</span> The Five Principles in Any Domain</a></li>
-  <li><a href="#the-future-of-human-ai-partnership" id="toc-the-future-of-human-ai-partnership" class="nav-link" data-scroll-target="#the-future-of-human-ai-partnership"><span class="header-section-number">17.8.3</span> The Future of Human-AI Partnership</a></li>
+  <li><a href="#universal-principles-of-ai-collaboration" id="toc-universal-principles-of-ai-collaboration" class="nav-link" data-scroll-target="#universal-principles-of-ai-collaboration"><span class="header-section-number">17.9.1</span> Universal Principles of AI Collaboration</a></li>
+  <li><a href="#the-five-principles-in-any-domain" id="toc-the-five-principles-in-any-domain" class="nav-link" data-scroll-target="#the-five-principles-in-any-domain"><span class="header-section-number">17.9.2</span> The Five Principles in Any Domain</a></li>
+  <li><a href="#the-future-of-human-ai-partnership" id="toc-the-future-of-human-ai-partnership" class="nav-link" data-scroll-target="#the-future-of-human-ai-partnership"><span class="header-section-number">17.9.3</span> The Future of Human-AI Partnership</a></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">17.9</span> Conclusion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">17.10</span> Conclusion</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/michael-borck/converse-python-partner-ai/edit/main/chapters/future-directions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/converse-python-partner-ai.pdf"><i class="bi bi-file-pdf"></i>Download PDF</a></li><li><a href="/converse-python-partner-ai.epub"><i class="bi bi-book"></i>Download EPUB</a></li><li><a href="../llm.txt"><i class="bi bi-robot"></i>Download llm.txt</a></li><li><a href="https://github.com/michael-borck/converse-python-partner-ai"><i class="bi bi-github"></i>GitHub</a></li><li><a href="https://deepwiki.com/michael-borck/converse-python-partner-ai"><i class="bi bi-search"></i>DeepWiki</a></li><li><a href="https://books.borck.education"><i class="bi bi-collection"></i>All Books</a></li><li><a href="../tools/prompt-templates.md"><i class="bi bi-list-task"></i>Prompt Templates</a></li><li><a href="../tools/ai-tool-comparison.md"><i class="bi bi-cpu"></i>AI Tool Comparison</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -564,7 +571,7 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>The tools will change. The discipline of thinking clearly will not.</p>
 </blockquote>
-<p>As we reach the conclusion of this book, it’s important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in an increasingly AI-powered development landscape.</p>
+<p>As we reach the conclusion of this book, it’s important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in increasingly AI-powered development.</p>
 <section id="emerging-ai-capabilities" class="level2" data-number="17.1">
 <h2 data-number="17.1" class="anchored" data-anchor-id="emerging-ai-capabilities"><span class="header-section-number">17.1</span> Emerging AI Capabilities</h2>
 <section id="beyond-text-based-interfaces" class="level3" data-number="17.1.1">
@@ -595,7 +602,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="increasing-autonomy-and-agentic-programming" class="level3" data-number="17.1.2">
 <h3 data-number="17.1.2" class="anchored" data-anchor-id="increasing-autonomy-and-agentic-programming"><span class="header-section-number">17.1.2</span> Increasing Autonomy and Agentic Programming</h3>
-<p>AI systems are gradually moving toward greater autonomy in coding tasks, leading to what’s known as “agentic programming,” where AI agents can autonomously perform complex development tasks with minimal human intervention:</p>
+<p>AI systems have moved toward greater autonomy in coding tasks. “Agentic programming,” where AI agents perform development tasks with varying degrees of independence, is no longer emerging; it is how a great deal of code is written today. Tools like Cursor, Claude Code, and Aider run inside your repository, edit files, execute tests, and iterate on a goal you set. The bullet list below describes what that looks like in practice:</p>
 <section id="autonomous-coding-capabilities" class="level4" data-number="17.1.2.1">
 <h4 data-number="17.1.2.1" class="anchored" data-anchor-id="autonomous-coding-capabilities"><span class="header-section-number">17.1.2.1</span> Autonomous Coding Capabilities</h4>
 <ul>
@@ -604,8 +611,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Self-debugging and refinement</strong> of initial solutions</li>
 <li><strong>Proactive suggestion</strong> of improvements and optimisations</li>
 </ul>
-<p>This increased autonomy will shift intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.</p>
-<p>It is worth stating plainly: better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.</p>
+<p>This increased autonomy shifts intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.</p>
+<p>Better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.</p>
 </section>
 <section id="ai-pairing-and-collaboration" class="level4" data-number="17.1.2.2">
 <h4 data-number="17.1.2.2" class="anchored" data-anchor-id="ai-pairing-and-collaboration"><span class="header-section-number">17.1.2.2</span> AI Pairing and Collaboration</h4>
@@ -616,7 +623,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Continuous AI presence</strong> during the entire development process</li>
 <li><strong>Persistent learning</strong> from team interactions and feedback</li>
 </ul>
-<p>Intentional prompting in this environment will involve orchestrating these AI collaborators effectively, ensuring they work toward cohesive solutions.</p>
+<p>Intentional prompting in this environment involves orchestrating these AI collaborators effectively, ensuring they work toward cohesive solutions.</p>
 </section>
 <section id="the-essential-role-of-human-oversight-in-agentic-systems" class="level4" data-number="17.1.2.3">
 <h4 data-number="17.1.2.3" class="anchored" data-anchor-id="the-essential-role-of-human-oversight-in-agentic-systems"><span class="header-section-number">17.1.2.3</span> The Essential Role of Human Oversight in Agentic Systems</h4>
@@ -625,7 +632,7 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>Design Phase</strong> - <em>AI Role</em>: Generate architecture diagrams from specifications - <em>Human Role</em>: Evaluate maintainability and technical debt implications</p>
 <p><strong>Implementation</strong> - <em>AI Role</em>: Auto-complete functions with context awareness - <em>Human Role</em>: Ensure compliance with security protocols and organisational standards</p>
 <p><strong>Deployment</strong> - <em>AI Role</em>: Auto-scale and configure infrastructure - <em>Human Role</em>: Final approval for production releases</p>
-<p>Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.</p>
+<p>Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations are why human oversight in agentic systems is essential.</p>
 <p>Effective human oversight includes:</p>
 <ol type="1">
 <li><strong>Establishing clear protocols and roles</strong> for when and how human intervention should occur</li>
@@ -634,6 +641,7 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Implementing robust monitoring tools</strong> and evaluation frameworks</li>
 </ol>
 <p>The future of intentional prompting will likely involve more sophisticated techniques for providing this essential oversight, ensuring that increasingly autonomous AI systems remain aligned with human goals, values, and quality standards.</p>
+<p>The deepest treatment of what changes, and what does not, when a loop runs without you in it is in <em>Conversation, Not Delegation</em> (the chapter “When the Loop Runs Itself”). The short version: a loop is only as good as the test it cannot talk its way past. Where you can give an agent an external, verifiable check (a test suite, a type-checker, a metric it cannot edit) it is excellent delegation. Where the only judge is the model itself, you have delegation of judgement, automated. Intentional prompting is what keeps you on the right side of that line.</p>
 </section>
 </section>
 </section>
@@ -792,10 +800,14 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="vision-for-intentional-promptings-evolution" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="vision-for-intentional-promptings-evolution"><span class="header-section-number">17.5</span> Vision for Intentional Prompting’s Evolution</h2>
-<section id="short-term-evolution-1-3-years" class="level3" data-number="17.5.1">
-<h3 data-number="17.5.1" class="anchored" data-anchor-id="short-term-evolution-1-3-years"><span class="header-section-number">17.5.1</span> Short-Term Evolution (1-3 Years)</h3>
+<section id="the-one-thing-that-does-not-change" class="level2" data-number="17.5">
+<h2 data-number="17.5" class="anchored" data-anchor-id="the-one-thing-that-does-not-change"><span class="header-section-number">17.5</span> The One Thing That Does Not Change</h2>
+<p>Across every horizon above, one thing stays constant. As the models improve, they commoditise competent execution, so everyone gets the same capable assistant, producing the same competent averages. The variation the model cannot generate is a particular developer’s judgement, taste, and point of view. Intentional prompting is not a way to get more out of AI. It is the discipline that builds the one capability AI cannot hand you. That is the argument of <em>Conversation, Not Delegation</em>, and it is the note this book ends on.</p>
+</section>
+<section id="vision-for-intentional-promptings-evolution" class="level2" data-number="17.6">
+<h2 data-number="17.6" class="anchored" data-anchor-id="vision-for-intentional-promptings-evolution"><span class="header-section-number">17.6</span> Vision for Intentional Prompting’s Evolution</h2>
+<section id="short-term-evolution-1-3-years" class="level3" data-number="17.6.1">
+<h3 data-number="17.6.1" class="anchored" data-anchor-id="short-term-evolution-1-3-years"><span class="header-section-number">17.6.1</span> Short-Term Evolution (1-3 Years)</h3>
 <p>In the near future, intentional prompting will likely adapt to:</p>
 <ul>
 <li>More comprehensive code generation capabilities</li>
@@ -811,8 +823,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Enhanced collaborative workflows combining human and AI strengths</li>
 </ol>
 </section>
-<section id="medium-term-evolution-3-7-years" class="level3" data-number="17.5.2">
-<h3 data-number="17.5.2" class="anchored" data-anchor-id="medium-term-evolution-3-7-years"><span class="header-section-number">17.5.2</span> Medium-Term Evolution (3-7 Years)</h3>
+<section id="medium-term-evolution-3-7-years" class="level3" data-number="17.6.2">
+<h3 data-number="17.6.2" class="anchored" data-anchor-id="medium-term-evolution-3-7-years"><span class="header-section-number">17.6.2</span> Medium-Term Evolution (3-7 Years)</h3>
 <p>Looking further ahead, we may see:</p>
 <ul>
 <li>Natural language becoming a primary programming interface</li>
@@ -828,8 +840,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Quality assurance through formal specification rather than testing</li>
 </ol>
 </section>
-<section id="long-term-vision-7-years" class="level3" data-number="17.5.3">
-<h3 data-number="17.5.3" class="anchored" data-anchor-id="long-term-vision-7-years"><span class="header-section-number">17.5.3</span> Long-Term Vision (7+ Years)</h3>
+<section id="long-term-vision-7-years" class="level3" data-number="17.6.3">
+<h3 data-number="17.6.3" class="anchored" data-anchor-id="long-term-vision-7-years"><span class="header-section-number">17.6.3</span> Long-Term Vision (7+ Years)</h3>
 <p>Though speculative, longer-term developments might include:</p>
 <ul>
 <li>Programming primarily through intent specification</li>
@@ -840,13 +852,13 @@ ul.task-list li input[type="checkbox"] {
 <p>The core principles of intentional prompting (maintaining human understanding and control while leveraging AI capabilities effectively) will remain relevant even as the specific practices evolve.</p>
 </section>
 </section>
-<section id="a-personal-development-roadmap" class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="a-personal-development-roadmap"><span class="header-section-number">17.6</span> A Personal Development Roadmap</h2>
-<section id="building-your-intentional-prompting-skills" class="level3" data-number="17.6.1">
-<h3 data-number="17.6.1" class="anchored" data-anchor-id="building-your-intentional-prompting-skills"><span class="header-section-number">17.6.1</span> Building Your Intentional Prompting Skills</h3>
+<section id="a-personal-development-roadmap" class="level2" data-number="17.7">
+<h2 data-number="17.7" class="anchored" data-anchor-id="a-personal-development-roadmap"><span class="header-section-number">17.7</span> A Personal Development Roadmap</h2>
+<section id="building-your-intentional-prompting-skills" class="level3" data-number="17.7.1">
+<h3 data-number="17.7.1" class="anchored" data-anchor-id="building-your-intentional-prompting-skills"><span class="header-section-number">17.7.1</span> Building Your Intentional Prompting Skills</h3>
 <p>To prepare for the future of programming, consider this development roadmap:</p>
-<section id="foundational-skills" class="level4" data-number="17.6.1.1">
-<h4 data-number="17.6.1.1" class="anchored" data-anchor-id="foundational-skills"><span class="header-section-number">17.6.1.1</span> Foundational Skills</h4>
+<section id="foundational-skills" class="level4" data-number="17.7.1.1">
+<h4 data-number="17.7.1.1" class="anchored" data-anchor-id="foundational-skills"><span class="header-section-number">17.7.1.1</span> Foundational Skills</h4>
 <ol type="1">
 <li><strong>Master the six-step methodology</strong> for intentional prompting</li>
 <li><strong>Develop effective prompting techniques</strong> for different programming tasks</li>
@@ -855,8 +867,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Cultivate test-driven thinking</strong> to ensure solution quality</li>
 </ol>
 </section>
-<section id="advancing-your-practice" class="level4" data-number="17.6.1.2">
-<h4 data-number="17.6.1.2" class="anchored" data-anchor-id="advancing-your-practice"><span class="header-section-number">17.6.1.2</span> Advancing Your Practice</h4>
+<section id="advancing-your-practice" class="level4" data-number="17.7.1.2">
+<h4 data-number="17.7.1.2" class="anchored" data-anchor-id="advancing-your-practice"><span class="header-section-number">17.7.1.2</span> Advancing Your Practice</h4>
 <ol type="1">
 <li><strong>Experiment with emerging AI coding assistants</strong> to understand their capabilities</li>
 <li><strong>Develop domain-specific prompting strategies</strong> for your areas of expertise</li>
@@ -865,8 +877,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Contribute to open standards</strong> for human-AI development collaboration</li>
 </ol>
 </section>
-<section id="leading-the-evolution" class="level4" data-number="17.6.1.3">
-<h4 data-number="17.6.1.3" class="anchored" data-anchor-id="leading-the-evolution"><span class="header-section-number">17.6.1.3</span> Leading the Evolution</h4>
+<section id="leading-the-evolution" class="level4" data-number="17.7.1.3">
+<h4 data-number="17.7.1.3" class="anchored" data-anchor-id="leading-the-evolution"><span class="header-section-number">17.7.1.3</span> Leading the Evolution</h4>
 <ol type="1">
 <li><strong>Explore new programming paradigms</strong> that leverage AI capabilities</li>
 <li><strong>Develop team practices</strong> for effective AI collaboration</li>
@@ -876,13 +888,13 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 </section>
-<section id="continuous-adaptation" class="level3" data-number="17.6.2">
-<h3 data-number="17.6.2" class="anchored" data-anchor-id="continuous-adaptation"><span class="header-section-number">17.6.2</span> Continuous Adaptation</h3>
-<p>The most important skill for the future will be adaptability. By grounding yourself in intentional prompting principles while remaining open to evolving techniques, you’ll be well-positioned to thrive in the changing landscape of software development.</p>
+<section id="continuous-adaptation" class="level3" data-number="17.7.2">
+<h3 data-number="17.7.2" class="anchored" data-anchor-id="continuous-adaptation"><span class="header-section-number">17.7.2</span> Continuous Adaptation</h3>
+<p>The most important skill for the future will be adaptability. By grounding yourself in intentional prompting principles while remaining open to evolving techniques, you’ll be well placed as software development changes.</p>
 </section>
 </section>
-<section id="key-takeaways" class="level2" data-number="17.7">
-<h2 data-number="17.7" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">17.7</span> Key Takeaways</h2>
+<section id="key-takeaways" class="level2" data-number="17.8">
+<h2 data-number="17.8" class="anchored" data-anchor-id="key-takeaways"><span class="header-section-number">17.8</span> Key Takeaways</h2>
 <ul>
 <li>AI capabilities will continue to evolve, with increased contextual understanding, multimodal interactions, and autonomy</li>
 <li>Programming paradigms are shifting from code writing to code curation and verification</li>
@@ -892,14 +904,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Intentional prompting principles provide a foundation for navigating these changes effectively</li>
 </ul>
 </section>
-<section id="intentional-prompting-beyond-programming" class="level2" data-number="17.8">
-<h2 data-number="17.8" class="anchored" data-anchor-id="intentional-prompting-beyond-programming"><span class="header-section-number">17.8</span> Intentional Prompting Beyond Programming</h2>
+<section id="intentional-prompting-beyond-programming" class="level2" data-number="17.9">
+<h2 data-number="17.9" class="anchored" data-anchor-id="intentional-prompting-beyond-programming"><span class="header-section-number">17.9</span> Intentional Prompting Beyond Programming</h2>
 <p>While this book has focused primarily on applying intentional prompting principles to programming tasks, the core concepts of intentional prompting have far broader applications across various domains and activities.</p>
-<section id="universal-principles-of-ai-collaboration" class="level3" data-number="17.8.1">
-<h3 data-number="17.8.1" class="anchored" data-anchor-id="universal-principles-of-ai-collaboration"><span class="header-section-number">17.8.1</span> Universal Principles of AI Collaboration</h3>
+<section id="universal-principles-of-ai-collaboration" class="level3" data-number="17.9.1">
+<h3 data-number="17.9.1" class="anchored" data-anchor-id="universal-principles-of-ai-collaboration"><span class="header-section-number">17.9.1</span> Universal Principles of AI Collaboration</h3>
 <p>The fundamental principles of intentional prompting that we’ve explored (maintaining human agency, focusing on understanding, and prioritising process over output) apply universally to any human-AI collaboration:</p>
-<section id="in-creative-fields" class="level4" data-number="17.8.1.1">
-<h4 data-number="17.8.1.1" class="anchored" data-anchor-id="in-creative-fields"><span class="header-section-number">17.8.1.1</span> In Creative Fields</h4>
+<section id="in-creative-fields" class="level4" data-number="17.9.1.1">
+<h4 data-number="17.9.1.1" class="anchored" data-anchor-id="in-creative-fields"><span class="header-section-number">17.9.1.1</span> In Creative Fields</h4>
 <ul>
 <li><strong>Writing</strong>: Using AI to brainstorm, refine, and edit written content while maintaining a unique voice</li>
 <li><strong>Design</strong>: Directing AI to explore visual concepts while preserving artistic intent and coherence</li>
@@ -907,8 +919,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Film and Animation</strong>: Using AI for technical aspects while humans direct narrative and emotional elements</li>
 </ul>
 </section>
-<section id="in-knowledge-work" class="level4" data-number="17.8.1.2">
-<h4 data-number="17.8.1.2" class="anchored" data-anchor-id="in-knowledge-work"><span class="header-section-number">17.8.1.2</span> In Knowledge Work</h4>
+<section id="in-knowledge-work" class="level4" data-number="17.9.1.2">
+<h4 data-number="17.9.1.2" class="anchored" data-anchor-id="in-knowledge-work"><span class="header-section-number">17.9.1.2</span> In Knowledge Work</h4>
 <ul>
 <li><strong>Research</strong>: Employing AI to analyse data and literature while humans guide inquiry and interpret significance</li>
 <li><strong>Law</strong>: Using AI for precedent research and document preparation while humans handle judgment and argumentation</li>
@@ -916,8 +928,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Education</strong>: utilising AI to customise learning materials while educators focus on motivation and conceptual guidance</li>
 </ul>
 </section>
-<section id="in-business-and-management" class="level4" data-number="17.8.1.3">
-<h4 data-number="17.8.1.3" class="anchored" data-anchor-id="in-business-and-management"><span class="header-section-number">17.8.1.3</span> In Business and Management</h4>
+<section id="in-business-and-management" class="level4" data-number="17.9.1.3">
+<h4 data-number="17.9.1.3" class="anchored" data-anchor-id="in-business-and-management"><span class="header-section-number">17.9.1.3</span> In Business and Management</h4>
 <ul>
 <li><strong>Strategic Planning</strong>: Using AI to analyse trends and options while humans make value-based decisions</li>
 <li><strong>Project Management</strong>: Employing AI for scheduling and resource allocation while humans handle stakeholder relationships</li>
@@ -926,8 +938,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="the-five-principles-in-any-domain" class="level3" data-number="17.8.2">
-<h3 data-number="17.8.2" class="anchored" data-anchor-id="the-five-principles-in-any-domain"><span class="header-section-number">17.8.2</span> The Five Principles in Any Domain</h3>
+<section id="the-five-principles-in-any-domain" class="level3" data-number="17.9.2">
+<h3 data-number="17.9.2" class="anchored" data-anchor-id="the-five-principles-in-any-domain"><span class="header-section-number">17.9.2</span> The Five Principles in Any Domain</h3>
 <p>The five core principles of intentional AI collaboration transcend specific methodologies and can be applied in any context:</p>
 <ol type="1">
 <li><strong>Human-led workflows</strong>: Regardless of domain, humans should establish goals, define parameters, and make final decisions</li>
@@ -937,8 +949,8 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Skill complementarity</strong>: The most effective collaborations leverage both AI and human strengths appropriately</li>
 </ol>
 </section>
-<section id="the-future-of-human-ai-partnership" class="level3" data-number="17.8.3">
-<h3 data-number="17.8.3" class="anchored" data-anchor-id="the-future-of-human-ai-partnership"><span class="header-section-number">17.8.3</span> The Future of Human-AI Partnership</h3>
+<section id="the-future-of-human-ai-partnership" class="level3" data-number="17.9.3">
+<h3 data-number="17.9.3" class="anchored" data-anchor-id="the-future-of-human-ai-partnership"><span class="header-section-number">17.9.3</span> The Future of Human-AI Partnership</h3>
 <p>As AI capabilities continue to evolve, these principles will only become more important. Future systems may offer:</p>
 <ul>
 <li><strong>More seamless multimodal interaction</strong> across text, voice, images, and other media</li>
@@ -949,15 +961,15 @@ ul.task-list li input[type="checkbox"] {
 <p>However, the need for intentional human direction will remain essential. The most successful individuals and organisations will be those who develop effective practices for intentional collaboration with increasingly capable AI systems while maintaining human purpose, creativity, and ethical judgment.</p>
 </section>
 </section>
-<section id="conclusion" class="level2" data-number="17.9">
-<h2 data-number="17.9" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">17.9</span> Conclusion</h2>
+<section id="conclusion" class="level2" data-number="17.10">
+<h2 data-number="17.10" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">17.10</span> Conclusion</h2>
 <p>As we conclude this exploration of intentional prompting, it’s clear that the fundamental relationship between human developers and AI assistants will continue to evolve. What won’t change is the need for a thoughtful, structured approach to leveraging AI capabilities while maintaining human understanding and control.</p>
 <p>The six-step methodology and intentional prompting techniques presented in this book provide a foundation that can adapt to emerging capabilities and paradigms. By focusing on process over output, understanding over implementation, and human judgment over automation, intentional prompting offers a path forward that embraces AI assistance while preserving the essence of what makes programming a uniquely human creative endeavour.</p>
-<p>Importantly, the methodology addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI’s impact on learning and skill development, intentional prompting’s focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.</p>
+<p>The methodology also addresses many common objections to using LLMs in programming. For those concerned about the ambiguity of natural language, intentional prompting provides structured frameworks and progressive disambiguation techniques that bridge natural language and formal code. For those worried about the non-deterministic nature of LLMs, the methodology establishes clear evaluation criteria and testing practices that ensure reliability despite variability in outputs. And for those sceptical of AI’s impact on learning and skill development, intentional prompting’s focus on understanding over copying ensures that developers continue to build expertise rather than becoming dependent on AI.</p>
 <p>The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn’t fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance: a balanced path that maximises benefits while minimising risks.</p>
-<p>As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.</p>
-<p>The six-step methodology provides a framework not just for individual programmers but for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.</p>
-<p>While we’ve focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you’re preparing not just for current AI tools, but for the next generation of human-AI partnership in programming and beyond.</p>
+<p>As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes even more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.</p>
+<p>The six-step methodology provides a framework for individual programmers and for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.</p>
+<p>While we’ve focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you’re preparing for current AI tools and for the next generation of human-AI partnership in programming and beyond.</p>
 
 
 </section>
