@@ -85,6 +85,8 @@ This book applies the methodology developed in *Conversation, Not Delegation: Ho
 
 This guide is part of a series designed to help you master modern software development in the AI era.
 
+The series has a trunk: *Conversation, Not Delegation* for method and *The Human Edge* for professional judgement. This book is the Python prompting branch.
+
 Two ways in:
 
 | Start with | Continue with | Because |
