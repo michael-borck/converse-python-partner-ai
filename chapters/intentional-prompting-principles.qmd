@@ -4,7 +4,7 @@
 
 ## The Spectrum of AI Integration Approaches
 
-Before diving into the core principles of intentional prompting, it's important to understand the broader landscape of approaches to integrating AI into development workflows. These approaches reflect different philosophies about the role of AI and human developers.
+Intentional prompting is one of several approaches to integrating AI into development workflows. These approaches reflect different philosophies about the role of AI and human developers.
 
 ![AI-Human Collaboration](../images/ai-human-collaboration.png)
 
@@ -182,11 +182,9 @@ def validate_email(email):
 
 The collaborative approach takes longer initially but builds understanding, produces better-documented code, and addresses edge cases proactively rather than reactively.
 
-This example illustrates how the different approaches affect not just the final code but the entire development process and learning experience.
-
 ## Maintaining Human Agency
 
-At the core of intentional prompting is the principle of human agency - the programmer remains the architect and decision-maker throughout the development process, not just a consumer of AI-generated solutions.
+Intentional prompting rests on human agency: the programmer remains the architect and decision-maker throughout the development process, not just a consumer of AI-generated solutions.
 
 This principle goes by several names depending on the audience. Philosophers and ethicists call it **human agency**: the capacity to choose, weigh, and own the outcome. Practitioners and team leads call it **human oversight**: the practice of reviewing AI output before it ships. AI policy and system design call it **human-in-the-loop** (HIL): the structural requirement that a person remains an active participant in decisions a system could otherwise automate. **Intentional prompting** is the methodology that operationalises all three. Agency is the principle, oversight is the practice, HIL is the system-design view, and intentional prompting is the workflow that keeps them in place during development. Four vocabularies, one stance.
 
@@ -219,7 +217,7 @@ A critical distinction in intentional prompting is the difference between unders
 
 ### The "Black Box" Problem
 
-When developers copy AI-generated code without understanding it, they create "black boxes" in their codebase - components they can't effectively debug, maintain, or explain. Over time, this leads to brittle systems and stunted professional growth.
+When developers copy AI-generated code without understanding it, they create "black boxes" in their codebase, components they can't effectively debug, maintain, or explain. Over time, this leads to brittle systems and stunted professional growth.
 
 ### The VET Check
 
@@ -293,7 +291,7 @@ Rather than replacing your process, AI should enhance it:
 
 ## The Learning Mindset
 
-Intentional prompting is fundamentally about continuous learning rather than just task completion. This mindset treats every programming challenge as an opportunity to deepen understanding and build skills.
+Intentional prompting is about continuous learning rather than just task completion. This mindset treats every programming challenge as an opportunity to deepen understanding and build skills.
 
 ### Characteristics of a Learning Mindset
 
@@ -386,7 +384,7 @@ The intentional prompting methodology addresses these concerns through:
 
 ### Procedural Knowledge Transfer
 
-Interestingly, LLMs excel at procedural tasks because they've inherited human problem-solving patterns through their training data. Research shows that LLMs have absorbed procedural knowledge through exposure to:
+LLMs excel at procedural tasks because they've inherited human problem-solving patterns through their training data. Research shows that LLMs have absorbed procedural knowledge through exposure to:
 
 - Error-checking protocols from technical manuals
 - Creative iteration cycles in writing samples

@@ -8,7 +8,7 @@ The final step in our methodology, testing with a variety of data, is where we v
 
 ### The Importance of Thorough Testing
 
-Testing isn't just about confirming that your code works. It's about discovering where and how it might fail. Thorough testing:
+Testing confirms that your code works and discovers where and how it might fail. Thorough testing:
 
 1. **Validates correctness** - Ensures the solution produces the expected results
 2. **Reveals edge case issues** - Identifies problems with unusual inputs
@@ -334,7 +334,7 @@ Test failures provide valuable learning opportunities that can improve both your
 
 ### Debugging with AI Assistance
 
-When tests fail, AI can help analyse the failure — and the analysis needs verifying just like the code does. Watch what happens in this exchange:
+When tests fail, AI can help analyse the failure, and the analysis needs verifying just like the code does. Watch what happens in this exchange:
 
 
 
@@ -445,12 +445,12 @@ This bug would cause your function to sometimes return shorter palindromes when 
 ::: {.callout-warning}
 ## Check the Diagnosis Before Applauding the Fix
 
-Go back and run the "buggy" implementation from that prompt against `"aacabdkacaa"`. It returns `"aca"` — the failing test passes, because the update happens inside the while loop, after the palindrome condition has already been verified. The AI's confident explanation ("updating `max_length` before confirming the substring is actually a palindrome") describes a bug that is not in this code, and its fix — extracting a `current_length` variable — is a cosmetic no-op. The staged failure was in the report, not the implementation.
+Go back and run the "buggy" implementation from that prompt against `"aacabdkacaa"`. It returns `"aca"`. The failing test passes, because the update happens inside the while loop, after the palindrome condition has already been verified. The AI's confident explanation ("updating `max_length` before confirming the substring is actually a palindrome") describes a bug that is not in this code, and its fix, extracting a `current_length` variable, is a cosmetic no-op. The staged failure was in the report, not the implementation.
 
 Two habits fall out of this:
 
-1. **Verify the failure before asking why.** Rerun the test and print the actual output first. A failure report you did not just reproduce is itself an untested claim — and an AI will happily diagnose a bug the code does not have if you hand it one.
-2. **Treat an AI's explanation of a bug as a hypothesis, exactly like its code.** The tell in this exchange is that the "fix" changes no behaviour. A diff that changes nothing cannot fix anything. The test suite — not the explanation's confidence — is the verdict.
+1. **Verify the failure before asking why.** Rerun the test and print the actual output first. A failure report you did not just reproduce is itself an untested claim, and an AI will happily diagnose a bug the code does not have if you hand it one.
+2. **Treat an AI's explanation of a bug as a hypothesis, exactly like its code.** The tell in this exchange is that the "fix" changes no behaviour. A diff that changes nothing cannot fix anything. The test suite, not the explanation's confidence, is the verdict.
 :::
 
 

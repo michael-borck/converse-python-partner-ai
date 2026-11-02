@@ -44,13 +44,11 @@ This book does not argue against using AI to write code. It argues for understan
 
 ## What is a "Prompt"?
 
-Before we go further, let's demystify some terminology.
-
 > **A prompt is simply a request or instruction you give to AI.**
 
 That's it. When you type "Explain how photosynthesis works" into ChatGPT, that's a prompt. When you ask Claude to "Review this code for bugs," that's a prompt. When you tell Copilot to "Write a function that calculates shipping costs," that's a prompt.
 
-Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI's response depends heavily on how you craft your prompt, but at its core, a prompt is just a request.
+Prompts can be simple or complex, vague or precise, single questions or multi-paragraph specifications. The quality of AI's response depends heavily on how you craft your prompt, but a prompt is still just a request.
 
 ## What is "Intentional Prompting"?
 
@@ -154,7 +152,7 @@ The same principle applies beyond programming. Whether you are planning a market
 While this book applies intentional prompting to software development,
 the philosophy of Conversation, Not Delegation works in any domain:
 business planning, creative writing, research, education, and beyond.
-The principles transfer - only the examples change.
+The principles transfer; only the examples change.
 :::
 
 ## The Two-Chat Workflow

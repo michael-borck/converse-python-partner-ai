@@ -6,7 +6,7 @@
 
 The history of programming is a story of continuous abstraction. From machine code to assembly language, from procedural to object-oriented paradigms, each evolution has aimed to make programming more accessible, maintainable, and powerful.
 
-AI coding assistants represent the next major evolution in this timeline. Rather than simply providing syntax highlighting or code completion based on predefined rules, these tools can understand intent, generate complete solutions, and explain complex concepts in natural language.
+AI coding assistants are the next major step in this timeline. Rather than simply providing syntax highlighting or code completion based on predefined rules, these tools can understand intent, generate complete solutions, and explain complex concepts in natural language.
 
 ## Types of AI Coding Assistants
 
@@ -62,7 +62,7 @@ Understanding the true capabilities and limitations of AI coding assistants is c
 - Inconsistent code quality depending on prompt clarity
 - Potential to reinforce common programming misconceptions
 
-Understanding these limitations is not about dismissing AI assistance, but about knowing when and how to rely on AI versus your own judgement.
+Knowing these limitations tells you when and how to rely on AI versus your own judgement.
 
 Most of these limitations trace back to a single fact: **LLMs interpolate, they do not retrieve.** When you ask an AI assistant to write a function, it is not looking up the correct implementation in a database. It is predicting what plausible code would look like based on the millions of examples it absorbed during training. This is why it can produce a function that looks right, passes simple tests, and fails on edge cases. The prediction was convincing. The prediction was not verified. That distinction is why the intentional prompting methodology in this book emphasises understanding and testing, not just generating.
 
@@ -110,7 +110,7 @@ This partnership model focuses on complementary strengths rather than replacemen
 
 ## Emerging Approaches to AI-Assisted Development
 
-As AI coding tools have advanced, distinct philosophical approaches to their use have emerged. These approaches represent different perspectives on how developers should integrate AI into their workflow.
+As AI coding tools have advanced, distinct philosophical approaches to their use have emerged. These approaches reflect different perspectives on how developers should integrate AI into their workflow.
 
 ### Vibe Coding: Embracing AI-Led Development
 

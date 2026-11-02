@@ -8,7 +8,7 @@ In the previous chapter, we established the core philosophy: **Conversation, Not
 
 Now we turn to software development specifically.
 
-The landscape of programming is undergoing a profound transformation. With AI assistants like GitHub Copilot, Claude, and ChatGPT, developers have powerful tools that can generate code, explain concepts, debug problems, and assist with software design.
+Programming is changing fast. With AI assistants like GitHub Copilot, Claude, and ChatGPT, developers have powerful tools that can generate code, explain concepts, debug problems, and assist with software design.
 
 These tools have ignited debates: Will AI replace programmers? Should we resist AI-generated code? Is programming fundamentally changing?
 
@@ -27,7 +27,7 @@ This approach recognises that the most powerful development workflow combines hu
 
 ### Intentional Prompting vs. Prompt Engineering
 
-It's important to distinguish intentional prompting from the related but distinct field of prompt engineering:
+Intentional prompting is related to prompt engineering, but distinct from it:
 
 **Prompt Engineering** focuses primarily on crafting effective instructions for AI systems to produce desired outputs. It encompasses techniques like zero-shot and few-shot prompting, chain-of-thought prompting, and role-based prompting. The emphasis is on optimising the prompt itself to get the best possible output from the AI.
 
@@ -43,7 +43,7 @@ It's important to distinguish intentional prompting from the related but distinc
 
 5. **Structured Framework**: Intentional prompting embeds prompt techniques within a systematic framework for approaching programming problems, rather than treating prompting as an isolated activity.
 
-In essence, intentional prompting integrates prompt engineering techniques within a broader methodology that maintains human agency and prioritises understanding and learning throughout the development process. This distinction becomes especially important as AI capabilities advance toward autonomous coding agents, where maintaining human oversight and understanding becomes increasingly critical.
+Intentional prompting integrates prompt engineering techniques within a broader methodology that maintains human agency and prioritises understanding and learning throughout the development process. This distinction becomes especially important as AI capabilities advance toward autonomous coding agents, where maintaining human oversight and understanding becomes increasingly critical.
 
 For a comprehensive comparison of intentional prompting with other approaches to AI-assisted programming (including prompt engineering, pseudocode for LLMs, agentic programming, and vibe coding), see the **AI Tool Comparison** resource linked in the book's sidebar.
 
@@ -83,7 +83,7 @@ Even with sophisticated agent networks, complex programming will likely remain a
 
 ## The Six-Step Methodology
 
-At the heart of intentional prompting is a structured methodology that guides the development process:
+Intentional prompting is built around a structured methodology that guides the development process:
 
 1. **Restate the problem** in your own words
 2. **Identify input and output** requirements
@@ -103,7 +103,7 @@ This book is designed for:
 - Educators teaching programming in the age of AI
 - Technical managers developing best practices for AI integration
 
-No matter where you are in your programming journey, intentional prompting offers a framework for leveraging AI tools effectively while continuing to develop your own skills and understanding.
+Whatever your experience level, intentional prompting offers a framework for using AI tools effectively while continuing to develop your own skills and understanding.
 
 ## Related Materials
 

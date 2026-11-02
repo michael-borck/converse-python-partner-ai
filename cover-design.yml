@@ -1,0 +1,13 @@
+version: 1
+style: editorial-c
+art: cover-art.png
+family: PROGRAMMING / PYTHON 04
+accent: '#73568C'
+background: '#EBE2F1'
+title_lines:
+- Converse Python,
+- Partner AI
+dark: false
+pixel: false
+scene: partner
+art_origin: Locally constructed editable vector illustration.

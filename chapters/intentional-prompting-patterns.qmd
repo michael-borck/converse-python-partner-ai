@@ -10,7 +10,7 @@ Effective collaboration with AI assistants requires more than just asking for so
 
 ## Prompt Engineering: A Foundational Discipline
 
-Prompt engineering has emerged as a critical field in AI interaction, focusing on how to craft precise instructions that help AI models produce accurate, relevant, and contextually appropriate responses. Beyond casual interaction, it encompasses systematic techniques for improving AI output quality.
+Prompt engineering is the practice of crafting precise instructions that help AI models produce accurate, relevant, and contextually appropriate responses. Beyond casual interaction, it encompasses systematic techniques for improving AI output quality.
 
 ### From Prompt Engineering to Intentional Prompting
 
@@ -100,7 +100,7 @@ This technique helps orient the AI toward specific terminology, frameworks, and 
 
 ### Foundation Prompts
 
-Foundation prompts establish the baseline requirements for a programming task. Instead of just asking for a solution, these prompts set the stage for a productive dialogue.
+Foundation prompts establish the baseline requirements for a programming task. Instead of just asking for a solution, these prompts start a productive dialogue.
 
 **Examples:**
 ```text
@@ -226,7 +226,7 @@ This pattern builds judgment about different implementation strategies.
 
 ## Advanced Prompt Engineering Strategies
 
-Beyond the basic techniques described earlier, several advanced prompt engineering strategies can further enhance your interactions with AI coding assistants:
+Beyond the basic techniques described earlier, several advanced prompt engineering strategies can further improve your interactions with AI coding assistants:
 
 ### Context-Enhanced Prompting
 
@@ -376,7 +376,7 @@ Write a function to retrieve weather data from the wttr.in API for a given locat
 ```
 
 ::: {.callout-note title="Live Services Rot"}
-The wttr.in service is the subject of this case study, not a dependency of the book. Community-run services change terms, throttle, or disappear; when an example like this stops working, treat it as an opportunity to practise the verification habit — check whether the service is up, then whether your code, then whether the API contract changed.
+The wttr.in service is the subject of this case study, not a dependency of the book. Community-run services change terms, throttle, or disappear; when an example like this stops working, treat it as an opportunity to practise the verification habit: check whether the service is up, then whether your code, then whether the API contract changed.
 :::
 
 ### Initial AI-Generated Code

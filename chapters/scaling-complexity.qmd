@@ -138,7 +138,7 @@ Here's a sensible approach to dividing your e-commerce platform into microservic
 This architecture provides a balanced approach that separates concerns while maintaining logical cohesion within each service.
 ```
 
-The AI produced a solid starting point, but that's exactly what it is: a starting point. The real value here isn't the specific service breakdown (which is fairly standard for e-commerce). It's the framework of *considerations* (data ownership, consistency models, interaction patterns) that you now need to evaluate against your specific constraints.
+The AI produced a solid starting point. The specific service breakdown is fairly standard for e-commerce; the value is in the framework of *considerations* (data ownership, consistency models, interaction patterns) that you now need to evaluate against your specific constraints.
 
 ::: {.callout-tip}
 ## Architecture Is a Human Decision
@@ -428,7 +428,7 @@ When you share anticipated future needs in your prompt, the AI can recommend pat
 
 In complex systems, certain concerns cut across multiple components. Intentional design addresses these systematically.
 
-This prompt demonstrates something important: the human has already identified the problem (inconsistent implementations across services) and the specific areas of concern. They're not asking the AI to diagnose the issue. They're asking for a solution strategy. That distinction matters. The more precisely you frame the problem, the more actionable the response.
+This prompt demonstrates something important: the human has already identified the problem (inconsistent implementations across services) and the specific areas of concern. They're not asking the AI to diagnose the issue. They're asking for a solution strategy. The more precisely you frame the problem, the more actionable the response.
 
 **You:**
 
@@ -767,7 +767,7 @@ Can you provide comprehensive JavaDoc documentation for this class and the proce
 
 Intentional prompting in team settings requires effective knowledge sharing patterns.
 
-The following prompt tackles an organisational problem rather than a technical one. This is worth highlighting: AI can be a useful thinking partner for process and team challenges, not just code. The key to making it work is being specific about your situation: team size, the symptom you're seeing, and what you're trying to achieve.
+The following prompt tackles an organisational problem rather than a technical one. AI can be a useful thinking partner for process and team challenges, not just code. The key to making it work is being specific about your situation: team size, the symptom you're seeing, and what you're trying to achieve.
 
 **You:**
 

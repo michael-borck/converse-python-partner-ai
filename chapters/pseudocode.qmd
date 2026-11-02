@@ -68,7 +68,7 @@ WRITE data TO file
 
 ## Pseudocode and LLMs: A Natural Partnership
 
-Pseudocode plays a particularly important role when working with Large Language Models. It serves as a bridge between natural language ambiguity and the precision of formal programming languages, creating an ideal medium for human-AI collaboration.
+Pseudocode plays a particularly important role when working with Large Language Models. It is a bridge between natural language ambiguity and the precision of formal programming languages, creating an ideal medium for human-AI collaboration.
 
 ### Why Pseudocode Works Well with LLMs
 
@@ -82,7 +82,7 @@ Several factors make pseudocode especially effective for LLM interactions:
 
 4. **Activation of procedural knowledge** - Research shows that LLMs have absorbed procedural knowledge from their training data. Pseudocode effectively activates this latent knowledge by providing clear procedural frameworks.
 
-5. **Medium of iterative refinement** - Pseudocode serves as an excellent medium for progressive disambiguation - the process of gradually transforming ambiguous natural language into precise formal code through multiple rounds of interaction.
+5. **Medium of iterative refinement** - Pseudocode serves as an excellent medium for progressive disambiguation, the process of gradually transforming ambiguous natural language into precise formal code through multiple rounds of interaction.
 
 ### Pseudocode as Disambiguation Tool
 
@@ -97,7 +97,7 @@ As Dijkstra noted decades ago, "The virtue of formal texts is that their manipul
 
 ### SudoLang: Pseudocode optimised for LLMs
 
-SudoLang represents an evolution of pseudocode specifically designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimised for human-AI collaboration.
+SudoLang is a form of pseudocode designed for LLM interaction. Created by Eric Elliott, it provides a structured syntax that bridges the gap between natural language and formal programming languages, optimised for human-AI collaboration.
 
 Key features of SudoLang include:
 
@@ -119,7 +119,7 @@ When working with AI assistants on complex programming tasks, SudoLang can help 
 
 ### LLMs as Pseudocode Interpreters
 
-An intriguing aspect of LLMs is their ability to act as "interpreters" for pseudocode. Unlike traditional pseudocode that serves purely as documentation, LLMs can actually process and "execute" pseudocode to generate outputs, transforming it from a planning tool into a functional programming interface.
+LLMs can act as "interpreters" for pseudocode. Unlike traditional pseudocode that serves purely as documentation, LLMs can actually process and "execute" pseudocode to generate outputs, transforming it from a planning tool into a functional programming interface.
 
 This capability enables new workflows where:
 

@@ -20,7 +20,7 @@ This glossary provides definitions for key terms used throughout "Intentional Pr
 
 ## Human-AI Collaboration Concepts
 
-**Human Agency**: The principle that the human remains the architect and decision-maker throughout an AI-assisted process - the capacity to choose, weigh, and own the outcome. In intentional prompting, agency is preserved by framing the problem yourself, evaluating outputs critically, and making final integration decisions based on your own understanding rather than AI convenience.
+**Human Agency**: The principle that the human remains the architect and decision-maker throughout an AI-assisted process: the capacity to choose, weigh, and own the outcome. In intentional prompting, agency is preserved by framing the problem yourself, evaluating outputs critically, and making final integration decisions based on your own understanding rather than AI convenience.
 
 **Human Oversight**: The practice of reviewing, validating, and correcting AI-generated output before accepting it. Where agency is the principle (the human is in charge), oversight is the everyday practice that keeps the principle real (the human actually checks).
 

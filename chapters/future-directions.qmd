@@ -2,7 +2,7 @@
 
 > The tools will change. The discipline of thinking clearly will not.
 
-As we reach the conclusion of this book, it's important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in an increasingly AI-powered development landscape.
+As we reach the conclusion of this book, it's important to look ahead at how intentional prompting might evolve as AI capabilities continue to advance. This chapter explores emerging trends in AI-assisted development, potential shifts in programming paradigms, and strategies for maintaining the human element in increasingly AI-powered development.
 
 ## Emerging AI Capabilities
 
@@ -45,7 +45,7 @@ AI systems have moved toward greater autonomy in coding tasks. "Agentic programm
 
 This increased autonomy shifts intentional prompting toward a supervisory role, where human developers focus on problem definition, architectural decisions, and quality assurance rather than implementation details.
 
-It is worth stating plainly: better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.
+Better models make the practices in this book more important, not less. When AI-generated code was obviously rough, developers naturally reviewed it. As models produce code that reads like something a competent developer wrote, the temptation to accept it without understanding increases, and so does the cost of the bugs you miss. The more convincing the output, the more critical it is that you can verify it, explain it, and test it. Intentional prompting is not a workaround for weak models. It is a discipline that becomes more valuable as models improve.
 
 #### AI Pairing and Collaboration
 
@@ -78,7 +78,7 @@ As AI development agents become more sophisticated, research has identified crit
 - *AI Role*: Auto-scale and configure infrastructure
 - *Human Role*: Final approval for production releases
 
-Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations highlight why human oversight in agentic systems is not merely beneficial but essential.
+Research shows that even the most advanced AI systems face fundamental limitations. They struggle with precision despite excellence in generalisation, encounter difficulties with large-scale tasks despite competence with smaller ones, and demonstrate incomplete understanding of physical and business realities. These limitations are why human oversight in agentic systems is essential.
 
 Effective human oversight includes:
 
@@ -310,7 +310,7 @@ To prepare for the future of programming, consider this development roadmap:
 
 ### Continuous Adaptation
 
-The most important skill for the future will be adaptability. By grounding yourself in intentional prompting principles while remaining open to evolving techniques, you'll be well-positioned to thrive in the changing landscape of software development.
+The most important skill for the future will be adaptability. By grounding yourself in intentional prompting principles while remaining open to evolving techniques, you'll be well placed as software development changes.
 
 ## Key Takeaways
 
@@ -381,8 +381,8 @@ The methodology also addresses many common objections to using LLMs in programmi
 
 The power of intentional prompting comes from recognising that LLMs have inherited human problem-solving patterns through their training data. Our methodology doesn't fight against this trait but leverages it by providing procedural frameworks that activate latent knowledge in both the human and the AI. This collaborative approach represents a middle ground between uncritical acceptance and outright rejection of AI assistance: a balanced path that maximises benefits while minimising risks.
 
-As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes not less but more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.
+As we move toward increasingly autonomous agentic programming systems, intentional prompting becomes even more essential. These systems excel at approximation and pattern matching but struggle with precision. They demonstrate competence with small-scale tasks while faltering with larger ones. They reveal an incomplete understanding of both physical and business realities. All these limitations highlight why human oversight through structured methodologies remains necessary.
 
-The six-step methodology provides a framework not just for individual programmers but for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.
+The six-step methodology provides a framework for individual programmers and for organisations implementing AI oversight. It offers clear intervention points where human judgment and domain knowledge can guide AI agents toward optimal solutions. By maintaining this human-in-the-loop approach, organisations can harness the efficiency of AI automation while mitigating its risks through informed, intentional human direction.
 
-While we've focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you're preparing not just for current AI tools, but for the next generation of human-AI partnership in programming and beyond.
+While we've focused primarily on programming, the principles of intentional collaboration with AI will extend across all domains of human creativity and problem-solving. By developing these skills now, you're preparing for current AI tools and for the next generation of human-AI partnership in programming and beyond.
