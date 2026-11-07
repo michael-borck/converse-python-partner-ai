@@ -17,6 +17,8 @@ Programming with AI is not just about speed. It is about thinking differently ab
 
 This book teaches a structured methodology for that conversation. It calls the approach intentional prompting: using AI tools with precision and purpose while ensuring you remain the architect and decision-maker throughout.
 
+The reason intentional prompting works is that the AI layer has not earned compiler-grade trust. It is non-deterministic and it fails fluently. Intentional prompting is the specification and the verification that make the boundary safe. You are not competing with AI. You are building the checks it cannot build for itself.
+
 ## Who This Book Is For
 
 - Software developers looking to integrate AI tools effectively into their workflow
